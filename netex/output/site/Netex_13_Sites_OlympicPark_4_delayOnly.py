@@ -29,7 +29,7 @@ obj = PublicationDelivery(
         value='OPK Example - exchange of just the delays for a previously exchanged site. '
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             SiteFrame(
                 id='naptPoi:8100OPKXX',
                 version='any',
@@ -66,7 +66,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C1_Del_VB_i',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Very_Busy_ingress'
@@ -84,7 +84,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C1_Del_VB_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Very_Busy_during'
@@ -102,7 +102,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C1_Del_VB_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Very_Busy_other'
@@ -120,7 +120,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C1_Del_B_i',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Busy_ingress'
@@ -138,7 +138,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C1_Del_B_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Busy_during'
@@ -156,7 +156,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C1_Del_B_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Busy_other'
@@ -174,7 +174,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C1_Del_N_i',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Normal_ingress'
@@ -192,7 +192,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C1_Del_N_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Normal_during'
@@ -210,7 +210,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C1_Del_N_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Normal_other'
@@ -237,7 +237,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C2_Del_VB_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Very_Busy_during'
@@ -255,7 +255,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C2_Del_VB_e',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Very_Busy_egress'
@@ -273,7 +273,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C2_Del_VB_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Very_Busy_other'
@@ -291,7 +291,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C2_Del_B_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Busy_during'
@@ -309,7 +309,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C2_Del_B_e',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Busy_egress'
@@ -327,7 +327,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C2_Del_B_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Busy_other'
@@ -345,7 +345,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C2_Del_N_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Normal_during'
@@ -363,7 +363,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C2_Del_N_e',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Normal_egress'
@@ -381,7 +381,7 @@ obj = PublicationDelivery(
                                         id='naptPoi:8100OPK_E1_C2_Del_N_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='EXTERNAL',
                                                         ref='oda:Avl_Normal_other'

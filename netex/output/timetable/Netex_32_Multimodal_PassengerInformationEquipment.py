@@ -91,7 +91,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
-                        choice=[
+                        validity_condition=[
                             AvailabilityCondition(
                                 id='hde:CAL_02',
                                 version='any',
@@ -99,7 +99,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    choice_1=[
+                    version_frame_ref=[
                         TimetableFrameRef(
                             ref='hde:TimetableFrameTIM_23_O'
                         ),
@@ -113,7 +113,7 @@ obj = PublicationDelivery(
         value='Example  of simple timetable frame with two journeys and service calendar'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='hde:CAL_02',
                 version='any',
@@ -145,7 +145,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ServiceFrame(
                             id='mybus:svf_12',
                             version='any',
@@ -185,7 +185,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='mybus:LN_24',
                                         version='any',
@@ -486,7 +486,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             connections=TransfersInFrameRelStructure(
-                                choice=[
+                                transfer=[
                                     Connection(
                                         id='mybus:CX_SSP_002_to_SSP_032',
                                         version='any',
@@ -556,7 +556,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             stop_assignments=StopAssignmentsInFrameRelStructure(
-                                choice=[
+                                stop_assignment=[
                                     PassengerStopAssignment(
                                         id='hde:psa_SSP_002_to_SP002B',
                                         version='any',
@@ -565,7 +565,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
@@ -582,7 +582,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='mybus:SSP_032'
                                         ),
@@ -599,7 +599,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='myrail:SSP_042'
                                         ),
@@ -611,7 +611,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='hde:jp_24o',
                                         version='any',
@@ -637,7 +637,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_24o_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     )
@@ -646,7 +646,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_24o_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     )
@@ -655,7 +655,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_24o_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     )
@@ -688,7 +688,7 @@ obj = PublicationDelivery(
                                                     id='hde:jp_24i_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     )
@@ -697,7 +697,7 @@ obj = PublicationDelivery(
                                                     id='hde:jp_24i_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     )
@@ -706,7 +706,7 @@ obj = PublicationDelivery(
                                                     id='hde:jp_24i_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     )
@@ -739,7 +739,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_46o_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_031'
                                                     )
@@ -748,7 +748,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_46o_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     )
@@ -757,7 +757,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_46o_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_033'
                                                     )
@@ -790,7 +790,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_46i_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_033'
                                                     )
@@ -799,7 +799,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_46i_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     )
@@ -808,7 +808,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_46i_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_031'
                                                     )
@@ -841,7 +841,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_68o_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     )
@@ -850,7 +850,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_68o_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_035'
                                                     )
@@ -859,7 +859,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_68o_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_036'
                                                     )
@@ -892,7 +892,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_68i_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_036'
                                                     )
@@ -901,7 +901,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_68i_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_035'
                                                     )
@@ -910,7 +910,7 @@ obj = PublicationDelivery(
                                                     id='hde:pijp_68i_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     )
@@ -937,11 +937,11 @@ obj = PublicationDelivery(
                                                         value='Assign  ScheduledStopPoint 002 (Bravo) route 24 Eastbound Departures to Display LD001 '
                                                     ),
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
-                                                    choice=ServiceJourneyPatternRef(
+                                                    journey_pattern_ref=ServiceJourneyPatternRef(
                                                         version='any',
                                                         ref='hde:jp_24o'
                                                     ),
@@ -956,11 +956,11 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 032 (Bravo) route 46 Southbound Departures to Display LD001  '
                                                     ),
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     ),
-                                                    choice=ServiceJourneyPatternRef(
+                                                    journey_pattern_ref=ServiceJourneyPatternRef(
                                                         version='any',
                                                         ref='hde:jp_46o'
                                                     ),
@@ -975,11 +975,11 @@ obj = PublicationDelivery(
                                                         value='Assign   ScheduledStopPoint 032 (Bravo)  route 68 Eastbound Departures to Display LD001  '
                                                     ),
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     ),
-                                                    choice=ServiceJourneyPatternRef(
+                                                    journey_pattern_ref=ServiceJourneyPatternRef(
                                                         version='any',
                                                         ref='hde:jp_68o'
                                                     ),
@@ -1005,11 +1005,11 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 002 (Bravo)  LINE 24 Westbound Departures to Display LD002 '
                                                     ),
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
-                                                    choice=ServiceJourneyPatternRef(
+                                                    journey_pattern_ref=ServiceJourneyPatternRef(
                                                         version='any',
                                                         ref='hde:jp_24i'
                                                     ),
@@ -1024,11 +1024,11 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 0032  (Bravo)  LINE 46 Northbound Departures to Display LD002 '
                                                     ),
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     ),
-                                                    choice=ServiceJourneyPatternRef(
+                                                    journey_pattern_ref=ServiceJourneyPatternRef(
                                                         version='any',
                                                         ref='hde:jp_46i'
                                                     ),
@@ -1043,11 +1043,11 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 0032  (Bravo)  LINE 68  Northbound  Departuresto Display LD002 - Arrivals'
                                                     ),
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     ),
-                                                    choice=ServiceJourneyPatternRef(
+                                                    journey_pattern_ref=ServiceJourneyPatternRef(
                                                         version='any',
                                                         ref='hde:jp_68i'
                                                     ),
@@ -1073,7 +1073,7 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 002 tram arrivals  all routes for Bravo to Display LD010 '
                                                     ),
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -1087,7 +1087,7 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 032 bus arivals  all  routes for Bravo to Display LD010  '
                                                     ),
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     ),
@@ -1101,7 +1101,7 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 042 rail  arrivals all routes for Bravo to Display LD010  '
                                                     ),
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     ),
@@ -1126,7 +1126,7 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 002 tram all routes for Bravo to Display LD011 '
                                                     ),
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -1139,7 +1139,7 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 032 bus all routes for Bravo to Display LD011 '
                                                     ),
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     ),
@@ -1152,7 +1152,7 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 042 rail all routes for Bravo to Display LD011 '
                                                     ),
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='myrail:SSP_042'
                                                     ),
@@ -1176,7 +1176,7 @@ obj = PublicationDelivery(
                                                         value='Assign ScheduledStopPoint 042 rail  all routes for Bravo   '
                                                     ),
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='myrail:SSP_042'
                                                     ),
@@ -1611,7 +1611,7 @@ obj = PublicationDelivery(
                             id='tbd:SVC01',
                             version='any',
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='napt:PassengerInformationEquipmentTypes',
                                         version='any',
@@ -1619,7 +1619,7 @@ obj = PublicationDelivery(
                                             value='PASSENGER INFORMATION EQUIPMENT  Types'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfPassengerInformationEquipment(
                                                     id='mybus:PlatDisp',
                                                     version='any',

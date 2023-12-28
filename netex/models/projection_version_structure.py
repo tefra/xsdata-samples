@@ -31,7 +31,7 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    complex_feature_ref_or_simple_feature_ref_or_spatial_feature_ref: Optional[
+    spatial_feature_ref: Optional[
         Union[ComplexFeatureRef, SimpleFeatureRef, SpatialFeatureRef]
     ] = field(
         default=None,

@@ -25,9 +25,7 @@ class VehicleTypePreferenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_day_type_ref_or_day_type_ref: Optional[
-        Union[FareDayTypeRef, DayTypeRef]
-    ] = field(
+    day_type_ref: Optional[Union[FareDayTypeRef, DayTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

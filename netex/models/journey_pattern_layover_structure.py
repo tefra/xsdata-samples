@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class JourneyPatternLayoverStructure(JourneyLayoverStructure):
-    choice_1: Optional[
+    journey_pattern_ref: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,

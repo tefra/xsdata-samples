@@ -137,7 +137,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    choice_1=[
+                    version_frame_ref=[
                         InfrastructureFrameRef(
                             value='REQUEST',
                             ref='mybus:ifwkf001'
@@ -156,7 +156,7 @@ obj = PublicationDelivery(
         value='Netex basic Versioning Example Step 05'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='mybus:SVC_01@composite',
                 version='1',
@@ -188,7 +188,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         SiteFrame(
                             id='mybus:SVC_01@site',
                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -202,7 +202,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ResourceFrameRef(
                                         version='1.0',
                                         ref='mybus:SVC_01@resources'
@@ -581,7 +581,7 @@ obj = PublicationDelivery(
                                 value='My Infrastructure   Version 5 with three stops in it '
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ResourceFrameRef(
                                         version='1.0',
                                         ref='mybus:SVC_01@resources'
@@ -801,7 +801,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             restrictions=NetworkRestrictionsInFrameRelStructure(
-                                choice=[
+                                network_restriction=[
                                     RestrictedManoeuvre(
                                         id='hde:RM_01',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
@@ -897,7 +897,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     InfrastructureFrameRef(
                                         version='1.0',
                                         ref='mybus:SVC_01@infrastructure'
@@ -913,7 +913,7 @@ obj = PublicationDelivery(
                                             value='Point 21'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='hde:RteP021',
                                                     version='any',
@@ -932,7 +932,7 @@ obj = PublicationDelivery(
                                             value='Point 22'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='hde:RteP022',
                                                     version='any',
@@ -951,7 +951,7 @@ obj = PublicationDelivery(
                                             value='Point 25'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='hde:RteP025',
                                                     version='any',
@@ -1152,7 +1152,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             routes=RoutesInFrameRelStructure(
-                                flexible_route_or_route=[
+                                route=[
                                     Route(
                                         id='hde:RT001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
@@ -1162,7 +1162,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Route 66b outbound'
                                         ),
-                                        flexible_line_ref_or_line_ref=LineRef(
+                                        line_ref=LineRef(
                                             version='any',
                                             ref='mybus:0066'
                                         ),
@@ -1268,7 +1268,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Route 66b inbound'
                                         ),
-                                        flexible_line_ref_or_line_ref=LineRef(
+                                        line_ref=LineRef(
                                             version='any',
                                             ref='mybus:0066'
                                         ),
@@ -1374,7 +1374,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Route 66b outbound'
                                         ),
-                                        flexible_line_ref_or_line_ref=LineRef(
+                                        line_ref=LineRef(
                                             version='any',
                                             ref='mybus:0066'
                                         ),
@@ -1480,7 +1480,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Route 66b inbound'
                                         ),
-                                        flexible_line_ref_or_line_ref=LineRef(
+                                        line_ref=LineRef(
                                             version='any',
                                             ref='mybus:0066'
                                         ),
@@ -1600,7 +1600,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
-                                            point_on_line_section_or_point_on_section=[
+                                            point_on_section=[
                                                 PointOnSection(
                                                     id='hde:CSc001o_JP',
                                                     version='1',
@@ -1609,7 +1609,7 @@ obj = PublicationDelivery(
                                                         version='032',
                                                         ref='hde:SSP0001A'
                                                     ),
-                                                    choice_2=ServiceLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=ServiceLinkRef(
                                                         version='001',
                                                         ref='hde:SL_SSP0001A-SSP0002B_a'
                                                     )
@@ -1622,7 +1622,7 @@ obj = PublicationDelivery(
                                                         version='032',
                                                         ref='hde:SSP0002B_a'
                                                     ),
-                                                    choice_2=ServiceLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=ServiceLinkRef(
                                                         version='001',
                                                         ref='hde:SL_SSP0002B_a-SSP0003C_a'
                                                     )
@@ -1666,7 +1666,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
-                                            point_on_line_section_or_point_on_section=[
+                                            point_on_section=[
                                                 PointOnSection(
                                                     id='hde:CSc001i_JP',
                                                     version='1',
@@ -1675,7 +1675,7 @@ obj = PublicationDelivery(
                                                         version='015',
                                                         ref='hde:SSP0003C_a'
                                                     ),
-                                                    choice_2=ServiceLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=ServiceLinkRef(
                                                         version='001',
                                                         ref='hde:SL_SSP0003C_b-SSP0002B_b'
                                                     )
@@ -1688,7 +1688,7 @@ obj = PublicationDelivery(
                                                         version='032',
                                                         ref='hde:SSP0002B_a'
                                                     ),
-                                                    choice_2=ServiceLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=ServiceLinkRef(
                                                         version='001',
                                                         ref='hde:SL_SSP0002B_b-SSP0001A'
                                                     )
@@ -1725,7 +1725,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
-                                            point_on_line_section_or_point_on_section=[
+                                            point_on_section=[
                                                 PointOnSection(
                                                     id='hde:CSc001o_Rt',
                                                     version='1',
@@ -1734,7 +1734,7 @@ obj = PublicationDelivery(
                                                         version='032',
                                                         ref='hde:SSP0001A'
                                                     ),
-                                                    choice_2=RouteLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=RouteLinkRef(
                                                         version='any',
                                                         ref='hde:hde:RL_001o@SSP0001A+RteP021'
                                                     )
@@ -1747,7 +1747,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='hde:RteP021'
                                                     ),
-                                                    choice_2=RouteLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=RouteLinkRef(
                                                         version='any',
                                                         ref='hde:RL_001o@RteP021+SSP0002B_a'
                                                     )
@@ -1760,7 +1760,7 @@ obj = PublicationDelivery(
                                                         version='032',
                                                         ref='hde:SSP0002B_a'
                                                     ),
-                                                    choice_2=RouteLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=RouteLinkRef(
                                                         version='any',
                                                         ref='hde:RL_001o@SSP0001B_a+RteP022'
                                                     )
@@ -1773,7 +1773,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='hde:RteP022'
                                                     ),
-                                                    choice_2=RouteLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=RouteLinkRef(
                                                         version='any',
                                                         ref='hde:RL_001o@RteP022+RteP025'
                                                     )
@@ -1786,7 +1786,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='hde:RteP025'
                                                     ),
-                                                    choice_2=RouteLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=RouteLinkRef(
                                                         version='any',
                                                         ref='hde:RL_001o@RteP025+SSP0003C_a'
                                                     )
@@ -1823,7 +1823,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
-                                            point_on_line_section_or_point_on_section=[
+                                            point_on_section=[
                                                 PointOnSection(
                                                     id='hde:CSc001i_Rt',
                                                     version='1',
@@ -1832,7 +1832,7 @@ obj = PublicationDelivery(
                                                         version='015',
                                                         ref='hde:SSP0003C_b'
                                                     ),
-                                                    choice_2=RouteLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=RouteLinkRef(
                                                         version='any',
                                                         ref='hde:RL_001i_02'
                                                     )
@@ -1845,7 +1845,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='hde:RteP025'
                                                     ),
-                                                    choice_2=RouteLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=RouteLinkRef(
                                                         version='any',
                                                         ref='hde:RL_001i_03'
                                                     )
@@ -1858,7 +1858,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='hde:RteP022'
                                                     ),
-                                                    choice_2=RouteLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=RouteLinkRef(
                                                         version='any',
                                                         ref='hde:RL_001i_04'
                                                     )
@@ -1871,7 +1871,7 @@ obj = PublicationDelivery(
                                                         version='032',
                                                         ref='hde:SSP0002B_b'
                                                     ),
-                                                    choice_2=RouteLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=RouteLinkRef(
                                                         version='any',
                                                         ref='hde:RL_001i_05'
                                                     )
@@ -1884,7 +1884,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='hde:RteP021'
                                                     ),
-                                                    choice_2=RouteLinkRef(
+                                                    link_ref_or_infrastructure_link_ref=RouteLinkRef(
                                                         version='any',
                                                         ref='hde:RL_001i_06'
                                                     )
@@ -1904,7 +1904,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='mybus:0066',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
@@ -1939,7 +1939,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ServiceFrameRef(
                                         version='1.0',
                                         ref='mybus:SVC_01@routes'
@@ -2205,7 +2205,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_001o_01',
                                                     version='003',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0001A'
                                                     ),
@@ -2216,7 +2216,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_001o_02',
                                                     version='003',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0002B_a'
                                                     ),
@@ -2227,7 +2227,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_hde:RL_001o@SSP0001B_a+RteP022',
                                                     version='003',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0003C_a'
                                                     ),
@@ -2238,7 +2238,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_hde:RL_001o@RteP022+RteP025',
                                                     version='003',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0004D'
                                                     ),
@@ -2297,7 +2297,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_001i_01',
                                                     version='003',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0004D'
                                                     ),
@@ -2308,7 +2308,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_001i_02',
                                                     version='003',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0003C_b'
                                                     ),
@@ -2319,7 +2319,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_001i_03',
                                                     version='003',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0002B_b'
                                                     ),
@@ -2330,7 +2330,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_001i_04',
                                                     version='003',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0001A'
                                                     ),
@@ -2389,7 +2389,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_002o_01',
                                                     version='003',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0001A'
                                                     ),
@@ -2400,7 +2400,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_002o_02',
                                                     version='003',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0002B_a'
                                                     ),
@@ -2411,7 +2411,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_002o_03',
                                                     version='003',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0003C_a'
                                                     ),
@@ -2422,7 +2422,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_002o_04',
                                                     version='003',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0005E'
                                                     ),
@@ -2481,7 +2481,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_002i_01',
                                                     version='003',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0005E'
                                                     ),
@@ -2492,7 +2492,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_002i_02',
                                                     version='003',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0003C_b'
                                                     ),
@@ -2503,7 +2503,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_002i_03',
                                                     version='003',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0002B_b'
                                                     ),
@@ -2514,7 +2514,7 @@ obj = PublicationDelivery(
                                                     id='hde:SvPip_002i_04',
                                                     version='003',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0001A'
                                                     ),
@@ -2558,7 +2558,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             stop_assignments=StopAssignmentsInFrameRelStructure(
-                                choice=[
+                                stop_assignment=[
                                     PassengerStopAssignment(
                                         id='hde:PSA_01',
                                         version='any',
@@ -2566,7 +2566,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment A'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='032',
                                             ref='hde:SSP0001A'
                                         ),
@@ -2586,7 +2586,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment B'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='032',
                                             ref='hde:SSP0002B_a'
                                         ),
@@ -2606,7 +2606,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment B'
                                         ),
                                         order=2,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='032',
                                             ref='hde:SSP0002B_b'
                                         ),
@@ -2626,7 +2626,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment B'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='015',
                                             ref='hde:SSP0003C_a'
                                         ),
@@ -2646,7 +2646,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment B'
                                         ),
                                         order=2,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='015',
                                             ref='hde:SSP0003C_b'
                                         ),
@@ -2666,7 +2666,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment D'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='015',
                                             ref='hde:SSP0004D'
                                         ),
@@ -2686,7 +2686,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment E'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='015',
                                             ref='hde:SSP0005E'
                                         ),
@@ -3170,7 +3170,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='hde:JP001o',
                                         version='any',
@@ -3188,7 +3188,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP001o_0001',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0001A'
                                                     ),
@@ -3220,7 +3220,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP001o_0002',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0002B_a'
                                                     ),
@@ -3240,7 +3240,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP001o_0004_01',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0003C_a'
                                                     ),
@@ -3272,7 +3272,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP001o_0004_02',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0004D'
                                                     ),
@@ -3298,7 +3298,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP001i_0001',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0004D'
                                                     ),
@@ -3330,7 +3330,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP001i_0002',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0003C_b'
                                                     ),
@@ -3353,7 +3353,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP001i_0003',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0002B_b'
                                                     ),
@@ -3363,7 +3363,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP001i_0004',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0001A'
                                                     ),
@@ -3389,7 +3389,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP002o_0001',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0001A'
                                                     ),
@@ -3421,7 +3421,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP002o_0002',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0002B_a'
                                                     ),
@@ -3454,7 +3454,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP002o_0004',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0003C_a'
                                                     ),
@@ -3464,7 +3464,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP002o_0005',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0005E'
                                                     ),
@@ -3490,7 +3490,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP002i_0001',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0004D'
                                                     ),
@@ -3522,7 +3522,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP002i_0002',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='015',
                                                         ref='hde:SSP0003C_b'
                                                     ),
@@ -3545,7 +3545,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP002i_0003',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0002B_b'
                                                     ),
@@ -3555,7 +3555,7 @@ obj = PublicationDelivery(
                                                     id='hde:PIP_JP002i_0004',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='032',
                                                         ref='hde:SSP0001A'
                                                     ),
@@ -3670,7 +3670,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='mybus:Org_TL001',
                                         version='any',

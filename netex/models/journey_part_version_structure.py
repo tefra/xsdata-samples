@@ -67,9 +67,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_block_part_ref_or_block_part_ref: Optional[
-        Union[TrainBlockPartRef, BlockPartRef]
-    ] = field(
+    block_part_ref: Optional[Union[TrainBlockPartRef, BlockPartRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

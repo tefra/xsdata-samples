@@ -14,9 +14,7 @@ class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "AllowedLineDirection_VersionStructure"
 
-    flexible_line_ref_or_line_ref: Optional[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -22,7 +22,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    postal_address_ref_or_road_address_ref_or_address_ref: Optional[
+    address_ref: Optional[
         Union[PostalAddressRef, RoadAddressRef, AddressRef]
     ] = field(
         default=None,

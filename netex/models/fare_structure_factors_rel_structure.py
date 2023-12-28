@@ -17,7 +17,7 @@ class FareStructureFactorsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fareStructureFactors_RelStructure"
 
-    choice: List[
+    time_structure_factor_ref_or_quality_structure_factor_ref_or_fare_structure_factor_ref: List[
         Union[
             ParkingChargeBandRef,
             TimeStructureFactorRef,

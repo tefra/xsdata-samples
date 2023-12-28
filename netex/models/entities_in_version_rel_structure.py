@@ -6445,7 +6445,7 @@ class FramesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "frames_RelStructure"
 
-    choice: List[
+    common_frame: List[
         Union[
             SalesTransactionFrame,
             FareFrame,

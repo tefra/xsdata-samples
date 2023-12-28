@@ -14,7 +14,7 @@ class JourneyPatternRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "journeyPatternRefs_RelStructure"
 
-    choice: List[
+    journey_pattern_ref: List[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,

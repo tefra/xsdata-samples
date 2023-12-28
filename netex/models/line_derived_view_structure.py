@@ -19,9 +19,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Line_DerivedViewStructure"
 
-    flexible_line_ref_or_line_ref: Optional[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

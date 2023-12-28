@@ -14,9 +14,7 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pointsOnSection_RelStructure"
 
-    point_on_line_section_or_point_on_section: List[
-        Union[PointOnLineSection, PointOnSection]
-    ] = field(
+    point_on_section: List[Union[PointOnLineSection, PointOnSection]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

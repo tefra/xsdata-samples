@@ -32,9 +32,7 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    network_ref_or_group_of_lines_ref: Optional[
-        Union[NetworkRef, GroupOfLinesRef]
-    ] = field(
+    group_of_lines_ref: Optional[Union[NetworkRef, GroupOfLinesRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -52,9 +50,7 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    flexible_line_ref_or_line_ref: Optional[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -251,7 +251,7 @@ class PointOnSectionVersionedChildStructure(
             ),
         },
     )
-    choice_2: Optional[
+    link_ref_or_infrastructure_link_ref: Optional[
         Union[
             ServiceLinkRef,
             LineLinkRef,

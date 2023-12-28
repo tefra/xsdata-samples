@@ -77,7 +77,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: Optional[
         Union[
             RetailConsortiumRef,
             AuthorityRef,

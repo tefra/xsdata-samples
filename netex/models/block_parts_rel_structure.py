@@ -14,7 +14,7 @@ class BlockPartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "blockParts_RelStructure"
 
-    choice: List[
+    block_part_ref: List[
         Union[TrainBlockPartRef, BlockPartRef, BlockPart, TrainBlockPart]
     ] = field(
         default_factory=list,

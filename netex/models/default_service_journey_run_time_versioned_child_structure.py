@@ -26,7 +26,7 @@ class DefaultServiceJourneyRunTimeVersionedChildStructure(
             "required": True,
         },
     )
-    template_service_journey_ref_or_service_journey_ref: Optional[
+    service_journey_ref: Optional[
         Union[TemplateServiceJourneyRef, ServiceJourneyRef]
     ] = field(
         default=None,

@@ -13,7 +13,7 @@ class NoticeAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "noticeAssignments_RelStructure"
 
-    sales_notice_assignment_or_notice_assignment_or_notice_assignment_view: List[
+    notice_assignment: List[
         Union[SalesNoticeAssignment, NoticeAssignment, NoticeAssignmentView]
     ] = field(
         default_factory=list,

@@ -36,7 +36,7 @@ obj = PublicationDelivery(
         value='Encoding of calendar example'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             ServiceCalendarFrame(
                 id='ust:Otober2019_Week2',
                 version='any',
@@ -65,7 +65,7 @@ obj = PublicationDelivery(
                     to_date=XmlDate(2010, 10, 17)
                 ),
                 day_types=DayTypesInFrameRelStructure(
-                    fare_day_type_or_organisation_day_type_or_day_type=[
+                    day_type=[
                         DayType(
                             id='ust:DT_01',
                             version='any',
@@ -385,7 +385,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -398,7 +398,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -411,7 +411,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -424,7 +424,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_31'
                             )
@@ -437,7 +437,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:278'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -450,7 +450,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -463,7 +463,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -476,7 +476,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_31'
                             )
@@ -489,7 +489,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:279'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -502,7 +502,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -515,7 +515,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -528,7 +528,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_32'
                             )
@@ -541,7 +541,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:280'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -554,7 +554,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -567,7 +567,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -580,7 +580,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_32'
                             )
@@ -593,7 +593,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:281'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -606,7 +606,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -619,7 +619,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -632,7 +632,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_33'
                             )
@@ -645,7 +645,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:282'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_02'
                             )
@@ -658,7 +658,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_13'
                             )
@@ -671,7 +671,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -684,7 +684,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:283'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_02'
                             )
@@ -697,7 +697,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_14'
                             )
@@ -710,7 +710,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_22'
                             )
@@ -723,7 +723,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -736,7 +736,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -749,7 +749,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -762,7 +762,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_31'
                             )
@@ -775,7 +775,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:278'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -788,7 +788,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -801,7 +801,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -814,7 +814,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_31'
                             )
@@ -827,7 +827,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:279'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -840,7 +840,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -853,7 +853,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -866,7 +866,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_32'
                             )
@@ -879,7 +879,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:280'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -892,7 +892,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -905,7 +905,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -918,7 +918,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_32'
                             )
@@ -931,7 +931,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:281'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -944,7 +944,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -957,7 +957,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -970,7 +970,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_33'
                             )
@@ -983,7 +983,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:282'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_02'
                             )
@@ -996,7 +996,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_13'
                             )
@@ -1009,7 +1009,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -1022,7 +1022,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:283'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_02'
                             )
@@ -1035,7 +1035,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_14'
                             )
@@ -1048,7 +1048,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='ust:277'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='ust:DT_22'
                             )

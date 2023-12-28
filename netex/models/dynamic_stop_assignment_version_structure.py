@@ -23,7 +23,7 @@ class DynamicStopAssignmentVersionStructure(
     class Meta:
         name = "DynamicStopAssignment_VersionStructure"
 
-    choice: Optional[
+    journey_pattern_ref: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,
@@ -58,7 +58,7 @@ class DynamicStopAssignmentVersionStructure(
             ),
         },
     )
-    vehicle_journey_stop_assignment_ref_or_dynamic_stop_assignment_ref_or_passenger_stop_assignment_ref: Optional[
+    passenger_stop_assignment_ref: Optional[
         Union[
             VehicleJourneyStopAssignmentRef,
             DynamicStopAssignmentRef,

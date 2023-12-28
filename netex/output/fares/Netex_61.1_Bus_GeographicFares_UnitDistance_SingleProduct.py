@@ -102,7 +102,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
-                        choice=[
+                        validity_condition=[
                             AvailabilityCondition(
                                 id='hde:range2',
                                 version='any',
@@ -110,7 +110,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    choice_1=[
+                    version_frame_ref=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='myfares:any'
@@ -125,12 +125,12 @@ obj = PublicationDelivery(
         value='Example of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='myfares:DTA@Line24_Unit_Distance',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             ValidBetween(
                                 from_date=XmlDateTime(2011, 1, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2011, 7, 1, 0, 0, 0, 0, 0)
@@ -161,7 +161,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ServiceFrame(
                             id='mybus:DTA@Line24_Unit_Distance@network',
                             version='1.0',
@@ -169,7 +169,7 @@ obj = PublicationDelivery(
                                 value='Stops for Fare network '
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ResourceFrameRef(
                                         version='1.0',
                                         ref='mybus:DTA@Common_Resources'
@@ -180,20 +180,20 @@ obj = PublicationDelivery(
                                 id='mybus:DTA',
                                 version='any',
                                 members=LineRefsRelStructure(
-                                    flexible_line_ref_or_line_ref=[
+                                    line_ref=[
                                         LineRef(
                                             version='any',
                                             ref='mybus:Line_24'
                                         ),
                                     ]
                                 ),
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     version='any',
                                     ref='mybus:DTA'
                                 )
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='mybus:Line_24',
                                         version='any',
@@ -300,7 +300,7 @@ obj = PublicationDelivery(
                             id='myfares:DTA@Line24_Unit_Distance@products',
                             version='1.0',
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ServiceFrameRef(
                                         version='1.0',
                                         ref='mybus:DTA@Line24_Unit_Distance@network'
@@ -326,7 +326,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Unit distance fare'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -405,7 +405,7 @@ obj = PublicationDelivery(
                                                 FareStructureElement(
                                                     id='myfares:Unit_Distance@access',
                                                     version='1.0',
-                                                    choice_1=DistanceMatrixElementsRelStructure(
+                                                    choice=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
                                                                 version='any',
@@ -437,7 +437,7 @@ obj = PublicationDelivery(
                                                                     ref='mybus:DTA'
                                                                 ),
                                                             ],
-                                                            network_ref_or_group_of_lines_ref=[
+                                                            group_of_lines_ref=[
                                                                 NetworkRef(
                                                                     version='any',
                                                                     ref='mybus:DTA'
@@ -568,7 +568,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         price_groups=PriceGroupsRelStructure(
-                                            price_group_ref_or_price_group=[
+                                            price_group=[
                                                 PriceGroupRef(
                                                     version='1.0',
                                                     ref='myfares:Line24_Unit_Distance'
@@ -579,7 +579,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='myfares:SingleTrip',
                                         version='1.0',
@@ -590,7 +590,7 @@ obj = PublicationDelivery(
                                             version='ntx:v1.0',
                                             ref='ntx:trip'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -644,7 +644,7 @@ obj = PublicationDelivery(
                                 default_currency='EUR'
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     FareFrameRef(
                                         version='1.0',
                                         ref='myfares:DTA@Line24_Unit_Distance@products'
@@ -660,7 +660,7 @@ obj = PublicationDelivery(
                                             value='Fare Prices - Standard'
                                         ),
                                         members=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 GeographicalIntervalPrice(
                                                     id='myfares:Unit_Distance@gi_1',
                                                     version='1.0',
@@ -704,7 +704,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='ntx:Types_of_Tariff',
                                         version='ntx:v1.0',
@@ -712,7 +712,7 @@ obj = PublicationDelivery(
                                             value='Types of Tariff'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfTariff(
                                                     id='ntx:Distance_kilometers',
                                                     version='ntx:v1.0',
@@ -808,7 +808,7 @@ obj = PublicationDelivery(
                                             value='Types of Fare Product'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareProduct(
                                                     id='ntx:trip',
                                                     version='ntx:v1.0',
@@ -855,7 +855,7 @@ obj = PublicationDelivery(
                                             value='Types of concession'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfTravelDocument(
                                                     id='myfares:paper_ticket',
                                                     version='any',
@@ -874,7 +874,7 @@ obj = PublicationDelivery(
                                             value='Types of Access Right Assignment'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfAccessRightAssignment(
                                                     id='ntx:eligible',
                                                     version='ntx:v1.0',
@@ -903,7 +903,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='mybus:DTA',
                                         version='any',

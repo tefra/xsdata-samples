@@ -12,7 +12,7 @@ class SpecialServiceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "specialServiceRefs_RelStructure"
 
-    dated_special_service_ref_or_special_service_ref: Optional[
+    special_service_ref: Optional[
         Union[DatedSpecialServiceRef, SpecialServiceRef]
     ] = field(
         default=None,

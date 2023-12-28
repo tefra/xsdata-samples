@@ -17,7 +17,7 @@ class FareElementInSequenceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareElementInSequenceRefs_RelStructure"
 
-    controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref: List[
+    fare_element_in_sequence_ref: List[
         Union[
             ControllableElementInSequenceRef,
             FareStructureElementInSequenceRef,

@@ -46,7 +46,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    choice_1=[
+                    version_frame_ref=[
                         ServiceFrameRef(
                             value='REQUEST',
                             ref='mybus:ntwkf001'
@@ -61,12 +61,12 @@ obj = PublicationDelivery(
         value='Netex basic Versioning Example Step 02'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='mybus:ntwkf001',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='mybus:ntwkf001',
                                 version='any',
@@ -115,7 +115,7 @@ obj = PublicationDelivery(
                     ]
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ServiceCalendarFrame(
                             id='mybus:ntwkf001@calendar',
                             version='001',
@@ -142,7 +142,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     DayType(
                                         id='mybus:DT001_MF',
                                         created=XmlDateTime(2010, 5, 18, 10, 30, 47, 0, 0),
@@ -174,7 +174,7 @@ obj = PublicationDelivery(
                             id='mybus:ntwkf001@service',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='mybus:VC002_mf',
                                             created=XmlDateTime(2010, 5, 18, 10, 30, 47, 0, 0),
@@ -185,7 +185,7 @@ obj = PublicationDelivery(
                                             from_date=XmlDateTime(2010, 5, 17, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2011, 5, 17, 0, 0, 0, 0, 0),
                                             day_types=DayTypesRelStructure(
-                                                choice=[
+                                                day_type_ref_or_day_type=[
                                                     DayTypeRef(
                                                         version='001',
                                                         ref='mybus:DT001_MF'

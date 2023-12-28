@@ -35,7 +35,7 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dead_run_ref_or_vehicle_journey_ref: Optional[
+    vehicle_journey_ref: Optional[
         Union[DeadRunRef, VehicleJourneyRef]
     ] = field(
         default=None,
@@ -55,7 +55,7 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[
+    vehicle_type_ref: Optional[
         Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
     ] = field(
         default=None,

@@ -91,7 +91,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    choice_1=[
+                    version_frame_ref=[
                         NetworkFilterByValueStructure(
                             bounding_box=BoundingBoxStructure2(
                                 upper_left=LocationStructure2(
@@ -131,12 +131,12 @@ obj = PublicationDelivery(
         value='Single Stop On street example'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='frtop:RF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='mybus:RF01',
                                 version='any',
@@ -169,12 +169,12 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         SiteFrame(
                             id='frtop:SF005',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='frtop:SF005',
                                             version='any',
@@ -413,7 +413,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
-                                fare_zone_or_tariff_zone=[
+                                tariff_zone=[
                                     TariffZone(
                                         id='frtop:TZ_0010',
                                         version='001',
@@ -433,7 +433,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             stop_assignments=StopAssignmentsInFrameRelStructure(
-                                choice=[
+                                stop_assignment=[
                                     PassengerStopAssignment(
                                         id='frtop:PSA_40016_A1',
                                         version='any',
@@ -442,7 +442,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='032',
                                             ref='frtop:SSP0042A'
                                         ),
@@ -518,7 +518,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Authority(
                                         id='mybus:Org_Mb042',
                                         version='any',

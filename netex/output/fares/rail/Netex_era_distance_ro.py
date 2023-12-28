@@ -351,7 +351,7 @@ obj = PublicationDelivery(
         value='Distance based fare - Romania '
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='tfc:TFC@DistanceTariff_Example',
                 validity_conditions_or_valid_between=[
@@ -378,7 +378,7 @@ obj = PublicationDelivery(
                     default_currency='LEI'
                 ),
                 prerequisites=VersionFrameRefsRelStructure(
-                    choice=[
+                    version_frame_ref=[
                         CompositeFrameRef(
                             version='1.0',
                             ref='eura:EURA@Generic'
@@ -386,7 +386,7 @@ obj = PublicationDelivery(
                     ]
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         FareFrame(
                             id='tfc:TFC@Common',
                             version='01',
@@ -405,7 +405,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ServiceFrameRef(
                                         version='01',
                                         ref='tfc:TFC@Network@Lines'
@@ -432,7 +432,7 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                                 pricing_rules=PricingRulesRelStructure(
-                                    choice=[
+                                    pricing_rule=[
                                         PricingRule(
                                             id='tfc:TFC@Common@rate@route',
                                             version='any',
@@ -564,12 +564,12 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Distance based fares for '
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='tfc:TFC@Lines@Network'
                                         ),
@@ -777,7 +777,7 @@ obj = PublicationDelivery(
                                                                     VehicleModeEnumeration.RAIL,
                                                                 ],
                                                             ],
-                                                            template_service_journey_ref_or_service_journey_ref=[
+                                                            service_journey_ref=[
                                                                 ServiceJourneyRef(
                                                                     ref='netex:JOURNEY',
                                                                     version_ref='netex:OPTIONAL'
@@ -892,7 +892,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Infants  under 6 are free  '
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='tfc:TFC@Tariff@General@eligibilities@infant'
                                                                                 ),
@@ -904,7 +904,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Dogs are 50% '
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='tfc:TFC@Tariff@General@eligibilities@animal'
                                                                                 ),
@@ -960,7 +960,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Infants must have paying adult with them'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='tfc:TFC@Tariff@General@eligibilities@adult'
                                                                                 ),
@@ -1002,7 +1002,7 @@ obj = PublicationDelivery(
                                                                         value='Children up to the age of 10 are fulfilledpay 50% of the regional, interregio, class 1 or class 2, with a separate seat. On trains with reserved seats they pay the full fare of the ticket. '
                                                                     ),
                                                                     url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@concession'
                                                                     ),
@@ -1020,7 +1020,7 @@ obj = PublicationDelivery(
                                                                     name=MultilingualString(
                                                                         value='Youth'
                                                                     ),
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@student'
                                                                     ),
@@ -1064,7 +1064,7 @@ obj = PublicationDelivery(
                                                                         value='1. Students in compulsory, vocational and post-secondary education, accredited / licensed high school, benefit from a 50% reduced tariff for internal rail transport in all train categories, second class, throughout the calendar year.\n\t\t\t\t\t\t\tRelease surcharge , tickets to travel with discount 50% discount for all categories of train and 50% from the reservation, class II, and monthly fees for students discount \n\t\t\t\t\t\t\t50% discount for all categories of train with unlimited number of trips up to 300 km, 2nd class.'
                                                                     ),
                                                                     url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@student'
                                                                     ),
@@ -1106,7 +1106,7 @@ obj = PublicationDelivery(
                                                                         value='Romanian / foreign students enrolled in the form of education - bachelor, master, doctorate - in accredited Romanian higher education institutions benefit from free of charge for the internal railway transport in all train categories, second class, throughout the calendar year regardless of distance or travel routes.\n\t\t\t\t\t\t\tFree travel tickets for all class 2 train travels, as well as free monthly subscriptions for students with unlimited distance trips up to 300 km, 2nd class, are issued free of charge.'
                                                                     ),
                                                                     url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@student'
                                                                     ),
@@ -1148,7 +1148,7 @@ obj = PublicationDelivery(
                                                                         value='6 simple trips 50% discount, regional and interregio train tariff, 2nd class,\n\t\t\t\t\t\t\t* the spouse is entitled to the trip and the spouse is not entitled to the presence of the holder.'
                                                                     ),
                                                                     url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@concession'
                                                                     ),
@@ -1191,7 +1191,7 @@ obj = PublicationDelivery(
                                                                         value='State Secretariat for People with Disabilities. \n\t\t\t\t\t\t\t12 round trips free of charge, interregio train reservation system, 2nd class (serious handicap) and accompanying persons or personal assistants. \n\t\t\t\t\t\t\t6 round trips free of charge, with interregional train with booking regime, 2nd class accentuated) and companions. \n\t\t\t\t\t\t\t* companions travel only by joining the holder  \n\t\t\t\t\t\t\t* personal assistants can travel alone'
                                                                     ),
                                                                     url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@disabled'
                                                                     ),
@@ -1212,7 +1212,7 @@ obj = PublicationDelivery(
                                                                                     value='Companion  for disabled person'
                                                                                 ),
                                                                                 url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='tfc:TFC@Tariff@General@eligibilities@adult'
                                                                                 ),
@@ -1226,7 +1226,7 @@ obj = PublicationDelivery(
                                                                                     value='Personal Assistant  for disabled person'
                                                                                 ),
                                                                                 url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='tfc:TFC@Tariff@General@eligibilities@adult'
                                                                                 ),
@@ -1267,7 +1267,7 @@ obj = PublicationDelivery(
                                                                     description=MultilingualString(
                                                                         value='12 round trips free of charge, interregio train reservation system, 2nd class (serious handicap) and accompanying persons or personal assistants \n6 round trips free of charge, with interregional train with booking regime, \n2nd class accentuated) and companions \n* companions travel only by joining the holder \n* personal assistants can travel alone.'
                                                                     ),
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@veteran'
                                                                     ),
@@ -1287,7 +1287,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Companion for veteran'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='tfc:TFC@Tariff@General@eligibilities@adult'
                                                                                 ),
@@ -1301,7 +1301,7 @@ obj = PublicationDelivery(
                                                                                     value='Personal Assistant  for veteran'
                                                                                 ),
                                                                                 url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='tfc:TFC@Tariff@General@eligibilities@adult'
                                                                                 ),
@@ -1343,7 +1343,7 @@ obj = PublicationDelivery(
                                                                         value='State Secretariat for Revolutionary Issues in  December 1989.\n\t\t\t\t\t\t\t12 free round trips, first class, train any rank, with: \n\t\t\t\t\t\t\t* a single attendant - only circulated in the presence of the holder, \n\t\t\t\t\t\t\t * family members - can circulate without a holder'
                                                                     ),
                                                                     url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@political_victim'
                                                                     ),
@@ -1363,7 +1363,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Companion for vicitim'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='tfc:TFC@Tariff@General@eligibilities@adult'
                                                                                 ),
@@ -1405,7 +1405,7 @@ obj = PublicationDelivery(
                                                                         value='Persecution on ethnic grounds\n\t\t\t\t\t\t\t6 free round trips, first class, train any rank, with: * a single attendant - only circulated in the presence of the holder'
                                                                     ),
                                                                     url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@ethnic_victim'
                                                                     ),
@@ -1442,7 +1442,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Companion for vicitim'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='tfc:TFC@Tariff@General@eligibilities@adult'
                                                                                 ),
@@ -1470,7 +1470,7 @@ obj = PublicationDelivery(
                                                                         value=' \n     2. Orphan pupils with special educational needs and those for whom a special protection measure has been established  under the law or guardianship benefit from free of charge for the domestic railway transport throughout the calendar year.\nFree travel tickets for all train categories, for the booking fee, 2nd class, as well as monthly subscriptions for students to all train categories, with unlimited number of trips to distances up to 300 km, class II are issued free of charge.'
                                                                     ),
                                                                     url='https://www.transferoviarcalatori.ro/tarife/facilitati.html',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@disabled'
                                                                     ),
@@ -1501,7 +1501,7 @@ obj = PublicationDelivery(
                                                                     name=MultilingualString(
                                                                         value='Academics'
                                                                     ),
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@concession'
                                                                     ),
@@ -1520,7 +1520,7 @@ obj = PublicationDelivery(
                                                                     name=MultilingualString(
                                                                         value='Animal'
                                                                     ),
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@concession'
                                                                     ),
@@ -1872,7 +1872,7 @@ obj = PublicationDelivery(
                                                                                     rule_step_result=[
                                                                                         PriceRuleStepResultStructure(
                                                                                             amount=Decimal('0.40'),
-                                                                                            limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                            discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                                 ref='tfc:TFC@Common@rate@tva_tax'
                                                                                             ),
                                                                                             id='tfc:TFC@Tariff@General@reserving@required@reservation_fee',
@@ -2018,7 +2018,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             usage_parameters=UsageParametersInFrameRelStructure(
-                                choice=[
+                                usage_parameter=[
                                     Transferability(
                                         id='tfc:TFC@Common@condition@can_transfer',
                                         version='any',
@@ -2138,7 +2138,7 @@ obj = PublicationDelivery(
                                             value='Surcharge for online'
                                         ),
                                         prices=FulfilmentMethodPricesRelStructure(
-                                            fulfilment_method_price_ref_or_fulfilment_method_price_or_cell_ref=[
+                                            cell_ref=[
                                                 FulfilmentMethodPriceVersionedChildStructure(
                                                     id='tfc:TFC@Common@onboard@price',
                                                     version='01',
@@ -2171,7 +2171,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     FareFrameRef(
                                         version='01',
                                         ref='tfc:TFC@Common'
@@ -2186,12 +2186,12 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Distance based Trip fares for TFC for '
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='tfc:TFC@Lines@Network'
                                         ),
@@ -2257,7 +2257,7 @@ obj = PublicationDelivery(
                                                             ref='eura:can_access_when'
                                                         ),
                                                         temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                            fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                                            day_type_ref=FareDayTypeRef(
                                                                 version='any',
                                                                 ref='tfc:everyday'
                                                             )
@@ -2350,7 +2350,7 @@ obj = PublicationDelivery(
                                                                     name=MultilingualString(
                                                                         value='Student trips limited to 300km '
                                                                     ),
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                         version='any',
                                                                         ref='tfc:TFC@Common@rate@student_maximum_distance'
                                                                     ),
@@ -2630,7 +2630,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tfc:TFC@Trip_Common@leg',
                                                     version='01',
@@ -2658,7 +2658,7 @@ obj = PublicationDelivery(
                                             value='One way Trip  '
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tfc:TFC@Trip_single@leg@trip_type',
                                                     version='01',
@@ -2696,7 +2696,7 @@ obj = PublicationDelivery(
                                         id='tfc:TFC@Trip_period_return@travel@out',
                                         version='01',
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tfc:TFC@Trip_period_return@travel@out@trip_type',
                                                     version='01',
@@ -2730,7 +2730,7 @@ obj = PublicationDelivery(
                                         id='tfc:TFC@Trip_period_return@travel@back',
                                         version='01',
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tfc:TFC@Trip_period_return@travel@back@trip_type',
                                                     version='01',
@@ -2763,7 +2763,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='tfc:TFC@Trip_single',
                                         version='01',
@@ -2787,7 +2787,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -2858,7 +2858,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -2949,7 +2949,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_single'
                                                     ),
@@ -2965,7 +2965,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation'
                                                     ),
@@ -2992,7 +2992,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Tickets for return trip  '
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_period_return'
                                                     ),
@@ -3062,7 +3062,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation'
                                                     ),
@@ -3103,7 +3103,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation'
                                                     ),
@@ -3148,11 +3148,11 @@ obj = PublicationDelivery(
                                             value='Group Discount'
                                         ),
                                         prices=SalesOfferPackagePricesRelStructure(
-                                            sales_offer_package_price_ref_or_sales_offer_package_price_or_cell_ref=[
+                                            cell_ref=[
                                                 SalesOfferPackagePriceVersionedChildStructure(
                                                     id='tfc:Trip@Group_single-SOP',
                                                     version='any',
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='tfc:TFC@Common@rate@group'
                                                     )
@@ -3168,7 +3168,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_single'
                                                     ),
@@ -3327,7 +3327,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     FareFrameRef(
                                         version='01',
                                         ref='tfc:TFC@Trip@products'
@@ -3342,12 +3342,12 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Flat rate supplements for TFC  trip products '
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='tfc:TFC@Lines@Network'
                                         ),
@@ -3487,7 +3487,7 @@ obj = PublicationDelivery(
                                             value='Reservation for a seat on a specific train between two points'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tfc:TFC@Trip_Supplement@Seat_Reservation@out',
                                                     version='01',
@@ -3528,7 +3528,7 @@ obj = PublicationDelivery(
                                             value='Reservation for a seat on a specific train between two points'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tfc:TFC@Trip_Supplement@Seat_Reservation@back',
                                                     version='01',
@@ -3566,7 +3566,7 @@ obj = PublicationDelivery(
                                             value='Dog  add on'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tfc:TFC@Trip_Supplement@Dog@addon',
                                                     version='01',
@@ -3629,7 +3629,7 @@ obj = PublicationDelivery(
                                             value='General  add on'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tfc:TFC@Trip_Supplement@general@addon',
                                                     version='01',
@@ -3650,7 +3650,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     SupplementProduct(
                                         id='tfc:TFC@Trip_Supplement@Seat_Reservation',
                                         version='01',
@@ -3678,7 +3678,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -3741,7 +3741,7 @@ obj = PublicationDelivery(
                                                                                 value='Reservation required if more than 70 km'
                                                                             ),
                                                                             url='https://www.transferoviarcalatori.ro/tarife/tarif-de-rezervare.html',
-                                                                            limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                 ref='txc:distance_more than_70km'
                                                                             )
                                                                         ),
@@ -3752,13 +3752,13 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    flexible_line_ref_or_line_ref=[
+                                                                    line_ref=[
                                                                         LineRef(
                                                                             version='01',
                                                                             ref='tfc:TFC@Lines@Bucharest+Buzau'
                                                                         ),
                                                                     ],
-                                                                    template_service_journey_ref_or_service_journey_ref=[
+                                                                    service_journey_ref=[
                                                                         ServiceJourneyRef(
                                                                             value='A specific journey must be specified',
                                                                             ref='netex:JOURNEY',
@@ -3788,7 +3788,7 @@ obj = PublicationDelivery(
                                                                                 value='Reservation required if more than 50 km'
                                                                             ),
                                                                             url='https://www.transferoviarcalatori.ro/tarife/tarif-de-rezervare.html',
-                                                                            limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                 ref='txc:distance_more than_50km'
                                                                             )
                                                                         ),
@@ -3799,13 +3799,13 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    flexible_line_ref_or_line_ref=[
+                                                                    line_ref=[
                                                                         LineRef(
                                                                             version='01',
                                                                             ref='tfc:TFC@Lines@Bucharest_North+Galati'
                                                                         ),
                                                                     ],
-                                                                    template_service_journey_ref_or_service_journey_ref=[
+                                                                    service_journey_ref=[
                                                                         ServiceJourneyRef(
                                                                             value='A specific journey must be specified',
                                                                             ref='netex:JOURNEY',
@@ -3835,13 +3835,13 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    flexible_line_ref_or_line_ref=[
+                                                                    line_ref=[
                                                                         LineRef(
                                                                             version='01',
                                                                             ref='tfc:TFC@Lines@Cluj_Napoca+Oradea'
                                                                         ),
                                                                     ],
-                                                                    template_service_journey_ref_or_service_journey_ref=[
+                                                                    service_journey_ref=[
                                                                         ServiceJourneyRef(
                                                                             value='A specific journey must be specified',
                                                                             ref='netex:JOURNEY',
@@ -3871,7 +3871,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    flexible_line_ref_or_line_ref=[
+                                                                    line_ref=[
                                                                         LineRef(
                                                                             version='01',
                                                                             ref='tfc:TFC@Lines@Bucharest_North+Titu+Targoviste'
@@ -3909,7 +3909,7 @@ obj = PublicationDelivery(
                                                                             ref='tfc:TFC@Lines@Roşiori+Costeşti'
                                                                         ),
                                                                     ],
-                                                                    template_service_journey_ref_or_service_journey_ref=[
+                                                                    service_journey_ref=[
                                                                         ServiceJourneyRef(
                                                                             value='A specific journey may be specified',
                                                                             ref='netex:JOURNEY',
@@ -3957,7 +3957,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='tfc:TFC@Trip_Supplement@Seat_Reservation',
                                                     version='01',
@@ -3966,7 +3966,7 @@ obj = PublicationDelivery(
                                                         rule_step_result=[
                                                             PriceRuleStepResultStructure(
                                                                 amount=Decimal('0.40'),
-                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                 ),
                                                                 id='tfc:TFC@Trip_Supplement@Seat_Reservation',
@@ -3974,7 +3974,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    choice_2=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation'
                                                     )
@@ -4004,7 +4004,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -4041,7 +4041,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='tfc:TFC@Trip_Supplement@Bicycle',
                                                     version='01',
@@ -4050,7 +4050,7 @@ obj = PublicationDelivery(
                                                         rule_step_result=[
                                                             PriceRuleStepResultStructure(
                                                                 amount=Decimal('0.80'),
-                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                 ),
                                                                 id='tfc:TFC@Trip_Supplement@Bicycle',
@@ -4058,7 +4058,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    choice_2=FareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Bicycle'
                                                     )
@@ -4088,7 +4088,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -4125,7 +4125,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='tfc:TFC@Trip_Supplement@Baggage',
                                                     version='01',
@@ -4134,7 +4134,7 @@ obj = PublicationDelivery(
                                                         rule_step_result=[
                                                             PriceRuleStepResultStructure(
                                                                 amount=Decimal('1.60'),
-                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                 ),
                                                                 id='tfc:TFC@Trip_Supplement@Baggage',
@@ -4142,7 +4142,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    choice_2=FareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Baggage'
                                                     )
@@ -4172,7 +4172,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -4209,16 +4209,16 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='tfc:TFC@Trip_Supplement@Dog',
                                                     version='01',
-                                                    choice_1=DiscountingRule(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                         id='tfc:TFC@Tariff@General@geographic_intervals@dog',
                                                         version='01',
                                                         discount_as_percentage=Decimal('0.50')
                                                     ),
-                                                    choice_2=FareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Dog'
                                                     )
@@ -4250,7 +4250,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation'
                                                     ),
@@ -4281,7 +4281,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Bicycle'
                                                     ),
@@ -4312,7 +4312,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Baggage'
                                                     ),
@@ -4343,7 +4343,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Supplement@Dog'
                                                     ),
@@ -4443,7 +4443,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     FareFrameRef(
                                         version='01',
                                         ref='tfc:TFC@Trip@products'
@@ -4455,7 +4455,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
-                                standard_fare_table_or_fare_table_in_context_or_fare_table=[
+                                fare_table=[
                                     FareTable(
                                         id='tfc:Single@preboard@R',
                                         version='01',
@@ -4617,7 +4617,7 @@ obj = PublicationDelivery(
                                                         value='1-5*'
                                                     ),
                                                     notice_assignments=NoticeAssignmentsRelStructure(
-                                                        sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                                        notice_assignment=[
                                                             NoticeAssignment(
                                                                 id='tfc:Single@preboard@R@001+005',
                                                                 version='01',
@@ -4938,7 +4938,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         includes=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfc:Single@preboard@R@C1@full',
                                                     version='01',
@@ -4990,11 +4990,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@001+005',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@001+005',
                                                                     version='01',
                                                                     is_allowed=False,
@@ -5008,7 +5008,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@006+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@006+010',
                                                                     version='01',
                                                                     amount=Decimal('4.00'),
@@ -5016,7 +5016,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.64'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@006+010',
@@ -5034,7 +5034,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@011+020',
                                                                     version='01',
                                                                     amount=Decimal('5.50'),
@@ -5042,7 +5042,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.88'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@011+020',
@@ -5060,7 +5060,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@021+030',
                                                                     version='01',
                                                                     amount=Decimal('8.00'),
@@ -5068,7 +5068,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.28'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@021+030',
@@ -5086,7 +5086,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@031+040',
                                                                     version='01',
                                                                     amount=Decimal('9.50'),
@@ -5094,7 +5094,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.52'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@031+040',
@@ -5112,7 +5112,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@041+050',
                                                                     version='01',
                                                                     amount=Decimal('12.50'),
@@ -5120,7 +5120,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.00'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@041+050',
@@ -5138,7 +5138,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@051+060',
                                                                     version='01',
                                                                     amount=Decimal('13.00'),
@@ -5146,7 +5146,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.08'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@051+060',
@@ -5164,7 +5164,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@061+070',
                                                                     version='01',
                                                                     amount=Decimal('15.50'),
@@ -5172,7 +5172,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.47'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@061+070',
@@ -5190,7 +5190,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@071+080',
                                                                     version='01',
                                                                     amount=Decimal('17.50'),
@@ -5198,7 +5198,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.79'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@071+080',
@@ -5216,7 +5216,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@081+090',
                                                                     version='01',
                                                                     amount=Decimal('19.50'),
@@ -5224,7 +5224,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.11'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@081+090',
@@ -5242,7 +5242,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@091+100',
                                                                     version='01',
                                                                     amount=Decimal('22.00'),
@@ -5250,7 +5250,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.51'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@091+100',
@@ -5268,7 +5268,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@101+120',
                                                                     version='01',
                                                                     amount=Decimal('26.00'),
@@ -5276,7 +5276,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('4.15'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@101+120',
@@ -5294,7 +5294,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@121+140',
                                                                     version='01',
                                                                     amount=Decimal('30.50'),
@@ -5302,7 +5302,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('4.87'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@121+140',
@@ -5320,7 +5320,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@141+160',
                                                                     version='01',
                                                                     amount=Decimal('34.00'),
@@ -5328,7 +5328,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('5.43'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@141+160',
@@ -5346,7 +5346,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@161+180',
                                                                     version='01',
                                                                     amount=Decimal('39.00'),
@@ -5354,7 +5354,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('6.23'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@161+180',
@@ -5372,7 +5372,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@181+200',
                                                                     version='01',
                                                                     amount=Decimal('43.00'),
@@ -5380,7 +5380,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('6.87'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@181+200',
@@ -5398,7 +5398,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@201+250',
                                                                     version='01',
                                                                     amount=Decimal('49.50'),
@@ -5406,7 +5406,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('9.70'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@201+250'
@@ -5423,7 +5423,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@251+300',
                                                                     version='01',
                                                                     amount=Decimal('57.50'),
@@ -5431,7 +5431,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('9.18'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@251+300',
@@ -5449,7 +5449,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@301+350',
                                                                     version='01',
                                                                     amount=Decimal('65.50'),
@@ -5457,7 +5457,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('10.46'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@full@301+350',
@@ -5531,11 +5531,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@001+005',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@001+005',
                                                                     version='01',
                                                                     is_allowed=False,
@@ -5549,19 +5549,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@006+010',
                                                                     version='01',
                                                                     amount=Decimal('2.00'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@006+010'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5569,7 +5569,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.32'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5587,19 +5587,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@011+020',
                                                                     version='01',
                                                                     amount=Decimal('2.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@011+020'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@011+020',
@@ -5607,7 +5607,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.44'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@011+020',
@@ -5625,19 +5625,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@021+030',
                                                                     version='01',
                                                                     amount=Decimal('4.00'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@021+030'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5645,7 +5645,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.64'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@021+030',
@@ -5663,19 +5663,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@031+040',
                                                                     version='01',
                                                                     amount=Decimal('45.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@031+040'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5683,7 +5683,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.76'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@031+040',
@@ -5701,19 +5701,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@041+050',
                                                                     version='01',
                                                                     amount=Decimal('6.25'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@041+050'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5721,7 +5721,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.00'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@041+050',
@@ -5739,19 +5739,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@051+060',
                                                                     version='01',
                                                                     amount=Decimal('6.50'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@051+060'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5759,7 +5759,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.04'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@051+060',
@@ -5777,19 +5777,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@061+070',
                                                                     version='01',
                                                                     amount=Decimal('7.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@061+070'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5797,7 +5797,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.24'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@061+070',
@@ -5815,19 +5815,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@071+080',
                                                                     version='01',
                                                                     amount=Decimal('8.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@071+080'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5835,7 +5835,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.40'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@071+080',
@@ -5853,19 +5853,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@081+090',
                                                                     version='01',
                                                                     amount=Decimal('9.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@081+090'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5873,7 +5873,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.56'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@081+090',
@@ -5891,19 +5891,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@091+100',
                                                                     version='01',
                                                                     amount=Decimal('11.00'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@091+100'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5911,7 +5911,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.76'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@091+100',
@@ -5929,19 +5929,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@101+120',
                                                                     version='01',
                                                                     amount=Decimal('13.00'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@101+120'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5949,7 +5949,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.08'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@101+120',
@@ -5967,19 +5967,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@121+140',
                                                                     version='01',
                                                                     amount=Decimal('15.25'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@121+140'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -5987,7 +5987,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.43'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@121+140',
@@ -6005,19 +6005,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@141+160',
                                                                     version='01',
                                                                     amount=Decimal('17.00'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@141+160'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -6025,7 +6025,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.71'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@141+160',
@@ -6043,19 +6043,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@161+180',
                                                                     version='01',
                                                                     amount=Decimal('19.5'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@161+180'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -6063,7 +6063,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.11'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@161+180',
@@ -6081,19 +6081,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@181+200',
                                                                     version='01',
                                                                     amount=Decimal('21.50'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@181+200'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -6101,7 +6101,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.42'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@181+200',
@@ -6119,19 +6119,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@201+250',
                                                                     version='01',
                                                                     amount=Decimal('24.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@201+250'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -6139,7 +6139,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.95'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@201+250',
@@ -6157,19 +6157,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@251+300',
                                                                     version='01',
                                                                     amount=Decimal('28.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@251+300'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -6177,7 +6177,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('4.59'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@251+300',
@@ -6195,19 +6195,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@301+350',
                                                                     version='01',
                                                                     amount=Decimal('32.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C1@full@301+350'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
@@ -6215,7 +6215,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('5.23'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C1@fac@301+350',
@@ -6269,11 +6269,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@001+005',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@001+005',
                                                                     version='01',
                                                                     amount=Decimal('2.00'),
@@ -6281,7 +6281,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.32'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@001+005',
@@ -6299,7 +6299,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@006+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@006+010',
                                                                     version='01',
                                                                     amount=Decimal('3.50'),
@@ -6307,7 +6307,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.56'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@006+010',
@@ -6325,7 +6325,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@011+020',
                                                                     version='01',
                                                                     amount=Decimal('4.00'),
@@ -6333,7 +6333,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.64'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@011+020',
@@ -6351,7 +6351,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@021+030',
                                                                     version='01',
                                                                     amount=Decimal('4.50'),
@@ -6359,7 +6359,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.72'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@021+030',
@@ -6377,7 +6377,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@031+040',
                                                                     version='01',
                                                                     amount=Decimal('5.50'),
@@ -6385,7 +6385,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.88'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@031+040',
@@ -6403,7 +6403,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@041+050',
                                                                     version='01',
                                                                     amount=Decimal('7.00'),
@@ -6411,7 +6411,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.12'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@041+050',
@@ -6429,7 +6429,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@051+060',
                                                                     version='01',
                                                                     amount=Decimal('7.50'),
@@ -6437,7 +6437,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.20'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@051+060',
@@ -6455,7 +6455,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@061+070',
                                                                     version='01',
                                                                     amount=Decimal('9.50'),
@@ -6463,7 +6463,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.52'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@061+070',
@@ -6481,7 +6481,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@071+080',
                                                                     version='01',
                                                                     amount=Decimal('11.00'),
@@ -6489,7 +6489,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.76'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@071+080',
@@ -6507,7 +6507,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@081+090',
                                                                     version='01',
                                                                     amount=Decimal('12.50'),
@@ -6515,7 +6515,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.00'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@081+090',
@@ -6533,7 +6533,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@091+100',
                                                                     version='01',
                                                                     amount=Decimal('13.50'),
@@ -6541,7 +6541,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.16'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@091+100',
@@ -6559,7 +6559,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@101+120',
                                                                     version='01',
                                                                     amount=Decimal('16.00'),
@@ -6567,7 +6567,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.55'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@101+120',
@@ -6585,7 +6585,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@121+140',
                                                                     version='01',
                                                                     amount=Decimal('19.00'),
@@ -6593,7 +6593,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.03'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@121+140',
@@ -6611,7 +6611,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@141+160',
                                                                     version='01',
                                                                     amount=Decimal('21.50'),
@@ -6619,7 +6619,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.43'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@141+160',
@@ -6637,7 +6637,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@161+180',
                                                                     version='01',
                                                                     amount=Decimal('25.00'),
@@ -6645,7 +6645,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.99'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@161+180',
@@ -6663,7 +6663,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@181+200',
                                                                     version='01',
                                                                     amount=Decimal('26.50'),
@@ -6671,7 +6671,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('4.23'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@181+200',
@@ -6689,7 +6689,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@201+250',
                                                                     version='01',
                                                                     amount=Decimal('30.50'),
@@ -6697,7 +6697,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('4.87'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@201+250'
@@ -6714,7 +6714,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@251+300',
                                                                     version='01',
                                                                     amount=Decimal('36.00'),
@@ -6722,7 +6722,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('5.75'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@251+300',
@@ -6740,7 +6740,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@301+350',
                                                                     version='01',
                                                                     amount=Decimal('42.00'),
@@ -6748,7 +6748,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('6.71'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@full@301+350',
@@ -6840,11 +6840,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@001+005',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@001+005',
                                                                     version='01',
                                                                     is_allowed=False,
@@ -6858,19 +6858,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@006+010',
                                                                     version='01',
                                                                     amount=Decimal('1.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@006+010'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -6878,7 +6878,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.28'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -6896,19 +6896,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@011+020',
                                                                     version='01',
                                                                     amount=Decimal('2.00'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@011+020'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@011+020',
@@ -6916,7 +6916,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.32'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@011+020',
@@ -6934,19 +6934,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@021+030',
                                                                     version='01',
                                                                     amount=Decimal('2.25'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@021+030'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -6954,7 +6954,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.36'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@021+030',
@@ -6972,19 +6972,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@031+040',
                                                                     version='01',
                                                                     amount=Decimal('2.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@031+040'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -6992,7 +6992,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.44'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@031+040',
@@ -7010,19 +7010,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@041+050',
                                                                     version='01',
                                                                     amount=Decimal('3.50'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@041+050'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7030,7 +7030,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.56'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@041+050',
@@ -7048,19 +7048,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@051+060',
                                                                     version='01',
                                                                     amount=Decimal('3.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@051+060'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7068,7 +7068,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.60'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@051+060',
@@ -7086,19 +7086,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@061+070',
                                                                     version='01',
                                                                     amount=Decimal('4.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@061+070'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7106,7 +7106,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.76'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@061+070',
@@ -7124,19 +7124,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@071+080',
                                                                     version='01',
                                                                     amount=Decimal('5.50'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@071+080'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7144,7 +7144,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.88'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@071+080',
@@ -7162,19 +7162,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@081+090',
                                                                     version='01',
                                                                     amount=Decimal('6.25'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@081+090'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7182,7 +7182,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.10'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@081+090',
@@ -7200,19 +7200,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@091+100',
                                                                     version='01',
                                                                     amount=Decimal('6.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@091+100'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7220,7 +7220,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.08'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@091+100',
@@ -7238,19 +7238,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@101+120',
                                                                     version='01',
                                                                     amount=Decimal('8.00'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@101+120'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7258,7 +7258,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.28'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@101+120',
@@ -7276,19 +7276,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@121+140',
                                                                     version='01',
                                                                     amount=Decimal('9.50'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@121+140'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7296,7 +7296,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.52'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@121+140',
@@ -7314,19 +7314,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@141+160',
                                                                     version='01',
                                                                     amount=Decimal('10.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@141+160'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7334,7 +7334,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.72'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@141+160',
@@ -7352,19 +7352,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@161+180',
                                                                     version='01',
                                                                     amount=Decimal('12.50'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@161+180'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7372,7 +7372,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.00'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@161+180',
@@ -7390,19 +7390,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@181+200',
                                                                     version='01',
                                                                     amount=Decimal('13.25'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@181+200'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7410,7 +7410,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.12'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@181+200',
@@ -7428,19 +7428,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@201+250',
                                                                     version='01',
                                                                     amount=Decimal('15.25'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@201+250'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7448,7 +7448,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.43'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@201+250',
@@ -7466,19 +7466,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@251+300',
                                                                     version='01',
                                                                     amount=Decimal('18.00'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@251+300'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7486,7 +7486,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.87'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@251+300',
@@ -7504,19 +7504,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@301+350',
                                                                     version='01',
                                                                     amount=Decimal('21.00'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Single@preboard@R@C2@full@301+350'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
@@ -7524,7 +7524,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.35'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@preboard@R@C2@fac@301+350',
@@ -7794,7 +7794,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         includes=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfc:Single@preboard@IR_C1@full',
                                                     version='01',
@@ -7831,11 +7831,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@006+010'
                                                                 ),
@@ -7844,7 +7844,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@011+020'
                                                                 ),
@@ -7853,7 +7853,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@021+030'
                                                                 ),
@@ -7862,7 +7862,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@031+040'
                                                                 ),
@@ -7871,7 +7871,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@041+050'
                                                                 ),
@@ -7880,7 +7880,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@051+060'
                                                                 ),
@@ -7889,7 +7889,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@061+070'
                                                                 ),
@@ -7898,7 +7898,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@071+080'
                                                                 ),
@@ -7907,7 +7907,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@081+090'
                                                                 ),
@@ -7916,7 +7916,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@091+100'
                                                                 ),
@@ -7925,7 +7925,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@101+120'
                                                                 ),
@@ -7934,7 +7934,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@121+140'
                                                                 ),
@@ -7943,7 +7943,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@141+160'
                                                                 ),
@@ -7952,7 +7952,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@161+180'
                                                                 ),
@@ -7961,7 +7961,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@181+200'
                                                                 ),
@@ -7970,7 +7970,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@201+250'
                                                                 ),
@@ -7979,7 +7979,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@251+300'
                                                                 ),
@@ -7988,7 +7988,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@301+350'
                                                                 ),
@@ -8053,11 +8053,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@006+010'
                                                                 ),
@@ -8066,7 +8066,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@011+020'
                                                                 ),
@@ -8075,7 +8075,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@021+030'
                                                                 ),
@@ -8084,7 +8084,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@031+040'
                                                                 ),
@@ -8093,7 +8093,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@041+050'
                                                                 ),
@@ -8102,7 +8102,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@051+060'
                                                                 ),
@@ -8111,7 +8111,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@061+070'
                                                                 ),
@@ -8120,7 +8120,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@071+080'
                                                                 ),
@@ -8129,7 +8129,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@081+090'
                                                                 ),
@@ -8138,7 +8138,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@091+100'
                                                                 ),
@@ -8147,7 +8147,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@101+120'
                                                                 ),
@@ -8156,7 +8156,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@121+140'
                                                                 ),
@@ -8165,7 +8165,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@141+160'
                                                                 ),
@@ -8174,7 +8174,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@161+180'
                                                                 ),
@@ -8183,7 +8183,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@181+200'
                                                                 ),
@@ -8192,7 +8192,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@201+250'
                                                                 ),
@@ -8201,7 +8201,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@251+300'
                                                                 ),
@@ -8210,7 +8210,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@301+350'
                                                                 ),
@@ -8255,11 +8255,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@006+010'
                                                                 ),
@@ -8268,7 +8268,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@011+020'
                                                                 ),
@@ -8277,7 +8277,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@021+030'
                                                                 ),
@@ -8286,7 +8286,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@031+040'
                                                                 ),
@@ -8295,7 +8295,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@041+050'
                                                                 ),
@@ -8304,7 +8304,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@051+060'
                                                                 ),
@@ -8313,7 +8313,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@061+070'
                                                                 ),
@@ -8322,7 +8322,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@071+080'
                                                                 ),
@@ -8331,7 +8331,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@081+090'
                                                                 ),
@@ -8340,7 +8340,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@091+100'
                                                                 ),
@@ -8349,7 +8349,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@101+120'
                                                                 ),
@@ -8358,7 +8358,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@121+140'
                                                                 ),
@@ -8367,7 +8367,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@141+160'
                                                                 ),
@@ -8376,7 +8376,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@161+180'
                                                                 ),
@@ -8385,7 +8385,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@181+200'
                                                                 ),
@@ -8394,7 +8394,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@201+250'
                                                                 ),
@@ -8403,7 +8403,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@251+300'
                                                                 ),
@@ -8412,7 +8412,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@301+350'
                                                                 ),
@@ -8478,11 +8478,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@006+010'
                                                                 ),
@@ -8491,7 +8491,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@011+020'
                                                                 ),
@@ -8500,7 +8500,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@021+030'
                                                                 ),
@@ -8509,7 +8509,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@031+040'
                                                                 ),
@@ -8518,7 +8518,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@041+050'
                                                                 ),
@@ -8527,7 +8527,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@051+060'
                                                                 ),
@@ -8536,7 +8536,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@061+070'
                                                                 ),
@@ -8545,7 +8545,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@071+080'
                                                                 ),
@@ -8554,7 +8554,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@081+090'
                                                                 ),
@@ -8563,7 +8563,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@091+100'
                                                                 ),
@@ -8572,7 +8572,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@101+120'
                                                                 ),
@@ -8581,7 +8581,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@121+140'
                                                                 ),
@@ -8590,7 +8590,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@141+160'
                                                                 ),
@@ -8599,7 +8599,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@161+180'
                                                                 ),
@@ -8608,7 +8608,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@181+200'
                                                                 ),
@@ -8617,7 +8617,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@201+250'
                                                                 ),
@@ -8626,7 +8626,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@251+300'
                                                                 ),
@@ -8635,7 +8635,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPriceRef(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@301+350'
                                                                 ),
@@ -8875,7 +8875,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         includes=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfc:Single@onboard@C1@full',
                                                     version='01',
@@ -8918,11 +8918,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_006+010',
                                                                     version='01',
                                                                     amount=Decimal('6.00'),
@@ -8930,7 +8930,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.96'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_006+010',
@@ -8948,7 +8948,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_011+020',
                                                                     version='01',
                                                                     amount=Decimal('7.50'),
@@ -8956,7 +8956,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.20'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_011+020',
@@ -8974,7 +8974,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_021+030',
                                                                     version='01',
                                                                     amount=Decimal('10.00'),
@@ -8982,7 +8982,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('1.60'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_021+030',
@@ -9000,7 +9000,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_031+040',
                                                                     version='01',
                                                                     amount=Decimal('11.50'),
@@ -9008,7 +9008,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('1.84'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_031+040',
@@ -9026,7 +9026,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_041+050',
                                                                     version='01',
                                                                     amount=Decimal('14.50'),
@@ -9034,7 +9034,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('2.32'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_041+050',
@@ -9052,7 +9052,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_051+060',
                                                                     version='01',
                                                                     amount=Decimal('15.00'),
@@ -9060,7 +9060,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('2.39'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_051+060',
@@ -9078,7 +9078,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_061+070',
                                                                     version='01',
                                                                     amount=Decimal('17.50'),
@@ -9086,7 +9086,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('2.79'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_061+070',
@@ -9104,7 +9104,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_071+080',
                                                                     version='01',
                                                                     amount=Decimal('19.50'),
@@ -9112,7 +9112,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('3.11'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_071+080',
@@ -9130,7 +9130,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_081+090',
                                                                     version='01',
                                                                     amount=Decimal('21.50'),
@@ -9138,7 +9138,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('3.43'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_081+090',
@@ -9156,7 +9156,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_091+100',
                                                                     version='01',
                                                                     amount=Decimal('24.00'),
@@ -9164,7 +9164,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('3.83'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_091+100',
@@ -9182,7 +9182,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_101+120',
                                                                     version='01',
                                                                     amount=Decimal('28.00'),
@@ -9190,7 +9190,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('4.47'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_101+120',
@@ -9208,7 +9208,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_121+140',
                                                                     version='01',
                                                                     amount=Decimal('32.50'),
@@ -9216,7 +9216,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('5.19'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_121+140',
@@ -9234,7 +9234,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_141+160',
                                                                     version='01',
                                                                     amount=Decimal('36.00'),
@@ -9242,7 +9242,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('5.75'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_141+160',
@@ -9260,7 +9260,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_161+180',
                                                                     version='01',
                                                                     amount=Decimal('41.00'),
@@ -9268,7 +9268,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('6.55'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_161+180',
@@ -9286,7 +9286,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_181+200',
                                                                     version='01',
                                                                     amount=Decimal('45.00'),
@@ -9294,7 +9294,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('7.18'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_181+200',
@@ -9312,7 +9312,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_201+250',
                                                                     version='01',
                                                                     amount=Decimal('51.50'),
@@ -9320,7 +9320,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('8.22'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_201+250'
@@ -9337,7 +9337,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_251+300',
                                                                     version='01',
                                                                     amount=Decimal('59.50'),
@@ -9345,7 +9345,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('9.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_251+300',
@@ -9363,7 +9363,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_301+350',
                                                                     version='01',
                                                                     amount=Decimal('67.50'),
@@ -9371,7 +9371,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('10.78'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C1@full_301+350',
@@ -9425,11 +9425,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_006+010',
                                                                     version='01',
                                                                     amount=Decimal('5.50'),
@@ -9437,7 +9437,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('0.56'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_006+010',
@@ -9455,7 +9455,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_011+020',
                                                                     version='01',
                                                                     amount=Decimal('6.00'),
@@ -9463,7 +9463,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('0.64'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_011+020',
@@ -9481,7 +9481,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_021+030',
                                                                     version='01',
                                                                     amount=Decimal('6.50'),
@@ -9489,7 +9489,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('0.72'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_021+030',
@@ -9507,7 +9507,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_031+040',
                                                                     version='01',
                                                                     amount=Decimal('7.50'),
@@ -9515,7 +9515,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('0.88'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_031+040',
@@ -9533,7 +9533,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_041+050',
                                                                     version='01',
                                                                     amount=Decimal('9.00'),
@@ -9541,7 +9541,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('1.12'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_041+050',
@@ -9559,7 +9559,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_051+060',
                                                                     version='01',
                                                                     amount=Decimal('9.50'),
@@ -9567,7 +9567,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('1.20'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_051+060',
@@ -9585,7 +9585,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_061+070',
                                                                     version='01',
                                                                     amount=Decimal('11.50'),
@@ -9593,7 +9593,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('1.52'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_061+070',
@@ -9611,7 +9611,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_071+080',
                                                                     version='01',
                                                                     amount=Decimal('13.00'),
@@ -9619,7 +9619,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('1.76'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_071+080',
@@ -9637,7 +9637,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_081+090',
                                                                     version='01',
                                                                     amount=Decimal('14.50'),
@@ -9645,7 +9645,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('2.00'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_081+090',
@@ -9663,7 +9663,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_091+100',
                                                                     version='01',
                                                                     amount=Decimal('15.50'),
@@ -9671,7 +9671,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('2.16'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_091+100',
@@ -9689,7 +9689,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_101+120',
                                                                     version='01',
                                                                     amount=Decimal('18.00'),
@@ -9697,7 +9697,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('2.55'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_101+120',
@@ -9715,7 +9715,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_121+140',
                                                                     version='01',
                                                                     amount=Decimal('21.00'),
@@ -9723,7 +9723,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('3.03'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_121+140',
@@ -9741,7 +9741,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_141+160',
                                                                     version='01',
                                                                     amount=Decimal('23.50'),
@@ -9749,7 +9749,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('3.43'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_141+160',
@@ -9767,7 +9767,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_161+180',
                                                                     version='01',
                                                                     amount=Decimal('27.00'),
@@ -9775,7 +9775,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('3.99'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_161+180',
@@ -9793,7 +9793,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_181+200',
                                                                     version='01',
                                                                     amount=Decimal('28.50'),
@@ -9801,7 +9801,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('4.23'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_181+200',
@@ -9819,7 +9819,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_201+250',
                                                                     version='01',
                                                                     amount=Decimal('32.50'),
@@ -9827,7 +9827,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('4.87'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_201+250'
@@ -9844,7 +9844,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_251+300',
                                                                     version='01',
                                                                     amount=Decimal('38.00'),
@@ -9852,7 +9852,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('5.75'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_251+300',
@@ -9870,7 +9870,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_301+350',
                                                                     version='01',
                                                                     amount=Decimal('44.00'),
@@ -9878,7 +9878,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 amount=Decimal('6.71'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Single@onboard@C2@full_301+350',
@@ -10149,7 +10149,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         includes=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfc:Return@preboard@IR@C1@full',
                                                     version='01',
@@ -10186,11 +10186,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@001+010',
                                                                     version='01',
                                                                     amount=Decimal('7.20'),
@@ -10198,7 +10198,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.15'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@001+010',
@@ -10216,7 +10216,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@011+020',
                                                                     version='01',
                                                                     amount=Decimal('9.90'),
@@ -10224,7 +10224,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.58'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@011+020',
@@ -10242,7 +10242,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@021+030',
                                                                     version='01',
                                                                     amount=Decimal('14.40'),
@@ -10250,7 +10250,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.30'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@021+030',
@@ -10268,7 +10268,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@031+040',
                                                                     version='01',
                                                                     amount=Decimal('17.10'),
@@ -10276,7 +10276,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.73'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@031+040',
@@ -10294,7 +10294,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@041+050',
                                                                     version='01',
                                                                     amount=Decimal('22.50'),
@@ -10302,7 +10302,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.59'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@041+050',
@@ -10320,7 +10320,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@051+060',
                                                                     version='01',
                                                                     amount=Decimal('23.40'),
@@ -10328,7 +10328,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.74'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@051+060',
@@ -10346,7 +10346,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@061+070',
                                                                     version='01',
                                                                     amount=Decimal('35.10'),
@@ -10354,7 +10354,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('5.60'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@061+070',
@@ -10372,7 +10372,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@071+080',
                                                                     version='01',
                                                                     amount=Decimal('31.50'),
@@ -10380,7 +10380,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('5.03'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@071+080',
@@ -10398,7 +10398,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@081+090',
                                                                     version='01',
                                                                     amount=Decimal('35.10'),
@@ -10406,7 +10406,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('5.60'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@081+090',
@@ -10424,7 +10424,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@091+100',
                                                                     version='01',
                                                                     amount=Decimal('39.60'),
@@ -10432,7 +10432,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('6.32'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@091+100',
@@ -10450,7 +10450,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@101+120',
                                                                     version='01',
                                                                     amount=Decimal('46.80'),
@@ -10458,7 +10458,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('7.47'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@101+120',
@@ -10476,7 +10476,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@121+140',
                                                                     version='01',
                                                                     amount=Decimal('30.50'),
@@ -10484,7 +10484,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('8.77'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@121+140',
@@ -10502,7 +10502,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@141+160',
                                                                     version='01',
                                                                     amount=Decimal('61.20'),
@@ -10510,7 +10510,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('9.77'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@141+160',
@@ -10528,7 +10528,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@161+180',
                                                                     version='01',
                                                                     amount=Decimal('70.20'),
@@ -10536,7 +10536,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('11.21'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@161+180',
@@ -10554,7 +10554,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@181+200',
                                                                     version='01',
                                                                     amount=Decimal('77.40'),
@@ -10562,7 +10562,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('12.36'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@181+200',
@@ -10580,7 +10580,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@201+250',
                                                                     version='01',
                                                                     amount=Decimal('89.10'),
@@ -10588,7 +10588,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('14.23'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@201+250'
@@ -10605,7 +10605,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@251+300',
                                                                     version='01',
                                                                     amount=Decimal('103.50'),
@@ -10613,7 +10613,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('16.53'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@251+300',
@@ -10631,7 +10631,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@301+350',
                                                                     version='01',
                                                                     amount=Decimal('117.90'),
@@ -10639,7 +10639,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('18.82'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@full@301+350',
@@ -10714,23 +10714,23 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@001+010',
                                                                     version='01',
                                                                     amount=Decimal('3.60'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@001+010'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@001+010',
@@ -10738,7 +10738,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.57'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@001+010',
@@ -10756,19 +10756,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@011+020',
                                                                     version='01',
                                                                     amount=Decimal('4.95'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@011+020'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@011+020',
@@ -10776,7 +10776,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.79'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@011+020',
@@ -10794,19 +10794,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@021+030',
                                                                     version='01',
                                                                     amount=Decimal('7.20'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@021+030'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -10814,7 +10814,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.15'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@021+030',
@@ -10832,19 +10832,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@031+040',
                                                                     version='01',
                                                                     amount=Decimal('8.55'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@031+040'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -10852,7 +10852,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.37'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@031+040',
@@ -10870,19 +10870,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@041+050',
                                                                     version='01',
                                                                     amount=Decimal('11.25'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@041+050'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -10890,7 +10890,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.80'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@041+050',
@@ -10908,19 +10908,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@051+060',
                                                                     version='01',
                                                                     amount=Decimal('13.95'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@051+060'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -10928,7 +10928,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.23'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@051+060',
@@ -10946,19 +10946,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@061+070',
                                                                     version='01',
                                                                     amount=Decimal('15.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@061+070'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -10966,7 +10966,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.51'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@061+070',
@@ -10984,19 +10984,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@071+080',
                                                                     version='01',
                                                                     amount=Decimal('15.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@071+080'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11004,7 +11004,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.51'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@071+080',
@@ -11022,19 +11022,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@081+090',
                                                                     version='01',
                                                                     amount=Decimal('17.55'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@081+090'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11042,7 +11042,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.80'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@081+090',
@@ -11060,19 +11060,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@091+100',
                                                                     version='01',
                                                                     amount=Decimal('19.80'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@091+100'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11080,7 +11080,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.16'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@091+100',
@@ -11098,19 +11098,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@101+120',
                                                                     version='01',
                                                                     amount=Decimal('23.40'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@101+120'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11118,7 +11118,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.74'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@101+120',
@@ -11136,19 +11136,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@121+140',
                                                                     version='01',
                                                                     amount=Decimal('27.45'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@121+140'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11156,7 +11156,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('4.38'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@121+140',
@@ -11174,19 +11174,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@141+160',
                                                                     version='01',
                                                                     amount=Decimal('30.60'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@141+160'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11194,7 +11194,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('4.89'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@141+160',
@@ -11212,19 +11212,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@161+180',
                                                                     version='01',
                                                                     amount=Decimal('35.10'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@161+180'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11232,7 +11232,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('5.60'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@161+180',
@@ -11250,19 +11250,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@181+200',
                                                                     version='01',
                                                                     amount=Decimal('38.70'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@181+200'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11270,7 +11270,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('6.18'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@181+200',
@@ -11288,19 +11288,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@201+250',
                                                                     version='01',
                                                                     amount=Decimal('44.55'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@201+250'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11308,7 +11308,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('7.11'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@201+250',
@@ -11326,19 +11326,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@251+300',
                                                                     version='01',
                                                                     amount=Decimal('51.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@251+300'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11346,7 +11346,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('8.26'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@251+300',
@@ -11364,19 +11364,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@301+350',
                                                                     version='01',
                                                                     amount=Decimal('58.95'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C1@full@301+350'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@006+010',
@@ -11384,7 +11384,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('9.41'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C1@fac@301+350',
@@ -11438,11 +11438,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@001+010',
                                                                     version='01',
                                                                     amount=Decimal('6.30'),
@@ -11450,7 +11450,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.01'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@001+010',
@@ -11468,7 +11468,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@011+020',
                                                                     version='01',
                                                                     amount=Decimal('7.20'),
@@ -11476,7 +11476,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.154'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@011+020',
@@ -11494,7 +11494,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@021+030',
                                                                     version='01',
                                                                     amount=Decimal('8.10'),
@@ -11502,7 +11502,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.29'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@021+030',
@@ -11520,7 +11520,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@031+040',
                                                                     version='01',
                                                                     amount=Decimal('9.90'),
@@ -11528,7 +11528,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.58'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@031+040',
@@ -11546,7 +11546,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@041+050',
                                                                     version='01',
                                                                     amount=Decimal('12.60'),
@@ -11554,7 +11554,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.01'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@041+050',
@@ -11572,7 +11572,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@051+060',
                                                                     version='01',
                                                                     amount=Decimal('13.50'),
@@ -11580,7 +11580,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.16'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@051+060',
@@ -11598,7 +11598,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@061+070',
                                                                     version='01',
                                                                     amount=Decimal('17.10'),
@@ -11606,7 +11606,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.73'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@061+070',
@@ -11624,7 +11624,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@071+080',
                                                                     version='01',
                                                                     amount=Decimal('19.80'),
@@ -11632,7 +11632,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.16'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@071+080',
@@ -11650,7 +11650,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@081+090',
                                                                     version='01',
                                                                     amount=Decimal('22.50'),
@@ -11658,7 +11658,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.59'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@081+090',
@@ -11676,7 +11676,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@091+100',
                                                                     version='01',
                                                                     amount=Decimal('24.30'),
@@ -11684,7 +11684,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.88'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@091+100',
@@ -11702,7 +11702,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@101+120',
                                                                     version='01',
                                                                     amount=Decimal('28.80'),
@@ -11710,7 +11710,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('4.60'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@101+120',
@@ -11728,7 +11728,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@121+140',
                                                                     version='01',
                                                                     amount=Decimal('34.20'),
@@ -11736,7 +11736,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('5.46'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@121+140',
@@ -11754,7 +11754,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@141+160',
                                                                     version='01',
                                                                     amount=Decimal('38.70'),
@@ -11762,7 +11762,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('6.18'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@141+160',
@@ -11780,7 +11780,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@161+180',
                                                                     version='01',
                                                                     amount=Decimal('45.00'),
@@ -11788,7 +11788,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('7.18'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@161+180',
@@ -11806,7 +11806,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@181+200',
                                                                     version='01',
                                                                     amount=Decimal('47.70'),
@@ -11814,7 +11814,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('7.62'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@181+200',
@@ -11832,7 +11832,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@201+250',
                                                                     version='01',
                                                                     amount=Decimal('54.90'),
@@ -11840,7 +11840,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('8.77'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@201+250'
@@ -11857,7 +11857,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@251+300',
                                                                     version='01',
                                                                     amount=Decimal('64.80'),
@@ -11865,7 +11865,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('10.35'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@251+300',
@@ -11883,7 +11883,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@301+350',
                                                                     version='01',
                                                                     amount=Decimal('75.69'),
@@ -11891,7 +11891,7 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('12.07'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@full@301+350',
@@ -11966,23 +11966,23 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@001+010',
                                                                     version='01',
                                                                     amount=Decimal('3.15'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@001+010'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@001+010',
@@ -11990,7 +11990,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@001+010',
@@ -12008,19 +12008,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@011+020',
                                                                     version='01',
                                                                     amount=Decimal('3.60'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@011+020'
                                                                                 ),
                                                                                 rate_used=Decimal('0.57'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@011+020',
@@ -12028,7 +12028,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.32'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@011+020',
@@ -12046,19 +12046,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@021+030',
                                                                     version='01',
                                                                     amount=Decimal('4.05'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@021+030'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12066,7 +12066,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.65'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@021+030',
@@ -12084,19 +12084,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@031+040',
                                                                     version='01',
                                                                     amount=Decimal('4.95'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@031+040'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12104,7 +12104,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('0.79'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@031+040',
@@ -12122,19 +12122,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@041+050',
                                                                     version='01',
                                                                     amount=Decimal('6.30'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@041+050'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12142,7 +12142,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.01'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@041+050',
@@ -12160,19 +12160,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@051+060',
                                                                     version='01',
                                                                     amount=Decimal('6.75'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@051+060'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12180,7 +12180,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.08'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@051+060',
@@ -12198,19 +12198,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@061+070',
                                                                     version='01',
                                                                     amount=Decimal('8.55'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@061+070'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12218,7 +12218,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.37'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@061+070',
@@ -12236,19 +12236,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@071+080',
                                                                     version='01',
                                                                     amount=Decimal('9.90'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@071+080'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12256,7 +12256,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.58'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@071+080',
@@ -12274,19 +12274,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@081+090',
                                                                     version='01',
                                                                     amount=Decimal('11.25'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@081+090'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12294,7 +12294,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.80'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@081+090',
@@ -12312,19 +12312,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@091+100',
                                                                     version='01',
                                                                     amount=Decimal('12.15'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@091+100'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12332,7 +12332,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('1.94'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@091+100',
@@ -12350,19 +12350,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@101+120',
                                                                     version='01',
                                                                     amount=Decimal('14.40'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@101+120'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12370,7 +12370,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.30'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@101+120',
@@ -12388,19 +12388,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@121+140',
                                                                     version='01',
                                                                     amount=Decimal('17.10'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@121+140'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12408,7 +12408,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('2.73'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@121+140',
@@ -12426,19 +12426,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@141+160',
                                                                     version='01',
                                                                     amount=Decimal('19.35'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@141+160'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12446,7 +12446,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.09'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@141+160',
@@ -12464,19 +12464,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@161+180',
                                                                     version='01',
                                                                     amount=Decimal('22.50'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@161+180'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12484,7 +12484,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.59'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@161+180',
@@ -12502,19 +12502,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@181+200',
                                                                     version='01',
                                                                     amount=Decimal('23.85'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@181+200'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12522,7 +12522,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('3.81'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@181+200',
@@ -12540,19 +12540,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@201+250',
                                                                     version='01',
                                                                     amount=Decimal('27.45'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@201+250'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12560,7 +12560,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('4.38'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@201+250',
@@ -12578,19 +12578,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@251+300',
                                                                     version='01',
                                                                     amount=Decimal('32.40'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@251+300'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12598,7 +12598,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('5.17'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@251+300',
@@ -12616,19 +12616,19 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@301+350',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@301+350',
                                                                     version='01',
                                                                     amount=Decimal('37.80'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=GeographicalIntervalPriceRef(
+                                                                                fare_price_ref=GeographicalIntervalPriceRef(
                                                                                     version='01',
                                                                                     ref='tfc:Return@preboard@IR@C2@full@301+350'
                                                                                 ),
                                                                                 rate_used=Decimal('0.50'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@concession'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@006+010',
@@ -12636,7 +12636,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             PriceRuleStepResultStructure(
                                                                                 adjustment_amount=Decimal('6.04'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                     ref='tfc:TFC@Common@rate@tva_tax'
                                                                                 ),
                                                                                 id='tfc:Return@preboard@IR@C2@fac@301+350',
@@ -12681,7 +12681,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     FareFrameRef(
                                         version='01',
                                         ref='tfc:TFC@Common'
@@ -12696,12 +12696,12 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Season Pass Distance based fares for Transferoviar '
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='tfc:TFC@Lines@Network'
                                         ),
@@ -12916,7 +12916,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tfc:TFC@Season_pass@repeated_trip@train_p2p@access',
                                                     version='01',
@@ -12940,7 +12940,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='tfc:TFC@Season_pass',
                                         version='01',
@@ -12957,7 +12957,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -13098,7 +13098,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='tfc:TFC@Season_pass'
                                                     ),
@@ -13131,7 +13131,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     FareFrameRef(
                                         version='01',
                                         ref='tfc:TFC@Pass'
@@ -13139,7 +13139,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
-                                standard_fare_table_or_fare_table_in_context_or_fare_table=[
+                                fare_table=[
                                     FareTable(
                                         id='tfc:Pass@Season@adult@1M',
                                         version='01',
@@ -13335,7 +13335,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         includes=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R',
                                                     version='01',
@@ -13367,11 +13367,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@006+010',
                                                                     version='01',
                                                                     amount=Decimal('96.00'),
@@ -13385,7 +13385,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@011+020',
                                                                     version='01',
                                                                     amount=Decimal('107.00'),
@@ -13399,7 +13399,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@021+030',
                                                                     version='01',
                                                                     amount=Decimal('129.00'),
@@ -13413,7 +13413,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@031+040',
                                                                     version='01',
                                                                     amount=Decimal('146.00'),
@@ -13427,7 +13427,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@041+050',
                                                                     version='01',
                                                                     amount=Decimal('185.00'),
@@ -13441,7 +13441,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@051+060',
                                                                     version='01',
                                                                     amount=Decimal('196.00'),
@@ -13455,7 +13455,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@061+070',
                                                                     version='01',
                                                                     amount=Decimal('230.00'),
@@ -13469,7 +13469,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@071+080',
                                                                     version='01',
                                                                     amount=Decimal('252.00'),
@@ -13483,7 +13483,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@081+090',
                                                                     version='01',
                                                                     amount=Decimal('286.00'),
@@ -13497,7 +13497,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@091+100',
                                                                     version='01',
                                                                     amount=Decimal('314.00'),
@@ -13511,7 +13511,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@101+120',
                                                                     version='01',
                                                                     amount=Decimal('341.00'),
@@ -13525,7 +13525,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@121+140',
                                                                     version='01',
                                                                     amount=Decimal('408.00'),
@@ -13539,7 +13539,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@141+160',
                                                                     version='01',
                                                                     amount=Decimal('454.00'),
@@ -13553,7 +13553,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@161+180',
                                                                     version='01',
                                                                     amount=Decimal('526.00'),
@@ -13567,7 +13567,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@181+200',
                                                                     version='01',
                                                                     amount=Decimal('548.00'),
@@ -13581,7 +13581,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@201+250',
                                                                     version='01',
                                                                     amount=Decimal('622.00'),
@@ -13595,7 +13595,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@251+300',
                                                                     version='01',
                                                                     amount=Decimal('733.00'),
@@ -13640,11 +13640,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@001+010',
                                                                     version='01',
                                                                     amount=Decimal('99.00'),
@@ -13658,7 +13658,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@011+020',
                                                                     version='01',
                                                                     amount=Decimal('109.00'),
@@ -13672,7 +13672,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@021+030',
                                                                     version='01',
                                                                     amount=Decimal('133.00'),
@@ -13686,7 +13686,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@031+040',
                                                                     version='01',
                                                                     amount=Decimal('150.00'),
@@ -13700,7 +13700,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@041+050',
                                                                     version='01',
                                                                     amount=Decimal('191.00'),
@@ -13714,7 +13714,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@051+060',
                                                                     version='01',
                                                                     amount=Decimal('202.00'),
@@ -13728,7 +13728,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@061+070',
                                                                     version='01',
                                                                     amount=Decimal('237.00'),
@@ -13742,7 +13742,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@071+080',
                                                                     version='01',
                                                                     amount=Decimal('260.00'),
@@ -13756,7 +13756,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@081+090',
                                                                     version='01',
                                                                     amount=Decimal('295.00'),
@@ -13770,7 +13770,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@091+100',
                                                                     version='01',
                                                                     amount=Decimal('323.00'),
@@ -13784,7 +13784,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@101+120',
                                                                     version='01',
                                                                     amount=Decimal('351.00'),
@@ -13798,7 +13798,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@121+140',
                                                                     version='01',
                                                                     amount=Decimal('420.00'),
@@ -13812,7 +13812,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@141+160',
                                                                     version='01',
                                                                     amount=Decimal('468.00'),
@@ -13826,7 +13826,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@161+180',
                                                                     version='01',
                                                                     amount=Decimal('542.00'),
@@ -13840,7 +13840,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@181+200',
                                                                     version='01',
                                                                     amount=Decimal('564.00'),
@@ -13854,7 +13854,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@201+250',
                                                                     version='01',
                                                                     amount=Decimal('641.00'),
@@ -13868,7 +13868,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@251+300',
                                                                     version='01',
                                                                     amount=Decimal('755.00'),
@@ -14080,7 +14080,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         includes=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R',
                                                     version='01',
@@ -14112,11 +14112,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@006+010',
                                                                     version='01',
                                                                     amount=Decimal('48.00'),
@@ -14130,7 +14130,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@011+020',
                                                                     version='01',
                                                                     amount=Decimal('53.00'),
@@ -14144,7 +14144,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@021+030',
                                                                     version='01',
                                                                     amount=Decimal('64.50'),
@@ -14158,7 +14158,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@031+040',
                                                                     version='01',
                                                                     amount=Decimal('73.00'),
@@ -14172,7 +14172,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@041+050',
                                                                     version='01',
                                                                     amount=Decimal('92.50'),
@@ -14186,7 +14186,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@051+060',
                                                                     version='01',
                                                                     amount=Decimal('98.00'),
@@ -14200,7 +14200,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@061+070',
                                                                     version='01',
                                                                     amount=Decimal('115.00'),
@@ -14214,7 +14214,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@071+080',
                                                                     version='01',
                                                                     amount=Decimal('126.00'),
@@ -14228,7 +14228,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@081+090',
                                                                     version='01',
                                                                     amount=Decimal('143.00'),
@@ -14242,7 +14242,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@091+100',
                                                                     version='01',
                                                                     amount=Decimal('157.00'),
@@ -14256,7 +14256,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@101+120',
                                                                     version='01',
                                                                     amount=Decimal('170.50'),
@@ -14270,7 +14270,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@121+140',
                                                                     version='01',
                                                                     amount=Decimal('204.00'),
@@ -14284,7 +14284,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@141+160',
                                                                     version='01',
                                                                     amount=Decimal('227.00'),
@@ -14298,7 +14298,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@161+180',
                                                                     version='01',
                                                                     amount=Decimal('263.00'),
@@ -14312,7 +14312,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@181+200',
                                                                     version='01',
                                                                     amount=Decimal('274.00'),
@@ -14326,7 +14326,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@201+250',
                                                                     version='01',
                                                                     amount=Decimal('31100'),
@@ -14340,7 +14340,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@251+300',
                                                                     version='01',
                                                                     amount=Decimal('366.50'),
@@ -14385,11 +14385,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@001+010',
                                                                     version='01',
                                                                     amount=Decimal('49.50'),
@@ -14403,7 +14403,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@011+020',
                                                                     version='01',
                                                                     amount=Decimal('54.50'),
@@ -14417,7 +14417,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@021+030',
                                                                     version='01',
                                                                     amount=Decimal('66.50'),
@@ -14431,7 +14431,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@031+040',
                                                                     version='01',
                                                                     amount=Decimal('75.00'),
@@ -14445,7 +14445,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@041+050',
                                                                     version='01',
                                                                     amount=Decimal('95.50'),
@@ -14459,7 +14459,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@051+060',
                                                                     version='01',
                                                                     amount=Decimal('101.00'),
@@ -14473,7 +14473,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@061+070',
                                                                     version='01',
                                                                     amount=Decimal('118.50'),
@@ -14487,7 +14487,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@071+080',
                                                                     version='01',
                                                                     amount=Decimal('130.00'),
@@ -14501,7 +14501,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@081+090',
                                                                     version='01',
                                                                     amount=Decimal('147.50'),
@@ -14515,7 +14515,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@091+100',
                                                                     version='01',
                                                                     amount=Decimal('161.50'),
@@ -14529,7 +14529,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@101+120',
                                                                     version='01',
                                                                     amount=Decimal('175.50'),
@@ -14543,7 +14543,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@121+140',
                                                                     version='01',
                                                                     amount=Decimal('210.00'),
@@ -14557,7 +14557,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@141+160',
                                                                     version='01',
                                                                     amount=Decimal('234.00'),
@@ -14571,7 +14571,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@161+180',
                                                                     version='01',
                                                                     amount=Decimal('271.00'),
@@ -14585,7 +14585,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@181+200',
                                                                     version='01',
                                                                     amount=Decimal('282.00'),
@@ -14599,7 +14599,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@201+250',
                                                                     version='01',
                                                                     amount=Decimal('320.50'),
@@ -14613,7 +14613,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@251+300',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@251+300',
                                                                     version='01',
                                                                     amount=Decimal('377.50'),
@@ -14817,7 +14817,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         includes=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R',
                                                     version='01',
@@ -14849,11 +14849,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@006+010',
                                                                     version='01',
                                                                     amount=Decimal('31.00'),
@@ -14867,7 +14867,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@011+020',
                                                                     version='01',
                                                                     amount=Decimal('37.00'),
@@ -14881,7 +14881,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@021+030',
                                                                     version='01',
                                                                     amount=Decimal('42.00'),
@@ -14895,7 +14895,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@031+040',
                                                                     version='01',
                                                                     amount=Decimal('47.00'),
@@ -14909,7 +14909,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@041+050',
                                                                     version='01',
                                                                     amount=Decimal('59.00'),
@@ -14923,7 +14923,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@051+060',
                                                                     version='01',
                                                                     amount=Decimal('64.00'),
@@ -14937,7 +14937,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@061+070',
                                                                     version='01',
                                                                     amount=Decimal('75.00'),
@@ -14951,7 +14951,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@071+080',
                                                                     version='01',
                                                                     amount=Decimal('80.00'),
@@ -14965,7 +14965,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@081+090',
                                                                     version='01',
                                                                     amount=Decimal('87.00'),
@@ -14979,7 +14979,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@091+100',
                                                                     version='01',
                                                                     amount=Decimal('92.00'),
@@ -14993,7 +14993,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@101+120',
                                                                     version='01',
                                                                     amount=Decimal('108.00'),
@@ -15007,7 +15007,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@121+140',
                                                                     version='01',
                                                                     amount=Decimal('125.00'),
@@ -15021,7 +15021,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@141+160',
                                                                     version='01',
                                                                     amount=Decimal('135.00'),
@@ -15035,7 +15035,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@161+180',
                                                                     version='01',
                                                                     amount=Decimal('151.00'),
@@ -15049,7 +15049,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@181+200',
                                                                     version='01',
                                                                     amount=Decimal('158.00'),
@@ -15063,7 +15063,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@201+250',
                                                                     version='01',
                                                                     amount=Decimal('174.00'),
@@ -15108,11 +15108,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@001+010',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@001+010',
                                                                     version='01',
                                                                     amount=Decimal('33.00'),
@@ -15126,7 +15126,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@011+020',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@011+020',
                                                                     version='01',
                                                                     amount=Decimal('39.00'),
@@ -15140,7 +15140,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@021+030',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@021+030',
                                                                     version='01',
                                                                     amount=Decimal('44.00'),
@@ -15154,7 +15154,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@031+040',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@031+040',
                                                                     version='01',
                                                                     amount=Decimal('49.00'),
@@ -15168,7 +15168,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@041+050',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@041+050',
                                                                     version='01',
                                                                     amount=Decimal('62.00'),
@@ -15182,7 +15182,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@051+060',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@051+060',
                                                                     version='01',
                                                                     amount=Decimal('67.00'),
@@ -15196,7 +15196,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@061+070',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@061+070',
                                                                     version='01',
                                                                     amount=Decimal('79.00'),
@@ -15210,7 +15210,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@071+080',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@071+080',
                                                                     version='01',
                                                                     amount=Decimal('84.00'),
@@ -15224,7 +15224,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@081+090',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@081+090',
                                                                     version='01',
                                                                     amount=Decimal('91.00'),
@@ -15238,7 +15238,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@091+100',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@091+100',
                                                                     version='01',
                                                                     amount=Decimal('96.00'),
@@ -15252,7 +15252,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@101+120',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@101+120',
                                                                     version='01',
                                                                     amount=Decimal('113.00'),
@@ -15266,7 +15266,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@121+140',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@121+140',
                                                                     version='01',
                                                                     amount=Decimal('131.00'),
@@ -15280,7 +15280,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@141+160',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@141+160',
                                                                     version='01',
                                                                     amount=Decimal('142.00'),
@@ -15294,7 +15294,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@161+180',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@161+180',
                                                                     version='01',
                                                                     amount=Decimal('159.00'),
@@ -15308,7 +15308,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@181+200',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@181+200',
                                                                     version='01',
                                                                     amount=Decimal('166.00'),
@@ -15322,7 +15322,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@201+250',
                                                                 version='01',
-                                                                choice=GeographicalIntervalPrice(
+                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@201+250',
                                                                     version='01',
                                                                     amount=Decimal('182.00'),
@@ -15366,7 +15366,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     FareFrameRef(
                                         version='01',
                                         ref='tfc:TFC@Common'
@@ -15397,12 +15397,12 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Special Statutory Right to Travel Discounts '
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='tfc:TFC@Lines@Network'
                                         ),
@@ -15424,7 +15424,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
-                                            choice=[
+                                            quality_structure_factor_ref_or_quality_structure_factor=[
                                                 QualityStructureFactor(
                                                     id='tfc:TFC@Tariff@Discount@Statutory_Right+Travel@multi_trip@6',
                                                     version='1',
@@ -15473,12 +15473,12 @@ obj = PublicationDelivery(
                                                             ]
                                                         ),
                                                         temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                            fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                                            day_type_ref=FareDayTypeRef(
                                                                 version='01',
                                                                 ref='tfc:January@1'
                                                             )
                                                         ),
-                                                        time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                        time_structure_factor_ref=TimeIntervalRef(
                                                             version='01',
                                                             ref='tfc:TFC@Tariff@Discount@Statutory_Right+Travel@1Y'
                                                         )
@@ -15506,7 +15506,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=QualityStructureFactorRef(
+                                                        quality_structure_factor_ref=QualityStructureFactorRef(
                                                             version='1',
                                                             ref='tfc:TFC@Tariff@Discount@Statutory_Right+Travel@multi_trip@6'
                                                         )
@@ -15563,7 +15563,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=QualityStructureFactorRef(
+                                                        quality_structure_factor_ref=QualityStructureFactorRef(
                                                             version='1',
                                                             ref='tfc:TFC@Tariff@Discount@Statutory_Right+Travel@multi_trip@12'
                                                         )
@@ -15596,7 +15596,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=QualityStructureFactorRef(
+                                                        quality_structure_factor_ref=QualityStructureFactorRef(
                                                             version='1',
                                                             ref='tfc:TFC@Tariff@Discount@Statutory_Right+Travel@multi_trip@6'
                                                         )
@@ -15675,7 +15675,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     SaleDiscountRight(
                                         id='tfc:TFC@Discount@Statutory_Right+Travel',
                                         version='01',
@@ -15694,7 +15694,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -15781,7 +15781,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='01',
                                                         ref='tfc:TFC@Discount@Statutory_Right+Travel'
                                                     ),
@@ -15819,7 +15819,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ResourceFrameRef(
                                         version='01',
                                         ref='tfc:TFC@Common_Resources@codes'
@@ -15837,7 +15837,7 @@ obj = PublicationDelivery(
                                     value='TFC Network'
                                 ),
                                 members=LineRefsRelStructure(
-                                    flexible_line_ref_or_line_ref=[
+                                    line_ref=[
                                         LineRef(
                                             version='01',
                                             ref='tfc:TFC@Lines@Bucharest+Buzau'
@@ -15890,14 +15890,14 @@ obj = PublicationDelivery(
                                 ),
                                 transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                 group_of_lines_type=GroupOfLinesTypeEnumeration.MARKETING,
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     value='TFC',
                                     version='any',
                                     ref='uic:3181'
                                 )
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='tfc:TFC@Lines@Bucharest+Buzau',
                                         alternative_texts=AlternativeTextsRelStructure(
@@ -16170,7 +16170,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ResourceFrameRef(
                                         version='any',
                                         ref='eura:EURA@Common_Resources'
@@ -16845,7 +16845,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Distance based fares for  TFC - ODs'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -16862,7 +16862,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='A single O/D pair from the following'
                                                     ),
-                                                    choice_1=GroupOfDistanceMatrixElementsRef(
+                                                    choice=GroupOfDistanceMatrixElementsRef(
                                                         version='01',
                                                         ref='tfc:TFC@ODs@all'
                                                     )
@@ -17738,7 +17738,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='tfc:Branding',
                                         version='any',
@@ -17746,7 +17746,7 @@ obj = PublicationDelivery(
                                             value='Branding'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 Branding(
                                                     id='tfc:TFC@brand',
                                                     version='any',
@@ -17770,7 +17770,7 @@ obj = PublicationDelivery(
                                             value='Types of Fare Contract TFC'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareContract(
                                                     id='tfc:contract@season_pass',
                                                     version='any',
@@ -17799,7 +17799,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='uic:3181',
                                         version='any',
@@ -17818,7 +17818,7 @@ obj = PublicationDelivery(
                                         country_ref=CountryRef(
                                             ref=IanaCountryTldEnumeration.RO
                                         ),
-                                        postal_address_or_road_address_or_address=PostalAddressVersionStructure(
+                                        address=PostalAddressVersionStructure(
                                             house_number='nr. 2-4',
                                             street=MultilingualString(
                                                 value='Strada Tudor Vladimirescu'
@@ -17856,7 +17856,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     FareDayType(
                                         id='tfc:everyday',
                                         version='any',
@@ -17930,7 +17930,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 prerequisites=VersionFrameRefsRelStructure(
-                    choice=[
+                    version_frame_ref=[
                         CompositeFrameRef(
                             version='01',
                             ref='tfc:TFC@DistanceTariff_Example'
@@ -17938,7 +17938,7 @@ obj = PublicationDelivery(
                     ]
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         SalesTransactionFrame(
                             id='tfc_t:Sales_Transactions',
                             validity_conditions_or_valid_between=[
@@ -18045,12 +18045,12 @@ obj = PublicationDelivery(
                                                                             units=Decimal('139'),
                                                                             payment_method=PaymentMethodEnumeration.CASH,
                                                                             travel_specifications=TravelSpecificationsRelStructure(
-                                                                                choice=[
+                                                                                travel_specification_ref_or_travel_specification=[
                                                                                     OfferedTravelSpecification(
                                                                                         id='tfc_t:ANONYMOUS@trans12345001@product_purchase@trip@single',
                                                                                         version='any',
                                                                                         date=XmlDateTime(2018, 7, 8, 1, 7, 0),
-                                                                                        choice_1=GeographicalIntervalPriceRef(
+                                                                                        fare_price_ref_or_cell_ref=GeographicalIntervalPriceRef(
                                                                                             version='01',
                                                                                             ref='tfc:Single@preboard@R@C1@full@121+140'
                                                                                         ),
@@ -18062,7 +18062,7 @@ obj = PublicationDelivery(
                                                                                         rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                             rule_step_result=[
                                                                                                 PriceRuleStepResultStructure(
-                                                                                                    choice=GeographicalIntervalPriceRef(
+                                                                                                    fare_price_ref=GeographicalIntervalPriceRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:Single@preboard@R@C1@full@121+140'
                                                                                                     ),
@@ -18071,7 +18071,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     units=Decimal('139'),
                                                                                                     adjustment_amount=Decimal('30.50'),
-                                                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=PricingRuleRef(
+                                                                                                    discounting_rule_ref_or_pricing_rule_ref=PricingRuleRef(
                                                                                                         version='any',
                                                                                                         ref='tfc:TFC@Tariff@General@geographic_intervals@distance'
                                                                                                     ),
@@ -18092,7 +18092,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     rate_used=Decimal('0.19'),
                                                                                                     adjustment_amount=Decimal('5.80'),
-                                                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                                         ref='tfc:TFC@Common@rate@tva_tax'
                                                                                                     ),
                                                                                                     rounding_ref=RoundingRef(
@@ -18118,11 +18118,11 @@ obj = PublicationDelivery(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_single@leg'
                                                                                                     ),
-                                                                                                    choice=PreassignedFareProductRef(
+                                                                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_single'
                                                                                                     ),
-                                                                                                    parking_tariff_ref_or_tariff_ref=TariffRef(
+                                                                                                    tariff_ref=TariffRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Tariff@Trip'
                                                                                                     ),
@@ -18263,11 +18263,11 @@ obj = PublicationDelivery(
                                         first_name='Margarita',
                                         date_of_birth=XmlDate(1920, 1, 1),
                                         customer_eligibilities=CustomerEligibilitiesRelStructure(
-                                            choice=[
+                                            customer_eligibility=[
                                                 UserProfileEligibility(
                                                     id='tfc_cd:Customer5645@senior',
                                                     version='01',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfc:TFC@Tariff@General@eligibilities@senior'
                                                     )
@@ -18333,7 +18333,7 @@ obj = PublicationDelivery(
                                                                                 value='5245-1234-4567-0099'
                                                                             ),
                                                                             travel_specifications=TravelSpecificationsRelStructure(
-                                                                                choice=[
+                                                                                travel_specification_ref_or_travel_specification=[
                                                                                     OfferedTravelSpecification(
                                                                                         id='tfc_t:Customer5645@contract002@trans005@product_purchase@pass@season',
                                                                                         version='any',
@@ -18346,7 +18346,7 @@ obj = PublicationDelivery(
                                                                                         rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                             rule_step_result=[
                                                                                                 PriceRuleStepResultStructure(
-                                                                                                    choice=GeographicalIntervalPriceRef(
+                                                                                                    fare_price_ref=GeographicalIntervalPriceRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:Pass@Season@adult@1M@C2@Regio-R@121+140'
                                                                                                     ),
@@ -18356,7 +18356,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     units=Decimal('129'),
                                                                                                     adjustment_amount=Decimal('408.00'),
-                                                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=PricingRuleRef(
+                                                                                                    discounting_rule_ref_or_pricing_rule_ref=PricingRuleRef(
                                                                                                         version='any',
                                                                                                         ref='tfc:TFC@Tariff@General@geographic_intervals@distance'
                                                                                                     ),
@@ -18377,7 +18377,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     rate_used=Decimal('0.19'),
                                                                                                     adjustment_amount=Decimal('77.52'),
-                                                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                                         ref='tfc:TFC@Common@rate@tva_tax'
                                                                                                     ),
                                                                                                     rounding_ref=RoundingRef(
@@ -18403,11 +18403,11 @@ obj = PublicationDelivery(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Season_pass@repeated_trip@train_p2p'
                                                                                                     ),
-                                                                                                    choice=PreassignedFareProductRef(
+                                                                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Season_pass'
                                                                                                     ),
-                                                                                                    parking_tariff_ref_or_tariff_ref=TariffRef(
+                                                                                                    tariff_ref=TariffRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Tariff@Pass@Season'
                                                                                                     ),
@@ -18504,7 +18504,7 @@ obj = PublicationDelivery(
                                                                                                             ),
                                                                                                         ]
                                                                                                     ),
-                                                                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                                                    time_structure_factor_ref=TimeIntervalRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Tariff@Pass@Season@1M'
                                                                                                     ),
@@ -18544,11 +18544,11 @@ obj = PublicationDelivery(
                                         first_name='Boris',
                                         date_of_birth=XmlDate(1958, 11, 1),
                                         customer_eligibilities=CustomerEligibilitiesRelStructure(
-                                            choice=[
+                                            customer_eligibility=[
                                                 UserProfileEligibility(
                                                     id='tfc_cd:Customer55678@veteran',
                                                     version='01',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfc:TFC@Tariff@General@eligibilities@veteran'
                                                     )
@@ -18556,7 +18556,7 @@ obj = PublicationDelivery(
                                                 UserProfileEligibility(
                                                     id='tfc_cd:Customer55678@political_victim',
                                                     version='01',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfc:TFC@Tariff@General@eligibilities@political_victim'
                                                     )
@@ -18564,7 +18564,7 @@ obj = PublicationDelivery(
                                                 UserProfileEligibility(
                                                     id='tfc_cd:Customer55678@ethnic_victim',
                                                     version='01',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfc:TFC@Tariff@General@eligibilities@ethnic_victim'
                                                     )
@@ -18572,7 +18572,7 @@ obj = PublicationDelivery(
                                                 UserProfileEligibility(
                                                     id='tfc_cd:Customer55678@disables',
                                                     version='01',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfc:TFC@Tariff@General@eligibilities@special_needs'
                                                     )
@@ -18580,7 +18580,7 @@ obj = PublicationDelivery(
                                                 UserProfileEligibility(
                                                     id='tfc_cd:Customer55678@member_of_parliament',
                                                     version='01',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfc:TFC@Tariff@General@eligibilities@member_of_parliament'
                                                     )
@@ -18658,7 +18658,7 @@ obj = PublicationDelivery(
                                                                                 ref='tfc:LEI'
                                                                             ),
                                                                             travel_specifications=TravelSpecificationsRelStructure(
-                                                                                choice=[
+                                                                                travel_specification_ref_or_travel_specification=[
                                                                                     OfferedTravelSpecification(
                                                                                         id='tfc_t:Customer55678@contract0012@trans005@access@#2',
                                                                                         version='any',
@@ -18681,7 +18681,7 @@ obj = PublicationDelivery(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Products@Discount@Statutory_Right+Travel@consume'
                                                                                                     ),
-                                                                                                    choice=SaleDiscountRightRef(
+                                                                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Discount@Statutory_Right+Travel'
                                                                                                     ),
@@ -18718,7 +18718,7 @@ obj = PublicationDelivery(
                                                                                                             ),
                                                                                                         ]
                                                                                                     ),
-                                                                                                    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=QualityStructureFactorRef(
+                                                                                                    quality_structure_factor_ref=QualityStructureFactorRef(
                                                                                                         version='1',
                                                                                                         ref='tfc:TFC@Tariff@Discount@Statutory_Right+Travel@multi_trip@12'
                                                                                                     ),
@@ -18757,7 +18757,7 @@ obj = PublicationDelivery(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_period_return@travel@out'
                                                                                                     ),
-                                                                                                    choice=PreassignedFareProductRef(
+                                                                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_period_return'
                                                                                                     ),
@@ -18801,7 +18801,7 @@ obj = PublicationDelivery(
                                                                                                                 ref='eura:first'
                                                                                                             ),
                                                                                                         ],
-                                                                                                        template_service_journey_ref_or_service_journey_ref=[
+                                                                                                        service_journey_ref=[
                                                                                                             ServiceJourneyRef(
                                                                                                                 value='Specific journey for reservation',
                                                                                                                 ref='tfc:train-IR1571',
@@ -18868,7 +18868,7 @@ obj = PublicationDelivery(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation@out'
                                                                                                     ),
-                                                                                                    choice=SupplementProductRef(
+                                                                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation'
                                                                                                     ),
@@ -18902,7 +18902,7 @@ obj = PublicationDelivery(
                                                                                                                 ref='eura:interregional'
                                                                                                             ),
                                                                                                         ],
-                                                                                                        template_service_journey_ref_or_service_journey_ref=[
+                                                                                                        service_journey_ref=[
                                                                                                             ServiceJourneyRef(
                                                                                                                 value='Specific journey for reservation',
                                                                                                                 ref='tfc:train-IR1571',
@@ -18972,7 +18972,7 @@ obj = PublicationDelivery(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation@out'
                                                                                                     ),
-                                                                                                    choice=SupplementProductRef(
+                                                                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation'
                                                                                                     ),
@@ -19006,7 +19006,7 @@ obj = PublicationDelivery(
                                                                                                                 ref='eura:interregional'
                                                                                                             ),
                                                                                                         ],
-                                                                                                        template_service_journey_ref_or_service_journey_ref=[
+                                                                                                        service_journey_ref=[
                                                                                                             ServiceJourneyRef(
                                                                                                                 value='Specific journey for reservation',
                                                                                                                 ref='tfc:train-IR1571',
@@ -19091,7 +19091,7 @@ obj = PublicationDelivery(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_period_return@travel@back'
                                                                                                     ),
-                                                                                                    choice=PreassignedFareProductRef(
+                                                                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_period_return'
                                                                                                     ),
@@ -19141,7 +19141,7 @@ obj = PublicationDelivery(
                                                                                                                 ref='eura:interregional'
                                                                                                             ),
                                                                                                         ],
-                                                                                                        template_service_journey_ref_or_service_journey_ref=[
+                                                                                                        service_journey_ref=[
                                                                                                             ServiceJourneyRef(
                                                                                                                 value='Specific journey for reservation',
                                                                                                                 ref='tfc:train-IR1950',
@@ -19214,7 +19214,7 @@ obj = PublicationDelivery(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation@back'
                                                                                                     ),
-                                                                                                    choice=SupplementProductRef(
+                                                                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation'
                                                                                                     ),
@@ -19248,7 +19248,7 @@ obj = PublicationDelivery(
                                                                                                                 ref='eura:interregional'
                                                                                                             ),
                                                                                                         ],
-                                                                                                        template_service_journey_ref_or_service_journey_ref=[
+                                                                                                        service_journey_ref=[
                                                                                                             ServiceJourneyRef(
                                                                                                                 value='Specific journey for reservation',
                                                                                                                 ref='tfc:train-IR1950',
@@ -19305,7 +19305,7 @@ obj = PublicationDelivery(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation@back'
                                                                                                     ),
-                                                                                                    choice=SupplementProductRef(
+                                                                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Trip_Supplement@Seat_Reservation'
                                                                                                     ),
@@ -19339,7 +19339,7 @@ obj = PublicationDelivery(
                                                                                                                 ref='eura:interregional'
                                                                                                             ),
                                                                                                         ],
-                                                                                                        template_service_journey_ref_or_service_journey_ref=[
+                                                                                                        service_journey_ref=[
                                                                                                             ServiceJourneyRef(
                                                                                                                 value='Specific journey for reservation',
                                                                                                                 ref='tfc:train-IR1950',
@@ -19439,7 +19439,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ResourceFrame(
                             id='eura:EURA@Common_Resources',
                             version='any',
@@ -19552,7 +19552,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     TypeOfFrame(
                                         id='eura:Fare',
                                         version='any',
@@ -19567,7 +19567,7 @@ obj = PublicationDelivery(
                                             value='Types of Product Category'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfProductCategory(
                                                     id='eura:tgv',
                                                     version='any',
@@ -19607,7 +19607,7 @@ obj = PublicationDelivery(
                                             value='Charging Moments'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 ChargingMoment(
                                                     id='eura:prepaid',
                                                     version='any',
@@ -19661,7 +19661,7 @@ obj = PublicationDelivery(
                                             value='Types Of Fare Product  - Classify as  single of multi operator'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareProduct(
                                                     id='eura:standard_product@single_toc',
                                                     version='any',
@@ -19722,7 +19722,7 @@ obj = PublicationDelivery(
                                             value='Fare Table Types '
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 PurposeOfGrouping(
                                                     id='eura:distance',
                                                     version='any',
@@ -19755,7 +19755,7 @@ obj = PublicationDelivery(
                                             value='Classes of Use '
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 ClassOfUse(
                                                     id='eura:first',
                                                     version='any',
@@ -19781,7 +19781,7 @@ obj = PublicationDelivery(
                                             value='Types of fare contract entry'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareContractEntry(
                                                     id='eura:product_purchase',
                                                     version='any',
@@ -19807,7 +19807,7 @@ obj = PublicationDelivery(
                                             value='Types of concession'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfConcession(
                                                     id='eura:adult',
                                                     version='any',
@@ -19903,7 +19903,7 @@ obj = PublicationDelivery(
                                             value='Types of Tariff'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfTariff(
                                                     id='eura:Distance_kilometers',
                                                     version='any',
@@ -19957,7 +19957,7 @@ obj = PublicationDelivery(
                                             value='VAt Tax categories'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfPricingRule(
                                                     id='eura:vat@transport',
                                                     version='any',
@@ -20002,7 +20002,7 @@ obj = PublicationDelivery(
                                             value='Types of  Access right Assignment'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfAccessRightAssignment(
                                                     id='eura:eligible',
                                                     version='any',
@@ -20136,7 +20136,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     GeneralOrganisation(
                                         id='eura:EURA',
                                         version='any',

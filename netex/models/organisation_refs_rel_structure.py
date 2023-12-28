@@ -19,7 +19,7 @@ class OrganisationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "organisationRefs_RelStructure"
 
-    choice: List[
+    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: List[
         Union[
             RetailConsortiumRef,
             AuthorityRef,

@@ -53,7 +53,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypes_RelStructure"
 
-    choice: List[
+    day_type_ref_or_day_type: List[
         Union[
             FareDayTypeRef,
             DayTypeRef,
@@ -155,7 +155,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityConditions_RelStructure"
 
-    choice: List[
+    validity_condition_ref_or_validity_condition: List[
         Union[
             AvailabilityConditionRef,
             ValidityRuleParameterRef,
@@ -865,7 +865,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
 
-    choice: Optional[
+    day_type_ref: Optional[
         Union[FareDayTypeRef, DayTypeRef, DayOfWeekEnumeration, str]
     ] = field(
         default=None,

@@ -38,7 +38,7 @@ class StopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point: Optional[
+    scheduled_stop_point_ref: Optional[
         Union[
             FareScheduledStopPointRef,
             ScheduledStopPointRef,

@@ -128,7 +128,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
-                        choice=[
+                        validity_condition=[
                             AvailabilityCondition(
                                 id='mytoc:range',
                                 version='any',
@@ -136,7 +136,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    choice_1=[
+                    version_frame_ref=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='myfares:any'
@@ -151,12 +151,12 @@ obj = PublicationDelivery(
         value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='myfares:DTA@RailCards',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             ValidBetween(
                                 from_date=XmlDateTime(2011, 1, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2011, 7, 1, 0, 0, 0, 0, 0)
@@ -185,12 +185,12 @@ obj = PublicationDelivery(
                     default_currency='EUR'
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         FareFrame(
                             id='myfares:DTA@RailCards@products',
                             version='1.0',
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ResourceFrameRef(
                                         version='1.0',
                                         ref='myfares:DTA@Common_Resources'
@@ -205,7 +205,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Railcard Discount  tariff'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mytoc:DTA'
                                         ),
@@ -316,7 +316,7 @@ obj = PublicationDelivery(
                                                                     usage_trigger=UsageTriggerEnumeration.SPECIFIED_START_DATE,
                                                                     usage_start_constraint_type=UsageStartConstraintTypeEnumeration.VARIABLE,
                                                                     start_only_on=DayTypesRelStructure(
-                                                                        choice=[
+                                                                        day_type_ref_or_day_type=[
                                                                             DayType(
                                                                                 id='myfares:Time_interval@access_when',
                                                                                 version='1.0',
@@ -476,7 +476,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTableRef(
                                                     version='1.0',
                                                     ref='myfares:Railcard@prices'
@@ -487,7 +487,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     SaleDiscountRight(
                                         id='myfares:Railcard',
                                         version='1.0',
@@ -498,7 +498,7 @@ obj = PublicationDelivery(
                                             version='ntx:v1.0',
                                             ref='ntx:discount_card'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mytoc:DTA'
                                         ),
@@ -624,7 +624,7 @@ obj = PublicationDelivery(
                                                         version='ntx:v1.0',
                                                         ref='ntx:can_access_when'
                                                     ),
-                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                    time_structure_factor_ref=TimeIntervalRef(
                                                         version='1.0',
                                                         ref='myfares:Railcard_discount@1year'
                                                     )
@@ -831,7 +831,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='myfares:card'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='1.0',
                                                         ref='myfares:Railcard'
                                                     ),
@@ -866,7 +866,7 @@ obj = PublicationDelivery(
                                 value='Railcard prices'
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     FareFrameRef(
                                         version='1.0',
                                         ref='myfares:DTA@RailCards@products'
@@ -877,7 +877,7 @@ obj = PublicationDelivery(
                                 id='myfares:RailCards@prices',
                                 version='1.0',
                                 pricing_rules=PricingRulesRelStructure(
-                                    choice=[
+                                    pricing_rule=[
                                         DiscountingRule(
                                             id='myfares:normal_discount',
                                             version='1.0',
@@ -905,18 +905,18 @@ obj = PublicationDelivery(
                                             value='Discounts for Rail Cards'
                                         ),
                                         members=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 UsageParameterPrice(
                                                     id='myfares:With_Railcard@adult',
                                                     version='1.0',
                                                     name=MultilingualString(
                                                         value='Standard discount - all fares'
                                                     ),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='1.0',
                                                         ref='myfares:normal_discount'
                                                     ),
-                                                    choice_2=UserProfileRef(
+                                                    choice=UserProfileRef(
                                                         version='any',
                                                         ref='myfares:adult'
                                                     )
@@ -927,11 +927,11 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Standard discount - child fares'
                                                     ),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='1.0',
                                                         ref='myfares:normal_discount'
                                                     ),
-                                                    choice_2=UserProfileRef(
+                                                    choice=UserProfileRef(
                                                         version='any',
                                                         ref='myfares:child'
                                                     )
@@ -942,11 +942,11 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Student  discount - all fares'
                                                     ),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='1.0',
                                                         ref='myfares:student_discount'
                                                     ),
-                                                    choice_2=UserProfileRef(
+                                                    choice=UserProfileRef(
                                                         version='any',
                                                         ref='myfares:student'
                                                     )
@@ -957,11 +957,11 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Senior discount - all fares'
                                                     ),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='1.0',
                                                         ref='myfares:senior_discount'
                                                     ),
-                                                    choice_2=UserProfileRef(
+                                                    choice=UserProfileRef(
                                                         version='any',
                                                         ref='myfares:senior'
                                                     )
@@ -972,7 +972,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
-                                standard_fare_table_or_fare_table_in_context_or_fare_table=[
+                                fare_table=[
                                     FareTable(
                                         id='myfares:Railcard@prices',
                                         version='1.0',
@@ -988,7 +988,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         used_in=UsedInRefsRelStructure(
-                                            choice=[
+                                            tariff_ref=[
                                                 TariffRef(
                                                     version='1.0',
                                                     ref='myfares:Railcard_discount'
@@ -996,7 +996,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         includes=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='myfares:Railcard@prices@adult',
                                                     version='1.0',
@@ -1020,7 +1020,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             TimeIntervalPrice(
                                                                 id='myfares:railcard@adult@1year',
                                                                 version='1.0',
@@ -1071,7 +1071,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             TimeIntervalPrice(
                                                                 id='myfares:railcard@child@1year',
                                                                 version='1.0',
@@ -1122,7 +1122,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             TimeIntervalPrice(
                                                                 id='myfares:railcard@student@1year',
                                                                 version='1.0',
@@ -1173,7 +1173,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             TimeIntervalPrice(
                                                                 id='myfares:railcard@senior@1year',
                                                                 version='1.0',
@@ -1221,7 +1221,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='ntx:Types_of_Tariff',
                                         version='ntx:v1.0',
@@ -1229,7 +1229,7 @@ obj = PublicationDelivery(
                                             value='Types of Tariff'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfTariff(
                                                     id='ntx:Distance_kilometers',
                                                     version='ntx:v1.0',
@@ -1325,7 +1325,7 @@ obj = PublicationDelivery(
                                             value='Types of Fare Product'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareProduct(
                                                     id='ntx:trip',
                                                     version='ntx:v1.0',
@@ -1372,7 +1372,7 @@ obj = PublicationDelivery(
                                             value='Types of Concession'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfConcession(
                                                     id='myfares:standard',
                                                     version='any',
@@ -1398,7 +1398,7 @@ obj = PublicationDelivery(
                                             value='Types of Travel document'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfTravelDocument(
                                                     id='myfares:mobile_app',
                                                     version='any',
@@ -1424,7 +1424,7 @@ obj = PublicationDelivery(
                                             value='Types of Access Right Assignment'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfAccessRightAssignment(
                                                     id='ntx:eligible',
                                                     version='ntx:v1.0',
@@ -1474,7 +1474,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='mytoc:DTA',
                                         version='any',

@@ -37,7 +37,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: Optional[
         Union[
             RetailConsortiumRef,
             AuthorityRef,
@@ -161,7 +161,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "administrativeZones_RelStructure"
 
-    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[
+    administrative_zone: List[
         Union[
             AdministrativeZoneRef,
             TransportAdministrativeZone,

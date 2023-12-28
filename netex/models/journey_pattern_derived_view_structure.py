@@ -25,7 +25,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "JourneyPattern_DerivedViewStructure"
 
-    choice: Optional[
+    journey_pattern_ref: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,

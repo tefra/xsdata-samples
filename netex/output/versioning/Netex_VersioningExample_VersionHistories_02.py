@@ -47,7 +47,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    choice_1=[
+                    version_frame_ref=[
                         NetworkFilterByValueStructure(
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
@@ -96,7 +96,7 @@ obj = PublicationDelivery(
         value='Example of simple network, explicit request '
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             GeneralFrame(
                 id='mybus:SF1',
                 version='any',
@@ -326,7 +326,7 @@ obj = PublicationDelivery(
                                                     id='mybus:P_001_01',
                                                     version='001',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='002',
                                                         ref='mybus:SSP0001A'
                                                     )
@@ -335,7 +335,7 @@ obj = PublicationDelivery(
                                                     id='mybus:P_001_02',
                                                     version='001',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='002',
                                                         ref='mybus:SSP0002B'
                                                     )
@@ -344,7 +344,7 @@ obj = PublicationDelivery(
                                                     id='mybus:P_001_03',
                                                     version='001',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='mybus:SSP0003C'
                                                     )
@@ -366,7 +366,7 @@ obj = PublicationDelivery(
                                                     id='mybus:P_001_01',
                                                     version='002',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='mybus:SSP0001A'
                                                     )
@@ -375,7 +375,7 @@ obj = PublicationDelivery(
                                                     id='mybus:P_001_02',
                                                     version='002',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='002',
                                                         ref='mybus:SSP0002B'
                                                     ),
@@ -386,7 +386,7 @@ obj = PublicationDelivery(
                                                     id='mybus:P_001_03',
                                                     version='002',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='mybus:SSP0003C'
                                                     )
@@ -406,7 +406,7 @@ obj = PublicationDelivery(
                 id='mybus:SCF1',
                 version='any',
                 day_types=DayTypesInFrameRelStructure(
-                    fare_day_type_or_organisation_day_type_or_day_type=[
+                    day_type=[
                         DayType(
                             id='mybus:DT001_MF',
                             created=XmlDateTime(2010, 5, 18, 10, 30, 47, 0, 0),

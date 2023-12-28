@@ -396,7 +396,7 @@ obj = PublicationDelivery(
         value='Example of Regional Toc  Based Tariff Regional Toc - Greater ANglia UK'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='atc:ATOC@Common_Toc_Products',
                 validity_conditions_or_valid_between=[
@@ -428,7 +428,7 @@ obj = PublicationDelivery(
                     default_currency='GBP'
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         FareFrame(
                             id='atc:ATOC:Common_Fare',
                             version='01',
@@ -445,7 +445,7 @@ obj = PublicationDelivery(
                                 id='atc:ATOC@Common',
                                 version='any',
                                 pricing_rules=PricingRulesRelStructure(
-                                    choice=[
+                                    pricing_rule=[
                                         PricingRule(
                                             id='atc:route',
                                             version='any',
@@ -526,12 +526,12 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='types of trip'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
@@ -673,7 +673,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Up to 2 Infants  under 5 are free for each adult'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='atc:infant'
                                                                                 ),
@@ -686,7 +686,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Small animals are free'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='atc:small_animal'
                                                                                 ),
@@ -721,7 +721,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Infants must have paying adult with them. No seat'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='atc:adult'
                                                                                 ),
@@ -742,7 +742,7 @@ obj = PublicationDelivery(
                                                                         value='Children aged five to fifteen inclusive get a 50 %  discount on most tickets. In addition, children under five can travel free with fare paying passenger. If the child looks 16 or over, it may be appropriate for proof of age to be carried when purchasing the ticket and also when travelling to avoid embarrassment.'
                                                                     ),
                                                                     url='http://www.nationalrail.co.uk/times_fares/46494.aspx',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                         version='any',
                                                                         ref='atc:child@rate'
                                                                     ),
@@ -751,7 +751,7 @@ obj = PublicationDelivery(
                                                                             UsageParameterPrice(
                                                                                 id='atc:child@rate',
                                                                                 version='any',
-                                                                                choice_1=LimitingRule(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRule(
                                                                                     id='atc:child@rate',
                                                                                     version='any',
                                                                                     discount_as_percentage=Decimal('0.34'),
@@ -776,7 +776,7 @@ obj = PublicationDelivery(
                                                                         value='Youth'
                                                                     ),
                                                                     url='http://www.nationalrail.co.uk/times_fares/prd359000a04000200b5da61f1e92b72.aspx',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='atc:ATOC@Common@rate@youth'
                                                                     ),
@@ -802,7 +802,7 @@ obj = PublicationDelivery(
                                                                             UsageParameterPrice(
                                                                                 id='atc:senior',
                                                                                 version='any',
-                                                                                choice_1=DiscountingRule(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                     id='atc:senior_rate',
                                                                                     version='any',
                                                                                     discount_as_percentage=Decimal('0.34')
@@ -968,7 +968,7 @@ obj = PublicationDelivery(
                                                                     ref='eura:first'
                                                                 ),
                                                             ],
-                                                            service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref=[
+                                                            facility_set_ref=[
                                                                 SiteFacilitySetRef(
                                                                     version='01',
                                                                     ref='atc:first_class_lounge'
@@ -1586,12 +1586,12 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='ATOC Trip  Tariff demand types /timebands'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
@@ -1600,12 +1600,12 @@ obj = PublicationDelivery(
                                             ref='eura:banded'
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
-                                            choice=[
+                                            quality_structure_factor_ref_or_quality_structure_factor=[
                                                 FareDemandFactor(
                                                     id='atc:ATOC@Tariff@Demand@factor@off_peak_regular@all_stations@non_working_day',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='atc:ATOC@Tariff@Demand@off_peak_regular@non_working_day',
                                                                     version='01',
@@ -1614,7 +1614,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     is_available=True,
                                                                     day_types=DayTypesRelStructure(
-                                                                        choice=[
+                                                                        day_type_ref_or_day_type=[
                                                                             FareDayTypeRef(
                                                                                 version='any',
                                                                                 ref='atc:weekend'
@@ -1639,7 +1639,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@off_peak_day@all_stations@non_working_day@leaving_from',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='atc:not_working_day'
@@ -1660,7 +1660,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@off_peak_day@all_stations@working_day@leaving_from',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='atc:ATOC@Tariff@Demand@off_peak_day@all_stations@working_day@leaving_from',
                                                                     version='01',
@@ -1671,7 +1671,7 @@ obj = PublicationDelivery(
                                                                         value='Off-Peak:Not to leave any station   before 09:30'
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
-                                                                        choice=[
+                                                                        day_type_ref_or_day_type=[
                                                                             FareDayTypeRef(
                                                                                 version='any',
                                                                                 ref='atc:working_day'
@@ -1702,7 +1702,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@arriving_into',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='atc:working_day'
@@ -1724,7 +1724,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@off_peak_regular@London_LST@arriving_into@am',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='London Liverpool street',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
@@ -1738,7 +1738,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@leaving_from',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='atc:working_day'
@@ -1760,7 +1760,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@off_peak_regular@London_LST@leaving_from@am',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='London Liverpool street',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
@@ -1771,7 +1771,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@off_peak_regular@London_SFA@from@am',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='Stratford',
                                                                     version='01',
                                                                     ref='atc:Station:SFA'
@@ -1782,7 +1782,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@off_peak_regular@London_TOM@from@am',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='Tottenham Hale',
                                                                     version='01',
                                                                     ref='atc:Station:TOM'
@@ -1793,7 +1793,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@off_peak_regular@London_LST@leaving_from@pm',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='London Liverpool street',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
@@ -1803,7 +1803,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@off_peak_regular@London_SFA@from@pm',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='Stratford',
                                                                     version='01',
                                                                     ref='atc:Station:SFA'
@@ -1813,7 +1813,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@off_peak_regular@London_TOM@from@pm',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='Tottenham Hale',
                                                                     version='01',
                                                                     ref='atc:Station:TOM'
@@ -1827,7 +1827,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@non_working_day',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='atc:ATOC@Tariff@Demand@super_off_peak@London_LST@non_working_day',
                                                                     version='01',
@@ -1836,7 +1836,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     is_available=True,
                                                                     day_types=DayTypesRelStructure(
-                                                                        choice=[
+                                                                        day_type_ref_or_day_type=[
                                                                             FareDayTypeRef(
                                                                                 version='any',
                                                                                 ref='atc:weekend'
@@ -1866,7 +1866,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@super_off_peak@London_LST@leaving_from@am',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='London Liverpool street',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
@@ -1882,7 +1882,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@working_day@arriving_into',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='atc:working_day'
@@ -1901,7 +1901,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@super_off_peak@London_LST@arriving_into@am',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='London Liverpool street',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
@@ -1915,7 +1915,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@working_day@leaving_from',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='atc:working_day'
@@ -1937,7 +1937,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@super_off_peak@London_LST@leaving_from@am',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='London Liverpool street',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
@@ -1948,7 +1948,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@super_off_peak@London_SFA@from@am',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='Stratford',
                                                                     version='01',
                                                                     ref='atc:Station:SFA'
@@ -1959,7 +1959,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@super_off_peak@London_LST@leaving_from@pm',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='London Liverpool street',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
@@ -1969,7 +1969,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='atc:ATOC@Tariff@Demand@super_off_peak@London_SFA@from@pm',
                                                                 version='01',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     value='Stratford',
                                                                     version='01',
                                                                     ref='atc:Station:SFA'
@@ -2001,7 +2001,7 @@ obj = PublicationDelivery(
                                                             ref='eura:can_access_when'
                                                         ),
                                                         temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                                            day_type_ref=DayTypeRef(
                                                                 version='any',
                                                                 ref='atc:everyday'
                                                             )
@@ -2078,7 +2078,7 @@ obj = PublicationDelivery(
                                                                     ref='eura:can_access_when'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             value='London Liverpool street',
                                                                             version='01',
@@ -2105,7 +2105,7 @@ obj = PublicationDelivery(
                                                                                     RelativeDirectionEnumeration.BOTH,
                                                                                 ]
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@all_stations@non_working_day'
                                                                             )
@@ -2126,7 +2126,7 @@ obj = PublicationDelivery(
                                                                                     RelativeDirectionEnumeration.BACKWARDS,
                                                                                 ]
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@arriving_into'
                                                                             )
@@ -2159,7 +2159,7 @@ obj = PublicationDelivery(
                                                                                     RelativeDirectionEnumeration.FORWARDS,
                                                                                 ]
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@leaving_from'
                                                                             )
@@ -2283,7 +2283,7 @@ obj = PublicationDelivery(
                                                                     ref='eura:can_access_when'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             value='London Liverpool street',
                                                                             version='01',
@@ -2309,7 +2309,7 @@ obj = PublicationDelivery(
                                                                                     RelativeDirectionEnumeration.BACKWARDS,
                                                                                 ]
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@arriving_into'
                                                                             )
@@ -2333,7 +2333,7 @@ obj = PublicationDelivery(
                                                                         RelativeDirectionEnumeration.FORWARDS,
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@factor@off_peak_day@all_stations@working_day@leaving_from'
                                                                 )
@@ -2392,7 +2392,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             value='London Liverpool street',
                                                                             version='01',
@@ -2415,7 +2415,7 @@ obj = PublicationDelivery(
                                                                                     RelativeDirectionEnumeration.FORWARDS,
                                                                                 ]
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@non_working_day'
                                                                             )
@@ -2432,7 +2432,7 @@ obj = PublicationDelivery(
                                                                                     RelativeDirectionEnumeration.FORWARDS,
                                                                                 ]
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@working_day@arriving_into'
                                                                             )
@@ -2449,7 +2449,7 @@ obj = PublicationDelivery(
                                                                                     RelativeDirectionEnumeration.BACKWARDS,
                                                                                 ]
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@working_day@leaving_from'
                                                                             )
@@ -2499,7 +2499,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             value='London Liverpool street',
                                                                             version='01',
@@ -2522,7 +2522,7 @@ obj = PublicationDelivery(
                                                                                     RelativeDirectionEnumeration.FORWARDS,
                                                                                 ]
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@arriving_into'
                                                                             )
@@ -2539,7 +2539,7 @@ obj = PublicationDelivery(
                                                                                     RelativeDirectionEnumeration.BACKWARDS,
                                                                                 ]
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@leaving_from'
                                                                             )
@@ -2854,12 +2854,12 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='types of trip'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
@@ -3589,7 +3589,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    template_service_journey_ref_or_service_journey_ref=[
+                                                                    service_journey_ref=[
                                                                         ServiceJourneyRef(
                                                                             ref='netex:JOURNEY',
                                                                             version_ref='netex:OPTIONAL'
@@ -3636,7 +3636,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    template_service_journey_ref_or_service_journey_ref=[
+                                                                    service_journey_ref=[
                                                                         ServiceJourneyRef(
                                                                             ref='netex:OPTIONAL',
                                                                             version_ref='RESOLVE'
@@ -3683,7 +3683,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    template_service_journey_ref_or_service_journey_ref=[
+                                                                    service_journey_ref=[
                                                                         ServiceJourneyRef(
                                                                             ref='netex:JOURNEY',
                                                                             version_ref='netex:OPTIONAL'
@@ -3815,7 +3815,7 @@ obj = PublicationDelivery(
                                                                                     UsageParameterPrice(
                                                                                         id='atc:ATOC@Tariff@Trip@Group_Saver_4_people@CH',
                                                                                         version='any',
-                                                                                        choice_1=DiscountingRule(
+                                                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                             id='atc:ATOC@Tariff@Trip@Group_Saver_4_people@CH@rate',
                                                                                             version='any',
                                                                                             discount_as_percentage=Decimal('0.50'),
@@ -3872,7 +3872,7 @@ obj = PublicationDelivery(
                                                                                     UsageParameterPrice(
                                                                                         id='atc:ATOC@Tariff@Trip@Group_Saver_4_people@SX',
                                                                                         version='any',
-                                                                                        choice_1=DiscountingRule(
+                                                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                             id='atc:ATOC@Tariff@Trip@Group_Saver_4_people@SX@rate',
                                                                                             version='any',
                                                                                             discount_as_percentage=Decimal('0.50'),
@@ -3942,7 +3942,7 @@ obj = PublicationDelivery(
                                                                             UsageParameterPrice(
                                                                                 id='atc:ATOC@Tariff@Trip@Group@aver_3-to-9_people@trip',
                                                                                 version='any',
-                                                                                choice_1=DiscountingRule(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                     id='atc:ATOC@Tariff@Trip@Group_Saver_3-to-9_people@rate',
                                                                                     version='any',
                                                                                     discount_as_percentage=Decimal('0.34'),
@@ -3958,7 +3958,7 @@ obj = PublicationDelivery(
                                                                             CompanionProfile(
                                                                                 id='atc:ATOC@Tariff@Trip@Group_Saver_3-to-9_people@adult',
                                                                                 version='any',
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='atc:adult'
                                                                                 ),
@@ -3971,7 +3971,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value='3. Children between the ages of 5 and 15 years old inclusive may travel with an Adult Ticket provided the Group size is in accordance with Condition 1.'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='atc:child'
                                                                                 ),
@@ -3988,7 +3988,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
                                                         temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                                            day_type_ref=DayTypeRef(
                                                                 ref='atc:Group_Saver_3-to-9_people@validDay',
                                                                 version_ref='TODO'
                                                             )
@@ -4223,7 +4223,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=7,
                                                                     is_allowed=False,
-                                                                    choice=PreassignedFareProductRef(
+                                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                         value='Or use type of product?',
                                                                         ref='tfl:oyster'
                                                                     ),
@@ -4296,7 +4296,7 @@ obj = PublicationDelivery(
                                                                             CompanionProfile(
                                                                                 id='atc:ATOC@Tariff@Trip@Group@family@Adult',
                                                                                 version='any',
-                                                                                companion_profile_ref_or_user_profile_ref=CompanionProfileRef(
+                                                                                user_profile_ref=CompanionProfileRef(
                                                                                     ref='atc:adult'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
@@ -4305,7 +4305,7 @@ obj = PublicationDelivery(
                                                                             CompanionProfile(
                                                                                 id='atc:ATOC@Tariff@Trip@Group@Family@Child',
                                                                                 version='any',
-                                                                                companion_profile_ref_or_user_profile_ref=CompanionProfileRef(
+                                                                                user_profile_ref=CompanionProfileRef(
                                                                                     ref='atc:child'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
@@ -4395,7 +4395,7 @@ obj = PublicationDelivery(
                                                             ]
                                                         ),
                                                         validity_parameters=ValidityParametersRelStructure(
-                                                            service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref=[
+                                                            facility_set_ref=[
                                                                 ServiceFacilitySetRef(
                                                                     version='any',
                                                                     ref='atc:allows_bicycles@reservation'
@@ -5621,12 +5621,12 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='types of trip'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
@@ -5635,7 +5635,7 @@ obj = PublicationDelivery(
                                             ref='eura:point_to_point'
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
-                                            choice=[
+                                            quality_structure_factor_ref_or_quality_structure_factor=[
                                                 FareQuotaFactor(
                                                     id='atc:ATOC@Tariff@Quotas@advance@first@Q1',
                                                     version='01',
@@ -5721,7 +5721,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                            quality_structure_factor_ref=FareQuotaFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@first@Q1'
                                                                             )
@@ -5734,7 +5734,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                            quality_structure_factor_ref=FareQuotaFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@first@Q2'
                                                                             )
@@ -5747,7 +5747,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                            quality_structure_factor_ref=FareQuotaFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@first@Q3'
                                                                             )
@@ -5791,7 +5791,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                            quality_structure_factor_ref=FareQuotaFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@second@Q1'
                                                                             )
@@ -5804,7 +5804,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                            quality_structure_factor_ref=FareQuotaFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@second@Q2'
                                                                             )
@@ -5817,7 +5817,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                            quality_structure_factor_ref=FareQuotaFactorRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@second@Q3'
                                                                             )
@@ -5842,7 +5842,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Available  quotas'
                                                     ),
-                                                    choice_1=GroupOfDistanceMatrixElementsRef(
+                                                    choice=GroupOfDistanceMatrixElementsRef(
                                                         version='01',
                                                         ref='atc:TfL@ODs@London_transfers'
                                                     ),
@@ -6029,7 +6029,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Trip@single@COMMON_rail_leg@usage',
                                                     version='01',
@@ -6067,7 +6067,7 @@ obj = PublicationDelivery(
                                         id='atc:ATOC@Products@Trip@return@outbound@COMMON_rail_leg',
                                         version='01',
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Trip@return@outbound@COMMON_rail_leg@access',
                                                     version='01',
@@ -6105,7 +6105,7 @@ obj = PublicationDelivery(
                                         id='atc:ATOC@Products@Trip@return@inbound@COMMON_rail_leg',
                                         version='01',
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Trip@return@inbound@COMMON_rail_leg@access',
                                                     version='01',
@@ -6154,7 +6154,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Trip@London_transfer@leg@metro',
                                                     version='01',
@@ -6192,7 +6192,7 @@ obj = PublicationDelivery(
                                             value='* First Class Anytime tickets provide access to First Class Lounges at stations. Please check the First Class on National Rail page for more information.'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Trip@in_first_class',
                                                     version='01',
@@ -6228,7 +6228,7 @@ obj = PublicationDelivery(
                                             value='Single trip'
                                         ),
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
-                                            controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref=[
+                                            fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@single@legs',
@@ -6255,7 +6255,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
-                                            controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref=[
+                                            fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@return@outbound@legs',
@@ -6284,7 +6284,7 @@ obj = PublicationDelivery(
                                             value='Anytime - Buy any time, travel any time.'
                                         ),
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
-                                            controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref=[
+                                            fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@return@outbound@trip',
@@ -6308,7 +6308,7 @@ obj = PublicationDelivery(
                                             value='Anytime - Buy any time, travel any time.'
                                         ),
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
-                                            controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref=[
+                                            fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@return@outbound@trip',
@@ -6325,7 +6325,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='atc:ATOC@Products@Trip@Standard@single@generic',
                                         version='01',
@@ -6355,7 +6355,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -6470,7 +6470,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                                                    day_type_ref=DayTypeRef(
                                                                         ref='atc:Group_Saver_3-to-9_people@validDay'
                                                                     )
                                                                 ),
@@ -6704,7 +6704,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=7,
                                                                             is_allowed=False,
-                                                                            choice=PreassignedFareProductRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                                 value='Or use type of product?',
                                                                                 ref='tfl:oyster'
                                                                             ),
@@ -6909,7 +6909,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -6987,7 +6987,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@selected_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -7631,7 +7631,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Standard@single@generic'
                                                     ),
@@ -7647,7 +7647,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -7663,7 +7663,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:TFL@Products@Trip@Standard@London_transfer'
                                                     ),
@@ -7679,7 +7679,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -7712,7 +7712,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -7785,7 +7785,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Standard@return@generic'
                                                     ),
@@ -7839,7 +7839,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -7872,7 +7872,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -7905,7 +7905,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:TFL@Products@Trip@Standard@London_transfer'
                                                     ),
@@ -7921,7 +7921,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -7954,7 +7954,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -8386,12 +8386,12 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Flat rate supplements for TFC  trip products'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
@@ -8541,7 +8541,7 @@ obj = PublicationDelivery(
                                             value='Reservation for a seat on a specific train between two points'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Trip@Supplement@Seat_Reservation@outbound',
                                                     version='01',
@@ -8569,7 +8569,7 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        template_service_journey_ref_or_service_journey_ref=[
+                                                        service_journey_ref=[
                                                             ServiceJourneyRef(
                                                                 ref='netex:JOURNEY',
                                                                 version_ref='REQUIRED'
@@ -8590,7 +8590,7 @@ obj = PublicationDelivery(
                                             value='Reservation for a seat on a specific train between two points'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Trip@Supplement@Seat_Reservation@inbound',
                                                     version='01',
@@ -8618,7 +8618,7 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        template_service_journey_ref_or_service_journey_ref=[
+                                                        service_journey_ref=[
                                                             ServiceJourneyRef(
                                                                 ref='netex:JOUENEY',
                                                                 version_ref='REQUIRED'
@@ -8639,7 +8639,7 @@ obj = PublicationDelivery(
                                             value='Reservation for a Bicycle  on a specific train between two points - could add further details as to whether required'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Trip@Bicycle@add_on',
                                                     version='01',
@@ -8667,7 +8667,7 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        template_service_journey_ref_or_service_journey_ref=[
+                                                        service_journey_ref=[
                                                             ServiceJourneyRef(
                                                                 ref='netex:JOURNEY',
                                                                 version_ref='REQUIRED'
@@ -8685,7 +8685,7 @@ obj = PublicationDelivery(
                                             value='BicyExcess baggag ad on'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Trip@Excess_Baggage@add_on',
                                                     version='01',
@@ -8713,7 +8713,7 @@ obj = PublicationDelivery(
                                             value='Buy extension to trip'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Trip@Extension@add_on',
                                                     version='01',
@@ -8737,7 +8737,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     SupplementProduct(
                                         id='atc:ATOC@Products@Trip@Supplement@Upgrade@to_first_class',
                                         version='01',
@@ -8753,7 +8753,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -8854,7 +8854,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -8944,7 +8944,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -9041,7 +9041,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -9098,7 +9098,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -9200,7 +9200,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -9216,7 +9216,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:self_print_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -9263,7 +9263,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:mobile_app_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -9328,7 +9328,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Extension'
                                                     ),
@@ -9386,7 +9386,7 @@ obj = PublicationDelivery(
                                     version='any',
                                     ref='atc:split'
                                 ),
-                                fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                day_type_ref=FareDayTypeRef(
                                     version='any',
                                     ref='atc:working_day'
                                 ),
@@ -9398,7 +9398,7 @@ obj = PublicationDelivery(
                                             name=MultilingualString(
                                                 value='Dynamic pricing service for advance fares'
                                             ),
-                                            choice=OperatorRef(
+                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                                 value='ATOC',
                                                 version='any',
                                                 ref='uic:1170'
@@ -9409,7 +9409,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
-                                standard_fare_table_or_fare_table_in_context_or_fare_table=[
+                                fare_table=[
                                     FareTable(
                                         id='atc:ATOC@Products@Trip@Prices@working_day',
                                         version='01',
@@ -9421,13 +9421,13 @@ obj = PublicationDelivery(
                                                 value='includes full derivation of child fare from adult '
                                             ),
                                         ],
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
                                         ),
                                         includes=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='atc:ATOC@Products@Trip@Prices@LST_to_IPS',
                                                     version='01',
@@ -9444,7 +9444,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     includes=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTable(
                                                                 id='atc:ATOC@Products@Trip@Prices@LST_to_IPS@anytime',
                                                                 version='01',
@@ -9459,13 +9459,13 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                choice=OperatorRef(
+                                                                organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                                                     value='ATOC',
                                                                     version='any',
                                                                     ref='uic:1170'
                                                                 ),
                                                                 includes=FareTablesRelStructure(
-                                                                    choice=[
+                                                                    fare_table_ref_or_fare_table=[
                                                                         FareTable(
                                                                             id='atc:ATOC@Products@Trip@Prices@anytime@single ',
                                                                             version='01',
@@ -9489,7 +9489,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             includes=FareTablesRelStructure(
-                                                                                choice=[
+                                                                                fare_table_ref_or_fare_table=[
                                                                                     FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@anytime@single@first',
                                                                                         version='01',
@@ -9503,7 +9503,7 @@ obj = PublicationDelivery(
                                                                                             )
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
-                                                                                            choice=[
+                                                                                            fare_table_ref_or_fare_table=[
                                                                                                 FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult',
                                                                                                     version='01',
@@ -9519,9 +9519,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('10.00')
@@ -9533,7 +9533,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -9545,7 +9545,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@onboard',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('12.00')
@@ -9574,21 +9574,21 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.60'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('3.40'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -9604,19 +9604,19 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('3.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -9632,19 +9632,19 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@child@onboard',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('8.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('4.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -9678,7 +9678,7 @@ obj = PublicationDelivery(
                                                                                             )
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
-                                                                                            choice=[
+                                                                                            fare_table_ref_or_fare_table=[
                                                                                                 FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult',
                                                                                                     version='01',
@@ -9694,9 +9694,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('15.00')
@@ -9708,7 +9708,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('12.00')
@@ -9720,7 +9720,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@onboard',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -9749,21 +9749,21 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('10.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('5.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -9779,19 +9779,19 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('8.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('4.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -9807,19 +9807,19 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@child@onboard',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('3.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -9866,7 +9866,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             includes=FareTablesRelStructure(
-                                                                                choice=[
+                                                                                fare_table_ref_or_fare_table=[
                                                                                     FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@anytime@return@first',
                                                                                         version='01',
@@ -9880,7 +9880,7 @@ obj = PublicationDelivery(
                                                                                             )
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
-                                                                                            choice=[
+                                                                                            fare_table_ref_or_fare_table=[
                                                                                                 FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult',
                                                                                                     version='01',
@@ -9896,9 +9896,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('18.00')
@@ -9910,7 +9910,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('15.00')
@@ -9922,7 +9922,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=FarePriceVersionedChildStructure(
+                                                                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@onboard',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -9954,21 +9954,21 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('12.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-6.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -9984,19 +9984,19 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('10.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-5.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10012,7 +10012,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=FarePriceVersionedChildStructure(
+                                                                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@onboard',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10045,7 +10045,7 @@ obj = PublicationDelivery(
                                                                                             )
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
-                                                                                            choice=[
+                                                                                            fare_table_ref_or_fare_table=[
                                                                                                 FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult',
                                                                                                     version='01',
@@ -10061,9 +10061,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('17.00')
@@ -10075,7 +10075,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('21.00')
@@ -10087,7 +10087,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=FarePriceVersionedChildStructure(
+                                                                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@onboard',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10115,21 +10115,21 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('18.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-8.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10145,19 +10145,19 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('14.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-7.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10173,7 +10173,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=FarePriceVersionedChildStructure(
+                                                                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@onboard',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10213,13 +10213,13 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                choice=OperatorRef(
+                                                                organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                                                     value='ATOC',
                                                                     version='any',
                                                                     ref='uic:1170'
                                                                 ),
                                                                 includes=FareTablesRelStructure(
-                                                                    choice=[
+                                                                    fare_table_ref_or_fare_table=[
                                                                         FareTable(
                                                                             id='atc:ATOC@Products@Trip@Prices@off_peak@single ',
                                                                             version='01',
@@ -10243,7 +10243,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             includes=FareTablesRelStructure(
-                                                                                choice=[
+                                                                                fare_table_ref_or_fare_table=[
                                                                                     FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@off_peak@single@first',
                                                                                         version='01',
@@ -10257,7 +10257,7 @@ obj = PublicationDelivery(
                                                                                             )
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
-                                                                                            choice=[
+                                                                                            fare_table_ref_or_fare_table=[
                                                                                                 FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult',
                                                                                                     version='01',
@@ -10273,9 +10273,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -10287,7 +10287,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -10316,21 +10316,21 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-3.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10346,19 +10346,19 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-3.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10392,7 +10392,7 @@ obj = PublicationDelivery(
                                                                                             )
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
-                                                                                            choice=[
+                                                                                            fare_table_ref_or_fare_table=[
                                                                                                 FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult',
                                                                                                     version='01',
@@ -10408,9 +10408,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('12.00')
@@ -10422,7 +10422,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -10451,21 +10451,21 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('8.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-4.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10481,19 +10481,19 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-3.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10540,7 +10540,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             includes=FareTablesRelStructure(
-                                                                                choice=[
+                                                                                fare_table_ref_or_fare_table=[
                                                                                     FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@off_peak@return@first',
                                                                                         version='01',
@@ -10554,7 +10554,7 @@ obj = PublicationDelivery(
                                                                                             )
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
-                                                                                            choice=[
+                                                                                            fare_table_ref_or_fare_table=[
                                                                                                 FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult',
                                                                                                     version='01',
@@ -10570,9 +10570,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('12.00')
@@ -10584,7 +10584,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -10613,21 +10613,21 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-3.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10643,19 +10643,19 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-6.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10689,7 +10689,7 @@ obj = PublicationDelivery(
                                                                                             )
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
-                                                                                            choice=[
+                                                                                            fare_table_ref_or_fare_table=[
                                                                                                 FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult',
                                                                                                     version='01',
@@ -10705,9 +10705,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -10719,7 +10719,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('2.00')
@@ -10748,21 +10748,21 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('-3.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10778,19 +10778,19 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('2.00'),
                                                                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
-                                                                                                                                choice=SalesOfferPackagePriceRef(
+                                                                                                                                fare_price_ref=SalesOfferPackagePriceRef(
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult@in_station'
                                                                                                                                 ),
                                                                                                                                 adjustment_amount=Decimal('0.00'),
-                                                                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                                                                     value='34% off Adult  fare',
                                                                                                                                     version='any',
                                                                                                                                     ref='atc:child@rate'
@@ -10836,13 +10836,13 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                choice=OperatorRef(
+                                                                organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                                                     value='ATOC',
                                                                     version='any',
                                                                     ref='uic:1170'
                                                                 ),
                                                                 includes=FareTablesRelStructure(
-                                                                    choice=[
+                                                                    fare_table_ref_or_fare_table=[
                                                                         FareTable(
                                                                             id='atc:ATOC@Products@Trip@Prices@advance@single ',
                                                                             version='01',
@@ -10872,7 +10872,7 @@ obj = PublicationDelivery(
                                                                                 )
                                                                             ),
                                                                             includes=FareTablesRelStructure(
-                                                                                choice=[
+                                                                                fare_table_ref_or_fare_table=[
                                                                                     FareTable(
                                                                                         id='atc:ATOC@Products@Trip@Prices@advance@single@first',
                                                                                         version='01',
@@ -10886,7 +10886,7 @@ obj = PublicationDelivery(
                                                                                             )
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
-                                                                                            choice=[
+                                                                                            fare_table_ref_or_fare_table=[
                                                                                                 FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult',
                                                                                                     version='01',
@@ -10907,9 +10907,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult@Q1',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10919,11 +10919,11 @@ obj = PublicationDelivery(
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
-                                                                                                                    choice_1=LimitingRuleInContext(
+                                                                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleInContext(
                                                                                                                         minimum_price=Decimal('3.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice_1=[
+                                                                                                                choice=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@first@Q1'
@@ -10932,7 +10932,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult@Q2',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10942,11 +10942,11 @@ obj = PublicationDelivery(
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
-                                                                                                                    choice_1=LimitingRuleInContext(
+                                                                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleInContext(
                                                                                                                         minimum_price=Decimal('4.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice_1=[
+                                                                                                                choice=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@first@Q2'
@@ -10955,7 +10955,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult@Q3',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10965,11 +10965,11 @@ obj = PublicationDelivery(
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
-                                                                                                                    choice_1=LimitingRuleInContext(
+                                                                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleInContext(
                                                                                                                         minimum_price=Decimal('5.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice_1=[
+                                                                                                                choice=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@first@Q3'
@@ -10995,12 +10995,12 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@child@online',
                                                                                                                     version='01',
-                                                                                                                    choice_1=LimitingRuleRef(
+                                                                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                                                                         value='34% off Adult  fare',
                                                                                                                         version='any',
                                                                                                                         ref='atc:child@rate'
@@ -11027,7 +11027,7 @@ obj = PublicationDelivery(
                                                                                             )
                                                                                         ),
                                                                                         includes=FareTablesRelStructure(
-                                                                                            choice=[
+                                                                                            fare_table_ref_or_fare_table=[
                                                                                                 FareTable(
                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult',
                                                                                                     version='01',
@@ -11048,9 +11048,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult@Q1',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -11060,11 +11060,11 @@ obj = PublicationDelivery(
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
-                                                                                                                    choice_1=LimitingRuleInContext(
+                                                                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleInContext(
                                                                                                                         minimum_price=Decimal('2.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice_1=[
+                                                                                                                choice=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@second@Q1'
@@ -11073,7 +11073,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult@Q2',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -11083,11 +11083,11 @@ obj = PublicationDelivery(
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
-                                                                                                                    choice_1=LimitingRuleInContext(
+                                                                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleInContext(
                                                                                                                         minimum_price=Decimal('3.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice_1=[
+                                                                                                                choice=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@second@Q2'
@@ -11096,7 +11096,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult@Q3',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -11106,11 +11106,11 @@ obj = PublicationDelivery(
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
-                                                                                                                    choice_1=LimitingRuleInContext(
+                                                                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleInContext(
                                                                                                                         minimum_price=Decimal('4.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice_1=[
+                                                                                                                choice=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@second@Q3'
@@ -11136,12 +11136,12 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        choice=[
+                                                                                                        fare_price_or_fare_price_ref=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                choice=SalesOfferPackagePrice(
+                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@child@online',
                                                                                                                     version='01',
-                                                                                                                    choice_1=LimitingRuleRef(
+                                                                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                                                                         value='34% off Adult  fare',
                                                                                                                         version='any',
                                                                                                                         ref='atc:child@rate'
@@ -11197,12 +11197,12 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='ATOC Season pass Tariff'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
@@ -11482,7 +11482,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    choice_1=GroupOfDistanceMatrixElementsRef(
+                                                    choice=GroupOfDistanceMatrixElementsRef(
                                                         version='01',
                                                         ref='atc:ATOC@ODs@LE@season'
                                                     ),
@@ -11638,7 +11638,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
-                                            controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref=[
+                                            fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@COMPOSITION@trips',
@@ -11692,7 +11692,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     SaleDiscountRight(
                                         id='atc:ATOC@Products@Pass@Photocard',
                                         version='01',
@@ -11703,7 +11703,7 @@ obj = PublicationDelivery(
                                             value='\nThese are obtainable, free of charge, from any staffed railway ticket office. The adult rate photocard (for those aged 16 or over)  is the pink sample shown. All you need to get one of these is a passport size photograph. The child rate photocard (for those aged 5-15 when the term starts) is the yellow sample shown. To get one of these you must present a passport size photograph and a copy of the childs birth certificate to a staffed railway ticket office.\n\n***THE PHOTOCARD NUMBER***\n\nThis is combination of numbers and letters in black on the photocard. On the newer photocards this will be shown underneath the barcode (as in the samples shown).\n\n\n***CHILD PHOTOCARDS-MAKE SURE THEY ARE IN DATE***\nPlease make sure that your child rate photocard is in date (not past the "Valid Until" date shown on the card). Children who are aged 15 at the start fo the term but then turn 16 during the term can still obtain a child rate ticket for the whole term using their existing photocard (provided it was in date at the start of the term)turn 16 during the term can still obtain a child rate ticket for the whole term using their existing photocard (provided it was in date at the start of the term)\t\t\t\t\t\n\t\t\t\t\t'
                                         ),
                                         url='https://public.greenrailtravel.co.uk/scholars/photocard-information.html',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -11751,7 +11751,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -12181,7 +12181,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Photocard'
                                                     ),
@@ -12226,7 +12226,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Photocard'
                                                     ),
@@ -12512,7 +12512,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -12531,7 +12531,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:smart_card'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -12609,7 +12609,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card'
                                                     ),
@@ -12625,7 +12625,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:smart_card'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card'
                                                     ),
@@ -12702,7 +12702,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -12718,7 +12718,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:mobile_app_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -12757,7 +12757,7 @@ obj = PublicationDelivery(
                                                         ref='tfl:oyster_card',
                                                         version_ref='TODO'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         value='TODO',
                                                         ref='tfl:Standard_trip@London_travelcard',
                                                         version_ref='TODO'
@@ -12774,7 +12774,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@Season'
                                                     ),
@@ -12790,7 +12790,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:smart_card'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@Season'
                                                     ),
@@ -12840,7 +12840,7 @@ obj = PublicationDelivery(
                                 id='atc:ATOC@Products@Discount@Rail_Card',
                                 version='any',
                                 pricing_rules=PricingRulesRelStructure(
-                                    choice=[
+                                    pricing_rule=[
                                         LimitingRule(
                                             id='atc:minimum_price@peak',
                                             version='any',
@@ -12857,12 +12857,12 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='ATOC Railcard   Tariff'
                                         ),
-                                        choice=RetailConsortiumRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=RetailConsortiumRef(
                                             value='National Rail enquiries',
                                             version='any',
                                             ref='atc:Consortium:NRE'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
@@ -12899,12 +12899,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
-                                            choice=[
+                                            quality_structure_factor_ref_or_quality_structure_factor=[
                                                 FareDemandFactor(
                                                     id='atc:ATOC@Tariff@Discount@demand@off_peak_day@all_stations@peak',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='atc:ATOC@Tariff@Discount@demand@off_peak_day@all_stations@peak@from',
                                                                     version='01',
@@ -12915,7 +12915,7 @@ obj = PublicationDelivery(
                                                                         value='A £12 minimum fare for Single and Return tickets, applies between 04:30 and 09:59 Monday to Friday except on Public Holidays or during July and August.'
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
-                                                                        choice=[
+                                                                        day_type_ref_or_day_type=[
                                                                             FareDayTypeRef(
                                                                                 version='any',
                                                                                 ref='atc:working_day_not_July_or_August'
@@ -12973,7 +12973,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    choice_1=GroupOfDistanceMatrixElementsRef(
+                                                    choice=GroupOfDistanceMatrixElementsRef(
                                                         version='01',
                                                         ref='atc:ATOC@ODs@LE@season'
                                                     )
@@ -13008,7 +13008,7 @@ obj = PublicationDelivery(
                                                                                 value='Aged 16-25 or a full time student aged 26 or over? Save 1/3 off most standard class rail fares throughout Great Britain with a 16-25 Railcard. .'
                                                                             ),
                                                                             url='http://www.nationalrail.co.uk/times_fares/prd359000a04000200b5da61f1e92b72.aspx',
-                                                                            limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@student'
                                                                             ),
@@ -13033,7 +13033,7 @@ obj = PublicationDelivery(
                                                                                 value="16-25 Railcard - 30 for a whole year\nOur 16-25 Railcard gives you 1/3 off most rail fares throughout Great Britain, including all Standard and First Class Advance fares for £30.  \n\nTo be eligible for a 16-25 Railcard you must be 16-25, or a mature student - 26 years or older and in full-time study. Please see our eligibility criteria for more information. \nTo buy online, you will need a valid UK driving licence or passport number to prove you're eligible, and have a digital photo saved on your computer.\n\nYou can buy a 3-year 16-25 Railcard, available only online. It's great value at £70, saving you an extra £20 on the cost of renewing your 1-year Railcard for three consecutive years. You can buy this 3-year Railcard up until the day before your 24th birthday.  \n \nPlease note: A £12 minimum fare for Single and Return tickets, applies between 04:30 and 09:59 Monday to Friday except on Public Holidays or during July and August. See Minimum Fares for further details.\n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t"
                                                                             ),
                                                                             url='https://www.16-25railcard.co.uk/',
-                                                                            limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@student'
                                                                             ),
@@ -13059,7 +13059,7 @@ obj = PublicationDelivery(
                                                                                 value='26-30 Railcard - 30 for a whole year\n26-30 digital Railcard is a trial\n\nValid for those aged 26-30\nSave 1/3 on most rail fares to travel across Britain for a year\nIt is available to purchase for limited time only\n\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t'
                                                                             ),
                                                                             url='https://www.railcard.co.uk/26-30/',
-                                                                            limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@student'
                                                                             ),
@@ -13080,7 +13080,7 @@ obj = PublicationDelivery(
                                                                                 value="\nSenior Railcard - £30 for a whole year\nIf you're 60 or over our Senior Railcard gives you 1/3 off most Standard and First Class rail fares throughout Great Britain. Click here to view all applicable fares.\n\nYour Railcard also allows you to take advantage of our great partner offers, giving you exclusive discounts across the UK. See our offers section for all the latest partner offers.\n\nTo buy online, you will need a valid UK driving licence or passport number to prove your eligibility.\n\nYou can buy a 3-year Senior Railcard, available only online. It's great value at £70, saving you £20 on the cost of renewing your 1-year Railcard for three consecutive years. \nPlease note: Railcard discounts are not available on tickets for morning peak period services, for journeys wholly within the London & South East area on Monday to Friday, except on public holidays. See Time Restrictions for further details.\n"
                                                                             ),
                                                                             url='http://www.nationalrail.co.uk/times_fares/46540.aspx',
-                                                                            limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='atc:senior_rate'
                                                                             ),
@@ -13102,7 +13102,7 @@ obj = PublicationDelivery(
                                                                                 value='Registered Job Seeker\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tThe Jobcentre Plus Travel Discount card is part of a scheme set up by the government to help unemployed people obtain employment. You may be eligible if you are claiming:\n\nJobseekers Allowance AND are aged 18-24 and have been unemployed for 6-9 months\nOR\nJobseekers Allowance AND are 25 or over and have been unemployed for 6-12 months\nOR\nIncapacity Benefit, Employment  & Support Allowance or Income Support AND are actively engaged with an advisor in returning to employment\n \nMore Information\nA Jobcentre Plus travel Discount card is free and lasts up to three months. The card allows the bearer to get the following standard class tickets at discounted rates:\n50% Off Anytime Day and Off-Peak Day tickets (including Off-Peak Day Travelcards for travel starting outside London Zones 1-9). Also Weekly, Monthly and longer period Season Tickets and Travelcards (up to a maximum of 3 months)\n50% off Oyster pay as you go (PAYG) fares in London Zones 1-6\nReduced rate tickets booked with the Jobcentre Plus Travel Discount Card cannot be used to travel in first class and are not valid for travel on Southeastern High Speed rail services.'
                                                                             ),
                                                                             url='https://www.raileasy.co.uk/information/rail-cards/jobcentre-plus/#/',
-                                                                            limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@concession'
                                                                             ),
@@ -13123,7 +13123,7 @@ obj = PublicationDelivery(
                                                                                 value='If you have a disability that makes travelling by train difficult you might qualify for the Disabled Persons Railcard. The Railcard gives you - and one adult travelling with you - 1/3 off most First Class and standard rail fares throughout Great Britain. See the Disabled Persons Railcard website for applicable fares.\n\nYou may qualify for a Disabled Persons Railcard if you have: a visual impairment, a hearing impairment, epilepsy, or are in receipt of a disability-related benefit. Check to see if you are eligible on the Disabled Persons Railcard website.\n\nTo apply for a Disabled Persons Railcard you will need to complete the application form and send it with payment and the required proof of disability to the Disabled Persons Railcard office. You can also apply online.  It is not possible to buy a new card through telesales or at stations. Existing Railcard holders can renew their Railcard online, by post or by phone on 0345 605 0525. \n'
                                                                             ),
                                                                             url='https://www.disabledpersons-railcard.co.uk/',
-                                                                            limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@disabled'
                                                                             ),
@@ -13144,7 +13144,7 @@ obj = PublicationDelivery(
                                                                                             value='Companion  for disabled person'
                                                                                         ),
                                                                                         url='https://www.disabledpersons-railcard.co.uk/',
-                                                                                        companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                        user_profile_ref=UserProfileRef(
                                                                                             version='any',
                                                                                             ref='atc:adult'
                                                                                         ),
@@ -13164,7 +13164,7 @@ obj = PublicationDelivery(
                                                                             description=MultilingualString(
                                                                                 value='To apply for your Railcard please see your Unit HR admin staff.  HM Forces Railcards cannot be purchased at National Rail stations.\nHM Forces Railcard - £21 for one year\nThe HM Forces Railcard costs £21 and it will save you 1/3 on most rail fares throughout Great Britain for a whole year. That works out to under £2 a month for huge savings.\n\nYou are eligible if you are a member of the Armed Forces, certain reservists and in most cases, a spouse or partner of a member or a dependent. Service personnel can obtain an application form from their Unit Personnel/Administration Office.\nPlease note that a £12 minimum fare for Single and Return tickets applies between 04:30 and 09:59  Monday to Friday except on Public Holidays or during July and August. \t\t\t\t\t\t\t\n\t\t\t\t\t\t\t'
                                                                             ),
-                                                                            limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@armed_forces'
                                                                             ),
@@ -13217,7 +13217,7 @@ obj = PublicationDelivery(
                                                                                     UsageParameterPrice(
                                                                                         id='atc:ATOC@Tariff@Discount@Rail_Card@group@two_together',
                                                                                         version='any',
-                                                                                        choice_1=DiscountingRule(
+                                                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                             id='atc:ATOC@Tariff@Discount@Rail_Card@group@two_together',
                                                                                             version='any',
                                                                                             discount_as_percentage=Decimal('0.34'),
@@ -13254,7 +13254,7 @@ obj = PublicationDelivery(
                                                                                     UsageParameterPrice(
                                                                                         id='atc:ATOC@Tariff@Discount@Rail_Card@group@family@adult',
                                                                                         version='any',
-                                                                                        choice_1=DiscountingRule(
+                                                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                             id='atc:ATOC@Tariff@Discount@Rail_Card@group@family@adult',
                                                                                             version='any',
                                                                                             discount_as_percentage=Decimal('0.34'),
@@ -13264,7 +13264,7 @@ obj = PublicationDelivery(
                                                                                     UsageParameterPrice(
                                                                                         id='atc:ATOC@Tariff@Discount@Rail_Card@group@family@child',
                                                                                         version='any',
-                                                                                        choice_1=DiscountingRule(
+                                                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                             id='atc:ATOC@Tariff@Discount@Rail_Card@group@family@child',
                                                                                             version='any',
                                                                                             discount_as_percentage=Decimal('0.60'),
@@ -13280,7 +13280,7 @@ obj = PublicationDelivery(
                                                                                     CompanionProfile(
                                                                                         id='atc:ATOC@Tariff@Discount@Rail_Card@group@family@adult',
                                                                                         version='any',
-                                                                                        companion_profile_ref_or_user_profile_ref=CompanionProfileRef(
+                                                                                        user_profile_ref=CompanionProfileRef(
                                                                                             ref='atc:adult'
                                                                                         ),
                                                                                         minimum_number_of_persons=1,
@@ -13290,7 +13290,7 @@ obj = PublicationDelivery(
                                                                                     CompanionProfile(
                                                                                         id='atc:ATOC@Tariff@Discount@Rail_Card@group@family@child',
                                                                                         version='any',
-                                                                                        companion_profile_ref_or_user_profile_ref=CompanionProfileRef(
+                                                                                        user_profile_ref=CompanionProfileRef(
                                                                                             ref='atc:child'
                                                                                         ),
                                                                                         minimum_number_of_persons=1,
@@ -13331,7 +13331,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Discount@Rail_Card@use@general',
                                                     version='01',
@@ -13368,7 +13368,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='atc:ATOC@Products@Discount@Rail_Card@use@gold',
                                                     version='01',
@@ -13399,7 +13399,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     SaleDiscountRight(
                                         id='atc:ATOC@Products@Discount@Rail_Card',
                                         version='01',
@@ -13410,7 +13410,7 @@ obj = PublicationDelivery(
                                             value="National Railcards\n* Two Together Railcard. See GROUP TICKET\n* 16-25 Rail card - See USER PROFILE\n* Mature Student Railcard .  - See 16-25 USER PROFILE\n* Family & Friends Railcard. See GROUP TICKET\n* Senior Railcard\n* Disabled railcard  \n* HM Forces Railcard\n\nRailcards offer value for money if you travel by train, saving you at least 1/3 on most rail fares. You must carry your Railcard with you at all times during the journey in order to qualify for the discount\n\nYou can buy 16-25, Family & Friends, Senior, Two Together and Network Railcards online. \nAlternatively you can call your preferred Telesales line or visit your local station to apply\nTo make sure you don't miss out on any savings you can also renew your existing Railcard online up to 30 days in advance.  \n\nYou can buy a 3-year Family & Friends Railcard, available only online. It's great value at £70, saving you £20 on the cost of renewing your 1-year Railcard for three consecutive years\n\nIf you are travelling in a group and some members of your party have Railcards, you can now select and add more than one Railcard. When selecting different Railcards, choose the type from the drop down list in the 'Number of Railcards and Passengers' section, select the number of passengers holding that particular Railcard to be used and then click 'Add' after each selection.\n\nYour total journey cost will take into account the correct discounts for each of the Railcards and numbers of passengers entered.\n\n===============\n                                                         \nNetwork Railcard - £30 for a whole year\nExplore London and the South East area without the cost and hassle of driving and save money on days out with a Network Railcard.\n\nA Network Railcard gives you up to 1/3 off most rail fares for journeys in the Network Railcard area. \nAnyone 16 years and above can buy a Network Railcard.\nThe Network Railcard costs £30 and is valid for 12 months.  \n\nPlease note: Railcard discounts are not available on tickets for morning peak period services, for journeys wholly within the London & South East area on Monday to Friday, except on public holidays. See Time Restrictions for further details.\n\n==========\n\nRegional Railcards\nIn addition to these national railcards, a range of regional Railcards are available throughout the country. \n"
                                         ),
                                         url='http://www.nationalrail.co.uk/times_fares/46540.aspx',
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -13547,7 +13547,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@selected_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -13642,7 +13642,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                    time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                     ),
@@ -13765,12 +13765,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='atc:gold_card_discount_day',
                                                                     version='01',
@@ -13782,7 +13782,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     is_available=True,
                                                                     day_types=DayTypesRelStructure(
-                                                                        choice=[
+                                                                        day_type_ref_or_day_type=[
                                                                             FareDayTypeRef(
                                                                                 version='any',
                                                                                 ref='atc:weekend'
@@ -13805,7 +13805,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Gold card discount'
                                                     ),
-                                                    choice_1=DiscountingRule(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                         id='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card@sales_discount',
                                                         version='01',
                                                         discount_as_percentage=Decimal('0.34')
@@ -13833,7 +13833,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@selected_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -13875,7 +13875,7 @@ obj = PublicationDelivery(
                                                                     period_constraint=SamePeriodEnumeration.WITHIN_SAME_PERIOD,
                                                                     user_constraint=SameUserEnumeration.SPECIFIC,
                                                                     specific_to_profiles=UserProfileRefsRelStructure(
-                                                                        companion_profile_ref_or_user_profile_ref=[
+                                                                        user_profile_ref=[
                                                                             UserProfileRef(
                                                                                 ref='atc:family_member',
                                                                                 version_ref='EXTERNAL'
@@ -13887,7 +13887,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                        scheduled_stop_point_ref=[
                                                             FareScheduledStopPointRef(
                                                                 ref='netex:PURCHASE_STATION',
                                                                 version_ref='netex:REQUIRED'
@@ -14065,7 +14065,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                    time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                     )
@@ -14244,7 +14244,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                time_structure_factor_ref=TimeIntervalRef(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Discount@Rail_Cardrail_card@1year'
                                                                 )
@@ -14276,7 +14276,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                time_structure_factor_ref=TimeIntervalRef(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Discount@Rail_Cardrail_card@3year'
                                                                 )
@@ -14301,7 +14301,7 @@ obj = PublicationDelivery(
                                                             UsageValidityPeriod(
                                                                 id='atc:ATOC@Products@Discount@Railcard-SOP@16to25@price_limit@peak',
                                                                 version='01',
-                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                     ref=''
                                                                 ),
                                                                 usage_trigger=UsageTriggerEnumeration.START_OUTBOUND_RIDE,
@@ -14309,7 +14309,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                    quality_structure_factor_ref=FareDemandFactorRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Discount@demand@off_peak_day@all_stations@peak'
                                                     )
@@ -14577,7 +14577,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Discount@Rail_Card'
                                                     ),
@@ -14648,7 +14648,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ResourceFrame(
                             id='abga:LE@Operator_Specific_Resources',
                             version='any',
@@ -14745,7 +14745,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='abga:ABGA@Branding',
                                         version='any',
@@ -14753,7 +14753,7 @@ obj = PublicationDelivery(
                                             value='Branding'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 Branding(
                                                     id='abga:Greater_Anglia@brand',
                                                     version='any',
@@ -14780,7 +14780,7 @@ obj = PublicationDelivery(
                                 value='Defines day types specific to Greater Anglia  eg Suffolk day types'
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     FareDayType(
                                         id='abga:suffolk_school_day',
                                         version='any',
@@ -14926,7 +14926,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='abga:term@spring@2018'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='abga:suffolk_school_day'
                                         )
@@ -14942,7 +14942,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='abga:term@summer@full@2018'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='abga:suffolk_school_day'
                                         )
@@ -14958,7 +14958,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='abga:term@autumn@2018'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='abga:suffolk_school_day'
                                         )
@@ -14980,7 +14980,7 @@ obj = PublicationDelivery(
                                     value='Greater Anglia Network'
                                 ),
                                 members=LineRefsRelStructure(
-                                    flexible_line_ref_or_line_ref=[
+                                    line_ref=[
                                         LineRef(
                                             version='01',
                                             ref='abga:ln_London-to-Braintree'
@@ -15028,7 +15028,7 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                                 transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     value='Greater Anglia',
                                     version='any',
                                     ref='atc:LE'
@@ -15084,7 +15084,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='abga:ln_Ely-to-Norwich',
                                         version='01',
@@ -15248,7 +15248,7 @@ obj = PublicationDelivery(
                                             ),
                                         ],
                                         members=LineRefsRelStructure(
-                                            flexible_line_ref_or_line_ref=[
+                                            line_ref=[
                                                 LineRef(
                                                     ref='abga:Tottenham_Hale-to-Shelford',
                                                     version_ref='TODO'
@@ -15268,7 +15268,7 @@ obj = PublicationDelivery(
                                             ),
                                         ],
                                         members=LineRefsRelStructure(
-                                            flexible_line_ref_or_line_ref=[
+                                            line_ref=[
                                                 LineRef(
                                                     version='01',
                                                     ref='abga:ln_London-to-Norwich'
@@ -15307,7 +15307,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
-                                fare_zone_or_tariff_zone=[
+                                tariff_zone=[
                                     TariffZone(
                                         id='abga:LE@Rover@Norfolk',
                                         version='any',
@@ -15539,7 +15539,7 @@ obj = PublicationDelivery(
                                                             ref='atc:Station:FLX'
                                                         ),
                                                         departure_time=XmlTime(16, 30, 0, 0),
-                                                        flexible_line_ref_or_line_ref=LineRef(
+                                                        line_ref=LineRef(
                                                             version='01',
                                                             ref='abga:ln_London-to-Felixstowe'
                                                         )
@@ -15561,7 +15561,7 @@ obj = PublicationDelivery(
                                                             ref='atc:Station:FLX'
                                                         ),
                                                         departure_time=XmlTime(16, 32, 0, 0),
-                                                        flexible_line_ref_or_line_ref=LineRef(
+                                                        line_ref=LineRef(
                                                             version='01',
                                                             ref='abga:ln_London-to-Felixstowe'
                                                         )
@@ -15583,7 +15583,7 @@ obj = PublicationDelivery(
                                                             ref='atc:Station:FLX'
                                                         ),
                                                         departure_time=XmlTime(18, 30, 0, 0),
-                                                        flexible_line_ref_or_line_ref=LineRef(
+                                                        line_ref=LineRef(
                                                             version='01',
                                                             ref='abga:ln_London-to-Felixstowe'
                                                         )
@@ -15605,7 +15605,7 @@ obj = PublicationDelivery(
                                                             ref='atc:Station:BTR'
                                                         ),
                                                         departure_time=XmlTime(18, 34, 0, 0),
-                                                        flexible_line_ref_or_line_ref=LineRef(
+                                                        line_ref=LineRef(
                                                             version='01',
                                                             ref='abga:ln_London-to-Braintree'
                                                         )
@@ -15627,7 +15627,7 @@ obj = PublicationDelivery(
                                                             ref='atc:Station:SUY'
                                                         ),
                                                         departure_time=XmlTime(18, 12, 0, 0),
-                                                        flexible_line_ref_or_line_ref=LineRef(
+                                                        line_ref=LineRef(
                                                             version='01',
                                                             ref='abga:ln_London-to-Sudbury'
                                                         )
@@ -15649,7 +15649,7 @@ obj = PublicationDelivery(
                                                             ref='atc:Station:WON'
                                                         ),
                                                         departure_time=XmlTime(18, 32, 0, 0),
-                                                        flexible_line_ref_or_line_ref=LineRef(
+                                                        line_ref=LineRef(
                                                             version='01',
                                                             ref='abga:ln_London-to-Walton_on_the_Naze'
                                                         )
@@ -15679,11 +15679,11 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Carnet Tariff'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='abga:Network'
                                         ),
@@ -15692,7 +15692,7 @@ obj = PublicationDelivery(
                                             ref='eura:point_to_point'
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
-                                            choice=[
+                                            quality_structure_factor_ref_or_quality_structure_factor=[
                                                 QualityStructureFactor(
                                                     id='abga:multi_trip@10',
                                                     version='01',
@@ -15740,7 +15740,7 @@ obj = PublicationDelivery(
                                                                         ref='eura:can_access'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                                                        day_type_ref=FareDayTypeRef(
                                                                             version='any',
                                                                             ref='atc:everyday'
                                                                         )
@@ -15789,7 +15789,7 @@ obj = PublicationDelivery(
                                                                         ref='eura:can_access'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                                                        day_type_ref=FareDayTypeRef(
                                                                             version='any',
                                                                             ref='atc:everyday'
                                                                         )
@@ -15924,7 +15924,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='abga:rail_trip@carnet',
                                                     version='01',
@@ -15940,7 +15940,7 @@ obj = PublicationDelivery(
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
                                                         ],
-                                                        template_service_journey_ref_or_service_journey_ref=[
+                                                        service_journey_ref=[
                                                             ServiceJourneyRef(
                                                                 ref='netex:OPTIONAL'
                                                             ),
@@ -15991,7 +15991,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         FareScheduledStopPointRef(
                                                                             value='London Liverpool Street',
                                                                             version='01',
@@ -16034,7 +16034,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             usage_parameters=UsageParametersInFrameRelStructure(
-                                choice=[
+                                usage_parameter=[
                                     GroupTicket(
                                         id='abga:LE@Products@Group@Duo_family',
                                         version='any',
@@ -16057,7 +16057,7 @@ obj = PublicationDelivery(
                                                             UsageParameterPrice(
                                                                 id='abga:Duo_Group_family@adult',
                                                                 version='any',
-                                                                choice_1=DiscountingRule(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                     id='abga:Duo_Group_family@adult@rate',
                                                                     version='any',
                                                                     discount_as_percentage=Decimal('0.50'),
@@ -16066,7 +16066,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='atc:adult'
                                                     ),
@@ -16081,7 +16081,7 @@ obj = PublicationDelivery(
                                                             UsageParameterPrice(
                                                                 id='abga:Duo_Group_family@child',
                                                                 version='any',
-                                                                choice_1=DiscountingRule(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                     id='abga:Duo_Group_family@child@rate',
                                                                     version='any',
                                                                     discount_as_value=Decimal('2.00'),
@@ -16090,7 +16090,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='atc:child'
                                                     ),
@@ -16121,7 +16121,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     AmountOfPriceUnitProduct(
                                         id='abga:LE@Products@Trip@multi_trip@carnet',
                                         version='01',
@@ -16150,7 +16150,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:product@single_toc'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='Greater Anglia',
                                             version='any',
                                             ref='atc:LE'
@@ -16265,7 +16265,7 @@ obj = PublicationDelivery(
                                                                     ref='eura:can_access'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         FareScheduledStopPointRef(
                                                                             value='London Liverpool Street',
                                                                             version='01',
@@ -16289,7 +16289,7 @@ obj = PublicationDelivery(
                                                                     ref='eura:can_access'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         FareScheduledStopPointRef(
                                                                             value='London Liverpool Street',
                                                                             version='01',
@@ -17219,7 +17219,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Standard@return@generic'
                                                     ),
@@ -17273,7 +17273,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -17306,7 +17306,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -17339,7 +17339,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -17375,7 +17375,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         value='TODO - DEFINE TRAVELCARD',
                                                         ref='tfl:London_Travelcard@day',
                                                         version_ref='01'
@@ -17446,7 +17446,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=AmountOfPriceUnitProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=AmountOfPriceUnitProductRef(
                                                         version='01',
                                                         ref='abga:LE@Products@Trip@multi_trip@carnet'
                                                     ),
@@ -17473,11 +17473,11 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Season  Tariff'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='abga:Network'
                                         ),
@@ -17532,11 +17532,11 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Season  Tariff'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='abga:LE@Network@Rover'
                                         ),
@@ -17613,7 +17613,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='abga:LE@Products@Pass@Rover@day_ranger',
                                         version='01',
@@ -17631,7 +17631,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:product@single_toc'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             value='Greater Anglia',
                                             version='any',
                                             ref='atc:LE'
@@ -17894,7 +17894,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -17910,7 +17910,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:smart_card'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -18012,7 +18012,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ResourceFrame(
                             id='jsp:JSP@PlusBus@Common_Resources',
                             version='any',
@@ -18099,7 +18099,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='nptg:TypeOfZone',
                                         version='any',
@@ -18107,7 +18107,7 @@ obj = PublicationDelivery(
                                             value='Types of Plusbus Zone'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfZone(
                                                     id='nptg:PlusBus_zone',
                                                     version='any',
@@ -18133,7 +18133,7 @@ obj = PublicationDelivery(
                                             value='Branding'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 Branding(
                                                     id='jsp:PlusBus@brand',
                                                     version='any',
@@ -18149,7 +18149,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='jsp:JSP',
                                         version='any',
@@ -18210,7 +18210,7 @@ obj = PublicationDelivery(
                                 name=MultilingualString(
                                     value='Plusbus Network'
                                 ),
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     version='any',
                                     ref='jsp:JSP'
                                 ),
@@ -18274,7 +18274,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     members=LineRefsRelStructure(
-                                                        flexible_line_ref_or_line_ref=[
+                                                        line_ref=[
                                                             LineRef(
                                                                 value='Norwich route 100',
                                                                 ref='jsp:Norwich@100'
@@ -18317,7 +18317,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     members=LineRefsRelStructure(
-                                                        flexible_line_ref_or_line_ref=[
+                                                        line_ref=[
                                                             LineRef(
                                                                 value='Norwich route 25 after midnight',
                                                                 ref='jsp:Norwich@25'
@@ -18359,7 +18359,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     members=LineRefsRelStructure(
-                                                        flexible_line_ref_or_line_ref=[
+                                                        line_ref=[
                                                             LineRef(
                                                                 value="schools services ('S' prefixed",
                                                                 ref='jsp:Sheffield@S'
@@ -18378,7 +18378,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
-                                fare_zone_or_tariff_zone=[
+                                tariff_zone=[
                                     TariffZone(
                                         id='nptg:PlusBus:All_Zones',
                                         version='01',
@@ -18398,7 +18398,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
                                                         ref=IanaCountryTldEnumeration.UK,
@@ -18427,7 +18427,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
                                                         ref=IanaCountryTldEnumeration.UK,
@@ -18460,7 +18460,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
                                                         ref=IanaCountryTldEnumeration.UK,
@@ -18540,7 +18540,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
                                                         value='Suffolk',
@@ -18621,7 +18621,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
                                                         value='Norfolk',
@@ -18702,7 +18702,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
                                                         value='Norfolk',
@@ -18741,7 +18741,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                choice=[
+                                validity_condition_ref_or_validity_condition=[
                                     AvailabilityCondition(
                                         id='jsp:anytime@anyday',
                                         version='01',
@@ -18750,7 +18750,7 @@ obj = PublicationDelivery(
                                         ),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
                                                     version='any',
                                                     ref='jsp:everyday'
@@ -18766,7 +18766,7 @@ obj = PublicationDelivery(
                                         ),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
                                                     version='any',
                                                     ref='atc:weekend'
@@ -18790,7 +18790,7 @@ obj = PublicationDelivery(
                                         ),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
                                                     version='any',
                                                     ref='atc:weekend'
@@ -18814,7 +18814,7 @@ obj = PublicationDelivery(
                                         ),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
                                                     version='any',
                                                     ref='atc:weekend'
@@ -18833,7 +18833,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     FareDayType(
                                         id='jsp:everyday',
                                         version='any',
@@ -18931,11 +18931,11 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='Tariff for plus bus passes'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='jsp:JSP'
                                         ),
-                                        choice_1=NetworkRef(
+                                        line_ref_or_group_of_lines_ref=NetworkRef(
                                             version='01',
                                             ref='nptg:JSP@PlusBus@Zones@network'
                                         ),
@@ -18988,12 +18988,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
-                                            choice=[
+                                            quality_structure_factor_ref_or_quality_structure_factor=[
                                                 FareDemandFactor(
                                                     id='jsp:JSP@Tariff@PlusBus@Demand@anytime',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='jsp:anytime@anyday'
@@ -19011,7 +19011,7 @@ obj = PublicationDelivery(
                                                     id='jsp:JSP@Tariff@PlusBus@Demand@off_peak@after_1000am',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='jsp:working_day_after_10.00'
@@ -19033,7 +19033,7 @@ obj = PublicationDelivery(
                                                     id='jsp:JSP@Tariff@PlusBus@Demand@off_peak@after_0930am',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='jsp:working_day_after_9.30'
@@ -19055,7 +19055,7 @@ obj = PublicationDelivery(
                                                     id='jsp:JSP@Tariff@PlusBus@Demand@off_peak@varies_by_region',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 ValidityRuleParameter(
                                                                     id='jsp:JSP@Tariff@PlusBus@Demand@off_peak@varies_by_region@Outside_South_East',
                                                                     version='01',
@@ -19197,8 +19197,8 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    choice=QualityStructureFactorsRelStructure(
-                                                        choice=[
+                                                    quality_structure_factor_ref=QualityStructureFactorsRelStructure(
+                                                        quality_structure_factor_ref_or_quality_structure_factor=[
                                                             FareDemandFactorRef(
                                                                 version='01',
                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@anytime'
@@ -19230,7 +19230,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    network_ref_or_group_of_lines_ref=[
+                                                                    group_of_lines_ref=[
                                                                         NetworkRef(
                                                                             ref='nptg:PlusBus_zones'
                                                                         ),
@@ -19253,7 +19253,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                network_ref_or_group_of_lines_ref=[
+                                                                                group_of_lines_ref=[
                                                                                     NetworkRef(
                                                                                         version='01',
                                                                                         ref='nptg:JSP@PlusBus@Zones@network@excluded'
@@ -19312,7 +19312,7 @@ obj = PublicationDelivery(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Discount@Railcard-SOP@Network'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@off_peak@after_1000am'
                                                                             )
@@ -19335,7 +19335,7 @@ obj = PublicationDelivery(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Discount@Railcard-SOP@Two_Together'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@off_peak@after_0930am'
                                                                             )
@@ -19358,7 +19358,7 @@ obj = PublicationDelivery(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Products@Railcards@off_peak@varies_by_region'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@off_peak@varies_by_region'
                                                                             )
@@ -19381,7 +19381,7 @@ obj = PublicationDelivery(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Products@Railcards@anytime'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@anytime'
                                                                             )
@@ -19431,7 +19431,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    network_ref_or_group_of_lines_ref=[
+                                                                    group_of_lines_ref=[
                                                                         NetworkRef(
                                                                             ref='nptg:PlusBus_zones'
                                                                         ),
@@ -19450,7 +19450,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                network_ref_or_group_of_lines_ref=[
+                                                                                group_of_lines_ref=[
                                                                                     NetworkRef(
                                                                                         version='01',
                                                                                         ref='nptg:JSP@PlusBus@Zones@network@excluded'
@@ -19545,7 +19545,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='jsp:JSP@Products@Pass@PlusBus@zone_pass@1day@access',
                                                     version='01',
@@ -19581,7 +19581,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='jsp:JSP@Products@Pass@PlusBus@zone_pass@season@access',
                                                     version='01',
@@ -19630,7 +19630,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='jsp:JSP@Products@Pass@PlusBus@1day',
                                         version='01',
@@ -19649,7 +19649,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='jsp:JSP'
                                         ),
@@ -19807,7 +19807,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='jsp:JSP'
                                         ),
@@ -19940,20 +19940,20 @@ obj = PublicationDelivery(
                                         id='jsp:plusbus@discounts',
                                         version='01',
                                         members=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 UsageParameterPrice(
                                                     id='jsp:plusbus@discounts@child',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Child price for Plusbus Under 16 years old? You pay half our adult day ticket prices.'
                                                     ),
-                                                    choice_1=DiscountingRule(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                         id='jsp:child@rate',
                                                         version='any',
                                                         discount_as_percentage=Decimal('0.34'),
                                                         can_be_cumulative=True
                                                     ),
-                                                    choice_2=UserProfileRef(
+                                                    choice=UserProfileRef(
                                                         version='any',
                                                         ref='atc:child'
                                                     )
@@ -20013,7 +20013,7 @@ obj = PublicationDelivery(
                                                                     ref='eura:can_purchase_where'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         FareScheduledStopPointRef(
                                                                             value='Must be origin or destination',
                                                                             ref='netex:ORIGINorDESTINATION',
@@ -20082,7 +20082,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -20117,7 +20117,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
-                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                    time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1week'
                                                     )
@@ -20155,7 +20155,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
-                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                    time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1month'
                                                     )
@@ -20193,7 +20193,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
-                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                    time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@3month'
                                                     )
@@ -20231,7 +20231,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
-                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                    time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                     )
@@ -20346,7 +20346,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@Season'
                                                     ),
@@ -20362,7 +20362,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:smart_card'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@Season'
                                                     ),
@@ -20491,7 +20491,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         SiteFrame(
                             id='atc:ATOC@Common_Site',
                             version='any',
@@ -20528,7 +20528,7 @@ obj = PublicationDelivery(
                                     value='UK Rail Network'
                                 ),
                                 transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     value='ATOC',
                                     version='any',
                                     ref='uic:1170'
@@ -21603,7 +21603,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
                                                         ref=IanaCountryTldEnumeration.UK,
@@ -22248,7 +22248,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='P2P  based fares for  UK'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -22265,7 +22265,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='A single O/D pair from the following'
                                                     ),
-                                                    choice_1=GroupOfDistanceMatrixElementsRef(
+                                                    choice=GroupOfDistanceMatrixElementsRef(
                                                         version='01',
                                                         ref='atc:ATOC@ODs@any_to_any'
                                                     )
@@ -22349,7 +22349,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='P2P  based fare structure elements for  UK, Greater Anglia'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -22881,7 +22881,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='London Transfers '
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -23051,7 +23051,7 @@ obj = PublicationDelivery(
                                 value='UK Specific  Calendar'
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                choice=[
+                                validity_condition_ref_or_validity_condition=[
                                     AvailabilityCondition(
                                         id='atc:not_working_day',
                                         version='01',
@@ -23060,7 +23060,7 @@ obj = PublicationDelivery(
                                         ),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
                                                     version='any',
                                                     ref='atc:weekend'
@@ -23077,7 +23077,7 @@ obj = PublicationDelivery(
                                         version='01',
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
                                                     version='any',
                                                     ref='atc:working_day'
@@ -23090,7 +23090,7 @@ obj = PublicationDelivery(
                                         version='01',
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
                                                     version='any',
                                                     ref='atc:everyday'
@@ -23101,7 +23101,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     FareDayType(
                                         id='atc:everyday',
                                         version='any',
@@ -23480,7 +23480,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 1, 1),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23493,7 +23493,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 1, 2),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Scotland'
                                         )
@@ -23506,7 +23506,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 3, 1),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Wales'
                                         )
@@ -23519,7 +23519,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 3, 19),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Northern_Ireland'
                                         )
@@ -23532,7 +23532,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 3, 30),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23545,7 +23545,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 4, 2),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_not_Scotland'
                                         )
@@ -23558,7 +23558,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 5, 7),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23571,7 +23571,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 5, 28),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23584,7 +23584,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 7, 12),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Northern_Ireland'
                                         )
@@ -23597,7 +23597,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 8, 6),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Scotland'
                                         )
@@ -23610,7 +23610,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 8, 27),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_not_Scotland'
                                         )
@@ -23623,7 +23623,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 11, 30),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Scotland'
                                         )
@@ -23636,7 +23636,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 12, 15),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23649,7 +23649,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 12, 26),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23662,7 +23662,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2019, 1, 1),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23678,7 +23678,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='atc:op@2018_w1_d'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:working_day'
                                         )
@@ -23694,7 +23694,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='atc:op@2018_w1_we'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:weekend'
                                         )
@@ -23710,7 +23710,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='atc:op@2018_w2_d'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:working_day'
                                         )
@@ -23726,7 +23726,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='atc:op@2018_w2_we'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:weekend'
                                         )
@@ -23742,7 +23742,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='atc:op@2018_w3_d'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:working_day'
                                         )
@@ -23758,7 +23758,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='atc:op@2018_w3_we'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:weekend'
                                         )
@@ -23774,7 +23774,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='atc:op@2018_w4_d'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:working_day'
                                         )
@@ -23790,7 +23790,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='atc:op@2018_w4_we'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:weekend'
                                         )
@@ -23806,7 +23806,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='atc:op@2018_w5_d'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:working_day'
                                         )
@@ -23822,7 +23822,7 @@ obj = PublicationDelivery(
                                             version='01',
                                             ref='atc:op@2018_w5_we'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                        day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:weekend'
                                         )
@@ -23931,7 +23931,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='atc:Types_of_ProductCategory_class',
                                         version='any',
@@ -23939,7 +23939,7 @@ obj = PublicationDelivery(
                                             value='Fare Table Types'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfProductCategory(
                                                     id='atc:no_high_speed',
                                                     version='any',
@@ -23972,7 +23972,7 @@ obj = PublicationDelivery(
                                             value='Fare Table Types'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFacility(
                                                     id='atc:first_class_lounge',
                                                     version='any',
@@ -23998,7 +23998,7 @@ obj = PublicationDelivery(
                                             value='Types of named service'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfService(
                                                     id='atc:Night_Riviera',
                                                     version='any',
@@ -24024,7 +24024,7 @@ obj = PublicationDelivery(
                                             value='Types of Fare Contract'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareContract(
                                                     id='atc:contract@pass@season',
                                                     version='any',
@@ -24053,7 +24053,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='atc:NR',
                                         version='any',
@@ -24107,7 +24107,7 @@ obj = PublicationDelivery(
                                         country_ref=CountryRef(
                                             ref=IanaCountryTldEnumeration.UK
                                         ),
-                                        postal_address_or_road_address_or_address=PostalAddressVersionStructure(
+                                        address=PostalAddressVersionStructure(
                                             house_number='18-20',
                                             street=MultilingualString(
                                                 value="St Andrew's Street"
@@ -24146,7 +24146,7 @@ obj = PublicationDelivery(
                                             ref=IanaCountryTldEnumeration.UK,
                                             ref_principality='GB-ENG'
                                         ),
-                                        postal_address_or_road_address_or_address=PostalAddressVersionStructure(
+                                        address=PostalAddressVersionStructure(
                                             house_number='14',
                                             building_name=MultilingualString(
                                                 value='4th Floor'
@@ -24185,7 +24185,7 @@ obj = PublicationDelivery(
                                             OrganisationTypeEnumeration.RETAIL_CONSORTIUM,
                                         ],
                                         members=OrganisationRefsRelStructure(
-                                            choice=[
+                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=[
                                                 OperatorRef(
                                                     value='Alliance Rail',
                                                     ref='atc:AR'
@@ -24381,7 +24381,7 @@ obj = PublicationDelivery(
                                         id='atc:operatorGroup:Tfl',
                                         version='01',
                                         members=TransportOrganisationRefsRelStructure(
-                                            authority_ref_or_operator_ref=[
+                                            transport_organisation_ref=[
                                                 OperatorRef(
                                                     value='London Overground',
                                                     ref='atc:LO'
@@ -24409,7 +24409,7 @@ obj = PublicationDelivery(
                                             ),
                                         ],
                                         members=TransportOrganisationRefsRelStructure(
-                                            authority_ref_or_operator_ref=[
+                                            transport_organisation_ref=[
                                                 OperatorRef(
                                                     value='Arriva Trains Wales',
                                                     ref='atc:AW'
@@ -24498,7 +24498,7 @@ obj = PublicationDelivery(
                                         id='atc:operatorGroup:mobile_app',
                                         version='01',
                                         members=TransportOrganisationRefsRelStructure(
-                                            authority_ref_or_operator_ref=[
+                                            transport_organisation_ref=[
                                                 OperatorRef(
                                                     value='Alliance Rail',
                                                     ref='atc:AR'
@@ -24651,7 +24651,7 @@ obj = PublicationDelivery(
                                         id='atc:operatorGroup:buy_onboard',
                                         version='01',
                                         members=TransportOrganisationRefsRelStructure(
-                                            authority_ref_or_operator_ref=[
+                                            transport_organisation_ref=[
                                                 OperatorRef(
                                                     value='Greater Anglia',
                                                     version='any',
@@ -24685,7 +24685,7 @@ obj = PublicationDelivery(
                     default_currency='GBP'
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         SalesTransactionFrame(
                             id='abga-t::LE@Operator_Specific_Sample_Transactions',
                             validity_conditions_or_valid_between=[
@@ -24763,12 +24763,12 @@ obj = PublicationDelivery(
                                                     amount=Decimal('12.50'),
                                                     payment_method=PaymentMethodEnumeration.CASH,
                                                     travel_specifications=TravelSpecificationsRelStructure(
-                                                        choice=[
+                                                        travel_specification_ref_or_travel_specification=[
                                                             OfferedTravelSpecification(
                                                                 id='abga-t:Anon001@trans001@purchase_ticket',
                                                                 version='any',
                                                                 date=XmlDateTime(2018, 7, 8, 1, 7, 0),
-                                                                choice_1=SalesOfferPackagePriceRef(
+                                                                fare_price_ref_or_cell_ref=SalesOfferPackagePriceRef(
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station'
                                                                 ),
@@ -24784,7 +24784,7 @@ obj = PublicationDelivery(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Trip@COMPOSITION@single'
                                                                             ),
-                                                                            choice=PreassignedFareProductRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Trip@Standard@single@generic'
                                                                             ),
@@ -24837,7 +24837,7 @@ obj = PublicationDelivery(
                                                                 id='abga-t:Anon001@trans001@plusbus_addon',
                                                                 version='any',
                                                                 date=XmlDateTime(2018, 7, 8, 1, 7, 0),
-                                                                choice_1=SalesOfferPackagePriceRef(
+                                                                fare_price_ref_or_cell_ref=SalesOfferPackagePriceRef(
                                                                     ref='jsp:JSP@Products@Pass@Prices@1day@IPS@adult@in_station',
                                                                     version_ref='TODO'
                                                                 ),
@@ -24853,7 +24853,7 @@ obj = PublicationDelivery(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Products@Pass@PlusBus@zone_pass@1day'
                                                                             ),
-                                                                            choice=PreassignedFareProductRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                                             ),
@@ -24876,7 +24876,7 @@ obj = PublicationDelivery(
                                                                                         ref='nptg:PlusBus_zone:IPSWICH'
                                                                                     ),
                                                                                 ],
-                                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                                scheduled_stop_point_ref=[
                                                                                     FareScheduledStopPointRef(
                                                                                         version='01',
                                                                                         ref='atc:Station:IPS'
@@ -24895,11 +24895,11 @@ obj = PublicationDelivery(
                                                                                     ),
                                                                                 ]
                                                                             ),
-                                                                            time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                            time_structure_factor_ref=TimeIntervalRef(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@Pass@PlusBus@day_pass@1day'
                                                                             ),
-                                                                            fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                            quality_structure_factor_ref=FareDemandFactorRef(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@anytime'
                                                                             )
@@ -24960,7 +24960,7 @@ obj = PublicationDelivery(
                                                     amount=Decimal('1000.50'),
                                                     payment_method=PaymentMethodEnumeration.CREDIT_CARD,
                                                     travel_specifications=TravelSpecificationsRelStructure(
-                                                        choice=[
+                                                        travel_specification_ref_or_travel_specification=[
                                                             OfferedTravelSpecification(
                                                                 id='abga-t:34567@trans008@purchase_pass',
                                                                 version='any',
@@ -24981,7 +24981,7 @@ obj = PublicationDelivery(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Pass@Season@repeated_trip_p2p'
                                                                             ),
-                                                                            choice=PreassignedFareProductRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Pass@Season'
                                                                             ),
@@ -25030,7 +25030,7 @@ obj = PublicationDelivery(
                                                                                     ),
                                                                                 ]
                                                                             ),
-                                                                            time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                            time_structure_factor_ref=TimeIntervalRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                                             )
@@ -25084,7 +25084,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ResourceFrame(
                             id='eura:EURA@Common_Resources',
                             version='any',
@@ -25197,7 +25197,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     TypeOfFrame(
                                         id='eura:Fare',
                                         version='any',
@@ -25212,7 +25212,7 @@ obj = PublicationDelivery(
                                             value='Types of Product Category'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfProductCategory(
                                                     id='eura:tgv',
                                                     version='any',
@@ -25259,7 +25259,7 @@ obj = PublicationDelivery(
                                             value='Charging Moments'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 ChargingMoment(
                                                     id='eura:prepaid',
                                                     version='any',
@@ -25313,7 +25313,7 @@ obj = PublicationDelivery(
                                             value='Types Of Fare Product  - Classify as  single of multi operator'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareProduct(
                                                     id='eura:standard_product@single_toc',
                                                     version='any',
@@ -25360,7 +25360,7 @@ obj = PublicationDelivery(
                                             value='Fare Table Types'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 PurposeOfGrouping(
                                                     id='eura:distance',
                                                     version='any',
@@ -25393,7 +25393,7 @@ obj = PublicationDelivery(
                                             value='Classes of Use'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 ClassOfUse(
                                                     id='eura:first',
                                                     version='any',
@@ -25419,7 +25419,7 @@ obj = PublicationDelivery(
                                             value='Types of fare contract entry'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareContractEntry(
                                                     id='eura:product_purchase',
                                                     version='any',
@@ -25445,7 +25445,7 @@ obj = PublicationDelivery(
                                             value='Types of concession'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfConcession(
                                                     id='eura:adult',
                                                     version='any',
@@ -25527,7 +25527,7 @@ obj = PublicationDelivery(
                                             value='Types of Tariff'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfTariff(
                                                     id='eura:Distance_kilometers',
                                                     version='any',
@@ -25581,7 +25581,7 @@ obj = PublicationDelivery(
                                             value='Types of  Access right Assignment'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfAccessRightAssignment(
                                                     id='eura:eligible',
                                                     version='any',
@@ -25729,7 +25729,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     GeneralOrganisation(
                                         id='eura:EURA',
                                         version='any',

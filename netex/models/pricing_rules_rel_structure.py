@@ -14,7 +14,7 @@ class PricingRulesRelStructure(FrameContainmentStructure):
     class Meta:
         name = "pricingRules_RelStructure"
 
-    choice: List[
+    pricing_rule: List[
         Union[
             LimitingRuleInContext, LimitingRule, DiscountingRule, PricingRule
         ]

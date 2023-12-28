@@ -21,9 +21,7 @@ class SecurityListingVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    whitelist_ref_or_blacklist_ref: Optional[
-        Union[WhitelistRef, BlacklistRef]
-    ] = field(
+    security_list_ref: Optional[Union[WhitelistRef, BlacklistRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

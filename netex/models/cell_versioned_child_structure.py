@@ -223,7 +223,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    fare_price_ref_or_fare_price: Optional[
         Union[
             FarePriceVersionedChildStructure,
             CustomerPurchasePackagePriceRef,
@@ -456,7 +456,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    choice_1: List[
+    choice: List[
         Union[
             CustomerPurchasePackageElementRef,
             CustomerPurchasePackageRef,
@@ -867,9 +867,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    network_ref_or_group_of_lines_ref: Optional[
-        Union[NetworkRef, GroupOfLinesRef]
-    ] = field(
+    group_of_lines_ref: Optional[Union[NetworkRef, GroupOfLinesRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -887,9 +885,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    flexible_line_ref_or_line_ref: Optional[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -907,7 +903,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    choice_2: Optional[
+    site_ref: Optional[
         Union[
             StopPlaceRef,
             ParkingRef,
@@ -980,7 +976,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref: Optional[
+    facility_set_ref: Optional[
         Union[ServiceFacilitySetRef, SiteFacilitySetRef, FacilitySetRef]
     ] = field(
         default=None,
@@ -1021,7 +1017,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_3: Optional[
+    service_journey_ref: Optional[
         Union[
             TemplateServiceJourneyRef,
             ServiceJourneyRef,
@@ -1108,7 +1104,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    standard_fare_table_ref_or_fare_table_ref: Optional[
+    fare_table_ref: Optional[
         Union[StandardFareTableRef, FareTableRef]
     ] = field(
         default=None,
@@ -1204,7 +1200,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cells_RelStructure"
 
-    choice: List[
+    fare_price_or_fare_price_ref: List[
         Union[
             Cell,
             CellVersionedChildStructure,
@@ -1450,7 +1446,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "farePrices_RelStructure"
 
-    choice: List[
+    fare_price_ref_or_cell_ref_or_fare_price: List[
         Union[
             CustomerPurchasePackagePriceRef,
             ParkingPriceRef,
@@ -1732,7 +1728,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: Optional[
         Union[
             RetailConsortiumRef,
             AuthorityRef,
@@ -1900,7 +1896,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    fare_price_ref: Optional[
         Union[
             CustomerPurchasePackagePriceRef,
             ParkingPriceRef,
@@ -2044,7 +2040,7 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareTables_RelStructure"
 
-    choice: List[
+    fare_table_ref_or_fare_table: List[
         Union[
             StandardFareTableRef,
             FareTableRef,
@@ -2092,9 +2088,7 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "priceGroups_RelStructure"
 
-    price_group_ref_or_price_group: List[
-        Union[PriceGroupRef, PriceGroup]
-    ] = field(
+    price_group: List[Union[PriceGroupRef, PriceGroup]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -2175,7 +2169,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref: Optional[
+    discounting_rule_ref_or_pricing_rule_ref: Optional[
         Union[LimitingRuleRef, DiscountingRuleRef, PricingRuleRef]
     ] = field(
         default=None,
@@ -2256,9 +2250,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
     class Meta:
         name = "TimeStructureFactor_VersionStructure"
 
-    parking_tariff_ref_or_tariff_ref: Optional[
-        Union[ParkingTariffRef, TariffRef]
-    ] = field(
+    tariff_ref: Optional[Union[ParkingTariffRef, TariffRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -2292,7 +2284,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref: Optional[
+    quality_structure_factor_ref: Optional[
         Union[
             FareQuotaFactorRef, FareDemandFactorRef, QualityStructureFactorRef
         ]
@@ -2342,7 +2334,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[
+    vehicle_type_ref: Optional[
         Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
     ] = field(
         default=None,

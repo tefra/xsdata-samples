@@ -173,7 +173,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    choice_1: Optional[
+    section_ref_or_general_section_ref: Optional[
         Union[
             ParentCommonSectionRef,
             CommonSectionRef,

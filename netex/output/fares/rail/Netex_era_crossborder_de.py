@@ -234,7 +234,7 @@ obj = PublicationDelivery(
         value='Example of Cross border tariffs from multiple operators De'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='tlx:Trilex',
                 validity_conditions_or_valid_between=[
@@ -262,7 +262,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         FareFrame(
                             id='tlx:Trilex@Tariffs',
                             version='01',
@@ -409,7 +409,7 @@ obj = PublicationDelivery(
                                                         value='Rybniste to Liberec'
                                                     ),
                                                     points_on_section=PointsOnSectionRelStructure(
-                                                        point_on_line_section_or_point_on_section=[
+                                                        point_on_section=[
                                                             PointOnSection(
                                                                 id='tlx:Rybniste-to-Liberec',
                                                                 version='01',
@@ -460,7 +460,7 @@ obj = PublicationDelivery(
                                                         value='Seifhennersdorf to Liberec'
                                                     ),
                                                     points_on_section=PointsOnSectionRelStructure(
-                                                        point_on_line_section_or_point_on_section=[
+                                                        point_on_section=[
                                                             PointOnSection(
                                                                 id='tlx:Seifhennersdorf-to-Liberec',
                                                                 version='01',
@@ -517,7 +517,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Flat fares   based fares for  Tagesticket'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='db:TLX'
                                         ),
@@ -602,7 +602,7 @@ obj = PublicationDelivery(
                                                                             UsageParameterPrice(
                                                                                 id='tlx:Trilex@Tariff@Tagesticket@group',
                                                                                 version='any',
-                                                                                choice_1=DiscountingRule(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                     id='tlx:Trilex@Tariff@Tagesticket@group@rate',
                                                                                     version='any',
                                                                                     can_be_cumulative=False
@@ -617,7 +617,7 @@ obj = PublicationDelivery(
                                                                             CompanionProfile(
                                                                                 id='tlx:Trilex@Tariff@Tagesticket@adult',
                                                                                 version='any',
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:adult'
                                                                                 ),
@@ -631,7 +631,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value='Children up to the age of five are free of charge.'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -645,7 +645,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value='Accompanied dogs liable for pay are counted as persons in the determination of the number of persons. Further reductions can not be granted.'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:small_animal'
                                                                                 ),
@@ -707,7 +707,7 @@ obj = PublicationDelivery(
                                                                         ref='eura:can_access_when'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                                                        day_type_ref=DayTypeRef(
                                                                             version='any',
                                                                             ref='tlx:working_day@off_peak'
                                                                         )
@@ -722,7 +722,7 @@ obj = PublicationDelivery(
                                                                         ref='eura:can_access_when'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                                                        day_type_ref=DayTypeRef(
                                                                             version='any',
                                                                             ref='tlx:not_working_day'
                                                                         )
@@ -945,7 +945,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tlx:Trilex@Tariff@Tagesticket',
                                                     validity_conditions_or_valid_between=[
@@ -972,24 +972,24 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tlx:Trilex@Tariff@Tagesticket@group@1',
                                                                 version='01',
-                                                                choice=UsageParameterPrice(
+                                                                fare_price_ref_or_fare_price=UsageParameterPrice(
                                                                     id='tlx:Trilex@Tariff@Tagesticket@1',
                                                                     version='01',
                                                                     amount=Decimal('21.00'),
                                                                     currency='EUR',
                                                                     units=Decimal('1'),
-                                                                    choice_1=LimitingRule(
+                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRule(
                                                                         id='tlx:Trilex@Tariff@Tagesticket@price_per_person',
                                                                         version='01',
                                                                         minimum_price=Decimal('7'),
                                                                         minimum_limit_price=Decimal('21')
                                                                     ),
                                                                     can_be_cumulative=False,
-                                                                    choice_2=GroupTicketRef(
+                                                                    choice=GroupTicketRef(
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
@@ -999,7 +999,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tlx:Trilex@Tariff@Tagesticket@group@2',
                                                                 version='01',
-                                                                choice=UsageParameterPrice(
+                                                                fare_price_ref_or_fare_price=UsageParameterPrice(
                                                                     id='tlx:Trilex@Tariff@Tagesticket@2',
                                                                     version='01',
                                                                     amount=Decimal('28.00'),
@@ -1008,13 +1008,13 @@ obj = PublicationDelivery(
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=UsageParameterPriceRef(
+                                                                                fare_price_ref=UsageParameterPriceRef(
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
                                                                                 adjustment_amount=Decimal('7.00'),
                                                                                 adjustment_units=Decimal('2'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
@@ -1024,7 +1024,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     can_be_cumulative=False,
-                                                                    choice_2=GroupTicketRef(
+                                                                    choice=GroupTicketRef(
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
@@ -1034,7 +1034,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tlx:Trilex@Tariff@Tagesticket@group@3',
                                                                 version='01',
-                                                                choice=UsageParameterPrice(
+                                                                fare_price_ref_or_fare_price=UsageParameterPrice(
                                                                     id='tlx:Trilex@Tariff@Tagesticket@3',
                                                                     version='01',
                                                                     amount=Decimal('28.00'),
@@ -1043,13 +1043,13 @@ obj = PublicationDelivery(
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=UsageParameterPriceRef(
+                                                                                fare_price_ref=UsageParameterPriceRef(
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
                                                                                 adjustment_amount=Decimal('7.00'),
                                                                                 adjustment_units=Decimal('3'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
@@ -1059,7 +1059,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     can_be_cumulative=False,
-                                                                    choice_2=GroupTicketRef(
+                                                                    choice=GroupTicketRef(
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
@@ -1069,7 +1069,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tlx:Trilex@Tariff@Tagesticket@group@4',
                                                                 version='01',
-                                                                choice=UsageParameterPrice(
+                                                                fare_price_ref_or_fare_price=UsageParameterPrice(
                                                                     id='tlx:Trilex@Tariff@Tagesticket@4',
                                                                     version='01',
                                                                     amount=Decimal('35.00'),
@@ -1078,13 +1078,13 @@ obj = PublicationDelivery(
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=UsageParameterPriceRef(
+                                                                                fare_price_ref=UsageParameterPriceRef(
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
                                                                                 adjustment_amount=Decimal('7.00'),
                                                                                 adjustment_units=Decimal('4'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
@@ -1094,7 +1094,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     can_be_cumulative=False,
-                                                                    choice_2=GroupTicketRef(
+                                                                    choice=GroupTicketRef(
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
@@ -1104,7 +1104,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tlx:Trilex@Tariff@Tagesticket@group@5',
                                                                 version='01',
-                                                                choice=UsageParameterPrice(
+                                                                fare_price_ref_or_fare_price=UsageParameterPrice(
                                                                     id='tlx:Trilex@Tariff@Tagesticket@5',
                                                                     version='01',
                                                                     amount=Decimal('49.00'),
@@ -1113,13 +1113,13 @@ obj = PublicationDelivery(
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
-                                                                                choice=UsageParameterPriceRef(
+                                                                                fare_price_ref=UsageParameterPriceRef(
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
                                                                                 adjustment_amount=Decimal('7.00'),
                                                                                 adjustment_units=Decimal('5'),
-                                                                                limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
@@ -1129,7 +1129,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     can_be_cumulative=False,
-                                                                    choice_2=GroupTicketRef(
+                                                                    choice=GroupTicketRef(
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
@@ -1148,7 +1148,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Flat fare  based fares for  internal germany routes'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='db:TLX'
                                         ),
@@ -1214,7 +1214,7 @@ obj = PublicationDelivery(
                                                                             UsageParameterPrice(
                                                                                 id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@group',
                                                                                 version='any',
-                                                                                choice_1=DiscountingRule(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                     id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@group@rate',
                                                                                     version='any',
                                                                                     can_be_cumulative=False
@@ -1229,7 +1229,7 @@ obj = PublicationDelivery(
                                                                             CompanionProfile(
                                                                                 id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@adult',
                                                                                 version='any',
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:adult'
                                                                                 ),
@@ -1243,7 +1243,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value='Children up to the age of five are free of charge.'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -1373,7 +1373,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         price_groups=PriceGroupsRelStructure(
-                                            price_group_ref_or_price_group=[
+                                            price_group=[
                                                 PriceGroup(
                                                     id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial',
                                                     validity_conditions_or_valid_between=[
@@ -1392,7 +1392,7 @@ obj = PublicationDelivery(
                                                         ),
                                                     ],
                                                     members=FarePricesRelStructure(
-                                                        choice=[
+                                                        fare_price_ref_or_cell_ref_or_fare_price=[
                                                             SalesOfferPackagePrice(
                                                                 id='tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@1',
                                                                 version='01',
@@ -1445,7 +1445,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Flat fare  Dresden Bautzen'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='db:TLX'
                                         ),
@@ -1505,7 +1505,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value=' Children up to the age of five are free of charge.  '
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:infant'
                                                                                 ),
@@ -1521,7 +1521,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value='A short jump ticket can be used by one person with up to 3 children aged 6-14 years.  Further reductions can not be granted.'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -1538,7 +1538,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value=' Living pets, small (up to the size of a domestic cat), non-hazardous and housed in containers such as carry-on luggage, can be taken for free. The transport containers must be such as to preclude any damage to persons or property. The entrainment may not take place on passenger seats. \nGuide dogs and handicapped dogs are excluded from the muzzle force. These dogs are transported free of charge according to  Section8 paragraph 2 of the tariff regulations (TBL 200).\nDogs that are not housed or can not be accommodated in containers such as carry-on luggage can be carried on the condition that they are leashed and equipped with a suitable muzzle. The entrainment may not take place on passenger seats. For these dogs tickets are to be solved according to the tariff regulations  Section 8 (TBL 200) .\n\nAll other animals and animals with infectious diseases are excluded from carriage.'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:small_animal'
                                                                                 ),
@@ -1674,7 +1674,7 @@ obj = PublicationDelivery(
                                                                             CompanionProfile(
                                                                                 id='tlx:Trilex@Tariff@Katzensprungticket@adult',
                                                                                 version='any',
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:adult'
                                                                                 ),
@@ -1687,7 +1687,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value='Three free children.'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -1784,7 +1784,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tlx:Trilex@Tariff@Katzensprungticket',
                                                     validity_conditions_or_valid_between=[
@@ -1806,18 +1806,18 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Bischofswerda',
                                                                 version='01',
-                                                                choice=SalesOfferPackagePrice(
+                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                     id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Bischofswerda',
                                                                     version='01',
                                                                     amount=Decimal('10.00'),
                                                                     currency='EUR',
                                                                     can_be_cumulative=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     FareStructureElementRef(
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bischofswerda'
@@ -1828,14 +1828,14 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tlx:Trilex@Pass@Katzensprungticket@Dresden-to-Bautzen',
                                                                 version='01',
-                                                                choice=SalesOfferPackagePrice(
+                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                     id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Bautzen',
                                                                     version='01',
                                                                     amount=Decimal('15.00'),
                                                                     currency='EUR',
                                                                     can_be_cumulative=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     FareStructureElementRef(
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bautzen'
@@ -1846,14 +1846,14 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Wilthen',
                                                                 version='01',
-                                                                choice=SalesOfferPackagePrice(
+                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
                                                                     id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Wilthen',
                                                                     version='01',
                                                                     amount=Decimal('15.00'),
                                                                     currency='EUR',
                                                                     can_be_cumulative=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     FareStructureElementRef(
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Wilthen'
@@ -1873,7 +1873,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='L7 tariff'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='db:TLX'
                                         ),
@@ -1933,7 +1933,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value=' Children up to the age of five are free of charge.  '
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:infant'
                                                                                 ),
@@ -1949,7 +1949,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value='A short jump ticket can be used by one person with up to 3 children aged 6-14 years.  Further reductions can not be granted.'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -1966,7 +1966,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value=' Living pets, small (up to the size of a domestic cat), non-hazardous and housed in containers such as carry-on luggage, can be taken for free. The transport containers must be such as to preclude any damage to persons or property. The entrainment may not take place on passenger seats. \nGuide dogs and handicapped dogs are excluded from the muzzle force. These dogs are transported free of charge according to  Section8 paragraph 2 of the tariff regulations (TBL 200).\nDogs that are not housed or can not be accommodated in containers such as carry-on luggage can be carried on the condition that they are leashed and equipped with a suitable muzzle. The entrainment may not take place on passenger seats. For these dogs tickets are to be solved according to the tariff regulations  Section 8 (TBL 200) .\n\nAll other animals and animals with infectious diseases are excluded from carriage.'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:small_animal'
                                                                                 ),
@@ -2023,7 +2023,7 @@ obj = PublicationDelivery(
                                                                             CompanionProfile(
                                                                                 id='tlx:Trilex@Tariff@L7@adult',
                                                                                 version='any',
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:adult'
                                                                                 ),
@@ -2036,7 +2036,7 @@ obj = PublicationDelivery(
                                                                                 description=MultilingualString(
                                                                                     value='Three free children.'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -2103,7 +2103,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tlx:Trilex@Tariff@L7',
                                                     validity_conditions_or_valid_between=[
@@ -2125,7 +2125,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     includes=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTable(
                                                                 id='tlx:Trilex@Tariff@L7@adult',
                                                                 version='01',
@@ -2141,7 +2141,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 includes=FareTablesRelStructure(
-                                                                    choice=[
+                                                                    fare_table_ref_or_fare_table=[
                                                                         FareTable(
                                                                             id='tlx:Trilex@Tariff@L7@adult@Seifhennersdorf',
                                                                             version='01',
@@ -2149,18 +2149,18 @@ obj = PublicationDelivery(
                                                                                 value='Seifhennersdorf  '
                                                                             ),
                                                                             cells=CellsRelStructure(
-                                                                                choice=[
+                                                                                fare_price_or_fare_price_ref=[
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Tariff@L7@adult@Seifhennersdorf-to-Liberec',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@adult@6121-to-54212',
                                                                                             version='01',
                                                                                             amount=Decimal('2.80'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-54212'
@@ -2171,14 +2171,14 @@ obj = PublicationDelivery(
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Pass@L7@adult@Seifhennersdorf-to-Zittau',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@adult@6121-to-6113',
                                                                                             version='01',
                                                                                             amount=Decimal('1.60'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-6113'
@@ -2189,14 +2189,14 @@ obj = PublicationDelivery(
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Pass@L7@adult@Seifhennersdorf-to-Varnsdorf',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@adult@6121-to-96045',
                                                                                             version='01',
                                                                                             amount=Decimal('0.90'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-96045'
@@ -2214,18 +2214,18 @@ obj = PublicationDelivery(
                                                                                 value='Rybniste '
                                                                             ),
                                                                             cells=CellsRelStructure(
-                                                                                choice=[
+                                                                                fare_price_or_fare_price_ref=[
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Tariff@L7@adult@Rybniste-to-Liberec',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@adult@56719-to-54212',
                                                                                             version='01',
                                                                                             amount=Decimal('2.80'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-54212'
@@ -2236,14 +2236,14 @@ obj = PublicationDelivery(
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Pass@L7@adult@Rybniste-to-Zittau',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@adult@56719-to-6113',
                                                                                             version='01',
                                                                                             amount=Decimal('1.60'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-6113'
@@ -2254,14 +2254,14 @@ obj = PublicationDelivery(
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Pass@L7@adult@Rybniste-to-Varnsdorf',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@adult@56719-to-96045',
                                                                                             version='01',
                                                                                             amount=Decimal('0.90'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-96045'
@@ -2279,18 +2279,18 @@ obj = PublicationDelivery(
                                                                                 value='Varnsdorf '
                                                                             ),
                                                                             cells=CellsRelStructure(
-                                                                                choice=[
+                                                                                fare_price_or_fare_price_ref=[
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Tariff@L7@adult@Varnsdorf-to-Liberec',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@adult@6045-to-54212',
                                                                                             version='01',
                                                                                             amount=Decimal('2.20'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:96045-to-54212'
@@ -2301,14 +2301,14 @@ obj = PublicationDelivery(
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Pass@L7@adult@Varnsdorf-to-Zittau',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@adult@6045-to-6113',
                                                                                             version='01',
                                                                                             amount=Decimal('1.50'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:96045-to-6113'
@@ -2326,18 +2326,18 @@ obj = PublicationDelivery(
                                                                                 value='Zittau '
                                                                             ),
                                                                             cells=CellsRelStructure(
-                                                                                choice=[
+                                                                                fare_price_or_fare_price_ref=[
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Tariff@L7@adult@Zittau-to-Liberec',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@adult@6113-to-54212',
                                                                                             version='01',
                                                                                             amount=Decimal('1.60'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:6113-to-54212'
@@ -2366,7 +2366,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 includes=FareTablesRelStructure(
-                                                                    choice=[
+                                                                    fare_table_ref_or_fare_table=[
                                                                         FareTable(
                                                                             id='tlx:Trilex@Tariff@L7@child@Seifhennersdorf',
                                                                             version='01',
@@ -2374,18 +2374,18 @@ obj = PublicationDelivery(
                                                                                 value='Seifhennersdorf  '
                                                                             ),
                                                                             cells=CellsRelStructure(
-                                                                                choice=[
+                                                                                fare_price_or_fare_price_ref=[
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Tariff@L7@child@Seifhennersdorf-to-Liberec',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@child@6121-to-54212',
                                                                                             version='01',
                                                                                             amount=Decimal('1.40'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-54212'
@@ -2396,14 +2396,14 @@ obj = PublicationDelivery(
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Pass@L7@child@Seifhennersdorf-to-Zittau',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@child@6121-to-6113',
                                                                                             version='01',
                                                                                             amount=Decimal('0.80'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-6113'
@@ -2414,14 +2414,14 @@ obj = PublicationDelivery(
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Pass@L7@child@Seifhennersdorf-to-Varnsdorf',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@child@6121-to-96045',
                                                                                             version='01',
                                                                                             amount=Decimal('0.50'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-96045'
@@ -2439,18 +2439,18 @@ obj = PublicationDelivery(
                                                                                 value='Rybniste '
                                                                             ),
                                                                             cells=CellsRelStructure(
-                                                                                choice=[
+                                                                                fare_price_or_fare_price_ref=[
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Tariff@L7@child@Rybniste-to-Liberec',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@child@56719-to-54212',
                                                                                             version='01',
                                                                                             amount=Decimal('1.40'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-54212'
@@ -2461,14 +2461,14 @@ obj = PublicationDelivery(
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Pass@L7@child@Rybniste-to-Zittau',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@child@56719-to-6113',
                                                                                             version='01',
                                                                                             amount=Decimal('0.80'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-6113'
@@ -2479,14 +2479,14 @@ obj = PublicationDelivery(
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Pass@L7@child@Rybniste-to-Varnsdorf',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@child@56719-to-96045',
                                                                                             version='01',
                                                                                             amount=Decimal('0.50'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-96045'
@@ -2504,18 +2504,18 @@ obj = PublicationDelivery(
                                                                                 value='Varnsdorf '
                                                                             ),
                                                                             cells=CellsRelStructure(
-                                                                                choice=[
+                                                                                fare_price_or_fare_price_ref=[
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Tariff@L7@child@Varnsdorf-to-Liberec',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@child@6045-to-54212',
                                                                                             version='01',
                                                                                             amount=Decimal('1.10'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:96045-to-54212'
@@ -2526,14 +2526,14 @@ obj = PublicationDelivery(
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Pass@L7@child@Varnsdorf-to-Zittau',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@child@6045-to-6113',
                                                                                             version='01',
                                                                                             amount=Decimal('0.80'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:96045-to-6113'
@@ -2551,18 +2551,18 @@ obj = PublicationDelivery(
                                                                                 value='Zittau '
                                                                             ),
                                                                             cells=CellsRelStructure(
-                                                                                choice=[
+                                                                                fare_price_or_fare_price_ref=[
                                                                                     Cell(
                                                                                         id='tlx:Trilex@Tariff@L7@child@Zittau-to-Liberec',
                                                                                         version='01',
-                                                                                        choice=DistanceMatrixElementPrice(
+                                                                                        fare_price_ref_or_fare_price=DistanceMatrixElementPrice(
                                                                                             id='tlx:Trilex@Tariff@L7@child@6113-to-54212',
                                                                                             version='01',
                                                                                             amount=Decimal('0.80'),
                                                                                             currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
-                                                                                        choice_1=[
+                                                                                        choice=[
                                                                                             DistanceMatrixElementRef(
                                                                                                 version='01',
                                                                                                 ref='dbn:6113-to-54212'
@@ -2613,7 +2613,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
-                                            controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref=[
+                                            fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
                                                     version='01',
                                                     ref='tlx:Trilex@Product@Pass@Tagesticket@COMPOSITION@trips',
@@ -2649,7 +2649,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
-                                            controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref=[
+                                            fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
                                                     version='01',
                                                     ref='tlx:Trilex@Product@Pass@Tagesticket@COMPOSITION@trips',
@@ -2677,7 +2677,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg@access',
                                                     version='01',
@@ -2719,7 +2719,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg@access',
                                                     version='01',
@@ -2764,7 +2764,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tlx:Trilex@Product@Trip@single@rail_leg@access',
                                                     version='01',
@@ -2793,7 +2793,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='tlx:Trilex@Product@Pass@Tagesticket',
                                         version='01',
@@ -2809,7 +2809,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@single_toc'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='db:TLX'
                                         ),
@@ -2887,7 +2887,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@single_toc'
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='db:TLX'
                                         ),
@@ -3186,7 +3186,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Pass@Tagesticket'
                                                     ),
@@ -3258,7 +3258,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return'
                                                     ),
@@ -3324,7 +3324,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Pass@Katzensprungticket'
                                                     ),
@@ -3383,7 +3383,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Trip@single'
                                                     ),
@@ -3416,7 +3416,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     FareDayType(
                                         id='tlx::everyday',
                                         version='any',
@@ -3609,7 +3609,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='tlx:Trilex@Branding',
                                         version='any',
@@ -3617,7 +3617,7 @@ obj = PublicationDelivery(
                                             value='Branding'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 Branding(
                                                     id='tlx:Trilex@brand',
                                                     version='any',
@@ -3633,7 +3633,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='db:TLX',
                                         version='any',
@@ -3683,7 +3683,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         FareFrame(
                             id='vvo:VVO@Tariffs',
                             version='01',
@@ -3709,7 +3709,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value="On the section Dresden Hbf - Arnsdorf (Re1, RB60, RE2 and RB61)\nThe Verbundraum Oberelbe (VVO) around Dresden is divided into 21 tariff zones. The trilex trains pass through Tarizonen 10 (Dresden) and 31 (Radeberg) in the section Dresden Hbf - Arnsdorf. Tariff zones 10 and 31 are highlighted in color in the trilex network (yellow or light blue). Between Langebrück and Radeberg there is a border area.\n\nThe price level and validity period of the respective ticket result from the number of fare zones that are passed through. Within the validity range of the ticket, all city and regional buses, trams and commuter trains (S-Bahn, RB / RE etc.) as well as almost all ferries can be used.\n\nThe following tickets are offered in the VVO tariff (selection):\n\nSingle tickets\n\nSingle journeys *\n4-Card\nDay tickets\n\nDay passes for individuals\nFamily day passes\nBicycle Day Tickets\nnight ticket\nSmall group tickets\nElbe-Labe-Ticket\nSeason tickets\nweekly tickets\n\n(ABO) monthly passes\n9 o'clock (ABO) monthly passes\nannual passes\nBicycle monthly pass\n* Sections of the 4-card short-haul 1 are valid on the following sections (from / to):\n\nDresden central station - Dresden center\nDresden Mitte - Dresden central station or Dresden-Neustadt\nDresden-Neustadt - Dresden center\nDetails on tickets and fares in the VVO joint area.  s."
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='db:VVO'
                                         ),
@@ -3762,7 +3762,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='Frequent drivers who regularly travel between the Oberlausitz Lower Silesia (ZVON) and Verkehrsverbund Oberelbe (VVO) transport networks and use the Dresden - Bautzen - Görlitz / Zittau railway lines can use a common time ticket service. It can be purchased from any tariff point in the ZVON to each tariff zone in the VVO a continuous ticket. This allows you to use local buses and trams as well as the Elbe ferries included in the VVO tariff in both interconnected areas within the scope of the spatial validity of your season ticket.\nTobe offered:\n\nWeekly tickets (reduced and normal)\nMonthly passes (reduced and normal)\nSubscription monthly pass (reduced and normal)\nIn conjunction with a subscription-monthly or annual ticket to the ZVON-VVO transitional tariff, the fleXX ticket from or to Arnsdorf applies to the usual fare regulations of the ZVON.\nDriving privilege:\n\nThe respective take-off arrangements for time cards of the corresponding transport associations apply. \nSeason tickets at the regular fare, except week tickets, entitle to carry 5 persons on weekends and public holidays within the period from 6 pm on the day before until 6 am on the following day, of which a maximum of one person may be older than 14 years. \nThe ZVON bicycle day pass and monthly pass is valid in conjunction with the ZVON-VVO transition tariff from or to Arnsdorf. From Arnsdorf bike transport to VVO fare.'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='db:VVO'
                                         ),
@@ -3984,7 +3984,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='db:VVO',
                                         version='any',
@@ -4034,7 +4034,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         FareFrame(
                             id='zvo:ZVON@Tariffs',
                             version='01',
@@ -4060,7 +4060,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='On the lines RE1, RB60, RE2 and RB61  , only the ZVON tariff applies for journeys within the ZVON area. On line L7  you can choose to travel to the ZVON tariff or the trilex tariff. Travelers who change from and to other means of transport within the scope of the ZVON tariff are recommended to use the ZVON tariff. The sale of the tickets to the ZVON tariff takes place in the trilex trains at no extra charge.\n\nExample: If you are traveling with the trilex from Hainewalde to Zittau and transfer there to the city bus, then we recommend the ZVON tariff.'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='db:ZVON'
                                         ),
@@ -4094,7 +4094,7 @@ obj = PublicationDelivery(
                                                                     order=1,
                                                                     validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        flexible_line_ref_or_line_ref=[
+                                                                        line_ref=[
                                                                             LineRef(
                                                                                 version='01',
                                                                                 ref='db:RE1'
@@ -4197,14 +4197,14 @@ obj = PublicationDelivery(
                                     value='ZVON Rail Network'
                                 ),
                                 transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     value='DBN',
                                     version='any',
                                     ref='uic:0080'
                                 )
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='zvo:L7',
                                         version='01',
@@ -4312,7 +4312,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='db:ZVON',
                                         version='any',
@@ -4362,7 +4362,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         FareFrame(
                             id='db:DB@Tariffs',
                             version='01',
@@ -4388,7 +4388,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='P2P  based fares for  domestic germany routes'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='DBN',
                                             version='any',
                                             ref='uic:0080'
@@ -4516,7 +4516,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Up to 2 Infants  under 5 are free for each adult'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:infant'
                                                                                 ),
@@ -4529,7 +4529,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Small animals are free'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:small_animal'
                                                                                 ),
@@ -4564,7 +4564,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Infants must have paying adult with them. No seat'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='db:adult'
                                                                                 ),
@@ -4585,7 +4585,7 @@ obj = PublicationDelivery(
                                                                         value='Children aged 6 to 14 travel for free if accompanying their own parents or grandparents. When the adult is buying their own ticket, they must specify any children/grandchildren and write their names on the ticket.'
                                                                     ),
                                                                     url='https://www.bahn.de/hilfe/view/pk/en/kindermitnahme.shtml',
-                                                                    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
                                                                         version='any',
                                                                         ref='db:child@rate'
                                                                     ),
@@ -4594,7 +4594,7 @@ obj = PublicationDelivery(
                                                                             UsageParameterPrice(
                                                                                 id='db:child@rate',
                                                                                 version='any',
-                                                                                choice_1=LimitingRule(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRule(
                                                                                     id='db:child@rate',
                                                                                     version='any',
                                                                                     discount_as_percentage=Decimal('0.50'),
@@ -4641,7 +4641,7 @@ obj = PublicationDelivery(
                                                                             UsageParameterPrice(
                                                                                 id='db:senior@25',
                                                                                 version='any',
-                                                                                choice_1=DiscountingRule(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                     id='db:senior_rate@25',
                                                                                     version='any',
                                                                                     discount_as_percentage=Decimal('0.25')
@@ -4650,7 +4650,7 @@ obj = PublicationDelivery(
                                                                             UsageParameterPrice(
                                                                                 id='db:senior@50',
                                                                                 version='any',
-                                                                                choice_1=DiscountingRule(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                                                     id='db:senior_rate@50',
                                                                                     version='any',
                                                                                     discount_as_percentage=Decimal('0.25')
@@ -4959,7 +4959,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='The Saxony ticket is a Deutsche Bahn promotion .\n\nWith the Saxony ticket up to five people travelling together can use 2nd class local trains belonging to any rail company in Saxony, Saxony-Anhalt and Thuringia for the whole day.\n\nIt is valid on the day indicated on the ticket (Monday to Friday) for any number of journeys between 9am and 3am the following day. On Saturdays, Sundays and any bank holiday that applies throughout Saxony, you may use the Saxony ticket to travel before 9am.\n \n1. Prices\n1 person 24,00  EURO  7\n2 persons 31,00  EURO  7\n3 persons 38,00  EURO  7\n4 persons 45,00  EURO  7\n5 persons 52,00  EURO  7\nIt is valid for single travelers or groups up to 5 persons (with a corresponding purchase). If you buy a ticket for 1 or 2 people, your own children and grandchildren up to and including the age of 14 pay the first person for free. \n\nThe prices apply when buying tickets at ticket vending machines or at the trilex customer service representative or in the  online shop . An acquisition of the Sachsen-Ticket at Länderbahn- and trilex- Agencies as well as at DB-sales outlets has a surcharge of 2.00  EURO .   \n\nAt the start of the journey, the ticket must be labeled with the name of the passenger who covers the furthest distance with this ticket.\n'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='DBN',
                                             version='any',
                                             ref='db:VVO'
@@ -5024,7 +5024,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='EURO NEISSE ticket\nThe EURO-NEISSE-Ticket is a cheap day ticket if you want to continue in the Czech Republic or in Poland with other trains, buses and / or trams. It applies to any trips up to 4:00 each day of the following day.\n\ndetails\nPrices\nEURO-NEISSE-day ticket (1 person): 13,00  EURO \nEURO-NEISSE small group card (up to 5 persons): 27,00  EURO \nEURO-NEISSE bicycle day ticket: 4,00  EURO  \nAn overview of the validity of EURO-NEISSE tickets can be found here. Further information can be found at  www.zvon.de/EURO-NEISSE-Ticket .'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='DBN',
                                             version='any',
                                             ref='uic:0080'
@@ -5044,7 +5044,7 @@ obj = PublicationDelivery(
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
-                                                            flexible_line_ref_or_line_ref=[
+                                                            line_ref=[
                                                                 LineRef(
                                                                     version='01',
                                                                     ref='db:RE2'
@@ -5120,7 +5120,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='DB International Tariff'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             value='DB',
                                             version='any',
                                             ref='uic:0080'
@@ -6961,14 +6961,14 @@ obj = PublicationDelivery(
                                     value='UK Rail Network'
                                 ),
                                 transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     value='DBN',
                                     version='any',
                                     ref='uic:0080'
                                 )
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='db:RE1',
                                         version='01',
@@ -7166,7 +7166,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='db:Types_of_FareContract',
                                         version='any',
@@ -7174,7 +7174,7 @@ obj = PublicationDelivery(
                                             value='Types of Fare Contract'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareContract(
                                                     id='db:contract@pass@day',
                                                     version='any',
@@ -7226,7 +7226,7 @@ obj = PublicationDelivery(
                     default_currency='EUR'
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         SalesTransactionFrame(
                             id='tlx-t:Trilex@Operator_Specific_Sample_Transactions',
                             validity_conditions_or_valid_between=[
@@ -7304,12 +7304,12 @@ obj = PublicationDelivery(
                                                     amount=Decimal('42.00'),
                                                     payment_method=PaymentMethodEnumeration.CASH,
                                                     travel_specifications=TravelSpecificationsRelStructure(
-                                                        choice=[
+                                                        travel_specification_ref_or_travel_specification=[
                                                             TravelSpecification1(
                                                                 id='tlx-t:Anon001@trans001@purchase_ticket',
                                                                 version='any',
                                                                 date=XmlDateTime(2018, 7, 8, 1, 7, 0),
-                                                                choice_1=UsageParameterPriceRef(
+                                                                fare_price_ref_or_cell_ref=UsageParameterPriceRef(
                                                                     version='01',
                                                                     ref='tlx:Trilex@Tariff@Tagesticket@4'
                                                                 ),
@@ -7326,7 +7326,7 @@ obj = PublicationDelivery(
                                                                                 version='01',
                                                                                 ref='tlx:Trilex@Product@Pass@Tagesticket@repeated_trip'
                                                                             ),
-                                                                            choice=PreassignedFareProductRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                                 version='01',
                                                                                 ref='tlx:Trilex@Product@Pass@Tagesticket'
                                                                             ),
@@ -7426,7 +7426,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ResourceFrame(
                             id='eura:EURA@Common_Resources',
                             version='any',
@@ -7539,7 +7539,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     TypeOfFrame(
                                         id='eura:Fare',
                                         version='any',
@@ -7554,7 +7554,7 @@ obj = PublicationDelivery(
                                             value='Types of Product Category'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfProductCategory(
                                                     id='eura:tgv',
                                                     version='any',
@@ -7601,7 +7601,7 @@ obj = PublicationDelivery(
                                             value='Charging Moments'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 ChargingMoment(
                                                     id='eura:prepaid',
                                                     version='any',
@@ -7655,7 +7655,7 @@ obj = PublicationDelivery(
                                             value='Types Of Fare Product  - Classify as  single of multi operator'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareProduct(
                                                     id='eura:standard_product@single_toc',
                                                     version='any',
@@ -7702,7 +7702,7 @@ obj = PublicationDelivery(
                                             value='Fare Table Types'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 PurposeOfGrouping(
                                                     id='eura:distance',
                                                     version='any',
@@ -7735,7 +7735,7 @@ obj = PublicationDelivery(
                                             value='Classes of Use'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 ClassOfUse(
                                                     id='eura:first',
                                                     version='any',
@@ -7761,7 +7761,7 @@ obj = PublicationDelivery(
                                             value='Types of fare contract entry'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareContractEntry(
                                                     id='eura:product_purchase',
                                                     version='any',
@@ -7787,7 +7787,7 @@ obj = PublicationDelivery(
                                             value='Types of concession'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfConcession(
                                                     id='eura:adult',
                                                     version='any',
@@ -7869,7 +7869,7 @@ obj = PublicationDelivery(
                                             value='Types of Tariff'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfTariff(
                                                     id='eura:Distance_kilometers',
                                                     version='any',
@@ -7923,7 +7923,7 @@ obj = PublicationDelivery(
                                             value='Types of  Access right Assignment'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfAccessRightAssignment(
                                                     id='eura:eligible',
                                                     version='any',
@@ -8071,7 +8071,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     GeneralOrganisation(
                                         id='eura:EURA',
                                         version='any',
@@ -8144,7 +8144,7 @@ obj = PublicationDelivery(
                                         country_ref=CountryRef(
                                             ref=IanaCountryTldEnumeration.CZ
                                         ),
-                                        postal_address_or_road_address_or_address=PostalAddressVersionStructure(
+                                        address=PostalAddressVersionStructure(
                                             info_links=InfoLinksRelStructure(
                                                 info_link=[
                                                     InfoLink(

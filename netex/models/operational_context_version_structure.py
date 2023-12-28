@@ -42,7 +42,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    organisation_part_ref: Optional[
         Union[
             ControlCentreRef,
             OrganisationalUnitRef,

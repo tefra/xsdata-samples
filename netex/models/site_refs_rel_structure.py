@@ -15,7 +15,7 @@ class SiteRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "siteRefs_RelStructure"
 
-    choice: List[
+    site_ref: List[
         Union[
             StopPlaceRef,
             ParkingRef,

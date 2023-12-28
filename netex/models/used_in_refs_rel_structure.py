@@ -16,7 +16,7 @@ class UsedInRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "usedInRefs_RelStructure"
 
-    choice: List[
+    tariff_ref: List[
         Union[
             ParkingTariffRef,
             TariffRef,

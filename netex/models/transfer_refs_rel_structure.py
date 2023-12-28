@@ -14,7 +14,7 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "transferRefs_RelStructure"
 
-    choice: List[
+    connection_ref_or_transfer_ref: List[
         Union[
             DefaultConnectionRef, SiteConnectionRef, ConnectionRef, AccessRef
         ]

@@ -18,7 +18,7 @@ class JourneyPatternRunTimeVersionedChildStructure(
     class Meta:
         name = "JourneyPatternRunTime_VersionedChildStructure"
 
-    choice: Optional[
+    journey_pattern_ref: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,

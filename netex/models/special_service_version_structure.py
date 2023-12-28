@@ -78,7 +78,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    journey_pattern_ref: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,
@@ -113,7 +113,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[
+    vehicle_type_ref: Optional[
         Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
     ] = field(
         default=None,

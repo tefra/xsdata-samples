@@ -45,9 +45,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    network_ref_or_group_of_lines_ref: Optional[
-        Union[NetworkRef, GroupOfLinesRef]
-    ] = field(
+    group_of_lines_ref: Optional[Union[NetworkRef, GroupOfLinesRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -65,9 +63,7 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    flexible_line_ref_or_line_ref: Optional[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -85,7 +81,7 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    choice: Optional[
+    site_ref: Optional[
         Union[
             StopPlaceRef,
             ParkingRef,
@@ -174,7 +170,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref: Optional[
+    facility_set_ref: Optional[
         Union[ServiceFacilitySetRef, SiteFacilitySetRef, FacilitySetRef]
     ] = field(
         default=None,
@@ -215,7 +211,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_1: Optional[
+    service_journey_ref: Optional[
         Union[
             TemplateServiceJourneyRef,
             ServiceJourneyRef,

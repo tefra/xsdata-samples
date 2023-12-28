@@ -66,7 +66,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
-                        choice=[
+                        validity_condition=[
                             AvailabilityCondition(
                                 id='hde:CAL_02',
                                 version='any',
@@ -74,7 +74,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    choice_1=[
+                    version_frame_ref=[
                         TimetableFrameRef(
                             value='REQUEST',
                             ref='hde:TimetableFrameTIM_23_O'
@@ -89,7 +89,7 @@ obj = PublicationDelivery(
         value='Example  of simple flexible timetable  , zones only  \n\t\n1. OVERVIEW\n============\n\n   The servIce has two zones     Sigma   and  Tau\n \n\t SIgma has a single area,  Tau is made up of  two areas \n\t \n\tThere are on demand services between specified start and end time\n\t\n\t   9 to 5 Monday to Friday.\n\t   Booking starts 8 to 12: 1 to 4:30\n \t\t\t\t\t\t\t\t\t\t\n day\n\n==================================\n2. DETAILS\n\n  FLEXIBLE LINE  mybus:FL_24\n\t\thas booking  and references two  two flexible stop places \n\nFLEXIBLE STOP PLACES defines the geometry of the XOnes\n\t    A)    FLEXIBLE STOP PLAcE:  mybus:fsp_Sigma   \n\t\t\t\t\t with a single FLEXIBLE STOP AREA:fsp_Sigma:  \t\t\t\t\t\t \n\t\tB)   FLEXIBLE STOP PLAcE: mybus:fsp_Tau\t\t\t\t\t \n\t\t\t\t with a two FLEXIBLE STOP AREAs     \t\n\t\t\t\t\t :mybus:fa_Tau_01\n\t\t\t \t :mybus:fa_Tau_02\n \n A SERVICE CALENDAR FRAME is used to contain the DAY TYPEs etc \n\n This has FLEXIBLE BOOKING TIMES with avalabiliuty conbditiosn for the booking and service \n   \nA COMPOSITE FRAME is used to group the component FRAMEs\n  \n\t\tA SITE   FRAME is used to contain the FLEXIBLE STOP PLACEs , etc\n\t\tA SERVICE  FRAME is used to contain the     LINEs, etc\n\t\tA TIMETABLE FRAME is used to define the Servce AVAILABILITY and the  the Booking times     \n\t\t\t\nThe Calendar is shown coded as\n      Compact : OPERATING DAYs are assumed for each calendar date within the period of the calendar \n\t\n\t'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='hde:CAL_02',
                 version='1',
@@ -115,7 +115,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         SiteFrame(
                             id='mybus:svf_24',
                             version='1',
@@ -210,7 +210,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         lines=LineRefsRelStructure(
-                                            flexible_line_ref_or_line_ref=[
+                                            line_ref=[
                                                 FlexibleLineRef(
                                                     version='any',
                                                     ref='mybus:FL_24'
@@ -364,7 +364,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         lines=LineRefsRelStructure(
-                                            flexible_line_ref_or_line_ref=[
+                                            line_ref=[
                                                 FlexibleLineRef(
                                                     version='any',
                                                     ref='mybus:FL_24'
@@ -382,7 +382,7 @@ obj = PublicationDelivery(
                                 value='Lines for Winter timetable for route 24 '
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     FlexibleLine(
                                         id='mybus:FL_24',
                                         version='any',
@@ -409,7 +409,7 @@ obj = PublicationDelivery(
                             id='hde:TIM_02',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='hde:AC_runs_02',
                                             version='any',
@@ -418,7 +418,7 @@ obj = PublicationDelivery(
                                             ),
                                             is_available=True,
                                             day_types=DayTypesRelStructure(
-                                                choice=[
+                                                day_type_ref_or_day_type=[
                                                     DayTypeRef(
                                                         version='any',
                                                         ref='hde:DT_01-MF-NotHoliday'
@@ -449,7 +449,7 @@ obj = PublicationDelivery(
                                 VehicleModeEnumeration.BUS,
                             ],
                             line_view=LineView(
-                                flexible_line_ref_or_line_ref=FlexibleLineRef(
+                                line_ref=FlexibleLineRef(
                                     version='any',
                                     ref='mybus:FL_24'
                                 )
@@ -464,7 +464,7 @@ obj = PublicationDelivery(
                                         ),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='hde:DT_01-MF-NotHoliday'
@@ -508,7 +508,7 @@ obj = PublicationDelivery(
                                 to_date=XmlDate(2011, 1, 14)
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     DayType(
                                         id='hde:DT_01-MF-NotHoliday',
                                         version='any',

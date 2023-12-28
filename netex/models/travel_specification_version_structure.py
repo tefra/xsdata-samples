@@ -62,7 +62,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    fare_request_ref_or_passenger_information_request_ref: Optional[
         Union[
             RepeatedTripFareRequestRef,
             SingleTripFareRequestRef,
@@ -115,7 +115,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             ),
         },
     )
-    choice_1: Optional[
+    fare_price_ref_or_cell_ref: Optional[
         Union[
             CustomerPurchasePackagePriceRef,
             ParkingPriceRef,

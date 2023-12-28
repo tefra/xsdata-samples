@@ -17,7 +17,7 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
     class Meta:
         name = "SimpleFeature_VersionStructure"
 
-    choice: Optional[
+    zone_ref_or_tariff_zone_ref: Optional[
         Union[
             StopAreaRef,
             AccessZoneRef,

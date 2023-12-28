@@ -22,7 +22,7 @@ class FareProductPriceVersionedChildStructure(
     class Meta:
         name = "FareProductPrice_VersionedChildStructure"
 
-    choice_2: Optional[
+    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: Optional[
         Union[
             SupplementProductRef,
             PreassignedFareProductRef,

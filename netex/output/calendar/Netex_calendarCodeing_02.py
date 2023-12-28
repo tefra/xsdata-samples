@@ -38,7 +38,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
-                        choice=[
+                        validity_condition=[
                             AvailabilityCondition(
                                 id='hde:AvailabilityCondition:CAL_02',
                                 version='any',
@@ -46,7 +46,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    choice_1=[
+                    version_frame_ref=[
                         TimetableFrameRef(
                             ref='hde:TimetableFrameTIM_23_O'
                         ),
@@ -60,7 +60,7 @@ obj = PublicationDelivery(
         value='Example  of compact and verobose service calendar'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             ServiceCalendarFrame(
                 id='hde:ServiceCalendarFrame:CAL_02',
                 version='any',
@@ -98,7 +98,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 1),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -111,7 +111,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 2),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -124,7 +124,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 3),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -137,7 +137,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 4),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -150,7 +150,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 5),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -163,7 +163,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 6),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -176,7 +176,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 7),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -189,7 +189,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 8),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -202,7 +202,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 9),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -215,7 +215,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 10),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -228,7 +228,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 11),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -241,7 +241,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 12),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -254,7 +254,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 13),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -267,7 +267,7 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 14),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -288,7 +288,7 @@ obj = PublicationDelivery(
                     to_date=XmlDate(2010, 11, 14)
                 ),
                 day_types=DayTypesInFrameRelStructure(
-                    fare_day_type_or_organisation_day_type_or_day_type=[
+                    day_type=[
                         DayType(
                             id='hde:DayType:DT_01-MF-NH',
                             version='any',
@@ -459,7 +459,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-01'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -475,7 +475,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-02'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -491,7 +491,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-03'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -507,7 +507,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-04'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -523,7 +523,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-05'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -539,7 +539,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-06'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -555,7 +555,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-07'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -571,7 +571,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-08'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -587,7 +587,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-09'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -603,7 +603,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-10'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -619,7 +619,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-11'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -635,7 +635,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-12'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -651,7 +651,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-13'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -667,7 +667,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-14'
                             ),
-                            fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                            day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )

@@ -24,7 +24,7 @@ class AccessRightParameterAssignmentsInFrameRelStructure(
     class Meta:
         name = "accessRightParameterAssignmentsInFrame_RelStructure"
 
-    choice: List[
+    access_right_parameter_assignment: List[
         Union[
             CustomerPurchaseParameterAssignment,
             SpecificParameterAssignment,

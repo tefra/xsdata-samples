@@ -153,7 +153,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
-                        choice=[
+                        validity_condition=[
                             AvailabilityCondition(
                                 id='bbd:TIM_23_O',
                                 version='any',
@@ -161,7 +161,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    choice_1=[
+                    version_frame_ref=[
                         TimetableFrameRef(
                             ref='bbd:TIM_23_O'
                         ),
@@ -175,12 +175,12 @@ obj = PublicationDelivery(
         value='Example  of simple timetable frame with two journeys and service calendar'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='bbd:TIM_23_O',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='bbd:Cnd001',
                                 version='any',
@@ -190,7 +190,7 @@ obj = PublicationDelivery(
                                 from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2011, 3, 31, 0, 0, 0, 0, 0),
                                 day_types=DayTypesRelStructure(
-                                    choice=[
+                                    day_type_ref_or_day_type=[
                                         DayTypeRef(
                                             version='any',
                                             ref='bbd:DT_01-MF-NH'
@@ -228,7 +228,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         TimetableFrame(
                             id='bbd:TIM_23_O',
                             version='any',
@@ -247,19 +247,19 @@ obj = PublicationDelivery(
                                             value='447 Amsterdam to Warsaw'
                                         ),
                                         departure_time=XmlTime(9, 0, 0, 0, 0),
-                                        choice=ServiceJourneyPatternRef(
+                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='bbd:JP_447_amsterdam_warsaw'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             version='any',
                                             ref='bbd:trn_447'
                                         ),
-                                        train_block_ref_or_block_ref=BlockRef(
+                                        block_ref=BlockRef(
                                             version='any',
                                             ref='ops:blk_447_amsterdam-warsaw'
                                         ),
-                                        choice_1=LineView(
+                                        line_ref=LineView(
                                             public_code='447',
                                             name=MultilingualString(
                                                 value='Amsterdam to Warsaw Express'
@@ -301,7 +301,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='bbd:tn_447'
                                                     ),
-                                                    train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
+                                                    block_part_ref=TrainBlockPartRef(
                                                         version='any',
                                                         ref='ops:blkpt_447_01_amsterdam-hannover'
                                                     ),
@@ -343,7 +343,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='bbd:tn_447'
                                                     ),
-                                                    train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
+                                                    block_part_ref=TrainBlockPartRef(
                                                         version='any',
                                                         ref='ops:blkpt_447_02_hannover-berlin'
                                                     ),
@@ -381,7 +381,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='bbd:tn_447'
                                                     ),
-                                                    train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
+                                                    block_part_ref=TrainBlockPartRef(
                                                         version='any',
                                                         ref='ops:blkpt_447_03_berlin-warsaw'
                                                     ),
@@ -404,11 +404,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='bbd:sj_447_001',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:nl_amsterdam'
                                                     ),
@@ -444,7 +444,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             stop_place_ref=StopPlaceRef(
                                                                 version='any',
                                                                 ref='uic:nl_amsterdam'
@@ -467,7 +467,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='bbd:sj_447_002',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_hannover'
                                                     ),
@@ -503,12 +503,12 @@ obj = PublicationDelivery(
                                                                             ref='bbd:sj_40447'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(12, 15, 0, 0, 0),
-                                                                        choice=ServiceJourneyPatternRef(
+                                                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                                                             version='any',
                                                                             ref='bbd:JP_40447_amsterdam-copenhagen'
                                                                         )
                                                                     ),
-                                                                    flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
+                                                                    line_ref=LineDerivedViewStructure(
                                                                         name=MultilingualString(
                                                                             value='40447'
                                                                         ),
@@ -522,7 +522,7 @@ obj = PublicationDelivery(
                                                         time=XmlTime(12, 5, 0, 0, 0),
                                                         for_boarding=True,
                                                         wait_time=XmlDuration("PT5M"),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
                                                                 version='any',
                                                                 ref='uic:de_hannover_5'
@@ -541,7 +541,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='bbd:sj_447_003',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_berlin'
                                                     ),
@@ -577,12 +577,12 @@ obj = PublicationDelivery(
                                                                             ref='bbd:sj_457'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(14, 50, 0, 0, 0),
-                                                                        choice=ServiceJourneyPatternRef(
+                                                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                                                             version='any',
                                                                             ref='bbd:JP_457_amsterdam-prague'
                                                                         )
                                                                     ),
-                                                                    flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
+                                                                    line_ref=LineDerivedViewStructure(
                                                                         name=MultilingualString(
                                                                             value='457'
                                                                         ),
@@ -604,7 +604,7 @@ obj = PublicationDelivery(
                                                         time=XmlTime(15, 10, 0, 0, 0),
                                                         for_boarding=True,
                                                         wait_time=XmlDuration("PT10M"),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
                                                                 version='any',
                                                                 ref='uic:de_berlin_3'
@@ -623,13 +623,13 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='bbd:sj_447_004',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:pl_warsaw'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(19, 10, 0, 0, 0),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
                                                                 version='any',
                                                                 ref='uic:pl_warsaw_8'
@@ -666,19 +666,19 @@ obj = PublicationDelivery(
                                             value='40447 Amsterdam to Copenhagen'
                                         ),
                                         departure_time=XmlTime(9, 0, 0, 0, 0),
-                                        choice=ServiceJourneyPatternRef(
+                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='bbd:JP_40447_amsterdam-copenhagen'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             version='any',
                                             ref='bbd:trn_40447'
                                         ),
-                                        train_block_ref_or_block_ref=BlockRef(
+                                        block_ref=BlockRef(
                                             version='any',
                                             ref='ops:blk_40447_amsterdam-copenhagen'
                                         ),
-                                        choice_1=LineView(
+                                        line_ref=LineView(
                                             public_code='40447',
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                         ),
@@ -717,7 +717,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='bbd:tn_447'
                                                     ),
-                                                    train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
+                                                    block_part_ref=TrainBlockPartRef(
                                                         version='any',
                                                         ref='ops:blkpt_447_01_amsterdam-hannover'
                                                     ),
@@ -754,7 +754,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='bbd:tn_40447'
                                                     ),
-                                                    train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
+                                                    block_part_ref=TrainBlockPartRef(
                                                         version='any',
                                                         ref='ops:blkpt_40447_02_hannover-copenhagen'
                                                     ),
@@ -776,11 +776,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='bbd:sj_40447_001',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:nl_amsterdam'
                                                     ),
@@ -809,7 +809,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             stop_place_ref=StopPlaceRef(
                                                                 version='any',
                                                                 ref='uic:nl_amsterdam'
@@ -832,7 +832,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='bbd:sj_40447_002',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_hannover'
                                                     ),
@@ -867,12 +867,12 @@ obj = PublicationDelivery(
                                                                             ref='bbd:sj_40447'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(12, 15, 0, 0, 0),
-                                                                        choice=ServiceJourneyPatternRef(
+                                                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                                                             version='any',
                                                                             ref='bbd:JP_40447_amsterdam-copenhagen'
                                                                         )
                                                                     ),
-                                                                    flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
+                                                                    line_ref=LineDerivedViewStructure(
                                                                         name=MultilingualString(
                                                                             value='40447'
                                                                         ),
@@ -894,7 +894,7 @@ obj = PublicationDelivery(
                                                         time=XmlTime(12, 4, 0, 0, 0),
                                                         for_boarding=True,
                                                         wait_time=XmlDuration("PT5M"),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
                                                                 version='any',
                                                                 ref='uic:de_hannover_5'
@@ -913,13 +913,13 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='bbd:sj_40447_003',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:dk_copenhagen'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(16, 0, 0, 0, 0),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
                                                                 version='any',
                                                                 ref='uic:dk_copenhagen_1'
@@ -956,19 +956,19 @@ obj = PublicationDelivery(
                                             value='457 Amsterdam to Prague'
                                         ),
                                         departure_time=XmlTime(9, 0, 0, 0, 0),
-                                        choice=ServiceJourneyPatternRef(
+                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='bbd:JP_457_amsterdam-prague'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             version='any',
                                             ref='bbd:trn_457'
                                         ),
-                                        train_block_ref_or_block_ref=BlockRef(
+                                        block_ref=BlockRef(
                                             version='any',
                                             ref='ops:blk_40447_amsterdam-copenhagen'
                                         ),
-                                        choice_1=LineView(
+                                        line_ref=LineView(
                                             public_code='457',
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                         ),
@@ -1007,7 +1007,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='bbd:tn_447'
                                                     ),
-                                                    train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
+                                                    block_part_ref=TrainBlockPartRef(
                                                         version='any',
                                                         ref='ops:blkpt_447_01_amsterdam-hannover'
                                                     ),
@@ -1048,7 +1048,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='bbd:tn_447'
                                                     ),
-                                                    train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
+                                                    block_part_ref=TrainBlockPartRef(
                                                         version='any',
                                                         ref='ops:blkpt_447_02_hannover-berlin'
                                                     ),
@@ -1089,7 +1089,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='bbd:tn_457'
                                                     ),
-                                                    train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
+                                                    block_part_ref=TrainBlockPartRef(
                                                         version='any',
                                                         ref='ops:blkpt_457_03_berlin-prague'
                                                     ),
@@ -1111,11 +1111,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='bbd:sj_457_001',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:nl_amsterdam'
                                                     ),
@@ -1144,7 +1144,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             stop_place_ref=StopPlaceRef(
                                                                 version='any',
                                                                 ref='uic:nl_amsterdam'
@@ -1167,7 +1167,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='bbd:sj_457_002',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_hannover'
                                                     ),
@@ -1202,12 +1202,12 @@ obj = PublicationDelivery(
                                                                             ref='bbd:sj_40447'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(12, 15, 0, 0, 0),
-                                                                        choice=ServiceJourneyPatternRef(
+                                                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                                                             version='any',
                                                                             ref='bbd:JP_40447_amsterdam-copenhagen'
                                                                         )
                                                                     ),
-                                                                    flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
+                                                                    line_ref=LineDerivedViewStructure(
                                                                         name=MultilingualString(
                                                                             value='40447'
                                                                         ),
@@ -1229,7 +1229,7 @@ obj = PublicationDelivery(
                                                         time=XmlTime(12, 5, 0, 0, 0),
                                                         for_boarding=True,
                                                         wait_time=XmlDuration("PT5M"),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
                                                                 version='any',
                                                                 ref='uic:de_hannover_5'
@@ -1248,7 +1248,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='bbd:sj_457_003',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_berlin'
                                                     ),
@@ -1278,12 +1278,12 @@ obj = PublicationDelivery(
                                                                             ref='bbd:sj_447'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(14, 50, 0, 0, 0),
-                                                                        choice=ServiceJourneyPatternRef(
+                                                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                                                             version='any',
                                                                             ref='bbd:JP_447_amsterdam_warsaw'
                                                                         )
                                                                     ),
-                                                                    flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
+                                                                    line_ref=LineDerivedViewStructure(
                                                                         name=MultilingualString(
                                                                             value='447'
                                                                         ),
@@ -1328,12 +1328,12 @@ obj = PublicationDelivery(
                                                                             ref='bbd:sj_60457'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(15, 20, 0, 0, 0),
-                                                                        choice=ServiceJourneyPatternRef(
+                                                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                                                             version='any',
                                                                             ref='bbd:JP_60457_berlin-prague'
                                                                         )
                                                                     ),
-                                                                    flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
+                                                                    line_ref=LineDerivedViewStructure(
                                                                         name=MultilingualString(
                                                                             value='60457'
                                                                         ),
@@ -1348,7 +1348,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
                                                                 version='any',
                                                                 ref='uic:de_berlin_3'
@@ -1367,7 +1367,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='bbd:sj_457_004',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:cz_prague'
                                                     ),
@@ -1392,12 +1392,12 @@ obj = PublicationDelivery(
                                                                             ref='bbd:sj_60457'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(15, 20, 0, 0, 0),
-                                                                        choice=ServiceJourneyPatternRef(
+                                                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                                                             version='any',
                                                                             ref='bbd:JP_60457_berlin-prague'
                                                                         )
                                                                     ),
-                                                                    flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
+                                                                    line_ref=LineDerivedViewStructure(
                                                                         name=MultilingualString(
                                                                             value='60457'
                                                                         ),
@@ -1412,7 +1412,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
                                                                 version='any',
                                                                 ref='uic:cz_prague_2'
@@ -1453,19 +1453,19 @@ obj = PublicationDelivery(
                                             value='60457 Berlin to Prague'
                                         ),
                                         departure_time=XmlTime(15, 0, 0, 0, 0),
-                                        choice=ServiceJourneyPatternRef(
+                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='bbd:JP_457_amsterdam-prague'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             version='any',
                                             ref='bbd:trn_457'
                                         ),
-                                        train_block_ref_or_block_ref=BlockRef(
+                                        block_ref=BlockRef(
                                             version='any',
                                             ref='ops:blk_457_amsterdam-prague'
                                         ),
-                                        choice_1=LineView(
+                                        line_ref=LineView(
                                             public_code='457',
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                         ),
@@ -1504,7 +1504,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='bbd:tn_457'
                                                     ),
-                                                    train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
+                                                    block_part_ref=TrainBlockPartRef(
                                                         version='any',
                                                         ref='ops:blkpt_457_03_berlin-prague'
                                                     ),
@@ -1526,11 +1526,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='bbd:sj_60457_001',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_berlin'
                                                     ),
@@ -1564,12 +1564,12 @@ obj = PublicationDelivery(
                                                                             ref='bbd:sj_60457'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(15, 20, 0, 0, 0),
-                                                                        choice=ServiceJourneyPatternRef(
+                                                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                                                             version='any',
                                                                             ref='bbd:JP_60457_berlin-prague'
                                                                         )
                                                                     ),
-                                                                    flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
+                                                                    line_ref=LineDerivedViewStructure(
                                                                         name=MultilingualString(
                                                                             value='60457'
                                                                         ),
@@ -1584,7 +1584,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
                                                                 version='any',
                                                                 ref='uic:de_berlin_3'
@@ -1603,7 +1603,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='bbd:sj_60457_002',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:cz_prague'
                                                     ),
@@ -1628,12 +1628,12 @@ obj = PublicationDelivery(
                                                                             ref='bbd:sj_60457'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(15, 20, 0, 0, 0),
-                                                                        choice=ServiceJourneyPatternRef(
+                                                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                                                             version='any',
                                                                             ref='bbd:JP_60457_berlin-prague'
                                                                         )
                                                                     ),
-                                                                    flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
+                                                                    line_ref=LineDerivedViewStructure(
                                                                         name=MultilingualString(
                                                                             value='60457'
                                                                         ),
@@ -1648,7 +1648,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        choice=QuayAssignmentView(
+                                                        passenger_stop_assignment_ref=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
                                                                 version='any',
                                                                 ref='uic:cz_prague_2'
@@ -1848,7 +1848,7 @@ obj = PublicationDelivery(
                                             ref='bbd:XX-447_amsterdam-hannover'
                                         ),
                                         journeys=VehicleJourneyRefsRelStructure(
-                                            dead_run_ref_or_vehicle_journey_ref=[
+                                            vehicle_journey_ref=[
                                                 VehicleJourneyRef(
                                                     version='any',
                                                     ref='bbd:sj_447'
@@ -1875,7 +1875,7 @@ obj = PublicationDelivery(
                                             ref='bbd:YY-447_hannover-berlin'
                                         ),
                                         journeys=VehicleJourneyRefsRelStructure(
-                                            dead_run_ref_or_vehicle_journey_ref=[
+                                            vehicle_journey_ref=[
                                                 VehicleJourneyRef(
                                                     version='any',
                                                     ref='bbd:sj_447'
@@ -1898,7 +1898,7 @@ obj = PublicationDelivery(
                                             ref='bbd:cmpblk_ZZ-457_berlin-prague'
                                         ),
                                         journeys=VehicleJourneyRefsRelStructure(
-                                            dead_run_ref_or_vehicle_journey_ref=[
+                                            vehicle_journey_ref=[
                                                 VehicleJourneyRef(
                                                     version='any',
                                                     ref='bbd:sj_60457'
@@ -3002,7 +3002,7 @@ obj = PublicationDelivery(
                                         ),
                                         preparation_duration=XmlDuration("PT10M"),
                                         finishing_duration=XmlDuration("PT10H"),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             version='any',
                                             ref='bbd:trn_447'
                                         ),
@@ -3013,14 +3013,14 @@ obj = PublicationDelivery(
                                             ref='uic:pl_warsaw'
                                         ),
                                         block_parts=BlockPartsRelStructure(
-                                            choice=[
+                                            block_part_ref=[
                                                 TrainBlockPart(
                                                     id='ops:blkpt_447_01_amsterdam-hannover',
                                                     version='any',
                                                     description=MultilingualString(
                                                         value='Amsterdam to Hannover (447+ 457 +40447)'
                                                     ),
-                                                    compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
+                                                    vehicle_type_ref=CompoundTrainRef(
                                                         version='any',
                                                         ref='bbd:ctrn_XX-447'
                                                     ),
@@ -3036,7 +3036,7 @@ obj = PublicationDelivery(
                                                     description=MultilingualString(
                                                         value='Hannover to Berlin (447+ 457)'
                                                     ),
-                                                    compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
+                                                    vehicle_type_ref=CompoundTrainRef(
                                                         version='any',
                                                         ref='bbd:ctrn_YY-447'
                                                     ),
@@ -3052,7 +3052,7 @@ obj = PublicationDelivery(
                                                     description=MultilingualString(
                                                         value='Berlin to Warsaw (447)'
                                                     ),
-                                                    compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                                    vehicle_type_ref=TrainRef(
                                                         version='any',
                                                         ref='bbd:trn_447'
                                                     ),
@@ -3077,7 +3077,7 @@ obj = PublicationDelivery(
                                         ),
                                         preparation_duration=XmlDuration("PT10M"),
                                         finishing_duration=XmlDuration("PT7H"),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             version='any',
                                             ref='bbd:trn_40447'
                                         ),
@@ -3088,7 +3088,7 @@ obj = PublicationDelivery(
                                             ref='uic:dk_copenhagen'
                                         ),
                                         block_parts=BlockPartsRelStructure(
-                                            choice=[
+                                            block_part_ref=[
                                                 TrainBlockPartRef(
                                                     version='any',
                                                     ref='ops:blkpt_447_01_amsterdam-hannover'
@@ -3099,7 +3099,7 @@ obj = PublicationDelivery(
                                                     description=MultilingualString(
                                                         value='Hannover to  Copenhagen'
                                                     ),
-                                                    compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                                    vehicle_type_ref=TrainRef(
                                                         version='any',
                                                         ref='bbd:trn_40447'
                                                     ),
@@ -3124,7 +3124,7 @@ obj = PublicationDelivery(
                                         ),
                                         preparation_duration=XmlDuration("PT10M"),
                                         finishing_duration=XmlDuration("PT10H"),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             version='any',
                                             ref='bbd:trn_457'
                                         ),
@@ -3135,7 +3135,7 @@ obj = PublicationDelivery(
                                             ref='uic:cz_prague'
                                         ),
                                         block_parts=BlockPartsRelStructure(
-                                            choice=[
+                                            block_part_ref=[
                                                 TrainBlockPartRef(
                                                     version='any',
                                                     ref='ops:blkpt_447_01_amsterdam-hannover'
@@ -3150,7 +3150,7 @@ obj = PublicationDelivery(
                                                     description=MultilingualString(
                                                         value='Berlin to Prague'
                                                     ),
-                                                    compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
+                                                    vehicle_type_ref=CompoundTrainRef(
                                                         version='any',
                                                         ref='bbd:ctrn_ZZ-457'
                                                     ),
@@ -3165,12 +3165,12 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='Amsterdam to Hannover'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
+                                        vehicle_type_ref=CompoundTrainRef(
                                             version='any',
                                             ref='bbd:ctrn_XX-447'
                                         ),
                                         parts=BlockPartsRelStructure(
-                                            choice=[
+                                            block_part_ref=[
                                                 TrainBlockPartRef(
                                                     version='any',
                                                     ref='ops:blkpt_447_01_amsterdam-hannover'
@@ -3184,12 +3184,12 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='Hannover to Berlin'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
+                                        vehicle_type_ref=CompoundTrainRef(
                                             version='any',
                                             ref='bbd:ctrn_YY-447'
                                         ),
                                         parts=BlockPartsRelStructure(
-                                            choice=[
+                                            block_part_ref=[
                                                 TrainBlockPartRef(
                                                     version='any',
                                                     ref='ops:blkpt_447_02_hannover-berlin'
@@ -3203,12 +3203,12 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='Berlin to Prague'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
+                                        vehicle_type_ref=CompoundTrainRef(
                                             version='any',
                                             ref='bbd:ctrn_ZZ-457'
                                         ),
                                         parts=BlockPartsRelStructure(
-                                            choice=[
+                                            block_part_ref=[
                                                 TrainBlockPartRef(
                                                     version='any',
                                                     ref='ops:blkpt_457_03_berlin-prague'
@@ -3226,7 +3226,7 @@ obj = PublicationDelivery(
                                 value='Stops for Winter timetable for Splitting timnetable  Amsterdamn to Warsaw  '
                             ),
                             routes=RoutesInFrameRelStructure(
-                                flexible_route_or_route=[
+                                route=[
                                     Route(
                                         id='myrail:RT_447',
                                         version='any',
@@ -3270,7 +3270,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='myrail:LN_nl_amsterdam-cz_prague',
                                         version='any',
@@ -3427,7 +3427,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             connections=TransfersInFrameRelStructure(
-                                choice=[
+                                transfer=[
                                     Connection(
                                         id='uic:cx_de_hannover_01',
                                         version='any',
@@ -3459,7 +3459,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='bbd:JP_447_amsterdam_warsaw',
                                         version='any',
@@ -3473,7 +3473,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_447_amsterdam_warsaw_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:nl_amsterdam'
                                                     )
@@ -3482,7 +3482,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_447_amsterdam_warsaw_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_hannover'
                                                     )
@@ -3491,7 +3491,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_447_amsterdam_warsaw_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_berlin'
                                                     )
@@ -3500,7 +3500,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_447_amsterdam_warsaw_04',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:pl_warsaw'
                                                     )
@@ -3521,7 +3521,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_40447_amsterdam_copenhagen_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:nl_amsterdam'
                                                     )
@@ -3530,7 +3530,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_40447_amsterdam_copenhagen_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_hannover'
                                                     )
@@ -3539,7 +3539,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_40447_amsterdam_copenhagen_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:dk_copenhagen'
                                                     )
@@ -3560,7 +3560,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_457_amsterdam_prague_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:nl_amsterdam'
                                                     )
@@ -3569,7 +3569,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_457_amsterdam_prague_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_hannover'
                                                     )
@@ -3578,7 +3578,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_457_amsterdam_prague_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_berlin'
                                                     )
@@ -3587,7 +3587,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_457_amsterdam_prague_04',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:cz_prague'
                                                     )
@@ -3608,7 +3608,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_60457_berlin_prague_01',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:de_berlin'
                                                     )
@@ -3617,7 +3617,7 @@ obj = PublicationDelivery(
                                                     id='bbd:JP_60457_berlin_prague_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='uic:cz_prague'
                                                     )
@@ -3793,7 +3793,7 @@ obj = PublicationDelivery(
                                 to_date=XmlDate(2010, 11, 14)
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     DayType(
                                         id='bbd:DT_01-MF-NH',
                                         version='any',

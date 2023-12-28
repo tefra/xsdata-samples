@@ -33,7 +33,7 @@ obj = PublicationDelivery(
         value='Example of simpleGrouping  '
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             ResourceFrame(
                 id='mybus:Example_Groups_of_Entities',
                 version='any',
@@ -53,7 +53,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 types_of_value=TypesOfValueInFrameRelStructure(
-                    choice=[
+                    type_of_value_or_type_of_entity=[
                         ValueSet(
                             id='mybus:Purposes_of_Grouping',
                             version='001',
@@ -61,7 +61,7 @@ obj = PublicationDelivery(
 
                             ),
                             values=TypesOfValueStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     PurposeOfGrouping(
                                         id='mybus:My_Purpose',
                                         version='any',
@@ -69,7 +69,7 @@ obj = PublicationDelivery(
                                             value='Group of Scheduled StopPoints and Links'
                                         ),
                                         classes=ClassRefsRelStructure(
-                                            class_in_frame_ref_or_class_ref=[
+                                            class_ref=[
                                                 ClassRef(
                                                     name_of_class='ScheduledStopPoint'
                                                 ),

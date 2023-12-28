@@ -16,7 +16,7 @@ class EstimatedPassingTimeVersionedChildStructure(
     class Meta:
         name = "EstimatedPassingTime_VersionedChildStructure"
 
-    choice_2: List[Union[XmlTime, int, XmlDuration]] = field(
+    choice_1: List[Union[XmlTime, int, XmlDuration]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

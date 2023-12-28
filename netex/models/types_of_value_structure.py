@@ -77,7 +77,7 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "typesOfValueStructure"
 
-    choice: List[
+    type_of_value_or_type_of_entity: List[
         Union[
             TypeOfMachineReadability,
             TypeOfConcession,

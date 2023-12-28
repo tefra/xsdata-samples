@@ -187,7 +187,7 @@ obj = PublicationDelivery(
         value='Netex basic Uniquness check '
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='mybus:ntwkf001',
                 version='001',
@@ -201,7 +201,7 @@ obj = PublicationDelivery(
                     ]
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ResourceFrame(
                             id='bar:foo',
                             version='001',
@@ -214,7 +214,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='bar:foo',
                                         version='001'
@@ -239,7 +239,7 @@ obj = PublicationDelivery(
                                         id='bar:foo5',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     ValidityCondition(
                                                         id='bar:foo',
                                                         version='001'
@@ -320,12 +320,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parts=OrganisationPartsRelStructure(
-                                            choice=[
+                                            organisation_part_ref_or_organisation_part=[
                                                 OrganisationPart(
                                                     id='bar:foo',
                                                     version='001',
                                                     administrative_zones=AdministrativeZonesRelStructure(
-                                                        administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone=[
+                                                        administrative_zone=[
                                                             AdministrativeZone(
                                                                 id='bar:foo',
                                                                 version='001'
@@ -372,7 +372,7 @@ obj = PublicationDelivery(
                                         id='bar:foo',
                                         version='001',
                                         members=TransportOrganisationRefsRelStructure(
-                                            authority_ref_or_operator_ref=[
+                                            transport_organisation_ref=[
                                                 OperatorRef(
                                                     version='001',
                                                     ref='bar:foo'
@@ -505,7 +505,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='bar:foo',
                                                     version='001',
@@ -625,7 +625,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             activation_points=ActivationPointsInFrameRelStructure(
-                                beacon_point_or_activation_point=[
+                                activation_point=[
                                     ActivationPoint(
                                         id='bar:foo3',
                                         version='001'
@@ -747,7 +747,7 @@ obj = PublicationDelivery(
                                             value='ZONE'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 ParkingPassengerEntrance(
                                                     id='bar:foo5-a',
                                                     version='001'
@@ -820,7 +820,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
-                                fare_zone_or_tariff_zone=[
+                                tariff_zone=[
                                     TariffZone(
                                         id='bar:foo9',
                                         version='001',
@@ -856,7 +856,7 @@ obj = PublicationDelivery(
                                 value='FRAME '
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='bar:foo',
                                         version='001',
@@ -925,7 +925,7 @@ obj = PublicationDelivery(
                                                     id='bar:foo',
                                                     version='001',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='bar:foo5'
                                                     )
@@ -934,7 +934,7 @@ obj = PublicationDelivery(
                                                     id='bar:foo',
                                                     version='001',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='bar:foo5'
                                                     )
@@ -957,7 +957,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     JourneyPattern(
                                         id='bar:foo2',
                                         version='001',

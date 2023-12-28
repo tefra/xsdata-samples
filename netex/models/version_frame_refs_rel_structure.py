@@ -22,7 +22,7 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "versionFrameRefs_RelStructure"
 
-    choice: List[
+    version_frame_ref: List[
         Union[
             SalesTransactionFrameRef,
             FareFrameRef,

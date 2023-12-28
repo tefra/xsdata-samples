@@ -12,9 +12,7 @@ class TariffRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "tariffRefs_RelStructure"
 
-    parking_tariff_ref_or_tariff_ref: List[
-        Union[ParkingTariffRef, TariffRef]
-    ] = field(
+    tariff_ref: List[Union[ParkingTariffRef, TariffRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

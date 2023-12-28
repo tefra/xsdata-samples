@@ -58,7 +58,7 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    type_of_entity: Optional[
         Union[
             TypeOfRetailDevice,
             CustomerAccountStatus,

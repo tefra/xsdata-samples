@@ -32,7 +32,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[
+    scheduled_stop_point_ref: Optional[
         Union[FareScheduledStopPointRef, ScheduledStopPointRef]
     ] = field(
         default=None,
@@ -60,9 +60,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_line_ref_or_line_ref: Optional[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -88,7 +86,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    journey_pattern_ref: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,

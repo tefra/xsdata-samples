@@ -19,7 +19,7 @@ class GeographicalIntervalPricesRelStructure(
     class Meta:
         name = "geographicalIntervalPrices_RelStructure"
 
-    geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref: List[
+    cell_ref: List[
         Union[
             GeographicalIntervalPriceRef,
             GeographicalIntervalPriceVersionedChildStructure,

@@ -39,7 +39,7 @@ class LocalServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "localServices_RelStructure"
 
-    choice: List[
+    local_service_ref_or_local_service_or_customer_service: List[
         Union[
             AssistanceBookingServiceRef,
             CateringServiceRef,

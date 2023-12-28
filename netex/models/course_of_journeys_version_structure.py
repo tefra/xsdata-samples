@@ -82,9 +82,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_block_ref_or_block_ref: Optional[
-        Union[TrainBlockRef, BlockRef]
-    ] = field(
+    block_ref: Optional[Union[TrainBlockRef, BlockRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -102,9 +100,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    flexible_line_ref_or_line_ref: Optional[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

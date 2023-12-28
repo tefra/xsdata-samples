@@ -97,7 +97,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    choice_1=[
+                    version_frame_ref=[
                         CompositeFrameRef(
                             ref='tfl:LU_CF001'
                         ),
@@ -111,7 +111,7 @@ obj = PublicationDelivery(
         value='Netex basic Versioning Example Step 05'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='tfl:LU_CF001',
                 version='1',
@@ -171,7 +171,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ResourceFrame(
                             id='tfl:LU_RF001',
                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -255,7 +255,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='napt:Stop_types',
                                         version='any',
@@ -263,7 +263,7 @@ obj = PublicationDelivery(
                                             value='UK NaPTAN Stop Types'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfPoint(
                                                     id='napt:Type_of_point@TMU',
                                                     version='any',
@@ -288,7 +288,7 @@ obj = PublicationDelivery(
                                             value='UK NaPTAN Stop  Area Types'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfZone(
                                                     id='napt:Type_of_zone@GTMU',
                                                     version='any',
@@ -313,7 +313,7 @@ obj = PublicationDelivery(
                                             value='Mode Names'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 OpenTransportMode(
                                                     id='napt:Metro',
                                                     version='any',
@@ -356,7 +356,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='tfl:Old_01',
                                         version='any',
@@ -421,7 +421,7 @@ obj = PublicationDelivery(
                                     value='London Underground Including DLR and Overground '
                                 ),
                                 members=LineRefsRelStructure(
-                                    flexible_line_ref_or_line_ref=[
+                                    line_ref=[
                                         LineRef(
                                             version='002',
                                             ref='lul:BAK'
@@ -476,7 +476,7 @@ obj = PublicationDelivery(
                                         ),
                                     ]
                                 ),
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     version='any',
                                     ref='tfl:Old_01'
                                 )
@@ -528,7 +528,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='lul:BAK',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
@@ -1180,7 +1180,7 @@ obj = PublicationDelivery(
                                             value='Subsurface lines'
                                         ),
                                         members=LineRefsRelStructure(
-                                            flexible_line_ref_or_line_ref=[
+                                            line_ref=[
                                                 LineRef(
                                                     version='002',
                                                     ref='lul:CIR'
@@ -1213,7 +1213,7 @@ obj = PublicationDelivery(
                                             ),
                                         ],
                                         members=LineRefsRelStructure(
-                                            flexible_line_ref_or_line_ref=[
+                                            line_ref=[
                                                 LineRef(
                                                     version='002',
                                                     ref='lul:BAK'
@@ -1266,7 +1266,7 @@ obj = PublicationDelivery(
                                             ),
                                         ],
                                         members=LineRefsRelStructure(
-                                            flexible_line_ref_or_line_ref=[
+                                            line_ref=[
                                                 LineRef(
                                                     version='002',
                                                     ref='lul:DLR'

@@ -19,7 +19,7 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "SecurityListingRefs_RelStructure"
 
-    choice: List[
+    security_listing_ref: List[
         Union[
             TravelDocumentSecurityListingRef,
             RetailDeviceSecurityListingRef,

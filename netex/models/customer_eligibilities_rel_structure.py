@@ -16,7 +16,7 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customerEligibilities_RelStructure"
 
-    choice: List[
+    customer_eligibility: List[
         Union[
             ResidentialQualificationEligibility,
             CommercialProfileEligibility,

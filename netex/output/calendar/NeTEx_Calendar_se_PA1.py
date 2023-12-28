@@ -30,7 +30,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    choice_1=[
+                    version_frame_ref=[
                         ServiceCalendarFrameRef(
                             ref='noptis:9085002000100000'
                         ),
@@ -44,7 +44,7 @@ obj = PublicationDelivery(
         value='Noptis simple Simple service calendar  example'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             ServiceCalendarFrame(
                 id='noptis:9085002000100000',
                 version='any',
@@ -74,7 +74,7 @@ obj = PublicationDelivery(
                     from_date=XmlDate(2007, 6, 17),
                     to_date=XmlDate(2008, 6, 14),
                     day_types=DayTypesRelStructure(
-                        choice=[
+                        day_type_ref_or_day_type=[
                             DayType(
                                 id='noptis:9086002000100001',
                                 version='any'
@@ -92,7 +92,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 order=1,
                                 operating_period_ref_or_operating_day_ref_or_date=XmlDate(2007, 6, 17),
-                                fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                day_type_ref=DayTypeRef(
                                     version='any',
                                     ref='noptis:9086002000100001'
                                 )
@@ -102,7 +102,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 order=1,
                                 operating_period_ref_or_operating_day_ref_or_date=XmlDate(2007, 6, 24),
-                                fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                day_type_ref=DayTypeRef(
                                     version='any',
                                     ref='noptis:9086002000100001'
                                 )
@@ -112,7 +112,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 order=1,
                                 operating_period_ref_or_operating_day_ref_or_date=XmlDate(2007, 6, 18),
-                                fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                day_type_ref=DayTypeRef(
                                     version='any',
                                     ref='noptis:9086002000100002'
                                 )
@@ -122,7 +122,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 order=1,
                                 operating_period_ref_or_operating_day_ref_or_date=XmlDate(2007, 6, 25),
-                                fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                day_type_ref=DayTypeRef(
                                     version='any',
                                     ref='noptis:9086002000100002'
                                 )

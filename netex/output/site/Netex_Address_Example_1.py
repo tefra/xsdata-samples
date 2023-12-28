@@ -76,17 +76,17 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             SiteFrame(
                 id='SiteFrame:SF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='mysite:PP01_OpeningHours',
                                 version='any',
                                 day_types=DayTypesRelStructure(
-                                    choice=[
+                                    day_type_ref_or_day_type=[
                                         DayType(
                                             id='mysite:EveryDay',
                                             version='any',
@@ -125,7 +125,7 @@ obj = PublicationDelivery(
                                 id='mysite:PP01_ExitHours',
                                 version='any',
                                 day_types=DayTypesRelStructure(
-                                    choice=[
+                                    day_type_ref_or_day_type=[
                                         DayType(
                                             id='mysite:24HrsEveryDay',
                                             version='any',
@@ -173,7 +173,7 @@ obj = PublicationDelivery(
                             id='mysite::PP01',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityConditionRef(
                                             version='any',
                                             ref='mysite:PP01_OpeningHours'
@@ -242,12 +242,12 @@ obj = PublicationDelivery(
                             site_type=SiteTypeEnumeration.RETAIL,
                             at_centre=True,
                             entrances=SiteEntrancesRelStructure(
-                                choice=[
+                                entrance_ref_or_parking_entrance_ref_or_entrance=[
                                     ParkingEntranceForVehicles(
                                         id='mysite:PP_E11_Entrance',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mysite:PP01_OpeningHours'
@@ -277,7 +277,7 @@ obj = PublicationDelivery(
                                         id='mysite:PP_E12_Exit',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mysite:PP01_ExitHours'
@@ -415,7 +415,7 @@ obj = PublicationDelivery(
                             id='mysite::PS22',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='mysite:ParkingChargeHours',
                                             version='any',
@@ -426,7 +426,7 @@ obj = PublicationDelivery(
                                                 value='Modnay to friday not PublicHolidays'
                                             ),
                                             day_types=DayTypesRelStructure(
-                                                choice=[
+                                                day_type_ref_or_day_type=[
                                                     DayType(
                                                         id='mysite:WorkingDay',
                                                         version='any',

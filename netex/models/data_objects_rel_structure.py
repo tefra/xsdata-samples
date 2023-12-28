@@ -23,7 +23,7 @@ class DataObjectsRelStructure:
     class Meta:
         name = "dataObjects_RelStructure"
 
-    choice: List[
+    common_frame: List[
         Union[
             CompositeFrame,
             SalesTransactionFrame,

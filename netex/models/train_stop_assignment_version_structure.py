@@ -20,7 +20,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "TrainStopAssignment_VersionStructure"
 
-    vehicle_journey_stop_assignment_ref_or_dynamic_stop_assignment_ref_or_passenger_stop_assignment_ref: Optional[
+    passenger_stop_assignment_ref: Optional[
         Union[
             VehicleJourneyStopAssignmentRef,
             DynamicStopAssignmentRef,

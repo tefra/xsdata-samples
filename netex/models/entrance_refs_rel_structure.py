@@ -21,7 +21,7 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "entranceRefs_RelStructure"
 
-    choice: List[
+    entrance_ref_or_parking_entrance_ref: List[
         Union[
             StopPlaceVehicleEntranceRef,
             StopPlaceEntranceRef,

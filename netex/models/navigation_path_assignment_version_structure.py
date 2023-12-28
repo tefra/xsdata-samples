@@ -19,7 +19,7 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "NavigationPathAssignment_VersionStructure"
 
-    default_connection_ref_or_site_connection_ref_or_connection_ref: Optional[
+    connection_ref: Optional[
         Union[DefaultConnectionRef, SiteConnectionRef, ConnectionRef]
     ] = field(
         default=None,
@@ -44,7 +44,7 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         },
     )
-    choice: Optional[
+    site_ref: Optional[
         Union[
             StopPlaceRef,
             ParkingRef,

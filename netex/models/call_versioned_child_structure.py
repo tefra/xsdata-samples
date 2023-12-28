@@ -49,7 +49,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[
+    scheduled_stop_point_ref: Optional[
         Union[
             FareScheduledStopPointRef,
             ScheduledStopPointRef,
@@ -114,7 +114,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    template_service_journey_ref_or_service_journey_ref: Optional[
+    service_journey_ref: Optional[
         Union[TemplateServiceJourneyRef, ServiceJourneyRef]
     ] = field(
         default=None,

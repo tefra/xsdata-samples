@@ -23,7 +23,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
     class Meta:
         name = "DatedSpecialService_VersionStructure"
 
-    choice_1: Optional[
+    choice: Optional[
         Union[
             DatedVehicleJourneyRef,
             DatedSpecialServiceRef,

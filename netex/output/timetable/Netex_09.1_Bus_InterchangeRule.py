@@ -61,7 +61,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
-                        choice=[
+                        validity_condition=[
                             AvailabilityCondition(
                                 id='hde:CAL_02',
                                 version='any',
@@ -69,7 +69,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    choice_1=[
+                    version_frame_ref=[
                         TimetableFrameRef(
                             value='REQUEST',
                             ref='hde:TimetableFrameTIM_23_O'
@@ -84,7 +84,7 @@ obj = PublicationDelivery(
         value='Example  of simple intyerchange rulkes'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='hde:CAL_02',
                 version='2',
@@ -110,7 +110,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ServiceFrame(
                             id='mybus:svf_12',
                             version='1',
@@ -216,7 +216,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='mybus:LN_1',
                                         version='any',
@@ -393,7 +393,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             connections=TransfersInFrameRelStructure(
-                                choice=[
+                                transfer=[
                                     Connection(
                                         id='mybus:CX_25',
                                         version='any',
@@ -426,7 +426,7 @@ obj = PublicationDelivery(
                             id='hde:TIM_23_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='hde:Cnd001',
                                             version='any',
@@ -507,7 +507,7 @@ obj = PublicationDelivery(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             all_lines_or_lines_in_direction_refs_or_line_in_direction_ref=[
                                                 LineInDirectionRef(
-                                                    flexible_line_ref_or_line_ref=LineRef(
+                                                    line_ref=LineRef(
                                                         version='any',
                                                         ref='mybus:LN_1'
                                                     ),
@@ -517,7 +517,7 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                             ],
-                                            fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                            scheduled_stop_point_ref=ScheduledStopPointRef(
                                                 version='any',
                                                 ref='mybus:SSP_025'
                                             ),
@@ -594,7 +594,7 @@ obj = PublicationDelivery(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             all_lines_or_lines_in_direction_refs_or_line_in_direction_ref=[
                                                 LineInDirectionRef(
-                                                    flexible_line_ref_or_line_ref=LineRef(
+                                                    line_ref=LineRef(
                                                         version='any',
                                                         ref='mybus:LN_6'
                                                     ),
@@ -604,7 +604,7 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                             ],
-                                            fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                            scheduled_stop_point_ref=ScheduledStopPointRef(
                                                 version='any',
                                                 ref='mybus:SSP_025'
                                             ),
@@ -633,7 +633,7 @@ obj = PublicationDelivery(
                                 ref='hde:1'
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Authority(
                                         id='hde:TFO',
                                         version='101',
@@ -651,7 +651,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Mission Central'
                                         ),
-                                        choice=AuthorityRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=AuthorityRef(
                                             version='101',
                                             ref='hde:TFO'
                                         )

@@ -111,12 +111,12 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             SiteFrame(
                 id='oda:SF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='oda:SF01',
                                 version='any',
@@ -273,7 +273,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             entrances=SiteEntrancesRelStructure(
-                                choice=[
+                                entrance_ref_or_parking_entrance_ref_or_entrance=[
                                     PointOfInterestEntrance(
                                         id='tbd:POI_23_A1-E1',
                                         version='any',
@@ -577,7 +577,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         local_services=LocalServicesRelStructure(
-                                            choice=[
+                                            local_service_ref_or_local_service_or_customer_service=[
                                                 AssistanceService(
                                                     id='tbd:POI_23_A1-E1_Eq3',
                                                     version='any',

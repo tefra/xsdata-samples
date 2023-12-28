@@ -17,7 +17,7 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "groupMembershipRefs_RelStructure"
 
-    choice: List[
+    zone_ref_or_tariff_zone_ref: List[
         Union[
             StopAreaRef,
             AccessZoneRef,

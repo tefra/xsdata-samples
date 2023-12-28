@@ -16,7 +16,7 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "customerEligibilityRefs_RelStructure"
 
-    choice: List[
+    customer_eligibility_ref: List[
         Union[
             ResidentialQualificationEligibilityRef,
             CommercialProfileEligibilityRef,

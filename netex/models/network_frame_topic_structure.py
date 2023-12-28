@@ -82,7 +82,7 @@ class NetworkFrameTopicStructure(TopicStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_1: List[
+    version_frame_ref: List[
         Union[
             SalesTransactionFrameRef,
             FareFrameRef,
@@ -174,7 +174,7 @@ class NetworkFrameTopicStructure(TopicStructure):
 
     @dataclass
     class SelectionValidityConditions:
-        choice: List[
+        validity_condition: List[
             Union[
                 SimpleAvailabilityCondition,
                 ValidDuring,

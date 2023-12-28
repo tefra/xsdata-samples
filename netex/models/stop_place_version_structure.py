@@ -55,7 +55,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_1: Optional[
+    choice: Optional[
         Union[
             AirSubmodeEnumeration,
             BusSubmodeEnumeration,

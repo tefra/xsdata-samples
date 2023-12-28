@@ -17,7 +17,7 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareProductsInFrame_RelStructure"
 
-    choice: List[
+    fare_product: List[
         Union[
             SupplementProduct,
             PreassignedFareProduct,

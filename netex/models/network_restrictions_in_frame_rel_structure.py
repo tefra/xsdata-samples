@@ -14,7 +14,7 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "networkRestrictionsInFrame_RelStructure"
 
-    choice: List[
+    network_restriction: List[
         Union[
             OvertakingPossibility,
             MeetingRestriction,

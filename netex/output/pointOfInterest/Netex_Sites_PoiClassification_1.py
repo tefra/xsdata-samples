@@ -28,7 +28,7 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             SiteFrame(
                 id='poix:POI_Classifications',
                 version='any',

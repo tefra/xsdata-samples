@@ -36,7 +36,7 @@ class LineShapeStructure2(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    link_ref_or_infrastructure_link_ref: Optional[
         Union[
             ServiceLinkRef,
             LineLinkRef,

@@ -77,7 +77,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    site_ref: Optional[
         Union[
             StopPlaceRef,
             ParkingRef,

@@ -141,7 +141,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    choice_1=[
+                    version_frame_ref=[
                         NetworkFilterByValueStructure(
                             places=NetworkFilterByValueStructure.Places(
                                 choice=[
@@ -162,12 +162,12 @@ obj = PublicationDelivery(
         value='Olympic Park - Complex site Example '
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='oda:OPK_01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='oda:OPK_01',
                                 version='any',
@@ -224,7 +224,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ServiceCalendarFrame(
                             id='oda:CAL_01',
                             version='any',
@@ -238,7 +238,7 @@ obj = PublicationDelivery(
                                 to_date=XmlDate(2012, 8, 7)
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     DayType(
                                         id='oda:DT01_Very_Busy',
                                         version='any',
@@ -399,7 +399,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 7, 27),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='oda:DT01_Very_Busy'
                                         )
@@ -412,7 +412,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 7, 28),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='oda:DT01_Very_Busy'
                                         )
@@ -425,7 +425,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 7, 29),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='oda:DT01_Very_Busy'
                                         )
@@ -438,7 +438,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 7, 30),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='oda:DT02_Busy'
                                         )
@@ -451,7 +451,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 7, 31),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='oda:DT03_Normal'
                                         )
@@ -464,7 +464,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 8, 1),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='oda:DT03_Normal'
                                         )
@@ -477,7 +477,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 8, 2),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='oda:DT02_Busy'
                                         )
@@ -490,7 +490,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 8, 3),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='oda:DT02_Busy'
                                         )
@@ -503,7 +503,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 8, 4),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='oda:DT02_Busy'
                                         )
@@ -516,7 +516,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 8, 5),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='oda:DT02_Busy'
                                         )
@@ -528,7 +528,7 @@ obj = PublicationDelivery(
                             id='oda:OPK_Fr001',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='nptg:OPK_Fr001',
                                             version='any',
@@ -544,12 +544,12 @@ obj = PublicationDelivery(
                                 value='Olympic Park Frame'
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                choice=[
+                                validity_condition_ref_or_validity_condition=[
                                     AvailabilityCondition(
                                         id='oda:Avl_Very_Busy_ingress',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT01_Very_Busy'
@@ -569,7 +569,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Very_Busy_during',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT01_Very_Busy'
@@ -589,7 +589,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Very_Busy_egress',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT01_Very_Busy'
@@ -609,7 +609,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Very_Busy_other',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT01_Very_Busy'
@@ -621,7 +621,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Busy_ingress',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT02_Busy'
@@ -641,7 +641,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Busy_during',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT02_Busy'
@@ -661,7 +661,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Busy_egress',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT02_Busy'
@@ -681,7 +681,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Busy_other',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT02_Busy'
@@ -693,7 +693,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Normal_ingress',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT03_Normal'
@@ -713,7 +713,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Normal_during',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT03_Normal'
@@ -733,7 +733,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Normal_egress',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT03_Normal'
@@ -753,7 +753,7 @@ obj = PublicationDelivery(
                                         id='oda:Avl_Normal_other',
                                         version='any',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='oda:DT03_Normal'
@@ -1667,7 +1667,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPK_E1',
                                                     version='any',
@@ -1756,7 +1756,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
@@ -1774,7 +1774,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C1_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
@@ -1792,7 +1792,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -1810,7 +1810,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
@@ -1828,7 +1828,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C1_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
@@ -1846,7 +1846,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -1864,7 +1864,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C1_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
@@ -1882,7 +1882,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -1916,7 +1916,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C2_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
@@ -1934,7 +1934,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
@@ -1952,7 +1952,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -1970,7 +1970,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C2_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
@@ -1988,7 +1988,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
@@ -2006,7 +2006,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -2024,7 +2024,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C2_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
@@ -2042,7 +2042,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C2_Del_N_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
@@ -2060,7 +2060,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -2080,7 +2080,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     local_services=LocalServicesRelStructure(
-                                                        choice=[
+                                                        local_service_ref_or_local_service_or_customer_service=[
                                                             AssistanceService(
                                                                 id='naptPoi:8100OPK_E1_Eq3',
                                                                 version='any',
@@ -2169,7 +2169,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
@@ -2187,7 +2187,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C1_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
@@ -2205,7 +2205,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -2223,7 +2223,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
@@ -2241,7 +2241,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C1_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
@@ -2259,7 +2259,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -2277,7 +2277,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C1_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
@@ -2295,7 +2295,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -2329,7 +2329,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C2_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
@@ -2347,7 +2347,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
@@ -2365,7 +2365,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -2383,7 +2383,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C2_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
@@ -2401,7 +2401,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
@@ -2419,7 +2419,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -2437,7 +2437,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C2_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
@@ -2455,7 +2455,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C2_Del_N_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
@@ -2473,7 +2473,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E1acc_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -2493,7 +2493,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     local_services=LocalServicesRelStructure(
-                                                        choice=[
+                                                        local_service_ref_or_local_service_or_customer_service=[
                                                             AssistanceService(
                                                                 id='naptPoi:8100OPK_E1_AS1',
                                                                 version='any',
@@ -2596,7 +2596,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
@@ -2614,7 +2614,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C1_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
@@ -2632,7 +2632,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -2650,7 +2650,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
@@ -2668,7 +2668,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C1_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
@@ -2686,7 +2686,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -2704,7 +2704,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C1_Del_N_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_ingress'
@@ -2722,7 +2722,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C1_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
@@ -2740,7 +2740,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -2774,7 +2774,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C2_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
@@ -2792,7 +2792,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
@@ -2810,7 +2810,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -2828,7 +2828,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C2_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
@@ -2846,7 +2846,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
@@ -2864,7 +2864,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -2882,7 +2882,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C2_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
@@ -2900,7 +2900,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C2_Del_N_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
@@ -2918,7 +2918,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E2_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -2938,7 +2938,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     local_services=LocalServicesRelStructure(
-                                                        choice=[
+                                                        local_service_ref_or_local_service_or_customer_service=[
                                                             AssistanceService(
                                                                 id='naptPoi:8100OPK_A1_E2_Eq3',
                                                                 version='any',
@@ -3041,7 +3041,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
@@ -3059,7 +3059,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C1_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
@@ -3077,7 +3077,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -3095,7 +3095,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
@@ -3113,7 +3113,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C1_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
@@ -3131,7 +3131,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -3149,7 +3149,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C1_Del_N_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_ingress'
@@ -3167,7 +3167,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C1_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
@@ -3185,7 +3185,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -3219,7 +3219,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C2_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
@@ -3237,7 +3237,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
@@ -3255,7 +3255,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -3273,7 +3273,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C2_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
@@ -3291,7 +3291,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
@@ -3309,7 +3309,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -3327,7 +3327,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C2_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
@@ -3345,7 +3345,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C2_Del_N_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
@@ -3363,7 +3363,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E3_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -3383,7 +3383,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     local_services=LocalServicesRelStructure(
-                                                        choice=[
+                                                        local_service_ref_or_local_service_or_customer_service=[
                                                             AssistanceService(
                                                                 id='naptPoi:8100OPK_E3_Eq3',
                                                                 version='any',
@@ -3486,7 +3486,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
@@ -3504,7 +3504,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C1_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
@@ -3522,7 +3522,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -3540,7 +3540,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
@@ -3558,7 +3558,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C1_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
@@ -3576,7 +3576,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -3594,7 +3594,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C1_Del_N_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_ingress'
@@ -3612,7 +3612,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C1_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
@@ -3630,7 +3630,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -3664,7 +3664,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C2_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
@@ -3682,7 +3682,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
@@ -3700,7 +3700,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -3718,7 +3718,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C2_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
@@ -3736,7 +3736,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
@@ -3754,7 +3754,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E4_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -3772,7 +3772,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E5_C2_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
@@ -3790,7 +3790,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E5_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
@@ -3808,7 +3808,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E5_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -3828,7 +3828,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     local_services=LocalServicesRelStructure(
-                                                        choice=[
+                                                        local_service_ref_or_local_service_or_customer_service=[
                                                             AssistanceService(
                                                                 id='naptPoi:8100OPK_E4_Eq3',
                                                                 version='any',
@@ -3932,7 +3932,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E5_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
@@ -3950,7 +3950,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E5_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -3968,7 +3968,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E5_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -4002,7 +4002,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_E5_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -4022,7 +4022,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     local_services=LocalServicesRelStructure(
-                                                        choice=[
+                                                        local_service_ref_or_local_service_or_customer_service=[
                                                             AssistanceService(
                                                                 id='naptPoi:8100OPK_E4_LS3',
                                                                 version='any',
@@ -7799,7 +7799,7 @@ obj = PublicationDelivery(
                                             ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPK_V2_HOCK_E1',
                                                     version='any',
@@ -7894,7 +7894,7 @@ obj = PublicationDelivery(
                                             ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPK_V3_HAND_E1',
                                                     version='any',
@@ -7970,7 +7970,7 @@ obj = PublicationDelivery(
                                             ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPK_V4_AQUA_E1',
                                                     version='any',
@@ -8050,7 +8050,7 @@ obj = PublicationDelivery(
                                             ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPK_V5_WPOL_E1',
                                                     version='any',
@@ -8131,7 +8131,7 @@ obj = PublicationDelivery(
                                             ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPK_V6_BKTB_E1',
                                                     version='any',
@@ -8207,7 +8207,7 @@ obj = PublicationDelivery(
                                             ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPK_V7_VELO_E1',
                                                     version='any',
@@ -8283,7 +8283,7 @@ obj = PublicationDelivery(
                                             ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPK_V8_BMXT_E1',
                                                     version='any',
@@ -8317,7 +8317,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
@@ -8335,7 +8335,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -8353,7 +8353,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
@@ -8371,7 +8371,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -8389,7 +8389,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_N_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_ingress'
@@ -8407,7 +8407,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -8441,7 +8441,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
@@ -8459,7 +8459,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
@@ -8477,7 +8477,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
@@ -8495,7 +8495,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
@@ -8513,7 +8513,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_N_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
@@ -8531,7 +8531,7 @@ obj = PublicationDelivery(
                                                                             id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
@@ -8596,7 +8596,7 @@ obj = PublicationDelivery(
                                             ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPK_V9_EMAN_E1',
                                                     version='any',
@@ -8658,7 +8658,7 @@ obj = PublicationDelivery(
                                             ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPK_V10_PRSC_E1',
                                                     version='any',
@@ -8794,7 +8794,7 @@ obj = PublicationDelivery(
                                 value='NaPTAN Types'
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='napt:Stop_types',
                                         version='any',
@@ -8802,7 +8802,7 @@ obj = PublicationDelivery(
                                             value='UK NaPTAN Zone  Types'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfZone(
                                                     id='napt:type_of_zone@GTMU',
                                                     version='any',
@@ -8841,7 +8841,7 @@ obj = PublicationDelivery(
                                             value='NAPTAN Type of Place'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfPlace(
                                                     id='napt:type_of_place@Park',
                                                     version='any',

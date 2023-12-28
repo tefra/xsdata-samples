@@ -25,7 +25,7 @@ class JourneyPatternHeadwayVersionedChildStructure(
     class Meta:
         name = "JourneyPatternHeadway_VersionedChildStructure"
 
-    choice: Optional[
+    journey_pattern_ref: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,
@@ -60,7 +60,7 @@ class JourneyPatternHeadwayVersionedChildStructure(
             ),
         },
     )
-    choice_1: Optional[
+    choice: Optional[
         Union[
             BorderPointRef,
             FareScheduledStopPointRef,

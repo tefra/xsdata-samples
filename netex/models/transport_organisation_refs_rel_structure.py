@@ -12,9 +12,7 @@ class TransportOrganisationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "transportOrganisationRefs_RelStructure"
 
-    authority_ref_or_operator_ref: List[
-        Union[AuthorityRef, OperatorRef]
-    ] = field(
+    transport_organisation_ref: List[Union[AuthorityRef, OperatorRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

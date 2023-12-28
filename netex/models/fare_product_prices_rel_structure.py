@@ -15,7 +15,7 @@ class FareProductPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareProductPrices_RelStructure"
 
-    fare_product_price_ref_or_cell_ref_or_fare_product_price: List[
+    cell_ref: List[
         Union[FareProductPriceRef, CellRef, FareProductPrice]
     ] = field(
         default_factory=list,

@@ -82,7 +82,7 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_1: Optional[
+    point_in_journey_pattern_ref: Optional[
         Union[
             FarePointInPatternRef,
             StopPointInJourneyPatternRef,

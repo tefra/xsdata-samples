@@ -352,7 +352,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
-                        choice=[
+                        validity_condition=[
                             AvailabilityCondition(
                                 id='hde:CAL_02',
                                 version='any',
@@ -360,7 +360,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    choice_1=[
+                    version_frame_ref=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='tfl:any'
@@ -375,12 +375,12 @@ obj = PublicationDelivery(
         value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='tfl:TfL_Tariff_Example2013',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             ValidBetween(
                                 from_date=XmlDateTime(2013, 1, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2014, 7, 1, 0, 0, 0, 0, 0)
@@ -412,7 +412,7 @@ obj = PublicationDelivery(
                     default_currency='GBP'
                 ),
                 content_validity_conditions=ValidityConditionsRelStructure(
-                    choice=[
+                    validity_condition_ref_or_validity_condition=[
                         AvailabilityCondition(
                             id='tfl:Peak',
                             version='any',
@@ -423,7 +423,7 @@ obj = PublicationDelivery(
                                 value='Conditions for Peak/OffPeak \n\nhttp://www.tfl.gov.uk/tickets/14837.aspx\n\nThere is a peak and off-peak daily price cap, depending on when you touch in on the yellow card readers, not when you travel.\n\nPeak\nMonday-Friday 04:30-09:29\nOff-peak\nMonday-Friday from 09:30-04:29 (the following day)\nSaturdays, Sundays and public holidays from 04:30-04:29 (the following day)\nSpecial peak and off-peak times apply on journeys that start at stations north of Moor Park and from some Southern Region stations.\n'
                             ),
                             day_types=DayTypesRelStructure(
-                                choice=[
+                                day_type_ref_or_day_type=[
                                     DayType(
                                         id='tfl:Peak',
                                         version='any',
@@ -456,7 +456,7 @@ obj = PublicationDelivery(
                             id='tfl:OffPeak',
                             version='any',
                             day_types=DayTypesRelStructure(
-                                choice=[
+                                day_type_ref_or_day_type=[
                                     DayType(
                                         id='tfl:OffPeak_Weekday',
                                         version='any',
@@ -543,7 +543,7 @@ obj = PublicationDelivery(
                             id='tfl:Travel_times_MF_day',
                             version='any',
                             day_types=DayTypesRelStructure(
-                                choice=[
+                                day_type_ref_or_day_type=[
                                     DayType(
                                         id='tfl:Travel_times_MF_day',
                                         version='any',
@@ -576,7 +576,7 @@ obj = PublicationDelivery(
                             id='tfl:Travel_times_MF_evening_and_Saturday',
                             version='any',
                             day_types=DayTypesRelStructure(
-                                choice=[
+                                day_type_ref_or_day_type=[
                                     DayType(
                                         id='tfl:Travel_times_MF_evening',
                                         version='any',
@@ -622,7 +622,7 @@ obj = PublicationDelivery(
                             id='tfl:Travel_times_Sunday',
                             version='any',
                             day_types=DayTypesRelStructure(
-                                choice=[
+                                day_type_ref_or_day_type=[
                                     DayType(
                                         id='tfl:Travel_times_Sunday',
                                         version='any',
@@ -643,7 +643,7 @@ obj = PublicationDelivery(
                             id='tfl:Travel_times_FamilyDay',
                             version='any',
                             day_types=DayTypesRelStructure(
-                                choice=[
+                                day_type_ref_or_day_type=[
                                     DayType(
                                         id='tfl:Travel_times_FamilyDay@MF',
                                         version='any',
@@ -687,7 +687,7 @@ obj = PublicationDelivery(
                             id='tfl:Travel_times_Freedom_pass',
                             version='any',
                             day_types=DayTypesRelStructure(
-                                choice=[
+                                day_type_ref_or_day_type=[
                                     DayType(
                                         id='tfl:Travel_times_Freedom_pass@MF',
                                         version='any',
@@ -730,7 +730,7 @@ obj = PublicationDelivery(
                     ]
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         SiteFrame(
                             id='tfl:TfL@Network',
                             version='1',
@@ -758,7 +758,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Liverpool_Street_Station_Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='tfl:Visitor_Centre_opening_times@LVP_EUS',
                                                                     version='1',
@@ -766,7 +766,7 @@ obj = PublicationDelivery(
                                                                         value='Monday to Thursday: 07:15-19:00 \n\t\t\t\t\t\t\t\t\t\t\tFriday: 07:15-20:00 \n\t\t\t\t\t\t\t\t\t\t\tSaturday: 07:15-19:00 \n\t\t\t\t\t\t\t\t\t\t\tSunday and Bank Holidays: 08:15-19:00'
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
-                                                                        choice=[
+                                                                        day_type_ref_or_day_type=[
                                                                             DayType(
                                                                                 id='tfl:LVP_EUS@DayType:Mon-Tue-Wed--Thur-Sat',
                                                                                 version='1',
@@ -923,7 +923,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Piccadilly_Circus_Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='tfl:Visitor_Centre_opening_times@PIC',
                                                                     version='1',
@@ -931,7 +931,7 @@ obj = PublicationDelivery(
                                                                         value='Monday to Friday: 07:45-19:00\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSaturday (including Bank Holiday): 09:15-19:00\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSunday: 09:15-18:00'
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
-                                                                        choice=[
+                                                                        day_type_ref_or_day_type=[
                                                                             DayType(
                                                                                 id='tfl:PIC@Weekdays',
                                                                                 version='1',
@@ -1055,7 +1055,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Euston_Station_Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='1',
                                                                     ref='tfl:Visitor_Centre_opening_times@LVP_EUS'
@@ -1096,7 +1096,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Victoria_Station_Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='tfl:Visitor_Centre_opening_times@VIC_KGX',
                                                                     version='1',
@@ -1104,7 +1104,7 @@ obj = PublicationDelivery(
                                                                         value='Monday to Saturday: \t07:15-20:00\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSunday and Bank Holidays: 08:15-19:00'
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
-                                                                        choice=[
+                                                                        day_type_ref_or_day_type=[
                                                                             DayType(
                                                                                 id='tfl:VIC_KGX@Mon-Tue-Wed-Thur-Fri-Sat',
                                                                                 version='1',
@@ -1185,7 +1185,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Heathrow_Terminal_123_Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='tfl:Visitor_Centre_opening_times@HTR',
                                                                     version='1',
@@ -1193,7 +1193,7 @@ obj = PublicationDelivery(
                                                                         value='Monday to Sunday: 07:30-19:30'
                                                                     ),
                                                                     day_types=DayTypesRelStructure(
-                                                                        choice=[
+                                                                        day_type_ref_or_day_type=[
                                                                             DayType(
                                                                                 id='tfl:HTR@Everyday',
                                                                                 version='1',
@@ -1262,7 +1262,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Kings_Cross_Station_ Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='1',
                                                                     ref='tfl:Visitor_Centre_opening_times@VIC_KGX'
@@ -1302,7 +1302,7 @@ obj = PublicationDelivery(
                                 short_name=MultilingualString(
                                     value='TfL'
                                 ),
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     version='any',
                                     ref='tfl:LUL'
                                 ),
@@ -1315,7 +1315,7 @@ obj = PublicationDelivery(
                                                 value='Subsurface lines'
                                             ),
                                             members=LineRefsRelStructure(
-                                                flexible_line_ref_or_line_ref=[
+                                                line_ref=[
                                                     LineRef(
                                                         version='002',
                                                         ref='lul:CIR'
@@ -1348,7 +1348,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ],
                                             members=LineRefsRelStructure(
-                                                flexible_line_ref_or_line_ref=[
+                                                line_ref=[
                                                     LineRef(
                                                         version='002',
                                                         ref='lul:BAK'
@@ -1491,7 +1491,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='lul:BAK',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
@@ -2151,7 +2151,7 @@ obj = PublicationDelivery(
                                             value='Rail lines alloowed on Group Ticket'
                                         ),
                                         members=LineRefsRelStructure(
-                                            flexible_line_ref_or_line_ref=[
+                                            line_ref=[
                                                 LineRef(
                                                     ref='Amersham+Marylebone',
                                                     version_ref='EXTERNAL'
@@ -2825,7 +2825,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
-                                fare_zone_or_tariff_zone=[
+                                tariff_zone=[
                                     TariffZone(
                                         id='tfl:Zone_1',
                                         version='any',
@@ -2928,7 +2928,7 @@ obj = PublicationDelivery(
                                 short_name=MultilingualString(
                                     value='DLR'
                                 ),
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     version='any',
                                     ref='tfl:DLR'
                                 ),
@@ -3347,7 +3347,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
-                                fare_zone_or_tariff_zone=[
+                                tariff_zone=[
                                     TariffZone(
                                         id='nr:Theobalds_Grove_and_Waltham_Cross',
                                         version='any',
@@ -3397,7 +3397,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='nr:Chingford+Liverpool_Street',
                                         version='any',
@@ -3410,7 +3410,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@Chingford',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Chingford'
                                                     )
@@ -3419,7 +3419,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@Highams_Park',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Highams_Park'
                                                     )
@@ -3428,7 +3428,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@Wood_Street',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Wood_Street'
                                                     )
@@ -3437,7 +3437,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@Walthamstow_Central',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='tfl:Walthamstow_Central'
                                                     )
@@ -3446,7 +3446,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@St_James_Street',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:St_James_Street'
                                                     )
@@ -3455,7 +3455,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@Clapton',
                                                     version='any',
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Clapton'
                                                     )
@@ -3464,7 +3464,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@Hackney_Downs',
                                                     version='any',
                                                     order=7,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Hackney_Downs'
                                                     )
@@ -3473,7 +3473,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@London_Fields',
                                                     version='any',
                                                     order=8,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:London_Fields'
                                                     )
@@ -3482,7 +3482,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@Cambridge_Heath',
                                                     version='any',
                                                     order=9,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Cambridge_Heath'
                                                     )
@@ -3491,7 +3491,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@Bethnal_Green',
                                                     version='any',
                                                     order=10,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='tfl:Bethnal_Green'
                                                     )
@@ -3500,7 +3500,7 @@ obj = PublicationDelivery(
                                                     id='nr:Chingford+Liverpool_Street@Liverpool_Street',
                                                     version='any',
                                                     order=11,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='tfl:Liverpool_Street'
                                                     )
@@ -3520,7 +3520,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Shenfield',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Shenfield'
                                                     )
@@ -3529,7 +3529,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Brentwood',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Brentwood'
                                                     )
@@ -3538,7 +3538,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Harold_Wood',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Harold_Wood'
                                                     )
@@ -3547,7 +3547,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Gidea_Park',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Gidea_Park'
                                                     )
@@ -3556,7 +3556,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Romford',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Romford'
                                                     )
@@ -3565,7 +3565,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Chadwell_Heath',
                                                     version='any',
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Chadwell_Heath'
                                                     )
@@ -3574,7 +3574,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Goodmayes',
                                                     version='any',
                                                     order=7,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Goodmayes'
                                                     )
@@ -3583,7 +3583,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Seven_Kings',
                                                     version='any',
                                                     order=8,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Seven_Kings'
                                                     )
@@ -3592,7 +3592,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Ilford',
                                                     version='any',
                                                     order=9,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Ilford'
                                                     )
@@ -3601,7 +3601,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Manor_Park',
                                                     version='any',
                                                     order=10,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Manor_Park'
                                                     )
@@ -3610,7 +3610,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Forest_Gate',
                                                     version='any',
                                                     order=11,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Forest_Gate'
                                                     )
@@ -3619,7 +3619,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Maryland',
                                                     version='any',
                                                     order=12,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='nr:Maryland'
                                                     )
@@ -3628,7 +3628,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Stratford',
                                                     version='any',
                                                     order=13,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='tfl:Stratford'
                                                     )
@@ -3637,7 +3637,7 @@ obj = PublicationDelivery(
                                                     id='nr:Shenfield+Liverpool_Street@Liverpool_Street',
                                                     version='any',
                                                     order=14,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='tfl:Liverpool_Street'
                                                     )
@@ -3672,7 +3672,7 @@ obj = PublicationDelivery(
                                                 value='River Bus lines'
                                             ),
                                             members=LineRefsRelStructure(
-                                                flexible_line_ref_or_line_ref=[
+                                                line_ref=[
                                                     LineRef(
                                                         version='any',
                                                         ref='lrs:RB1'
@@ -3712,7 +3712,7 @@ obj = PublicationDelivery(
                                                 value='river tourst'
                                             ),
                                             members=LineRefsRelStructure(
-                                                flexible_line_ref_or_line_ref=[
+                                                line_ref=[
                                                     LineRef(
                                                         version='any',
                                                         ref='lrs:London_Eye'
@@ -3753,7 +3753,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ],
                                             members=LineRefsRelStructure(
-                                                flexible_line_ref_or_line_ref=[
+                                                line_ref=[
                                                     LineRef(
                                                         version='any',
                                                         ref='lrs:City_Cruises'
@@ -3786,7 +3786,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='lrs:RB1',
                                         version='any',
@@ -4036,7 +4036,7 @@ obj = PublicationDelivery(
                                     value='Emirates Air Line'
                                 ),
                                 members=LineRefsRelStructure(
-                                    flexible_line_ref_or_line_ref=[
+                                    line_ref=[
                                         LineRef(
                                             version='any',
                                             ref='ea:Emirates'
@@ -4045,7 +4045,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='ea:Emirates',
                                         version='any',
@@ -4092,7 +4092,7 @@ obj = PublicationDelivery(
                                 id='tfl:tfl',
                                 version='any',
                                 pricing_rules=PricingRulesRelStructure(
-                                    choice=[
+                                    pricing_rule=[
                                         PricingRule(
                                             id='tfl:2x',
                                             version='any',
@@ -4233,7 +4233,7 @@ obj = PublicationDelivery(
                                         ),
                                     ]
                                 ),
-                                fare_day_type_ref_or_day_type_ref=FareDayTypeRef(
+                                day_type_ref=FareDayTypeRef(
                                     version='any',
                                     ref='tfl:Day_from_0430'
                                 )
@@ -4666,7 +4666,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -4688,7 +4688,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -4710,7 +4710,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -4757,7 +4757,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -4779,7 +4779,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -4801,7 +4801,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -4848,7 +4848,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -4870,7 +4870,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -4892,7 +4892,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -4939,7 +4939,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -4961,7 +4961,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -4983,7 +4983,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5030,7 +5030,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -5052,7 +5052,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -5074,7 +5074,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5121,7 +5121,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -5143,7 +5143,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -5165,7 +5165,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5212,7 +5212,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -5234,7 +5234,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -5256,7 +5256,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5303,7 +5303,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -5325,7 +5325,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -5347,7 +5347,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5394,7 +5394,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -5416,7 +5416,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -5438,7 +5438,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5485,7 +5485,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -5507,7 +5507,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -5529,7 +5529,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5576,7 +5576,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -5598,7 +5598,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -5620,7 +5620,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5667,7 +5667,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -5689,7 +5689,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -5711,7 +5711,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5758,7 +5758,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -5780,7 +5780,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -5802,7 +5802,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5849,7 +5849,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_day'
                                                                     )
@@ -5871,7 +5871,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_MF_evening_and_Saturday'
                                                                     )
@@ -5893,7 +5893,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Sunday'
                                                                     )
@@ -5976,7 +5976,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
-                                            choice=[
+                                            quality_structure_factor_ref_or_quality_structure_factor=[
                                                 QualityStructureFactor(
                                                     id='tfl:Resident',
                                                     version='any',
@@ -6088,7 +6088,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             usage_parameters=UsageParametersInFrameRelStructure(
-                                choice=[
+                                usage_parameter=[
                                     CommercialProfile(
                                         id='tfl:London_School_parties',
                                         version='any',
@@ -6165,11 +6165,11 @@ obj = PublicationDelivery(
                                                 UsageParameterPrice(
                                                     id='tfl:concession@34pct',
                                                     version='any',
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='tfl:34%'
                                                     ),
-                                                    choice_2=UserProfileRef(
+                                                    choice=UserProfileRef(
                                                         version='any',
                                                         ref='tfl:concession'
                                                     )
@@ -6180,11 +6180,11 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='100% discount>'
                                                     ),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='tfl:100%'
                                                     ),
-                                                    choice_2=UserProfileRef(
+                                                    choice=UserProfileRef(
                                                         version='any',
                                                         ref='tfl:concession'
                                                     )
@@ -6258,7 +6258,7 @@ obj = PublicationDelivery(
                                             value='Child Fare'
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:child_5-10',
                                                     version='any',
@@ -6271,18 +6271,18 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfl:child_5-10@TravelCard_on_Oyster@bus',
                                                                 version='any',
                                                                 name=MultilingualString(
                                                                     value='Free on bus or tram'
                                                                 ),
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref_or_fare_price=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@free'
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     ValidableElementRef(
                                                                         version='any',
                                                                         ref='lbsl:bus_or_tram_trip'
@@ -6293,11 +6293,11 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfl:child_5-10@metro',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref_or_fare_price=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@free'
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     ValidableElementRef(
                                                                         version='any',
                                                                         ref='lul:metro_trip'
@@ -6308,11 +6308,11 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfl:child_5-10@rail',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref_or_fare_price=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@free'
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     ValidableElementRef(
                                                                         version='any',
                                                                         ref='nr:rail_trip'
@@ -6323,11 +6323,11 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfl:child_5-10@river',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref_or_fare_price=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@free'
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     ValidableElementRef(
                                                                         version='any',
                                                                         ref='lrs:river_trip'
@@ -6338,13 +6338,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfl:child_5-10@cableway',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
-                                                                    choice_1=DiscountingRuleRef(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfl:50%'
                                                                     )
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     ValidableElementRef(
                                                                         version='any',
                                                                         ref='ea:cableway_trip'
@@ -6374,7 +6374,7 @@ obj = PublicationDelivery(
                                             value="\n\t\t\t\t\t\t\thttp://www.tfl.gov.uk/tickets/14308.aspx\nApplications for 16+ Oyster photocards will not be accepted at Post Offices between Monday 1 July 2013 and Sunday 1 September 2013.\n\nIf you live in a London borough, online applications for 16+ Oyster photocards with free bus and tram travel will not be accepted for the 2013/14 academic year between Monday 1 July and Tuesday 20 August 2013.\n\nCall us on 0343 222 1234 if you need to apply during this time.\n\nIf you live outside London, you can still apply online for your 16+ Oyster photocard.\n\nIf you're under 18, your parent or guardian must apply on your behalf.\n\nResidents of a London borough\nIf you live in a London borough, you can apply online or at a Post Office.\n\nApply online\n\nIf you're the parent or guardian applying on behalf of a 16-18 year-old who lives in London, you can apply online.\n\nTo apply online you will need:\n\nAn active, valid email address\nA colour, digital photo of your child\nDebit or credit card to pay the £10 administration fee\nYou will be asked for your child's machine readable passport number. If your child does not have a machine-readable passport and you can't complete all the application steps online you may be prompted to:\n\nDownload and print off a verification letter\nGet the verification letter signed and approved by your child's education establishment\nTake the verification letter to the Post Office along with required documentation and pay the £10 administration fee\nApply online\nApplying at a Post Office\nYou can collect a 16+ Zip Oyster photocard application form from a Post Office in London.\n\nIf the applicant is eligible for free travel on buses and trams, their school, college or training provider must confirm they meet the education criteria.\n\nYou should then submit the completed application at a Post Office in London.\n\nTo apply at a Post Office, you will need:\n\nProof of your address, which must be one of the following:\n- Residential utility bill (dated in the last three months)\n- Current council tax bill\n- Bank, building society or credit card statement (dated in the last three months)\n- Council or housing association rent book or statement\n- Driving license (full or provisional)\nProof of applicants age, which must be one of the following: \n- Passport\n- ID card from a European Economic Area country \n- Birth certificate \n- Driving license (full or provisional)\n- Biometric Residency Permit\nProof of education status - the education part of the application needs to be signed and stamped by your child's school/college\nYou must provide original documents; we don't accept photocopies.\n\nWe will send the 16+ Zip Oyster photocard to the address you provide.\n\nIf you provide an email address on your application, we will create a web account for you. We will send you an email with instructions on how to log in and activate your web account. You can then manage your card online, order a replacement for a lost, stolen or damaged Oyster photocard, change the photo on an Oyster photocard or order an Oyster photocard for another child.\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t"
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:child_11-15',
                                                     version='any',
@@ -6391,14 +6391,14 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             ValidableElementPrice(
                                                                 id='tfl:child_11-15@PayAsYouGo_trip@bus',
                                                                 version='any',
                                                                 name=MultilingualString(
                                                                     value='Free on buses and trams'
                                                                 ),
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@free'
                                                                 ),
@@ -6410,7 +6410,7 @@ obj = PublicationDelivery(
                                                             ValidableElementPrice(
                                                                 id='tfl:child_11-15@metro_overground',
                                                                 version='any',
-                                                                choice_1=DiscountingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:50%'
                                                                 ),
@@ -6422,7 +6422,7 @@ obj = PublicationDelivery(
                                                             ValidableElementPrice(
                                                                 id='tfl:child_11-15@rail',
                                                                 version='any',
-                                                                choice_1=DiscountingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:50%'
                                                                 ),
@@ -6446,15 +6446,15 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareProductPrice(
                                                                 id='nr:child_11-15@student_RailCard',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_2=SaleDiscountRightRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                     version='any',
                                                                     ref='nr:RailCard'
                                                                 )
@@ -6485,7 +6485,7 @@ obj = PublicationDelivery(
                                             value='   http://www.tfl.gov.uk/tickets/14416.aspx\n\nYou must have an 11-15 Oyster photocard to get:\nChild-rate fares on the Tube, DLR and London Overground\n7 Day, Monthly and longer period Travelcards at child rate\n\nHolders of the following can buy a Zones 1-9 Off-Peak Day Travelcard after 10:00 for just £2 each for up to four children travelling with them:\nGold Card\nNetwork RailCard\nFamily and Friends RailCard\nHM Forces RailCard\nFind out more about National RailCards\nYou do not need an 11-15 Oyster photocard to pay cash single fares or to buy Day Travelcards.\n\t\t\t\t\t\t\t'
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:child_11to15@11to15_OysterCard_holder',
                                                     version='any',
@@ -6502,12 +6502,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareProductPrice(
                                                                 id='tfl:child_11to15@TravelCard_on_Oyster',
                                                                 version='any',
                                                                 amount=Decimal('2'),
-                                                                choice_2=PreassignedFareProductRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                     version='any',
                                                                     ref='tfl:TravelCard_on_Oyster'
                                                                 )
@@ -6518,11 +6518,11 @@ obj = PublicationDelivery(
                                                                 name=MultilingualString(
                                                                     value='50 % discount for  Oyster travel'
                                                                 ),
-                                                                choice_1=DiscountingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:50%'
                                                                 ),
-                                                                choice_2=PreassignedFareProductRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                     version='any',
                                                                     ref='tfl:PayAsYouGo_trip'
                                                                 )
@@ -6542,18 +6542,18 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareProductPrice(
                                                                 id='tfl:child_11to15@student_RailCard',
                                                                 version='any',
                                                                 name=MultilingualString(
                                                                     value='34  % discount for  RailCard  travel'
                                                                 ),
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_2=PreassignedFareProductRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                     version='any',
                                                                     ref='tfl:Prepaid_trip'
                                                                 )
@@ -6584,7 +6584,7 @@ obj = PublicationDelivery(
                                             value=" \n\t\t\t\t\t\t\t\nCan I get a 16+ Oyster photocard?\n\nIf you're 16 or 17\nYour parent/guardian can apply for a 16+ Oyster photocard for you, which will allow you to travel at reduced rate on bus, Tube, tram, DLR, London Overground and some National Rail services.\n\nIf you were 18 or under on 31 August 2012\nYou may be eligible for a 16+ Oyster photocard which gives free travel on buses and trams as well as reduced rates on Tube, DLR, London Overground and some National Rail services.\n\nTo be eligible for free bus and tram travel, you must:\n\nBe in full-time education\nAnd live in a London borough\nFull-time education criteria:\n\nAt least 12 hours of guided learning per week, between 09:00-17:00 Monday-Friday, for at least 10 weeks on further education courses at Level 3 or below in a sixth form college, academy, further education college or other training provider  \nExamples of Level 3 courses include A levels (AS/A2), vocational awards such as BTEC or City and Guilds qualifications at level 3 and the International Baccalaureate. It can also include apprenticeships and training courses funded by the Education Funding Agency provided the student is 18 or under on 31 August 2012. Your school, college or training provider will be able to confirm if the course qualifies\nYou're not eligible for free bus and tram travel if:\n\nYou don't live in a London borough and/or\nYou're not in full time education \nIf you were under 16 on 31 August 2012\nYou can apply for an 11-15 Oyster photocard that you can use to travel free on buses and trams and to buy child rate Travelcards. You can continue to use the 11-15 Oyster photocard after you turn 16, until the expiry date printed on the front of the card.\n\nTerms and conditions 16+ Oyster photocard\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t  http://www.tfl.gov.uk/tickets/14416.aspx\n\nYou must have a 16+ Oyster photocard to get:\n7 Day, Monthly and longer period Travelcards at child rate\nHalf the adult rate when you pay as you go on Tube, DLR and London Overground\nYou can also get 34 per cent off the off-peak daily price caps if you get a 16-25 National RailCard and add the discount GIVING ENTITLEMENT your 16+ Oyster photocard\nYou do not need a 16+ Oyster photocard to pay cash single fares or to buy Day Travelcards\n\t\t\t\t\t\t\t"
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:youth_16to18@16Plus_OysterCard_holder',
                                                     version='any',
@@ -6601,15 +6601,15 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareProductPrice(
                                                                 id='tfl:youth_16to18@TravelCard_on_Oyster',
                                                                 version='any',
-                                                                choice_1=DiscountingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:50%'
                                                                 ),
-                                                                choice_2=PreassignedFareProductRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                     version='any',
                                                                     ref='tfl:PayAsYouGo_trip'
                                                                 )
@@ -6620,11 +6620,11 @@ obj = PublicationDelivery(
                                                                 name=MultilingualString(
                                                                     value='50 % discount for  Oyster travel'
                                                                 ),
-                                                                choice_1=DiscountingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:50%'
                                                                 ),
-                                                                choice_2=PreassignedFareProductRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                     version='any',
                                                                     ref='tfl:PayAsYouGo_trip'
                                                                 )
@@ -6644,15 +6644,15 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareProductPrice(
                                                                 id='tfl:youth_16to18@student_RailCard',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_2=SaleDiscountRightRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                     version='any',
                                                                     ref='nr:RailCard'
                                                                 )
@@ -6696,7 +6696,7 @@ obj = PublicationDelivery(
                                             value='   http://www.tfl.gov.uk/tickets/14312.aspx\n\t\t\t\t\t\t\tIf you are:\nAged 18 or over\nEnrolled with a participating education establishment registered on the TfL scheme, or on mandatory work placement in London\nEnrolled in an eligible full-time or part-time course\nLiving at a London address during term time\nYou can get an 18+ Student Oyster photocard to:\nSave 30 per cent against the price of adult rate Travelcards and Bus and Tram Passes\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t http://www.tfl.gov.uk/tickets/14416.aspx\n \n\n\nYou need an 18+ Student Oyster photocard or an Oyster card to use pay as you go and benefit from daily price capping\nYou do not need an 18+ Student Oyster photocard to pay cash single fares or to buy Day Travelcards\n\t\t\t\t\t\t\t'
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:18Plus@18Plus_Student_OysterPhotoCard_holder',
                                                     version='any',
@@ -6709,20 +6709,20 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='tfl:18Plus@TravelCard_on_Oyster@discount',
                                                                 version='any',
                                                                 description=MultilingualString(
                                                                     value='\t\t http://www.tfl.gov.uk/tickets/14416.aspx\nYou must have an 18+ Student Oyster photocard to get 30 per cent off 7 Day, Monthly and longer period Travelcards'
                                                                 ),
-                                                                choice=FarePriceVersionedChildStructure(
-                                                                    choice_1=DiscountingRuleRef(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfl:30%'
                                                                     )
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     FareDemandFactorRef(
                                                                         ref='tfl:anytime'
                                                                     ),
@@ -6739,11 +6739,11 @@ obj = PublicationDelivery(
                                                                 description=MultilingualString(
                                                                     value='\t\t http://www.tfl.gov.uk/tickets/14416.aspx\nYou can get 34 per cent off off-peak pay as you go single fares and off-peak daily price caps on Tube, DLR and London Overground if you get a 16-25 National RailCard and add the discount GIVING ENTITLEMENT your 18+ Student Oyster photocard '
                                                                 ),
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref_or_fare_price=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     FareDemandFactorRef(
                                                                         ref='tfl:offPeak'
                                                                     ),
@@ -6769,15 +6769,15 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareProductPrice(
                                                                 id='tfl:18Plus@student_RailCard@discount',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_2=PreassignedFareProductRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                     version='any',
                                                                     ref='tfl:Prepaid_trip'
                                                                 )
@@ -7011,7 +7011,7 @@ obj = PublicationDelivery(
                                                 CompanionProfile(
                                                     id='tfl:family_group@adult',
                                                     version='any',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfl:adult'
                                                     ),
@@ -7021,7 +7021,7 @@ obj = PublicationDelivery(
                                                 CompanionProfile(
                                                     id='tfl:family_group@children',
                                                     version='any',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfl:child'
                                                     ),
@@ -7394,7 +7394,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Maximum  price to charge for a journey of dont check out'
                                                     ),
-                                                    choice_1=LimitingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                         version='any',
                                                         ref='tfl:max-8.50'
                                                     )
@@ -7425,7 +7425,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Maximum  price to charge for a journey if dont check out'
                                                     ),
-                                                    choice_1=LimitingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                         version='any',
                                                         ref='tfl:max-8.50'
                                                     )
@@ -7575,7 +7575,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='tfl:Prepaid_trip',
                                         version='any',
@@ -7590,7 +7590,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -7899,7 +7899,7 @@ obj = PublicationDelivery(
                                             ref='tfl:payAsYouGo'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.ON_START_THEN_ADJUST_AT_END_OF_CHARGE_PERIOD,
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -8016,7 +8016,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -8049,14 +8049,14 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='tfl:Oyster_Top_Up',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Top  up must be between the following'
                                                     ),
-                                                    choice_1=LimitingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                         version='any',
                                                         ref='tfl:5-50'
                                                     ),
@@ -8083,7 +8083,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='tfl:prepaid'
                                         ),
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -8172,14 +8172,14 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='tfl:Oyster_Auto_Top_Up',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Auto Top  up must be between the following'
                                                     ),
-                                                    choice_1=LimitingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                         version='any',
                                                         ref='tfl:20-40'
                                                     ),
@@ -8207,7 +8207,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -8613,7 +8613,7 @@ obj = PublicationDelivery(
                                             value=' Travel card allows some things to be bought at a discount'
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:TravelCard_Sale_discount@metro_tram_bus',
                                                     version='any',
@@ -8626,18 +8626,18 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareProductPrice(
                                                                 id='tfl:TravelCard_Sale_discount@metro_tram_bus',
                                                                 version='any',
                                                                 name=MultilingualString(
                                                                     value="Travelcards   you can get a third off single tickets if you have a Travelcard, whether it's a paper one or on your Oyster card."
                                                                 ),
-                                                                choice_1=DiscountingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:34%'
                                                                 ),
-                                                                choice_2=PreassignedFareProductRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                                     version='any',
                                                                     ref='tfl:Prepaid_trip'
                                                                 )
@@ -8652,7 +8652,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.FREE,
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -8740,7 +8740,7 @@ obj = PublicationDelivery(
                                                                             VehicleModeEnumeration.WATER,
                                                                         ],
                                                                     ],
-                                                                    network_ref_or_group_of_lines_ref=[
+                                                                    group_of_lines_ref=[
                                                                         GroupOfLinesRef(
                                                                             version='any',
                                                                             ref='lrs:RiverBus'
@@ -8802,7 +8802,7 @@ obj = PublicationDelivery(
                                             value="You can put Adult, 18+ Student, 16+, child and job_centre Plus Travel Discount 7 Day monthly and longer period Travelcards and Bus and Tram passes on Oyster.\n\nIf you are travelling in London and using a Travelcard, it must cover all the zones you intend to travel through. For example, if you are going somewhere in Zone 3, you must make sure that you have paid enough money for your Travelcard to cover you. If you travel beyond the zones covered by your Travelcard, you can expect to be charged an extension fare which will be deducted from your Oyster pay as you go balance. If your Oyster pay as you go displays a minus sign before the balance, you may need to top up your Oyster card before you travel again, even if you have a valid Travelcard for the zones of your travel.\n\nYour Oyster card will automatically work out when to switch between a Travelcard and pay as you go.\n\nDay Travelcards for travel in London are not available on Oyster. However, if you use Oyster to pay as you go and make a number of journeys in one day, you won't pay more than the equivalent Day Travelcard.*\n\n* Does not apply for travel to/from Grays, Purfleet, Ockendon or Chafford Hundred.\n\nOyster cards that have a Travelcard or Bus and Tram pass on it are non transferable. They cannot be used by anyone other than the registered owner. \n"
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -9284,7 +9284,7 @@ obj = PublicationDelivery(
                                             value=' right to purchase have fare capped at day pass rate '
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:Oyster@concession',
                                                     version='any',
@@ -9294,15 +9294,15 @@ obj = PublicationDelivery(
                                                         ),
                                                     ],
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='tfl:Oyster@senior_resident',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:seniorResident'
                                                                 )
@@ -9310,11 +9310,11 @@ obj = PublicationDelivery(
                                                             UsageParameterPrice(
                                                                 id='tfl:Oyster@senior_non_resident',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:senior_non_resident'
                                                                 )
@@ -9322,11 +9322,11 @@ obj = PublicationDelivery(
                                                             UsageParameterPrice(
                                                                 id='tfl:Oyster@hm_forces',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:hm_forces'
                                                                 )
@@ -9334,11 +9334,11 @@ obj = PublicationDelivery(
                                                             UsageParameterPrice(
                                                                 id='tfl:Oyster@disabled_person',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:disabled_person'
                                                                 )
@@ -9346,11 +9346,11 @@ obj = PublicationDelivery(
                                                             UsageParameterPrice(
                                                                 id='tfl:Oyster@goldCard',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:goldCardHolder'
                                                                 )
@@ -9358,11 +9358,11 @@ obj = PublicationDelivery(
                                                             UsageParameterPrice(
                                                                 id='tfl:Oyster@youth16To25',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:youth16To25'
                                                                 )
@@ -9370,11 +9370,11 @@ obj = PublicationDelivery(
                                                             UsageParameterPrice(
                                                                 id='tfl:Oyster@child_5-10',
                                                                 version='any',
-                                                                choice=UsageParameterPriceRef(
+                                                                fare_price_ref=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@free'
                                                                 ),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:child_5-10'
                                                                 )
@@ -9389,7 +9389,7 @@ obj = PublicationDelivery(
                                             ref='tfl:payAsYouGo'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.ON_STAR_THEN_ADJUST_AT_END_OF_FARE_DAY,
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -9743,7 +9743,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='tfl:Oyster@costOfCard',
                                                     version='any',
@@ -9764,7 +9764,7 @@ obj = PublicationDelivery(
                                                         value='Capping rule for Rail  Travel'
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTable(
                                                                 id='tfl:Oyster@rail',
                                                                 version='any',
@@ -9772,20 +9772,20 @@ obj = PublicationDelivery(
                                                                     value='Maximum fare price'
                                                                 ),
                                                                 cells=CellsRelStructure(
-                                                                    choice=[
+                                                                    fare_price_or_fare_price_ref=[
                                                                         Cell(
                                                                             id='tfl:Oyster@MaxPrice@rail@adult',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 name=MultilingualString(
                                                                                     value='Maximum daily price to charge'
                                                                                 ),
-                                                                                choice_1=LimitingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                                     version='any',
                                                                                     ref='tfl:max-8.50'
                                                                                 )
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 ValidableElementRef(
                                                                                     version='any',
                                                                                     ref='nr:rail_trip'
@@ -9813,7 +9813,7 @@ obj = PublicationDelivery(
                                                             ref='tfl:Oyster_PayAsYouGo_right'
                                                         ),
                                                     ],
-                                                    supplement_product_ref_or_preassigned_fare_product_ref=[
+                                                    preassigned_fare_product_ref=[
                                                         PreassignedFareProductRef(
                                                             version='any',
                                                             ref='tfl:TravelCard_on_Oyster'
@@ -9860,25 +9860,25 @@ obj = PublicationDelivery(
                                                         value='Capping rule for Metro Travel'
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTable(
                                                                 id='tfl:Oyster@metro',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
-                                                                    choice=[
+                                                                    fare_price_or_fare_price_ref=[
                                                                         Cell(
                                                                             id='tfl:Oyster@MaxPrice@metro@adult',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 name=MultilingualString(
                                                                                     value='Maximum daily price to charge'
                                                                                 ),
-                                                                                choice_1=LimitingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                                     version='any',
                                                                                     ref='tfl:max-8.50'
                                                                                 )
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 ValidableElementRef(
                                                                                     version='any',
                                                                                     ref='lul:metro_trip'
@@ -9906,7 +9906,7 @@ obj = PublicationDelivery(
                                                             ref='tfl:Oyster_PayAsYouGo_right'
                                                         ),
                                                     ],
-                                                    supplement_product_ref_or_preassigned_fare_product_ref=[
+                                                    preassigned_fare_product_ref=[
                                                         PreassignedFareProductRef(
                                                             version='any',
                                                             ref='tfl:TravelCard_on_Oyster'
@@ -9953,25 +9953,25 @@ obj = PublicationDelivery(
                                                         value='Capping rule for Bus Travel'
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTable(
                                                                 id='tfl:Oyster@bus',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
-                                                                    choice=[
+                                                                    fare_price_or_fare_price_ref=[
                                                                         Cell(
                                                                             id='tfl:Oyster@MaxPrice@Bus_Tram@adult',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 name=MultilingualString(
                                                                                     value='Maximum daily price to charge'
                                                                                 ),
-                                                                                choice_1=LimitingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                                     version='any',
                                                                                     ref='tfl:max-4.40'
                                                                                 )
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 ValidableElementRef(
                                                                                     version='any',
                                                                                     ref='lbsl:bus_or_tram_trip'
@@ -9999,7 +9999,7 @@ obj = PublicationDelivery(
                                                             ref='tfl:Oyster_PayAsYouGo_right'
                                                         ),
                                                     ],
-                                                    supplement_product_ref_or_preassigned_fare_product_ref=[
+                                                    preassigned_fare_product_ref=[
                                                         PreassignedFareProductRef(
                                                             version='any',
                                                             ref='lbsl:TravelCard_on_Oyster@Bus'
@@ -10063,25 +10063,25 @@ obj = PublicationDelivery(
                                                         value="If you use Oyster to pay as you go for 5 or more Emirates Air Line journeys in a calendar week (Sunday to Saturday), you'll get the 5+ Reward. The 5+ Reward is 50 per cent off the total price paid for 5 journeys or more during a week.\n\n\t\t\t\t\t\t\t\tHow do I get the 5+ Reward?\n\t\t\t\t\t\t\t\tIf you make 5 journeys or more in a calendar week, you'll pay the full pay as you go fare for all the journeys you made. However, when you travel the following week, 50 per cent of the total cost of your previous week's journeys will be credited back to your Oyster card.\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAt the end of each week, we will work out how much to reward you and automatically send this to the Emirates Air Line gates ready for you to collect from the following week.\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tThe 5+ Reward will be loaded on to your Oyster card as pay as you go credit when you touch your Oyster card on a yellow card reader at the Emirates Air Line gates. The 5+ Reward can only be collected as part of an Emirates Air Line journey.\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYour 5+ Reward will be available to collect from the next calendar week for up to 6 weeks; after this, it will expire."
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTable(
                                                                 id='tfl:Oyster@cableway',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
-                                                                    choice=[
+                                                                    fare_price_or_fare_price_ref=[
                                                                         Cell(
                                                                             id='tfl:Oyster@MaxPrice@cableway@adult',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 name=MultilingualString(
                                                                                     value='5+ discount  TODO'
                                                                                 ),
-                                                                                choice_1=LimitingRuleRef(
+                                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                                     version='any',
                                                                                     ref='tfl:5+'
                                                                                 )
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 ValidableElementRef(
                                                                                     version='any',
                                                                                     ref='ea:cableway_trip'
@@ -10146,7 +10146,7 @@ obj = PublicationDelivery(
                                             value=' Gold Cards are annual season tickets with a difference:\n\nWhen you buy an annual Travelcard on an Oyster card you are automatically issued with a separate printed Gold Record Card\nWhen you buy an annual season ticket at a station within the Network RailCard Area and the origin and/or destination are also in the Network RailCard Area, you are automatically issued with a Gold Card'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -10204,7 +10204,7 @@ obj = PublicationDelivery(
                                         ),
                                         url='http://www.tfl.gov.uk/tickets/14416.aspx',
                                         charging_moment_type=ChargingMomentEnumeration.ON_START_OF_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -10312,11 +10312,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='tfl:disabled_personsRailCard',
                                                     version='any',
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='tfl:34%'
                                                     )
@@ -10334,7 +10334,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value="    \n\t\t\t\t\t\t\t http://www.tfl.gov.uk/tickets/14305.aspx\n\tYou can get a Freedom Pass if your only or main home is in a London borough and:\n\nYou were 60 or older before 6 April 2010\nYou turned 60 on or after 6 April 2010 and meet the new age criteria\nOr have an eligible disability\nEligible disability\nYou can also get a Freedom Pass if you:\n\nAre blind or partially sighted\nOr are profoundly or severely deaf\nOr are without speech\nOr have a disability, or have suffered an injury which makes walking more difficult\nOr have no arms or have a long-term loss of the use of both arms\nOr have a learning disability\nOr have been refused a licence on the grounds of your disability\n\n\nHow do I use my Freedom Pass?\n\nOnce you've got your pass you can start using it immediately.\n\ntouch_ing in and out\nMake sure you touch your card on the yellow card readers. It's a bit different for each type of transport. Find out more about touch_ing in and out.\n\nUsing your pass outside London\nIf you've got a rose symbol or a bus hologram on your pass you can use it on local buses all over England. You can use it between 09:30 and 23:00 on weekdays and at any time on weekends and public holidays.\n\nConcessionary bus passes from outside London\nIf you've got a National Concessionary pass from an English council outside London you can use it at any time on buses in London displaying this symbol.\n\nOn buses not showing this sign check with the driver - most will let you travel free between 09:30 and 23:00 on weekdays and at any time on weekends and public holidays.\n\nYou'll need to show your pass to the driver.\n\nNo one else can use your pass. You can't use it on Tube, tram, DLR, London Overground or National Rail services.\t\n\t\t\t\t\t\t\t "
                                         ),
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -10436,7 +10436,7 @@ obj = PublicationDelivery(
                                                                             VehicleModeEnumeration.METRO,
                                                                         ],
                                                                     ],
-                                                                    network_ref_or_group_of_lines_ref=[
+                                                                    group_of_lines_ref=[
                                                                         NetworkRef(
                                                                             version='any',
                                                                             ref='lul:LUL'
@@ -10490,7 +10490,7 @@ obj = PublicationDelivery(
                                                                             VehicleModeEnumeration.WATER,
                                                                         ],
                                                                     ],
-                                                                    network_ref_or_group_of_lines_ref=[
+                                                                    group_of_lines_ref=[
                                                                         GroupOfLinesRef(
                                                                             version='any',
                                                                             ref='lrs:Eligible_for_Freedom_Pass'
@@ -10542,7 +10542,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Freedom_pass'
                                                                     )
@@ -10570,7 +10570,7 @@ obj = PublicationDelivery(
                                                                 order=7,
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Freedom_pass'
                                                                     )
@@ -10601,7 +10601,7 @@ obj = PublicationDelivery(
                                                                 order=8,
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_Freedom_pass'
                                                                     )
@@ -10775,7 +10775,7 @@ obj = PublicationDelivery(
                                             value='For groups of 10 or more fare-paying passengers you can get Group Day Tickets. These allow unlimited travel at any time and on any day within the zones paid for.\nYou can only get these as paper tickets, not on an Oyster card, and they must be purchased upon arrival in London.'
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:Group@peak@adult',
                                                     version='any',
@@ -10795,7 +10795,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:Group@peak@adult@Zones_1-6',
                                                                 version='any',
@@ -10854,7 +10854,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:Group@peak@under18@Zones_1-6',
                                                                 version='any',
@@ -10901,7 +10901,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -10978,7 +10978,7 @@ obj = PublicationDelivery(
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
                                                                     ],
-                                                                    network_ref_or_group_of_lines_ref=[
+                                                                    group_of_lines_ref=[
                                                                         GroupOfLinesRef(
                                                                             version='any',
                                                                             ref='tfl:LinesThatAreOkForGroupTicket'
@@ -11003,7 +11003,7 @@ obj = PublicationDelivery(
                                             value='  Holders of the following can buy a Zones 1-9 Off-Peak Day Travelcard after 10:00 for just £2 each for up to four children travelling with them:\n\t\t\t\t\t\t\t\t\t\t\t\t\tGold Card\n\t\t\t\t\t\t\t\t\t\t\t\t\tNetwork RailCard\n\t\t\t\t\t\t\t\t\t\t\t\t\tFamily and Friends RailCard\n\t\t\t\t\t\t\t\t\t\t\t\t\tHM Forces RailCard'
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:Family_day_TravelCard',
                                                     version='any',
@@ -11016,12 +11016,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='tfl:Family_day_TravelCard',
                                                                 version='any',
                                                                 amount=Decimal('2.00'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:child'
                                                                 )
@@ -11036,7 +11036,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -11134,7 +11134,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access'
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='tfl:Travel_times_FamilyDay'
                                                                     )
@@ -11254,7 +11254,7 @@ obj = PublicationDelivery(
                                             value=' On card contactless '
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.AT_END_OF_CHARGE_PERIOD,
-                                        authority_ref_or_operator_ref=AuthorityRef(
+                                        transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -11353,12 +11353,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='tfl:PAYG_with contactless_card',
                                                     version='any',
                                                     amount=Decimal('1.40'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='tfl:20p'
                                                     )
@@ -11483,7 +11483,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='\tNB only adults can top up their pay as you go online or by phone\t\t\t \t\t\t\t '
                                         ),
-                                        choice=AuthorityRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:Oyster_Sales_line'
                                         ),
@@ -11642,7 +11642,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FulfilmentMethodPricesRelStructure(
-                                            fulfilment_method_price_ref_or_fulfilment_method_price_or_cell_ref=[
+                                            cell_ref=[
                                                 FulfilmentMethodPriceVersionedChildStructure(
                                                     id='tfl:normal_post',
                                                     version='any',
@@ -11675,7 +11675,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FulfilmentMethodPricesRelStructure(
-                                            fulfilment_method_price_ref_or_fulfilment_method_price_or_cell_ref=[
+                                            cell_ref=[
                                                 FulfilmentMethodPriceVersionedChildStructure(
                                                     id='tfl:registered_post',
                                                     version='any',
@@ -11747,7 +11747,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:paper_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='any',
                                                         ref='tfl:Prepaid_trip'
                                                     ),
@@ -11760,7 +11760,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:paper_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='any',
                                                         ref='tfl:Prepaid_trip'
                                                     ),
@@ -11791,7 +11791,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:paper_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='any',
                                                         ref='tfl:Group_day_ticket'
                                                     ),
@@ -11822,7 +11822,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:paper_ticket'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='any',
                                                         ref='tfl:TravelCard'
                                                     ),
@@ -11851,7 +11851,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smartcard'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='any',
                                                         ref='tfl:Oyster_Top_Up'
                                                     ),
@@ -11880,7 +11880,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smartcard'
                                                     ),
-                                                    choice=SupplementProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
                                                         version='any',
                                                         ref='tfl:Oyster_Auto_Top_Up'
                                                     ),
@@ -11909,7 +11909,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smartcard'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='any',
                                                         ref='tfl:PayAsYouGo_trip'
                                                     ),
@@ -11968,7 +11968,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:nfc_payment_card'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='any',
                                                         ref='tfl:PAYG_with contactless_card'
                                                     ),
@@ -11981,7 +11981,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:nfc_payment_card'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='any',
                                                         ref='tfl:PayAsYouGo_trip'
                                                     ),
@@ -12013,7 +12013,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smartcard'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='any',
                                                         ref='tfl:TravelCard_on_Oyster'
                                                     ),
@@ -12042,7 +12042,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smartcard'
                                                     ),
-                                                    choice=CappedDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=CappedDiscountRightRef(
                                                         version='any',
                                                         ref='tfl:Oyster_PayAsYouGo_right'
                                                     ),
@@ -12058,7 +12058,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smartcard'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='any',
                                                         ref='tfl:TravelCard_Sale_discount'
                                                     ),
@@ -12247,7 +12247,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smart_PhotoCard'
                                                     ),
-                                                    choice=CappedDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=CappedDiscountRightRef(
                                                         version='any',
                                                         ref='tfl:Oyster_PayAsYouGo_right'
                                                     ),
@@ -12260,7 +12260,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smart_PhotoCard'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='any',
                                                         ref='tfl:TravelCard_on_Oyster'
                                                     ),
@@ -12276,7 +12276,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smart_PhotoCard'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='any',
                                                         ref='tfl:TravelCard_Sale_discount'
                                                     ),
@@ -12362,7 +12362,7 @@ obj = PublicationDelivery(
                                         id='tfl:YellowBlue11-15_OysterPhotoCard-SOP',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityCondition(
                                                         id='tfl:YellowBlue11-15_OysterPhotoCard',
                                                         version='any',
@@ -12417,7 +12417,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=SalesOfferPackagePricesRelStructure(
-                                            sales_offer_package_price_ref_or_sales_offer_package_price_or_cell_ref=[
+                                            cell_ref=[
                                                 SalesOfferPackagePriceVersionedChildStructure(
                                                     id='tfl:16PlusZip_OysterPhotoCard-SOP',
                                                     version='any',
@@ -12506,7 +12506,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=SalesOfferPackagePricesRelStructure(
-                                            sales_offer_package_price_ref_or_sales_offer_package_price_or_cell_ref=[
+                                            cell_ref=[
                                                 SalesOfferPackagePriceVersionedChildStructure(
                                                     id='tfl:18Plus_OysterPhotoCard-SOP',
                                                     version='any',
@@ -12660,7 +12660,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smartcard'
                                                     ),
-                                                    choice=CappedDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=CappedDiscountRightRef(
                                                         version='any',
                                                         ref='tfl:Oyster_PayAsYouGo_right'
                                                     ),
@@ -12676,7 +12676,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smartcard'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='any',
                                                         ref='tfl:TravelCard_Sale_discount'
                                                     ),
@@ -12717,7 +12717,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smart_PhotoCard'
                                                     ),
-                                                    choice=CappedDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=CappedDiscountRightRef(
                                                         version='any',
                                                         ref='tfl:Oyster_PayAsYouGo_right'
                                                     ),
@@ -12730,7 +12730,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smart_PhotoCard'
                                                     ),
-                                                    choice=PreassignedFareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
                                                         version='any',
                                                         ref='tfl:TravelCard_on_Oyster'
                                                     ),
@@ -12746,7 +12746,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:smart_PhotoCard'
                                                     ),
-                                                    choice=SaleDiscountRightRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                         version='any',
                                                         ref='tfl:TravelCard_Sale_discount'
                                                     ),
@@ -12839,7 +12839,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
-                                            choice=[
+                                            quality_structure_factor_ref_or_quality_structure_factor=[
                                                 FareDemandFactor(
                                                     id='tfl:anyTime',
                                                     version='any',
@@ -12851,7 +12851,7 @@ obj = PublicationDelivery(
                                                     id='tfl:peak',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='any',
                                                                     ref='tfl:Peak'
@@ -12868,7 +12868,7 @@ obj = PublicationDelivery(
                                                     id='tfl:offPeak',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='any',
                                                                     ref='tfl:OffPeak'
@@ -12890,7 +12890,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Chesham',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     version='any',
                                                                     ref='tfl:Chesham'
                                                                 ),
@@ -12899,7 +12899,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Amersham',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     version='any',
                                                                     ref='tfl:Amersham'
                                                                 ),
@@ -12908,7 +12908,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Chalfont_and_Latimer',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     version='any',
                                                                     ref='tfl:Chalfont_and_Latimer'
                                                                 ),
@@ -12917,7 +12917,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Chorleywood',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     version='any',
                                                                     ref='tfl:Chorleywood'
                                                                 ),
@@ -12926,7 +12926,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Rickmansworth',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     version='any',
                                                                     ref='tfl:Rickmansworth'
                                                                 ),
@@ -12935,7 +12935,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Bushey',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     version='any',
                                                                     ref='tfl:Bushey'
                                                                 ),
@@ -12944,7 +12944,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Carpenders_Park',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     version='any',
                                                                     ref='tfl:Carpenders_Park'
                                                                 ),
@@ -12953,7 +12953,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Watford_High_Street',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     version='any',
                                                                     ref='tfl:Watford_High_Street'
                                                                 ),
@@ -12962,7 +12962,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Caterham',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Caterham'
                                                                 ),
                                                                 start_time=XmlTime(9, 0, 0, 0)
@@ -12970,7 +12970,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Whyteleafe_South',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Whyteleafe_South'
                                                                 ),
                                                                 start_time=XmlTime(9, 10, 0, 0)
@@ -12978,7 +12978,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Whyteleafe',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Whyteleafe'
                                                                 ),
                                                                 start_time=XmlTime(9, 10, 0, 0)
@@ -12986,7 +12986,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Kenley',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Kenley'
                                                                 ),
                                                                 start_time=XmlTime(9, 10, 0, 0)
@@ -12994,7 +12994,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Purley',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Purley'
                                                                 ),
                                                                 start_time=XmlTime(9, 15, 0, 0)
@@ -13002,7 +13002,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Purley_Oaks',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Purley_Oaks'
                                                                 ),
                                                                 start_time=XmlTime(9, 20, 0, 0)
@@ -13010,7 +13010,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:South_Croydon',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:South_Croydon'
                                                                 ),
                                                                 start_time=XmlTime(9, 20, 0, 0)
@@ -13018,7 +13018,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Tattenham_Corner',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Tattenham_Corner'
                                                                 ),
                                                                 start_time=XmlTime(9, 0, 0, 0)
@@ -13026,7 +13026,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Tadworth',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Tadworth'
                                                                 ),
                                                                 start_time=XmlTime(9, 0, 0, 0)
@@ -13034,7 +13034,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Kingswood',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Kingswood'
                                                                 ),
                                                                 start_time=XmlTime(9, 10, 0, 0)
@@ -13042,7 +13042,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Coulsdon_South',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Coulsdon_South'
                                                                 ),
                                                                 start_time=XmlTime(9, 15, 0, 0)
@@ -13050,7 +13050,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Carshalton_Beeches',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Carshalton_Beeches'
                                                                 ),
                                                                 start_time=XmlTime(9, 20, 0, 0)
@@ -13058,7 +13058,7 @@ obj = PublicationDelivery(
                                                             StartTimeAtStopPoint(
                                                                 id='tfl:Wallington',
                                                                 version='any',
-                                                                fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                                scheduled_stop_point_ref=ScheduledStopPointRef(
                                                                     ref='tfl:Wallington'
                                                                 ),
                                                                 start_time=XmlTime(9, 20, 0, 0)
@@ -13164,7 +13164,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 order=1,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    network_ref_or_group_of_lines_ref=[
+                                                                    group_of_lines_ref=[
                                                                         NetworkRef(
                                                                             version='any',
                                                                             ref='lul:LUL'
@@ -13186,7 +13186,7 @@ obj = PublicationDelivery(
                                                                                 value='Travelcard and Freedom Pass discounts   apply on this network'
                                                                             ),
                                                                             order=1,
-                                                                            choice=SaleDiscountRightRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                                 version='any',
                                                                                 ref='tfl:Freedom_pass'
                                                                             )
@@ -13198,7 +13198,7 @@ obj = PublicationDelivery(
                                                                                 value=' Freedom Pass discounts   apply on this network'
                                                                             ),
                                                                             order=2,
-                                                                            choice=SaleDiscountRightRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                                 version='any',
                                                                                 ref='tfl:Freedom_pass'
                                                                             )
@@ -13210,7 +13210,7 @@ obj = PublicationDelivery(
                                                                                 value='Travelcard gets discount    apply on this route.'
                                                                             ),
                                                                             order=3,
-                                                                            choice=SaleDiscountRightRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                                 version='any',
                                                                                 ref='tfl:TravelCard_Sale_discount'
                                                                             )
@@ -16068,7 +16068,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:Prepaid_trip@Single@anytime@Adult',
                                                     version='any',
@@ -16096,7 +16096,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:Prepaid_trip@Single@anytime@Adult@Zone_1_only',
                                                                 version='any',
@@ -16931,7 +16931,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:Oyster@Single@peak@Adult@Zone_1_only',
                                                                 version='any',
@@ -16939,7 +16939,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 1 only'
                                                                 ),
                                                                 amount=Decimal('2.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.40'
                                                                 ),
@@ -16955,7 +16955,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-2'
                                                                 ),
                                                                 amount=Decimal('2.80'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.40'
                                                                 ),
@@ -16971,7 +16971,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 2*'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.40'
                                                                 ),
@@ -16987,7 +16987,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-3'
                                                                 ),
                                                                 amount=Decimal('3.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -17003,7 +17003,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 3*'
                                                                 ),
                                                                 amount=Decimal('3.00'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -17019,7 +17019,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-4'
                                                                 ),
                                                                 amount=Decimal('3.80'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -17035,7 +17035,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 4*'
                                                                 ),
                                                                 amount=Decimal('3.40'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -17051,7 +17051,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-5'
                                                                 ),
                                                                 amount=Decimal('4.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17067,7 +17067,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 5*'
                                                                 ),
                                                                 amount=Decimal('4.30'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17083,7 +17083,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-6'
                                                                 ),
                                                                 amount=Decimal('5.00'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17099,7 +17099,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 6*'
                                                                 ),
                                                                 amount=Decimal('4.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17115,7 +17115,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-7'
                                                                 ),
                                                                 amount=Decimal('5.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17131,7 +17131,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 7*'
                                                                 ),
                                                                 amount=Decimal('4.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17147,7 +17147,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-8'
                                                                 ),
                                                                 amount=Decimal('6.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17163,7 +17163,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 8*'
                                                                 ),
                                                                 amount=Decimal('6.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17179,7 +17179,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-9'
                                                                 ),
                                                                 amount=Decimal('6.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17195,7 +17195,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-9 + Watford Junction'
                                                                 ),
                                                                 amount=Decimal('8.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -17223,7 +17223,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Euston - Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('7.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -17239,7 +17239,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 2 only'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.40'
                                                                 ),
@@ -17255,7 +17255,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-3'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -17271,7 +17271,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-4'
                                                                 ),
                                                                 amount=Decimal('2.30'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -17287,7 +17287,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-5'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17303,7 +17303,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-6'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17319,7 +17319,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-7'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17335,7 +17335,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-8'
                                                                 ),
                                                                 amount=Decimal('4.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17351,7 +17351,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-9'
                                                                 ),
                                                                 amount=Decimal('4.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17367,7 +17367,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-9 + Watford Junction'
                                                                 ),
                                                                 amount=Decimal('4.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -17395,7 +17395,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 3 only'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -17411,7 +17411,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-4'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -17427,7 +17427,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-5'
                                                                 ),
                                                                 amount=Decimal('2.30'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17443,7 +17443,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-6'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17459,7 +17459,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-7'
                                                                 ),
                                                                 amount=Decimal('3.30'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17475,7 +17475,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-8'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17491,7 +17491,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-9'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17507,7 +17507,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-9 + Watford Junction'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -17535,7 +17535,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 4 only'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -17551,7 +17551,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-5'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17567,7 +17567,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-6'
                                                                 ),
                                                                 amount=Decimal('2.30'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17583,7 +17583,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-7'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17599,7 +17599,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-8'
                                                                 ),
                                                                 amount=Decimal('3.30'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17615,7 +17615,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-9'
                                                                 ),
                                                                 amount=Decimal('3.30'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17631,7 +17631,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-9 + Watford Junction'
                                                                 ),
                                                                 amount=Decimal('3.30'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -17659,7 +17659,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 5 only'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17675,7 +17675,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 5-6'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17691,7 +17691,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 5-7'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17707,7 +17707,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 5-8'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17723,7 +17723,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 5-9'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17739,7 +17739,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 5-9 + Watford Junction'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -17767,7 +17767,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 6 only'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -17783,7 +17783,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 6-7'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17799,7 +17799,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 6-8'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17815,7 +17815,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 6-9'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17831,7 +17831,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 6-9 + Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -17859,7 +17859,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 7 only'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17875,7 +17875,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 7-8'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17891,7 +17891,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 7-9'
                                                                 ),
                                                                 amount=Decimal('1.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17907,7 +17907,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 7-9 + Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('1.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -17923,7 +17923,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 8 only*'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17939,7 +17939,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 8-9'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17955,7 +17955,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 9'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -17971,7 +17971,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 8 +s Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -18010,7 +18010,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:Oyster@Single@offPeak@Adult@Zone_1_only',
                                                                 version='any',
@@ -18018,7 +18018,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 1 only'
                                                                 ),
                                                                 amount=Decimal('2.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.00'
                                                                 ),
@@ -18034,7 +18034,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-2'
                                                                 ),
                                                                 amount=Decimal('2.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.00'
                                                                 ),
@@ -18050,7 +18050,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 2*'
                                                                 ),
                                                                 amount=Decimal('2.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.00'
                                                                 ),
@@ -18066,7 +18066,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-3'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -18082,7 +18082,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 3*'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -18098,7 +18098,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-4'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -18114,7 +18114,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 4*'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -18130,7 +18130,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-5'
                                                                 ),
                                                                 amount=Decimal('3.00'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18146,7 +18146,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 5*'
                                                                 ),
                                                                 amount=Decimal('3.00'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18162,7 +18162,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-6'
                                                                 ),
                                                                 amount=Decimal('3.00'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18178,7 +18178,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 6*'
                                                                 ),
                                                                 amount=Decimal('3.00'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18194,7 +18194,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-7'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18210,7 +18210,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 7*'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18226,7 +18226,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-8'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18242,7 +18242,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 8*'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18258,7 +18258,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-9'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18274,7 +18274,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 1-9 + Watford Junction'
                                                                 ),
                                                                 amount=Decimal('5.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -18302,7 +18302,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Euston - Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('4.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.00'
                                                                 ),
@@ -18318,7 +18318,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 2 only'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -18334,7 +18334,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-3'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18350,7 +18350,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-4'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18366,7 +18366,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-5'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18382,7 +18382,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-6'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18398,7 +18398,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-7'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18414,7 +18414,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-8'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18430,7 +18430,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-9'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18446,7 +18446,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 2-9 + Watford Junction'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -18474,7 +18474,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 3 only'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -18490,7 +18490,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-4'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -18506,7 +18506,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-5'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18522,7 +18522,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-6'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18538,7 +18538,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-7'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18554,7 +18554,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-8'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18570,7 +18570,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-9'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18586,7 +18586,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 3-9 + Watford Junction'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -18614,7 +18614,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 4 only'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -18630,7 +18630,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-5'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18646,7 +18646,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-6'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18662,7 +18662,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-7'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18678,7 +18678,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-8'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18694,7 +18694,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-9'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18710,7 +18710,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 4-9 + Watford Junction'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -18738,7 +18738,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 5 only'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18754,7 +18754,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 5-6'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18770,7 +18770,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 5-7'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18786,7 +18786,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 5-8'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18802,7 +18802,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 5-9'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18818,7 +18818,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 5-9 + Watford Junction'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -18846,7 +18846,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 6 only'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -18862,7 +18862,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 6-7'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18878,7 +18878,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 6-8'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18894,7 +18894,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 6-9'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18910,7 +18910,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 6-9 + Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -18938,7 +18938,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 7 only'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18954,7 +18954,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 7-8'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18970,7 +18970,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 7-9'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -18986,7 +18986,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 7-9 + Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -19002,7 +19002,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 8 only*'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -19018,7 +19018,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zones 8-9'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -19034,7 +19034,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 9'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -19050,7 +19050,7 @@ obj = PublicationDelivery(
                                                                     value='Price for Zone 8 +s Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -19093,7 +19093,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:TravelCard@Day@anytime@Adult@Zone_1_only',
                                                                 version='any',
@@ -19932,7 +19932,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:TravelCard@Day@offPeak@Adult@Zone_1_only',
                                                                 version='any',
@@ -20771,7 +20771,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:TravelCard_on_Oyster@Week@anytime@Adult@Zone_1_only',
                                                                 version='any',
@@ -21610,7 +21610,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:TravelCard_on_Oyster@Monthly@anytime@Adult@Zone_1_only',
                                                                 version='any',
@@ -22449,7 +22449,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:TravelCard@Annual@anytime@Adult@Zone_1_only',
                                                                 version='any',
@@ -23271,7 +23271,7 @@ obj = PublicationDelivery(
                                             value='A metro Trip'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='lul:metro_trip',
                                                     version='any',
@@ -23317,7 +23317,7 @@ obj = PublicationDelivery(
                                             value='A metro Trip between validators - use Pink reader'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='lul:metro_part_trip',
                                                     version='any',
@@ -23336,7 +23336,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             usage_parameters=UsageParametersInFrameRelStructure(
-                                choice=[
+                                usage_parameter=[
                                     UsageValidityPeriod(
                                         id='tfl:Travel_time_70M',
                                         version='any',
@@ -23666,7 +23666,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Chingford to Walthamstow Central'
                                         ),
-                                        choice=ServiceJourneyPatternRef(
+                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='nr:Chingford+Liverpool_Street'
                                         ),
@@ -23685,7 +23685,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Walthamstow Central to Liverpool street'
                                         ),
-                                        choice=ServiceJourneyPatternRef(
+                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='nr:Chingford+Liverpool_Street'
                                         ),
@@ -23704,7 +23704,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Shenfield to Stratford'
                                         ),
-                                        choice=ServiceJourneyPatternRef(
+                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='nr:Shenfield+Liverpool_Street'
                                         ),
@@ -23723,7 +23723,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Stratford to Liverpool street'
                                         ),
-                                        choice=ServiceJourneyPatternRef(
+                                        journey_pattern_ref=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='nr:Shenfield+Liverpool_Street'
                                         ),
@@ -23746,7 +23746,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Special Fares  for Rail and Travel cards'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -24685,7 +24685,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='nr:Oyster_rail_only@Single@peak@Adult',
                                                     version='any',
@@ -24709,7 +24709,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_only@Single@peak@Adult@Zone_1_only',
                                                                 version='any',
@@ -25084,7 +25084,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_only@Single@offPeak@Adult@Zone_1_only',
                                                                 version='any',
@@ -25471,7 +25471,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             DistanceMatrixElementPrice(
                                                                 id='nr:Oyster_rail_only@Single@peak@Adult@Watford_Junction@Zone_1',
                                                                 version='any',
@@ -25534,7 +25534,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             DistanceMatrixElementPrice(
                                                                 id='nr:Oyster_rail_only@Single@offPeak@Adult@Watford_Junction@Zone_1',
                                                                 version='any',
@@ -25597,7 +25597,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Single@peak@Adult@Zone_1_only',
                                                                 version='any',
@@ -25605,7 +25605,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 1 only'
                                                                 ),
                                                                 amount=Decimal('3.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.40'
                                                                 ),
@@ -25621,7 +25621,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-2'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.40'
                                                                 ),
@@ -25637,7 +25637,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-3'
                                                                 ),
                                                                 amount=Decimal('4.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -25653,7 +25653,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-4'
                                                                 ),
                                                                 amount=Decimal('5.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -25669,7 +25669,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-5'
                                                                 ),
                                                                 amount=Decimal('6.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -25685,7 +25685,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-6'
                                                                 ),
                                                                 amount=Decimal('7.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -25701,7 +25701,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-7'
                                                                 ),
                                                                 amount=Decimal('7.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -25717,7 +25717,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-8'
                                                                 ),
                                                                 amount=Decimal('7.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -25733,7 +25733,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-9'
                                                                 ),
                                                                 amount=Decimal('7.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -25749,7 +25749,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 2 only'
                                                                 ),
                                                                 amount=Decimal('1.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.40'
                                                                 ),
@@ -25765,7 +25765,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-3'
                                                                 ),
                                                                 amount=Decimal('2.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -25781,7 +25781,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-4'
                                                                 ),
                                                                 amount=Decimal('2.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -25797,7 +25797,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-5'
                                                                 ),
                                                                 amount=Decimal('3.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -25813,7 +25813,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-6'
                                                                 ),
                                                                 amount=Decimal('3.80'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -25829,7 +25829,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-7'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -25845,7 +25845,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-8'
                                                                 ),
                                                                 amount=Decimal('4.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -25861,7 +25861,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-9'
                                                                 ),
                                                                 amount=Decimal('4.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -25877,7 +25877,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 3 only'
                                                                 ),
                                                                 amount=Decimal('1.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -25893,7 +25893,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-4'
                                                                 ),
                                                                 amount=Decimal('2.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -25909,7 +25909,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-5'
                                                                 ),
                                                                 amount=Decimal('2.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -25925,7 +25925,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-6'
                                                                 ),
                                                                 amount=Decimal('3.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -25941,7 +25941,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-7'
                                                                 ),
                                                                 amount=Decimal('3.30'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -25957,7 +25957,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-8'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -25973,7 +25973,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-9'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-19.60'
                                                                 ),
@@ -25989,7 +25989,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 4 only'
                                                                 ),
                                                                 amount=Decimal('1.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-10.60'
                                                                 ),
@@ -26005,7 +26005,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 4-5'
                                                                 ),
                                                                 amount=Decimal('2.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -26021,7 +26021,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 4-6'
                                                                 ),
                                                                 amount=Decimal('2.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -26037,7 +26037,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 5 only'
                                                                 ),
                                                                 amount=Decimal('1.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -26053,7 +26053,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 5-6'
                                                                 ),
                                                                 amount=Decimal('2.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.80'
                                                                 ),
@@ -26088,7 +26088,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Single@offPeak@Adult@Zone_1_only',
                                                                 version='any',
@@ -26096,7 +26096,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 1 only'
                                                                 ),
                                                                 amount=Decimal('3.10'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.00'
                                                                 ),
@@ -26112,7 +26112,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-2'
                                                                 ),
                                                                 amount=Decimal('3.30'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.00'
                                                                 ),
@@ -26128,7 +26128,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-3'
                                                                 ),
                                                                 amount=Decimal('3.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -26144,7 +26144,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-4'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -26160,7 +26160,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-5'
                                                                 ),
                                                                 amount=Decimal('6.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26176,7 +26176,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-6'
                                                                 ),
                                                                 amount=Decimal('7.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26192,7 +26192,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-7'
                                                                 ),
                                                                 amount=Decimal('7.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -26208,7 +26208,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-8'
                                                                 ),
                                                                 amount=Decimal('7.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -26224,7 +26224,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 1-9'
                                                                 ),
                                                                 amount=Decimal('7.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -26240,7 +26240,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 2 only'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.00'
                                                                 ),
@@ -26256,7 +26256,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-3'
                                                                 ),
                                                                 amount=Decimal('1.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -26272,7 +26272,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-4'
                                                                 ),
                                                                 amount=Decimal('1.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -26288,7 +26288,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-5'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26304,7 +26304,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-6'
                                                                 ),
                                                                 amount=Decimal('2.40'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26320,7 +26320,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-7'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -26336,7 +26336,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-8'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -26352,7 +26352,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 2-9'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -26368,7 +26368,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 3 only'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -26384,7 +26384,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-4'
                                                                 ),
                                                                 amount=Decimal('1.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -26400,7 +26400,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-5'
                                                                 ),
                                                                 amount=Decimal('1.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26416,7 +26416,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-6'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26432,7 +26432,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-7'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -26448,7 +26448,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-8'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -26464,7 +26464,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 3-9'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-11.60'
                                                                 ),
@@ -26480,7 +26480,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 4 only'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-7.70'
                                                                 ),
@@ -26496,7 +26496,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 4-5'
                                                                 ),
                                                                 amount=Decimal('1.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26512,7 +26512,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 4-6'
                                                                 ),
                                                                 amount=Decimal('1.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26528,7 +26528,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 5 only'
                                                                 ),
                                                                 amount=Decimal('1.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26544,7 +26544,7 @@ obj = PublicationDelivery(
                                                                     value='Zones 5-6'
                                                                 ),
                                                                 amount=Decimal('1.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26560,7 +26560,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 6 only'
                                                                 ),
                                                                 amount=Decimal('1.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-8.50'
                                                                 ),
@@ -26603,7 +26603,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Day@anyTime@Adult@Zone_1_only',
                                                                 version='any',
@@ -26646,7 +26646,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Day@offPeak@Adult@Zone_1_only',
                                                                 version='any',
@@ -26693,7 +26693,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Week@anyTime@Adult@Zone_1_only',
                                                                 version='any',
@@ -26736,7 +26736,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Month@anyTime@Adult@Zone_1_only',
                                                                 version='any',
@@ -26783,7 +26783,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Year@anyTime@Adult@Zone_1_only',
                                                                 version='any',
@@ -26822,7 +26822,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Single@peak@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -26830,7 +26830,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 1-9 to  Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('8.60'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -26846,7 +26846,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 2-9 to  Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('4.50'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -26862,7 +26862,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 3 to  Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('3.90'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-21.10'
                                                                 ),
@@ -26897,7 +26897,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Single@offPeak@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -26905,7 +26905,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 1-9 to  Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('5.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -26921,7 +26921,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 2 -9to  Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('2.70'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -26937,7 +26937,7 @@ obj = PublicationDelivery(
                                                                     value='Zone 3-9 to  Watford Junction*'
                                                                 ),
                                                                 amount=Decimal('2.20'),
-                                                                choice_1=LimitingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:max-15.70'
                                                                 ),
@@ -26980,7 +26980,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Watford_Junction@Day@anytime@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -27047,7 +27047,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Watford_Junction@Day@offPeak@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -27118,7 +27118,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Watford_Junction@Week@anytime@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -27185,7 +27185,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Watford_Junction@Month@anytime@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -27256,7 +27256,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Watford_Junction@Year@anytime@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -27310,7 +27310,7 @@ obj = PublicationDelivery(
                                             value='A rail Trip'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='nr:rail_trip',
                                                     version='any',
@@ -27333,7 +27333,7 @@ obj = PublicationDelivery(
                                             value='A rail Trip'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='nr:suburban_rail_trip',
                                                     version='any',
@@ -27361,7 +27361,7 @@ obj = PublicationDelivery(
                                             value='A rail Trip'
                                         ),
                                         discount_rights=DiscountRightRefsRelStructure(
-                                            capped_discount_right_ref_or_sale_discount_right_ref_or_usage_discount_right_ref=[
+                                            sale_discount_right_ref=[
                                                 CappedDiscountRightRef(
                                                     version='any',
                                                     ref='tfl:Oyster_PayAsYouGo_right'
@@ -27369,7 +27369,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='tfl:Oyster_PayAsYouGo_right',
                                                     version='any',
@@ -27389,7 +27389,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             usage_parameters=UsageParametersInFrameRelStructure(
-                                choice=[
+                                usage_parameter=[
                                     UsageValidityPeriod(
                                         id='nr:RailCard_validity_period@1Y',
                                         version='any',
@@ -27438,7 +27438,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='At least one adult'
                                                     ),
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfl:adult'
                                                     ),
@@ -27448,7 +27448,7 @@ obj = PublicationDelivery(
                                                 CompanionProfile(
                                                     id='nr:family_and_friends_child@children',
                                                     version='any',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='nr:family_and_friends_child'
                                                     ),
@@ -27480,7 +27480,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     SaleDiscountRight(
                                         id='nr:RailCard',
                                         version='any',
@@ -27491,7 +27491,7 @@ obj = PublicationDelivery(
                                             value=' Senior RailCard, 16-25 RailCard, Disabled Persons RailCard, GoldCard HM Forces RailCard \n\t\t\t\t\t\t\t\n \n\nThere are a range of National RailCards you can buy that allow discounted travel during off-peak times on Tube, DLR, London Overground and National Rail services.\n\n Name\t\t\t\t\t\t Cost per annum\t Validity\t Eligibility\n 16-25 RailCard\t\t\t\t\t £28\t 12 months\t Visit website\n Senior RailCard\t\t\t\t\t £28\t 12 months\t Visit website\n HM Forces RailCard\t\t\t £15\t 12 months\t Visit website\n Disabled Persons RailCard\t £20\t 12 months\t Visit website\n Network RailCard\t\t\t\t £28\t 12 months\t Visit website\n Family and Friends RailCard\t £28\t 12 months\t Visit website\nGold Cards\n\nGold Cards are annual season tickets with a difference:\n\nWhen you buy an annual Travelcard on an Oyster card you are automatically issued with a separate printed Gold Record Card\nWhen you buy an annual season ticket at a station within the Network RailCard Area and the origin and/or destination are also in the Network RailCard Area, you are automatically issued with a Gold Card\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t'
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='tfl:RailCard@TfL_Discount',
                                                     version='any',
@@ -27499,11 +27499,11 @@ obj = PublicationDelivery(
                                                         value='TfL Discount - TODO THIS IS BOGUS AS IT APPLIES TO TRAVEL WITH CARD NOT CARD'
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             FareProductPrice(
                                                                 id='tfl:RailCard',
                                                                 version='any',
-                                                                choice_1=DiscountingRuleRef(
+                                                                discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                     version='any',
                                                                     ref='tfl:34%'
                                                                 )
@@ -27519,7 +27519,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     end_date=XmlDate(2013, 5, 18),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             TimeIntervalPrice(
                                                                 id='nr:Standard_RailCard@Cost@1y',
                                                                 version='any',
@@ -27560,7 +27560,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     start_date=XmlDate(2013, 5, 19),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             TimeIntervalPrice(
                                                                 id='nr:Standard_RailCard@Cost@1y@2013-05-19',
                                                                 version='any',
@@ -27595,7 +27595,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -27659,7 +27659,7 @@ obj = PublicationDelivery(
                                             value=' 16 to 25  RailCard,  '
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTableRef(
                                                     version='any',
                                                     ref='nr:Standard_RailCard@Cost'
@@ -27671,7 +27671,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -27682,7 +27682,7 @@ obj = PublicationDelivery(
                                             requires_photo=True,
                                             is_refundable=True
                                         ),
-                                        choice=SaleDiscountRightRef(
+                                        preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                             version='any',
                                             ref='nr:RailCard'
                                         ),
@@ -27808,7 +27808,7 @@ obj = PublicationDelivery(
                                             value='Senior card'
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTableRef(
                                                     version='any',
                                                     ref='nr:Standard_RailCard@Cost'
@@ -27820,7 +27820,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -27831,7 +27831,7 @@ obj = PublicationDelivery(
                                             requires_photo=True,
                                             is_refundable=True
                                         ),
-                                        choice=SaleDiscountRightRef(
+                                        preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                             version='any',
                                             ref='nr:RailCard'
                                         ),
@@ -27959,7 +27959,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value="\nWhat is the HM Forces RailCard?\n\nThe HM Forces RailCard costs £15 and it'll save you 1/3 on most rail fares throughout Great Britain for a whole year. That works out to under £2 a month for huge savings. You're eligible if you're a member of the Regular Forces or a spouse of a member, for more details see eligibility.\n\nThere are plenty of ways you can use your RailCard, for both long and short trips. Better still you can use it anytime on weekends, Public Holidays and during the week. The only restriction is that if you travel before 10am Monday to Friday (except during July and August) a minimum fare will apply. For more details see minimum fares.\n \nYour HM Forces RailCard will save you 1/3 on many tickets. As with most things in life, there are some exceptions, so take a look at the ticket types you can and can't make savings on with your HM Forces RailCard.\n \nPlease note that the railcard can only be used for non-duty (leisure) travel only. Commuting between home and place of duty, work or education is not available.\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t"
                                         ),
-                                        choice=SaleDiscountRightRef(
+                                        preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                             version='any',
                                             ref='nr:RailCard'
                                         ),
@@ -28077,7 +28077,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='tfl:hm_forcesRailCard',
                                                     version='any',
@@ -28100,7 +28100,7 @@ obj = PublicationDelivery(
                                             value="Am I Eligible?\n\nYou qualify for a Disabled Persons RailCard if:\n\nYou\t\nPlease send in one of the following with your application\n\nPhotocopies and printed scans are acceptable - original documents will not be returned\n\nAre registered as having a visual impairment\tSocial Services official stamp in the space allocated on the application form\nA copy of your Certificate of Visual Impairment (CVI), BP1 Certificate (Scotland) or BD8 Certificate for being registered blind or partially-sighted\nAre registered as deaf or use a hearing aid\tSocial Services official stamp in the space allocated on the application form\nA copy of the front page of your NHS battery book or a copy of your dispensing prescription from a private hearing aid supplier\nHave epilepsy and either:\nhave repeated attacks even though you receive drug treatment; or\nare currently prohibited from driving because of your epilepsy\nA copy of your Exemption Certificate for epilepsy medication and a photocopy of your prescription for drugs in line with the National Society for Epilepsy Society guidelines\nA copy of your Exemption Certification for epliepsy medication and a photocopy of your letter from the DVLA telling you that you are unable to drive\nReceive Attendance Allowance\tA copy of your award letter\nReceive Personal Independence Payments\tA copy of your award letter\nReceive Disability Living Allowance at either:\nthe higher rate or lower rate for getting around (mobility); or\nthe higher or middle rate for help with personal care\nA copy of your award letter showing receipt of Disability Living Allowance in the past 12 months\nReceive Severe Disablement Allowance\tA copy of your award letter\nReceive War Pensioner's Mobility Supplement\tA copy of your award letter\nReceive War or Service Disablement Pension for 80% or more disability\tA copy of your award letter\nAre buying or leasing a vehicle through the Motability scheme\tA copy of the leasing or hire-purchase agreement, dated within the past 12 mont"
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='nr:DisabledRailCard@Cost',
                                                     version='any',
@@ -28116,7 +28116,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             TimeIntervalPrice(
                                                                 id='nr:DisabledRailCard@Cost@1y',
                                                                 version='any',
@@ -28151,7 +28151,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -28162,7 +28162,7 @@ obj = PublicationDelivery(
                                             requires_photo=True,
                                             is_refundable=True
                                         ),
-                                        choice=SaleDiscountRightRef(
+                                        preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                             version='any',
                                             ref='nr:RailCard'
                                         ),
@@ -28288,7 +28288,7 @@ obj = PublicationDelivery(
                                             value='Network  Rail card'
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTableRef(
                                                     version='any',
                                                     ref='nr:Standard_RailCard@Cost'
@@ -28300,7 +28300,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -28311,7 +28311,7 @@ obj = PublicationDelivery(
                                             requires_photo=True,
                                             is_refundable=True
                                         ),
-                                        choice=SaleDiscountRightRef(
+                                        preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                             version='any',
                                             ref='nr:RailCard'
                                         ),
@@ -28437,7 +28437,7 @@ obj = PublicationDelivery(
                                             value='Family and Friends Rail card'
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTableRef(
                                                     version='any',
                                                     ref='nr:Standard_RailCard@Cost'
@@ -28449,7 +28449,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -28460,7 +28460,7 @@ obj = PublicationDelivery(
                                             requires_photo=True,
                                             is_refundable=True
                                         ),
-                                        choice=SaleDiscountRightRef(
+                                        preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                             version='any',
                                             ref='nr:RailCard'
                                         ),
@@ -28600,7 +28600,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Bus and Tram Fares'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='tfl:LBSL'
                                         ),
@@ -28649,7 +28649,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='lbsl:Bus_Tram@Adult',
                                                     version='any',
@@ -28670,17 +28670,17 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Cash@Adult',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare'
                                                                     ),
                                                                     amount=Decimal('2.40')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     UserProfileRef(
                                                                         version='any',
                                                                         ref='tfl:adult'
@@ -28699,13 +28699,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Contactless_card@Adult',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare Contact less card'
                                                                     ),
                                                                     amount=Decimal('1.40')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     EntitlementRequiredRef(
                                                                         version='any',
                                                                         ref='tfl:Contactless_cardHolder'
@@ -28728,17 +28728,17 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@Adult',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare Oyster with capping'
                                                                     ),
                                                                     amount=Decimal('1.40'),
-                                                                    choice_1=LimitingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                         version='any',
                                                                         ref='tfl:max-4.40'
                                                                     )
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1d'
@@ -28757,13 +28757,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@Adult',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='weekly Travelcard Bus pass'
                                                                     ),
                                                                     amount=Decimal('19.60')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1w'
@@ -28782,13 +28782,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@Adult',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Monthly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('75.30')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1m'
@@ -28807,13 +28807,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@Adult',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Annual Bus pass'
                                                                     ),
                                                                     amount=Decimal('784.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1y'
@@ -28847,17 +28847,17 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Cash@18Plus',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare'
                                                                     ),
                                                                     amount=Decimal('2.40')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     FareStructureElementRef(
                                                                         version='any',
                                                                         ref='lbsl:bus_or_tram_trip'
@@ -28872,17 +28872,17 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@18Plus',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare Oyster with capping'
                                                                     ),
                                                                     amount=Decimal('1.40'),
-                                                                    choice_1=LimitingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                         version='any',
                                                                         ref='tfl:max-4.40'
                                                                     )
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1d'
@@ -28901,13 +28901,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@18Plus',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='weekly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('13.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1w'
@@ -28926,13 +28926,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@18Plus',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Monthly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('52.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1m'
@@ -28951,13 +28951,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@18Plus',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Annual Bus pass'
                                                                     ),
                                                                     amount=Decimal('548.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1y'
@@ -28991,17 +28991,17 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Cash@16To18',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare'
                                                                     ),
                                                                     amount=Decimal('0.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     FareStructureElementRef(
                                                                         version='any',
                                                                         ref='lbsl:bus_or_tram_trip'
@@ -29016,17 +29016,17 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@16To18',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare Oyster with capping'
                                                                     ),
                                                                     amount=Decimal('2.20'),
-                                                                    choice_1=LimitingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                         version='any',
                                                                         ref='tfl:max-4.40'
                                                                     )
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     UserProfileRef(
                                                                         version='any',
                                                                         ref='tfl:18Plus'
@@ -29049,13 +29049,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@16To18',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='weekly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('9.80')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1w'
@@ -29074,13 +29074,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@16To18',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Monthly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('37.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1m'
@@ -29095,13 +29095,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@16To18',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Annual Bus pass'
                                                                     ),
                                                                     amount=Decimal('392.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1y'
@@ -29135,17 +29135,17 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Cash@11To15',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare'
                                                                     ),
                                                                     amount=Decimal('0.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     FareStructureElementRef(
                                                                         version='any',
                                                                         ref='lbsl:bus_or_tram_trip'
@@ -29160,17 +29160,17 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@11To15',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare Oyster with capping'
                                                                     ),
                                                                     amount=Decimal('2.20'),
-                                                                    choice_1=LimitingRuleRef(
+                                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
                                                                         version='any',
                                                                         ref='tfl:max-4.40'
                                                                     )
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1d'
@@ -29189,13 +29189,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@11To15',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='weekly Travelcard Bus pass'
                                                                     ),
                                                                     amount=Decimal('9.80')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1w'
@@ -29214,13 +29214,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@11To15',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Monthly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('37.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1m'
@@ -29239,13 +29239,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@11To15',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Annual Bus pass'
                                                                     ),
                                                                     amount=Decimal('392.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     EntitlementRequiredRef(
                                                                         version='any',
                                                                         ref='tfl:TravelCardHolder'
@@ -29282,7 +29282,7 @@ obj = PublicationDelivery(
                                             value='A Bus Trip'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='lbsl:bus_or_tram_trip',
                                                     version='any',
@@ -29310,7 +29310,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='lbsl:TravelCard_on_Oyster@Bus',
                                         version='any',
@@ -29322,7 +29322,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='tfl:LBSL'
                                         ),
@@ -29371,7 +29371,7 @@ obj = PublicationDelivery(
                                 value='TfL River fares'
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                choice=[
+                                validity_condition_ref_or_validity_condition=[
                                     AvailabilityCondition(
                                         id='lrs:notJulyAugust',
                                         version='any',
@@ -29380,7 +29380,7 @@ obj = PublicationDelivery(
                                         ),
                                         is_available=False,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayType(
                                                     id='lrs:July',
                                                     version='any',
@@ -29581,7 +29581,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='RB1: Embankement - Woolich Arsenal\n\t\t\t\t\t\t\t\tRB3: London Bridge - Canary Wharf (for fares see route RB1)\n\t\t\t\t\t\t\t\tRB5: North Greenwich - Woolwich Arsenal (for fares see route RB1)\n\t\t\t\t\t\t\t\t'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         ),
@@ -29640,7 +29640,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 order=1,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    flexible_line_ref_or_line_ref=[
+                                                                    line_ref=[
                                                                         LineRef(
                                                                             version='any',
                                                                             ref='lrs:RB1'
@@ -29662,7 +29662,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='lrs:RB1@Single@Prepaid_trip',
                                                     version='any',
@@ -29690,12 +29690,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Single@Prepaid_trip@adult',
                                                                 version='any',
                                                                 amount=Decimal('6.50'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -29704,7 +29704,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Single@Prepaid_trip@child',
                                                                 version='any',
                                                                 amount=Decimal('3.25'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:child'
                                                                 )
@@ -29713,7 +29713,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Single@Prepaid_trip@Freedom_pass',
                                                                 version='any',
                                                                 amount=Decimal('3.25'),
-                                                                choice_2=SaleDiscountRightRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                     version='any',
                                                                     ref='tfl:Freedom_pass'
                                                                 )
@@ -29722,7 +29722,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Single@Prepaid_trip@18Plus@return',
                                                                 version='any',
                                                                 amount=Decimal('4.30'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:18Plus'
                                                                 )
@@ -29757,12 +29757,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Single@Oyster_PayAsYouGo@adult',
                                                                 version='any',
                                                                 amount=Decimal('6.50'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -29771,7 +29771,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Single@Oyster_PayAsYouGo@child',
                                                                 version='any',
                                                                 is_allowed=False,
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:child'
                                                                 )
@@ -29780,7 +29780,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Single@Oyster_PayAsYouGo@Freedom_pass',
                                                                 version='any',
                                                                 is_allowed=False,
-                                                                choice_2=SaleDiscountRightRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                     version='any',
                                                                     ref='tfl:Freedom_pass'
                                                                 )
@@ -29789,7 +29789,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Single@Oyster_PayAsYouGo@18Plus',
                                                                 version='any',
                                                                 is_allowed=False,
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:18Plus'
                                                                 )
@@ -29824,12 +29824,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Single@TravelCard@adult',
                                                                 version='any',
                                                                 amount=Decimal('4.30'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -29838,7 +29838,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Single@TravelCard@child',
                                                                 version='any',
                                                                 amount=Decimal('2.15'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:child'
                                                                 )
@@ -29847,7 +29847,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Single@TravelCard@Freedom_pass',
                                                                 version='any',
                                                                 is_allowed=False,
-                                                                choice_2=SaleDiscountRightRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                     version='any',
                                                                     ref='tfl:Freedom_pass'
                                                                 )
@@ -29856,7 +29856,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Single@TravelCard@18Plus',
                                                                 version='any',
                                                                 is_allowed=False,
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:18Plus'
                                                                 )
@@ -29891,12 +29891,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Week@TravelCard@adult',
                                                                 version='any',
                                                                 amount=Decimal('41.10'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -29905,7 +29905,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Week@TravelCard@child',
                                                                 version='any',
                                                                 amount=Decimal('20.55'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:child'
                                                                 )
@@ -29914,7 +29914,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Week@TravelCard@Freedom_pass',
                                                                 version='any',
                                                                 amount=Decimal('20.55'),
-                                                                choice_2=SaleDiscountRightRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                     version='any',
                                                                     ref='tfl:Freedom_pass'
                                                                 )
@@ -29923,7 +29923,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Week@TravelCard@18Plus',
                                                                 version='any',
                                                                 amount=Decimal('27.40'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:18Plus'
                                                                 )
@@ -29958,12 +29958,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Month@TravelCard@adult',
                                                                 version='any',
                                                                 amount=Decimal('41.10'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -29972,7 +29972,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Month@TravelCard@child',
                                                                 version='any',
                                                                 amount=Decimal('20.55'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:child'
                                                                 )
@@ -29981,7 +29981,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Month@TravelCard@Freedom_pass',
                                                                 version='any',
                                                                 amount=Decimal('20.55'),
-                                                                choice_2=SaleDiscountRightRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                     version='any',
                                                                     ref='tfl:Freedom_pass'
                                                                 )
@@ -29990,7 +29990,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Month@TravelCard@18Plus',
                                                                 version='any',
                                                                 amount=Decimal('27.40'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:18Plus'
                                                                 )
@@ -30025,12 +30025,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@7Month@TravelCard@adult',
                                                                 version='any',
                                                                 amount=Decimal('41.10'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -30039,7 +30039,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@7Month@TravelCard@child',
                                                                 version='any',
                                                                 amount=Decimal('20.55'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:child'
                                                                 )
@@ -30048,7 +30048,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@7Month@TravelCard@Freedom_pass',
                                                                 version='any',
                                                                 amount=Decimal('20.55'),
-                                                                choice_2=SaleDiscountRightRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                     version='any',
                                                                     ref='tfl:Freedom_pass'
                                                                 )
@@ -30057,7 +30057,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@7Month@TravelCard@18Plus',
                                                                 version='any',
                                                                 amount=Decimal('27.40'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:18Plus'
                                                                 )
@@ -30092,12 +30092,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Year@TravelCard@adult',
                                                                 version='any',
                                                                 amount=Decimal('41.10'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -30106,7 +30106,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Year@TravelCard@child',
                                                                 version='any',
                                                                 amount=Decimal('20.55'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:child'
                                                                 )
@@ -30115,7 +30115,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Year@TravelCard@Freedom_pass',
                                                                 version='any',
                                                                 amount=Decimal('20.55'),
-                                                                choice_2=SaleDiscountRightRef(
+                                                                preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                     version='any',
                                                                     ref='tfl:Freedom_pass'
                                                                 )
@@ -30124,7 +30124,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:RB1@Year@TravelCard@18Plus',
                                                                 version='any',
                                                                 amount=Decimal('27.40'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:18Plus'
                                                                 )
@@ -30144,7 +30144,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='RB2: Bankside - Embankment - Millbank - St George Wharf (Tate to Tate and St George Wharf)\nOperated by KPMG Thames Clippers\n\t\t\t\t\t\t\t\t'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         ),
@@ -30203,7 +30203,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 order=1,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    flexible_line_ref_or_line_ref=[
+                                                                    line_ref=[
                                                                         LineRef(
                                                                             version='any',
                                                                             ref='lrs:RB2'
@@ -30251,7 +30251,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='lrs:RB2@Adult',
                                                     version='any',
@@ -30276,14 +30276,14 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@single@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('5.50')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30302,10 +30302,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@single@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.30')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30324,10 +30324,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@other@single@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('6.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30342,10 +30342,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('4.95')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30364,10 +30364,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.97')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30386,10 +30386,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@other@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('5.40')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30404,10 +30404,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30426,10 +30426,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.20')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30448,10 +30448,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@other@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('4.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30466,10 +30466,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@return@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('11.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30488,10 +30488,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@return@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('6.60')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30510,10 +30510,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@other@return@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('12.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30552,14 +30552,14 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@single@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.80')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30578,10 +30578,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@single@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('1.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30600,10 +30600,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@other@single@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30618,10 +30618,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30640,10 +30640,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30662,10 +30662,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@other@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30680,10 +30680,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30702,10 +30702,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.20')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30724,10 +30724,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@other@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('4.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30742,10 +30742,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@return@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30764,10 +30764,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@return@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30786,10 +30786,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@other@return@Prepaid_trip',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30828,14 +30828,14 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@Millbank+Bankside@single@Freedom_pass',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.80')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30854,10 +30854,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@St_George_Wharf+Millbank@single@Freedom_pass',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('1.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30876,10 +30876,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@other@single@Freedom_pass',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30894,10 +30894,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@Millbank+Bankside@single@18Plus_OysterPhotoCard',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30916,10 +30916,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@St_George_Wharf+Millbank@single@18Plus_OysterPhotoCard',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.20')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30938,10 +30938,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@other@single@18Plus_OysterPhotoCard',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('4.00')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30956,10 +30956,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@Millbank+Bankside@single@Tate_member',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.70')
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30978,10 +30978,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@St_George_Wharf+Millbank@single@Tate_member',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -31000,10 +31000,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@other@single@Tate_member',
                                                                 version='any',
-                                                                choice=FarePriceVersionedChildStructure(
+                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice_1=[
+                                                                choice=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -31027,7 +31027,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='River Roamer'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         ),
@@ -31066,7 +31066,7 @@ obj = PublicationDelivery(
                                                                                         VehicleModeEnumeration.WATER,
                                                                                     ],
                                                                                 ],
-                                                                                network_ref_or_group_of_lines_ref=[
+                                                                                group_of_lines_ref=[
                                                                                     GroupOfLinesRef(
                                                                                         ref='ea:RiverBus'
                                                                                     ),
@@ -31103,7 +31103,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='lrs:Tower@River_Roamer@Prepaid',
                                                     version='any',
@@ -31128,12 +31128,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='lrs:River_Roamer@Prepaid@adult',
                                                                 version='any',
                                                                 amount=Decimal('13.50'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -31142,7 +31142,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:River_Roamer@Prepaid@child',
                                                                 version='any',
                                                                 amount=Decimal('6.80'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='lrs:riverChild'
                                                                 )
@@ -31151,7 +31151,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:River_Roamer@Prepaid@Freedom_pass',
                                                                 version='any',
                                                                 amount=Decimal('6.80'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:Freedom_passHolder'
                                                                 )
@@ -31160,7 +31160,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:River_Roamer@Prepaid@18plus',
                                                                 version='any',
                                                                 amount=Decimal('11.50'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:18Plus'
                                                                 )
@@ -31169,7 +31169,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:River_Roamer@Prepaid@family_group',
                                                                 version='any',
                                                                 amount=Decimal('29.50'),
-                                                                choice_2=GroupTicketRef(
+                                                                choice=GroupTicketRef(
                                                                     version='any',
                                                                     ref='lrs:River_Family'
                                                                 )
@@ -31197,12 +31197,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='lrs:River_Roamer@TravelCard@adult',
                                                                 version='any',
                                                                 amount=Decimal('9.10'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -31211,7 +31211,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:River_Roamer@TravelCard@child',
                                                                 version='any',
                                                                 amount=Decimal('4.50'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='lrs:riverChild'
                                                                 )
@@ -31228,7 +31228,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='London Eye Rover Cruise Experience - River Tour Services'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:London_Eye'
                                         ),
@@ -31272,7 +31272,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                                choice=AvailabilityConditionRef(
+                                                                                validity_condition_ref=AvailabilityConditionRef(
                                                                                     version='any',
                                                                                     ref='lrs:after9am'
                                                                                 )
@@ -31301,7 +31301,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    flexible_line_ref_or_line_ref=[
+                                                                    line_ref=[
                                                                         LineRef(
                                                                             version='any',
                                                                             ref='lrs:London_Eye'
@@ -31382,7 +31382,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='tfl:eligible'
                                                                             ),
-                                                                            choice=SaleDiscountRightRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                                 version='any',
                                                                                 ref='tfl:Freedom_pass'
                                                                             ),
@@ -31406,7 +31406,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='tfl:eligible'
                                                                             ),
-                                                                            choice=SaleDiscountRightRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                                 version='any',
                                                                                 ref='tfl:TravelCard_Sale_discount'
                                                                             )
@@ -31420,7 +31420,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='lrs:Tower@River_tour',
                                                     version='any',
@@ -31441,12 +31441,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='lrs:River_tour@adult',
                                                                 version='any',
                                                                 amount=Decimal('13.00'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -31455,7 +31455,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:River_tour@child',
                                                                 version='any',
                                                                 amount=Decimal('7.00'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='lrs:riverChild'
                                                                 )
@@ -31464,7 +31464,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:River_tour@infant',
                                                                 version='any',
                                                                 amount=Decimal('0.00'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:infant'
                                                                 )
@@ -31473,7 +31473,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:River_tour@disabled_person',
                                                                 version='any',
                                                                 amount=Decimal('11.50'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:disabled_person'
                                                                 )
@@ -31482,7 +31482,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:River_tour@senior_resident',
                                                                 version='any',
                                                                 amount=Decimal('11.50'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:seniorResident'
                                                                 )
@@ -31491,7 +31491,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:River_tour@senior_non_resident',
                                                                 version='any',
                                                                 amount=Decimal('11.50'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:senior_non_resident'
                                                                 )
@@ -31508,7 +31508,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Westminster - London Eye - Tower - Greenwich'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:City_Cruises'
                                         ),
@@ -31575,7 +31575,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    flexible_line_ref_or_line_ref=[
+                                                                    line_ref=[
                                                                         LineRef(
                                                                             version='any',
                                                                             ref='lrs:City_Cruises'
@@ -31597,19 +31597,19 @@ obj = PublicationDelivery(
                                                         value='Tower to Greenwich Pier'
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTable(
                                                                 id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
-                                                                    choice=[
+                                                                    fare_price_or_fare_price_ref=[
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@adult@single',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('9.50')
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:single'
@@ -31624,10 +31624,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@adult@return',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('12.50')
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:return'
@@ -31642,10 +31642,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@child@single',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('4.75')
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:single'
@@ -31660,10 +31660,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@child@return',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('6.25')
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:return'
@@ -31694,7 +31694,7 @@ obj = PublicationDelivery(
                                                         value='Tower to Westminster/London Eye Pier'
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTableRef(
                                                                 version='any',
                                                                 ref='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier'
@@ -31715,19 +31715,19 @@ obj = PublicationDelivery(
                                                         value='Westminster/London Eye to Greenwich Pier\t'
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTable(
                                                                 id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
-                                                                    choice=[
+                                                                    fare_price_or_fare_price_ref=[
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@adult@single',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('12.00')
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:single'
@@ -31742,10 +31742,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@adult@return',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('15.50')
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:return'
@@ -31760,10 +31760,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@child@single',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('6.00')
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:single'
@@ -31778,10 +31778,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@child@return',
                                                                             version='any',
-                                                                            choice=FarePriceVersionedChildStructure(
+                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('7.75')
                                                                             ),
-                                                                            choice_1=[
+                                                                            choice=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:return'
@@ -31812,7 +31812,7 @@ obj = PublicationDelivery(
                                                         value='Westminster/London Eye to Tower Pier\t'
                                                     ),
                                                     fare_tables=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTableRef(
                                                                 version='any',
                                                                 ref='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier'
@@ -31840,7 +31840,7 @@ obj = PublicationDelivery(
                                             value='A River Trip'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='lrs:river_trip',
                                                     version='any',
@@ -31910,7 +31910,7 @@ obj = PublicationDelivery(
                                             value='A River Cruise'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='lrs:River_cruise',
                                                     version='any',
@@ -31946,7 +31946,7 @@ obj = PublicationDelivery(
                                             value='A River Romer - multiple hop on off  can be made from 9:00 end o day'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='lrs:river_hop_on_hop_off',
                                                     version='any',
@@ -31993,7 +31993,7 @@ obj = PublicationDelivery(
                                                         ref='tfl:can_access'
                                                     ),
                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                        choice=AvailabilityConditionRef(
+                                                        validity_condition_ref=AvailabilityConditionRef(
                                                             version='any',
                                                             ref='lrs:after9am'
                                                         )
@@ -32005,7 +32005,7 @@ obj = PublicationDelivery(
                                                                 ref='lrs:Kpmg_Thames_Clippers'
                                                             ),
                                                         ],
-                                                        network_ref_or_group_of_lines_ref=[
+                                                        group_of_lines_ref=[
                                                             GroupOfLinesRef(
                                                                 version='any',
                                                                 ref='lrs:RiverBus'
@@ -32019,7 +32019,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             usage_parameters=UsageParametersInFrameRelStructure(
-                                choice=[
+                                usage_parameter=[
                                     UserProfile(
                                         id='lrs:Tate_member',
                                         version='any',
@@ -32067,7 +32067,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='lrs:disabled_person@River_cruisex'
                                                     ),
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfl:adult'
                                                     ),
@@ -32097,7 +32097,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='At least one adult'
                                                     ),
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfl:adult'
                                                     ),
@@ -32107,7 +32107,7 @@ obj = PublicationDelivery(
                                                 CompanionProfile(
                                                     id='lrs:River_Family@children',
                                                     version='any',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='lrs:riverChild'
                                                     ),
@@ -32130,7 +32130,7 @@ obj = PublicationDelivery(
                                                 UsageParameterPrice(
                                                     id='lrs:GroupTicket@River_cruise',
                                                     version='any',
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='tfl:10%'
                                                     )
@@ -32149,7 +32149,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='lrs:River_Rover',
                                         version='any',
@@ -32157,7 +32157,7 @@ obj = PublicationDelivery(
                                             value='Travel card  - River Rover'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:LRS'
                                         ),
@@ -32299,7 +32299,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:LRS'
                                         ),
@@ -32401,7 +32401,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:LRS'
                                         ),
@@ -32473,7 +32473,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='lrs:notJulyAugust'
                                                                     )
@@ -32499,7 +32499,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    choice=AvailabilityConditionRef(
+                                                                    validity_condition_ref=AvailabilityConditionRef(
                                                                         version='any',
                                                                         ref='lrs:notJulyAugust'
                                                                     )
@@ -32565,7 +32565,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='- Emirates Air Line'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='tfl:Emirates'
                                         ),
@@ -32642,7 +32642,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             charging_basis=ChargingBasisEnumeration.DISCOUNTED,
-                                                                            choice=SaleDiscountRightRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                                 version='any',
                                                                                 ref='tfl:Freedom_pass'
                                                                             )
@@ -32655,7 +32655,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=2,
                                                                             charging_basis=ChargingBasisEnumeration.DISCOUNTED,
-                                                                            choice=SaleDiscountRightRef(
+                                                                            preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
                                                                                 version='any',
                                                                                 ref='tfl:TravelCard_Sale_discount'
                                                                             )
@@ -32669,7 +32669,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
-                                            choice=[
+                                            fare_table_ref_or_fare_table=[
                                                 FareTable(
                                                     id='ea:Boarding_Pass@Prepaid_trip',
                                                     version='any',
@@ -32690,7 +32690,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     includes=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTable(
                                                                 id='ea:Boarding_Pass@Prepaid_trip@Adult',
                                                                 version='any',
@@ -32703,12 +32703,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 cells=CellsRelStructure(
-                                                                    choice=[
+                                                                    fare_price_or_fare_price_ref=[
                                                                         UsageParameterPrice(
                                                                             id='ea:Boarding_Pass@Prepaid_trip@adult@single',
                                                                             version='any',
                                                                             amount=Decimal('4.30'),
-                                                                            choice_2=RoundTripRef(
+                                                                            choice=RoundTripRef(
                                                                                 version='any',
                                                                                 ref='tfl:single'
                                                                             )
@@ -32717,15 +32717,15 @@ obj = PublicationDelivery(
                                                                             id='ea:Boarding_Pass@Prepaid_trip@adult@return',
                                                                             version='any',
                                                                             amount=Decimal('8.60'),
-                                                                            choice=UsageParameterPriceRef(
+                                                                            fare_price_ref=UsageParameterPriceRef(
                                                                                 version='any',
                                                                                 ref='ea:Boarding_Pass@Prepaid_trip@adult@single'
                                                                             ),
-                                                                            choice_1=PricingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=PricingRuleRef(
                                                                                 version='any',
                                                                                 ref='tfl:2x'
                                                                             ),
-                                                                            choice_2=RoundTripRef(
+                                                                            choice=RoundTripRef(
                                                                                 version='any',
                                                                                 ref='tfl:return'
                                                                             )
@@ -32745,20 +32745,20 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 cells=CellsRelStructure(
-                                                                    choice=[
+                                                                    fare_price_or_fare_price_ref=[
                                                                         UsageParameterPrice(
                                                                             id='ea:Boarding_Pass@Prepaid_trip@child@single',
                                                                             version='any',
                                                                             amount=Decimal('2.20'),
-                                                                            choice=UsageParameterPriceRef(
+                                                                            fare_price_ref=UsageParameterPriceRef(
                                                                                 version='any',
                                                                                 ref='ea:Boarding_Pass@Prepaid_trip@adult@single'
                                                                             ),
-                                                                            choice_1=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='tfl:50%'
                                                                             ),
-                                                                            choice_2=RoundTripRef(
+                                                                            choice=RoundTripRef(
                                                                                 version='any',
                                                                                 ref='tfl:single'
                                                                             )
@@ -32767,15 +32767,15 @@ obj = PublicationDelivery(
                                                                             id='ea:Boarding_Pass@Prepaid_trip@child@return',
                                                                             version='any',
                                                                             amount=Decimal('4.40'),
-                                                                            choice=UsageParameterPriceRef(
+                                                                            fare_price_ref=UsageParameterPriceRef(
                                                                                 version='any',
                                                                                 ref='ea:Boarding_Pass@Prepaid_trip@adult@return'
                                                                             ),
-                                                                            choice_1=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='tfl:50%'
                                                                             ),
-                                                                            choice_2=RoundTripRef(
+                                                                            choice=RoundTripRef(
                                                                                 version='any',
                                                                                 ref='tfl:return'
                                                                             )
@@ -32806,7 +32806,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     includes=FareTablesRelStructure(
-                                                        choice=[
+                                                        fare_table_ref_or_fare_table=[
                                                             FareTable(
                                                                 id='ea:Boarding_Pass@discounted@adult',
                                                                 version='any',
@@ -32822,12 +32822,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 cells=CellsRelStructure(
-                                                                    choice=[
+                                                                    fare_price_or_fare_price_ref=[
                                                                         UsageParameterPrice(
                                                                             id='ea:Boarding_Pass@discounted@adult@single',
                                                                             version='any',
                                                                             amount=Decimal('3.20'),
-                                                                            choice_2=RoundTripRef(
+                                                                            choice=RoundTripRef(
                                                                                 version='any',
                                                                                 ref='tfl:single'
                                                                             )
@@ -32836,15 +32836,15 @@ obj = PublicationDelivery(
                                                                             id='ea:Boarding_Pass@discounted@adult@return',
                                                                             version='any',
                                                                             amount=Decimal('6.40'),
-                                                                            choice=UsageParameterPriceRef(
+                                                                            fare_price_ref=UsageParameterPriceRef(
                                                                                 version='any',
                                                                                 ref='ea:Boarding_Pass@discounted@adult@single'
                                                                             ),
-                                                                            choice_1=PricingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=PricingRuleRef(
                                                                                 version='any',
                                                                                 ref='tfl:2x'
                                                                             ),
-                                                                            choice_2=RoundTripRef(
+                                                                            choice=RoundTripRef(
                                                                                 version='any',
                                                                                 ref='tfl:return'
                                                                             )
@@ -32867,20 +32867,20 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 cells=CellsRelStructure(
-                                                                    choice=[
+                                                                    fare_price_or_fare_price_ref=[
                                                                         UsageParameterPrice(
                                                                             id='ea:Boarding_Pass@discounted@child@single',
                                                                             version='any',
                                                                             amount=Decimal('1.60'),
-                                                                            choice=UsageParameterPriceRef(
+                                                                            fare_price_ref=UsageParameterPriceRef(
                                                                                 version='any',
                                                                                 ref='ea:Boarding_Pass@discounted@adult@single'
                                                                             ),
-                                                                            choice_1=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='tfl:50%'
                                                                             ),
-                                                                            choice_2=RoundTripRef(
+                                                                            choice=RoundTripRef(
                                                                                 version='any',
                                                                                 ref='tfl:single'
                                                                             )
@@ -32889,15 +32889,15 @@ obj = PublicationDelivery(
                                                                             id='ea:Boarding_Pass@discounted@child@return',
                                                                             version='any',
                                                                             amount=Decimal('3.20'),
-                                                                            choice=UsageParameterPriceRef(
+                                                                            fare_price_ref=UsageParameterPriceRef(
                                                                                 version='any',
                                                                                 ref='ea:Boarding_Pass@discounted@adult@return'
                                                                             ),
-                                                                            choice_1=DiscountingRuleRef(
+                                                                            discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                                 version='any',
                                                                                 ref='tfl:50%'
                                                                             ),
-                                                                            choice_2=RoundTripRef(
+                                                                            choice=RoundTripRef(
                                                                                 version='any',
                                                                                 ref='tfl:return'
                                                                             )
@@ -32935,12 +32935,12 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        choice=[
+                                                        fare_price_or_fare_price_ref=[
                                                             UsageParameterPrice(
                                                                 id='ea:Boarding_Pass@Oyster_PayAsYouGo@adult@single',
                                                                 version='any',
                                                                 amount=Decimal('3.20'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:adult'
                                                                 )
@@ -32949,7 +32949,7 @@ obj = PublicationDelivery(
                                                                 id='ea:Boarding_Pass@Oyster_PayAsYouGo@child@single',
                                                                 version='any',
                                                                 amount=Decimal('1.60'),
-                                                                choice_2=UserProfileRef(
+                                                                choice=UserProfileRef(
                                                                     version='any',
                                                                     ref='tfl:child'
                                                                 )
@@ -32971,7 +32971,7 @@ obj = PublicationDelivery(
                                             value='A Cableway  Trip'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='ea:cableway_trip',
                                                     version='any',
@@ -33002,7 +33002,7 @@ obj = PublicationDelivery(
                                             value='360° tour\nYou will have the option of taking a non-stop return trip on the Emirates Air Line; just ask for a 360° tour Boarding Pass at an Emirates Air Line ticket office. 360° tour Boarding Pass fares are the same as return fares.\n\nOyster card holders who want to travel on the Emirates Air Line as part of a 360° tour will need to buy a Boarding Pass - available at the discounted rate when you show your Oyster card.'
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
-                                            choice=[
+                                            access_right_parameter_assignment=[
                                                 GenericParameterAssignment(
                                                     id='ea:360_cableway_trip',
                                                     version='any',
@@ -33046,7 +33046,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             usage_parameters=UsageParametersInFrameRelStructure(
-                                choice=[
+                                usage_parameter=[
                                     UsageValidityPeriod(
                                         id='ea:Multi_journey_Boarding_Pass',
                                         version='any',
@@ -33078,7 +33078,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='At least one adult'
                                                     ),
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfl:adult'
                                                     ),
@@ -33092,7 +33092,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     AmountOfPriceUnitProduct(
                                         id='ea:Multi_journey_Boarding_Pass',
                                         version='any',
@@ -33107,7 +33107,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:LRS'
                                         ),
@@ -33134,7 +33134,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
+                                            cell_ref=[
                                                 FareProductPrice(
                                                     id='ea:Multi_journey_Boarding_Pass',
                                                     version='any',
@@ -33159,7 +33159,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='tfl:Emirates'
                                         ),
@@ -33231,7 +33231,7 @@ obj = PublicationDelivery(
                                             value='Oyster'
                                         ),
                                         members=OrganisationRefsRelStructure(
-                                            choice=[
+                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=[
                                                 OperatorRef(
                                                     version='any',
                                                     ref='tfl:LBSL'
@@ -33286,11 +33286,11 @@ obj = PublicationDelivery(
                                         gender=GenderEnumeration.MALE,
                                         height=Decimal('180'),
                                         customer_eligibilities=CustomerEligibilitiesRelStructure(
-                                            choice=[
+                                            customer_eligibility=[
                                                 UserProfileEligibility(
                                                     id='tfl:122222-up',
                                                     version='any',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfl:adult'
                                                     )
@@ -33320,11 +33320,11 @@ obj = PublicationDelivery(
                                         gender=GenderEnumeration.MALE,
                                         height=Decimal('150'),
                                         customer_eligibilities=CustomerEligibilitiesRelStructure(
-                                            choice=[
+                                            customer_eligibility=[
                                                 UserProfileEligibility(
                                                     id='tfl:122242-up',
                                                     version='any',
-                                                    companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                    user_profile_ref=UserProfileRef(
                                                         version='any',
                                                         ref='tfl:senior'
                                                     )
@@ -33419,7 +33419,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Kings_Cross'
@@ -33432,7 +33432,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='any',
                                                                     ref='tfl:anyTime'
                                                                 )
@@ -33537,7 +33537,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Kings_Cross'
@@ -33550,7 +33550,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='any',
                                                                     ref='tfl:anyTime'
                                                                 )
@@ -33609,7 +33609,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Kings_Cross'
@@ -33622,7 +33622,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='any',
                                                                     ref='tfl:anyTime'
                                                                 )
@@ -33719,13 +33719,13 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    flexible_line_ref_or_line_ref=[
+                                                                    line_ref=[
                                                                         LineRef(
                                                                             version='any',
                                                                             ref='lrs:RB2'
                                                                         ),
                                                                     ],
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='lrs:Millbank'
@@ -33738,7 +33738,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='any',
                                                                     ref='tfl:anyTime'
                                                                 )
@@ -34007,7 +34007,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Kings_Cross'
@@ -34020,7 +34020,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='any',
                                                                     ref='tfl:peak'
                                                                 )
@@ -34092,7 +34092,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='any',
                                                                     ref='tfl:peak'
                                                                 )
@@ -34121,7 +34121,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Oxford_Circus'
@@ -34201,14 +34201,14 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Highgate'
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='any',
                                                                     ref='tfl:offPeak'
                                                                 )
@@ -34291,14 +34291,14 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Finchley_Central'
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='any',
                                                                     ref='tfl:offPeak'
                                                                 )
@@ -34352,7 +34352,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:Oyster_Auto_Top_Up-SOP'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Kings_Cross'
@@ -34403,7 +34403,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:Oyster_Auto_Top_Up-SOP'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Kings_Cross'
@@ -34472,7 +34472,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:Oyster_Auto_Top_Up-SOP'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Kings_Cross'
@@ -34523,7 +34523,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:Oyster_Top_Up-SOP'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Kings_Cross'
@@ -34735,14 +34735,14 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Highgate'
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='any',
                                                                     ref='tfl:offPeak'
                                                                 )
@@ -34825,14 +34825,14 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=[
+                                                                    scheduled_stop_point_ref=[
                                                                         ScheduledStopPointRef(
                                                                             version='any',
                                                                             ref='tfl:Finchley_Central'
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref=FareDemandFactorRef(
+                                                                quality_structure_factor_ref=FareDemandFactorRef(
                                                                     version='any',
                                                                     ref='tfl:offPeak'
                                                                 )
@@ -34854,7 +34854,7 @@ obj = PublicationDelivery(
                                             value='Stolen card list'
                                         ),
                                         security_listings=SecurityListingsRelStructure(
-                                            choice=[
+                                            security_listing=[
                                                 FareContractSecurityListing(
                                                     id='tfl:Stolen_cards@Oyster-12222',
                                                     version='any',
@@ -34874,7 +34874,7 @@ obj = PublicationDelivery(
                                             value='Spoofed Machines'
                                         ),
                                         security_listings=SecurityListingsRelStructure(
-                                            choice=[
+                                            security_listing=[
                                                 RetailDeviceSecurityListing(
                                                     id='tfl:Stolen_cards@4422',
                                                     version='any',
@@ -34898,7 +34898,7 @@ obj = PublicationDelivery(
                                             value='Valid_accounts'
                                         ),
                                         security_listings=SecurityListingsRelStructure(
-                                            choice=[
+                                            security_listing=[
                                                 CustomerAccountSecurityListing(
                                                     id='tfl:Valid_accounts@Oyster-12222',
                                                     version='any',
@@ -34921,7 +34921,7 @@ obj = PublicationDelivery(
                                 value='TfL Example - code values-'
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     FareDayType(
                                         id='tfl:Day_from_0430',
                                         version='any',
@@ -34944,7 +34944,7 @@ obj = PublicationDelivery(
                                 value='TfL Example - code values-'
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='tfl:Charging_Moments',
                                         version='any',
@@ -34952,7 +34952,7 @@ obj = PublicationDelivery(
                                             value='Charging Moments'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 ChargingMoment(
                                                     id='tfl:payAsYouGo',
                                                     version='any',
@@ -34989,7 +34989,7 @@ obj = PublicationDelivery(
                                         id='nr:Types_of_Product_Category',
                                         version='any',
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfProductCategory(
                                                     id='nr:high_speed',
                                                     version='any',
@@ -35005,7 +35005,7 @@ obj = PublicationDelivery(
                                         id='nr:Types_of_Service',
                                         version='any',
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfService(
                                                     id='tfl:allowFreedom_pass',
                                                     version='any',
@@ -35021,7 +35021,7 @@ obj = PublicationDelivery(
                                         id='tfl:Types_of_Customer_Account',
                                         version='any',
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfCustomerAccount(
                                                     id='tfl:Oyster',
                                                     version='any',
@@ -35040,7 +35040,7 @@ obj = PublicationDelivery(
                                             value='Types of concession'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfConcession(
                                                     id='tfl:none',
                                                     version='any',
@@ -35171,7 +35171,7 @@ obj = PublicationDelivery(
                                             value='Types of Travel Document'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfTravelDocument(
                                                     id='tfl:paper_ticket',
                                                     version='any',
@@ -35262,7 +35262,7 @@ obj = PublicationDelivery(
                                             value='Types of Contract Event'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareContractEntry(
                                                     id='tfl:purchase',
                                                     version='any',
@@ -35337,7 +35337,7 @@ obj = PublicationDelivery(
                                             value='Types of  Access right Assignment'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfAccessRightAssignment(
                                                     id='tfl:eligible',
                                                     version='any',
@@ -35450,7 +35450,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Authority(
                                         id='tfl:TfL',
                                         version='any',
@@ -35878,7 +35878,7 @@ obj = PublicationDelivery(
                                             value='River Operators'
                                         ),
                                         members=TransportOrganisationRefsRelStructure(
-                                            authority_ref_or_operator_ref=[
+                                            transport_organisation_ref=[
                                                 OperatorRef(
                                                     version='any',
                                                     ref='lrs:Kpmg_Thames_Clippers'
@@ -35917,7 +35917,7 @@ obj = PublicationDelivery(
                                             value='Rail Operators'
                                         ),
                                         members=TransportOrganisationRefsRelStructure(
-                                            authority_ref_or_operator_ref=[
+                                            transport_organisation_ref=[
                                                 OperatorRef(
                                                     version='any',
                                                     ref='nr:National_Rail'
@@ -35997,7 +35997,7 @@ obj = PublicationDelivery(
                                             ),
                                         ],
                                         members=TransportOrganisationRefsRelStructure(
-                                            authority_ref_or_operator_ref=[
+                                            transport_organisation_ref=[
                                                 OperatorRef(
                                                     version='any',
                                                     ref='nr:toc_ec'

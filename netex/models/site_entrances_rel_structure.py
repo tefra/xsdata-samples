@@ -28,7 +28,7 @@ class SiteEntrancesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "siteEntrances_RelStructure"
 
-    choice: List[
+    entrance_ref_or_parking_entrance_ref_or_entrance: List[
         Union[
             StopPlaceVehicleEntranceRef,
             StopPlaceEntranceRef,

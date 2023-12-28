@@ -78,7 +78,7 @@ class SectionInSequenceVersionedChildStructure(
     class Meta:
         name = "SectionInSequence_VersionedChildStructure"
 
-    choice_1: Optional[
+    section_ref_or_general_section_ref_or_section: Optional[
         Union[
             ParentCommonSectionRef,
             CommonSectionRef,
@@ -541,9 +541,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_line_ref_or_line_ref: Optional[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -561,7 +559,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         },
     )
-    authority_ref_or_operator_ref: Optional[
+    transport_organisation_ref: Optional[
         Union[AuthorityRef, OperatorRef]
     ] = field(
         default=None,
@@ -594,7 +592,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
     class Meta:
         name = "FareSection_VersionStructure"
 
-    choice: Optional[
+    journey_pattern_ref: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,

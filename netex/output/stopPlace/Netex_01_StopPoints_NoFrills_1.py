@@ -18,7 +18,7 @@ obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
     participant_ref='SYS001',
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             ServiceFrame(
                 id='SVF004',
                 version='any',

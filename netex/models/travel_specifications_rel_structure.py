@@ -17,7 +17,7 @@ class TravelSpecificationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "travelSpecifications_RelStructure"
 
-    choice: List[
+    travel_specification_ref_or_travel_specification: List[
         Union[
             OfferedTravelSpecificationRef,
             RequestedTravelSpecificationRef,

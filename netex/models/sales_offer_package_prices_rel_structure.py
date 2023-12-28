@@ -19,7 +19,7 @@ class SalesOfferPackagePricesRelStructure(
     class Meta:
         name = "salesOfferPackagePrices_RelStructure"
 
-    sales_offer_package_price_ref_or_sales_offer_package_price_or_cell_ref: List[
+    cell_ref: List[
         Union[
             SalesOfferPackagePriceRef,
             SalesOfferPackagePriceVersionedChildStructure,

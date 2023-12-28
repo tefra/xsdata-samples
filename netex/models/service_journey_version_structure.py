@@ -128,7 +128,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    journey_pattern_ref: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,
@@ -179,7 +179,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rhythmical_journey_group_ref_or_headway_journey_group_ref_or_journey_frequency_group_ref: Optional[
+    journey_frequency_group_ref: Optional[
         Union[
             RhythmicalJourneyGroupRef,
             HeadwayJourneyGroupRef,
@@ -208,7 +208,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[
+    vehicle_type_ref: Optional[
         Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
     ] = field(
         default=None,
@@ -241,9 +241,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_block_ref_or_block_ref: Optional[
-        Union[TrainBlockRef, BlockRef]
-    ] = field(
+    block_ref: Optional[Union[TrainBlockRef, BlockRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -297,7 +295,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    choice_1: Optional[
+    line_ref: Optional[
         Union[FlexibleLineRef, LineRef, LineView, FlexibleLineView]
     ] = field(
         default=None,

@@ -18,9 +18,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Route_VersionStructure"
 
-    flexible_line_ref_or_line_ref: Optional[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

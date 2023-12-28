@@ -48,7 +48,7 @@ class UsageParameterPriceVersionedChildStructure(
     class Meta:
         name = "UsageParameterPrice_VersionedChildStructure"
 
-    choice_2: Optional[
+    choice: Optional[
         Union[
             SalesOfferPackageEntitlementGivenRef,
             SalesOfferPackageEntitlementRequiredRef,

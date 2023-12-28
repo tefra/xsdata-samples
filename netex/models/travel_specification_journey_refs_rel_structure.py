@@ -15,7 +15,7 @@ class TravelSpecificationJourneyRefsRelStructure(
     class Meta:
         name = "travelSpecificationJourneyRefs_RelStructure"
 
-    template_service_journey_ref_or_service_journey_ref_or_train_number_ref: List[
+    service_journey_ref: List[
         Union[TemplateServiceJourneyRef, ServiceJourneyRef, TrainNumberRef]
     ] = field(
         default_factory=list,

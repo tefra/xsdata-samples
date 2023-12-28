@@ -120,7 +120,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    choice_1=[
+                    version_frame_ref=[
                         CompositeFrameRef(
                             ref='spqes:Fr1234'
                         ),
@@ -134,7 +134,7 @@ obj = PublicationDelivery(
         value='Netex simple Paris Network Example'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='spqes:Fr1234',
                 version='1',
@@ -166,7 +166,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ResourceFrame(
                             id='spq:Fr1234',
                             version='any',
@@ -813,14 +813,14 @@ obj = PublicationDelivery(
                                         id='spq:RL_Rt001o_01to02',
                                         version='any',
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='spq:LP_RL_Rt001o_01to02_PJ01',
                                                     version='any',
                                                     type_of_projection_ref=TypeOfProjectionRefStructure(
                                                         ref='spq:Spatial'
                                                     ),
-                                                    complex_feature_ref_or_simple_feature_ref_or_spatial_feature_ref=SpatialFeatureRef(
+                                                    spatial_feature_ref=SpatialFeatureRef(
                                                         version='any',
                                                         ref='gis:St_RueDeParis_01'
                                                     )
@@ -935,7 +935,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             routes=RoutesInFrameRelStructure(
-                                flexible_route_or_route=[
+                                route=[
                                     Route(
                                         id='spq:Rt001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
@@ -945,7 +945,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Route 66b outbound'
                                         ),
-                                        flexible_line_ref_or_line_ref=LineRef(
+                                        line_ref=LineRef(
                                             version='002',
                                             ref='spq:LN0066'
                                         ),
@@ -1084,7 +1084,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='spq:LN0066',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
@@ -1111,7 +1111,7 @@ obj = PublicationDelivery(
                                             latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='tim:PPJ_SSP1_pj01',
                                                     version='any',
@@ -1138,7 +1138,7 @@ obj = PublicationDelivery(
                                             latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='ssp:LPJ_SSP2_pj01',
                                                     version='any',
@@ -1166,7 +1166,7 @@ obj = PublicationDelivery(
                                             latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='ssp:LPJ_SSP3_pj01',
                                                     version='any',
@@ -1194,7 +1194,7 @@ obj = PublicationDelivery(
                                             latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='ssp:LPJ_SSP4_pj01',
                                                     version='any',
@@ -1222,7 +1222,7 @@ obj = PublicationDelivery(
                                             latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='ssp:LPJ_SSP5_pj01',
                                                     version='any',
@@ -1250,7 +1250,7 @@ obj = PublicationDelivery(
                                             latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='ssp:LPJ_SSP6_pj01',
                                                     version='any',
@@ -1278,7 +1278,7 @@ obj = PublicationDelivery(
                                             latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='ssp:LPJ_SSP7_pj01',
                                                     version='any',
@@ -1306,7 +1306,7 @@ obj = PublicationDelivery(
                                             latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='ssp:LPJ_SSP8_pj01',
                                                     version='any',
@@ -1334,7 +1334,7 @@ obj = PublicationDelivery(
                                             latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='tim:PPJ_SSP9_pj01',
                                                     version='any',
@@ -1361,7 +1361,7 @@ obj = PublicationDelivery(
                                             latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='tim:PPJ_SSP10_pj01',
                                                     version='any',
@@ -1388,7 +1388,7 @@ obj = PublicationDelivery(
                                             value='1 to 2'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='ssp:LP_SL_SvP001o_1to2_PJ01',
                                                     version='any',
@@ -1423,7 +1423,7 @@ obj = PublicationDelivery(
                                             value='2 to 3 '
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='ssp:LP_SL_SvP001o_2to3_PJ01',
                                                     version='any',
@@ -1485,7 +1485,7 @@ obj = PublicationDelivery(
                                             value='3  to 4'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='ssp:LP_SL_SvP001o_3to4_PJ01',
                                                     version='any',
@@ -1535,7 +1535,7 @@ obj = PublicationDelivery(
                                             value='4  to 5'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='ssp:LP_SL_SvP001o_4to5_PJ01',
                                                     version='any',
@@ -1597,7 +1597,7 @@ obj = PublicationDelivery(
                                             value='5  to6'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='ssp:LP_SL_SvP001o_5to6_PJ01',
                                                     version='any',
@@ -1647,7 +1647,7 @@ obj = PublicationDelivery(
                                             value='6  to 7'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='ssp:LP_SL_SvP001o_6to7_PJ01',
                                                     version='any',
@@ -1697,7 +1697,7 @@ obj = PublicationDelivery(
                                             value='7  to 8'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='ssp:LP_SL_SvP001o_7to8_PJ01',
                                                     version='any',
@@ -1735,7 +1735,7 @@ obj = PublicationDelivery(
                                             value='8 to 9'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='ssp:LP_SL_SvP001o_8to9_PJ01',
                                                     version='any',
@@ -1783,7 +1783,7 @@ obj = PublicationDelivery(
                                                     id='ssp:SvPip_001o_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP1'
                                                     ),
@@ -1798,7 +1798,7 @@ obj = PublicationDelivery(
                                                     id='ssp:SvPip_001o_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP2'
                                                     ),
@@ -1813,7 +1813,7 @@ obj = PublicationDelivery(
                                                     id='ssp:SvPip_001o_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP3'
                                                     ),
@@ -1828,7 +1828,7 @@ obj = PublicationDelivery(
                                                     id='ssp:SvPip_001o_04',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP4'
                                                     ),
@@ -1843,7 +1843,7 @@ obj = PublicationDelivery(
                                                     id='ssp:SvPip_001o_05',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP5'
                                                     ),
@@ -1858,7 +1858,7 @@ obj = PublicationDelivery(
                                                     id='ssp:SvPip_001o_06',
                                                     version='any',
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP6'
                                                     ),
@@ -1873,7 +1873,7 @@ obj = PublicationDelivery(
                                                     id='ssp:SvPip_001o_07',
                                                     version='any',
                                                     order=7,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP7'
                                                     ),
@@ -1888,7 +1888,7 @@ obj = PublicationDelivery(
                                                     id='ssp:SvPip_001o_08',
                                                     version='any',
                                                     order=8,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP8'
                                                     ),
@@ -1903,7 +1903,7 @@ obj = PublicationDelivery(
                                                     id='ssp:SvPip_001o_09',
                                                     version='any',
                                                     order=9,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP9'
                                                     ),
@@ -1916,7 +1916,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             stop_assignments=StopAssignmentsInFrameRelStructure(
-                                choice=[
+                                stop_assignment=[
                                     PassengerStopAssignment(
                                         id='ssp:PSA_01',
                                         version='any',
@@ -1924,7 +1924,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment 1'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='001',
                                             ref='ssp:SSP1'
                                         ),
@@ -1944,7 +1944,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment 2'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='001',
                                             ref='ssp:SSP2'
                                         ),
@@ -1964,7 +1964,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment 3'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='001',
                                             ref='ssp:SSP3'
                                         ),
@@ -1984,7 +1984,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment 4'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='001',
                                             ref='ssp:SSP4'
                                         ),
@@ -2004,7 +2004,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment 5'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='001',
                                             ref='ssp:SSP5'
                                         ),
@@ -2024,7 +2024,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment 6'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='001',
                                             ref='ssp:SSP6'
                                         ),
@@ -2044,7 +2044,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment 7'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='001',
                                             ref='ssp:SSP7'
                                         ),
@@ -2064,7 +2064,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment 8'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='001',
                                             ref='ssp:SSP8'
                                         ),
@@ -2084,7 +2084,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment 9'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='001',
                                             ref='ssp:SSP9'
                                         ),
@@ -2104,7 +2104,7 @@ obj = PublicationDelivery(
                                             value='Bus Assignment10'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='001',
                                             ref='ssp:SSP10'
                                         ),
@@ -2124,7 +2124,7 @@ obj = PublicationDelivery(
                                             value='TIMING POINT 1'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='tim:PPJ_TP1_pj01',
                                                     version='any',
@@ -2143,7 +2143,7 @@ obj = PublicationDelivery(
                                             value='TIMING POINT 2'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='tim:PPJ_TP2_pj01',
                                                     version='any',
@@ -2162,7 +2162,7 @@ obj = PublicationDelivery(
                                             value='TIMING POINT3'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='tim:PPJ_TP3_pj01',
                                                     version='any',
@@ -2181,7 +2181,7 @@ obj = PublicationDelivery(
                                             value='TIMING POINT 4'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='tim:PPJ_TP4_pj01',
                                                     version='any',
@@ -2200,7 +2200,7 @@ obj = PublicationDelivery(
                                             value='TIMING POINT 5'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='tim:PPJ_TP5_pj01',
                                                     version='any',
@@ -2220,7 +2220,7 @@ obj = PublicationDelivery(
                                             value='TIMING POINT 6'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 PointProjection(
                                                     id='tim:PPJ_TP6_pj01',
                                                     version='any',
@@ -2243,7 +2243,7 @@ obj = PublicationDelivery(
                                             value='TP1 to TP2'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='tim:LP_TL_TP001o_TP1toTP2_PJ01',
                                                     version='any',
@@ -2273,7 +2273,7 @@ obj = PublicationDelivery(
                                             value='TP2 to TP3'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='tim:LP_TL_TP001o_TP2toTP3_PJ01',
                                                     version='any',
@@ -2331,7 +2331,7 @@ obj = PublicationDelivery(
                                             value='TP3 to TP4'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='tim:LP_TL_TP001o_TP3toTP4_PJ01',
                                                     version='any',
@@ -2416,7 +2416,7 @@ obj = PublicationDelivery(
                                             value='TP4 to TP5'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='tim:LP_TL_TP001o_TP4toTP5_PJ01',
                                                     version='any',
@@ -2453,7 +2453,7 @@ obj = PublicationDelivery(
                                             value='TP5 to TP6'
                                         ),
                                         projections=ProjectionsRelStructure(
-                                            choice=[
+                                            projection_ref_or_projection=[
                                                 LinkProjection(
                                                     id='tim:LP_TL_TP001o_TP5toTP6_PJ01',
                                                     version='any',
@@ -2598,7 +2598,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='ssp:JP001o',
                                         version='any',
@@ -2656,7 +2656,7 @@ obj = PublicationDelivery(
                                                     id='ssp:PIP_JP001o_0002',
                                                     version='any',
                                                     projections=ProjectionsRelStructure(
-                                                        choice=[
+                                                        projection_ref_or_projection=[
                                                             PointProjection(
                                                                 id='tim:PIP_JP001o_0002',
                                                                 version='any',
@@ -2672,7 +2672,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP1'
                                                     ),
@@ -2695,7 +2695,7 @@ obj = PublicationDelivery(
                                                     id='ssp:PIP_JP001o_0003',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP2'
                                                     ),
@@ -2705,7 +2705,7 @@ obj = PublicationDelivery(
                                                     id='ssp:PIP_JP001o_0004',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP3'
                                                     ),
@@ -2725,7 +2725,7 @@ obj = PublicationDelivery(
                                                     id='ssp:PIP_JP001o_0006',
                                                     version='any',
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP4'
                                                     ),
@@ -2735,7 +2735,7 @@ obj = PublicationDelivery(
                                                     id='ssp:PIP_JP001o_0007',
                                                     version='any',
                                                     order=7,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP5'
                                                     ),
@@ -2755,7 +2755,7 @@ obj = PublicationDelivery(
                                                     id='ssp:PIP_JP001o_0009',
                                                     version='any',
                                                     order=9,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP6'
                                                     ),
@@ -2775,7 +2775,7 @@ obj = PublicationDelivery(
                                                     id='ssp:PIP_JP001o_0011',
                                                     version='any',
                                                     order=11,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP7'
                                                     ),
@@ -2785,7 +2785,7 @@ obj = PublicationDelivery(
                                                     id='ssp:PIP_JP001o_0012',
                                                     version='any',
                                                     order=12,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP8'
                                                     ),
@@ -2795,7 +2795,7 @@ obj = PublicationDelivery(
                                                     id='ssp:PIP_JP001o_0013',
                                                     version='any',
                                                     projections=ProjectionsRelStructure(
-                                                        choice=[
+                                                        projection_ref_or_projection=[
                                                             PointProjection(
                                                                 id='tim:PIP_JP001o_0013',
                                                                 version='any',
@@ -2811,7 +2811,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     order=13,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='001',
                                                         ref='ssp:SSP9'
                                                     ),

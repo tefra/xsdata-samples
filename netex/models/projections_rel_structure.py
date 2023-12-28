@@ -22,7 +22,7 @@ class ProjectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "projections_RelStructure"
 
-    choice: List[
+    projection_ref_or_projection: List[
         Union[
             TopographicProjectionRef,
             ComplexFeatureProjectionRef,

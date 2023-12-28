@@ -30,7 +30,7 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "linkRefs_RelStructure"
 
-    choice: List[
+    link_ref_or_infrastructure_link_ref_or_link_ref_by_value: List[
         Union[
             ServiceLinkRef,
             LineLinkRef,

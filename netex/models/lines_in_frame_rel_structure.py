@@ -12,7 +12,7 @@ class LinesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "linesInFrame_RelStructure"
 
-    flexible_line_or_line: List[Union[FlexibleLine, Line]] = field(
+    line: List[Union[FlexibleLine, Line]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

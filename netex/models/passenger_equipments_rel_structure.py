@@ -23,7 +23,7 @@ class PassengerEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "passengerEquipments_RelStructure"
 
-    choice: List[
+    passenger_equipment_ref_or_vehicle_equipment_ref_or_passenger_equipment: List[
         Union[
             RubbishDisposalEquipmentRef,
             HelpPointEquipmentRef,

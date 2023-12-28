@@ -138,7 +138,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    companion_profile_ref_or_user_profile_ref: Optional[
+    user_profile_ref: Optional[
         Union[CompanionProfileRef, UserProfileRef]
     ] = field(
         default=None,

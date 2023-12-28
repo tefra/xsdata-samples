@@ -43,7 +43,7 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "usageParametersInFrame_RelStructure"
 
-    choice: List[
+    usage_parameter: List[
         Union[
             SalesOfferPackageEntitlementRequired,
             SalesOfferPackageEntitlementGiven,

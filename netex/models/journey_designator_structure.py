@@ -71,9 +71,7 @@ class JourneyDesignatorStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_day_type_ref_or_day_type_ref: Optional[
-        Union[FareDayTypeRef, DayTypeRef]
-    ] = field(
+    day_type_ref: Optional[Union[FareDayTypeRef, DayTypeRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -91,7 +89,7 @@ class JourneyDesignatorStructure:
             ),
         },
     )
-    authority_ref_or_operator_ref: Optional[
+    transport_organisation_ref: Optional[
         Union[AuthorityRef, OperatorRef]
     ] = field(
         default=None,
@@ -111,9 +109,7 @@ class JourneyDesignatorStructure:
             ),
         },
     )
-    flexible_line_ref_or_line_ref: Optional[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

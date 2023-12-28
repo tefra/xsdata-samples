@@ -20,7 +20,7 @@ class QualityStructureFactorsRelStructure(
     class Meta:
         name = "qualityStructureFactors_RelStructure"
 
-    choice: List[
+    quality_structure_factor_ref_or_quality_structure_factor: List[
         Union[
             FareQuotaFactorRef,
             FareDemandFactorRef,

@@ -43,7 +43,7 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    authority_ref_or_operator_ref: Optional[
+    transport_organisation_ref: Optional[
         Union[AuthorityRef, OperatorRef]
     ] = field(
         default=None,

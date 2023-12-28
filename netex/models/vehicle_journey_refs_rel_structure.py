@@ -12,9 +12,7 @@ class VehicleJourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehicleJourneyRefs_RelStructure"
 
-    dead_run_ref_or_vehicle_journey_ref: List[
-        Union[DeadRunRef, VehicleJourneyRef]
-    ] = field(
+    vehicle_journey_ref: List[Union[DeadRunRef, VehicleJourneyRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

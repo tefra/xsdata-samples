@@ -16,7 +16,7 @@ class CommonSectionPointMembersRelStructure(
     class Meta:
         name = "commonSectionPointMembers_RelStructure"
 
-    line_section_point_member_or_common_section_point_member: List[
+    common_section_point_member: List[
         Union[LineSectionPointMember, CommonSectionPointMember]
     ] = field(
         default_factory=list,

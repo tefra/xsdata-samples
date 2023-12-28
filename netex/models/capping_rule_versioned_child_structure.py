@@ -46,7 +46,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    supplement_product_ref_or_preassigned_fare_product_ref: List[
+    preassigned_fare_product_ref: List[
         Union[SupplementProductRef, PreassignedFareProductRef]
     ] = field(
         default_factory=list,

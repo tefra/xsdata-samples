@@ -22,7 +22,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
     class Meta:
         name = "VehicleStoppingPlace_VersionStructure"
 
-    wire_link_ref_or_road_link_ref_or_railway_link_ref: Optional[
+    infrastructure_link_ref: Optional[
         Union[WireLinkRef, RoadLinkRef, RailwayLinkRef]
     ] = field(
         default=None,
@@ -47,7 +47,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
             ),
         },
     )
-    wire_point_ref_or_road_point_ref_or_railway_point_ref: Optional[
+    infrastructure_point_ref: Optional[
         Union[WirePointRef, RoadPointRef, RailwayPointRef]
     ] = field(
         default=None,

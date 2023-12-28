@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometricPrimitivePropertyType:
-    polygon_or_line_string_or_point: Optional[
+    abstract_surface_or_abstract_curve_or_abstract_geometric_primitive: Optional[
         Union[Polygon, LineString, Point1]
     ] = field(
         default=None,

@@ -76,7 +76,7 @@ class TypesOfValueInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfValueInFrame_RelStructure"
 
-    choice: List[
+    type_of_value_or_type_of_entity: List[
         Union[
             ValueSet,
             TypeOfMachineReadability,

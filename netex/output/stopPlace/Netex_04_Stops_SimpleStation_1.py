@@ -162,7 +162,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    choice_1=[
+                    version_frame_ref=[
                         NetworkFilterByValueStructure(
                             places=NetworkFilterByValueStructure.Places(
                                 choice=[
@@ -183,12 +183,12 @@ obj = PublicationDelivery(
         value='Simple Stop pair On street example'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='zbt:CF001',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='zbt:CF0021',
                                 version='any',
@@ -221,7 +221,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ServiceCalendarFrame(
                             id='zbt:SFC0021',
                             version='any',
@@ -238,7 +238,7 @@ obj = PublicationDelivery(
                                 to_date=XmlDate(2011, 12, 17)
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     DayType(
                                         id='zbt:DT001Open_MF',
                                         version='any',
@@ -395,12 +395,12 @@ obj = PublicationDelivery(
                                 )
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                choice=[
+                                validity_condition_ref_or_validity_condition=[
                                     AvailabilityCondition(
                                         id='zbt:AC_02_CC_Opening',
                                         version='01',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='zbt:DT004Open_MFS'
@@ -416,7 +416,7 @@ obj = PublicationDelivery(
                                         id='zbt:AC_01_Main_Opening',
                                         version='01',
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='zbt:DT001Open_MF'
@@ -612,12 +612,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 StopPlaceEntrance(
                                                     id='ztb:bh0023@A1-E1',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='zbt:AC_01_Main_Opening'
@@ -678,7 +678,7 @@ obj = PublicationDelivery(
                                                     id='ztb:bh0023@A1-E2',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='zbt:AC_02_CC_Opening'
@@ -1074,7 +1074,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     entrances=SiteEntrancesRelStructure(
-                                                        choice=[
+                                                        entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             EntranceRef(
                                                                 version='01',
                                                                 ref='ztb:bh0023@A1-E1'
@@ -1173,7 +1173,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     entrances=SiteEntrancesRelStructure(
-                                                        choice=[
+                                                        entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             EntranceRef(
                                                                 version='01',
                                                                 ref='ztb:bh0023@Rail@Q1-E1tr'
@@ -2118,7 +2118,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             connections=TransfersInFrameRelStructure(
-                                choice=[
+                                transfer=[
                                     Connection(
                                         id='ztb:ssa_bh0023',
                                         created=XmlDateTime(2000, 12, 17, 9, 30, 47, 0, 0),
@@ -2149,7 +2149,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             stop_assignments=StopAssignmentsInFrameRelStructure(
-                                choice=[
+                                stop_assignment=[
                                     PassengerStopAssignment(
                                         id='ztb:psa_bh0023',
                                         version='any',
@@ -2157,7 +2157,7 @@ obj = PublicationDelivery(
                                             value='Rail Assignment regardless of Platform '
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='032',
                                             ref='ztb:ssa_bh0023'
                                         ),
@@ -2173,7 +2173,7 @@ obj = PublicationDelivery(
                                             value='Rail Assignment Platform 1'
                                         ),
                                         order=2,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='032',
                                             ref='ztb:ssa_bh0023'
                                         ),
@@ -2193,7 +2193,7 @@ obj = PublicationDelivery(
                                             value='Rail Assignment Platform 2 '
                                         ),
                                         order=3,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='032',
                                             ref='ztb:ssa_bh0023'
                                         ),
@@ -2278,7 +2278,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='zbt:Org_ZTLB',
                                         version='any',

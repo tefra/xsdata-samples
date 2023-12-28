@@ -32,7 +32,7 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1Y2M3DT10H30M0S"),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             ServiceCalendarFrame(
                 id='hde:SCF01',
                 version='any',
@@ -58,7 +58,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 content_validity_conditions=ValidityConditionsRelStructure(
-                    choice=[
+                    validity_condition_ref_or_validity_condition=[
                         ValidityRuleParameter(
                             id='hde:VC_ntwkf003_002_icy',
                             version='any',
@@ -151,7 +151,7 @@ obj = PublicationDelivery(
                     ]
                 ),
                 day_types=DayTypesInFrameRelStructure(
-                    fare_day_type_or_organisation_day_type_or_day_type=[
+                    day_type=[
                         DayType(
                             id='Myobj:DT001',
                             version='any',

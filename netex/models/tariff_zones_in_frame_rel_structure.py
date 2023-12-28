@@ -12,7 +12,7 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "tariffZonesInFrame_RelStructure"
 
-    fare_zone_or_tariff_zone: List[Union[FareZone, TariffZone]] = field(
+    tariff_zone: List[Union[FareZone, TariffZone]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

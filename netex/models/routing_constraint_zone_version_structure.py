@@ -40,9 +40,7 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    network_ref_or_group_of_lines_ref: Optional[
-        Union[NetworkRef, GroupOfLinesRef]
-    ] = field(
+    group_of_lines_ref: Optional[Union[NetworkRef, GroupOfLinesRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

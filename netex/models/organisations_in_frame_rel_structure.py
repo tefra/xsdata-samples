@@ -18,7 +18,7 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "organisationsInFrame_RelStructure"
 
-    choice: List[
+    organisation_or_transport_organisation: List[
         Union[
             RetailConsortium,
             Authority,

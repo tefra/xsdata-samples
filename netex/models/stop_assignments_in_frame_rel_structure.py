@@ -16,7 +16,7 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopAssignmentsInFrame_RelStructure"
 
-    choice: List[
+    stop_assignment: List[
         Union[
             FlexibleStopAssignment,
             VehicleJourneyStopAssignment,

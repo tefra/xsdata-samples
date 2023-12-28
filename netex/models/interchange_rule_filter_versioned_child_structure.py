@@ -79,7 +79,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[
+    scheduled_stop_point_ref: Optional[
         Union[FareScheduledStopPointRef, ScheduledStopPointRef]
     ] = field(
         default=None,

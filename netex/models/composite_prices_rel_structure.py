@@ -53,7 +53,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "compositePrices_RelStructure"
 
-    choice: List[
+    fare_price_ref_or_fare_price_or_price_group: List[
         Union[
             CustomerPurchasePackagePriceRef,
             ParkingPriceRef,

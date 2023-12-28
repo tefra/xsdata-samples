@@ -152,17 +152,17 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             SiteFrame(
                 id='mypark:SF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='mypark:PP01@Opening_Hours',
                                 version='any',
                                 day_types=DayTypesRelStructure(
-                                    choice=[
+                                    day_type_ref_or_day_type=[
                                         DayType(
                                             id='mypark:EveryDay',
                                             version='any',
@@ -201,7 +201,7 @@ obj = PublicationDelivery(
                                 id='mypark:PP01@Exit_Hours',
                                 version='any',
                                 day_types=DayTypesRelStructure(
-                                    choice=[
+                                    day_type_ref_or_day_type=[
                                         DayType(
                                             id='mypark:24_Hours_every_day',
                                             version='any',
@@ -271,7 +271,7 @@ obj = PublicationDelivery(
                             id='mypark:PP01',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityConditionRef(
                                             version='any',
                                             ref='mypark:PP01@Opening_Hours'
@@ -482,12 +482,12 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             entrances=SiteEntrancesRelStructure(
-                                choice=[
+                                entrance_ref_or_parking_entrance_ref_or_entrance=[
                                     ParkingPassengerEntrance(
                                         id='mypark:PP01@EP01',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mypark:PP01@Exit_Hours'
@@ -546,7 +546,7 @@ obj = PublicationDelivery(
                                         id='mypark:PP01@EP02',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mypark:PP01@Opening_Hours'
@@ -598,7 +598,7 @@ obj = PublicationDelivery(
                                         id='mypark:PP01@EV11@Entrance',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mypark:PP01@Opening_Hours'
@@ -637,7 +637,7 @@ obj = PublicationDelivery(
                                                                 id='mypark:PP01@EV11@Entrance@peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        choice=[
+                                                                        validity_condition_ref_or_validity_condition=[
                                                                             ValidityTriggerRef(
                                                                                 ref='mypark:Peek'
                                                                             ),
@@ -660,7 +660,7 @@ obj = PublicationDelivery(
                                                                 id='mypark:PP01@EV11@Entrance@off_peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        choice=[
+                                                                        validity_condition_ref_or_validity_condition=[
                                                                             ValidityTriggerRef(
                                                                                 ref='mypark:Off_peak'
                                                                             ),
@@ -724,7 +724,7 @@ obj = PublicationDelivery(
                                         id='mypark:PP01@EV12@Exit',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mypark:PP01@Opening_Hours'
@@ -763,7 +763,7 @@ obj = PublicationDelivery(
                                                                 id='mypark:PP01@EV12@Exit@peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        choice=[
+                                                                        validity_condition_ref_or_validity_condition=[
                                                                             ValidityTriggerRef(
                                                                                 ref='mypark:Peek'
                                                                             ),
@@ -785,7 +785,7 @@ obj = PublicationDelivery(
                                                                 id='mypark:PP01@EV12@Exit@Off_peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        choice=[
+                                                                        validity_condition_ref_or_validity_condition=[
                                                                             ValidityTriggerRef(
                                                                                 ref='mypark:Off_peak'
                                                                             ),
@@ -1131,7 +1131,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         entrances=EntranceRefsRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref=[
                                                 ParkingEntranceRef(
                                                     version='any',
                                                     ref='mypark:PP01@EP01'
@@ -1201,7 +1201,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         entrances=EntranceRefsRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref=[
                                                 ParkingEntranceForVehiclesRef(
                                                     version='any',
                                                     ref='mypark:PP01@EV02+03'
@@ -1277,7 +1277,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         entrances=EntranceRefsRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref=[
                                                 ParkingEntranceRef(
                                                     version='any',
                                                     ref='mypark:PP01@EP02 '
@@ -1328,7 +1328,7 @@ obj = PublicationDelivery(
                             id='mypark:PS22',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='mypark:Parking_Charge_Hours',
                                             version='any',
@@ -1339,7 +1339,7 @@ obj = PublicationDelivery(
                                                 value='Modnay to friday not PublicHolidays'
                                             ),
                                             day_types=DayTypesRelStructure(
-                                                choice=[
+                                                day_type_ref_or_day_type=[
                                                     DayType(
                                                         id='mypark:WorkingDay',
                                                         version='any',
@@ -2263,7 +2263,7 @@ obj = PublicationDelivery(
                             ),
                             at_centre=False,
                             entrances=SiteEntrancesRelStructure(
-                                choice=[
+                                entrance_ref_or_parking_entrance_ref_or_entrance=[
                                     ParkingEntranceForVehicles(
                                         id='mypark:PNR01@EV01',
                                         version='any',
@@ -2440,7 +2440,7 @@ obj = PublicationDelivery(
                     id='mypark:FF01',
                     version='any',
                     pricing_rules=PricingRulesRelStructure(
-                        choice=[
+                        pricing_rule=[
                             DiscountingRule(
                                 id='mypark:Vat',
                                 version='any',
@@ -2484,12 +2484,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT15M"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PP01@15M',
                                                     version='any',
                                                     amount=Decimal('0.25'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2503,12 +2503,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT30M"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PP01@30M',
                                                     version='any',
                                                     amount=Decimal('1.00'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2522,12 +2522,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT1H"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PP01@1H',
                                                     version='any',
                                                     amount=Decimal('1.00'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2541,12 +2541,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT2H"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PP01@2H',
                                                     version='any',
                                                     amount=Decimal('2.00'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2560,12 +2560,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT4H"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PP01@4H',
                                                     version='any',
                                                     amount=Decimal('3.00'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2579,12 +2579,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT6H"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PP01@6H',
                                                     version='any',
                                                     amount=Decimal('4.00'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2598,12 +2598,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT12H"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PP01@12H',
                                                     version='any',
                                                     amount=Decimal('10.00'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2617,12 +2617,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT24H"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PP01@24H',
                                                     version='any',
                                                     amount=Decimal('18.00'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2636,12 +2636,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT2H"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PP01@48H',
                                                     version='any',
                                                     amount=Decimal('24.00'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2682,12 +2682,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT15M"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PS22@15M_working',
                                                     version='any',
                                                     amount=Decimal('0.25'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2720,7 +2720,7 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT15M"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PS22@15M_other',
                                                     version='any',
@@ -2754,12 +2754,12 @@ obj = PublicationDelivery(
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT1H"),
                                         prices=FarePricesRelStructure(
-                                            choice=[
+                                            fare_price_ref_or_cell_ref_or_fare_price=[
                                                 ParkingPrice(
                                                     id='mypark:PNR01@60M',
                                                     version='any',
                                                     amount=Decimal('0.10'),
-                                                    choice_1=DiscountingRuleRef(
+                                                    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2777,7 +2777,7 @@ obj = PublicationDelivery(
                 id='mypark:Resources',
                 version='any',
                 types_of_value=TypesOfValueInFrameRelStructure(
-                    choice=[
+                    type_of_value_or_type_of_entity=[
                         ValueSet(
                             id='mypark:Types_off_VAT_Categopry',
                             version='any',
@@ -2785,7 +2785,7 @@ obj = PublicationDelivery(
                                 value='Types of Tariff'
                             ),
                             values=TypesOfValueStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     TypeOfPricingRule(
                                         id='mypark:vat@transportation',
                                         version='any',

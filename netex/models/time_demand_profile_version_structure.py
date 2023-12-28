@@ -50,7 +50,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    choice: Optional[
+    journey_pattern_ref: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,
@@ -85,7 +85,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    dead_run_ref_or_vehicle_journey_ref: Optional[
+    vehicle_journey_ref: Optional[
         Union[DeadRunRef, VehicleJourneyRef]
     ] = field(
         default=None,

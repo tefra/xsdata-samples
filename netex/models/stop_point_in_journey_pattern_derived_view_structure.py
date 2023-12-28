@@ -24,7 +24,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "StopPointInJourneyPattern_DerivedViewStructure"
 
-    choice: Optional[
+    point_in_journey_pattern_ref: Optional[
         Union[
             FarePointInPatternRef,
             StopPointInJourneyPatternRef,
@@ -67,7 +67,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[
+    scheduled_stop_point_ref: Optional[
         Union[
             FareScheduledStopPointRef,
             ScheduledStopPointRef,

@@ -142,7 +142,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    fare_price_ref: Optional[
         Union[
             CustomerPurchasePackagePriceRef,
             ParkingPriceRef,
@@ -261,7 +261,7 @@ class CellPriceStructure:
             ),
         },
     )
-    choice_1: Optional[
+    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule: Optional[
         Union[
             LimitingRuleRef,
             DiscountingRuleRef,

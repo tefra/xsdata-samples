@@ -14,7 +14,7 @@ class JourneyPatternsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyPatternsInFrame_RelStructure"
 
-    choice: List[
+    journey_pattern: List[
         Union[
             ServiceJourneyPattern,
             DeadRunJourneyPattern,

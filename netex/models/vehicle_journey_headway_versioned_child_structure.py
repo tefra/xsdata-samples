@@ -17,7 +17,7 @@ class VehicleJourneyHeadwayVersionedChildStructure(
     class Meta:
         name = "VehicleJourneyHeadway_VersionedChildStructure"
 
-    dead_run_ref_or_vehicle_journey_ref: Optional[
+    vehicle_journey_ref: Optional[
         Union[DeadRunRef, VehicleJourneyRef]
     ] = field(
         default=None,

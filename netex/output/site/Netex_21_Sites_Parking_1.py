@@ -77,17 +77,17 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             SiteFrame(
                 id='pkg:SF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='pkg:PP01_Opening_Hours',
                                 version='any',
                                 day_types=DayTypesRelStructure(
-                                    choice=[
+                                    day_type_ref_or_day_type=[
                                         DayType(
                                             id='pkg:EveryDay',
                                             version='any',
@@ -126,7 +126,7 @@ obj = PublicationDelivery(
                                 id='pkg:PP01_Exit_Hours',
                                 version='any',
                                 day_types=DayTypesRelStructure(
-                                    choice=[
+                                    day_type_ref_or_day_type=[
                                         DayType(
                                             id='pkg:24HrsEveryDay',
                                             version='any',
@@ -174,7 +174,7 @@ obj = PublicationDelivery(
                             id='pkg:PP01',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityConditionRef(
                                             version='any',
                                             ref='pkg:PP01_Opening_Hours'
@@ -243,12 +243,12 @@ obj = PublicationDelivery(
                             site_type=SiteTypeEnumeration.RETAIL,
                             at_centre=True,
                             entrances=SiteEntrancesRelStructure(
-                                choice=[
+                                entrance_ref_or_parking_entrance_ref_or_entrance=[
                                     ParkingEntranceForVehicles(
                                         id='pkg:PP01@EV11@Entrance',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='pkg:PP01_Opening_Hours'
@@ -278,7 +278,7 @@ obj = PublicationDelivery(
                                         id='pkg:PP01@EV12@Exit',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='pkg:PP01_Exit_Hours'
@@ -420,7 +420,7 @@ obj = PublicationDelivery(
                             id='pkg:PS22',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='pkg:Parking_Charge_Hours',
                                             version='any',
@@ -431,7 +431,7 @@ obj = PublicationDelivery(
                                                 value='Modnay to friday not PublicHolidays'
                                             ),
                                             day_types=DayTypesRelStructure(
-                                                choice=[
+                                                day_type_ref_or_day_type=[
                                                     DayType(
                                                         id='pkg:WorkingDay',
                                                         version='any',

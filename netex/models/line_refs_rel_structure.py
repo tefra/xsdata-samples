@@ -12,9 +12,7 @@ class LineRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "lineRefs_RelStructure"
 
-    flexible_line_ref_or_line_ref: List[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: List[Union[FlexibleLineRef, LineRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

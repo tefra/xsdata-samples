@@ -66,7 +66,7 @@ class GroupOfSalesOfferPackagesVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref: Optional[
+    discounting_rule_ref_or_pricing_rule_ref: Optional[
         Union[LimitingRuleRef, DiscountingRuleRef, PricingRuleRef]
     ] = field(
         default=None,

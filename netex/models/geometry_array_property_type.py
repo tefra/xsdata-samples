@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometryArrayPropertyType:
-    polygon_or_line_string_or_point: List[
+    abstract_surface_or_abstract_curve_or_abstract_geometric_primitive: List[
         Union[Polygon, LineString, Point1]
     ] = field(
         default_factory=list,

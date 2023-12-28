@@ -55,7 +55,7 @@ obj = PublicationDelivery(
         value='Olympic Venue Definitions'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='oda:OPK_all',
                 version='1.1',
@@ -93,7 +93,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         SiteFrame(
                             id='oda:OPK',
                             created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
@@ -161,7 +161,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100OPKgN',
                                                     created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
@@ -3426,7 +3426,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100EXL@gEntr',
                                                     created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
@@ -4164,7 +4164,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100GRP@gGNW',
                                                     created=XmlDateTime(2011, 2, 22, 16, 0, 0, 0, 0),
@@ -4246,7 +4246,7 @@ obj = PublicationDelivery(
                                                     id='naptPoi:8100GRP@gBKH1',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='naptPoi:8100GRP@gBKH1',
                                                                     version='any',
@@ -4335,7 +4335,7 @@ obj = PublicationDelivery(
                                                     id='naptPoi:8100GRP@gBKH6',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityCondition(
                                                                     id='naptPoi:8100GRP@gBKH6',
                                                                     version='any',
@@ -4659,7 +4659,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100NGA@gEntr',
                                                     created=XmlDateTime(2011, 2, 23, 10, 0, 0, 0, 0),
@@ -4887,7 +4887,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100RAB@g0',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
@@ -5227,7 +5227,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100EAR@gEntr',
                                                     created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
@@ -5457,7 +5457,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100LCG@g0',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
@@ -5797,7 +5797,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100WIM@gN',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
@@ -6256,7 +6256,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100HGP@gInN',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
@@ -6646,7 +6646,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100MAL@gN',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
@@ -6974,7 +6974,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100HYD@g0',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
@@ -7171,7 +7171,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100WEA@gEntr',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
@@ -7399,7 +7399,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100LVC@g0',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
@@ -7596,7 +7596,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100HAD@g0',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
@@ -7793,7 +7793,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100ETD@gTHub',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
@@ -8121,7 +8121,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100WAP@g0',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
@@ -8318,7 +8318,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 PointOfInterestEntrance(
                                                     id='naptPoi:8100WEM@g0',
                                                     created=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),

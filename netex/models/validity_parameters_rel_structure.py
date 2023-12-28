@@ -170,9 +170,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    network_ref_or_group_of_lines_ref: List[
-        Union[NetworkRef, GroupOfLinesRef]
-    ] = field(
+    group_of_lines_ref: List[Union[NetworkRef, GroupOfLinesRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -190,9 +188,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    flexible_line_ref_or_line_ref: List[
-        Union[FlexibleLineRef, LineRef]
-    ] = field(
+    line_ref: List[Union[FlexibleLineRef, LineRef]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -246,7 +242,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: List[
+    scheduled_stop_point_ref: List[
         Union[FareScheduledStopPointRef, ScheduledStopPointRef]
     ] = field(
         default_factory=list,
@@ -284,7 +280,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    postal_address_ref_or_road_address_ref_or_address_ref: List[
+    address_ref: List[
         Union[PostalAddressRef, RoadAddressRef, AddressRef]
     ] = field(
         default_factory=list,
@@ -529,7 +525,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref: List[
+    facility_set_ref: List[
         Union[ServiceFacilitySetRef, SiteFacilitySetRef, FacilitySetRef]
     ] = field(
         default_factory=list,
@@ -563,7 +559,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    template_service_journey_ref_or_service_journey_ref: List[
+    service_journey_ref: List[
         Union[TemplateServiceJourneyRef, ServiceJourneyRef]
     ] = field(
         default_factory=list,
@@ -601,7 +597,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: List[
+    vehicle_type_ref: List[
         Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
     ] = field(
         default_factory=list,
@@ -695,7 +691,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref: List[
+    discounting_rule_ref_or_pricing_rule_ref: List[
         Union[LimitingRuleRef, DiscountingRuleRef, PricingRuleRef]
     ] = field(
         default_factory=list,

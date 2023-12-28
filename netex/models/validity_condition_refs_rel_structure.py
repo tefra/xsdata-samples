@@ -14,7 +14,7 @@ class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "validityConditionRefs_RelStructure"
 
-    choice: List[
+    validity_condition_ref: List[
         Union[
             AvailabilityConditionRef,
             ValidityRuleParameterRef,

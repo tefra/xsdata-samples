@@ -94,7 +94,7 @@ class AccessRightParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
+    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: Optional[
         Union[
             SupplementProductRef,
             PreassignedFareProductRef,
@@ -153,9 +153,7 @@ class AccessRightParameterAssignmentVersionStructure(
             ),
         },
     )
-    parking_tariff_ref_or_tariff_ref: Optional[
-        Union[ParkingTariffRef, TariffRef]
-    ] = field(
+    tariff_ref: Optional[Union[ParkingTariffRef, TariffRef]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -181,7 +179,7 @@ class AccessRightParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref: Optional[
+    fare_element_in_sequence_ref: Optional[
         Union[
             ControllableElementInSequenceRef,
             FareStructureElementInSequenceRef,

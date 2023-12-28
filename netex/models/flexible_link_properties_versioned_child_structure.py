@@ -20,7 +20,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FlexibleLinkProperties_VersionedChildStructure"
 
-    choice: Optional[
+    link_ref_or_infrastructure_link_ref: Optional[
         Union[
             ServiceLinkRef,
             LineLinkRef,

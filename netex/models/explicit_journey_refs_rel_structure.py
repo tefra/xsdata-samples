@@ -14,7 +14,7 @@ class ExplicitJourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "explicitJourneyRefs_RelStructure"
 
-    choice: List[
+    service_journey_ref_or_vehicle_journey_ref: List[
         Union[
             TemplateServiceJourneyRef,
             ServiceJourneyRef,

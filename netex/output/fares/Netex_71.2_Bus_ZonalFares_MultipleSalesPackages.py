@@ -113,7 +113,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
-                        choice=[
+                        validity_condition=[
                             AvailabilityCondition(
                                 id='hde:range',
                                 version='any',
@@ -121,7 +121,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    choice_1=[
+                    version_frame_ref=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='cdla:FF01'
@@ -136,12 +136,12 @@ obj = PublicationDelivery(
         value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='cdla:CDLA@Multiple_packages',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             ValidBetween(
                                 from_date=XmlDateTime(2011, 8, 22, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2012, 10, 31, 0, 0, 0, 0, 0)
@@ -166,7 +166,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ServiceFrame(
                             id='cdla:CDLA@Multiple_packages@network',
                             version='1.0',
@@ -174,7 +174,7 @@ obj = PublicationDelivery(
                                 value='Farezones  for 2012 fares '
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ResourceFrameRef(
                                         version='1.0',
                                         ref='cdla:CDLA@Common_resources'
@@ -184,7 +184,7 @@ obj = PublicationDelivery(
                             network=Network(
                                 id='cdla:Northern_England',
                                 version='1.0',
-                                authority_ref_or_operator_ref=OperatorRef(
+                                transport_organisation_ref=OperatorRef(
                                     version='any',
                                     ref='mybus:CDLA'
                                 ),
@@ -202,7 +202,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
-                                fare_zone_or_tariff_zone=[
+                                tariff_zone=[
                                     FareZone(
                                         id='cdla:Midlands_Area',
                                         version='any',
@@ -551,7 +551,7 @@ obj = PublicationDelivery(
                             id='cdla:CDLA@Multiple_packages@products@standard',
                             version='1.0',
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ServiceFrameRef(
                                         version='1.0',
                                         ref='cdla:CDLA@Multiple_packages@network'
@@ -566,7 +566,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Time interval tariff'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:CDLA'
                                         ),
@@ -852,7 +852,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='cdla:Period_pass@standard',
                                         version='1.0',
@@ -964,7 +964,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='cdla:mobile_app'
                                                     ),
-                                                    choice=FareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
                                                         version='1.0',
                                                         ref='cdla:Period_pass@standard'
                                                     ),
@@ -995,7 +995,7 @@ obj = PublicationDelivery(
                                                                 id='cdla:Period_pass-SOP@smartcard@can_access_when@4week',
                                                                 version='1.0',
                                                                 order=1,
-                                                                time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                time_structure_factor_ref=TimeIntervalRef(
                                                                     version='1.0',
                                                                     ref='cdla:4week'
                                                                 )
@@ -1004,7 +1004,7 @@ obj = PublicationDelivery(
                                                                 id='cdla:Period_pass-SOP@smartcard@can_access_when@1year',
                                                                 version='1.0',
                                                                 order=1,
-                                                                time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                time_structure_factor_ref=TimeIntervalRef(
                                                                     version='1.0',
                                                                     ref='cdla:1year'
                                                                 )
@@ -1053,7 +1053,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='cdla:card'
                                                     ),
-                                                    choice=FareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
                                                         version='1.0',
                                                         ref='cdla:Period_pass@standard'
                                                     ),
@@ -1069,7 +1069,7 @@ obj = PublicationDelivery(
                             id='cdla:CDLA@Multiple_packages@products@family',
                             version='1.0',
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ServiceFrameRef(
                                         version='1.0',
                                         ref='cdla:CDLA@Multiple_packages@network'
@@ -1084,7 +1084,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Day pass  fares - Family group ticket'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:CDLA'
                                         ),
@@ -1157,7 +1157,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='At least one adult'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='cdla:adult'
                                                                                 ),
@@ -1170,7 +1170,7 @@ obj = PublicationDelivery(
                                                                                 name=MultilingualString(
                                                                                     value='Up to 5 Children'
                                                                                 ),
-                                                                                companion_profile_ref_or_user_profile_ref=UserProfileRef(
+                                                                                user_profile_ref=UserProfileRef(
                                                                                     version='any',
                                                                                     ref='cdla:child'
                                                                                 ),
@@ -1190,7 +1190,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='cdla:Day_pass@family',
                                         version='any',
@@ -1265,7 +1265,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='cdla:mobile_app'
                                                     ),
-                                                    choice=FareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
                                                         version='1.0',
                                                         ref='cdla:Day_pass@family'
                                                     ),
@@ -1281,7 +1281,7 @@ obj = PublicationDelivery(
                             id='cdla:CDLA@Multiple_packages@products@student',
                             version='1.0',
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     ServiceFrameRef(
                                         version='1.0',
                                         ref='cdla:CDLA@Multiple_packages@network'
@@ -1289,7 +1289,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                choice=[
+                                validity_condition_ref_or_validity_condition=[
                                     AvailabilityCondition(
                                         id='cdla:academic_year',
                                         version='1.0',
@@ -1336,7 +1336,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Student zonal pass fares'
                                         ),
-                                        choice=OperatorRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:CDLA'
                                         ),
@@ -1377,7 +1377,7 @@ obj = PublicationDelivery(
                                                     id='cdla:academic_term@autumn',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='1.0',
                                                                     ref='cdla:academic_term@autumn'
@@ -1394,7 +1394,7 @@ obj = PublicationDelivery(
                                                     id='cdla:academic_term@spring',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='1.0',
                                                                     ref='cdla:academic_term@spring'
@@ -1411,7 +1411,7 @@ obj = PublicationDelivery(
                                                     id='cdla:academic_term@summer',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='1.0',
                                                                     ref='cdla:academic_term@summer'
@@ -1428,7 +1428,7 @@ obj = PublicationDelivery(
                                                     id='cdla:academic_year',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            choice=[
+                                                            validity_condition_ref_or_validity_condition=[
                                                                 AvailabilityConditionRef(
                                                                     version='1.0',
                                                                     ref='cdla:academic_year'
@@ -1444,7 +1444,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
-                                            choice=[
+                                            quality_structure_factor_ref_or_quality_structure_factor=[
                                                 QualityStructureFactor(
                                                     id='cdla:Time_interval@student@funded@80',
                                                     version='1.0',
@@ -1786,8 +1786,8 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    choice=QualityStructureFactorsRelStructure(
-                                                        choice=[
+                                                    quality_structure_factor_ref=QualityStructureFactorsRelStructure(
+                                                        quality_structure_factor_ref_or_quality_structure_factor=[
                                                             QualityStructureFactorRef(
                                                                 version='1.0',
                                                                 ref='cdla:Time_interval@student@funded@80'
@@ -1831,8 +1831,8 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    choice=QualityStructureFactorsRelStructure(
-                                                        choice=[
+                                                    quality_structure_factor_ref=QualityStructureFactorsRelStructure(
+                                                        quality_structure_factor_ref_or_quality_structure_factor=[
                                                             QualityStructureFactorRef(
                                                                 version='1.0',
                                                                 ref='cdla:Time_interval@student@promo@103.5'
@@ -1860,14 +1860,14 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             fare_products=FareProductsInFrameRelStructure(
-                                choice=[
+                                fare_product=[
                                     PreassignedFareProduct(
                                         id='cdla:Period_pass@student',
                                         version='1.0',
                                         name=MultilingualString(
                                             value='Adult Day Zonal  fare    '
                                         ),
-                                        authority_ref_or_operator_ref=OperatorRef(
+                                        transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:CDLA'
                                         ),
@@ -1939,7 +1939,7 @@ obj = PublicationDelivery(
                                                                             id='cdla:Period_pass@student@mobile@purchase_window@academic_year',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         ValidBetween(
                                                                                             from_date=XmlDateTime(2011, 8, 22, 0, 0, 0, 0, 0),
                                                                                             to_date=XmlDateTime(2011, 10, 31, 23, 59, 59, 0, 0)
@@ -1951,7 +1951,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                time_structure_factor_ref=TimeIntervalRef(
                                                                     version='1.0',
                                                                     ref='cdla:academic_year'
                                                                 )
@@ -1966,7 +1966,7 @@ obj = PublicationDelivery(
                                                                             id='cdla::student@purchase_window@autum',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='1.0',
                                                                                             ref='cdla:academic_term@autumn'
@@ -1978,7 +1978,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                time_structure_factor_ref=TimeIntervalRef(
                                                                     version='1.0',
                                                                     ref='cdla:academic_term@autumn'
                                                                 )
@@ -1993,7 +1993,7 @@ obj = PublicationDelivery(
                                                                             id='cdla:Period_pass@student@mobile@purchase_window@spring',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='1.0',
                                                                                             ref='cdla:academic_term@spring'
@@ -2005,7 +2005,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                time_structure_factor_ref=TimeIntervalRef(
                                                                     version='1.0',
                                                                     ref='cdla:academic_term@spring'
                                                                 )
@@ -2020,7 +2020,7 @@ obj = PublicationDelivery(
                                                                             id='cdla:Period_pass@student@mobile@purchase_window@summer',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    choice=[
+                                                                                    validity_condition_ref_or_validity_condition=[
                                                                                         AvailabilityConditionRef(
                                                                                             version='1.0',
                                                                                             ref='cdla:academic_term@summer'
@@ -2032,7 +2032,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                time_structure_factor_ref=TimeIntervalRef(
                                                                     version='1.0',
                                                                     ref='cdla:academic_term@summer'
                                                                 )
@@ -2068,7 +2068,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='cdla:mobile_app'
                                                     ),
-                                                    choice=FareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
                                                         version='1.0',
                                                         ref='cdla:Period_pass@student'
                                                     ),
@@ -2094,7 +2094,7 @@ obj = PublicationDelivery(
                                                         ref='ntx:eligible'
                                                     ),
                                                     limitation_grouping_type=BooleanOperatorEnumeration.XOR,
-                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                    time_structure_factor_ref=TimeIntervalRef(
                                                         version='1.0',
                                                         ref='cdla:15week'
                                                     )
@@ -2140,7 +2140,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='cdla:card'
                                                     ),
-                                                    choice=FareProductRef(
+                                                    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
                                                         version='1.0',
                                                         ref='cdla:Period_pass@student'
                                                     ),
@@ -2159,7 +2159,7 @@ obj = PublicationDelivery(
                                 default_currency='GBP'
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
-                                choice=[
+                                version_frame_ref=[
                                     FareFrameRef(
                                         version='1.0',
                                         ref='cdla:CDLA@Multiple_packages@products@standard'
@@ -2178,7 +2178,7 @@ obj = PublicationDelivery(
                                 id='cdla:Multiple_packages:pp',
                                 version='1.0',
                                 pricing_rules=PricingRulesRelStructure(
-                                    choice=[
+                                    pricing_rule=[
                                         DiscountingRule(
                                             id='cdla:£0-Off',
                                             version='any',
@@ -2203,7 +2203,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
-                                standard_fare_table_or_fare_table_in_context_or_fare_table=[
+                                fare_table=[
                                     FareTable(
                                         id='cdla:PriceGroup:zonal@Midlands',
                                         version='any',
@@ -2211,17 +2211,17 @@ obj = PublicationDelivery(
                                             value='Prices for Zonal Fare Product  '
                                         ),
                                         cells=CellsRelStructure(
-                                            choice=[
+                                            fare_price_or_fare_price_ref=[
                                                 Cell(
                                                     id='cdla:Midlands@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Midlands Adult full fare day'
                                                         ),
                                                         amount=Decimal('5.20')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2244,13 +2244,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Midlands@family@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Midlands Adult full fare day'
                                                         ),
                                                         amount=Decimal('8.00')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Day_pass@family'
@@ -2273,13 +2273,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Midlands@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Midlands Adult full fare weekly'
                                                         ),
                                                         amount=Decimal('21')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2302,13 +2302,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Midlands@adult@4weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Midlands Adult full fare 4 weekly'
                                                         ),
                                                         amount=Decimal('45')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2331,13 +2331,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Midlands@adult@annual',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Midlands Adult full fare Annual'
                                                         ),
                                                         amount=Decimal('45')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2360,7 +2360,7 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Midlands@student@term_autumn',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Midlands Student fare price Autumn Terml '
                                                         ),
@@ -2368,7 +2368,7 @@ obj = PublicationDelivery(
                                                         end_date=XmlDate(2012, 7, 31),
                                                         amount=Decimal('140')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -2395,7 +2395,7 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Midlands@student@term_spring',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Midlands Student fare price Spring Term'
                                                         ),
@@ -2403,7 +2403,7 @@ obj = PublicationDelivery(
                                                         end_date=XmlDate(2012, 3, 30),
                                                         amount=Decimal('140')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2430,7 +2430,7 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Midlands@student@term_summer',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Midlands Student fare price Summer'
                                                         ),
@@ -2438,7 +2438,7 @@ obj = PublicationDelivery(
                                                         end_date=XmlDate(2012, 7, 31),
                                                         amount=Decimal('140')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2465,7 +2465,7 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Midlands@student@academic_year',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Midlands Student fare price Annual'
                                                         ),
@@ -2473,7 +2473,7 @@ obj = PublicationDelivery(
                                                         end_date=XmlDate(2012, 7, 31),
                                                         amount=Decimal('400')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -2500,13 +2500,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Burton_And_Swadlincote@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Burton and Swadlincote Adult full fare weekly'
                                                         ),
                                                         amount=Decimal('3.6')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2529,13 +2529,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Burton_And_Swadlincote@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Burton and Swadlincote Adult full fare weekly'
                                                         ),
                                                         amount=Decimal('15')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2558,13 +2558,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Burton_And_Swadlincote@adult@4weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Burton and Swadlincote Adult full fare 4 weekly'
                                                         ),
                                                         amount=Decimal('45')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2587,13 +2587,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Burton_And_Swadlincote@adult@annual',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Burton and Swadlincote Adult full fare'
                                                         ),
                                                         amount=Decimal('490')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2616,13 +2616,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Cannock@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Cannock Adult full fare day'
                                                         ),
                                                         amount=Decimal('3.80')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2645,13 +2645,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Cannock@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Cannock Adult full fare weekly'
                                                         ),
                                                         amount=Decimal('15')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2674,13 +2674,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Cannock@adult@4weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Cannock Adult full fare 4 weekly'
                                                         ),
                                                         amount=Decimal('45')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2703,13 +2703,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Cannock@adult@annual',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Cannock Adult full fare Annual'
                                                         ),
                                                         amount=Decimal('45')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2732,13 +2732,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Leicester_City_Plus@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Leicester_City_Plus Adult full fare day'
                                                         ),
                                                         amount=Decimal('3.60')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2761,13 +2761,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Leicester_City_Plus@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Leicester_City_Plus Adult full fare weekly'
                                                         ),
                                                         amount=Decimal('15')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2790,13 +2790,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Leicester_City_Plus@adult@4weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Leicester_City_Plus Adult full fare 4 weekly'
                                                         ),
                                                         amount=Decimal('45')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2819,13 +2819,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Leicester_City_Plus@adult@annual',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Leicester_City_Plus Adult full fare Annual'
                                                         ),
                                                         amount=Decimal('45')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2848,7 +2848,7 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Leicester_City_Plus@student@academic_year',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Leicester_City_Plus Student fare Annual'
                                                         ),
@@ -2856,7 +2856,7 @@ obj = PublicationDelivery(
                                                         end_date=XmlDate(2012, 7, 31),
                                                         amount=Decimal('320')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -2883,20 +2883,20 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Leicester_City_Plus@student@academic_year@Promo',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Leicester_City_Plus Student fare Annual - Promotional Price'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 22),
                                                         end_date=XmlDate(2012, 7, 31),
                                                         amount=Decimal('320'),
-                                                        choice_1=DiscountingRule(
+                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRule(
                                                             id='cdla:Leicester_City_Plus@student@academic_year@Promo',
                                                             version='any',
                                                             discount_as_value=Decimal('288')
                                                         )
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -2923,13 +2923,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Stafford@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Stafford Adult full fare day'
                                                         ),
                                                         amount=Decimal('3.80')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2952,13 +2952,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Stafford@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Stafford Adult full fare weekly'
                                                         ),
                                                         amount=Decimal('15')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -2981,13 +2981,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Stafford@adult@4weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Stafford Adult full fare 4 weekly'
                                                         ),
                                                         amount=Decimal('45')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3010,13 +3010,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Stafford@adult@annual',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Stafford Adult full fare Annual'
                                                         ),
                                                         amount=Decimal('45')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3039,7 +3039,7 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Stafford@student@term_autumn',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Stafford Student fare price Autumn Term  '
                                                         ),
@@ -3047,7 +3047,7 @@ obj = PublicationDelivery(
                                                         end_date=XmlDate(2012, 7, 31),
                                                         amount=Decimal('115')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3074,7 +3074,7 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Stafford@student@term_spring',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Stafford Student fare price Spring Term'
                                                         ),
@@ -3082,7 +3082,7 @@ obj = PublicationDelivery(
                                                         end_date=XmlDate(2012, 3, 30),
                                                         amount=Decimal('115')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3109,7 +3109,7 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Stafford@student@term_summer',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Stafford Student fare price Summer'
                                                         ),
@@ -3117,7 +3117,7 @@ obj = PublicationDelivery(
                                                         end_date=XmlDate(2012, 7, 31),
                                                         amount=Decimal('115')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3151,17 +3151,17 @@ obj = PublicationDelivery(
                                             value='Prices for Zonal Fare Products North East  '
                                         ),
                                         cells=CellsRelStructure(
-                                            choice=[
+                                            fare_price_or_fare_price_ref=[
                                                 Cell(
                                                     id='cdla:North_East_Area@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East All zones Triple adult   fare Day'
                                                         ),
                                                         amount=Decimal('6.00')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3184,13 +3184,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East_Area@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East All zones Triple adult   fare Weekly'
                                                         ),
                                                         amount=Decimal('20.70')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3213,13 +3213,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East Adult full fare weekly'
                                                         ),
                                                         amount=Decimal('6.5')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3242,13 +3242,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@family@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East Adult full fare weekly'
                                                         ),
                                                         amount=Decimal('12')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3271,13 +3271,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East Adult full fare weekly'
                                                         ),
                                                         amount=Decimal('21.6')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3300,13 +3300,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@adult@4weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East Adult full fare 4 weekly'
                                                         ),
                                                         amount=Decimal('82.8')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3329,13 +3329,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@adult@annual',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East Adult full fare Annual'
                                                         ),
                                                         amount=Decimal('900')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3358,18 +3358,18 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@student@15Week@unfunded',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
                                                         amount=Decimal('250'),
-                                                        choice_1=DiscountingRuleRef(
+                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                             version='any',
                                                             ref='cdla:£0-Off'
                                                         )
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3400,18 +3400,18 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@student@15Week@funded_80',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
                                                         amount=Decimal('170'),
-                                                        choice_1=DiscountingRuleRef(
+                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                             version='any',
                                                             ref='cdla:£80-Off'
                                                         )
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3438,18 +3438,18 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@student@15Week@funded_115',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
                                                         amount=Decimal('135'),
-                                                        choice_1=DiscountingRuleRef(
+                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                             version='any',
                                                             ref='cdla:£115-Off'
                                                         )
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3476,18 +3476,18 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@student@15Week@funded_135',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
                                                         amount=Decimal('115'),
-                                                        choice_1=DiscountingRuleRef(
+                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                             version='any',
                                                             ref='cdla:£115-Off'
                                                         )
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3514,14 +3514,14 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@student@15Week@NCupgrade',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
                                                         amount=Decimal('50')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3548,7 +3548,7 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:North_East@student@academic_year',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='North East Student fare price Annual'
                                                         ),
@@ -3556,7 +3556,7 @@ obj = PublicationDelivery(
                                                         end_date=XmlDate(2012, 7, 27),
                                                         amount=Decimal('720')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3583,13 +3583,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Ashington_Triple@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Ashington Triple  adult   fare Day'
                                                         ),
                                                         amount=Decimal('3.80')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3612,13 +3612,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Ashington_Triple@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Ashington Triple  adult   fare Weekly'
                                                         ),
                                                         amount=Decimal('15.5')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3641,13 +3641,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Bishop_Auckland@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Bishop Auckland Adult full fare day'
                                                         ),
                                                         amount=Decimal('3.80')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3670,13 +3670,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Bishop_Auckland@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Bishop Auckland Adult full fare weekly'
                                                         ),
                                                         amount=Decimal('15')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3699,13 +3699,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Bishop_Auckland@adult@4weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Bishop Auckland Adult full fare 4 weekly'
                                                         ),
                                                         amount=Decimal('55.8')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3728,13 +3728,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Bishop_Auckland@adult@annual',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Bishop Auckland Adult full fare Annual'
                                                         ),
                                                         amount=Decimal('500')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3757,13 +3757,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Blyth_Triple@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Blyth Triple  adult   fare Day'
                                                         ),
                                                         amount=Decimal('3.80')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3786,13 +3786,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Blyth_Triple@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Blyth Triple  adult   fare Weekly'
                                                         ),
                                                         amount=Decimal('15.5')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3815,13 +3815,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Blyth_plus_Ashington_Triple@adult@day',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Blyth plus Ashington Triple  adult   fare Day'
                                                         ),
                                                         amount=Decimal('5')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3844,13 +3844,13 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:Blyth_plus_Ashington_Triple@adult@weekly',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='Blyth plus Ashington Triple  adult   fare Weekly'
                                                         ),
                                                         amount=Decimal('20.0')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@standard'
@@ -3873,18 +3873,18 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:County_Durham@student@15Week@unfunded',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
                                                         amount=Decimal('220'),
-                                                        choice_1=DiscountingRuleRef(
+                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                             version='any',
                                                             ref='cdla:£0-Off'
                                                         )
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3911,18 +3911,18 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:County_Durham@student@15Week@funded_80',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
                                                         amount=Decimal('140'),
-                                                        choice_1=DiscountingRuleRef(
+                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                             version='any',
                                                             ref='cdla:£80-Off'
                                                         )
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3949,18 +3949,18 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:County_Durham@student@15Week@funded_115',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
                                                         amount=Decimal('105'),
-                                                        choice_1=DiscountingRuleRef(
+                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                             version='any',
                                                             ref='cdla:£115-Off'
                                                         )
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -3987,18 +3987,18 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:County_Durham@student@15Week@funded_135',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
                                                         amount=Decimal('85'),
-                                                        choice_1=DiscountingRuleRef(
+                                                        discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                             version='any',
                                                             ref='cdla:£135-Off'
                                                         )
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -4025,14 +4025,14 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:County_Durham@student@15Week@NCupgrade',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
                                                         amount=Decimal('35')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -4059,7 +4059,7 @@ obj = PublicationDelivery(
                                                 Cell(
                                                     id='cdla:County_Durham@student@academic_year',
                                                     version='any',
-                                                    choice=FarePriceVersionedChildStructure(
+                                                    fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
                                                             value='County Durham    student   fare 15Week unfunded'
                                                         ),
@@ -4067,7 +4067,7 @@ obj = PublicationDelivery(
                                                         end_date=XmlDate(2012, 7, 27),
                                                         amount=Decimal('640')
                                                     ),
-                                                    choice_1=[
+                                                    choice=[
                                                         FareProductRef(
                                                             version='1.0',
                                                             ref='cdla:Period_pass@student'
@@ -4111,7 +4111,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='cdla:Types_of_Concession',
                                         version='any',
@@ -4119,7 +4119,7 @@ obj = PublicationDelivery(
                                             value='Types of concession'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfConcession(
                                                     id='cdla:adult',
                                                     version='any',
@@ -4152,7 +4152,7 @@ obj = PublicationDelivery(
                                             value='Types of Tariff'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfTariff(
                                                     id='ntx:Distance_kilometers',
                                                     version='ntx:v1.0',
@@ -4248,7 +4248,7 @@ obj = PublicationDelivery(
                                             value='Types of Fare Product'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfFareProduct(
                                                     id='ntx:trip',
                                                     version='ntx:v1.0',
@@ -4295,7 +4295,7 @@ obj = PublicationDelivery(
                                             value='Types of Travel document'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfTravelDocument(
                                                     id='cdla:mobile_app',
                                                     version='any',
@@ -4321,7 +4321,7 @@ obj = PublicationDelivery(
                                             value='Types of Access Right Assignment'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfAccessRightAssignment(
                                                     id='ntx:eligible',
                                                     version='ntx:v1.0',
@@ -4364,7 +4364,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='mybus:CDLA',
                                         version='any',

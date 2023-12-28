@@ -15,7 +15,7 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "securityListings_RelStructure"
 
-    choice: List[
+    security_listing: List[
         Union[
             TravelDocumentSecurityListing,
             RetailDeviceSecurityListing,

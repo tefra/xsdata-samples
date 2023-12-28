@@ -52,7 +52,7 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfEntityRefs_RelStructure"
 
-    choice: List[
+    type_of_entity_ref: List[
         Union[
             TypeOfRetailDeviceRef,
             CustomerAccountStatusRef,

@@ -22,7 +22,7 @@ class OrganisationDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Organisation_DerivedViewStructure"
 
-    choice: Optional[
+    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: Optional[
         Union[
             RetailConsortiumRef,
             AuthorityRef,

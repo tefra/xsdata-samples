@@ -18,7 +18,7 @@ class OrganisationPartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "organisationParts_RelStructure"
 
-    choice: List[
+    organisation_part_ref_or_organisation_part: List[
         Union[
             ControlCentreRef,
             OrganisationalUnitRef,

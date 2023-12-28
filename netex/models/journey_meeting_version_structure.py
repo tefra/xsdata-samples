@@ -215,7 +215,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    flexible_line_ref_or_line_ref_or_connecting_line_view: Optional[
+    line_ref: Optional[
         Union[FlexibleLineRef, LineRef, LineDerivedViewStructure]
     ] = field(
         default=None,

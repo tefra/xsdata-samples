@@ -67,7 +67,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    choice_1=[
+                    version_frame_ref=[
                         NetworkFilterByValueStructure(
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
@@ -95,12 +95,12 @@ obj = PublicationDelivery(
         value='Simple Stop pair On street example'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='mybus:CF002',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='jqx:CF002',
                                 version='any',
@@ -139,7 +139,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         SiteFrame(
                             id='detop:SF00121',
                             version='any',
@@ -392,7 +392,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             stop_assignments=StopAssignmentsInFrameRelStructure(
-                                choice=[
+                                stop_assignment=[
                                     PassengerStopAssignment(
                                         id='jqx:PSA_20012_A',
                                         version='any',
@@ -401,7 +401,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='032',
                                             ref='jqx:SSP0021A'
                                         ),
@@ -418,7 +418,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=2,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='032',
                                             ref='jqx:SSP0021A'
                                         ),
@@ -439,7 +439,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=3,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='032',
                                             ref='jqx:SSP0021A'
                                         ),

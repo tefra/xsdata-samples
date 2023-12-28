@@ -87,9 +87,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    train_block_ref_or_block_ref: Optional[
-        Union[TrainBlockRef, BlockRef]
-    ] = field(
+    block_ref: Optional[Union[TrainBlockRef, BlockRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

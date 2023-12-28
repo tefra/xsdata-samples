@@ -18,9 +18,7 @@ class GeographicalStructureFactorVersionStructure(
     class Meta:
         name = "GeographicalStructureFactor_VersionStructure"
 
-    parking_tariff_ref_or_tariff_ref: Optional[
-        Union[ParkingTariffRef, TariffRef]
-    ] = field(
+    tariff_ref: Optional[Union[ParkingTariffRef, TariffRef]] = field(
         default=None,
         metadata={
             "type": "Elements",

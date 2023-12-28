@@ -51,7 +51,7 @@ class SiteConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: List[
+    parking_entrance_ref: List[
         Union[
             StopPlaceRef,
             AccessSpaceRef,

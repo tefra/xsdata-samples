@@ -17,7 +17,7 @@ class QualityStructureFactorPriceVersionedChildStructure(
     class Meta:
         name = "QualityStructureFactorPrice_VersionedChildStructure"
 
-    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref: Optional[
+    quality_structure_factor_ref: Optional[
         Union[
             FareQuotaFactorRef, FareDemandFactorRef, QualityStructureFactorRef
         ]

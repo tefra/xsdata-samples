@@ -287,12 +287,12 @@ obj = PublicationDelivery(
         value='Eurostar Dec 2010 to July 2011\n\t\n  See http://www.eurostar.com/pdf/timetables/UK_timetable(1).pdf'
     ),
     data_objects=DataObjectsRelStructure(
-        choice=[
+        common_frame=[
             CompositeFrame(
                 id='eos:CF_001',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        choice=[
+                        validity_condition_ref_or_validity_condition=[
                             AvailabilityCondition(
                                 id='eos:CF_001',
                                 version='any',
@@ -383,7 +383,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 frames=FramesRelStructure(
-                    choice=[
+                    common_frame=[
                         ResourceFrame(
                             id='eos:FF_001',
                             version='any',
@@ -475,12 +475,12 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                choice=[
+                                type_of_value_or_type_of_entity=[
                                     ValueSet(
                                         id='eos:PurposeOfGrouping',
                                         version='any',
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 PurposeOfGrouping(
                                                     id='eos:POG_matrix',
                                                     version='any',
@@ -505,7 +505,7 @@ obj = PublicationDelivery(
                                             value='NaPTAN Stop Place Types'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfPlace(
                                                     id='napt:type_of_place@RLY',
                                                     version='any',
@@ -532,7 +532,7 @@ obj = PublicationDelivery(
                                             value='NPTG zone types'
                                         ),
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 TypeOfZone(
                                                     id='nptg:type_of_zone@PlusBus',
                                                     version='any',
@@ -556,7 +556,7 @@ obj = PublicationDelivery(
                                         id='eos:ClassOfUse',
                                         version='any',
                                         values=TypesOfValueStructure(
-                                            choice=[
+                                            type_of_value_or_type_of_entity=[
                                                 ClassOfUse(
                                                     id='eos:COU_First',
                                                     version='any',
@@ -579,7 +579,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
-                                choice=[
+                                organisation_or_transport_organisation=[
                                     Operator(
                                         id='uic920-1:0019',
                                         version='any',
@@ -619,7 +619,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.RAIL_OPERATOR,
                                         ],
-                                        postal_address_or_road_address_or_address=PostalAddressVersionStructure(
+                                        address=PostalAddressVersionStructure(
                                             id='uic920-1:Address:0019',
                                             version='any',
                                             name=MultilingualString(
@@ -848,8 +848,8 @@ obj = PublicationDelivery(
                                                 ]
                                             )
                                         ),
-                                        choice=OrganisationDerivedViewStructure(
-                                            choice=OrganisationRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationDerivedViewStructure(
+                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationRef(
                                                 version='any',
                                                 ref='noc:nr001'
                                             ),
@@ -882,7 +882,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
-                                            choice=[
+                                            entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                 StopPlaceEntrance(
                                                     id='naptStop:4900STPADOM0',
                                                     created=XmlDateTime(2010, 3, 17, 17, 56, 3),
@@ -2006,8 +2006,8 @@ obj = PublicationDelivery(
                                             time_zone_offset=Decimal('0'),
                                             time_zone='GMT'
                                         ),
-                                        choice=OrganisationDerivedViewStructure(
-                                            choice=OrganisationRef(
+                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationDerivedViewStructure(
+                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationRef(
                                                 version='any',
                                                 ref='noc:nr001'
                                             ),
@@ -4826,7 +4826,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             routes=RoutesInFrameRelStructure(
-                                flexible_route_or_route=[
+                                route=[
                                     Route(
                                         id='eos:RT_01_out',
                                         version='any',
@@ -6016,7 +6016,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='eos:LN_London-Paris',
                                         version='any',
@@ -6139,7 +6139,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Eurostar  network as simple graph of all stops and links'
                                         ),
-                                        network_ref_or_group_of_lines_ref=NetworkRef(
+                                        group_of_lines_ref=NetworkRef(
                                             version='any',
                                             ref='eos:Network:NT_Eurostar'
                                         ),
@@ -6358,7 +6358,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Eurostar Network as separate parallel lines'
                                         ),
-                                        network_ref_or_group_of_lines_ref=NetworkRef(
+                                        group_of_lines_ref=NetworkRef(
                                             version='any',
                                             ref='eos:Network:NT_Eurostar'
                                         ),
@@ -6447,7 +6447,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     section_type=SectionTypeEnumeration.TRUNK,
-                                                    flexible_line_ref_or_line_ref=LineRef(
+                                                    line_ref=LineRef(
                                                         version='any',
                                                         ref='eos:LN_London-Paris'
                                                     )
@@ -6535,7 +6535,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     section_type=SectionTypeEnumeration.TRUNK,
-                                                    flexible_line_ref_or_line_ref=LineRef(
+                                                    line_ref=LineRef(
                                                         version='any',
                                                         ref='eos:LN_London-Brussels'
                                                     )
@@ -6623,7 +6623,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     section_type=SectionTypeEnumeration.BRANCH,
-                                                    flexible_line_ref_or_line_ref=LineRef(
+                                                    line_ref=LineRef(
                                                         version='any',
                                                         ref='eos:LN_London-Marne'
                                                     )
@@ -6711,7 +6711,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     section_type=SectionTypeEnumeration.BRANCH,
-                                                    flexible_line_ref_or_line_ref=LineRef(
+                                                    line_ref=LineRef(
                                                         version='any',
                                                         ref='eos:LN_London-Avignon'
                                                     )
@@ -6811,7 +6811,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     section_type=SectionTypeEnumeration.BRANCH,
-                                                    flexible_line_ref_or_line_ref=LineRef(
+                                                    line_ref=LineRef(
                                                         version='any',
                                                         ref='eos:LN_London-Alps'
                                                     )
@@ -7365,7 +7365,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7375,7 +7375,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_out_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -7384,7 +7384,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_out_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -7393,7 +7393,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_out_04',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -7402,7 +7402,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_out_05',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -7411,7 +7411,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_out_06',
                                                     version='any',
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -7433,7 +7433,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01a_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7443,7 +7443,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01a_out_06',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -7465,7 +7465,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01b_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7475,7 +7475,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01b_out_03',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -7484,7 +7484,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01b_out_06',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -7506,7 +7506,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01c_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7516,7 +7516,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01c_out_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -7525,7 +7525,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01c_out_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -7534,7 +7534,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01c_out_06',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -7556,7 +7556,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01d_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7566,7 +7566,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01d_out_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -7575,7 +7575,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01d_out_06',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -7597,7 +7597,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7607,7 +7607,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_out_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -7616,7 +7616,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_out_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -7625,7 +7625,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_out_04',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -7634,7 +7634,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_out_05',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -7643,7 +7643,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_out_07',
                                                     version='any',
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -7665,7 +7665,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03a_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7675,7 +7675,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03a_out_07',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -7697,7 +7697,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03b_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7707,7 +7707,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03b_out_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -7716,7 +7716,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03b_out_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -7725,7 +7725,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03b_out_04',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -7734,7 +7734,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03b_out_05',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -7743,7 +7743,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03b_out_07',
                                                     version='any',
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -7765,7 +7765,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03c_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7775,7 +7775,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03c_out_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -7784,7 +7784,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03c_out_05',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -7793,7 +7793,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03c_out_07',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -7815,7 +7815,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03d_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7825,7 +7825,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03d_out_05',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -7834,7 +7834,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03d_out_07',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -7856,7 +7856,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03e_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7866,7 +7866,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03e_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -7875,7 +7875,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03e_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -7897,7 +7897,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03f_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7907,7 +7907,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03f_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -7916,7 +7916,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03f_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -7925,7 +7925,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03f_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -7934,7 +7934,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03f_out',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -7956,7 +7956,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03g_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -7966,7 +7966,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03g_out_04',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -7975,7 +7975,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03g_out_05',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -7984,7 +7984,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03g_out_07',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8006,7 +8006,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03h_out_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8016,7 +8016,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03h_out_03',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8025,7 +8025,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03h_out_05',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8034,7 +8034,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03h_out_06',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8056,7 +8056,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_04a_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8066,7 +8066,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_04a_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8075,7 +8075,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_04a_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8084,7 +8084,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_04a_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_08_fr_MarneLV'
                                                     ),
@@ -8106,7 +8106,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_05a_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8116,7 +8116,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_05a_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8125,7 +8125,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_05a_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     )
@@ -8134,7 +8134,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_05a_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_22_fr_AimeLP'
                                                     )
@@ -8143,7 +8143,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_05a_out',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_23_fr_BourgStM'
                                                     ),
@@ -8165,7 +8165,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_06a_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8175,7 +8175,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_06a_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8184,7 +8184,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_06a_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8193,7 +8193,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_06a_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_31_fr_Avignon'
                                                     ),
@@ -8215,7 +8215,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -8225,7 +8225,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8234,7 +8234,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -8243,7 +8243,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8252,7 +8252,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_in',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -8261,7 +8261,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01_in',
                                                     version='any',
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8283,7 +8283,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01a_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -8293,7 +8293,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01a_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8315,7 +8315,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01b_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -8325,7 +8325,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01b_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8334,7 +8334,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01b_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8356,7 +8356,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01c_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -8366,7 +8366,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01c_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8375,7 +8375,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01c_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -8384,7 +8384,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01c_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8406,7 +8406,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01f_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -8416,7 +8416,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01f_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -8425,7 +8425,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_01f_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8447,7 +8447,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8457,7 +8457,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8466,7 +8466,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -8475,7 +8475,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8484,7 +8484,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_in',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -8493,7 +8493,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03_in',
                                                     version='any',
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8515,7 +8515,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03a_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8525,7 +8525,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03a_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8547,7 +8547,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03b_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8557,7 +8557,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03b_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8566,7 +8566,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03b_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8575,7 +8575,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03b_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8597,7 +8597,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03c_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8607,7 +8607,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03c_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8616,7 +8616,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03c_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -8625,7 +8625,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03c_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8647,7 +8647,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03d_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8657,7 +8657,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03d_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8666,7 +8666,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03d_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8688,7 +8688,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03e_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8698,7 +8698,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03e_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -8707,7 +8707,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03e_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8729,7 +8729,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03f_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8739,7 +8739,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03f_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8748,7 +8748,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03f_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -8757,7 +8757,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03f_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8779,7 +8779,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03g_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8789,7 +8789,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03g_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8798,7 +8798,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03g_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -8807,7 +8807,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03g_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -8816,7 +8816,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03g_in',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8838,7 +8838,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03h_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -8848,7 +8848,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03h_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8857,7 +8857,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03h_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -8866,7 +8866,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03h_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8875,7 +8875,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_03h_in',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8897,7 +8897,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_04a_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_08_fr_MarneLV'
                                                     ),
@@ -8907,7 +8907,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_04a_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -8916,7 +8916,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_04a_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8925,7 +8925,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_04a_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -8947,7 +8947,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_05a_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_23_fr_BourgStM'
                                                     ),
@@ -8957,7 +8957,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_05a_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_22_fr_AimeLP'
                                                     )
@@ -8966,7 +8966,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_05a_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     )
@@ -8975,7 +8975,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_05a_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -8984,7 +8984,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_05a_in',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -9006,7 +9006,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_06a_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_31_fr_Avignon'
                                                     ),
@@ -9016,7 +9016,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_06a_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -9025,7 +9025,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_06a_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -9034,7 +9034,7 @@ obj = PublicationDelivery(
                                                     id='eos:SPIJP_SP_06a_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -9046,7 +9046,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             connections=TransfersInFrameRelStructure(
-                                choice=[
+                                transfer=[
                                     Connection(
                                         id='eos:CN_05_fr_LilleEuro_RT101',
                                         version='any',
@@ -9279,7 +9279,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
-                                fare_zone_or_tariff_zone=[
+                                tariff_zone=[
                                     TariffZone(
                                         id='nptgPlusBus:GRAVESEND',
                                         version='any',
@@ -9325,7 +9325,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             stop_assignments=StopAssignmentsInFrameRelStructure(
-                                choice=[
+                                stop_assignment=[
                                     PassengerStopAssignment(
                                         id='eos:PSA_01_uk_StPancras_01',
                                         version='any',
@@ -9334,7 +9334,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_01_uk_StPancras'
                                         ),
@@ -9351,7 +9351,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=2,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_01_uk_StPancras'
                                         ),
@@ -9376,7 +9376,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 1 to Boarding Area A (Coaches 1 to 6)'
                                                     ),
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9404,7 +9404,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 2 to Boarding Area A (Coaches 1 to 6)'
                                                     ),
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9429,7 +9429,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 3 to Boarding Area A (Coaches 1 to 6)'
                                                     ),
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9454,7 +9454,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 4 to Boarding Area A (Coaches 1 to 6)'
                                                     ),
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9479,7 +9479,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 5 to Boarding Area A (Coaches 1 to 6)'
                                                     ),
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9504,7 +9504,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 6 to Boarding Area A (Coaches 1 to 6)'
                                                     ),
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9533,7 +9533,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=3,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_01_uk_StPancras'
                                         ),
@@ -9558,7 +9558,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 7 to Boarding Area B (Coaches  6 to 12)'
                                                     ),
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9586,7 +9586,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 8 to Boarding Area B (Coaches  6 to 12)'
                                                     ),
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9611,7 +9611,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 9 to Boarding Area B (Coaches  6 to 12)'
                                                     ),
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9636,7 +9636,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 10 to Boarding Area B (Coaches  6 to 12)'
                                                     ),
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9661,7 +9661,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 11 to Boarding Area B (Coaches  6 to 12)'
                                                     ),
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9683,7 +9683,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 12 to Boarding Area B (Coaches  6 to 12)'
                                                     ),
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9712,7 +9712,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=4,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_01_uk_StPancras'
                                         ),
@@ -9737,7 +9737,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 13 to Boarding Area C (Coaches 13 to 18)'
                                                     ),
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9765,7 +9765,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 14 to Boarding Area C (Coaches 13 to 18)'
                                                     ),
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9790,7 +9790,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 15 to Boarding Area C (Coaches 13 to 18)'
                                                     ),
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9815,7 +9815,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 16 to Boarding Area C (Coaches 13 to 18)'
                                                     ),
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9840,7 +9840,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 16 to Boarding Area C (Coaches 13 to 18)'
                                                     ),
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9865,7 +9865,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 17 to Boarding Area C (Coaches 13 to 18)'
                                                     ),
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9890,7 +9890,7 @@ obj = PublicationDelivery(
                                                         value='Assign Coach 18 to Boarding Area C (Coaches 13 to 18)'
                                                     ),
                                                     order=7,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -9919,7 +9919,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_02_uk_Ebbsfleet'
                                         ),
@@ -9935,7 +9935,7 @@ obj = PublicationDelivery(
                                             value='Ashford International'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_03_uk_AshfordInt'
                                         ),
@@ -9952,7 +9952,7 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_04_fr_Calais'
                                         ),
@@ -9969,7 +9969,7 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_05_fr_LilleEuro'
                                         ),
@@ -9986,7 +9986,7 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_06_fr_ParisGdN'
                                         ),
@@ -10003,7 +10003,7 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_08_fr_MarneLV'
                                         ),
@@ -10020,7 +10020,7 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_07_be_BrusselsMidiEs'
                                         ),
@@ -10037,7 +10037,7 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_31_fr_Avignon'
                                         ),
@@ -10054,7 +10054,7 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_21_fr_Moutiers'
                                         ),
@@ -10071,7 +10071,7 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_22_fr_AimeLP'
                                         ),
@@ -10089,7 +10089,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_01',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10110,7 +10110,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_02',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10131,7 +10131,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_03',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10152,7 +10152,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_04',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10173,7 +10173,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_05',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10194,7 +10194,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_06',
                                                     version='any',
                                                     order=6,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10215,7 +10215,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_07',
                                                     version='any',
                                                     order=7,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10236,7 +10236,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_08',
                                                     version='any',
                                                     order=8,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10257,7 +10257,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_09',
                                                     version='any',
                                                     order=9,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10278,7 +10278,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_10',
                                                     version='any',
                                                     order=10,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10299,7 +10299,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_11',
                                                     version='any',
                                                     order=11,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10320,7 +10320,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_12',
                                                     version='any',
                                                     order=12,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10341,7 +10341,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_13',
                                                     version='any',
                                                     order=13,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10362,7 +10362,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_14',
                                                     version='any',
                                                     order=14,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10383,7 +10383,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_15',
                                                     version='any',
                                                     order=15,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10404,7 +10404,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_16',
                                                     version='any',
                                                     order=16,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10425,7 +10425,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_17',
                                                     version='any',
                                                     order=17,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10446,7 +10446,7 @@ obj = PublicationDelivery(
                                                     id='eos:TrainStopAssignment:PSA_fr_AimeLP_18',
                                                     version='any',
                                                     order=18,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
                                                     train_component_ref_or_train_component_view=TrainComponentView(
@@ -10474,7 +10474,7 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         order=1,
-                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                        scheduled_stop_point_ref=ScheduledStopPointRef(
                                             version='any',
                                             ref='eos:SSP_23_fr_BourgStM'
                                         ),
@@ -13753,7 +13753,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='eos:JP_01a_out',
                                         version='any',
@@ -13804,7 +13804,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01a_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -13813,7 +13813,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01a_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     )
@@ -13855,7 +13855,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01b_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -13864,7 +13864,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01b_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -13873,7 +13873,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01b_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     )
@@ -13915,7 +13915,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01c_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -13924,7 +13924,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01c_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -13933,7 +13933,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01c_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -13942,7 +13942,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01c_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     )
@@ -13984,7 +13984,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01d_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -13993,7 +13993,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01d_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -14002,7 +14002,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01d_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     )
@@ -14044,7 +14044,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03a_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14053,7 +14053,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03a_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -14095,7 +14095,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03b_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14104,7 +14104,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03b_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -14113,7 +14113,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03b_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -14151,7 +14151,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03c_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14160,7 +14160,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03c_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -14169,7 +14169,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03c_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -14178,7 +14178,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03c_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -14220,7 +14220,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03d_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14229,7 +14229,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03d_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -14238,7 +14238,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03d_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -14280,7 +14280,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03e_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14289,7 +14289,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03e_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -14298,7 +14298,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03e_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -14340,7 +14340,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03f_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14349,7 +14349,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03f_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -14358,7 +14358,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03f_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -14367,7 +14367,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03f_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -14376,7 +14376,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03f_out',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -14418,7 +14418,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03g_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14427,7 +14427,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03g_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -14436,7 +14436,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03g_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -14445,7 +14445,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03g_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -14487,7 +14487,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03h_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14496,7 +14496,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03h_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -14505,7 +14505,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03h_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -14514,7 +14514,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03h_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -14556,7 +14556,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_04_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14565,7 +14565,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_04_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -14574,7 +14574,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_04_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -14583,7 +14583,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_04_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_08_fr_MarneLV'
                                                     )
@@ -14625,7 +14625,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_05_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14634,7 +14634,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_05_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -14643,7 +14643,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_05_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     )
@@ -14652,7 +14652,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_05_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_22_fr_AimeLP'
                                                     )
@@ -14661,7 +14661,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_05_out',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_23_fr_BourgStM'
                                                     )
@@ -14703,7 +14703,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_06_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14712,7 +14712,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_06_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -14721,7 +14721,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_06_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -14730,7 +14730,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_06_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_31_fr_Avignon'
                                                     )
@@ -14772,7 +14772,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01a_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     )
@@ -14781,7 +14781,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01a_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14823,7 +14823,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01b_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     )
@@ -14832,7 +14832,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01b_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -14841,7 +14841,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01b_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14883,7 +14883,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01c_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     )
@@ -14892,7 +14892,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01c_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -14901,7 +14901,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01c_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -14910,7 +14910,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01c_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -14952,7 +14952,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01f_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     )
@@ -14961,7 +14961,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01f_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -14970,7 +14970,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_01f_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15012,7 +15012,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03a_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -15021,7 +15021,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03a_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15063,7 +15063,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03b_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -15072,7 +15072,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03b_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -15081,7 +15081,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03b_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -15090,7 +15090,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03b_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15132,7 +15132,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03c_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -15141,7 +15141,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03c_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -15150,7 +15150,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03c_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -15159,7 +15159,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03c_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15201,7 +15201,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03d_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -15210,7 +15210,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03d_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -15219,7 +15219,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03d_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15261,7 +15261,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03e_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -15270,7 +15270,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03e_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -15279,7 +15279,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03e_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15321,7 +15321,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03f_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -15330,7 +15330,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03f_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -15339,7 +15339,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03f_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -15348,7 +15348,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03f_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15390,7 +15390,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03g_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -15399,7 +15399,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03g_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -15408,7 +15408,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03g_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -15417,7 +15417,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03g_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     )
@@ -15426,7 +15426,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03g_in',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15468,7 +15468,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03h_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     )
@@ -15477,7 +15477,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03h_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -15486,7 +15486,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03h_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     )
@@ -15495,7 +15495,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03h_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -15504,7 +15504,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_03h_in',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15546,7 +15546,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_04_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_08_fr_MarneLV'
                                                     )
@@ -15555,7 +15555,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_04_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -15564,7 +15564,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_04_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -15573,7 +15573,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_04_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15615,7 +15615,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_05_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_23_fr_BourgStM'
                                                     )
@@ -15624,7 +15624,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_05_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_22_fr_AimeLP'
                                                     )
@@ -15633,7 +15633,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_05_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     )
@@ -15642,7 +15642,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_05_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -15651,7 +15651,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_05_in',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -15693,7 +15693,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_06_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_31_fr_Avignon'
                                                     )
@@ -15702,7 +15702,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_06_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     )
@@ -15711,7 +15711,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_06_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     )
@@ -15720,7 +15720,7 @@ obj = PublicationDelivery(
                                                     id='eos:PIJP_JP_06_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     )
@@ -16081,7 +16081,7 @@ obj = PublicationDelivery(
                                 to_date=XmlDate(2011, 7, 2)
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     DayType(
                                         id='eos:DT_SC01_Everyday',
                                         version='any',
@@ -16404,7 +16404,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 25),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC01_NoService'
                                         )
@@ -16420,7 +16420,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:OP_SC01_2010.12.12-2011.01.03'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC01_TuWeTh_2011.01.04-02.05NOT'
                                         )
@@ -16436,7 +16436,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:OP_SC01_2011.01.04-2011.02.05'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC01_TuWeTh_2011.01.04-02.05'
                                         )
@@ -16452,7 +16452,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:OP_SC01_2011.02.06-2011.07.02'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC01_TuWeTh_2011.01.04-02.05NOT'
                                         )
@@ -16464,7 +16464,7 @@ obj = PublicationDelivery(
                             id='eos:TF_2011_ParisBrussels',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='eos:AC_TF_2011_01',
                                             version='any',
@@ -16485,7 +16485,7 @@ obj = PublicationDelivery(
                                             to_date=XmlDateTime(2011, 12, 25, 0, 0, 0, 0, 0),
                                             is_available=False,
                                             day_types=DayTypesRelStructure(
-                                                choice=[
+                                                day_type_ref_or_day_type=[
                                                     DayTypeRef(
                                                         version='any',
                                                         ref='eos:DT_SC01_NoService'
@@ -16501,7 +16501,7 @@ obj = PublicationDelivery(
                                 value='Eurostar Timetable from 12 December 2010 to 2 July 2011'
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                choice=[
+                                validity_condition_ref_or_validity_condition=[
                                     AvailabilityCondition(
                                         id='eos:AC_VJ_CD01',
                                         version='any',
@@ -16511,7 +16511,7 @@ obj = PublicationDelivery(
                                         from_date=XmlDateTime(2010, 12, 12, 0, 0, 0, 0, 0),
                                         to_date=XmlDateTime(2011, 1, 4, 0, 0, 0, 0, 0),
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -16528,7 +16528,7 @@ obj = PublicationDelivery(
                                         from_date=XmlDateTime(2011, 1, 4, 0, 0, 0, 0, 0),
                                         to_date=XmlDateTime(2011, 2, 5, 0, 0, 0, 0, 0),
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoFr'
@@ -16545,7 +16545,7 @@ obj = PublicationDelivery(
                                         from_date=XmlDateTime(2011, 2, 5, 0, 0, 0, 0, 0),
                                         to_date=XmlDateTime(2011, 7, 2, 0, 0, 0, 0, 0),
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -16562,7 +16562,7 @@ obj = PublicationDelivery(
                                         from_date=XmlDateTime(2011, 1, 4, 0, 0, 0, 0, 0),
                                         to_date=XmlDateTime(2011, 2, 5, 0, 0, 0, 0, 0),
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_TuWeTh'
@@ -16600,7 +16600,7 @@ obj = PublicationDelivery(
                                         id='eos:VJ_MF_9078',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='Mondays TO Fridays  12 Dec 2010 to 4th Jan 2011',
                                                         version='any',
@@ -16624,7 +16624,7 @@ obj = PublicationDelivery(
                                             value='9078 London - Ebbsfleet - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignment(
                                                     id='eos:VJ_MF_9078-01',
                                                     version='any',
@@ -16639,7 +16639,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(5, 25, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_TuWeTh_2011.01.04-02.05NOT'
@@ -16662,12 +16662,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9078'
                                         ),
                                         public_code='9078',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01d_out'
                                             ),
@@ -16686,11 +16686,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9078_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -16705,7 +16705,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9078_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -16727,7 +16727,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9078_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -16746,7 +16746,7 @@ obj = PublicationDelivery(
                                         id='eos:VJ_MF_9002a',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='Tuesdays to Thursdays from  4th Jan   to 5th Feb 2011 only',
                                                         version='any',
@@ -16760,7 +16760,7 @@ obj = PublicationDelivery(
                                             value='9002 London - Ebbsfleet - Ashford - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_MF_9002a-01',
                                                     notice_ref=NoticeRef(
@@ -16774,7 +16774,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(6, 12, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_TuWeTh_2011.01.04-02.05'
@@ -16785,12 +16785,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9002'
                                         ),
                                         public_code='9002',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01c_out'
                                             ),
@@ -16809,11 +16809,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9002a_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -16828,7 +16828,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9002a_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -16850,7 +16850,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9002a_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -16872,7 +16872,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9002a_04',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -16891,7 +16891,7 @@ obj = PublicationDelivery(
                                         id='eos:VJ_EV_9004',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='Mondays TO Fridays  12 Dec 2010 to 4th Jan 2011',
                                                         version='any',
@@ -16915,7 +16915,7 @@ obj = PublicationDelivery(
                                             value='9004 London - Ashford - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_MF_9004-01',
                                                     notice_ref=NoticeRef(
@@ -16929,7 +16929,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(6, 53, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoFr'
@@ -16952,12 +16952,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9004'
                                         ),
                                         public_code='9004',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01b_out'
                                             ),
@@ -16976,11 +16976,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9004_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -16995,7 +16995,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9004_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -17010,7 +17010,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9004_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17033,7 +17033,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(7, 22, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -17044,12 +17044,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_02_Busy'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9006'
                                         ),
                                         public_code='9006',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01d_out'
                                             ),
@@ -17068,11 +17068,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9006_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -17087,7 +17087,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9006_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -17102,7 +17102,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9006_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17125,7 +17125,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(8, 2, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -17140,12 +17140,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9008'
                                         ),
                                         public_code='9008',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -17164,11 +17164,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9008_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -17183,7 +17183,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9008_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17202,7 +17202,7 @@ obj = PublicationDelivery(
                                         id='eos:VJ_EV_9012',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='Mondays to Fridays Only 12 Dec 2010 to 4th Jan2011',
                                                         version='any',
@@ -17226,7 +17226,7 @@ obj = PublicationDelivery(
                                             value='9012 London - Ebbsfleet - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_MF_9012-01',
                                                     notice_ref=NoticeRef(
@@ -17240,7 +17240,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(8, 55, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoFr'
@@ -17263,12 +17263,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9012'
                                         ),
                                         public_code='9012',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01d_out'
                                             ),
@@ -17287,11 +17287,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9012_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -17306,7 +17306,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9012_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -17321,7 +17321,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9012_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17344,7 +17344,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(9, 22, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -17355,12 +17355,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9014'
                                         ),
                                         public_code='9014',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01b_out'
                                             ),
@@ -17379,11 +17379,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9014_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -17405,7 +17405,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9014_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -17420,7 +17420,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9014_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17443,7 +17443,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(10, 25, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -17458,12 +17458,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9018'
                                         ),
                                         public_code='9018',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01d_out'
                                             ),
@@ -17482,11 +17482,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9018_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -17501,7 +17501,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9018_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -17516,7 +17516,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EVF_9018_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17538,7 +17538,7 @@ obj = PublicationDelivery(
                                             value='9022 London - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_EV_9022F-01',
                                                     notice_ref=NoticeRef(
@@ -17552,7 +17552,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(11, 32, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Fr'
@@ -17567,12 +17567,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9022'
                                         ),
                                         public_code='9022',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -17591,11 +17591,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9022F',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -17610,7 +17610,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9022F',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17633,7 +17633,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(12, 28, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -17644,12 +17644,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9024'
                                         ),
                                         public_code='9024',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01d_out'
                                             ),
@@ -17668,11 +17668,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9024',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -17687,7 +17687,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9024',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -17702,7 +17702,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9024',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17725,7 +17725,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(14, 2, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -17736,12 +17736,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9030'
                                         ),
                                         public_code='9030',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -17760,11 +17760,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9030',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -17786,7 +17786,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9030',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17809,7 +17809,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(15, 2, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -17824,12 +17824,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9034'
                                         ),
                                         public_code='9034',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -17848,11 +17848,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9034',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -17867,7 +17867,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9034',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17890,7 +17890,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(16, 2, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -17901,12 +17901,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9038'
                                         ),
                                         public_code='9038',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -17925,11 +17925,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9038',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -17951,7 +17951,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9038',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -17974,7 +17974,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(16, 22, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -17985,12 +17985,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9040'
                                         ),
                                         public_code='9040',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01b_out'
                                             ),
@@ -18009,11 +18009,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9040',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18028,7 +18028,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9040',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -18043,7 +18043,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9040',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18066,7 +18066,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(17, 32, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -18077,12 +18077,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9044'
                                         ),
                                         public_code='9044',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -18101,11 +18101,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9044',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18120,7 +18120,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9044',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18143,7 +18143,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(18, 2, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -18158,12 +18158,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9046'
                                         ),
                                         public_code='9046',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -18182,11 +18182,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9046',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18201,7 +18201,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9046',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18223,7 +18223,7 @@ obj = PublicationDelivery(
                                             value='9048 London - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_MF_9048-01',
                                                     notice_ref=NoticeRef(
@@ -18237,7 +18237,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(18, 31, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Fr'
@@ -18248,12 +18248,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9048'
                                         ),
                                         public_code='9048',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -18272,11 +18272,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9048',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18298,7 +18298,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9048',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18321,7 +18321,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(17, 2, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -18332,12 +18332,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9050'
                                         ),
                                         public_code='9050',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -18356,11 +18356,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9050',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18375,7 +18375,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9050',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18398,7 +18398,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(20, 2, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -18409,12 +18409,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9054'
                                         ),
                                         public_code='9054',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -18433,11 +18433,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9054a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18452,7 +18452,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9054a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18471,7 +18471,7 @@ obj = PublicationDelivery(
                                         id='eos:VJ_MF_9078b',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         value='Mondays to Fridays Only 12 Dec 2010 to 4th Jan2011',
                                                         version='any',
@@ -18495,7 +18495,7 @@ obj = PublicationDelivery(
                                             value='9078 London - Ebbsfleet - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_MF_9078b-01',
                                                     notice_ref=NoticeRef(
@@ -18509,7 +18509,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(5, 25, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoFr'
@@ -18532,12 +18532,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9078'
                                         ),
                                         public_code='9078',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01d_out'
                                             ),
@@ -18556,11 +18556,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9078b-01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18575,7 +18575,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9078b-01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -18590,7 +18590,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9078b-01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18613,7 +18613,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(20, 2, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -18624,12 +18624,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9054'
                                         ),
                                         public_code='9054',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -18648,11 +18648,11 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9054b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18667,7 +18667,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9054b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18689,7 +18689,7 @@ obj = PublicationDelivery(
                                             value='9002 London -   - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9002b-01',
                                                     notice_ref=NoticeRef(
@@ -18703,19 +18703,19 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(6, 22, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Sa'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9002'
                                         ),
                                         public_code='9002',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -18726,11 +18726,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SS_9002b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18745,7 +18745,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9002b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18767,7 +18767,7 @@ obj = PublicationDelivery(
                                             value='9010 London - Ebbsfleet - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9010-01',
                                                     notice_ref=NoticeRef(
@@ -18781,19 +18781,19 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(8, 26, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Sa'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9010'
                                         ),
                                         public_code='9010',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01d_out'
                                             ),
@@ -18804,11 +18804,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SS_9010',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18823,7 +18823,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9010',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -18838,7 +18838,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9010',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18860,7 +18860,7 @@ obj = PublicationDelivery(
                                             value='9026 London - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9026-01',
                                                     notice_ref=NoticeRef(
@@ -18874,19 +18874,19 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(13, 2, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Su'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9026'
                                         ),
                                         public_code='9026',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -18897,11 +18897,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SS_9026',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18916,7 +18916,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9026',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -18938,7 +18938,7 @@ obj = PublicationDelivery(
                                             value='9036 London - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9036-01',
                                                     notice_ref=NoticeRef(
@@ -18952,19 +18952,19 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(15, 32, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Su'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9036'
                                         ),
                                         public_code='9036',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -18975,11 +18975,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SS_9036',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -18994,7 +18994,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9036',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -19016,7 +19016,7 @@ obj = PublicationDelivery(
                                             value='9056 London - Paris GdN'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9056-01',
                                                     notice_ref=NoticeRef(
@@ -19030,19 +19030,19 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(20, 32, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Su'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9056'
                                         ),
                                         public_code='9056',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_01a_out'
                                             ),
@@ -19053,11 +19053,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SS_9056',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -19072,7 +19072,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9056',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_06_fr_ParisGdN'
                                                     ),
@@ -19095,7 +19095,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(6, 19, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -19106,12 +19106,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9108'
                                         ),
                                         public_code='9108',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03a_out'
                                             ),
@@ -19122,11 +19122,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -19141,7 +19141,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -19156,7 +19156,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -19171,7 +19171,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     ),
@@ -19193,7 +19193,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -19215,7 +19215,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9108',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -19238,7 +19238,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(7, 34, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -19249,12 +19249,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9112'
                                         ),
                                         public_code='9112',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03a_out'
                                             ),
@@ -19265,11 +19265,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9112',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -19284,7 +19284,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9112',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -19307,7 +19307,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(8, 27, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -19318,12 +19318,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9120'
                                         ),
                                         public_code='9120',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03c_out'
                                             ),
@@ -19334,11 +19334,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9120',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -19360,7 +19360,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9120',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -19375,7 +19375,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9120',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -19397,7 +19397,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9120',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -19420,7 +19420,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(10, 57, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -19431,12 +19431,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_03_Busy'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9126'
                                         ),
                                         public_code='9126',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03f_out'
                                             ),
@@ -19447,11 +19447,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9126',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -19466,7 +19466,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9126',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -19481,7 +19481,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9126',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     ),
@@ -19496,7 +19496,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9126',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -19511,7 +19511,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9126',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -19534,7 +19534,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(12, 58, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -19545,12 +19545,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9132'
                                         ),
                                         public_code='9132',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03c_out'
                                             ),
@@ -19561,11 +19561,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9132',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -19580,7 +19580,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9132',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -19595,7 +19595,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9132',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -19610,7 +19610,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9132',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -19633,7 +19633,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(14, 34, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -19644,12 +19644,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9138'
                                         ),
                                         public_code='9138',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03d_out'
                                             ),
@@ -19660,11 +19660,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9138',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -19679,7 +19679,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9138',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -19694,7 +19694,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9138',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -19717,7 +19717,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(17, 4, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_MoTuWeThFr'
@@ -19732,12 +19732,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9148'
                                         ),
                                         public_code='9148',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03d_out'
                                             ),
@@ -19748,11 +19748,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9148',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -19767,7 +19767,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9148',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -19782,7 +19782,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9148',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -19804,7 +19804,7 @@ obj = PublicationDelivery(
                                             value='9154 (4) London - Calais - Lille - Brussels Midi'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9154a-01',
                                                     notice_ref=NoticeRef(
@@ -19818,7 +19818,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(18, 34, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Mo'
@@ -19833,12 +19833,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9154a'
                                         ),
                                         public_code='9154a',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03f_out'
                                             ),
@@ -19849,11 +19849,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9154a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -19868,7 +19868,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9154a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     ),
@@ -19883,7 +19883,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9154a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -19898,7 +19898,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9154a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -19920,7 +19920,7 @@ obj = PublicationDelivery(
                                             value='9154 (3)  London - Calais -- Brussels Midi'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9054b-01',
                                                     notice_ref=NoticeRef(
@@ -19934,7 +19934,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(18, 34, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Fr'
@@ -19945,12 +19945,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9154b'
                                         ),
                                         public_code='9154b',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03c_out'
                                             ),
@@ -19961,11 +19961,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9154b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -19987,7 +19987,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9154b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     ),
@@ -20002,7 +20002,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9154b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -20025,7 +20025,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(19, 34, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Everyday'
@@ -20036,12 +20036,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9158'
                                         ),
                                         public_code='9158',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03d_out'
                                             ),
@@ -20052,11 +20052,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_MF_9158a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -20071,7 +20071,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9158a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -20086,7 +20086,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_MF_9158a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -20108,7 +20108,7 @@ obj = PublicationDelivery(
                                             value='9110 London - Ebbsfleet - Calais - Lille - Brussels Midi'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9010-01',
                                                     notice_ref=NoticeRef(
@@ -20122,7 +20122,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(6, 58, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Sa'
@@ -20133,12 +20133,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9110'
                                         ),
                                         public_code='9110',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03f_out'
                                             ),
@@ -20149,11 +20149,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SS_9110',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -20168,7 +20168,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9110',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -20183,7 +20183,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9110',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     ),
@@ -20198,7 +20198,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9110',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -20213,7 +20213,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9110',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -20235,7 +20235,7 @@ obj = PublicationDelivery(
                                             value='9114 London - Ebbsfleet - Ashford -  Lille - Brussels Midi'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9114-01',
                                                     notice_ref=NoticeRef(
@@ -20249,7 +20249,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(7, 57, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Sa'
@@ -20260,12 +20260,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9114'
                                         ),
                                         public_code='9108',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03a_out'
                                             ),
@@ -20276,11 +20276,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SS_9114',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -20295,7 +20295,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9114',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -20310,7 +20310,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9114',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     ),
@@ -20325,7 +20325,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9114',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -20340,7 +20340,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9114',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -20362,7 +20362,7 @@ obj = PublicationDelivery(
                                             value='9116 London - Ebbsfleet -  Lille - Brussels Midi'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9116a-01',
                                                     notice_ref=NoticeRef(
@@ -20376,7 +20376,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(8, 57, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Sa'
@@ -20387,12 +20387,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9116a'
                                         ),
                                         public_code='9110',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03c_out'
                                             ),
@@ -20403,11 +20403,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SS_9116a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -20422,7 +20422,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9116a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -20437,7 +20437,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9116a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -20452,7 +20452,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9116a',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -20474,7 +20474,7 @@ obj = PublicationDelivery(
                                             value='9116 London - Ebbsfleet - Calais - Lille - Brussels Midi'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9116b-01',
                                                     notice_ref=NoticeRef(
@@ -20488,7 +20488,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(8, 57, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Su'
@@ -20499,12 +20499,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9116a'
                                         ),
                                         public_code='9110',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03f_out'
                                             ),
@@ -20515,11 +20515,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:CL_VJ_SS_9116b_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -20534,7 +20534,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9116b_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -20549,7 +20549,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9116b_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     ),
@@ -20564,7 +20564,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9116b_04',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -20579,7 +20579,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9116b_05',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -20601,7 +20601,7 @@ obj = PublicationDelivery(
                                             value='9130 London - Ebbsfleet - Lille - Brussels Midi'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9130-01',
                                                     notice_ref=NoticeRef(
@@ -20615,7 +20615,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(11, 57, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Su'
@@ -20626,12 +20626,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9130'
                                         ),
                                         public_code='9130',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03c_out'
                                             ),
@@ -20642,11 +20642,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:CL_VJ_SS_9130_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -20661,7 +20661,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9130_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -20676,7 +20676,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9130_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -20691,7 +20691,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9130_04',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -20714,7 +20714,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(14, 34, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Sa'
@@ -20729,12 +20729,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9138'
                                         ),
                                         public_code='9144',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03d_out'
                                             ),
@@ -20745,11 +20745,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:CL_VJ_SS_9144_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -20764,7 +20764,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9144_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -20779,7 +20779,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9144_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -20801,7 +20801,7 @@ obj = PublicationDelivery(
                                             value='9154 London - Ashford- Lille - Brussels Midi'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_MF_9154c-01',
                                                     notice_ref=NoticeRef(
@@ -20815,7 +20815,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(18, 25, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Su'
@@ -20826,12 +20826,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9154b'
                                         ),
                                         public_code='9154b',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03g_out'
                                             ),
@@ -20842,11 +20842,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:CL_VJ_SS_9154c_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -20861,7 +20861,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9154c_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     ),
@@ -20876,7 +20876,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9154c_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -20891,7 +20891,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:CL_VJ_SS_9154c_04',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -20913,7 +20913,7 @@ obj = PublicationDelivery(
                                             value='9158 London - Calais - Lille -Brussels Midi'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_SS_9158b-01',
                                                     notice_ref=NoticeRef(
@@ -20927,7 +20927,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(19, 34, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC01_Su'
@@ -20938,12 +20938,12 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:TDT_01_Normal'
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9158b'
                                         ),
                                         public_code='9158b',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_03c_out'
                                             ),
@@ -20954,11 +20954,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SS_9158b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -20973,7 +20973,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9158b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_04_fr_Calais'
                                                     ),
@@ -20988,7 +20988,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9158b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -21003,7 +21003,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SS_9158b',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_07_be_BrusselsMidiEs'
                                                     ),
@@ -22400,7 +22400,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_out_1210a',
                                                     notice_ref=NoticeRef(
@@ -22444,7 +22444,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_out_1210b',
                                                     notice_ref=NoticeRef(
@@ -22488,7 +22488,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_out_1210c',
                                                     notice_ref=NoticeRef(
@@ -22532,7 +22532,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_out_1447',
                                                     notice_ref=NoticeRef(
@@ -22576,7 +22576,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_out_1728',
                                                     notice_ref=NoticeRef(
@@ -22620,7 +22620,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_out_2014',
                                                     notice_ref=NoticeRef(
@@ -22664,7 +22664,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_in_10:32',
                                                     notice_ref=NoticeRef(
@@ -22707,7 +22707,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_in_1202',
                                                     notice_ref=NoticeRef(
@@ -22750,7 +22750,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_in_1425',
                                                     notice_ref=NoticeRef(
@@ -22794,7 +22794,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_in_1502',
                                                     notice_ref=NoticeRef(
@@ -22837,7 +22837,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_in_1532a',
                                                     notice_ref=NoticeRef(
@@ -22880,7 +22880,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_in_1532b',
                                                     notice_ref=NoticeRef(
@@ -22923,7 +22923,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_in_1435a',
                                                     notice_ref=NoticeRef(
@@ -22966,7 +22966,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_in_1435b-01',
                                                     notice_ref=NoticeRef(
@@ -23018,7 +23018,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT12M"),
                                         minimum_transfer_time=XmlDuration("PT05M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:SJI_05_03-101_in_1435c-01',
                                                     notice_ref=NoticeRef(
@@ -23068,7 +23068,7 @@ obj = PublicationDelivery(
                                 to_date=XmlDate(2011, 7, 2)
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     DayType(
                                         id='eos:DT_SC02_Everyday',
                                         version='any',
@@ -23208,7 +23208,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 25),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC02_NoService'
                                         )
@@ -23221,7 +23221,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 31),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC02_31DecOnly'
                                         )
@@ -23234,7 +23234,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 18),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC02_ExtraService'
                                         )
@@ -23247,7 +23247,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 1),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC02_ExtraService'
                                         )
@@ -23263,7 +23263,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:OP_SC02_2011.02.19-16'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC02_ExtraService'
                                         )
@@ -23279,7 +23279,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eos:OP_SC02_2011.04.09-23'
                                         ),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC02_ExtraService'
                                         )
@@ -23291,7 +23291,7 @@ obj = PublicationDelivery(
                             id='eos:TF_2011_Marne',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='eos:AC_TF_2011_Marne_01',
                                             version='any',
@@ -23312,7 +23312,7 @@ obj = PublicationDelivery(
                                             to_date=XmlDateTime(2011, 12, 25, 0, 0, 0, 0, 0),
                                             is_available=False,
                                             day_types=DayTypesRelStructure(
-                                                choice=[
+                                                day_type_ref_or_day_type=[
                                                     DayTypeRef(
                                                         version='any',
                                                         ref='eos:DT_SC02_NoService'
@@ -23358,7 +23358,7 @@ obj = PublicationDelivery(
                                             value='9074 London - Ebbsfleet - Ashford - Calais - Lille - Marne La Vallee'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='eos:VJ_EV_9074',
                                                     notice_ref=NoticeRef(
@@ -23372,7 +23372,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(9, 44, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC02_MoWeThFrSu'
@@ -23383,12 +23383,12 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9074'
                                         ),
                                         public_code='9108',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_04a_out'
                                             ),
@@ -23399,11 +23399,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9074_01',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -23418,7 +23418,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9074_02',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -23433,7 +23433,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9074_03',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -23448,7 +23448,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9074_04',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -23463,7 +23463,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9074_05',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_08_fr_MarneLV'
                                                     ),
@@ -23485,7 +23485,7 @@ obj = PublicationDelivery(
                                             value='9057 Marne La Vallee - Lille - Ashford - Ebbsfleet - London'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     notice_ref=NoticeRef(
                                                         version='any',
@@ -23504,7 +23504,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(19, 37, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC02_MoWeThFrSu'
@@ -23515,12 +23515,12 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9057'
                                         ),
                                         public_code='9108',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_04a_in'
                                             ),
@@ -23531,11 +23531,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.INBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_EV_9057',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_08_fr_MarneLV'
                                                     ),
@@ -23546,7 +23546,7 @@ obj = PublicationDelivery(
                                                         time=XmlTime(19, 37, 0, 0)
                                                     ),
                                                     notice_assignments=NoticeAssignmentsRelStructure(
-                                                        sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                                        notice_assignment=[
                                                             NoticeAssignmentView(
                                                                 notice_ref=NoticeRef(
                                                                     version='any',
@@ -23561,7 +23561,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9057',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_05_fr_LilleEuro'
                                                     ),
@@ -23576,7 +23576,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9057',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -23591,7 +23591,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9057',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_02_uk_Ebbsfleet'
                                                     ),
@@ -23606,7 +23606,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_EV_9057',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -23628,7 +23628,7 @@ obj = PublicationDelivery(
                                             value='9071 Marne La Vallee -  - Ashford - London'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     notice_ref=NoticeRef(
                                                         version='any',
@@ -23640,19 +23640,19 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(15, 40, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC02_31DecOnly'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9071'
                                         ),
                                         public_code='9108',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_04a_in'
                                             ),
@@ -23663,11 +23663,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.INBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_XX_9071',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_08_fr_MarneLV'
                                                     ),
@@ -23682,7 +23682,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_XX_9071',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -23697,7 +23697,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_XX_9071',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -23910,7 +23910,7 @@ obj = PublicationDelivery(
                                 to_date=XmlDate(2011, 4, 16)
                             ),
                             day_types=DayTypesInFrameRelStructure(
-                                fare_day_type_or_organisation_day_type_or_day_type=[
+                                day_type=[
                                     DayType(
                                         id='eos:DT_SC05_Sa1_out',
                                         version='any',
@@ -23994,7 +23994,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 25),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_NoService'
                                         )
@@ -24007,7 +24007,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 19),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24020,7 +24020,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 26),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24033,7 +24033,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 1),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24046,7 +24046,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 8),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24059,7 +24059,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 15),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24072,7 +24072,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 22),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24085,7 +24085,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 22),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24098,7 +24098,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 5),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24111,7 +24111,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 12),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24124,7 +24124,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 19),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24137,7 +24137,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 26),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24150,7 +24150,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 5),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24163,7 +24163,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 12),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24176,7 +24176,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 19),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24189,7 +24189,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 26),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24202,7 +24202,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 2),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24215,7 +24215,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 9),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa1_out'
                                         )
@@ -24228,7 +24228,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 7),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24241,7 +24241,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 14),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24254,7 +24254,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 21),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24267,7 +24267,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 28),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24280,7 +24280,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 4),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24293,7 +24293,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 18),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24306,7 +24306,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 4),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24319,7 +24319,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 11),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24332,7 +24332,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 18),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24345,7 +24345,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 25),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24358,7 +24358,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 1),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Fr_out'
                                         )
@@ -24371,7 +24371,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 1),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24384,7 +24384,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 8),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24397,7 +24397,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 15),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24410,7 +24410,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 22),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24423,7 +24423,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 22),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24436,7 +24436,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 5),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24449,7 +24449,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 12),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24462,7 +24462,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 19),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24475,7 +24475,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 26),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24488,7 +24488,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 5),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24501,7 +24501,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 12),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24514,7 +24514,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 19),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24527,7 +24527,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 26),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24540,7 +24540,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 2),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24553,7 +24553,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 9),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24566,7 +24566,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 16),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa2_in'
                                         )
@@ -24579,7 +24579,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 26),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24592,7 +24592,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 15),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24605,7 +24605,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 22),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24618,7 +24618,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 22),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24631,7 +24631,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 5),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24644,7 +24644,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 12),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24657,7 +24657,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 19),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24670,7 +24670,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 2, 26),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24683,7 +24683,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 5),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24696,7 +24696,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 12),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24709,7 +24709,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 19),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24722,7 +24722,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 3, 26),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24735,7 +24735,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 2),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24748,7 +24748,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 9),
-                                        fare_day_type_ref_or_day_type_ref=DayTypeRef(
+                                        day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='eos:DT_SC05_Sa3_in'
                                         )
@@ -24760,7 +24760,7 @@ obj = PublicationDelivery(
                             id='eos:TF_2011_Alps',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='eos:AC_TF_2011_Alps_01',
                                             version='any',
@@ -24781,7 +24781,7 @@ obj = PublicationDelivery(
                                             to_date=XmlDateTime(2011, 12, 25, 0, 0, 0, 0, 0),
                                             is_available=False,
                                             day_types=DayTypesRelStructure(
-                                                choice=[
+                                                day_type_ref_or_day_type=[
                                                     DayTypeRef(
                                                         version='any',
                                                         ref='eos:DT_SC05_NoService'
@@ -24797,7 +24797,7 @@ obj = PublicationDelivery(
                                 value='Eurostar Timetable from 12 December 2010 to 2 July 2011 - Alps service'
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                choice=[
+                                validity_condition_ref_or_validity_condition=[
                                     AvailabilityCondition(
                                         id='eos:AC_Alps_VJ_2010.12.19-2011.04.09',
                                         version='any',
@@ -24808,7 +24808,7 @@ obj = PublicationDelivery(
                                         to_date=XmlDateTime(2011, 4, 9, 0, 0, 0, 0, 0),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Sa1_out'
@@ -24826,7 +24826,7 @@ obj = PublicationDelivery(
                                         to_date=XmlDateTime(2011, 4, 1, 0, 0, 0, 0, 0),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Fr_out'
@@ -24844,7 +24844,7 @@ obj = PublicationDelivery(
                                         to_date=XmlDateTime(2011, 4, 16, 0, 0, 0, 0, 0),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Sa2_in'
@@ -24862,7 +24862,7 @@ obj = PublicationDelivery(
                                         to_date=XmlDateTime(2010, 12, 26, 0, 0, 0, 0, 0),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Fr_out'
@@ -24880,7 +24880,7 @@ obj = PublicationDelivery(
                                         to_date=XmlDateTime(2011, 4, 9, 0, 0, 0, 0, 0),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Sa3_in'
@@ -24898,7 +24898,7 @@ obj = PublicationDelivery(
                                         to_date=XmlDateTime(2011, 2, 11, 0, 0, 0, 0, 0),
                                         is_available=False,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Fr_out'
@@ -24916,7 +24916,7 @@ obj = PublicationDelivery(
                                         to_date=XmlDateTime(2011, 2, 25, 0, 0, 0, 0, 0),
                                         is_available=False,
                                         day_types=DayTypesRelStructure(
-                                            choice=[
+                                            day_type_ref_or_day_type=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Fr_out'
@@ -24955,7 +24955,7 @@ obj = PublicationDelivery(
                                         id='eos:VJ_SA_9092',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='eos:AC_Alps_VJ_2010.12.19-2011.04.09'
@@ -24968,7 +24968,7 @@ obj = PublicationDelivery(
                                             value='9074 London - Ebbsfleet - Ashford - Moûtiers - Aime - Bourg St Maurice'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     notice_ref=NoticeRef(
                                                         version='any',
@@ -24980,19 +24980,19 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(10, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Sa1_out'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9092'
                                         ),
                                         public_code='9092',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_05a_out'
                                             ),
@@ -25003,11 +25003,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SA_9092',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -25022,7 +25022,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9092',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -25037,7 +25037,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9092',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
@@ -25052,7 +25052,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9092',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_22_fr_AimeLP'
                                                     ),
@@ -25067,7 +25067,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9092',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_23_fr_BourgStM'
                                                     ),
@@ -25086,7 +25086,7 @@ obj = PublicationDelivery(
                                         id='eos:VJ_FR_9096',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='eos:AC_Alps_VJ_2010.12.26'
@@ -25107,7 +25107,7 @@ obj = PublicationDelivery(
                                             value='9096 London - Ebbsfleet - Ashford - Moûtiers - Aime - Bourg St Maurice'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     notice_ref=NoticeRef(
                                                         version='any',
@@ -25119,19 +25119,19 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(20, 31, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Fr_out'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9096'
                                         ),
                                         public_code='9096',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_05a_out'
                                             ),
@@ -25142,11 +25142,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_FR_9096',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -25161,7 +25161,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_FR_9096',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -25176,7 +25176,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_FR_9096',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
@@ -25192,7 +25192,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_FR_9096',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_22_fr_AimeLP'
                                                     ),
@@ -25207,7 +25207,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_FR_9096',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_23_fr_BourgStM'
                                                     ),
@@ -25226,7 +25226,7 @@ obj = PublicationDelivery(
                                         id='eos:VJ_SA_9095',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='eos:AC_Alps_VJ_2011.01.05-2011.04.16'
@@ -25239,7 +25239,7 @@ obj = PublicationDelivery(
                                             value='9095  Bourg St Maurice - AIme - Moûtiers - Ashford -  London'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     notice_ref=NoticeRef(
                                                         version='any',
@@ -25251,19 +25251,19 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(9, 44, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Sa2_in'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9095'
                                         ),
                                         public_code='9095',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_05a_in'
                                             ),
@@ -25274,11 +25274,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.INBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SA_9095',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_23_fr_BourgStM'
                                                     ),
@@ -25293,7 +25293,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9095',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_22_fr_AimeLP'
                                                     ),
@@ -25308,7 +25308,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9095',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
@@ -25323,7 +25323,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9095',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -25338,7 +25338,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9095',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -25357,7 +25357,7 @@ obj = PublicationDelivery(
                                         id='eos:VJ_SA_9099',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                choice=[
+                                                validity_condition_ref_or_validity_condition=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='eos:AC_Alps_VJ_2010.12.26'
@@ -25374,7 +25374,7 @@ obj = PublicationDelivery(
                                             value='9099 Bourg St Maurice - AIme - Moûtiers - Ashford -  London'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     notice_ref=NoticeRef(
                                                         version='any',
@@ -25393,19 +25393,19 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(9, 44, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC05_Sa3_in'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9099'
                                         ),
                                         public_code='9099',
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='eos:JP_05a_in'
                                             ),
@@ -25416,11 +25416,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.INBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='eos:VJ_SA_9099',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_23_fr_BourgStM'
                                                     ),
@@ -25435,7 +25435,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9099',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_21_fr_Moutiers'
                                                     ),
@@ -25450,7 +25450,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9099',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_03_uk_AshfordInt'
                                                     ),
@@ -25466,7 +25466,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='eos:VJ_SA_9099',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='eos:SSP_01_uk_StPancras'
                                                     ),
@@ -25731,7 +25731,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
-                                flexible_line_or_line=[
+                                line=[
                                     Line(
                                         id='sncf:LN_Lille-Rennes',
                                         version='any',
@@ -25981,7 +25981,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_100_fr_LilleDom'
                                                     ),
@@ -25991,7 +25991,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_101_fr_LeMans'
                                                     )
@@ -26000,7 +26000,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_102_fr_Angers'
                                                     )
@@ -26009,7 +26009,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_103_fr_Nantes'
                                                     )
@@ -26018,7 +26018,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101_out',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_104_fr_Rennes'
                                                     ),
@@ -26040,7 +26040,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101b_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_100_fr_LilleDom'
                                                     ),
@@ -26050,7 +26050,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101b_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_101_fr_LeMans'
                                                     )
@@ -26059,7 +26059,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101b_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_102_fr_Angers'
                                                     )
@@ -26068,7 +26068,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101b_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_103_fr_Nantes'
                                                     ),
@@ -26090,7 +26090,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_104_fr_Rennes'
                                                     ),
@@ -26100,7 +26100,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_103_fr_Nantes'
                                                     )
@@ -26109,7 +26109,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_102_fr_Angers'
                                                     )
@@ -26118,7 +26118,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_101_fr_LeMans'
                                                     )
@@ -26127,7 +26127,7 @@ obj = PublicationDelivery(
                                                     id='sncf:SP_101_in',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_100_fr_LilleDom'
                                                     ),
@@ -26139,7 +26139,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                choice=[
+                                journey_pattern=[
                                     ServiceJourneyPattern(
                                         id='sncf:JP_101a_out',
                                         version='any',
@@ -26185,7 +26185,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101a_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_100_fr_LilleDom'
                                                     )
@@ -26194,7 +26194,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101a_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_101_fr_LeMans'
                                                     )
@@ -26203,7 +26203,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101a_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_102_fr_Angers'
                                                     )
@@ -26212,7 +26212,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101a_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_103_fr_Nantes'
                                                     )
@@ -26221,7 +26221,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101a_out',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_104_fr_Rennes'
                                                     )
@@ -26257,7 +26257,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101b_out',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_100_fr_LilleDom'
                                                     )
@@ -26266,7 +26266,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101b_out',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_101_fr_LeMans'
                                                     )
@@ -26275,7 +26275,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101b_out',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_102_fr_Angers'
                                                     )
@@ -26284,7 +26284,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101b_out',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_103_fr_Nantes'
                                                     )
@@ -26321,7 +26321,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101a_in',
                                                     version='any',
                                                     order=1,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_104_fr_Rennes'
                                                     )
@@ -26330,7 +26330,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101a_in',
                                                     version='any',
                                                     order=2,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_103_fr_Nantes'
                                                     )
@@ -26339,7 +26339,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101a_in',
                                                     version='any',
                                                     order=3,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_102_fr_Angers'
                                                     )
@@ -26348,7 +26348,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101a_in',
                                                     version='any',
                                                     order=4,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_101_fr_LeMans'
                                                     )
@@ -26357,7 +26357,7 @@ obj = PublicationDelivery(
                                                     id='sncf:JP_101a_in',
                                                     version='any',
                                                     order=5,
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_100_fr_LilleDom'
                                                     )
@@ -26372,7 +26372,7 @@ obj = PublicationDelivery(
                             id='sncf:TF_2011_NW',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    choice=[
+                                    validity_condition_ref_or_validity_condition=[
                                         AvailabilityCondition(
                                             id='sncf:AC_TF_2011',
                                             version='any',
@@ -26421,7 +26421,7 @@ obj = PublicationDelivery(
                                             value='12:10 Lille - Le Mans - Angiers - Nantes - Rennes'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     notice_ref=NoticeRef(
@@ -26434,7 +26434,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(12, 10, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC02_Everyday'
@@ -26442,7 +26442,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='sncf:JP_101a_out'
                                             ),
@@ -26452,11 +26452,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_100_fr_LilleDom'
                                                     ),
@@ -26471,7 +26471,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_101_fr_LeMans'
                                                     ),
@@ -26483,7 +26483,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_102_fr_Angers'
                                                     ),
@@ -26495,7 +26495,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_103_fr_Nantes'
                                                     ),
@@ -26507,7 +26507,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_out_12:10',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_104_fr_Rennes'
                                                     ),
@@ -26529,7 +26529,7 @@ obj = PublicationDelivery(
                                             value='12:10 Lille - Le Mans - Angiers - Nantes - Rennes'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     id='sncf:VJ_RT101_out_12:05',
                                                     notice_ref=NoticeRef(
@@ -26542,18 +26542,18 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(12, 5, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC02_Everyday'
                                                 ),
                                             ]
                                         ),
-                                        compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
+                                        vehicle_type_ref=TrainRef(
                                             ref='eos:TR_9074'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='sncf:JP_101a_out'
                                             ),
@@ -26563,11 +26563,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.OUTBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='sncf:VJ_RT101_out_12:05',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_100_fr_LilleDom'
                                                     ),
@@ -26582,7 +26582,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_out_12:05',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_101_fr_LeMans'
                                                     ),
@@ -26594,7 +26594,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_out_12:05',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_102_fr_Angers'
                                                     ),
@@ -26606,7 +26606,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_out_12:05',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_103_fr_Nantes'
                                                     ),
@@ -26628,7 +26628,7 @@ obj = PublicationDelivery(
                                             value='06:10 Rennes - Nantes - Angers - Le Mans - Lille'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     notice_ref=NoticeRef(
                                                         ref='sncf:FN_RT101_02'
@@ -26639,7 +26639,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(6, 10, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC02_Everyday'
@@ -26647,7 +26647,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='sncf:JP_101a_in'
                                             ),
@@ -26657,11 +26657,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.INBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='sncf:VJ_RT101_in_0610',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_104_fr_Rennes'
                                                     ),
@@ -26676,7 +26676,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_in_0610',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_103_fr_Nantes'
                                                     ),
@@ -26688,7 +26688,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_in_0610',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_102_fr_Angers'
                                                     ),
@@ -26700,7 +26700,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_in_0610',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_101_fr_LeMans'
                                                     ),
@@ -26712,7 +26712,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_in_0610',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_100_fr_LilleDom'
                                                     ),
@@ -26734,7 +26734,7 @@ obj = PublicationDelivery(
                                             value='09:25 Rennes - Nantes - Angers - Le Mans - Lille'
                                         ),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
+                                            notice_assignment=[
                                                 NoticeAssignmentView(
                                                     notice_ref=NoticeRef(
                                                         ref='sncf:FN_RT101_02'
@@ -26745,7 +26745,7 @@ obj = PublicationDelivery(
                                         ),
                                         departure_time=XmlTime(9, 25, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
-                                            fare_day_type_ref_or_day_type_ref=[
+                                            day_type_ref=[
                                                 DayTypeRef(
                                                     version='any',
                                                     ref='eos:DT_SC02_MoWeThFrSu'
@@ -26757,7 +26757,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         journey_pattern_view=JourneyPatternView(
-                                            choice=ServiceJourneyPatternRef(
+                                            journey_pattern_ref=ServiceJourneyPatternRef(
                                                 version='any',
                                                 ref='sncf:JP_101a_in'
                                             ),
@@ -26767,11 +26767,11 @@ obj = PublicationDelivery(
                                             direction_type=DirectionTypeEnumeration.INBOUND
                                         ),
                                         calls=CallsRelStructure(
-                                            choice=[
+                                            call=[
                                                 Call(
                                                     id='sncf:VJ_RT101_in_0925',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_104_fr_Rennes'
                                                     ),
@@ -26786,7 +26786,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_in_0925',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_103_fr_Nantes'
                                                     ),
@@ -26798,7 +26798,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_in_0925',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_102_fr_Angers'
                                                     ),
@@ -26810,7 +26810,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_in_0925',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_101_fr_LeMans'
                                                     ),
@@ -26822,7 +26822,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='sncf:VJ_RT101_in_0925',
                                                     version='any',
-                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='sncf:SSP_100_fr_LilleDom'
                                                     ),

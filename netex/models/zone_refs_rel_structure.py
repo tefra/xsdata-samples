@@ -17,7 +17,7 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "zoneRefs_RelStructure"
 
-    choice: Optional[
+    zone_ref_or_tariff_zone_ref: Optional[
         Union[
             StopAreaRef,
             AccessZoneRef,

@@ -12,9 +12,7 @@ class ActivationPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "activationPointsInFrame_RelStructure"
 
-    beacon_point_or_activation_point: List[
-        Union[BeaconPoint, ActivationPoint]
-    ] = field(
+    activation_point: List[Union[BeaconPoint, ActivationPoint]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

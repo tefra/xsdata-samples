@@ -19,7 +19,7 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Zone_DerivedViewStructure"
 
-    choice: Optional[
+    zone_ref_or_tariff_zone_ref: Optional[
         Union[
             StopAreaRef,
             AccessZoneRef,

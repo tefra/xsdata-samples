@@ -3252,7 +3252,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_1: Optional[
+    projection: Optional[
         Union[
             TopographicProjection,
             ZoneProjection,
