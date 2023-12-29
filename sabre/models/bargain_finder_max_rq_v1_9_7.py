@@ -4960,12 +4960,12 @@ class PriceRequestInformationType:
                 "choices": (
                     {
                         "name": "Supplier",
-                        "type": "type[CompanyNameType]",
+                        "type": CompanyNameType,
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     },
                     {
                         "name": "TPA_Extensions",
-                        "type": "type[str]",
+                        "type": str,
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     },
                 ),
