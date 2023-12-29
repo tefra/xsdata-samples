@@ -49,8 +49,6 @@
             <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
           </prerequisites>
           <Network id="mybus:DTA" version="any">
-            <PaymentMethods/>
-            <PurchaseMoment/>
             <OperatorRef version="1.0" ref="mybus:DTA"/>
             <tariffZones>
               <TariffZoneRef version="any" ref="mybus:A"/>
@@ -190,13 +188,11 @@
                         <Name>Child Fare</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:adult"/>
                         <MaximumAge>16</MaximumAge>
-                        <ProofRequired/>
                       </UserProfile>
                       <UserProfile id="myfares:child" version="any">
                         <Name>Child Fare</Name>
                         <TypeOfConcessionRef version="any" ref="myfares:child"/>
                         <MaximumAge>16</MaximumAge>
-                        <ProofRequired/>
                       </UserProfile>
                     </limitations>
                   </GenericParameterAssignment>
@@ -697,8 +693,6 @@
           <organisations>
             <Operator id="mybus:DTA" version="1.0">
               <Name>Demo Transit Authority</Name>
-              <OrganisationType/>
-              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

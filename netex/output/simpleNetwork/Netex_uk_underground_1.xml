@@ -65,7 +65,6 @@
               <roles>
                 <ResponsibilityRoleAssignment id="nptg:082" created="2010-05-17T09:30:47Z" version="2.0">
                   <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="tfl:Old_01"/>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -74,7 +73,6 @@
               <roles>
                 <ResponsibilityRoleAssignment id="nptg:RS_22" created="2010-05-17T09:30:47Z" version="2.0">
                   <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="tfl:Tfl"/>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -83,7 +81,6 @@
               <roles>
                 <ResponsibilityRoleAssignment id="nptg:RS_31" created="2010-05-17T09:30:47Z" version="2.0">
                   <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef ref="gis:Org_Gis003"/>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -146,7 +143,6 @@
               <TradingName>London Underground Limited</TradingName>
               <Description>Responsible for Underground</Description>
               <OrganisationType>operator</OrganisationType>
-              <OperatorActivities/>
             </Operator>
             <Authority id="tfl:Tfl" version="any">
               <Name>Transport for London</Name>
@@ -179,8 +175,6 @@
               <LineRef version="002" ref="lul:VIC"/>
               <LineRef version="002" ref="lul:WAC"/>
             </members>
-            <PaymentMethods/>
-            <PurchaseMoment/>
             <OperatorRef version="any" ref="tfl:Old_01"/>
           </Network>
           <directions>
@@ -213,8 +207,6 @@
               <Presentation>
                 <ColourName>brown</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:dir_northbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_northbound"/>
@@ -239,8 +231,6 @@
               <Presentation>
                 <ColourName>red</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Central@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -259,8 +249,6 @@
               <Presentation>
                 <ColourName>yellow</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Circle@dir_clockwise" version="any">
                   <DirectionRef version="any" ref="lul:dir_clockwise"/>
@@ -279,8 +267,6 @@
               <Presentation>
                 <ColourName>green</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Tramlinkj@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -305,8 +291,6 @@
               <Presentation>
                 <ColourName>green</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:District@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -325,8 +309,6 @@
               <Presentation>
                 <ColourName>silver</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Jubilee@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -351,8 +333,6 @@
               <Presentation>
                 <ColourName>lightGreen</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:DLR@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -377,8 +357,6 @@
               <Presentation>
                 <ColourName>pink</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Hammersmith@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -397,8 +375,6 @@
               <Presentation>
                 <ColourName>maroon</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Metropolitan@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -423,8 +399,6 @@
               <Presentation>
                 <ColourName>black</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Northern@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_northbound"/>
@@ -443,8 +417,6 @@
               <Presentation>
                 <ColourName>orange</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Overground@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -463,8 +435,6 @@
               <Presentation>
                 <ColourName>darkblue</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Piccadilly@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -483,8 +453,6 @@
               <Presentation>
                 <ColourName>lightblue</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Victoria@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -503,8 +471,6 @@
               <Presentation>
                 <ColourName>turquoise</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Waterloo@dir_eastbound" version="any">
                   <DirectionRef version="any" ref="lul:dir_eastbound"/>
@@ -525,8 +491,6 @@
                 <LineRef version="002" ref="lul:MET"/>
               </members>
               <TransportMode>metro</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </GroupOfLines>
             <GroupOfLines id="lul:lngp02" version="any">
               <Name>Tube lines</Name>
@@ -543,8 +507,6 @@
                 <LineRef version="002" ref="lul:WAC"/>
               </members>
               <TransportMode>metro</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </GroupOfLines>
             <GroupOfLines id="lul:lngp03" version="any">
               <Name>Other lines</Name>
@@ -555,8 +517,6 @@
                 <LineRef version="002" ref="lul:TRM"/>
               </members>
               <TransportMode>metro</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </GroupOfLines>
           </groupsOfLines>
         </ServiceFrame>
@@ -13374,131 +13334,99 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWFN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_29">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWOP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_30">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTAW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_1_31">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHBT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -13506,127 +13434,96 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTX1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHCL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCND1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_29">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTK1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_2_30">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEGW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -13634,27 +13531,21 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_3_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_3_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTX1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_3_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHCL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_3_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCND1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_3_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTK1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_3_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEGW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -13662,11 +13553,9 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_4_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_4_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMHL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -13674,131 +13563,99 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWFN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_29">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWOP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_30">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTAW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_5_31">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHBT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -13806,27 +13663,21 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_6_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_6_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_6_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWFN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_6_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWOP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_6_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTAW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_6_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHBT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -13834,127 +13685,96 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTX1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHCL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCND1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_29">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTK1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_7_30">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEGW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -13962,15 +13782,12 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_8_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_8_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_8_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMHL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -13978,119 +13795,90 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_9_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMHL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14098,83 +13886,63 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTX1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHCL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCND1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTK1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_10_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEGW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14182,87 +13950,66 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWFN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWOP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTAW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_11_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHBT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14270,75 +14017,57 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_12_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMHL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14346,119 +14075,90 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_13_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMHL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14466,107 +14166,81 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_14_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14574,63 +14248,48 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_H_15_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14638,131 +14297,99 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHBT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTAW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_2">
                       <ScheduledStopPointRef ref="naptStop:490000276005"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWFN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_29">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_30">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_16_31">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14770,127 +14397,96 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEGW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTK1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCND1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHCL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTX1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB6"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_29">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_17_30">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14898,11 +14494,9 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_18_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMHL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_18_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14910,87 +14504,66 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHBT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTAW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_2">
                       <ScheduledStopPointRef ref="naptStop:490000276005"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWFN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB6"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_19_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -14998,127 +14571,96 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEGW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTK1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCND1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHCL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTX1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_29">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_20_30">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -15126,63 +14668,48 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB6"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_21_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -15190,83 +14717,63 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEGW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTK1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCND1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHCL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTX1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB6"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_22_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -15274,119 +14781,90 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCND1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHCL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTX1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_23_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -15394,115 +14872,87 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_24_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -15510,119 +14960,90 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMHL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_25_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -15630,59 +15051,45 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB6"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_26_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -15690,103 +15097,78 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_27_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -15794,75 +15176,57 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMHL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB6"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_28_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -15870,119 +15234,90 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMHL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB6"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_29_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -15990,131 +15325,99 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHBT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTAW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_2">
                       <ScheduledStopPointRef ref="naptStop:ScheduledStopPoint:490000276005"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWFN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHGT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUACY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTFP2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSH2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB6"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_26">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_27">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_28">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_29">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_30">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_30_31">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -16122,27 +15425,21 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_31_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHBT1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_31_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTAW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_31_2">
                       <ScheduledStopPointRef ref="naptStop:490000276005"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_31_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWFN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_31_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_31_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -16150,103 +15447,78 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMTC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWRR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGDG1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTCR3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULSQ2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCHX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEMB6"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUWLO3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_32_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -16254,15 +15526,12 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_33_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMHL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_33_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUFYC2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_33_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEFY2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -16270,31 +15539,24 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_34_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEGW1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_34_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTK1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_34_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCND1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_34_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHCL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_34_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBTX1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_34_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_34_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>
@@ -16302,107 +15564,81 @@
                   <pointsOnSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_0">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUGGN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_1">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUHTD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_2">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBZP1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_3">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCFM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_4">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCTN4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_5">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEUS3"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_6">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKSX5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_7">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUAGL1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_8">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUODS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_9">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMGT4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_10">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBNK5"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_11">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLULNB1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_12">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBOR2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_13">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUEAC4"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_14">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUKNG2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_15">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUOVL2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_16">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSKW2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_17">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_18">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_19">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCPS1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_20">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUBLM1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_21">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBC1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_22">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUTBY1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_23">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUCSD1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_24">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUSWN1"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="lul:RL_RS_01NTN_R_35_25">
                       <ScheduledStopPointRef ref="naptStop:9400ZZLUMDN2"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                 </LineSection>

@@ -60,10 +60,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -81,10 +77,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -99,10 +91,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -116,11 +104,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
             <DayType id="tfl:OffPeak_Holiday" version="any">
               <properties>
                 <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
                   <HolidayTypes>NationalHoliday</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -139,10 +123,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -160,10 +140,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -177,10 +153,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -192,10 +164,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -207,10 +175,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -223,10 +187,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -238,10 +198,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
               <timebands>
@@ -254,10 +210,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -270,8 +222,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
           <stopPlaces>
             <StopPlace id="tfl:Liverpool_Street_Station" version="1">
               <Name>Liverpool Street Station</Name>
-              <AccessModes/>
-              <OtherTransportModes/>
               <quays>
                 <QuayRef ref="dummy"/>
               </quays>
@@ -288,10 +238,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Monday Tuesday Wednesday Thursday Saturday</DaysOfWeek>
-                              <WeeksOfMonth/>
                               <HolidayTypes>NotHoliday</HolidayTypes>
-                              <Seasons/>
-                              <Tides/>
                             </PropertyOfDay>
                           </properties>
                           <timebands>
@@ -305,10 +252,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Friday</DaysOfWeek>
-                              <WeeksOfMonth/>
                               <HolidayTypes>NotHoliday</HolidayTypes>
-                              <Seasons/>
-                              <Tides/>
                             </PropertyOfDay>
                           </properties>
                           <timebands>
@@ -322,10 +266,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Sunday</DaysOfWeek>
-                              <WeeksOfMonth/>
                               <HolidayTypes>NotHoliday NationalHoliday</HolidayTypes>
-                              <Seasons/>
-                              <Tides/>
                             </PropertyOfDay>
                           </properties>
                           <timebands>
@@ -339,10 +280,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Everyday</DaysOfWeek>
-                              <WeeksOfMonth/>
                               <HolidayTypes>NationalHoliday</HolidayTypes>
-                              <Seasons/>
-                              <Tides/>
                             </PropertyOfDay>
                           </properties>
                           <timebands>
@@ -357,16 +295,12 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   </validityConditions>
                   <Name>Liverpool Street Visitor Centre</Name>
                   <Description>Liverpool Street Underground station</Description>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <AccessSpaceType>shop</AccessSpaceType>
                 </AccessSpace>
               </accessSpaces>
             </StopPlace>
             <StopPlace id="tfl:Piccadilly_Circus" version="1">
               <Name>Picadilly Circus Station</Name>
-              <AccessModes/>
-              <OtherTransportModes/>
               <quays>
                 <QuayRef ref="dummy"/>
               </quays>
@@ -382,10 +316,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Weekdays</DaysOfWeek>
-                              <WeeksOfMonth/>
                               <HolidayTypes>NotHoliday</HolidayTypes>
-                              <Seasons/>
-                              <Tides/>
                             </PropertyOfDay>
                           </properties>
                           <timebands>
@@ -399,10 +330,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Saturday</DaysOfWeek>
-                              <WeeksOfMonth/>
                               <HolidayTypes>AnyDay</HolidayTypes>
-                              <Seasons/>
-                              <Tides/>
                             </PropertyOfDay>
                           </properties>
                           <timebands>
@@ -416,10 +344,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Sunday</DaysOfWeek>
-                              <WeeksOfMonth/>
                               <HolidayTypes>NotHoliday</HolidayTypes>
-                              <Seasons/>
-                              <Tides/>
                             </PropertyOfDay>
                           </properties>
                           <timebands>
@@ -434,16 +359,12 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   </validityConditions>
                   <Name>Picdilly Circus  Visitor Centre</Name>
                   <Description>Piccadilly Circus Underground station</Description>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <AccessSpaceType>shop</AccessSpaceType>
                 </AccessSpace>
               </accessSpaces>
             </StopPlace>
             <StopPlace id="tfl:Euston_Station" version="1">
               <Name>Euston  Station</Name>
-              <AccessModes/>
-              <OtherTransportModes/>
               <quays>
                 <QuayRef ref="nre:Euston@10"/>
               </quays>
@@ -454,16 +375,12 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   </validityConditions>
                   <Name>Euston Visitor Centre</Name>
                   <Description>Opposite platform 10</Description>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <AccessSpaceType>shop</AccessSpaceType>
                 </AccessSpace>
               </accessSpaces>
             </StopPlace>
             <StopPlace id="tfl:Victoria_Station" version="1">
               <Name>Victoria Station</Name>
-              <AccessModes/>
-              <OtherTransportModes/>
               <quays>
                 <QuayRef ref="nre:Platform8"/>
               </quays>
@@ -478,10 +395,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday Saturday</DaysOfWeek>
-                              <WeeksOfMonth/>
                               <HolidayTypes>NotHoliday</HolidayTypes>
-                              <Seasons/>
-                              <Tides/>
                             </PropertyOfDay>
                           </properties>
                           <timebands>
@@ -498,16 +412,12 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   </validityConditions>
                   <Name>VictoriaVisitor Centre</Name>
                   <Description>Opposite platform 8, Victoria rail station</Description>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <AccessSpaceType>shop</AccessSpaceType>
                 </AccessSpace>
               </accessSpaces>
             </StopPlace>
             <StopPlace id="tfl:Heathrow_Terminal_123" version="1">
               <Name>Heathrow Terminal123 Underground Station</Name>
-              <AccessModes/>
-              <OtherTransportModes/>
               <quays>
                 <QuayRef ref="dummy"/>
               </quays>
@@ -521,10 +431,7 @@ Special peak and off-peak times apply on journeys that start at stations north o
                           <properties>
                             <PropertyOfDay>
                               <DaysOfWeek>Everyday</DaysOfWeek>
-                              <WeeksOfMonth/>
                               <HolidayTypes>NotHoliday NationalHoliday</HolidayTypes>
-                              <Seasons/>
-                              <Tides/>
                             </PropertyOfDay>
                           </properties>
                           <timebands>
@@ -539,16 +446,12 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   </validityConditions>
                   <Name>Heathrow Terminal 123 Visitor Centre</Name>
                   <Description>Heathrow Terminal123 Underground station, Heathrow Airport</Description>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <AccessSpaceType>shop</AccessSpaceType>
                 </AccessSpace>
               </accessSpaces>
             </StopPlace>
             <StopPlace id="tfl:Kings_Cross_Station" version="1">
               <Name>King's Cross Station</Name>
-              <AccessModes/>
-              <OtherTransportModes/>
               <quays>
                 <QuayRef ref="dummy"/>
               </quays>
@@ -559,8 +462,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   </validityConditions>
                   <Name>King's Cross  Visitor Centre</Name>
                   <Description>King's Cross Underground station, Western Ticket Hall near St Pancras </Description>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <AccessSpaceType>shop</AccessSpaceType>
                 </AccessSpace>
               </accessSpaces>
@@ -572,8 +473,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
           <Network id="lul:LUL" version="any">
             <Name>London Transport Metro and Light Rail  Network</Name>
             <ShortName>TfL</ShortName>
-            <PaymentMethods/>
-            <PurchaseMoment/>
             <OperatorRef version="any" ref="tfl:LUL"/>
             <groupsOfLines>
               <GroupOfLines id="lul:surface_lines" version="any">
@@ -585,8 +484,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   <LineRef version="002" ref="lul:MET"/>
                 </members>
                 <TransportMode>metro</TransportMode>
-                <PaymentMethods/>
-                <PurchaseMoment/>
               </GroupOfLines>
               <GroupOfLines id="lul:deep_lines" version="any">
                 <Name>Tube lines</Name>
@@ -603,8 +500,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   <LineRef version="002" ref="lul:WAC"/>
                 </members>
                 <TransportMode>metro</TransportMode>
-                <PaymentMethods/>
-                <PurchaseMoment/>
               </GroupOfLines>
             </groupsOfLines>
             <tariffZones>
@@ -652,8 +547,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>brown</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Bakerloo@northbound" version="any">
                   <DirectionRef version="any" ref="lul:northbound"/>
@@ -678,8 +571,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>red</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Central@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -698,8 +589,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>yellow</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Circle@clockwise" version="any">
                   <DirectionRef version="any" ref="lul:clockwise"/>
@@ -718,8 +607,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>green</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Tramlink@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -744,8 +631,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>green</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:District@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -764,8 +649,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>silver</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Jubilee@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -790,8 +673,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>lightGreen</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:DLR@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -816,8 +697,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>pink</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Hammersmith@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -836,8 +715,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>maroon</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Metropolitan@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -862,8 +739,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>black</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Northern@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:northbound"/>
@@ -882,8 +757,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>orange</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Overground@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -905,8 +778,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>darkblue</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Piccadilly@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -925,8 +796,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>lightblue</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Victoria@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -945,8 +814,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               <Presentation>
                 <ColourName>turquoise</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <allowedDirections>
                 <AllowedLineDirection id="ul:Waterloo@eastbound" version="any">
                   <DirectionRef version="any" ref="lul:eastbound"/>
@@ -974,8 +841,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                 <LineRef ref="West_Ruislip+South_Ruislip" versionRef="EXTERNAL"/>
               </members>
               <TransportMode>rail</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </GroupOfLines>
           </groupsOfLines>
           <scheduledStopPoints>
@@ -1257,8 +1122,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
           <Network id="tfl:DLR" version="any">
             <Name>London Transport DLR Network</Name>
             <ShortName>DLR</ShortName>
-            <PaymentMethods/>
-            <PurchaseMoment/>
             <OperatorRef version="any" ref="tfl:DLR"/>
             <tariffZones>
               <TariffZoneRef version="any" ref="tfl:Zone_1"/>
@@ -1289,8 +1152,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
           <Network id="nr:National_Rail" version="any">
             <Name>London Transport Rail  Network</Name>
             <ShortName>TfL Rail</ShortName>
-            <PaymentMethods/>
-            <PurchaseMoment/>
             <tariffZones>
               <TariffZoneRef version="any" ref="tfl:Zone_1"/>
               <TariffZoneRef version="any" ref="tfl:Zone_2"/>
@@ -1531,8 +1392,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
           <Network id="lrs:LRS" version="any">
             <Name>London River Services</Name>
             <ShortName>LRS</ShortName>
-            <PaymentMethods/>
-            <PurchaseMoment/>
             <groupsOfLines>
               <GroupOfLines id="lrs:RiverBus" version="any">
                 <Name>River Bus lines</Name>
@@ -1546,8 +1405,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   <LineRef version="any" ref="lrs:CrossRiver"/>
                 </members>
                 <TransportMode>water</TransportMode>
-                <PaymentMethods/>
-                <PurchaseMoment/>
               </GroupOfLines>
               <GroupOfLines id="lrs:River_tour" version="any">
                 <Name>river tourst</Name>
@@ -1560,8 +1417,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   <LineRef version="any" ref="lrs:Turk_Launches"/>
                 </members>
                 <TransportMode>water</TransportMode>
-                <PaymentMethods/>
-                <PurchaseMoment/>
               </GroupOfLines>
               <GroupOfLines id="lrs:Eligible_for_Freedom_Pass" version="any">
                 <Name>River Bus lines</Name>
@@ -1582,8 +1437,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
                   <LineRef version="any" ref="lrs:WPSA"/>
                 </members>
                 <TransportMode>water</TransportMode>
-                <PaymentMethods/>
-                <PurchaseMoment/>
               </GroupOfLines>
             </groupsOfLines>
           </Network>
@@ -1596,8 +1449,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               </TransportSubmode>
               <PublicCode>RB1</PublicCode>
               <OperatorRef version="any" ref="lrs:Kpmg_Thames_Clippers"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:RB2" version="any">
               <Name>Bankside - Embankment - Millbank - St George Wharf (Tate to Tate and St George Wharf)</Name>
@@ -1607,8 +1458,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               </TransportSubmode>
               <PublicCode>RB2</PublicCode>
               <OperatorRef version="any" ref="lrs:Thames_River_Services"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:RB3" version="any">
               <Name>London Bridge - Canary Wharf (for fares see route RB1)</Name>
@@ -1618,16 +1467,12 @@ Special peak and off-peak times apply on journeys that start at stations north o
               </TransportSubmode>
               <PublicCode>RB3</PublicCode>
               <OperatorRef version="any" ref="lrs:Kpmg_Thames_Clippers"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:RB4" version="any">
               <Name>Hilton Docklands to Canary Wharf Ferry</Name>
               <TransportMode>water</TransportMode>
               <PublicCode>RB4</PublicCode>
               <OperatorRef version="any" ref="lrs:Kpmg_Thames_Clippers"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:RB5" version="any">
               <Name>North Greenwich - Woolwich Arsenal (for fares see route RB1)</Name>
@@ -1637,8 +1482,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               </TransportSubmode>
               <PublicCode>RB5</PublicCode>
               <OperatorRef version="any" ref="lrs:Kpmg_Thames_Clippers"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:RB6" version="any">
               <Name>Putney - Wandsworth - Chelsea Harbour - Cadogan - Embankment - Blackfriars</Name>
@@ -1648,8 +1491,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               </TransportSubmode>
               <PublicCode>RB6</PublicCode>
               <OperatorRef version="any" ref="lrs:Kpmg_Thames_Clippers"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:CrossRiver" version="any">
               <Name>Woolwich to North Greenwich or Greenwich to/from Canary Wharf (includes Greenland and Masthouse Terrace)</Name>
@@ -1659,24 +1500,18 @@ Special peak and off-peak times apply on journeys that start at stations north o
               </TransportSubmode>
               <PublicCode>CrossRiver</PublicCode>
               <OperatorRef version="any" ref="lrs:Kpmg_Thames_Clippers"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:London_Eye" version="any">
               <Name>London Eye - River Cruise Experience</Name>
               <TransportMode>water</TransportMode>
               <PublicCode>CrossRiver</PublicCode>
               <OperatorRef version="any" ref="lrs:London_Eye"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:Crown_River_cruises" version="any">
               <Name>Crown River Cruises: Westminster - St Katharine's hop-on, hop-off circular service</Name>
               <TransportMode>water</TransportMode>
               <PublicCode>CrossRiver</PublicCode>
               <OperatorRef version="any" ref="lrs:Crown_River_cruises"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:City_Cruises" version="any">
               <Name>City Cruises: Westminster - London Eye - Tower - Greenwich</Name>
@@ -1686,8 +1521,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               </TransportSubmode>
               <PublicCode>City_Cruises</PublicCode>
               <OperatorRef version="any" ref="lrs:City_Cruises"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:Thames_River_Services" version="any">
               <Name>Thames River Services: Westminster - St. Katharine's - Greenwich</Name>
@@ -1697,8 +1530,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               </TransportSubmode>
               <PublicCode>TRS</PublicCode>
               <OperatorRef version="any" ref="lrs:Thames_River_Services"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:WPSA" version="any">
               <Name>Westminster Passenger Services Association: Westminster - Kew - Richmond - Hampton Court (summer only)</Name>
@@ -1708,8 +1539,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               </TransportSubmode>
               <PublicCode>WPSA</PublicCode>
               <OperatorRef version="any" ref="lrs:WPSA"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="lrs:Turk_Launches" version="any">
               <Name>Turk Launches: Richmond - Kingston - Hampton Court (summer only)</Name>
@@ -1719,8 +1548,6 @@ Special peak and off-peak times apply on journeys that start at stations north o
               </TransportSubmode>
               <PublicCode>Turk</PublicCode>
               <OperatorRef version="any" ref="lrs:Turk_Launches"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
           </lines>
           <scheduledStopPoints>
@@ -1745,16 +1572,12 @@ Special peak and off-peak times apply on journeys that start at stations north o
             <members>
               <LineRef version="any" ref="ea:Emirates"/>
             </members>
-            <PaymentMethods/>
-            <PurchaseMoment/>
           </Network>
           <lines>
             <Line id="ea:Emirates" version="any">
               <Name>Emirates Air Line</Name>
               <TransportMode>cableway</TransportMode>
               <PublicCode>Emirates</PublicCode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
           </lines>
           <scheduledStopPoints>
@@ -2674,7 +2497,6 @@ And registered on the scheme </Description>
             <UserProfile id="tfl:anyone" version="any">
               <Name>Anyone</Name>
               <TypeOfConcessionRef version="any" ref="tfl:none"/>
-              <ProofRequired/>
               <DiscountBasis>none</DiscountBasis>
             </UserProfile>
             <UserProfile id="tfl:adult" version="any">
@@ -2682,7 +2504,6 @@ And registered on the scheme </Description>
               <BaseUserProfileRef version="any" ref="tfl:anyone"/>
               <TypeOfConcessionRef version="any" ref="tfl:none"/>
               <MinimumAge>17</MinimumAge>
-              <ProofRequired/>
               <DiscountBasis>none</DiscountBasis>
             </UserProfile>
             <UserProfile id="tfl:concession" version="any">
@@ -2699,13 +2520,11 @@ And registered on the scheme </Description>
                 </UsageParameterPrice>
               </prices>
               <BaseUserProfileRef version="any" ref="tfl:anyone"/>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:disabled_person" version="any">
               <Name>Disabled Person  Fare</Name>
               <BaseUserProfileRef version="any" ref="tfl:concession"/>
               <TypeOfConcessionRef version="any" ref="tfl:disabled_person"/>
-              <ProofRequired/>
               <DiscountBasis>discount</DiscountBasis>
             </UserProfile>
             <UserProfile id="tfl:child" version="any">
@@ -2714,7 +2533,6 @@ And registered on the scheme </Description>
               <TypeOfConcessionRef version="any" ref="tfl:child"/>
               <MinimumAge>0</MinimumAge>
               <MaximumAge>16</MaximumAge>
-              <ProofRequired/>
               <DiscountBasis>discount</DiscountBasis>
             </UserProfile>
             <UserProfile id="tfl:infant" version="any">
@@ -2725,7 +2543,6 @@ Under-5s travel free if with someone who has a valid ticket, is using Oyster to 
               <TypeOfConcessionRef version="any" ref="tfl:infant"/>
               <MinimumAge>0</MinimumAge>
               <MaximumAge>4</MaximumAge>
-              <ProofRequired/>
               <DiscountBasis>free</DiscountBasis>
             </UserProfile>
             <UserProfile id="tfl:child_5-10" version="any">
@@ -2765,7 +2582,6 @@ Under-5s travel free if with someone who has a valid ticket, is using Oyster to 
               <TypeOfConcessionRef version="any" ref="tfl:child_5-10"/>
               <MinimumAge>5</MinimumAge>
               <MaximumAge>10</MaximumAge>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:child_11-15" version="any">
               <Name>Child Fare - uSing Oyster</Name>
@@ -2866,7 +2682,6 @@ If you provide an email address on your application, we will create a web accoun
               <TypeOfConcessionRef version="any" ref="tfl:child_11-15"/>
               <MinimumAge>11</MinimumAge>
               <MaximumAge>15</MaximumAge>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:child_11to15" version="any">
               <Name>11 to 15 year old</Name>
@@ -2919,7 +2734,6 @@ You do not need an 11-15 Oyster photocard to pay cash single fares or to buy Day
               <TypeOfConcessionRef version="any" ref="tfl:child"/>
               <MinimumAge>11</MinimumAge>
               <MaximumAge>15</MaximumAge>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:youth_16to18" version="any">
               <Name>16 to 18 year old</Name>
@@ -2994,14 +2808,12 @@ You do not need a 16+ Oyster photocard to pay cash single fares or to buy Day Tr
               <MinimumAge>16</MinimumAge>
               <MaximumAge>18</MaximumAge>
               <LocalResident>true</LocalResident>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:under18" version="any">
               <Name>Under 18</Name>
               <BaseUserProfileRef version="any" ref="tfl:concession"/>
               <TypeOfConcessionRef version="any" ref="tfl:youth"/>
               <MaximumAge>18</MaximumAge>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:18Plus" version="any">
               <Name>Student 18+</Name>
@@ -3061,7 +2873,6 @@ You can get 34 per cent off off-peak pay as you go single fares and off-peak dai
               <TypeOfConcessionRef version="any" ref="tfl:student"/>
               <MinimumAge>18</MinimumAge>
               <LocalResident>true</LocalResident>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:youth16To25" version="any">
               <Name>Young Person 16-25</Name>
@@ -3100,14 +2911,12 @@ A credit or debit card to pay the £10 fee
               <TypeOfConcessionRef version="any" ref="tfl:apprentice"/>
               <MinimumAge>18</MinimumAge>
               <LocalResident>true</LocalResident>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:senior" version="any">
               <Name>Eligible for Oyster Freedom Pass Fare</Name>
               <BaseUserProfileRef version="any" ref="tfl:concession"/>
               <TypeOfConcessionRef version="any" ref="tfl:senior"/>
               <MinimumAge>60</MinimumAge>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:seniorResident" version="any">
               <Name>Eligible for Oyster Freedom Pass Fare</Name>
@@ -3116,7 +2925,6 @@ A credit or debit card to pay the £10 fee
               <MinimumAge>60</MinimumAge>
               <MonthDayOnWhichAgeApplies>--04-06</MonthDayOnWhichAgeApplies>
               <LocalResident>true</LocalResident>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:senior_non_resident" version="any">
               <Name>Eligible for  non london  Freedom Pass Fare</Name>
@@ -3124,14 +2932,12 @@ A credit or debit card to pay the £10 fee
               <TypeOfConcessionRef version="any" ref="tfl:senior"/>
               <MinimumAge>60</MinimumAge>
               <LocalResident>false</LocalResident>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:Freedom_passHolder" version="any">
               <Name>Holder of Freedom Pass of any sort</Name>
               <BaseUserProfileRef version="any" ref="tfl:concession"/>
               <TypeOfConcessionRef version="any" ref="tfl:senior"/>
               <MinimumAge>60</MinimumAge>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:job_centre" version="any">
               <Name>Child Fare</Name>
@@ -3145,13 +2951,11 @@ Find out more about job_centre Plus Travel Discount Cards </Description>
               <TypeOfConcessionRef version="any" ref="tfl:job_centre"/>
               <MinimumAge>17</MinimumAge>
               <MaximumAge>65</MaximumAge>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:hm_forces" version="any">
               <Name>HM Forces</Name>
               <BaseUserProfileRef version="any" ref="tfl:concession"/>
               <TypeOfConcessionRef version="any" ref="tfl:hm_forces"/>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:veteran" version="any">
               <Name>Veterand (War WOunded)</Name>
@@ -3162,19 +2966,16 @@ Or receiving Guaranteed Income Payment under the Armed Forces Compensation Schem
 We will not issue a Veterans Oyster photocard if you live in London and are eligible for the Freedom Pass.</Description>
               <BaseUserProfileRef version="any" ref="tfl:concession"/>
               <TypeOfConcessionRef version="any" ref="tfl:disabled_person"/>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:RailCard_holder" version="any">
               <Name>Rail Card holder</Name>
               <BaseUserProfileRef version="any" ref="tfl:concession"/>
               <TypeOfConcessionRef version="any" ref="tfl:railCard"/>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="tfl:goldCardHolder" version="any">
               <Name>Rail Card holder</Name>
               <BaseUserProfileRef version="any" ref="tfl:RailCard_holder"/>
               <TypeOfConcessionRef version="any" ref="tfl:goldCard"/>
-              <ProofRequired/>
             </UserProfile>
             <GroupTicket id="tfl:Group_day_ticket" version="any">
               <Name>Travel anytime</Name>
@@ -3415,46 +3216,39 @@ Discounted travel for one adult travelling with the RailCard holder for the whol
               <Name>Purchase from Ticket Machine or Validator on board at time of Travle</Name>
               <PurchaseWhen>timeOfTravelOnly</PurchaseWhen>
               <MaximumPeriodBeforeDeparture>P0D</MaximumPeriodBeforeDeparture>
-              <PurchaseMoment/>
             </PurchaseWindow>
             <PurchaseWindow id="tfl:SameDay" version="any">
               <Name>Purchase from Office</Name>
               <Description>At ticket machines7  Day Travelcards and Group Day tickets must be bought on the start date</Description>
               <PurchaseWhen>dayOfTravelOnly</PurchaseWhen>
               <MaximumPeriodBeforeDeparture>P0D</MaximumPeriodBeforeDeparture>
-              <PurchaseMoment/>
             </PurchaseWindow>
             <PurchaseWindow id="tfl:UpTo4DaysInAdvance" version="any">
               <Name>Purchase from Ticket Machine</Name>
               <Description>At ticket offices Day Travelcards and Group Day tickets can be bought up to seven days in advance of the start date</Description>
               <MaximumPeriodBeforeDeparture>P4D</MaximumPeriodBeforeDeparture>
-              <PurchaseMoment/>
             </PurchaseWindow>
             <PurchaseWindow id="tfl:UpTo7DaysInAdvance" version="any">
               <Name>Purchase from Ticket Machine</Name>
               <Description>At ticket machines7 Day, monthly or longer period tickets on Oyster can be bought up to four days in advance of the start date</Description>
               <MaximumPeriodBeforeDeparture>P7D</MaximumPeriodBeforeDeparture>
-              <PurchaseMoment/>
             </PurchaseWindow>
             <PurchaseWindow id="tfl:UpTo30DaysInAdvance" version="any">
               <Name>Purchase from Office</Name>
               <Description>Choose a station or tram stop from the dropdown list for where you want to activate Auto top-up
 You need to activate within eight days</Description>
               <MaximumPeriodBeforeDeparture>P8D</MaximumPeriodBeforeDeparture>
-              <PurchaseMoment/>
             </PurchaseWindow>
             <PurchaseWindow id="tfl:CollectWithin8Days" version="any">
               <Name>Activate AUto Top up AUto</Name>
               <Description>At ticket machines7 Day, monthly or longer period tickets on Oyster can be bought up to four days in advance of the start date. 
 							Day Travelcards and Group Day tickets must be bought on the start date</Description>
               <MaximumPeriodBeforeDeparture>P30D</MaximumPeriodBeforeDeparture>
-              <PurchaseMoment/>
             </PurchaseWindow>
             <PurchaseWindow id="tfl:18Plus_up_to_4_Weeks_in_advance" version="any">
               <Name>APplyi for 18 Plus</Name>
               <Description>Once you've fully enrolled with your education establishment, you can apply up to four weeks before your course start date, or on your 18th birthday. Applications received sooner than then this will be rejected.</Description>
               <MaximumPeriodBeforeDeparture>P31D</MaximumPeriodBeforeDeparture>
-              <PurchaseMoment/>
             </PurchaseWindow>
             <FrequencyOfUse id="tfl:one_trip" version="any">
               <Name>Single use</Name>
@@ -3475,9 +3269,6 @@ You need to activate within eight days</Description>
             </Transferability>
             <Refunding id="tfl:Refundable" version="any">
               <Allowed>full</Allowed>
-              <PaymentMethods/>
-              <RefundPolicy/>
-              <PaymentMethod/>
             </Refunding>
             <Interchanging id="tfl:no_interchange_cannot_break_journey" version="any">
               <CanInterchange>false</CanInterchange>
@@ -5145,33 +4936,26 @@ You can only get these as paper tickets, not on an Oyster card, and they must be
             <DistributionChannel id="tfl:Tube_Station_Ticket_Offices" version="any">
               <Name>Tube and Overground Station ticket office</Name>
               <PaymentMethods>debitCard creditCard companyCheque cash</PaymentMethods>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="tfl:OvergroundStationTicketOffices" version="any">
               <Name>Tube and Overground Station ticket office</Name>
               <PaymentMethods>debitCard creditCard companyCheque cash</PaymentMethods>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="tfl:NationalRailStationTicketOffices" version="any">
               <Name>National RailStation ticket office</Name>
               <PaymentMethods>debitCard creditCard cash</PaymentMethods>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="tfl:Visitor_Centres" version="any">
               <Name>Visitor centres</Name>
               <PaymentMethods>debitCard creditCard companyCheque cash</PaymentMethods>
-              <DistributionRights/>
               <DistributionGroupRef version="any" ref="nr:Visitor_Centres"/>
             </DistributionChannel>
             <DistributionChannel id="tfl:OverseasAgents" version="any">
               <Name>Overseas Agents centres</Name>
-              <PaymentMethods/>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="tfl:PostOffice" version="any">
               <Name>PostOffice</Name>
               <PaymentMethods>debitCard creditCard companyCheque cash</PaymentMethods>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="tfl:OysterTicketStop" version="any">
               <Name>Oyster Ticket Stops</Name>
@@ -5189,7 +4973,6 @@ You can't
 	Get an Oyster photocard for discount travel
 	Buy paper tickets (cash single tickets and Day Travelcards)</Description>
               <PaymentMethods>debitCard creditCard cash</PaymentMethods>
-              <DistributionRights/>
               <DistributionGroupRef ref="nr:OysterTicketShops"/>
             </DistributionChannel>
             <DistributionChannel id="tfl:Oyster_Online" version="any">
@@ -5199,30 +4982,24 @@ You can't
 				 
 * Please note that you cannot get an Oyster card with a discounted or child-rate Travelcard or Bus and Tram Pass from Oyster online.				 
 				 </Description>
-              <PaymentMethods/>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="tfl:Oyster_Sales_line" version="any">
               <Name>Oyster salesline 0845 330 98761</Name>
               <Description>	NB only adults can top up their pay as you go online or by phone			 				 </Description>
               <AuthorityRef version="any" ref="tfl:Oyster_Sales_line"/>
               <PaymentMethods>debitCard creditCard</PaymentMethods>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="tfl:postal_application" version="any">
               <Name>Postal Application</Name>
               <PaymentMethods>debitCard creditCard companyCheque</PaymentMethods>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="tfl:self_service_machine" version="any">
               <Name>Self service machine</Name>
               <PaymentMethods>debitCard creditCard cash</PaymentMethods>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="tfl:Validator" version="any">
               <Name>Validator</Name>
               <PaymentMethods>travelCard</PaymentMethods>
-              <DistributionRights/>
             </DistributionChannel>
           </distributionChannels>
           <groupsOfDistributionChannels>
@@ -5405,7 +5182,6 @@ You can only get these as paper tickets, not on an Oyster card, and they must be
               <distributionAssignments>
                 <DistributionAssignment id="tfl:Contactless_card-SOP" version="any" order="1">
                   <Name>Can only purchase onvehicle</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="any" ref="tfl:Validator"/>
                   <DistributionChannelType>onBoard</DistributionChannelType>
                   <AllowedInChannel>true</AllowedInChannel>
@@ -5522,7 +5298,6 @@ Visitor Oyster card are only available for adults. However, an adult with a Visi
               <distributionAssignments>
                 <DistributionAssignment id="tfl:Visitor_OysterCard-SOP" version="any" order="1">
                   <Name>Can o</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="any" ref="tfl:Visitor_Centres"/>
                   <DistributionChannelType>online</DistributionChannelType>
                   <AllowedInChannel>true</AllowedInChannel>
@@ -5798,7 +5573,6 @@ You must confirm you're still eligible by 31 October 2012 - your 18+ Student Oys
               <distributionAssignments>
                 <DistributionAssignment id="tfl:18Plus_OysterPhotoCard-SOP" version="any" order="1">
                   <Name>Can only purchase online</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="any" ref="tfl:Oyster_Sales_line"/>
                   <DistributionChannelType>online</DistributionChannelType>
                   <AllowedInChannel>true</AllowedInChannel>
@@ -5837,7 +5611,6 @@ You are in the first 12 months of your Apprenticeship
               <distributionAssignments>
                 <DistributionAssignment id="tfl:Apprentice_OysterPhotoCard-SOP" version="any" order="1">
                   <Name>Can only purchase online</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="any" ref="tfl:Oyster_Sales_line"/>
                   <DistributionChannelType>online</DistributionChannelType>
                   <AllowedInChannel>true</AllowedInChannel>
@@ -5906,7 +5679,6 @@ Show your Veterans Oyster photocard to pay the discounted adult Boarding Pass fa
               <distributionAssignments>
                 <DistributionAssignment id="tfl:Veterans_OysterPhotoCard-SOP" version="any" order="1">
                   <Name>Can only purchase by post</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="any" ref="tfl:postal_application"/>
                   <DistributionChannelType>postal</DistributionChannelType>
                   <AllowedInChannel>true</AllowedInChannel>
@@ -5979,9 +5751,6 @@ Show your Veterans Oyster photocard to pay the discounted adult Boarding Pass fa
           <distributionAssignments>
             <DistributionAssignment id="tfl:self_service_machine" version="any" order="1">
               <GroupOfSalesOfferPackagesRef version="any" ref="tfl:On_OysterCard-GSOP"/>
-              <DistributionRights/>
-              <TicketingServiceFacilityList/>
-              <PaymentMethods/>
             </DistributionAssignment>
           </distributionAssignments>
         </FareFrame>
@@ -11770,7 +11539,6 @@ Show your Veterans Oyster photocard to pay the discounted adult Boarding Pass fa
             <UserProfile id="nr:family_and_friends_child" version="any">
               <MinimumAge>5</MinimumAge>
               <MaximumAge>16</MaximumAge>
-              <ProofRequired/>
             </UserProfile>
             <GroupTicket id="nr:family_and_friends" version="any">
               <Name>Family and frieds card</Name>
@@ -12640,24 +12408,14 @@ Find out more about using contactless payment cards on buses</Description>
                 <DayType id="lrs:July" version="any">
                   <properties>
                     <PropertyOfDay>
-                      <DaysOfWeek/>
-                      <WeeksOfMonth/>
                       <MonthOfYear>--07</MonthOfYear>
-                      <HolidayTypes/>
-                      <Seasons/>
-                      <Tides/>
                     </PropertyOfDay>
                   </properties>
                 </DayType>
                 <DayType id="lrs:August" version="any">
                   <properties>
                     <PropertyOfDay>
-                      <DaysOfWeek/>
-                      <WeeksOfMonth/>
                       <MonthOfYear>--08</MonthOfYear>
-                      <HolidayTypes/>
-                      <Seasons/>
-                      <Tides/>
                     </PropertyOfDay>
                   </properties>
                 </DayType>
@@ -13710,24 +13468,20 @@ All other journeys on this service	£3.00	n/a	£2.00</Description>
           <usageParameters>
             <UserProfile id="lrs:Tate_member" version="any">
               <Name>Member of Tate</Name>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="lrs:riverChild" version="any">
               <Name>River Tour Child</Name>
               <MinimumAge>5</MinimumAge>
               <MaximumAge>15</MaximumAge>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="lrs:London_EyeChild" version="any">
               <Name>London_Eye Tour Child</Name>
               <MinimumAge>4</MinimumAge>
               <MaximumAge>15</MaximumAge>
-              <ProofRequired/>
             </UserProfile>
             <UserProfile id="lrs:disabled_person@River_cruise" version="any">
               <Name>River Tour Disable berson</Name>
               <TypeOfConcessionRef version="any" ref="tfl:disabled_person"/>
-              <ProofRequired/>
               <companionProfiles>
                 <CompanionProfile id="lrs:disabled_person@River_cruise" version="any">
                   <Name>Disable companion free</Name>
@@ -14231,7 +13985,6 @@ Multi-journey Boarding Passes are not transferable.</Description>
             <RetailConsortium id="tfl:Oyster" version="any">
               <Name>Oyster plc</Name>
               <ShortName>Oyster</ShortName>
-              <OrganisationType/>
               <members>
                 <OperatorRef version="any" ref="tfl:LBSL"/>
                 <OperatorRef version="any" ref="tfl:LUL"/>
@@ -15140,186 +14893,158 @@ Multi-journey Boarding Passes are not transferable.</Description>
               <Description>Responsible for Underground</Description>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>metro</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="tfl:DLR" version="any">
               <PublicCode>DLR</PublicCode>
               <Name>Docklands Light Railway</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>metro</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="tfl:LBSL" version="any">
               <Name>London Bus Services Ltd</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>bus</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:National_Rail" version="any">
               <PublicCode>NR</PublicCode>
               <Name>National Rail</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_c2c" version="any">
               <PublicCode>C2C</PublicCode>
               <Name>C2C</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_chl" version="any">
               <PublicCode>CHL</PublicCode>
               <Name>Chiltern</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_ec" version="any">
               <PublicCode>EC</PublicCode>
               <Name>East Coast</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_gc" version="any">
               <PublicCode>GC</PublicCode>
               <Name>Grand Central</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_em" version="any">
               <PublicCode>EM</PublicCode>
               <Name>East Midlands</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_fcc" version="any">
               <PublicCode>FCC</PublicCode>
               <Name>First Capital Connect</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_ge" version="any">
               <PublicCode>GE</PublicCode>
               <Name>Gatwick Express</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_hc" version="any">
               <PublicCode>HC</PublicCode>
               <Name>Heathrow Connect</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_he" version="any">
               <PublicCode>HE</PublicCode>
               <Name>Heathrow Express</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_ht" version="any">
               <PublicCode>HT</PublicCode>
               <Name>Hull Trains</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_ga" version="any">
               <PublicCode>GA</PublicCode>
               <Name>Greater Anglia</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_lm" version="any">
               <PublicCode>LM</PublicCode>
               <Name>London Midlands</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:lo" version="any">
               <PublicCode>LO</PublicCode>
               <Name>TfL London Overground</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_se" version="any">
               <PublicCode>SE</PublicCode>
               <Name>SOuth Eastern</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="nr:toc_vg" version="any">
               <PublicCode>VG</PublicCode>
               <Name>Virgin</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>rail</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="lrs:LRS" version="any">
               <Name>London River Services</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>water</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="lrs:Kpmg_Thames_Clippers" version="any">
               <Name>Kpmg Thames Clippers</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>water</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="lrs:London_Eye" version="any">
               <Name>London Eye</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>water</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="lrs:Thames_River_Services" version="any">
               <Name>thames River Services</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>water</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="lrs:WPSA" version="any">
               <Name>Westminster Passenger Services Association (upriver)</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>water</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="lrs:Crown_River_cruises" version="any">
               <Name>Crown River Cruises</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>water</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="lrs:City_Cruises" version="any">
               <Name>City Cruises</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>water</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="lrs:Turk_Launches" version="any">
               <Name>Turk Launches</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>water</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
             <Operator id="tfl:Emirates" version="any">
               <Name>Emirates AirlIne</Name>
               <OrganisationType>operator</OrganisationType>
               <PrimaryMode>cableway</PrimaryMode>
-              <OperatorActivities/>
             </Operator>
           </organisations>
           <groupsOfOperators>

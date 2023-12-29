@@ -52,7 +52,6 @@
             <ScheduledStopPoint id="mybus:SSP0001A" created="2010-05-17T09:30:47Z" version="001" responsibilitySetRef="mybus:RS_10">
               <Name>Haltstelle A</Name>
               <Description>Version one of stop A</Description>
-              <VehicleModes/>
             </ScheduledStopPoint>
           </scheduledStopPoints>
         </ServiceFrame>

@@ -54,8 +54,6 @@
             <Line id="mybus:Line_1" version="any">
               <Name>Line 1</Name>
               <OperatorRef version="any" ref="mybus:DTA"/>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
           </lines>
           <scheduledStopPoints>
@@ -319,7 +317,6 @@
               <values>
                 <TypeOfTravelDocument id="myfares:paper_ticket" version="any">
                   <Name>Paper ticket</Name>
-                  <MachineReadable/>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
@@ -341,8 +338,6 @@
           <organisations>
             <Operator id="mybus:DTA" version="any">
               <Name>Demo Transit Authority</Name>
-              <OrganisationType/>
-              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

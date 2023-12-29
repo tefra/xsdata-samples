@@ -91,10 +91,7 @@
                 <properties>
                   <PropertyOfDay>
                     <DaysOfWeek>Everyday</DaysOfWeek>
-                    <WeeksOfMonth/>
                     <HolidayTypes>NotHoliday</HolidayTypes>
-                    <Seasons/>
-                    <Tides/>
                   </PropertyOfDay>
                 </properties>
               </DayType>
@@ -203,14 +200,10 @@
             <Line id="mybus:LN_24" version="any">
               <Name>Line 12</Name>
               <TransportMode>bus</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="mybus:LN_24N" version="any">
               <Name>Line 12 Night</Name>
               <TransportMode>bus</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>

@@ -116,34 +116,10 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <facilities>
                 <SiteFacilitySet id="mybus:SSP_02456A" version="any">
-                  <AccessibilityInfoFacilityList/>
-                  <AssistanceFacilityList/>
                   <AccessibilityToolList>walkingstick audioNavigator passengerCart</AccessibilityToolList>
-                  <CarServiceFacilityList/>
-                  <CateringFacilityList/>
-                  <FamilyFacilityList/>
-                  <FareClasses/>
-                  <MealFacilityList/>
-                  <MedicalFacilityList/>
-                  <MobilityFacilityList/>
-                  <NuisanceFacilityList/>
-                  <PassengerCommsFacilityList/>
                   <PassengerInformationFacilityList>passengerInformationDisplay</PassengerInformationFacilityList>
-                  <RetailFacilityList/>
-                  <SafetyFacilityList/>
-                  <SanitaryFacilityList/>
-                  <TicketingFacilityList/>
-                  <TicketingServiceFacilityList/>
-                  <AccessFacilityList/>
-                  <EmergencyServiceList/>
-                  <HireFacilityList/>
-                  <LuggageLockerFacilityList/>
-                  <LuggageServiceFacilityList/>
-                  <MoneyFacilityList/>
-                  <ParkingFacilityList/>
                 </SiteFacilitySet>
               </facilities>
               <TopographicPlaceRef version="any" ref="frtop:TP_0032A"/>
@@ -154,7 +130,6 @@
                 </Level>
               </levels>
               <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SSP_02456A_1" created="2010-04-17T09:30:47Z" version="any">
@@ -169,18 +144,15 @@
                   <RoadAddress id="mybus:Rad_SP001A_01" version="any">
                     <RoadName>Rue  de la Gare</RoadName>
                   </RoadAddress>
-                  <AccessModes/>
                   <CrossRoad lang="fr">Rue du Chene</CrossRoad>
                   <Landmark lang="fr">Place Victoire</Landmark>
                   <Covered>outdoors</Covered>
                   <Lighting>unlit</Lighting>
                   <placeEquipments>
                     <PassengerInformationEquipment id="mybus:Q_SSP_02456A_1" version="any">
-                      <PassengerInformationFacilityList/>
                       <AccessibilityInfoFacilityList>visualDisplays</AccessibilityInfoFacilityList>
                     </PassengerInformationEquipment>
                   </placeEquipments>
-                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label lang="fr">A</Label>
@@ -229,7 +201,6 @@
               <roles>
                 <ResponsibilityRoleAssignment id="frtop:RS_22_01" created="2010-05-17T09:30:47Z" version="3.0">
                   <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="mybus:Org_Mb042"/>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -239,7 +210,6 @@
               <roles>
                 <ResponsibilityRoleAssignment id="frtop:RS_24_01" created="2010-05-17T09:30:47Z" version="3.0">
                   <DataRoleType>collects</DataRoleType>
-                  <StakeholderRoleType/>
                   <ResponsibleOrganisationRef version="any" ref="frtop:Org_Hd001"/>
                 </ResponsibilityRoleAssignment>
               </roles>
@@ -254,7 +224,6 @@
             <Operator id="frtop:Org_Hd001" version="any">
               <Name>Voyages Fou </Name>
               <OrganisationType>operator</OrganisationType>
-              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

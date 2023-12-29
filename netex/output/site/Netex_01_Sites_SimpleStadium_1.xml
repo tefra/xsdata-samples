@@ -128,7 +128,6 @@
                   </Suitability>
                 </suitabilities>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
@@ -216,7 +215,6 @@
                   </Suitability>
                 </suitabilities>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <SiteRef version="any" ref="tbd:POI_23" xsi:type="PointOfInterestRefStructure"/>
               <LevelRef version="any" ref="tbd:POI_23_Lvl_01_lower"/>
@@ -271,11 +269,6 @@
               <localServices>
                 <AssistanceService id="tbd:POI_23_A1-E1_Eq3" version="any">
                   <Name>Assistance available</Name>
-                  <AssistanceFacilityList/>
-                  <AccessibilityToolList/>
-                  <Languages/>
-                  <EmergencyServiceList/>
-                  <SafetyFacilityList/>
                 </AssistanceService>
               </localServices>
               <Label>A</Label>
@@ -313,7 +306,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
@@ -343,7 +335,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
@@ -373,7 +364,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
@@ -403,7 +393,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
@@ -433,7 +422,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
@@ -461,7 +449,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>covered</Covered>
               <Gated>gatedArea</Gated>
@@ -494,7 +481,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>indoors</Covered>
               <Towards>Lower terrace</Towards>
@@ -532,7 +518,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>indoors</Covered>
               <Towards>along</Towards>
@@ -570,7 +555,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>indoors</Covered>
               <Towards>Terrace </Towards>
@@ -607,7 +591,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>indoors</Covered>
               <Towards>Lower terrace</Towards>
@@ -645,7 +628,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>indoors</Covered>
               <Towards>along</Towards>
@@ -683,7 +665,6 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <PublicUse>all</PublicUse>
               <Covered>indoors</Covered>
               <Towards>Terrace </Towards>
@@ -756,7 +737,6 @@
                 <OccasionalTravellerDuration>PT5M</OccasionalTravellerDuration>
                 <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
               </TransferDuration>
-              <AccessFeatureList/>
               <NavigationType>streetToSpace</NavigationType>
               <placesInSequence>
                 <PlaceInSequence id="tbd:POI_23_N1_A1-E1_to_A2_p01" version="any" order="1">
@@ -836,7 +816,6 @@
               <TransferDuration>
                 <DefaultDuration>PT5M</DefaultDuration>
               </TransferDuration>
-              <AccessFeatureList/>
               <NavigationType>streetToSpace</NavigationType>
               <placesInSequence>
                 <PlaceInSequence id="tbd:POI_23_N2_A1-E1_to_A3_p01" version="any" order="1">
@@ -914,7 +893,6 @@
                 <OccasionalTravellerDuration>PT5M</OccasionalTravellerDuration>
                 <MobilityRestrictedTravellerDuration>PT5M</MobilityRestrictedTravellerDuration>
               </TransferDuration>
-              <AccessFeatureList/>
               <NavigationType>streetToSpace</NavigationType>
               <placesInSequence>
                 <PlaceInSequence id="tbd:POI_23_N1_B1-E1_to_B2_p01" version="any" order="1">
@@ -994,7 +972,6 @@
               <TransferDuration>
                 <DefaultDuration>PT5M</DefaultDuration>
               </TransferDuration>
-              <AccessFeatureList/>
               <NavigationType>streetToSpace</NavigationType>
               <placesInSequence>
                 <PlaceInSequence id="tbd:POI_23_N2_B1-E1_to_B3_p01" version="any" order="1">

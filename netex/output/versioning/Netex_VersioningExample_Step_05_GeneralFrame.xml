@@ -44,18 +44,15 @@
           <Name>Haltstelle A - Museum</Name>
           <Description>Version two of stop A. Name is Changed</Description>
           <PrivateCode>mycodeA</PrivateCode>
-          <VehicleModes/>
         </ScheduledStopPoint>
         <ScheduledStopPoint id="mybus:SSP0002B" created="2010-05-18T09:30:47Z" changed="2010-06-18T09:30:47Z" modification="revise" version="002">
           <Name>Haltstelle B</Name>
           <Description>Version two of stop B</Description>
           <PrivateCode>mycodeB</PrivateCode>
-          <VehicleModes/>
         </ScheduledStopPoint>
         <ScheduledStopPoint id="mybus:SSP0003C" created="2010-05-21T10:30:51Z" version="001">
           <Name>Haltstelle C</Name>
           <Description>Version one of stop C</Description>
-          <VehicleModes/>
         </ScheduledStopPoint>
         <ServiceLink id="mybu:SL_AtoB01" created="2010-05-19T10:30:47Z" changed="2010-05-19T10:30:47Z" modification="revise" version="002">
           <Name>Version one of Link from A to B</Name>
@@ -90,10 +87,7 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-              <WeeksOfMonth/>
               <HolidayTypes>WorkingDay</HolidayTypes>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>

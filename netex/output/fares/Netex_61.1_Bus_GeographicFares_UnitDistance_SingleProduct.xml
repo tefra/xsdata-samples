@@ -51,15 +51,11 @@
             <members>
               <LineRef version="any" ref="mybus:Line_24"/>
             </members>
-            <PaymentMethods/>
-            <PurchaseMoment/>
             <OperatorRef version="any" ref="mybus:DTA"/>
           </Network>
           <lines>
             <Line id="mybus:Line_24" version="any">
               <Name>Line  24</Name>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
           </lines>
           <scheduledStopPoints>
@@ -350,7 +346,6 @@
               <values>
                 <TypeOfTravelDocument id="myfares:paper_ticket" version="any">
                   <Name>Paper ticket</Name>
-                  <MachineReadable/>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
@@ -372,8 +367,6 @@
           <organisations>
             <Operator id="mybus:DTA" version="any">
               <Name>Demo Transit Authority</Name>
-              <OrganisationType/>
-              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

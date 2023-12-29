@@ -31,10 +31,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -43,10 +39,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Saturday Sunday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -55,10 +47,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -67,10 +55,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Friday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -79,10 +63,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Saturday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -91,10 +71,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Sunday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -103,10 +79,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday Saturday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -115,10 +87,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Sunday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -127,10 +95,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Monday Tuesday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -139,10 +103,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Wednesday Thursday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>
@@ -151,10 +111,6 @@
           <properties>
             <PropertyOfDay>
               <DaysOfWeek>Friday</DaysOfWeek>
-              <WeeksOfMonth/>
-              <HolidayTypes/>
-              <Seasons/>
-              <Tides/>
             </PropertyOfDay>
           </properties>
         </DayType>

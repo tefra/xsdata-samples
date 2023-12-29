@@ -194,7 +194,6 @@
                 <Town>London</Town>
                 <PostCode>N1 9AW</PostCode>
               </Address>
-              <OperatorActivities/>
             </Operator>
             <Operator id="uic920-1:0087" version="any" responsibilitySetRef="uic:920-1_RS_01">
               <Name>Societe Nationale des Chemins de fer</Name>
@@ -215,7 +214,6 @@
                 <Url>www.eurostar.com</Url>
               </ContactDetails>
               <OrganisationType>railOperator</OrganisationType>
-              <OperatorActivities/>
             </Operator>
             <GeneralOrganisation id="noc:nr001" version="any" responsibilitySetRef="dft:noc">
               <CompanyNumber>euc:GB0402220</CompanyNumber>
@@ -333,7 +331,6 @@
                   <placeTypes>
                     <TypeOfPlaceRef version="any" ref="napt:type_of_place@RSE"/>
                   </placeTypes>
-                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="any" ref="naptStop:LV_9100STPADOM_01"/>
                   <Label>Entrance 1</Label>
@@ -343,7 +340,6 @@
                   <IsExit>true</IsExit>
                   <DroppedKerbOutside>true</DroppedKerbOutside>
                   <DropOffPointClose>true</DropOffPointClose>
-                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="naptStop:4900STPADOM1" created="2010-03-17T17:56:03" changed="2010-03-17T17:56:03" modification="revise" version="0" responsibilitySetRef="nptg:082">
                   <Name>St Pancras International Rail Station</Name>
@@ -357,7 +353,6 @@
                   <placeTypes>
                     <TypeOfPlaceRef version="any" ref="napt:type_of_place@RSE"/>
                   </placeTypes>
-                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="any" ref="naptStop:LV_9100STPADOM_01"/>
                   <Label>Entrance 2</Label>
@@ -367,7 +362,6 @@
                   <IsExit>true</IsExit>
                   <DroppedKerbOutside>true</DroppedKerbOutside>
                   <DropOffPointClose>true</DropOffPointClose>
-                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="naptStop:4900STPADOM2" created="2010-03-17T17:56:03" changed="2010-03-17T17:56:03" modification="revise" version="0" responsibilitySetRef="nptg:082">
                   <Name>St Pancras International Rail Station</Name>
@@ -381,7 +375,6 @@
                   <placeTypes>
                     <TypeOfPlaceRef version="any" ref="napt:type_of_place@RSE"/>
                   </placeTypes>
-                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="any" ref="naptStop:LV_9100STPADOM_01"/>
                   <Label>Entrance 3</Label>
@@ -391,11 +384,9 @@
                   <IsExit>true</IsExit>
                   <DroppedKerbOutside>true</DroppedKerbOutside>
                   <DropOffPointClose>true</DropOffPointClose>
-                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="naptStop:STPE_01_9100STPADOM_01_Internal" version="any">
                   <Name>Entrance to Eurostar check in within St Pancras</Name>
-                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <LevelRef version="any" ref="naptStop:LV_9100STPADOM_01"/>
                   <checkConstraints>
@@ -421,11 +412,9 @@
                   <IsExternal>false</IsExternal>
                   <IsEntry>true</IsEntry>
                   <IsExit>false</IsExit>
-                  <OtherTransportModes/>
                 </StopPlaceEntrance>
                 <StopPlaceEntrance id="naptStop:STPE_01_9100STPADOM_02_Internal" version="any">
                   <Name>Exit from to Eurostar Immigration and arrivals</Name>
-                  <AccessModes/>
                   <Covered>indoors</Covered>
                   <LevelRef version="any" ref="naptStop:LV_9100STPADOM_02"/>
                   <checkConstraints>
@@ -444,7 +433,6 @@
                   <IsExternal>false</IsExternal>
                   <IsEntry>false</IsEntry>
                   <IsExit>true</IsExit>
-                  <OtherTransportModes/>
                 </StopPlaceEntrance>
               </entrances>
               <PublicCode>STP</PublicCode>
@@ -534,36 +522,26 @@
               <quays>
                 <Quay id="naptStop:QY_01_9100STPADOM_5" version="any">
                   <Name>Platform 5</Name>
-                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="any" ref="naptStop:LV_9100STPADOM_01"/>
-                  <OtherTransportModes/>
                   <boardingPositions>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_021_A" version="any">
                       <Name>Coaches 1 to 6</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>A</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_021_B" version="any">
                       <Name>Coaches 7 to 12</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>B</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_021_C" version="any">
                       <Name>Coaches 12 to 18</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>C</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_021_D" version="any">
                       <Name>Coaches 19 to 24</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>D</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
@@ -571,36 +549,26 @@
                 </Quay>
                 <Quay id="naptStop:QY_01_9100STPADOM_6and7" version="any">
                   <Name>Platform 6 &amp; 7</Name>
-                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="any" ref="naptStop:LV_9100STPADOM_01"/>
-                  <OtherTransportModes/>
                   <boardingPositions>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_6and7_A" version="any">
                       <Name>Coaches 1 to 6</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>A</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_6and7_B" version="any">
                       <Name>Coaches 7 to 12</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>B</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_6and7_C" version="any">
                       <Name>Coaches 12 to 18</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>C</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_6and7_D" version="any">
                       <Name>Coaches 19 to 24</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>D</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
@@ -608,48 +576,34 @@
                 </Quay>
                 <Quay id="naptStop:QY_01_9100STPADOM_6" version="any">
                   <Name>Platform 6</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100STPADOM_6and7"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100STPADOM-7" version="any">
                   <Name>Platform 7</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100STPADOM_6and7"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100STPADOM_8and9" version="any">
                   <Name>Platform 8  &amp; 9</Name>
-                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="any" ref="naptStop:LV_9100STPADOM_01"/>
-                  <OtherTransportModes/>
                   <boardingPositions>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_8and9_A" version="any">
                       <Name>Coaches 1 to 6</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>A</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_8and9_B" version="any">
                       <Name>Coaches 7 to 12</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>B</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_8and9_C" version="any">
                       <Name>Coaches 12 to 18</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>C</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_8and9_D" version="any">
                       <Name>Coaches 19 to 24</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>D</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
@@ -657,48 +611,34 @@
                 </Quay>
                 <Quay id="naptStop:QY_01_9100STPADOM_8" version="any">
                   <Name>Platform 8</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100STPADOM_8and9"/>
                 </Quay>
                 <Quay id="naptStop:QY_9100STPADOM_9" version="any">
                   <Name>Platform 9</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100STPADOM_8and9"/>
                 </Quay>
                 <Quay id="naptStop:QY_9100STPADOM_10" version="any">
                   <Name>Platform 10</Name>
-                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="any" ref="naptStop:LV_9100STPADOM_01"/>
-                  <OtherTransportModes/>
                   <boardingPositions>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_10_A" version="any">
                       <Name>Coaches 1 to 6</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>A</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_10_B" version="any">
                       <Name>Coaches 7 to 12</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>B</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_10_C" version="any">
                       <Name>Coaches 12 to 18</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>C</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100STPADOM_10_D" version="any">
                       <Name>Coaches 19 to 24</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>D</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
@@ -1020,76 +960,56 @@
                 <Quay id="naptStop:QY_01_9100ASHFKY_1and2" version="any">
                   <Name>Platform 1 &amp; 2</Name>
                   <Description>Two sided Eastbound</Description>
-                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="any" ref="naptStop:LV_01_9100ASHFKY_01"/>
-                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_1" version="any">
                   <Name>Platform 1</Name>
                   <Description>Domestic Services Eastbound</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_1and2"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_1a" version="any">
                   <Name>Platform 1a</Name>
                   <Description>East End of Platform 1</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_1"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_1b" version="any">
                   <Name>Platform 1b</Name>
                   <Description>Middle section of Platform 1</Description>
-                  <AccessModes/>
                   <Covered>covered</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_1"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_1c" version="any">
                   <Name>Platform 1c</Name>
                   <Description>West End of Platform 1</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_1"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_2" version="any">
                   <Name>Platform 2</Name>
                   <Description>Eurostar Services Eastbound</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_1and2"/>
                   <boardingPositions>
                     <BoardingPosition id="naptStop:BP_01_9100ASHFKY_2_A" version="any">
                       <Name>Coaches 1 to 6</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>A</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100ASHFKY_2_B" version="any">
                       <Name>Coaches 7 to 12</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>B</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100ASHFKY_2_C" version="any">
                       <Name>Coaches 12 to 18</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>C</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100ASHFKY_2_D" version="any">
                       <Name>Coaches 19 to 24</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>D</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
@@ -1098,68 +1018,50 @@
                 <Quay id="naptStop:QY_01_9100ASHFKY_2a" version="any">
                   <Name>Platform 2a</Name>
                   <Description>East End of Platform 2</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_2"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_2b" version="any">
                   <Name>Platform 2b</Name>
                   <Description>Middle section of Platform 2</Description>
-                  <AccessModes/>
                   <Covered>covered</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_2"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_2c" version="any">
                   <Name>Platform 2c</Name>
                   <Description>West End of Platform 2</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_2"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_5and6" version="any">
                   <Name>Platform 5 &amp; 6</Name>
                   <Description>Two sided Westbound</Description>
-                  <AccessModes/>
                   <Covered>covered</Covered>
                   <LevelRef version="any" ref="naptStop:LV_01_9100ASHFKY_01"/>
-                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_5" version="any">
                   <Name>Platform 5</Name>
                   <Description>Eurostar Services Westbound</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_5and6"/>
                   <boardingPositions>
                     <BoardingPosition id="naptStop:BP_01_9100ASHFKY_5_A" version="any">
                       <Name>Coaches 1 to 6</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>A</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100ASHFKY_5_B" version="any">
                       <Name>Coaches 7 to 12</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>B</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100ASHFKY_5_C" version="any">
                       <Name>Coaches 12 to 18</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>C</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="naptStop:BP_01_9100ASHFKY_5_D" version="any">
                       <Name>Coaches 19 to 24</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>D</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
@@ -1168,57 +1070,43 @@
                 <Quay id="naptStop:QY_01_9100ASHFKY_5a" version="any">
                   <Name>Platform 5a</Name>
                   <Description>East End of Platform 5</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_5"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_5b" version="any">
                   <Name>Platform 5b</Name>
                   <Description>Middle section of Platform 5</Description>
-                  <AccessModes/>
                   <Covered>covered</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_5"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_5c" version="any">
                   <Name>Platform 5c</Name>
                   <Description>West End of Platform 5</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_5"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_6" version="any">
                   <Name>Platform 6</Name>
                   <Description>Domestic Services Westbound</Description>
-                  <AccessModes/>
                   <Covered>covered</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_5and6"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_6a" version="any">
                   <Name>Platform 6a</Name>
                   <Description>East End of Platform 6</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_6"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_6b" version="any">
                   <Name>Platform 6b</Name>
                   <Description>Middle section of Platform 6</Description>
-                  <AccessModes/>
                   <Covered>covered</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_6"/>
                 </Quay>
                 <Quay id="naptStop:QY_01_9100ASHFKY_6c" version="any">
                   <Name>Platform 6c</Name>
                   <Description>West End of Platform 6</Description>
-                  <AccessModes/>
                   <Covered>mixed</Covered>
-                  <OtherTransportModes/>
                   <ParentQuayRef version="any" ref="naptStop:QY_01_9100ASHFKY_6"/>
                 </Quay>
               </quays>
@@ -1231,7 +1119,6 @@
             <StopPlace id="frnapt:STP_04_fr_Calais" version="any" responsibilitySetRef="fr:RS_01">
               <Name lang="fr">Calais Fréthun</Name>
               <ShortName lang="fr">Calais</ShortName>
-              <AccessModes/>
               <Covered>mixed</Covered>
               <TopographicPlaceView>
                 <Name lang="fr">Calais</Name>
@@ -1248,7 +1135,6 @@
             <StopPlace id="frnapt:STP_05_fr_LilleEuro" version="any" responsibilitySetRef="fr:RS_01">
               <Name lang="fr">Lille Europe</Name>
               <ShortName>Lille</ShortName>
-              <AccessModes/>
               <Locale>
                 <TimeZoneOffset>-1</TimeZoneOffset>
                 <TimeZone>WET</TimeZone>
@@ -1259,7 +1145,6 @@
             <StopPlace id="frnapt:STP_05_fr_LilleDom" version="any" responsibilitySetRef="fr:RS_01">
               <Name lang="fr">Lille Domestic</Name>
               <ShortName>Lille</ShortName>
-              <AccessModes/>
               <Locale>
                 <TimeZoneOffset>-1</TimeZoneOffset>
                 <TimeZone>WET</TimeZone>
@@ -1270,7 +1155,6 @@
             <StopPlace id="frnapt:STP_06_fr_ParisGdN" version="any" responsibilitySetRef="fr:RS_01">
               <Name lang="fr">Paris Gare du Nord - Eurostar</Name>
               <ShortName lang="fr">Gare du Nord - Eurostar</ShortName>
-              <AccessModes/>
               <Covered>covered</Covered>
               <TopographicPlaceView>
                 <Name lang="fr">Paris</Name>
@@ -1321,7 +1205,6 @@
                 <PostCode>77700</PostCode>
                 <Province lang="fr">Ile-de-France</Province>
               </PostalAddress>
-              <AccessModes/>
               <Covered>mixed</Covered>
               <TopographicPlaceView>
                 <Name lang="fr">Chessy</Name>
@@ -1346,40 +1229,29 @@
               <quays>
                 <Quay id="frnapt:QY_08_fr_MarneLV-1" version="any">
                   <Name lang="fr">Quay 1</Name>
-                  <AccessModes/>
                   <LevelRef version="any" ref="frnapt:LV_08_fr_MarneLV-1_01"/>
-                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="frnapt:QY_08_fr_MarneLV-2" version="any">
                   <Name lang="fr">Quay 2</Name>
-                  <AccessModes/>
                   <LevelRef version="any" ref="frnapt:LV_08_fr_MarneLV-1_01"/>
-                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="frnapt:QY_08_fr_MarneLV-3" version="any">
                   <Name>Quay 3</Name>
-                  <AccessModes/>
                   <LevelRef version="any" ref="frnapt:LV_08_fr_MarneLV-1_01"/>
-                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="frnapt:QY_08_fr_MarneLV-4" version="any">
                   <Name lang="fr">Quay 4</Name>
-                  <AccessModes/>
                   <LevelRef version="any" ref="frnapt:LV_08_fr_MarneLV-1_01"/>
-                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="frnapt:QY_08_fr_MarneLV-5" version="any">
                   <Name lang="fr">Quay 5</Name>
-                  <AccessModes/>
                   <LevelRef version="any" ref="frnapt:LV_08_fr_MarneLV-1_01"/>
-                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
             <StopPlace id="benapt:STP_07_be_BrusselsMidiEs" version="any" responsibilitySetRef="be:RS_01">
               <Name lang="fr">Brussels Gare de Midi/Zuid</Name>
               <ShortName lang="fr">Brussels Midi</ShortName>
-              <AccessModes/>
               <Covered>covered</Covered>
               <TopographicPlaceView>
                 <Name lang="fr">Brussels</Name>
@@ -1426,7 +1298,6 @@
                 <PostCode>84008</PostCode>
                 <Province lang="fr">Vaucluse</Province>
               </PostalAddress>
-              <AccessModes/>
               <Covered>covered</Covered>
               <TopographicPlaceView>
                 <Name lang="fr">Avignon</Name>
@@ -1443,7 +1314,6 @@
             <StopPlace id="frnapt:STP_21_fr_Moutiers" version="any" responsibilitySetRef="fr:RS_01">
               <Name lang="fr">Moûtiers</Name>
               <ShortName lang="fr">Moûtiers</ShortName>
-              <AccessModes/>
               <Covered>outdoors</Covered>
               <TopographicPlaceView>
                 <Name lang="fr">Moûtiers</Name>
@@ -1459,13 +1329,9 @@
               <quays>
                 <Quay id="frnapt:QY_21_fr_Moutiers-1" version="any">
                   <Name lang="fr">Quay 1</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="frnapt:QY_21_fr_Moutiers-2" version="any">
                   <Name lang="fr">Quay 2</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
@@ -1478,7 +1344,6 @@
                 <Town lang="fr">Aime</Town>
                 <PostCode>73210</PostCode>
               </PostalAddress>
-              <AccessModes/>
               <Covered>outdoors</Covered>
               <TopographicPlaceView>
                 <Name lang="fr">Aime</Name>
@@ -1494,132 +1359,94 @@
               <quays>
                 <Quay id="frnapt:QY_22_fr_AimeLP-1" version="any">
                   <Name lang="fr">Quay 1</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                   <boardingPositions>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@A" version="any">
                       <Name>Coach 1</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>A</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@B" version="any">
                       <Name>Coach 2</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>B</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@C" version="any">
                       <Name>Coach 3</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>C</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@D" version="any">
                       <Name>Coach 4</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>D</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@E" version="any">
                       <Name>Coach 5</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>E</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@F" version="any">
                       <Name>Coach 6</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>F</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@G" version="any">
                       <Name>Coach 7</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>G</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@H" version="any">
                       <Name>Coach 8</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>H</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@I" version="any">
                       <Name>Coach 9</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>I</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@J" version="any">
                       <Name>Coach 10</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>J</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@K" version="any">
                       <Name>Coach 11</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>K</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@L" version="any">
                       <Name>Coach 12</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>L</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@M" version="any">
                       <Name>Coach 13</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>M</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@N" version="any">
                       <Name>Coach 14</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>N</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@O" version="any">
                       <Name>Coach 15</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>O</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@P" version="any">
                       <Name>Coach 16</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>P</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@Q" version="any">
                       <Name>Coach 17</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>Q</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
                     <BoardingPosition id="frnapt:BP_22_fr_AimeLP-1@R" version="any">
                       <Name>Coach 18</Name>
-                      <AccessModes/>
-                      <OtherTransportModes/>
                       <Label>R</Label>
                       <BoardingPositionType>positionOnRailPlatform</BoardingPositionType>
                     </BoardingPosition>
@@ -1627,8 +1454,6 @@
                 </Quay>
                 <Quay id="frnapt:QY_22_fr_AimeLP-2" version="any">
                   <Name lang="fr">Quay 2</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
@@ -1639,7 +1464,6 @@
                 <Name lang="fr">Gare de Bourg-Saint-Maurice</Name>
                 <PostCode>73700</PostCode>
               </PostalAddress>
-              <AccessModes/>
               <Covered>mixed</Covered>
               <TopographicPlaceView>
                 <Name lang="fr">Bourg-Saint-Maurice</Name>
@@ -1655,13 +1479,9 @@
               <quays>
                 <Quay id="frnapt:QY_23_fr_BourgStM-1" version="any">
                   <Name lang="fr">Quay 1</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                 </Quay>
                 <Quay id="frnapt:QY_23_fr_BourgStM-2" version="any">
                   <Name lang="fr">Quay 2</Name>
-                  <AccessModes/>
-                  <OtherTransportModes/>
                 </Quay>
               </quays>
             </StopPlace>
@@ -1669,7 +1489,6 @@
           <pointsOfInterest>
             <PointOfInterest id="eos:POI_fr_Disneyland" version="any">
               <Name>Disneyland Resort</Name>
-              <AccessModes/>
               <Locale/>
               <classifications>
                 <PointOfInterestClassificationRef ref="eos:POIC_amusementPark"/>
@@ -1683,8 +1502,6 @@
             <Name>Eurostar Network</Name>
             <MainLineRef version="any" ref="eos:LN_London-Paris"/>
             <TransportMode>rail</TransportMode>
-            <PaymentMethods/>
-            <PurchaseMoment/>
           </Network>
           <directions>
             <Direction id="eos:DR_London-ParisBrussels" version="any">
@@ -2191,31 +2008,21 @@
               <Presentation>
                 <ColourName>yellow</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="eos:LN_London-Brussels" version="any">
               <Name>Eurostar Line: London to Brussels</Name>
               <Presentation>
                 <ColourName>grey</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="eos:LN_London-Marne" version="any">
               <Name>Eurostar Line: London to Disneyland / Marne</Name>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="eos:LN_London-Avignon" version="any">
               <Name>Eurostar Line: London to Avignon</Name>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="eos:LN_London-Alps" version="any">
               <Name>Eurostar Line: London to the Fench Alps</Name>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -2258,22 +2065,18 @@
                     <PointOnLineSection id="eos:LSM_A_01-05" version="any" order="1">
                       <Description>St Pancras to Ebbsfleet</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_A_01-05" version="any" order="2">
                       <Description>Ebbsfleet to Ashford</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_A_01-05" version="any" order="3">
                       <Description>Ashford to Calais</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_A_01-05" version="any" order="4">
                       <Description>Calais to Lille</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>trunk</SectionType>
@@ -2284,7 +2087,6 @@
                     <PointOnLineSection id="eos:LSM_A_05-06" version="any" order="1">
                       <Description>Lille to Paris GdN</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>trunk</SectionType>
@@ -2295,7 +2097,6 @@
                     <PointOnLineSection id="eos:LSM_A_05-06" version="any" order="2">
                       <Description>Lille to Brussels</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>trunk</SectionType>
@@ -2306,7 +2107,6 @@
                     <PointOnLineSection id="eos:LSM_A_07" version="any" order="1">
                       <Description>Lille to Marne</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>branch</SectionType>
@@ -2317,7 +2117,6 @@
                     <PointOnLineSection id="eos:LSM_A_05-31" version="any" order="1">
                       <Description>Lille to Avignon</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_31_fr_Avignon"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>branch</SectionType>
@@ -2328,17 +2127,14 @@
                     <PointOnLineSection id="eos:LSM_A_05-21" version="any" order="1">
                       <Description>Calais to Moûtiers</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_A_21-22" version="any" order="1">
                       <Description>Moûtiers to Aime</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_A_22-23" version="any" order="1">
                       <Description>Aime to Bourg St Maurice</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_22_fr_AimeLP"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>branch</SectionType>
@@ -2355,32 +2151,26 @@
                     <PointOnLineSection id="eos:LSM_B_01-05_01" version="any" order="1">
                       <Description>St Pancras to Ebbsfleet</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-05_02" version="any" order="2">
                       <Description>Ebbsfleet to Ashford</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-05_03" version="any" order="3">
                       <Description>Ashford to Calais</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-05_04" version="any" order="4">
                       <Description>Calais to Lille</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-05_05" version="any" order="5">
                       <Description>Lille to Paris</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-05_06" version="any" order="6">
                       <Description>Paris</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_06_fr_ParisGdN"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>trunk</SectionType>
@@ -2392,32 +2182,26 @@
                     <PointOnLineSection id="eos:LSM_B_01-07_01" version="any" order="1">
                       <Description>St Pancras to Ebbsfleet</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-07_02" version="any" order="2">
                       <Description>Ebbsfleet to Ashford</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-07_03" version="any" order="3">
                       <Description>Ashford to Calais</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-07_04" version="any" order="4">
                       <Description>Calais to Lille</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-07_05" version="any" order="5">
                       <Description>Lille to Brussels</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-07_07" version="any" order="6">
                       <Description>Brussels</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_07_be_BrusselsMidiEs"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>trunk</SectionType>
@@ -2429,32 +2213,26 @@
                     <PointOnLineSection id="eos:LSM_B_01-08_01" version="any" order="1">
                       <Description>St Pancras to Ebbsfleet</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-08_02" version="any" order="2">
                       <Description>Ebbsfleet to Ashford</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-08_03" version="any" order="3">
                       <Description>Ashford to Calais</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-08_04" version="any" order="4">
                       <Description>Calais to Lille</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-05_05" version="any" order="5">
                       <Description>Lille to Marne</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-08_08" version="any" order="6">
                       <Description>Marne</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_08_fr_MarneLV"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>branch</SectionType>
@@ -2466,32 +2244,26 @@
                     <PointOnLineSection id="eos:LSM_B_01-31_02" version="any" order="1">
                       <Description>St Pancras to Ebbsfleet</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-31_03" version="any" order="2">
                       <Description>Ebbsfleet to Ashford</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-31_04" version="any" order="3">
                       <Description>Ashford to Calais</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-31_05" version="any" order="4">
                       <Description>Calais to Lille</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-31_05" version="any" order="5">
                       <Description>Lille to Avignin</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_05_fr_LilleEuro"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-31_31" version="any" order="6">
                       <Description>Avignon</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_31_fr_Avignon"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>branch</SectionType>
@@ -2503,37 +2275,30 @@
                     <PointOnLineSection id="eos:LSM_B_01-23_02" version="any" order="1">
                       <Description>St Pancras to Ebbsfleet</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_01_uk_StPancras"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-23_03" version="any" order="2">
                       <Description>Ebbsfleet to Ashford</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_02_uk_Ebbsfleet"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-23_04" version="any" order="3">
                       <Description>Ashford to Calais</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-23_05" version="any" order="4">
                       <Description>Calais to Lille</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_04_fr_Calais"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-23_21" version="any" order="5">
                       <Description>Calais to Moûtiers</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_03_uk_AshfordInt"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-23_22" version="any" order="6">
                       <Description>Moûtiers to Aime</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_21_fr_Moutiers"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                     <PointOnLineSection id="eos:LSM_B_01-23_23" version="any" order="7">
                       <Description>Aime to Bourg St Maurice</Description>
                       <ScheduledStopPointRef version="any" ref="eos:SSP_22_fr_AimeLP"/>
-                      <ConnectingVehicleModes/>
                     </PointOnLineSection>
                   </pointsOnSection>
                   <SectionType>branch</SectionType>
@@ -2546,78 +2311,63 @@
             <ScheduledStopPoint id="eos:SSP_01_uk_StPancras" version="any">
               <Name lang="en">London St Pancras International</Name>
               <ShortName lang="en">London</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_02_uk_Ebbsfleet" version="any">
               <Name lang="en">Ebbsfleet International</Name>
               <ShortName lang="en">Ebbsfleet</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_03_uk_AshfordInt" version="any">
               <Name lang="en">Ashford International</Name>
               <ShortName lang="en">Ashford</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_04_fr_Calais" version="any">
               <Name lang="fr">Calais Fréthun</Name>
               <ShortName lang="fr">Calais</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_05_fr_LilleEuro" version="any">
               <Name lang="fr">Lille Europe</Name>
               <ShortName lang="fr">Lille</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_06_fr_ParisGdN" version="any">
               <Name lang="fr">Paris Gare du Nord</Name>
               <ShortName lang="fr">Paris</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="sncf:SSP_52_fr_ParisGdLyon" version="any">
               <Name lang="fr">Paris Gare du Lyon</Name>
               <ShortName lang="fr">Paris GdL</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="sncf:SSP_52_fr_ParisEst" version="any">
               <Name lang="fr">Paris Gare du Lyon</Name>
               <ShortName lang="fr">Paris GdL</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_08_fr_MarneLV" version="any">
               <Name lang="fr">Marne-La-Vallée</Name>
               <ShortName lang="fr">Marne</ShortName>
               <Description>For Disneyland</Description>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_07_be_BrusselsMidiEs" version="any">
               <Name lang="fr">Brussels Gare de Midi Eurostar</Name>
               <ShortName lang="fr">Brussels Midi</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="bncf:SSP_07_be_BrusselsMidiInt" version="any">
               <Name lang="fr">Brussels Gare de Midi</Name>
               <ShortName lang="fr">Brussels Midi</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_31_fr_Avignon" version="any">
               <Name lang="fr">Avignon Centre</Name>
               <ShortName lang="fr">Avignon Centre</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_21_fr_Moutiers" version="any">
               <Name lang="fr">Moûtiers</Name>
               <ShortName lang="fr">Moûtiers</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_22_fr_AimeLP" version="any">
               <Name lang="fr">Aime-la-Plagne</Name>
               <ShortName lang="fr">Aime</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="eos:SSP_23_fr_BourgStM" version="any">
               <Name lang="fr">Bourg-Saint-Maurice</Name>
               <ShortName lang="fr">Bourg-St-Maurice</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
           </scheduledStopPoints>
           <serviceLinks>
@@ -3848,7 +3598,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C01"/>
                     <Label>Carriage 1</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@A"/>
                 </TrainStopAssignment>
@@ -3857,7 +3606,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C02"/>
                     <Label>Carriage 2</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@B"/>
                 </TrainStopAssignment>
@@ -3866,7 +3614,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C03"/>
                     <Label>Carriage 3</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@C"/>
                 </TrainStopAssignment>
@@ -3875,7 +3622,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C04"/>
                     <Label>Carriage 4</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@D"/>
                 </TrainStopAssignment>
@@ -3884,7 +3630,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C05"/>
                     <Label>Carriage 5</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@E"/>
                 </TrainStopAssignment>
@@ -3893,7 +3638,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C06"/>
                     <Label>Carriage 6</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@F"/>
                 </TrainStopAssignment>
@@ -3902,7 +3646,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C07"/>
                     <Label>Carriage 7</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@G"/>
                 </TrainStopAssignment>
@@ -3911,7 +3654,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C08"/>
                     <Label>Carriage 8</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@H"/>
                 </TrainStopAssignment>
@@ -3920,7 +3662,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C09"/>
                     <Label>Carriage 9</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@I"/>
                 </TrainStopAssignment>
@@ -3929,7 +3670,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C10"/>
                     <Label>Carriage 10</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@J"/>
                 </TrainStopAssignment>
@@ -3938,7 +3678,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C11"/>
                     <Label>Carriage 11</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@K"/>
                 </TrainStopAssignment>
@@ -3947,7 +3686,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C12"/>
                     <Label>Carriage 12</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@L"/>
                 </TrainStopAssignment>
@@ -3956,7 +3694,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C13"/>
                     <Label>Carriage 13</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@M"/>
                 </TrainStopAssignment>
@@ -3965,7 +3702,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C14"/>
                     <Label>Carriage 14</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@N"/>
                 </TrainStopAssignment>
@@ -3974,7 +3710,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C15"/>
                     <Label>Carriage 15</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@O"/>
                 </TrainStopAssignment>
@@ -3983,7 +3718,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C16"/>
                     <Label>Carriage 16</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@P"/>
                 </TrainStopAssignment>
@@ -3992,7 +3726,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C17"/>
                     <Label>Carriage 17</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@Q"/>
                 </TrainStopAssignment>
@@ -4001,7 +3734,6 @@
                   <TrainComponentView>
                     <TrainComponentRef version="any" ref="est:TRNCMP_LP01_C18"/>
                     <Label>Carriage 18</Label>
-                    <FareClasses/>
                   </TrainComponentView>
                   <BoardingPositionRef version="any" ref="frnapt:BP_22_fr_AimeLP-1@R"/>
                 </TrainStopAssignment>
@@ -5846,10 +5578,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5858,10 +5586,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5870,10 +5594,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5882,10 +5602,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Friday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5894,10 +5610,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Tuesday Wednesday Thursday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5906,10 +5618,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Tuesday Wednesday Thursday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5918,10 +5626,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Tuesday Wednesday Thursday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5930,10 +5634,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5942,10 +5642,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Friday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5954,10 +5650,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5966,10 +5658,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Sunday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -5977,11 +5665,7 @@
               <Name>No Service Day</Name>
               <properties>
                 <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
                   <HolidayTypes>NationalHoliday</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -8939,7 +8623,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_out_1210a" order="1">
                   <NoticeRef ref="sncf:FN_RT101_01"/>
@@ -8960,7 +8643,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_out_1210b" order="1">
                   <NoticeRef ref="sncf:FN_RT101_02"/>
@@ -8981,7 +8663,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_out_1210c" order="1">
                   <NoticeRef ref="sncf:FN_RT101_03"/>
@@ -9002,7 +8683,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_out_1447" order="1">
                   <NoticeRef ref="sncf:FN_RT101_04"/>
@@ -9023,7 +8703,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_out_1728" order="1">
                   <NoticeRef ref="sncf:FN_RT101_05"/>
@@ -9044,7 +8723,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_out_2014" order="1">
                   <NoticeRef ref="sncf:FN_RT101_06"/>
@@ -9065,7 +8743,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_in_10:32" order="1">
                   <NoticeRef ref="sncf:FN_RT101_01"/>
@@ -9086,7 +8763,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_in_1202" order="1">
                   <NoticeRef ref="sncf:FN_RT101_02"/>
@@ -9107,7 +8783,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_in_1425" order="1">
                   <NoticeRef ref="sncf:FN_RT101_02"/>
@@ -9128,7 +8803,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_in_1502" order="1">
                   <NoticeRef ref="sncf:FN_RT101_01"/>
@@ -9149,7 +8823,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_in_1532a" order="1">
                   <NoticeRef ref="sncf:FN_RT101_03"/>
@@ -9170,7 +8843,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_in_1532b" order="1">
                   <NoticeRef ref="sncf:FN_RT101_03"/>
@@ -9191,7 +8863,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_in_1435a" order="1">
                   <NoticeRef ref="sncf:FN_RT101_01"/>
@@ -9212,7 +8883,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_in_1435b-01" order="1">
                   <NoticeRef ref="sncf:FN_RT101_03"/>
@@ -9237,7 +8907,6 @@
               <Advertised>true</Advertised>
               <StandardTransferTime>PT12M</StandardTransferTime>
               <MinimumTransferTime>PT05M</MinimumTransferTime>
-              <transferModes/>
               <noticeAssignments>
                 <NoticeAssignmentView id="eos:SJI_05_03-101_in_1435c-01" order="1">
                   <NoticeRef ref="sncf:FN_RT101_03"/>
@@ -9267,10 +8936,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -9279,10 +8944,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Wednesday Thursday Friday Sunday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -9675,10 +9336,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -9687,10 +9344,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Friday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -9699,10 +9352,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -9711,10 +9360,6 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -10492,8 +10137,6 @@
             <Name>North west French  Network</Name>
             <MainLineRef version="any" ref="sncf:LN_Lille-Rennes"/>
             <TransportMode>rail</TransportMode>
-            <PaymentMethods/>
-            <PurchaseMoment/>
           </Network>
           <directions>
             <Direction id="sncf:DR_Lille-Rennes" version="any">
@@ -10509,8 +10152,6 @@
               <Presentation>
                 <ColourName>yellow</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -10531,27 +10172,22 @@
             <ScheduledStopPoint id="sncf:SSP_100_fr_LilleDom" version="any">
               <Name lang="fr">Le Mans</Name>
               <ShortName lang="fr">Le Mans</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="sncf:SSP_101_fr_LeMans" version="any">
               <Name lang="fr">Le Mans</Name>
               <ShortName lang="fr">Le Mans</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="sncf:SSP_102_fr_Angers" version="any">
               <Name lang="fr">Angers</Name>
               <ShortName lang="fr">Angers</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="sncf:SSP_103_fr_Nantes" version="any">
               <Name lang="fr">Nantes</Name>
               <ShortName lang="fr">Nantes</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
             <ScheduledStopPoint id="sncf:SSP_104_fr_Rennes" version="any">
               <Name lang="fr">Moûtiers</Name>
               <ShortName lang="fr">Moûtiers</ShortName>
-              <VehicleModes/>
             </ScheduledStopPoint>
           </scheduledStopPoints>
           <serviceLinks>
@@ -11060,177 +10696,48 @@
           <serviceFacilitySets>
             <ServiceFacilitySet id="es:sfs_general" version="any">
               <Description>General</Description>
-              <AccessibilityInfoFacilityList/>
               <AssistanceFacilityList>boardingAssistance conductor wheechairAssistance</AssistanceFacilityList>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
-              <CateringFacilityList/>
-              <FamilyFacilityList/>
-              <FareClasses/>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
               <NuisanceFacilityList>noSmoking</NuisanceFacilityList>
               <PassengerCommsFacilityList>publicWifi</PassengerCommsFacilityList>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
-              <SanitaryFacilityList/>
-              <TicketingFacilityList/>
               <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
-              <VehicleAccessFacilityList/>
               <AccommodationAccessList>reservation</AccommodationAccessList>
-              <AccommodationFacilityList/>
-              <BookingProcessFacilityList/>
-              <CouchetteFacilityList/>
-              <LuggageCarriageFacilityList/>
-              <ServiceReservationFacilityList/>
-              <UicProductCharacteristicList/>
             </ServiceFacilitySet>
             <ServiceFacilitySet id="es:sfs_familyCarriage" version="any">
               <Description>Family Carriage  facilities</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
-              <CateringFacilityList/>
-              <FamilyFacilityList/>
               <FareClasses>standardClass</FareClasses>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
-              <NuisanceFacilityList/>
-              <PassengerCommsFacilityList/>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
               <SanitaryFacilityList>toilet babyChange</SanitaryFacilityList>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <VehicleAccessFacilityList/>
-              <AccommodationAccessList/>
               <AccommodationFacilityList>seating familyCarriage</AccommodationFacilityList>
-              <BookingProcessFacilityList/>
-              <CouchetteFacilityList/>
               <LuggageCarriageFacilityList>baggageStorage luggageRacks</LuggageCarriageFacilityList>
-              <ServiceReservationFacilityList/>
-              <UicProductCharacteristicList/>
             </ServiceFacilitySet>
             <ServiceFacilitySet id="es:sfs_standardCarriage" version="any">
               <Description>Standard facilities</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
-              <CateringFacilityList/>
-              <FamilyFacilityList/>
               <FareClasses>standardClass</FareClasses>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
-              <NuisanceFacilityList/>
-              <PassengerCommsFacilityList/>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
               <SanitaryFacilityList>toilet</SanitaryFacilityList>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <VehicleAccessFacilityList/>
-              <AccommodationAccessList/>
               <AccommodationFacilityList>seating</AccommodationFacilityList>
-              <BookingProcessFacilityList/>
-              <CouchetteFacilityList/>
               <LuggageCarriageFacilityList>baggageStorage luggageRacks</LuggageCarriageFacilityList>
-              <ServiceReservationFacilityList/>
-              <UicProductCharacteristicList/>
             </ServiceFacilitySet>
             <ServiceFacilitySet id="es:sfs_buffetCarriage" version="any">
               <Description>Buffet Carriage  facilities</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
               <CateringFacilityList>buffet</CateringFacilityList>
-              <FamilyFacilityList/>
               <FareClasses>standardClass</FareClasses>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
-              <NuisanceFacilityList/>
-              <PassengerCommsFacilityList/>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
               <SanitaryFacilityList>none</SanitaryFacilityList>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <VehicleAccessFacilityList/>
-              <AccommodationAccessList/>
-              <AccommodationFacilityList/>
-              <BookingProcessFacilityList/>
-              <CouchetteFacilityList/>
-              <LuggageCarriageFacilityList/>
-              <ServiceReservationFacilityList/>
-              <UicProductCharacteristicList/>
             </ServiceFacilitySet>
             <ServiceFacilitySet id="es:sfs_firstClassCarriage" version="any">
               <Description>First class facilities</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
               <CateringFacilityList>mealAtSeat</CateringFacilityList>
-              <FamilyFacilityList/>
               <FareClasses>firstClass</FareClasses>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
-              <MobilityFacilityList/>
-              <NuisanceFacilityList/>
               <PassengerCommsFacilityList>powerSupplySockets</PassengerCommsFacilityList>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
               <SanitaryFacilityList>toilet</SanitaryFacilityList>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <VehicleAccessFacilityList/>
-              <AccommodationAccessList/>
               <AccommodationFacilityList>seating</AccommodationFacilityList>
-              <BookingProcessFacilityList/>
-              <CouchetteFacilityList/>
-              <LuggageCarriageFacilityList/>
-              <ServiceReservationFacilityList/>
-              <UicProductCharacteristicList/>
             </ServiceFacilitySet>
             <ServiceFacilitySet id="es:sfs_firstAndDisabledCarriage" version="any">
               <Description>First class facilities</Description>
-              <AccessibilityInfoFacilityList/>
-              <AssistanceFacilityList/>
-              <AccessibilityToolList/>
-              <CarServiceFacilityList/>
               <CateringFacilityList>mealAtSeat</CateringFacilityList>
-              <FamilyFacilityList/>
               <FareClasses>firstClass</FareClasses>
-              <MealFacilityList/>
-              <MedicalFacilityList/>
               <MobilityFacilityList>suitableForWheelchairs</MobilityFacilityList>
-              <NuisanceFacilityList/>
               <PassengerCommsFacilityList>powerSupplySockets</PassengerCommsFacilityList>
-              <PassengerInformationFacilityList/>
-              <RetailFacilityList/>
-              <SafetyFacilityList/>
               <SanitaryFacilityList>wheelChairAccessToilet</SanitaryFacilityList>
-              <TicketingFacilityList/>
-              <TicketingServiceFacilityList/>
-              <VehicleAccessFacilityList/>
-              <AccommodationAccessList/>
               <AccommodationFacilityList>seating specialSeating</AccommodationFacilityList>
-              <BookingProcessFacilityList/>
-              <CouchetteFacilityList/>
-              <LuggageCarriageFacilityList/>
-              <ServiceReservationFacilityList/>
-              <UicProductCharacteristicList/>
             </ServiceFacilitySet>
           </serviceFacilitySets>
           <notices>
@@ -11262,7 +10769,6 @@
                   <TrainElement id="est:trne_LP01_01" version="any">
                     <Name>Power Unit</Name>
                     <TrainElementType>engine</TrainElementType>
-                    <FareClasses/>
                   </TrainElement>
                 </TrainComponent>
                 <TrainComponent id="est:TRNCMP_LP01_C01" version="any" order="2">
@@ -11294,7 +10800,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -11328,7 +10833,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -11362,7 +10866,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>2</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -11381,32 +10884,7 @@
                     <facilities>
                       <ServiceFacilitySetRef version="any" ref="es:sfs_standardCarriage"/>
                       <ServiceFacilitySet id="est:TRNCMP_LP01_C04" version="any">
-                        <AccessibilityInfoFacilityList/>
-                        <AssistanceFacilityList/>
-                        <AccessibilityToolList/>
-                        <CarServiceFacilityList/>
-                        <CateringFacilityList/>
-                        <FamilyFacilityList/>
-                        <FareClasses/>
-                        <MealFacilityList/>
-                        <MedicalFacilityList/>
-                        <MobilityFacilityList/>
-                        <NuisanceFacilityList/>
                         <PassengerCommsFacilityList>telephone</PassengerCommsFacilityList>
-                        <PassengerInformationFacilityList/>
-                        <RetailFacilityList/>
-                        <SafetyFacilityList/>
-                        <SanitaryFacilityList/>
-                        <TicketingFacilityList/>
-                        <TicketingServiceFacilityList/>
-                        <VehicleAccessFacilityList/>
-                        <AccommodationAccessList/>
-                        <AccommodationFacilityList/>
-                        <BookingProcessFacilityList/>
-                        <CouchetteFacilityList/>
-                        <LuggageCarriageFacilityList/>
-                        <ServiceReservationFacilityList/>
-                        <UicProductCharacteristicList/>
                       </ServiceFacilitySet>
                     </facilities>
                     <equipments>
@@ -11424,7 +10902,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -11443,32 +10920,7 @@
                     <facilities>
                       <ServiceFacilitySetRef version="any" ref="es:sfs_standardCarriage"/>
                       <ServiceFacilitySet id="est:TRNCMP_LP01_C05" version="any">
-                        <AccessibilityInfoFacilityList/>
-                        <AssistanceFacilityList/>
-                        <AccessibilityToolList/>
-                        <CarServiceFacilityList/>
-                        <CateringFacilityList/>
-                        <FamilyFacilityList/>
-                        <FareClasses/>
-                        <MealFacilityList/>
-                        <MedicalFacilityList/>
-                        <MobilityFacilityList/>
-                        <NuisanceFacilityList/>
                         <PassengerCommsFacilityList>powerSupplySockets</PassengerCommsFacilityList>
-                        <PassengerInformationFacilityList/>
-                        <RetailFacilityList/>
-                        <SafetyFacilityList/>
-                        <SanitaryFacilityList/>
-                        <TicketingFacilityList/>
-                        <TicketingServiceFacilityList/>
-                        <VehicleAccessFacilityList/>
-                        <AccommodationAccessList/>
-                        <AccommodationFacilityList/>
-                        <BookingProcessFacilityList/>
-                        <CouchetteFacilityList/>
-                        <LuggageCarriageFacilityList/>
-                        <ServiceReservationFacilityList/>
-                        <UicProductCharacteristicList/>
                       </ServiceFacilitySet>
                     </facilities>
                     <equipments>
@@ -11486,7 +10938,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>2</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -11505,32 +10956,7 @@
                     </PassengerCapacity>
                     <facilities>
                       <ServiceFacilitySet id="est:TRNCMP_LP01_C06" version="any">
-                        <AccessibilityInfoFacilityList/>
-                        <AssistanceFacilityList/>
-                        <AccessibilityToolList/>
-                        <CarServiceFacilityList/>
-                        <CateringFacilityList/>
-                        <FamilyFacilityList/>
-                        <FareClasses/>
-                        <MealFacilityList/>
-                        <MedicalFacilityList/>
-                        <MobilityFacilityList/>
-                        <NuisanceFacilityList/>
-                        <PassengerCommsFacilityList/>
-                        <PassengerInformationFacilityList/>
-                        <RetailFacilityList/>
-                        <SafetyFacilityList/>
-                        <SanitaryFacilityList/>
-                        <TicketingFacilityList/>
-                        <TicketingServiceFacilityList/>
-                        <VehicleAccessFacilityList/>
-                        <AccommodationAccessList/>
-                        <AccommodationFacilityList/>
-                        <BookingProcessFacilityList/>
-                        <CouchetteFacilityList/>
                         <LuggageCarriageFacilityList>luggageRacks</LuggageCarriageFacilityList>
-                        <ServiceReservationFacilityList/>
-                        <UicProductCharacteristicList/>
                       </ServiceFacilitySet>
                     </facilities>
                   </TrainElement>
@@ -11564,7 +10990,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -11583,32 +11008,8 @@
                     <facilities>
                       <ServiceFacilitySetRef version="any" ref="es:sfs_firstClassCarriage"/>
                       <ServiceFacilitySet id="est:TRNCMP_LP01_C08" version="any">
-                        <AccessibilityInfoFacilityList/>
-                        <AssistanceFacilityList/>
-                        <AccessibilityToolList/>
-                        <CarServiceFacilityList/>
-                        <CateringFacilityList/>
-                        <FamilyFacilityList/>
-                        <FareClasses/>
-                        <MealFacilityList/>
-                        <MedicalFacilityList/>
-                        <MobilityFacilityList/>
-                        <NuisanceFacilityList/>
                         <PassengerCommsFacilityList>telephone</PassengerCommsFacilityList>
-                        <PassengerInformationFacilityList/>
-                        <RetailFacilityList/>
-                        <SafetyFacilityList/>
-                        <SanitaryFacilityList/>
-                        <TicketingFacilityList/>
-                        <TicketingServiceFacilityList/>
-                        <VehicleAccessFacilityList/>
-                        <AccommodationAccessList/>
-                        <AccommodationFacilityList/>
-                        <BookingProcessFacilityList/>
-                        <CouchetteFacilityList/>
                         <LuggageCarriageFacilityList>baggageVan</LuggageCarriageFacilityList>
-                        <ServiceReservationFacilityList/>
-                        <UicProductCharacteristicList/>
                       </ServiceFacilitySet>
                     </facilities>
                     <equipments>
@@ -11626,7 +11027,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -11646,32 +11046,7 @@
                     <facilities>
                       <ServiceFacilitySetRef version="any" ref="es:sfs_firstAndDisabledCarriage"/>
                       <ServiceFacilitySet id="est:SFS:TRNCMP_LP01_c09" version="any">
-                        <AccessibilityInfoFacilityList/>
-                        <AssistanceFacilityList/>
-                        <AccessibilityToolList/>
-                        <CarServiceFacilityList/>
-                        <CateringFacilityList/>
-                        <FamilyFacilityList/>
-                        <FareClasses/>
-                        <MealFacilityList/>
-                        <MedicalFacilityList/>
-                        <MobilityFacilityList/>
-                        <NuisanceFacilityList/>
-                        <PassengerCommsFacilityList/>
-                        <PassengerInformationFacilityList/>
-                        <RetailFacilityList/>
-                        <SafetyFacilityList/>
-                        <SanitaryFacilityList/>
-                        <TicketingFacilityList/>
-                        <TicketingServiceFacilityList/>
-                        <VehicleAccessFacilityList/>
-                        <AccommodationAccessList/>
-                        <AccommodationFacilityList/>
-                        <BookingProcessFacilityList/>
-                        <CouchetteFacilityList/>
                         <LuggageCarriageFacilityList>baggageVan</LuggageCarriageFacilityList>
-                        <ServiceReservationFacilityList/>
-                        <UicProductCharacteristicList/>
                       </ServiceFacilitySet>
                     </facilities>
                     <equipments>
@@ -11689,7 +11064,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                         <WheelchairTurningCircle>2.0</WheelchairTurningCircle>
                       </SanitaryEquipment>
                       <WheelchairVehicleEquipment id="est:WheelchairVehicleEquipment:sfe_veheq_trne_LP01_10_02" version="any">
@@ -11738,7 +11112,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                         <WheelchairTurningCircle>2.0</WheelchairTurningCircle>
                       </SanitaryEquipment>
                       <WheelchairVehicleEquipment id="est:WheelchairVehicleEquipment:sfe_veheq_trne_LP01_11_02" version="any">
@@ -11772,32 +11145,7 @@
                     <facilities>
                       <ServiceFacilitySetRef version="any" ref="es:sfs_firstClassCarriage"/>
                       <ServiceFacilitySet id="est:TRNCMP_LP01_C11" version="any">
-                        <AccessibilityInfoFacilityList/>
-                        <AssistanceFacilityList/>
-                        <AccessibilityToolList/>
-                        <CarServiceFacilityList/>
-                        <CateringFacilityList/>
-                        <FamilyFacilityList/>
-                        <FareClasses/>
-                        <MealFacilityList/>
-                        <MedicalFacilityList/>
-                        <MobilityFacilityList/>
-                        <NuisanceFacilityList/>
                         <PassengerCommsFacilityList>telephone</PassengerCommsFacilityList>
-                        <PassengerInformationFacilityList/>
-                        <RetailFacilityList/>
-                        <SafetyFacilityList/>
-                        <SanitaryFacilityList/>
-                        <TicketingFacilityList/>
-                        <TicketingServiceFacilityList/>
-                        <VehicleAccessFacilityList/>
-                        <AccommodationAccessList/>
-                        <AccommodationFacilityList/>
-                        <BookingProcessFacilityList/>
-                        <CouchetteFacilityList/>
-                        <LuggageCarriageFacilityList/>
-                        <ServiceReservationFacilityList/>
-                        <UicProductCharacteristicList/>
                       </ServiceFacilitySet>
                     </facilities>
                     <equipments>
@@ -11815,7 +11163,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -11849,7 +11196,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -11868,32 +11214,7 @@
                     </PassengerCapacity>
                     <facilities>
                       <ServiceFacilitySet id="est:TRNCMP_LP01_C13" version="any">
-                        <AccessibilityInfoFacilityList/>
-                        <AssistanceFacilityList/>
-                        <AccessibilityToolList/>
-                        <CarServiceFacilityList/>
-                        <CateringFacilityList/>
-                        <FamilyFacilityList/>
-                        <FareClasses/>
-                        <MealFacilityList/>
-                        <MedicalFacilityList/>
-                        <MobilityFacilityList/>
-                        <NuisanceFacilityList/>
-                        <PassengerCommsFacilityList/>
-                        <PassengerInformationFacilityList/>
-                        <RetailFacilityList/>
-                        <SafetyFacilityList/>
-                        <SanitaryFacilityList/>
-                        <TicketingFacilityList/>
-                        <TicketingServiceFacilityList/>
-                        <VehicleAccessFacilityList/>
-                        <AccommodationAccessList/>
-                        <AccommodationFacilityList/>
-                        <BookingProcessFacilityList/>
-                        <CouchetteFacilityList/>
                         <LuggageCarriageFacilityList>luggageRacks</LuggageCarriageFacilityList>
-                        <ServiceReservationFacilityList/>
-                        <UicProductCharacteristicList/>
                       </ServiceFacilitySet>
                     </facilities>
                   </TrainElement>
@@ -11912,32 +11233,7 @@
                     <facilities>
                       <ServiceFacilitySetRef version="any" ref="es:sfs_standardCarriage"/>
                       <ServiceFacilitySet id="est:TRNCMP_LP01_C14" version="any">
-                        <AccessibilityInfoFacilityList/>
-                        <AssistanceFacilityList/>
-                        <AccessibilityToolList/>
-                        <CarServiceFacilityList/>
-                        <CateringFacilityList/>
-                        <FamilyFacilityList/>
-                        <FareClasses/>
-                        <MealFacilityList/>
-                        <MedicalFacilityList/>
-                        <MobilityFacilityList/>
-                        <NuisanceFacilityList/>
                         <PassengerCommsFacilityList>powerSupplySockets</PassengerCommsFacilityList>
-                        <PassengerInformationFacilityList/>
-                        <RetailFacilityList/>
-                        <SafetyFacilityList/>
-                        <SanitaryFacilityList/>
-                        <TicketingFacilityList/>
-                        <TicketingServiceFacilityList/>
-                        <VehicleAccessFacilityList/>
-                        <AccommodationAccessList/>
-                        <AccommodationFacilityList/>
-                        <BookingProcessFacilityList/>
-                        <CouchetteFacilityList/>
-                        <LuggageCarriageFacilityList/>
-                        <ServiceReservationFacilityList/>
-                        <UicProductCharacteristicList/>
                       </ServiceFacilitySet>
                     </facilities>
                     <equipments>
@@ -11955,7 +11251,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>2</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -11974,32 +11269,7 @@
                     <facilities>
                       <ServiceFacilitySetRef version="any" ref="es:sfs_standardCarriage"/>
                       <ServiceFacilitySet id="est:TRNCMP_LP01_C15" version="any">
-                        <AccessibilityInfoFacilityList/>
-                        <AssistanceFacilityList/>
-                        <AccessibilityToolList/>
-                        <CarServiceFacilityList/>
-                        <CateringFacilityList/>
-                        <FamilyFacilityList/>
-                        <FareClasses/>
-                        <MealFacilityList/>
-                        <MedicalFacilityList/>
-                        <MobilityFacilityList/>
-                        <NuisanceFacilityList/>
                         <PassengerCommsFacilityList>telephone</PassengerCommsFacilityList>
-                        <PassengerInformationFacilityList/>
-                        <RetailFacilityList/>
-                        <SafetyFacilityList/>
-                        <SanitaryFacilityList/>
-                        <TicketingFacilityList/>
-                        <TicketingServiceFacilityList/>
-                        <VehicleAccessFacilityList/>
-                        <AccommodationAccessList/>
-                        <AccommodationFacilityList/>
-                        <BookingProcessFacilityList/>
-                        <CouchetteFacilityList/>
-                        <LuggageCarriageFacilityList/>
-                        <ServiceReservationFacilityList/>
-                        <UicProductCharacteristicList/>
                       </ServiceFacilitySet>
                     </facilities>
                     <equipments>
@@ -12017,7 +11287,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -12051,7 +11320,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>2</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -12085,7 +11353,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -12119,7 +11386,6 @@
                         <Gender>both</Gender>
                         <SanitaryFacilityList>toilet</SanitaryFacilityList>
                         <NumberOfToilets>1</NumberOfToilets>
-                        <PaymentMethods/>
                       </SanitaryEquipment>
                     </equipments>
                   </TrainElement>
@@ -12129,7 +11395,6 @@
                   <TrainElement id="est:trne_LP01_20" version="any">
                     <Name>Power Unit</Name>
                     <TrainElementType>engine</TrainElementType>
-                    <FareClasses/>
                   </TrainElement>
                 </TrainComponent>
               </components>

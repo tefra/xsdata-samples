@@ -49,8 +49,6 @@
             <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
           </prerequisites>
           <Network id="mybus:DTA" version="any">
-            <PaymentMethods/>
-            <PurchaseMoment/>
             <OperatorRef version="any" ref="mybus:DTA"/>
             <tariffZones>
               <TariffZoneRef version="any" ref="myfares:1"/>
@@ -187,7 +185,6 @@
                 <DistributionAssignment id="myfares:PeriodPass-SOP@p-ticket@atStop" version="10" order="1">
                   <Name>Onboard</Name>
                   <Description>Pay for ticket onboard</Description>
-                  <DistributionRights/>
                   <DistributionChannelType>atStop</DistributionChannelType>
                   <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
                   <PaymentMethods>cashAndCard</PaymentMethods>
@@ -196,7 +193,6 @@
                 <DistributionAssignment id="myfares:PeriodPass-SOP@p-ticket@onBoard" version="1.0" order="2">
                   <Name>Onboard</Name>
                   <Description>Pay for ticket onboard</Description>
-                  <DistributionRights/>
                   <DistributionChannelType>onBoard</DistributionChannelType>
                   <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
                   <PaymentMethods>cashAndCard</PaymentMethods>
@@ -215,9 +211,7 @@
               <distributionAssignments>
                 <DistributionAssignment id="myfares:PeriodPass-SOP@m-ticket@online" version="10" order="1">
                   <Name>Online</Name>
-                  <DistributionRights/>
                   <DistributionChannelType>mobileDevice</DistributionChannelType>
-                  <TicketingServiceFacilityList/>
                   <PaymentMethods>cardsOnly</PaymentMethods>
                   <FulfilmentMethodRef ref="ntx:mobile_app" versionRef="ntx:v1.0"/>
                 </DistributionAssignment>
@@ -341,11 +335,9 @@
               <values>
                 <TypeOfTravelDocument id="myfares:printed_ticket" version="any">
                   <Name>Paper ticket</Name>
-                  <MachineReadable/>
                 </TypeOfTravelDocument>
                 <TypeOfTravelDocument id="myfares:mobile_app" version="any">
                   <Name>Mobile app</Name>
-                  <MachineReadable/>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
@@ -367,8 +359,6 @@
           <organisations>
             <Operator id="mybus:DTA" version="any">
               <Name>Demo Transit Authority</Name>
-              <OrganisationType/>
-              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

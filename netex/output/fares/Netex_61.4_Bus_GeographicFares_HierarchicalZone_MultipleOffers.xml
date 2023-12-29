@@ -49,8 +49,6 @@
             <ResourceFrameRef version="1.0" ref="mybus:DTA@Common_Resources"/>
           </prerequisites>
           <Network id="mybus:DTA" version="any">
-            <PaymentMethods/>
-            <PurchaseMoment/>
             <OperatorRef version="any" ref="mybus:DTA"/>
             <tariffZones>
               <TariffZoneRef version="any" ref="mybus:A"/>
@@ -383,11 +381,9 @@
               <values>
                 <TypeOfTravelDocument id="myfares:printed_ticket" version="any">
                   <Name>Paper ticket</Name>
-                  <MachineReadable/>
                 </TypeOfTravelDocument>
                 <TypeOfTravelDocument id="myfares:mobile_app" version="any">
                   <Name>Mobile app</Name>
-                  <MachineReadable/>
                 </TypeOfTravelDocument>
               </values>
             </ValueSet>
@@ -409,8 +405,6 @@
           <organisations>
             <Operator id="mybus:DTA" version="any">
               <Name>Demo Transit Authority</Name>
-              <OrganisationType/>
-              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>

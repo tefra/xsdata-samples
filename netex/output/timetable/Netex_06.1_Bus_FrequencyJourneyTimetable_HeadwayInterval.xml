@@ -313,8 +313,6 @@
               <ShortName>Line 24o</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>24o</PublicCode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
           </lines>
           <scheduledStopPoints>
@@ -400,10 +398,7 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

@@ -94,12 +94,10 @@
                   </AccessibilityLimitation>
                 </limitations>
               </AccessibilityAssessment>
-              <AccessModes/>
               <TopographicPlaceView>
                 <TopographicPlaceRef version="any" ref="detop:TP_0032A"/>
               </TopographicPlaceView>
               <TransportMode>bus</TransportMode>
-              <OtherTransportModes/>
               <StopPlaceType>onstreetBus</StopPlaceType>
               <quays>
                 <Quay id="mybus:Q_SP_0751A_1" created="2010-04-17T09:30:47Z" version="01">
@@ -114,18 +112,15 @@
                   <RoadAddress id="mybus:Rad_SP001A_01" version="any">
                     <RoadName>Museumstrasse</RoadName>
                   </RoadAddress>
-                  <AccessModes/>
                   <CrossRoad lang="de">Kohlstrasse</CrossRoad>
                   <Landmark lang="de">Stadtmuseum</Landmark>
                   <Covered>outdoors</Covered>
                   <Lighting>wellLit</Lighting>
                   <placeEquipments>
                     <PassengerInformationEquipment id="mybus:Rad_SP001A_01" version="any">
-                      <PassengerInformationFacilityList/>
                       <AccessibilityInfoFacilityList>audioForHearingImpaired visualDisplays</AccessibilityInfoFacilityList>
                     </PassengerInformationEquipment>
                   </placeEquipments>
-                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label lang="de">A</Label>
@@ -145,18 +140,15 @@
                   <RoadAddress id="mybus:Rad_Q_SP_0751A_2" version="any">
                     <RoadName>Museumstrasse</RoadName>
                   </RoadAddress>
-                  <AccessModes/>
                   <CrossRoad lang="de">Kohlstrasse</CrossRoad>
                   <Landmark lang="de">Stadtmuseum</Landmark>
                   <Covered>outdoors</Covered>
                   <Lighting>wellLit</Lighting>
                   <placeEquipments>
                     <PassengerInformationEquipment id="mybus:Q_SP_0751A_2" version="any">
-                      <PassengerInformationFacilityList/>
                       <AccessibilityInfoFacilityList>audioForHearingImpaired visualDisplays</AccessibilityInfoFacilityList>
                     </PassengerInformationEquipment>
                   </placeEquipments>
-                  <OtherTransportModes/>
                   <BoardingUse>true</BoardingUse>
                   <AlightingUse>true</AlightingUse>
                   <Label lang="de">B</Label>
@@ -176,7 +168,6 @@
             <ScheduledStopPoint id="jqx:SSP0021A" created="2000-12-17T09:30:47Z" changed="2002-12-17T09:30:47Z" version="032">
               <Name>Stadtmuseum</Name>
               <Label>Stadmuseum Zum Bahnhof</Label>
-              <VehicleModes/>
             </ScheduledStopPoint>
           </scheduledStopPoints>
           <stopAssignments>

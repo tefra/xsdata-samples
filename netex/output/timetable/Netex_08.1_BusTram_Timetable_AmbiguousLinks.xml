@@ -64,16 +64,12 @@
               <ShortName>Line 24</ShortName>
               <TransportMode>bus</TransportMode>
               <PublicCode>24</PublicCode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="mybus:LN_46" version="any">
               <Name>Line 46 Bravo to Quebec Tram</Name>
               <ShortName>Line 46</ShortName>
               <TransportMode>tram</TransportMode>
               <PublicCode>46</PublicCode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
           </lines>
           <destinationDisplays>
@@ -1030,10 +1026,7 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -1042,10 +1035,7 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -1054,10 +1044,7 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Saturday Sunday</DaysOfWeek>
-                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>
@@ -1066,10 +1053,7 @@
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth/>
                   <HolidayTypes>AnyHoliday</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

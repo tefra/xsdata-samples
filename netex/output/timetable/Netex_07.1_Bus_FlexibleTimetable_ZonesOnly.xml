@@ -196,12 +196,8 @@ The Calendar is shown coded as
                 <BusSubmode>demandAndResponseBus</BusSubmode>
               </TransportSubmode>
               <PublicCode>24</PublicCode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
               <FlexibleLineType>flexibleAreasOnly</FlexibleLineType>
-              <BookingMethods/>
               <BookingAccess>public</BookingAccess>
-              <BuyWhen/>
               <LatestBookingTime>16:30:00</LatestBookingTime>
               <MinimumBookingPeriod>PT30M</MinimumBookingPeriod>
             </FlexibleLine>
@@ -260,10 +256,7 @@ The Calendar is shown coded as
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
-                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </DayType>

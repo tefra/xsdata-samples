@@ -275,7 +275,6 @@
                         <Description>Adult  - if not eligible for Pupil or School </Description>
                         <TypeOfConcessionRef version="any" ref="eura:adult"/>
                         <MinimumAge>10</MinimumAge>
-                        <ProofRequired/>
                         <companionProfiles>
                           <CompanionProfile id="tfc:TFC@Tariff@General@eligibilities@adult@companion@infant" version="any">
                             <Name>Infants  under 6 are free  </Name>
@@ -307,7 +306,6 @@
                         <TypeOfConcessionRef version="any" ref="eura:infant"/>
                         <MinimumAge>0</MinimumAge>
                         <MaximumAge>6</MaximumAge>
-                        <ProofRequired/>
                         <DiscountBasis>free</DiscountBasis>
                         <companionProfiles>
                           <CompanionProfile id="tfc:TFC@Tariff@General@eligibilities@infant@companion" version="any">
@@ -337,7 +335,6 @@
                         <TypeOfConcessionRef version="any" ref="eura:child"/>
                         <MinimumAge>5</MinimumAge>
                         <MaximumAge>10</MaximumAge>
-                        <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
                       <UserProfile id="tfc:TFC@Tariff@General@eligibilities@youth" version="any">
@@ -346,7 +343,6 @@
                         <TypeOfConcessionRef version="any" ref="eura:youth"/>
                         <MinimumAge>10</MinimumAge>
                         <MaximumAge>24</MaximumAge>
-                        <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
                       <UserProfile id="tfc:TFC@Tariff@General@eligibilities@student" version="any">
@@ -368,7 +364,6 @@
                         <Url>https://www.transferoviarcalatori.ro/tarife/facilitati.html</Url>
                         <DiscountingRuleRef version="any" ref="tfc:TFC@Common@rate@student"/>
                         <TypeOfConcessionRef version="any" ref="eura:student"/>
-                        <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
                       <UserProfile id="tfc:TFC@Tariff@General@eligibilities@university_student" version="any">
@@ -389,7 +384,6 @@
                         <Url>https://www.transferoviarcalatori.ro/tarife/facilitati.html</Url>
                         <DiscountingRuleRef version="any" ref="tfc:TFC@Common@rate@student"/>
                         <TypeOfConcessionRef version="any" ref="eura:student"/>
-                        <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
                       <UserProfile id="tfc:TFC@Tariff@General@eligibilities@senior" version="any">
@@ -411,7 +405,6 @@
                         <DiscountingRuleRef version="any" ref="tfc:TFC@Common@rate@concession"/>
                         <TypeOfConcessionRef version="any" ref="eura:senior"/>
                         <MinimumAge>70</MinimumAge>
-                        <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
                       <UserProfile id="tfc:TFC@Tariff@General@eligibilities@disabled" version="any">
@@ -574,7 +567,6 @@ Free travel tickets for all train categories, for the booking fee, 2nd class, as
                         <Url>https://www.transferoviarcalatori.ro/tarife/facilitati.html</Url>
                         <DiscountingRuleRef version="any" ref="tfc:TFC@Common@rate@disabled"/>
                         <TypeOfConcessionRef version="any" ref="eura:statutory"/>
-                        <ProofRequired/>
                         <DiscountBasis>free</DiscountBasis>
                       </UserProfile>
                       <UserProfile id="tfc:TFC@Tariff@General@eligibilities@member_of_parliament" version="any">
@@ -594,7 +586,6 @@ Free travel tickets for all train categories, for the booking fee, 2nd class, as
                         <Name>Animal</Name>
                         <DiscountingRuleRef version="any" ref="tfc:TFC@Common@rate@concession"/>
                         <TypeOfConcessionRef version="any" ref="eura:animal"/>
-                        <ProofRequired/>
                         <DiscountBasis>discount</DiscountBasis>
                       </UserProfile>
                     </limitations>
@@ -706,19 +697,16 @@ Free travel tickets for all train categories, for the booking fee, 2nd class, as
                         <Name>Buy at least five minutes, up to 10 days before</Name>
                         <MinimumPeriodBeforeDeparture>PT3M</MinimumPeriodBeforeDeparture>
                         <MaximumPeriodBeforeDeparture>P10D</MaximumPeriodBeforeDeparture>
-                        <PurchaseMoment/>
                       </PurchaseWindow>
                       <PurchaseWindow id="tfc:TFC@Tariff@General@buy_before_10D" version="any">
                         <Name>Buy a more than 10 days before</Name>
                         <PurchaseWhen>advanceOnly</PurchaseWhen>
                         <MinimumPeriodBeforeDeparture>P10D</MinimumPeriodBeforeDeparture>
                         <MaximumPeriodBeforeDeparture>P90D</MaximumPeriodBeforeDeparture>
-                        <PurchaseMoment/>
                       </PurchaseWindow>
                       <PurchaseWindow id="tfc:TFC@Tariff@General@buy_onboard" version="any">
                         <Name>Buy on board</Name>
                         <PurchaseWhen>dayOfTravelOnly</PurchaseWhen>
-                        <PurchaseMoment/>
                       </PurchaseWindow>
                     </limitations>
                   </GenericParameterAssignment>
@@ -841,7 +829,6 @@ Tickets will be issued for the distance traveled by a single train and the conti
               <ExchangableUntilDuration>-P1D</ExchangableUntilDuration>
               <HasFee>true</HasFee>
               <RefundBasis>perOffer</RefundBasis>
-              <PaymentMethods/>
             </Exchanging>
             <Exchanging id="tfc:TFC@Common@condition@can_exchange_for_charge" version="any">
               <Name>Can Exchange</Name>
@@ -856,7 +843,6 @@ Tickets will be issued for the distance traveled by a single train and the conti
               <ExchangableFromDuration>PT1S</ExchangableFromDuration>
               <HasFee>true</HasFee>
               <RefundBasis>perOffer</RefundBasis>
-              <PaymentMethods/>
             </Exchanging>
             <Refunding id="tfc:TFC@Common@condition@can_refund" version="any">
               <Name>Can Refund</Name>
@@ -867,9 +853,6 @@ Tickets will be issued for the distance traveled by a single train and the conti
               <ExchangableUntilDuration>-P1D</ExchangableUntilDuration>
               <HasFee>true</HasFee>
               <RefundBasis>perPerson</RefundBasis>
-              <PaymentMethods/>
-              <RefundPolicy/>
-              <PaymentMethod/>
             </Refunding>
           </usageParameters>
           <distributionChannels>
@@ -880,7 +863,6 @@ Tickets will be issued for the distance traveled by a single train and the conti
 							The types of tickets that can be bought from the vending machines are: full price tickets, reduced tickets 50% students, free student tickets (based on ID created at a TFC ticket house), children tickets, subscriptions, round trip established.</Description>
               <Url>https://www.transferoviarcalatori.ro/tarife/eliberare-legitimatii-calatorie.html</Url>
               <PaymentMethods>cardsOnly</PaymentMethods>
-              <DistributionRights/>
               <distributionPoints>
                 <FareScheduledStopPointRef version="01" ref="uic:10108">Bucuresti nord</FareScheduledStopPointRef>
                 <FareScheduledStopPointRef version="01" ref="uic:50213"> Mizil</FareScheduledStopPointRef>
@@ -1338,34 +1320,26 @@ Tickets will be issued for the distance traveled by a single train and the conti
               <distributionAssignments>
                 <DistributionAssignment id="tfc:TFC@Trip_Common-GSOP@online@post" version="01" order="1">
                   <Name>On line Sales&gt;</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:online"/>
-                  <TicketingServiceFacilityList/>
                   <PaymentMethods>cardsOnly</PaymentMethods>
                   <FulfilmentMethodRef version="01" ref="eura:post"/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tfc:TFC@Trip_Common-GSOP@ticket_machine@collect" version="01" order="2">
                   <Name>On line Sales&gt;</Name>
                   <Description> 4. From ticket vending machines installed in Gara de Nord (near the TFC Ticket Office), Mizil station (waiting room), Braila station  and Oradea station . Payment is made exclusively with the bank card. The types of tickets that can be bought from the vending machines are: full price tickets, reduced tickets 50% students, free student tickets (based on ID created at a TFC ticket house), children tickets, subscriptions, round trip established.</Description>
-                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="tfc:TFC@Common@self_service_ticket_machine"/>
-                  <TicketingServiceFacilityList/>
                   <PaymentMethods>cardsOnly</PaymentMethods>
                   <FulfilmentMethodRef version="01" ref="eura:collect_from_machine"/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tfc:TFC@Trip_Common-GSOP@at_counter@issue" version="01" order="3">
                   <Name>At Counter  Sales&gt;</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:at_counter"/>
-                  <TicketingServiceFacilityList/>
                   <PaymentMethods>cashAndCard</PaymentMethods>
                   <FulfilmentMethodRef version="01" ref="eura:collect_at_counter"/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tfc:TFC@Trip_Common-GSOP@onboard@issue" version="01" order="4">
                   <Name>Purchase on board</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:onboard"/>
-                  <TicketingServiceFacilityList/>
                   <PaymentMethods>cash</PaymentMethods>
                   <FulfilmentMethodRef version="01" ref="eura:collect_on_board"/>
                 </DistributionAssignment>
@@ -5491,17 +5465,11 @@ Dear travelers, we inform you that no reservations are made at this time. Thank 
               <distributionAssignments>
                 <DistributionAssignment id="tfc:TFC@Season_pass-SOP@online" version="01" order="1">
                   <Name>On line Sales&gt;</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:online"/>
-                  <TicketingServiceFacilityList/>
-                  <PaymentMethods/>
                 </DistributionAssignment>
                 <DistributionAssignment id="tfc:TFC@Season_pass-SOP@counter" version="01" order="2">
                   <Name>At Counter  Sales&gt;</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:online"/>
-                  <TicketingServiceFacilityList/>
-                  <PaymentMethods/>
                 </DistributionAssignment>
               </distributionAssignments>
               <salesOfferPackageElements>
@@ -6602,10 +6570,7 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <distributionAssignments>
                 <DistributionAssignment id="tfc:TFC@Discount@Pass@Statutory_Right+Travel-SOP@counter" version="01" order="2">
                   <Name>At Counter  Sales&gt;</Name>
-                  <DistributionRights/>
                   <DistributionChannelRef version="01" ref="eura:online"/>
-                  <TicketingServiceFacilityList/>
-                  <PaymentMethods/>
                 </DistributionAssignment>
               </distributionAssignments>
               <salesOfferPackageElements>
@@ -6647,8 +6612,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
             </members>
             <TransportMode>rail</TransportMode>
             <GroupOfLinesType>marketing</GroupOfLinesType>
-            <PaymentMethods/>
-            <PurchaseMoment/>
             <OperatorRef version="any" ref="uic:3181">TFC</OperatorRef>
           </Network>
           <lines>
@@ -6665,8 +6628,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Mauve</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Cluj_Napoca+Oradea" version="01">
               <Name lang="ro">Cluj Napoca - Oradea</Name>
@@ -6676,8 +6637,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Green</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Titan_South_hm+Oltenita" version="01">
               <alternativeTexts>
@@ -6690,8 +6649,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Green</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Buzau+Nehoiasu" version="01">
               <Name lang="ro">Buzau - Nehoiasu</Name>
@@ -6699,8 +6656,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Light Blue</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Galati+Barlad" version="01">
               <Name lang="ro">Galati - Barlad</Name>
@@ -6708,8 +6663,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Pale Green</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Ploiesti_South+Slanic" version="01">
               <alternativeTexts>
@@ -6722,8 +6675,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Dark Brown</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Bucharest_North+Galati" version="01">
               <alternativeTexts>
@@ -6736,8 +6687,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Scarlet</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Ploiesti_South+Maneciu" version="01">
               <alternativeTexts>
@@ -6747,8 +6696,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               </alternativeTexts>
               <Name lang="ro">Ploiesti Sud - Maneciu</Name>
               <TransportMode>rail</TransportMode>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Bucharest_North+Titu+Targoviste" version="01">
               <alternativeTexts>
@@ -6761,8 +6708,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Scarlet</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Ploiesti_South+Targoviste" version="01">
               <alternativeTexts>
@@ -6775,8 +6720,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Brown</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Târgovişte+Pietroşiţa" version="01">
               <Name lang="ro">Târgovişte - Pietroşiţa</Name>
@@ -6784,8 +6727,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Mauve</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
             <Line id="tfc:TFC@Lines@Roşiori+Costeşti" version="01">
               <alternativeTexts>
@@ -6798,8 +6739,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Presentation>
                 <ColourName>Tan</ColourName>
               </Presentation>
-              <PaymentMethods/>
-              <PurchaseMoment/>
             </Line>
           </lines>
         </ServiceFrame>
@@ -7472,7 +7411,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                 <Fax>021.310.43.88</Fax>
                 <Url>http://www.transferoviarcalatori.ro</Url>
               </ContactDetails>
-              <OrganisationType/>
               <CountryRef ref="ro"/>
               <Address>
                 <HouseNumber>nr. 2-4</HouseNumber>
@@ -7481,7 +7419,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
                 <PostCode>ap 1 et 1 sector 1 </PostCode>
                 <Province>Judeţul Cluj</Province>
               </Address>
-              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>
@@ -7498,10 +7435,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Everyday</DaysOfWeek>
-                  <WeeksOfMonth/>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -7510,22 +7443,14 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <properties>
                 <PropertyOfDay>
                   <DaysOfWeek>Weekdays</DaysOfWeek>
-                  <WeeksOfMonth/>
                   <HolidayTypes>NotHoliday</HolidayTypes>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
             <FareDayType id="tfc:January@1" version="01">
               <properties>
                 <PropertyOfDay>
-                  <DaysOfWeek/>
-                  <WeeksOfMonth/>
                   <DayOfYear>--01-01</DayOfYear>
-                  <HolidayTypes/>
-                  <Seasons/>
-                  <Tides/>
                 </PropertyOfDay>
               </properties>
             </FareDayType>
@@ -8062,7 +7987,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <Name>National Rail Stations</Name>
               <roles>
                 <ResponsibilityRoleAssignment id="uic_station_management:0070" version="any">
-                  <DataRoleType/>
                   <StakeholderRoleType>Operation</StakeholderRoleType>
                   <ResponsibleOrganisationRef version="any" ref="uic_station_management:0070"/>
                   <ResponsibleAreaRef ref="atoc:uk">TODO</ResponsibleAreaRef>
@@ -8341,36 +8265,30 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               <PublicCode>ATOC</PublicCode>
               <Name>Association of Train Operating Companies Limited</Name>
               <ShortName>UIC</ShortName>
-              <OrganisationType/>
               <ValidityPeriod>
                 <FromDate>2001-01-01T00:00:00Z</FromDate>
                 <ToDate>2020-01-01T00:00:00Z</ToDate>
               </ValidityPeriod>
               <CountryRef ref="uk" refPrincipality="GB-UKM"/>
-              <OperatorActivities/>
             </Operator>
             <Operator id="uic_station_management:0070" version="any">
               <PublicCode>NR</PublicCode>
               <Name>Network Rail Limited</Name>
               <ShortName>Network Rail</ShortName>
-              <OrganisationType/>
               <ValidityPeriod>
                 <FromDate>2003-09-22T00:00:00Z</FromDate>
                 <ToDate>2020-01-01T00:00:00Z</ToDate>
               </ValidityPeriod>
               <CountryRef ref="uk" refPrincipality="GB-UKM"/>
-              <OperatorActivities/>
             </Operator>
             <Operator id="uic:0003" version="any">
               <PublicCode>UIC</PublicCode>
               <Name>International Union of Railways</Name>
               <ShortName>UIC</ShortName>
-              <OrganisationType/>
               <ValidityPeriod>
                 <FromDate>2001-01-01T00:00:00Z</FromDate>
                 <ToDate>2020-01-01T00:00:00Z</ToDate>
               </ValidityPeriod>
-              <OperatorActivities/>
             </Operator>
           </organisations>
         </ResourceFrame>
@@ -8422,14 +8340,10 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               </alternativeNames>
               <DistributionChannelType>online</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:self_service_ticket_machine" version="01">
               <ShortName>Automatic Ticket Machine</ShortName>
               <DistributionChannelType>atStop</DistributionChannelType>
-              <PaymentMethods/>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:at_counter" version="01">
               <ShortName>Ticket counter sale</ShortName>
@@ -8443,8 +8357,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               </alternativeNames>
               <DistributionChannelType>atStop</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:onboard" version="01">
               <ShortName>onboard</ShortName>
@@ -8455,36 +8367,26 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
               </alternativeNames>
               <DistributionChannelType>onBoard</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:call_centre" version="01">
               <ShortName>Call Centre</ShortName>
               <DistributionChannelType>telephone</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:travel_agent" version="01">
               <ShortName>Travel Agent</ShortName>
               <DistributionChannelType>agency</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:employee_organisation" version="01">
               <ShortName>Employee Organisation</ShortName>
               <DistributionChannelType>other</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
             </DistributionChannel>
             <DistributionChannel id="eura:statutory_organisation" version="01">
               <ShortName>Statutory Organisation</ShortName>
               <DistributionChannelType>other</DistributionChannelType>
               <IsObligatory>false</IsObligatory>
-              <PaymentMethods/>
-              <DistributionRights/>
             </DistributionChannel>
           </distributionChannels>
           <fulfilmentMethods>
@@ -8577,7 +8479,6 @@ State Secretariat for Revolutionary Issues in December 1989: : 12 free roun
             <TypeOfTravelDocument id="eura:hand_written_ticket" version="01">
               <Name>Hand written ticket </Name>
               <MediaType>paperTicket</MediaType>
-              <MachineReadable/>
             </TypeOfTravelDocument>
             <TypeOfTravelDocument id="eura:magstripe_printed_ticket" version="01">
               <Name>Printed Ticket with magnetic Stripe</Name>

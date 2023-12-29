@@ -21,13 +21,13 @@ def test_bindings(sample, xml_parser, xml_serializer, code_serializer):
     code = code_serializer.render(obj)
     xml_parser.ns_map.clear()
 
-    output.joinpath(sample).with_suffix(".py").write_text(code)
-
     expected = output.joinpath(sample)
+    expected.parent.mkdir(parents=True, exist_ok=True)
+    expected.with_suffix(".py").write_text(code)
+
     if expected.exists():
         assert expected.read_text().strip() == result.strip()
     else:
-        expected.parent.mkdir(parents=True, exist_ok=True)
         expected.write_text(result + "\n")
 
     validator.assertValid(etree.fromstring(result.encode()))
