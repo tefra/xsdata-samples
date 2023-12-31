@@ -1,9 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from .administrative_zone_ref import AdministrativeZoneRef
-from .all_vehicle_modes_of_transport_enumeration import (
-    AllVehicleModesOfTransportEnumeration,
-)
+from .all_modes_enumeration import AllModesEnumeration
 from .authority_ref import AuthorityRef
 from .codespace_assignments_rel_structure import (
     CodespaceAssignmentsRelStructure,
@@ -11,6 +9,7 @@ from .codespace_assignments_rel_structure import (
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .general_organisation_ref import GeneralOrganisationRef
 from .management_agent_ref import ManagementAgentRef
+from .online_service_operator_ref import OnlineServiceOperatorRef
 from .operator_ref import OperatorRef
 from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
@@ -37,16 +36,17 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: Optional[
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
         Union[
             RetailConsortiumRef,
-            AuthorityRef,
-            OperatorRef,
+            OnlineServiceOperatorRef,
             GeneralOrganisationRef,
             ManagementAgentRef,
             ServicedOrganisationRef,
             TravelAgentRef,
             OtherOrganisationRef,
+            AuthorityRef,
+            OperatorRef,
             OrganisationRef,
         ]
     ] = field(
@@ -60,13 +60,8 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
+                    "name": "OnlineServiceOperatorRef",
+                    "type": OnlineServiceOperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -92,6 +87,16 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
                 {
                     "name": "OtherOrganisationRef",
                     "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -139,7 +144,7 @@ class TransportAdministrativeZoneVersionStructure(
     class Meta:
         name = "TransportAdministrativeZone_VersionStructure"
 
-    vehicle_modes: List[AllVehicleModesOfTransportEnumeration] = field(
+    vehicle_modes: List[AllModesEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModes",
@@ -161,7 +166,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "administrativeZones_RelStructure"
 
-    administrative_zone: List[
+    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[
         Union[
             AdministrativeZoneRef,
             TransportAdministrativeZone,

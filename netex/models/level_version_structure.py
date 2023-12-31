@@ -10,6 +10,7 @@ from .point_of_interest_ref import PointOfInterestRef
 from .service_site_ref import ServiceSiteRef
 from .site_ref import SiteRef
 from .stop_place_ref import StopPlaceRef
+from .taxi_rank_ref import TaxiRankRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -77,8 +78,9 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    site_ref: Optional[
+    stop_place_ref_or_site_ref: Optional[
         Union[
+            TaxiRankRef,
             StopPlaceRef,
             ParkingRef,
             PointOfInterestRef,
@@ -90,6 +92,11 @@ class LevelVersionStructure(DataManagedObjectStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "TaxiRankRef",
+                    "type": TaxiRankRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "StopPlaceRef",
                     "type": StopPlaceRef,

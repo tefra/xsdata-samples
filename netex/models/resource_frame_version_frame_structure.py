@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .blacklists_in_frame_rel_structure import BlacklistsInFrameRelStructure
 from .common_version_frame_structure import CommonVersionFrameStructure
+from .contacts_rel_structure import ContactsRelStructure
 from .control_centres_in_frame_rel_structure import (
     ControlCentresInFrameRelStructure,
 )
@@ -13,11 +14,16 @@ from .group_of_entities_in_frame_rel_structure import (
 from .groups_of_operators_in_frame_rel_structure import (
     GroupsOfOperatorsInFrameRelStructure,
 )
+from .modes_of_operation_rel_structure import ModesOfOperationRelStructure
+from .open_modes_rel_structure import OpenModesRelStructure
 from .operational_contexts_in_frame_rel_structure import (
     OperationalContextsInFrameRelStructure,
 )
 from .organisations_in_frame_rel_structure import (
     OrganisationsInFrameRelStructure,
+)
+from .responsibility_roles_in_frame_rel_structure import (
+    ResponsibilityRolesInFrameRelStructure,
 )
 from .responsibility_sets_in_frame_rel_structure import (
     ResponsibilitySetsInFrameRelStructure,
@@ -25,11 +31,20 @@ from .responsibility_sets_in_frame_rel_structure import (
 from .schematic_maps_in_frame_rel_structure import (
     SchematicMapsInFrameRelStructure,
 )
+from .service_facility_sets_in_frame_rel_structure import (
+    ServiceFacilitySetsInFrameRelStructure,
+)
+from .site_facility_sets_in_frame_rel_structure import (
+    SiteFacilitySetsInFrameRelStructure,
+)
 from .types_of_value_in_frame_rel_structure import (
     TypesOfValueInFrameRelStructure,
 )
 from .vehicle_equipmen_profiles_in_frame_rel_structure import (
     VehicleEquipmenProfilesInFrameRelStructure,
+)
+from .vehicle_model_profiles_in_frame_rel_structure import (
+    VehicleModelProfilesInFrameRelStructure,
 )
 from .vehicle_models_in_frame_rel_structure import (
     VehicleModelsInFrameRelStructure,
@@ -57,6 +72,16 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    responsibility_roles: Optional[
+        ResponsibilityRolesInFrameRelStructure
+    ] = field(
+        default=None,
+        metadata={
+            "name": "responsibilityRoles",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     responsibility_sets: Optional[
         ResponsibilitySetsInFrameRelStructure
     ] = field(
@@ -71,6 +96,13 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
         default=None,
         metadata={
             "name": "typesOfValue",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    contacts: Optional[ContactsRelStructure] = field(
+        default=None,
+        metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
@@ -110,9 +142,43 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    open_modes: Optional[OpenModesRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "openModes",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    modes_of_operation: Optional[ModesOfOperationRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "modesOfOperation",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     equipments: Optional[EquipmentsInFrameRelStructure] = field(
         default=None,
         metadata={
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    site_facility_sets: Optional[SiteFacilitySetsInFrameRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "siteFacilitySets",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    service_facility_sets: Optional[
+        ServiceFacilitySetsInFrameRelStructure
+    ] = field(
+        default=None,
+        metadata={
+            "name": "serviceFacilitySets",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
@@ -139,6 +205,16 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
         default=None,
         metadata={
             "name": "vehicleEquipmentProfiles",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    vehicle_model_profiles: Optional[
+        VehicleModelProfilesInFrameRelStructure
+    ] = field(
+        default=None,
+        metadata={
+            "name": "vehicleModelProfiles",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

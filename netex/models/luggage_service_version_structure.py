@@ -81,3 +81,11 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    luggage_maximal_weigth: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "LuggageMaximalWeigth",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )

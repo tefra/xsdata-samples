@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .quay_ref import QuayRef
+from .taxi_stand_ref import TaxiStandRef
 from .vehicle_stopping_place_ref import VehicleStoppingPlaceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -20,13 +21,22 @@ class VehicleQuayAlignmentVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quay_ref: Optional[QuayRef] = field(
+    quay_ref: Optional[Union[TaxiStandRef, QuayRef]] = field(
         default=None,
         metadata={
-            "name": "QuayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TaxiStandRef",
+                    "type": TaxiStandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QuayRef",
+                    "type": QuayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )
     order: Optional[int] = field(

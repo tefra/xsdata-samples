@@ -49,7 +49,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    version_frame_ref=[
+                    choice_1=[
                         NetworkFilterByValueStructure(
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
@@ -98,7 +98,7 @@ obj = PublicationDelivery(
         value='Example of simple network, explicit request '
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='mybus:CF1',
                 version='any',

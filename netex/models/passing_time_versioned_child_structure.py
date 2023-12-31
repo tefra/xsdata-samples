@@ -6,7 +6,9 @@ from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_ref import DeadRunRef
 from .fare_point_in_pattern_ref import FarePointInPatternRef
 from .point_in_journey_pattern_ref import PointInJourneyPatternRef
+from .point_in_single_journey_path_ref import PointInSingleJourneyPathRef
 from .service_journey_ref import ServiceJourneyRef
+from .single_journey_ref import SingleJourneyRef
 from .special_service_ref import SpecialServiceRef
 from .stop_point_in_journey_pattern_ref import StopPointInJourneyPatternRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
@@ -23,6 +25,7 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
 
     choice: Optional[
         Union[
+            SingleJourneyRef,
             DatedVehicleJourneyRef,
             DatedSpecialServiceRef,
             SpecialServiceRef,
@@ -36,6 +39,11 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "SingleJourneyRef",
+                    "type": SingleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "DatedVehicleJourneyRef",
                     "type": DatedVehicleJourneyRef,
@@ -84,6 +92,7 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
     )
     point_in_journey_pattern_ref: Optional[
         Union[
+            PointInSingleJourneyPathRef,
             FarePointInPatternRef,
             StopPointInJourneyPatternRef,
             TimingPointInJourneyPatternRef,
@@ -94,6 +103,11 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "PointInSingleJourneyPathRef",
+                    "type": PointInSingleJourneyPathRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "FarePointInPatternRef",
                     "type": FarePointInPatternRef,

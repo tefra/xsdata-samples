@@ -33,6 +33,9 @@ from .traffic_control_points_in_frame_rel_structure import (
 from .vehicle_equipmen_profiles_in_frame_rel_structure import (
     VehicleEquipmenProfilesInFrameRelStructure,
 )
+from .vehicle_model_profiles_in_frame_rel_structure import (
+    VehicleModelProfilesInFrameRelStructure,
+)
 from .vehicle_models_in_frame_rel_structure import (
     VehicleModelsInFrameRelStructure,
 )
@@ -183,6 +186,16 @@ class InfrastructureVersionFrameStructure(CommonVersionFrameStructure):
         default=None,
         metadata={
             "name": "vehicleEquipmentProfiles",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    vehicle_model_profiles: Optional[
+        VehicleModelProfilesInFrameRelStructure
+    ] = field(
+        default=None,
+        metadata={
+            "name": "vehicleModelProfiles",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

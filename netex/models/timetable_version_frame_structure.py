@@ -52,6 +52,7 @@ from .service_calendar_frame_ref import ServiceCalendarFrameRef
 from .service_facility_sets_in_frame_rel_structure import (
     ServiceFacilitySetsInFrameRelStructure,
 )
+from .simple_vehicle_type_ref import SimpleVehicleTypeRef
 from .time_demand_type_assignments_in_frame_rel_structure import (
     TimeDemandTypeAssignmentsInFrameRelStructure,
 )
@@ -62,6 +63,7 @@ from .train_numbers_in_frame_rel_structure import (
     TrainNumbersInFrameRelStructure,
 )
 from .train_ref import TrainRef
+from .transport_type_ref import TransportTypeRef
 from .types_of_service_in_frame_rel_structure import (
     TypesOfServiceInFrameRelStructure,
 )
@@ -173,13 +175,24 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_type_ref: Optional[
-        Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
+    transport_type_ref_or_vehicle_type_ref: Optional[
+        Union[
+            SimpleVehicleTypeRef,
+            CompoundTrainRef,
+            TrainRef,
+            VehicleTypeRef,
+            TransportTypeRef,
+        ]
     ] = field(
         default=None,
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "SimpleVehicleTypeRef",
+                    "type": SimpleVehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "CompoundTrainRef",
                     "type": CompoundTrainRef,
@@ -193,6 +206,11 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
                 {
                     "name": "VehicleTypeRef",
                     "type": VehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransportTypeRef",
+                    "type": TransportTypeRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

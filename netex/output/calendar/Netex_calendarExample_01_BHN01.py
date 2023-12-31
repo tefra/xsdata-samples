@@ -36,7 +36,7 @@ obj = PublicationDelivery(
         value='Encoding of calendar example'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             ServiceCalendarFrame(
                 id='ust:Otober2019_Week2',
                 version='any',
@@ -381,7 +381,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-04_DT_01',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -394,7 +394,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-04_DT_11',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -407,7 +407,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-04_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -420,7 +420,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-04_DT_31',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -433,7 +433,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-05_DT_01',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:278'
                             ),
@@ -446,7 +446,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-05_DT_11',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -459,7 +459,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-05_DT_05',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -472,7 +472,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-05_DT_31',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -485,7 +485,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-06_DT_01',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:279'
                             ),
@@ -498,7 +498,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-06_DT_11',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -511,7 +511,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-06_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -524,7 +524,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-06_DT_32',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -537,7 +537,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-07_DT_01',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:280'
                             ),
@@ -550,7 +550,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-07_DT_11',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -563,7 +563,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-07_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -576,7 +576,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-07_DT_32',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -589,7 +589,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-08_DT_01',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:281'
                             ),
@@ -602,7 +602,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-08_DT_11',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -615,7 +615,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-08_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -628,7 +628,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-08_DT_33',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -641,7 +641,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-09_DT_02',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:282'
                             ),
@@ -654,7 +654,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-09_DT_13',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -667,7 +667,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-09_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -680,7 +680,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-10_DT_02',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:283'
                             ),
@@ -693,7 +693,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-10_DT_14',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -706,7 +706,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-10_DT_22',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -719,7 +719,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-11_DT_01',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -732,7 +732,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-11_DT_11',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -745,7 +745,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-11_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -758,7 +758,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-11_DT_31',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -771,7 +771,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-12_DT_12',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:278'
                             ),
@@ -784,7 +784,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-12_DT_11',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -797,7 +797,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-12_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -810,7 +810,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-12_DT_31',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -823,7 +823,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-13_DT_01',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:279'
                             ),
@@ -836,7 +836,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-13_DT_11',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -849,7 +849,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-13_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -862,7 +862,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-13_DT_32',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -875,7 +875,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-14_DT_01',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:280'
                             ),
@@ -888,7 +888,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-14_DT_11',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -901,7 +901,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-14_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -914,7 +914,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-14_DT_32',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -927,7 +927,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-15_DT_01',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:281'
                             ),
@@ -940,7 +940,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-15_DT_11',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -953,7 +953,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-15_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -966,7 +966,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-15_DT_33',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -979,7 +979,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-16_DT_02',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:282'
                             ),
@@ -992,7 +992,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-16_DT_13',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -1005,7 +1005,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-10-16_DT_21',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -1018,7 +1018,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-17-10_DT_02',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:283'
                             ),
@@ -1031,7 +1031,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-17-10_DT_14',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),
@@ -1044,7 +1044,7 @@ obj = PublicationDelivery(
                             id='ust:DayAsgn_2010-17-10_DT_22',
                             version='any',
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='ust:277'
                             ),

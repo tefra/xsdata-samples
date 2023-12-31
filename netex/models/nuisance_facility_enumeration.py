@@ -9,6 +9,7 @@ class NuisanceFacilityEnumeration(Enum):
     NO_SMOKING = "noSmoking"
     FAMILY_AREA = "familyArea"
     CHILDFREE_AREA = "childfreeArea"
+    ANIMALS_ALLOWED = "animalsAllowed"
     NO_ANIMALS = "noAnimals"
     BREASTFEEDING_FRIENDLY = "breastfeedingFriendly"
     MOBILE_PHONE_USE_ZONE = "mobilePhoneUseZone"

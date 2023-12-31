@@ -1,8 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from .route_instruction_version_structure import (
-    RouteInstructionVersionStructure,
-)
+from .route_instruction import RouteInstruction
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
 )
@@ -15,7 +13,7 @@ class RouteInstructionsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "routeInstructions_RelStructure"
 
-    route_instruction: List[RouteInstructionVersionStructure] = field(
+    route_instruction: List[RouteInstruction] = field(
         default_factory=list,
         metadata={
             "name": "RouteInstruction",

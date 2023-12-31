@@ -11,6 +11,7 @@ from .fare_table_ref import FareTableRef
 from .geographical_structure_factors_rel_structure import (
     GeographicalStructureFactorsRelStructure,
 )
+from .point_ref_structure import PointRefStructure
 from .scheduled_stop_point_derived_view_structure import (
     ScheduledStopPointDerivedViewStructure,
 )
@@ -67,6 +68,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             ScheduledStopPointDerivedViewStructure,
             TariffZoneRefStructure,
             ZoneDerivedViewStructure,
+            PointRefStructure,
             FareSectionRefStructure,
             FarePointInPatternRefStructure,
         ]
@@ -96,6 +98,11 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "StartMeetingPointRef",
+                    "type": PointRefStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "FromFareSectionRef",
                     "type": FareSectionRefStructure,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -114,6 +121,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             ScheduledStopPointDerivedViewStructure,
             TariffZoneRefStructure,
             ZoneDerivedViewStructure,
+            PointRefStructure,
             FareSectionRefStructure,
             FarePointInPatternRefStructure,
         ]
@@ -140,6 +148,11 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
                 {
                     "name": "EndTariffZoneView",
                     "type": ZoneDerivedViewStructure,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EndMeetingPointRef",
+                    "type": PointRefStructure,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

@@ -3,6 +3,9 @@ from typing import Optional, Union
 from .access_right_parameter_assignments_in_frame_rel_structure import (
     AccessRightParameterAssignmentsInFrameRelStructure,
 )
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .authority_ref import AuthorityRef
 from .border_points_in_frame_rel_structure import (
     BorderPointsInFrameRelStructure,
@@ -91,7 +94,6 @@ from .usage_parameters_in_frame_rel_structure import (
 from .validable_elements_in_frame_rel_structure import (
     ValidableElementsInFrameRelStructure,
 )
-from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -101,7 +103,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "FareFrame_VersionFrameStructure"
 
-    mode: Optional[VehicleModeEnumeration] = field(
+    mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
         metadata={
             "name": "Mode",

@@ -125,7 +125,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    quality_structure_factor_ref: Optional[
+    choice: Optional[
         Union[
             FareQuotaFactorRef,
             FareDemandFactorRef,
@@ -160,7 +160,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    choice: Optional[
+    choice_1: Optional[
         Union[
             DistanceMatrixElementRef,
             DistanceMatrixElementsRelStructure,

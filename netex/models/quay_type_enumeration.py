@@ -15,7 +15,7 @@ class QuayTypeEnumeration(Enum):
     TRAM_STOP = "tramStop"
     BOAT_QUAY = "boatQuay"
     FERRY_LANDING = "ferryLanding"
-    TELECABINE_PLATFORM = "telecabinePlatform"
+    TELECABIN_PLATFORM = "telecabinPlatform"
     TAXI_STAND = "taxiStand"
     SET_DOWN_PLACE = "setDownPlace"
     VEHICLE_LOADING_PLACE = "vehicleLoadingPlace"

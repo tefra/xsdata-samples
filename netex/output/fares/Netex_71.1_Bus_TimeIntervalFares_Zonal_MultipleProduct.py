@@ -4,7 +4,6 @@ from netex.models.access_rights_in_product_rel_structure import AccessRightsInPr
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
-from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
 from netex.models.cell_versioned_child_structure import PriceGroup
 from netex.models.cell_versioned_child_structure import PriceGroupsRelStructure
@@ -30,6 +29,7 @@ from netex.models.frequency_of_use_type_enumeration import FrequencyOfUseTypeEnu
 from netex.models.fulfilment_method_ref import FulfilmentMethodRef
 from netex.models.generic_parameter_assignment_version_structure import GenericParameterAssignment
 from netex.models.interchanging import Interchanging
+from netex.models.logical_operation_enumeration import LogicalOperationEnumeration
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network import Network
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
@@ -109,7 +109,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='myfares:any'
@@ -124,12 +124,12 @@ obj = PublicationDelivery(
         value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='myfares:DTA@Time_Interval',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             ValidBetween(
                                 from_date=XmlDateTime(2011, 1, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2011, 7, 1, 0, 0, 0, 0, 0)
@@ -234,7 +234,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Zonal Fare'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -256,7 +256,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     duration=XmlDuration("PT1H"),
                                                     time_structure_factors=TimeStructureFactorsRelStructure(
-                                                        time_structure_factor_ref=[
+                                                        parking_charge_band_ref_or_time_structure_factor_ref_or_time_structure_factor=[
                                                             TimeStructureFactor(
                                                                 id='myfares:tsf_1h',
                                                                 version='1.0',
@@ -280,7 +280,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     duration=XmlDuration("PT2H"),
                                                     time_structure_factors=TimeStructureFactorsRelStructure(
-                                                        time_structure_factor_ref=[
+                                                        parking_charge_band_ref_or_time_structure_factor_ref_or_time_structure_factor=[
                                                             TimeStructureFactor(
                                                                 id='myfares:tsf_2h',
                                                                 version='1.0',
@@ -306,7 +306,7 @@ obj = PublicationDelivery(
                                                     end_time=XmlTime(2, 0, 0, 0),
                                                     day_offset=1,
                                                     time_structure_factors=TimeStructureFactorsRelStructure(
-                                                        time_structure_factor_ref=[
+                                                        parking_charge_band_ref_or_time_structure_factor_ref_or_time_structure_factor=[
                                                             TimeStructureFactor(
                                                                 id='myfares:tsf_day',
                                                                 version='1.0',
@@ -337,7 +337,7 @@ obj = PublicationDelivery(
                                                             ref='fxc:can_access',
                                                             version_ref='fxc:v1.0'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
                                                                 TariffZoneRef(
@@ -355,7 +355,7 @@ obj = PublicationDelivery(
                                                         value='Allowed periods for  use of a  zone'
                                                     ),
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeStructureFactorsRelStructure(
-                                                        time_structure_factor_ref=[
+                                                        parking_charge_band_ref_or_time_structure_factor_ref_or_time_structure_factor=[
                                                             TimeStructureFactorRef(
                                                                 version='1.0',
                                                                 ref='myfares:tsf_1h'
@@ -378,7 +378,7 @@ obj = PublicationDelivery(
                                                             ref='fxc:can_access_when',
                                                             version_ref='fxc:v1.0'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.XOR
                                                     )
                                                 ),
                                                 FareStructureElement(
@@ -398,7 +398,7 @@ obj = PublicationDelivery(
                                                             ref='fxc:condition_of_use',
                                                             version_ref='fxc:v1.0'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 FrequencyOfUse(
@@ -419,7 +419,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         price_groups=PriceGroupsRelStructure(
-                                            price_group=[
+                                            price_group_ref_or_price_group=[
                                                 PriceGroupRef(
                                                     version='1.0',
                                                     ref='myfares:DTA@Time_interval'
@@ -441,7 +441,7 @@ obj = PublicationDelivery(
                                             version='ntx:v1.0',
                                             ref='ntx:period_pass'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -674,7 +674,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='ntx:Types_of_Tariff',
                                         version='ntx:v1.0',

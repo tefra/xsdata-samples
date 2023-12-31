@@ -11,4 +11,5 @@ class RequestMethodTypeEnumeration(Enum):
     PHONE_CALL = "phoneCall"
     MOBILE_APP = "mobileApp"
     SMS = "sms"
+    SPEAK_TO_DRIVER_ONBOARD = "speakToDriverOnboard"
     OTHER = "other"

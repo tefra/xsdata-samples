@@ -4,6 +4,7 @@ from .authority_ref import AuthorityRef
 from .general_organisation_ref import GeneralOrganisationRef
 from .management_agent_ref import ManagementAgentRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .online_service_operator_ref import OnlineServiceOperatorRef
 from .operator_ref import OperatorRef
 from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
@@ -19,16 +20,17 @@ class OrganisationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "organisationRefs_RelStructure"
 
-    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: List[
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: List[
         Union[
             RetailConsortiumRef,
-            AuthorityRef,
-            OperatorRef,
+            OnlineServiceOperatorRef,
             GeneralOrganisationRef,
             ManagementAgentRef,
             ServicedOrganisationRef,
             TravelAgentRef,
             OtherOrganisationRef,
+            AuthorityRef,
+            OperatorRef,
             OrganisationRef,
         ]
     ] = field(
@@ -42,13 +44,8 @@ class OrganisationRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
+                    "name": "OnlineServiceOperatorRef",
+                    "type": OnlineServiceOperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -74,6 +71,16 @@ class OrganisationRefsRelStructure(OneToManyRelationshipStructure):
                 {
                     "name": "OtherOrganisationRef",
                     "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

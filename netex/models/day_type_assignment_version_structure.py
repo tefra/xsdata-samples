@@ -8,6 +8,7 @@ from .operating_day_ref import OperatingDayRef
 from .operating_period_ref import OperatingPeriodRef
 from .service_calendar_ref import ServiceCalendarRef
 from .timeband_ref import TimebandRef
+from .uic_operating_period_ref import UicOperatingPeriodRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -25,13 +26,20 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operating_period_ref_or_operating_day_ref_or_date: Optional[
-        Union[OperatingPeriodRef, OperatingDayRef, XmlDate]
+    choice: Optional[
+        Union[
+            UicOperatingPeriodRef, OperatingPeriodRef, OperatingDayRef, XmlDate
+        ]
     ] = field(
         default=None,
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "UicOperatingPeriodRef",
+                    "type": UicOperatingPeriodRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "OperatingPeriodRef",
                     "type": OperatingPeriodRef,

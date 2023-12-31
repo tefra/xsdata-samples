@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1">
+  <PublicationTimestamp>2017-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+  <Description>Example of simple zonal pass fares.</Description>
+  <dataObjects>
+    <CompositeFrame id="ENT:school_carnet:38" dataSourceRef="ENT:fare_data" version="1">
+      <frames>
+        <FareFrame id="ENT:1" version="1">
+          <tariffs>
+            <Tariff id="ENT:school_carnet:380" version="1">
+              <timeIntervals>
+                <TimeInterval id="ENT:school_carnet@academic_year" version="1"/>
+              </timeIntervals>
+              <qualityStructureFactors>
+                <QualityStructureFactor id="ENT:school_carnet@380" version="1">
+                  <Name>380 activations</Name>
+                  <Factor>activation</Factor>
+                  <Value>380</Value>
+                </QualityStructureFactor>
+                <FareDemandFactor id="ENT:school_carnet@school_day@morning" version="1">
+                  <validityConditions>
+                    <AvailabilityCondition id="ENT:school_carnet@school_day@morning" version="1">
+                      <dayTypes>
+                        <DayTypeRef ref="ENT:school_day"/>
+                      </dayTypes>
+                      <timebands>
+                        <Timeband id="ENT:school_carnet@morning" version="1">
+                          <StartTime>07:00:00</StartTime>
+                          <EndTime>09:00:00</EndTime>
+                        </Timeband>
+                      </timebands>
+                    </AvailabilityCondition>
+                  </validityConditions>
+                </FareDemandFactor>
+                <FareDemandFactor id="ENT:school_carnet@school_day@afternoon" version="1">
+                  <validityConditions>
+                    <AvailabilityCondition id="ENT:school_carnet@school_day@afternoon" version="1">
+                      <dayTypes>
+                        <DayTypeRef ref="ENT:school_day"/>
+                      </dayTypes>
+                      <timebands>
+                        <Timeband id="ENT:school_carnet@afternoon" version="1">
+                          <StartTime>12:00:00</StartTime>
+                          <EndTime>16:00:00</EndTime>
+                        </Timeband>
+                      </timebands>
+                    </AvailabilityCondition>
+                  </validityConditions>
+                </FareDemandFactor>
+              </qualityStructureFactors>
+              <fareStructureElements>
+                <FareStructureElement id="ENT:school_carnet@access_zones" version="1">
+                  <Name>Available zones</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:access" versionRef="fxc:v1.0"/>
+                  <GenericParameterAssignment id="ENT:school_carnet@access_zones" version="1" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:can_access" versionRef="fxc:v1.0"/>
+                    <ValidityParameterGroupingType>XOR</ValidityParameterGroupingType>
+                    <validityParameters>
+                      <FareZoneRef ref="ENT:Bergen@X" versionRef="1"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="ENT:school_carnet@access_when@morning" version="1">
+                  <Name>Access time restrictions</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:access_when" versionRef="fxc:v1.0"/>
+                  <FareDemandFactorRef ref="ENT:school_carnet@school_day@morning" versionRef="1"/>
+                </FareStructureElement>
+                <FareStructureElement id="ENT:school_carnet@access_when@afternoon" version="1">
+                  <Name>Access time restrictions</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:access_whenn" versionRef="fxc:v1.0"/>
+                  <FareDemandFactorRef ref="ENT:school_carnet@school_day@afternoon" versionRef="1"/>
+                </FareStructureElement>
+                <FareStructureElement id="ENT:school_carnet@eligibility" version="1">
+                  <Name>Eligible user types</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:eligibility" versionRef="fxc:v1.0"/>
+                  <GenericParameterAssignment id="ENT:school_carnet@eligibility" version="1" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:eligible" versionRef="fxc:v1.0"/>
+                    <LimitationGroupingType>XOR</LimitationGroupingType>
+                    <limitations>
+                      <UserProfile id="ENT:school_carnet@Pupil" version="1">
+                        <Name lang="no">Pupil</Name>
+                        <ProofRequired>identityDocument</ProofRequired>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="ENT:school_carnet@usage_limit" version="1">
+                  <Name>Usage limit  restrictions</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:usage_limit" versionRef="fxc:v1.0"/>
+                  <QualityStructureFactorRef ref="ENT:school_carnet@380" versionRef="1"/>
+                </FareStructureElement>
+                <FareStructureElement id="ENT:school_carnet@durations" version="1">
+                  <Name>Available durations NOTE WE DONT REALLY NEED THIS FOR A CARNET - WOULD NEED IT FOR A PASS  </Name>
+                  <TypeOfFareStructureElementRef ref="fxc:durations" versionRef="fxc:v1.0"/>
+                  <timeIntervals>
+                    <TimeIntervalRef version="1" ref="ENT:school_carnet@academic_year"/>
+                  </timeIntervals>
+                </FareStructureElement>
+                <FareStructureElement id="ENT:school_carnet@conditions_of_travel@carnet" version="1">
+                  <Name>Conditions of travel - overall carnet</Name>
+                  <GenericParameterAssignment id="ENT:school_carnet@conditions_of_travel" version="1" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_use" versionRef="fxc:v1.0"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <UsageValidityPeriod id="ENT:school_carnet@carnet_validity" version="1">
+                        <Name>Valid from start of school year</Name>
+                        <UsageTrigger>startOfPeriod</UsageTrigger>
+                        <UsageEnd>productExpiry</UsageEnd>
+                      </UsageValidityPeriod>
+                      <Transferability id="ENT:school_carnet@ransferability" version="1">
+                        <Name>Carnet is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <FrequencyOfUse id="ENT:school_carnet@frequency" version="1">
+                        <FrequencyOfUseType>twiceADay</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <Interchanging id="ENT:school_carnet@interchanging" version="1">
+                        <CanInterchange>true</CanInterchange>
+                      </Interchanging>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="ENT:school_carnet@conditions_of_travel@trip" version="1">
+                  <Name>Conditions of travel - overall carnet</Name>
+                  <GenericParameterAssignment id="ENT:school_carnet@conditions_of_travel@trip" version="1" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_use" versionRef="fxc:v1.0"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <UsageValidityPeriod id="ENT:school_carnet@trip@validity" version="1">
+                        <Name>Trip is valid for 70 minutes</Name>
+                        <UsageTrigger>activation</UsageTrigger>
+                        <UsageEnd>standardDuration</UsageEnd>
+                        <StandardDuration>PT70M</StandardDuration>
+                      </UsageValidityPeriod>
+                      <Transferability id="ENT:school_carnet@trip@ransferability" version="1">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <FrequencyOfUse id="ENT:school_carnet@trip@frequency" version="1">
+                        <FrequencyOfUseType>single</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <Interchanging id="ENT:school_carnet@trip@interchanging" version="1">
+                        <CanInterchange>true</CanInterchange>
+                      </Interchanging>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="ENT:school_carnet@conditions_of_sale" version="1">
+                  <Name>Conditions of sale - overall carnet</Name>
+                  <GenericParameterAssignment id="ENT:school_carnet@conditions_of_sale" version="1" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_salee" versionRef="fxc:v1.0"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <UsageValidityPeriod id="ENT:school_carnet@validity" version="1">
+                        <Name>Carnet is valid till end of year</Name>
+                        <UsageTrigger>startOfPeriod</UsageTrigger>
+                        <UsageEnd>productExpiry</UsageEnd>
+                      </UsageValidityPeriod>
+                      <PurchaseWindow id="ENT:school_carnet@purchase_window" version="1">
+                        <Name>Must be bought  at least one day beforehand</Name>
+                        <PurchaseAction>purchase</PurchaseAction>
+                        <MinimumPeriodBeforeDeparture>P1D</MinimumPeriodBeforeDeparture>
+                        <PurchaseMoment>inAdvanceOnly</PurchaseMoment>
+                      </PurchaseWindow>
+                      <Refunding id="ENT:school_carnet@refunding" version="1">
+                        <Name>Refund allowed for certain reasons</Name>
+                        <Allowed>partial</Allowed>
+                        <OnlyAtCertainDistributionPoints>true</OnlyAtCertainDistributionPoints>
+                        <ExchangableUntilPercentUse>80</ExchangableUntilPercentUse>
+                        <HasFee>true</HasFee>
+                        <RefundType>cancellation</RefundType>
+                        <RefundPolicy>changeOfResidence</RefundPolicy>
+                        <PartialRefundBasis>unusedDays</PartialRefundBasis>
+                        <PaymentMethod>bankTransfer</PaymentMethod>
+                      </Refunding>
+                      <Replacing id="ENT:school_carnet@replacing" version="1">
+                        <Name>Replacement allowed for a fee</Name>
+                        <Allowed>partial</Allowed>
+                        <HasFee>true</HasFee>
+                      </Replacing>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <AmountOfPriceUnitProduct id="ENT:school_carnet" version="1">
+              <Name lang="no">School transport with limited number of rides</Name>
+              <ChargingMomentType>beforeTravel</ChargingMomentType>
+              <OperatorRef ref="ENT:bergen_muni" versionRef="1.0"/>
+              <GenericParameterAssignment id="ENT:school_carnet" version="1" order="1">
+                <FareStructureElementRef version="1" ref="ENT:school_carnet@conditions_of_sale"/>
+              </GenericParameterAssignment>
+              <validableElements>
+                <ValidableElement id="ENT:school_carnet@morning_trip" version="1">
+                  <Name>Enkelttur Entur</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@access_zones"/>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@usage_limit"/>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@access_when@morning"/>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@eligibility"/>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@durations"/>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@conditions_of_travel@trip"/>
+                  </fareStructureElements>
+                </ValidableElement>
+                <ValidableElement id="ENT:school_carnet@afternoon_trip" version="1">
+                  <Name>Enkelttur Entur</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@access_zones"/>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@usage_limit"/>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@access_when@afternoon"/>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@eligibility"/>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@durations"/>
+                    <FareStructureElementRef version="1" ref="ENT:school_carnet@conditions_of_travel@trip"/>
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct id="ENT:school_carnet@morning_trip" version="1" order="1">
+                  <MaximumAccess>1</MaximumAccess>
+                  <ValidableElementRef version="1" ref="ENT:school_carnet@morning_trip"/>
+                </AccessRightInProduct>
+                <AccessRightInProduct id="ENT:school_carnet@evening_trip" version="1" order="2">
+                  <MaximumAccess>1</MaximumAccess>
+                  <ValidableElementRef version="1" ref="ENT:school_carnet@afternoon_trip"/>
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>tripCarnet</ProductType>
+            </AmountOfPriceUnitProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage id="ENT:school_carnet" version="1">
+              <Name lang="no">School transport Municipality X</Name>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement id="ENT:school_carnet" version="1" order="1">
+                  <Name lang="no">School transport Municipality X</Name>
+                  <TypeOfTravelDocumentRef ref="ENT:smartcard" versionRef="1.0"/>
+                  <AmountOfPriceUnitProductRef version="1" ref="ENT:school_carnet"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <ServiceCalendarFrame id="ENT:Bergen2020" version="1">
+          <Name>SchoolYear calendar</Name>
+          <dayTypes>
+            <FareDayType id="ENT:school_day" version="1">
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Weekdays</DaysOfWeek>
+                  <HolidayTypes>SchoolDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </FareDayType>
+          </dayTypes>
+          <operatingPeriods>
+            <UicOperatingPeriod id="ENT:Bergen2020" version="1">
+              <FromDate>2020-08-17T00:00:00</FromDate>
+              <ToDate>2020-12-31T00:00:00</ToDate>
+              <ValidDayBits>
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111100 
+                                1111 
+							</ValidDayBits>
+            </UicOperatingPeriod>
+          </operatingPeriods>
+          <dayTypeAssignments>
+            <DayTypeAssignment id="ENT:Calendar" version="1" order="1">
+              <UicOperatingPeriodRef version="1" ref="ENT:Bergen2020"/>
+              <DayTypeRef version="1" ref="ENT:school_day"/>
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+        <SalesTransactionFrame id="ENX:school_Card_examples" version="1">
+          <customers>
+            <Customer id="ENX:1234" version="1">
+              <FirstName>Loki</FirstName>
+              <Email>loki@troll.no</Email>
+              <customerAccounts>
+                <CustomerAccount id="ENX:1234-T" version="1">
+                  <Name>School Travel Travel</Name>
+                </CustomerAccount>
+              </customerAccounts>
+              <fareContracts>
+                <FareContract id="ENX:1234@school_card" version="1">
+                  <Name>Skolekort Municipality X</Name>
+                  <StartDate>2020-09-06T01:07:00</StartDate>
+                  <EndDate>2021-09-07T01:07:00</EndDate>
+                  <fareContractEntries>
+                    <SalesTransaction id="ENX:5781234501" version="1">
+                      <Name>Kjøp Skoleskyss</Name>
+                      <Description>Initial purchase of carnet</Description>
+                      <Date>2020-09-06T01:07:00</Date>
+                      <Amount>10000</Amount>
+                      <Currency>NOK</Currency>
+                      <PaymentMethod>debitCard</PaymentMethod>
+                      <travelSpecifications>
+                        <TravelSpecification id="ENT:5781234501" version="1">
+                          <Units>380</Units>
+                          <StartOfValidity>2020-01-01T07:05:00</StartOfValidity>
+                          <EndOfValidity>2020-12-31T16:00:00</EndOfValidity>
+                          <specificParameterAssignments>
+                            <SpecificParameterAssignment id="ENT:5781234501" version="1" order="1">
+                              <SalesOfferPackageRef version="1" ref="ENT:school_carnet"/>
+                              <validityParameters>
+                                <FareZoneRef ref="ENT:Bergen@X" versionRef="1"/>
+                              </validityParameters>
+                            </SpecificParameterAssignment>
+                          </specificParameterAssignments>
+                        </TravelSpecification>
+                      </travelSpecifications>
+                      <customerPurchasePackages>
+                        <CustomerPurchasePackage id="ENX:1234@school_transport" version="1">
+                          <CustomerRef version="1" ref="ENX:1234"/>
+                          <CustomerAccountRef version="1" ref="ENX:1234-T"/>
+                          <CustomerPurchasePackageStatus>partiallyUsed</CustomerPurchasePackageStatus>
+                          <travelSpecifications>
+                            <TravelSpecification id="ENX:1234@school_transport" version="1">
+                              <Units>380</Units>
+                              <StartOfValidity>2020-01-01T07:05:00</StartOfValidity>
+                              <EndOfValidity>2020-12-31T16:00:00</EndOfValidity>
+                              <specificParameterAssignments>
+                                <SpecificParameterAssignment id="ENX:1234@school_transport" version="1" order="1">
+                                  <SalesOfferPackageRef version="1" ref="ENT:school_carnet"/>
+                                  <validityParameters>
+                                    <FareZoneRef ref="ENT:Bergen@X" versionRef="1"/>
+                                  </validityParameters>
+                                </SpecificParameterAssignment>
+                              </specificParameterAssignments>
+                            </TravelSpecification>
+                          </travelSpecifications>
+                          <customerPurchasePackageElements>
+                            <CustomerPurchasePackageElement id="ENT:school_transport@morning_trip" version="1" order="1">
+                              <ValidBetween>
+                                <FromDate>2020-01-01T07:00:00</FromDate>
+                                <ToDate>2020-12-31T16:00:00</ToDate>
+                              </ValidBetween>
+                              <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:school_transport@morning_trip@1" changed="2020-01-05T07:05:00" version="1">
+                                  <MarkedAs>used</MarkedAs>
+                                  <validityParameterAssignments>
+                                    <CustomerPurchaseParameterAssignment id="ENT:school_transport@morning_trip@1" version="1" order="1">
+                                      <limitations>
+                                        <UsageValidityPeriodRef version="1" ref="ENT:school_carnet@trip@validity"/>
+                                      </limitations>
+                                      <validityParameters>
+                                        <OperatorRef ref="ENT:bergen_muni" versionRef="EXTERNAl"/>
+                                        <StopPlaceRef ref="NSR:123" versionRef="EXTERNAl"/>
+                                        <ServiceJourneyRef ref="ENT:ServiceJourney:1234578" versionRef="EXTERNAl"/>
+                                      </validityParameters>
+                                    </CustomerPurchaseParameterAssignment>
+                                  </validityParameterAssignments>
+                                </CustomerPurchasePackageElementAccess>
+                                <CustomerPurchasePackageElementAccess id="ENT:school_transport@morning_trip@2" created="2020-01-06T07:15:00" version="1">
+                                  <MarkedAs>used</MarkedAs>
+                                  <validityParameterAssignments>
+                                    <CustomerPurchaseParameterAssignment id="ENT:school_transport@morning_trip@2" version="1" order="1">
+                                      <limitations>
+                                        <UsageValidityPeriodRef version="1" ref="ENT:school_carnet@trip@validity"/>
+                                      </limitations>
+                                      <validityParameters>
+                                        <OperatorRef ref="ENT:bergen_muni" versionRef="1.0"/>
+                                        <StopPlaceRef ref="NSR:123" versionRef="EXTERNAl"/>
+                                        <ServiceJourneyRef ref="ENT:ServiceJourney:12348" versionRef="EXTERNAl"/>
+                                      </validityParameters>
+                                    </CustomerPurchaseParameterAssignment>
+                                  </validityParameterAssignments>
+                                </CustomerPurchasePackageElementAccess>
+                                <CustomerPurchasePackageElementAccess id="ENT:school_transport@morning_trip@3" created="2020-01-07T07:16:00" version="1">
+                                  <MarkedAs>used</MarkedAs>
+                                  <validityParameterAssignments>
+                                    <CustomerPurchaseParameterAssignment id="ENT:school_transport@morning_trip@3" version="1" order="1">
+                                      <limitations>
+                                        <UsageValidityPeriodRef version="1" ref="ENT:school_carnet@trip@validity"/>
+                                      </limitations>
+                                      <validityParameters>
+                                        <OperatorRef ref="ENT:bergen_muni" versionRef="1.0"/>
+                                        <StopPlaceRef ref="NSR:123" versionRef="EXTERNAl"/>
+                                        <ServiceJourneyRef ref="ENT:ServiceJourney:12347" versionRef="EXTERNAl"/>
+                                      </validityParameters>
+                                    </CustomerPurchaseParameterAssignment>
+                                  </validityParameterAssignments>
+                                </CustomerPurchasePackageElementAccess>
+                              </elementAccesses>
+                              <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment id="ENT:school_transport@morning_trip@2020-01-01@07:05:00" version="1" order="1">
+                                  <ValidableElementRef version="1" ref="ENT:school_carnet@morning_trip"/>
+                                </CustomerPurchaseParameterAssignment>
+                              </validityParameterAssignments>
+                            </CustomerPurchasePackageElement>
+                            <CustomerPurchasePackageElement id="ENT:school_transport@afternoon_trip" version="1" order="1">
+                              <ValidBetween>
+                                <FromDate>2020-01-01T12:00:00</FromDate>
+                                <ToDate>2020-12-31T16:00:00</ToDate>
+                              </ValidBetween>
+                              <elementAccesses>
+                                <CustomerPurchasePackageElementAccess id="ENT:school_transport@afternoon_trip@1" created="2020-01-05T16:20:00" version="1">
+                                  <MarkedAs>used</MarkedAs>
+                                  <validityParameterAssignments>
+                                    <CustomerPurchaseParameterAssignment id="ENT:school_transport@afternoon_trip@1" version="1" order="1">
+                                      <limitations>
+                                        <UsageValidityPeriodRef version="1" ref="ENT:school_carnet@trip@validity"/>
+                                      </limitations>
+                                      <validityParameters>
+                                        <OperatorRef ref="ENT:bergen_muni" versionRef="1.0"/>
+                                        <StopPlaceRef ref="NSR:891" versionRef="EXTERNAl"/>
+                                        <ServiceJourneyRef ref="ENT:ServiceJourney:123455438" versionRef="EXTERNAl"/>
+                                      </validityParameters>
+                                    </CustomerPurchaseParameterAssignment>
+                                  </validityParameterAssignments>
+                                </CustomerPurchasePackageElementAccess>
+                                <CustomerPurchasePackageElementAccess id="ENT:school_transport@afternoon_trip@2" created="2020-01-06T16:25:00" version="1">
+                                  <MarkedAs>used</MarkedAs>
+                                  <validityParameterAssignments>
+                                    <CustomerPurchaseParameterAssignment id="ENT:school_transport@afternoon_trip@2" version="1" order="1">
+                                      <limitations>
+                                        <UsageValidityPeriodRef version="1" ref="ENT:school_carnet@trip@validity"/>
+                                      </limitations>
+                                      <validityParameters>
+                                        <OperatorRef ref="ENT:bergen_muni" versionRef="1.0"/>
+                                        <StopPlaceRef ref="NSR:891" versionRef="EXTERNAl"/>
+                                        <ServiceJourneyRef ref="ENT:ServiceJourney:123455438" versionRef="EXTERNAl"/>
+                                      </validityParameters>
+                                    </CustomerPurchaseParameterAssignment>
+                                  </validityParameterAssignments>
+                                </CustomerPurchasePackageElementAccess>
+                              </elementAccesses>
+                              <validityParameterAssignments>
+                                <CustomerPurchaseParameterAssignment id="ENT:school_transport@afternoon_trip@2020-01-01@07:05:00" version="1" order="1">
+                                  <ValidableElementRef version="1" ref="ENT:school_carnet@afternoon_trip"/>
+                                </CustomerPurchaseParameterAssignment>
+                              </validityParameterAssignments>
+                            </CustomerPurchasePackageElement>
+                          </customerPurchasePackageElements>
+                          <SalesTransactionRef version="1" ref="ENX:5781234501"/>
+                          <SmartcardRef ref="ENX:87654" versionRef="1"/>
+                        </CustomerPurchasePackage>
+                      </customerPurchasePackages>
+                    </SalesTransaction>
+                  </fareContractEntries>
+                </FareContract>
+              </fareContracts>
+            </Customer>
+          </customers>
+        </SalesTransactionFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
+

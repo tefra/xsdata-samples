@@ -15,10 +15,10 @@ class WheelchairVehicleEquipmentVersionStructure(
     class Meta:
         name = "WheelchairVehicleEquipment_VersionStructure"
 
-    has_wheel_chair_spaces: Optional[bool] = field(
+    has_wheelchair_spaces: Optional[bool] = field(
         default=None,
         metadata={
-            "name": "HasWheelChairSpaces",
+            "name": "HasWheelchairSpaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

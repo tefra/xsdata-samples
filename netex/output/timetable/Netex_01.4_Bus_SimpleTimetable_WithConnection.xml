@@ -935,7 +935,7 @@
                 </Call>
               </calls>
               <PassengerCarryingRequirementsView>
-                <PassengerCapacity>
+                <PassengerCapacity id="PC1" version="any">
                   <SeatingCapacity>22</SeatingCapacity>
                   <StandingCapacity>44</StandingCapacity>
                   <SpecialPlaceCapacity>2</SpecialPlaceCapacity>

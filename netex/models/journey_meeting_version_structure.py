@@ -17,6 +17,7 @@ from .point_in_journey_pattern_ref_structure import (
 from .reason_for_meeting_enumeration import ReasonForMeetingEnumeration
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 from .service_journey_ref import ServiceJourneyRef
+from .single_journey_ref import SingleJourneyRef
 from .special_service_ref import SpecialServiceRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .vehicle_journey_ref import VehicleJourneyRef
@@ -158,6 +159,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
     )
     choice: Optional[
         Union[
+            SingleJourneyRef,
             DatedVehicleJourneyRef,
             DatedSpecialServiceRef,
             SpecialServiceRef,
@@ -172,6 +174,11 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "SingleJourneyRef",
+                    "type": SingleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "DatedVehicleJourneyRef",
                     "type": DatedVehicleJourneyRef,
@@ -215,7 +222,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    line_ref: Optional[
+    flexible_line_ref_or_line_ref_or_connecting_line_view: Optional[
         Union[FlexibleLineRef, LineRef, LineDerivedViewStructure]
     ] = field(
         default=None,

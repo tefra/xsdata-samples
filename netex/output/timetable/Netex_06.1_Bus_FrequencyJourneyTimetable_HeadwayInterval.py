@@ -86,7 +86,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         TimetableFrameRef(
                             value='REQUEST',
                             ref='hde:TIM_23HFT_O'
@@ -101,7 +101,7 @@ obj = PublicationDelivery(
         value='Example  of simple timetable frame with a group of headway journeys '
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='hde:CF_1',
                 version='1',
@@ -132,7 +132,7 @@ obj = PublicationDelivery(
                             id='hde:hde:TIM_23HFT_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='hde:Cnd001',
                                             version='any',
@@ -178,7 +178,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='hde:hjg_24o_02_01'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_24o'
                                         ),
@@ -187,7 +187,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_01_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -212,7 +212,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_01_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -234,7 +234,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_01_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -273,7 +273,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='hde:hjg_24o_02_01'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_24o'
                                         ),
@@ -282,7 +282,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_02_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -297,7 +297,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_02_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -309,7 +309,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_02_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -348,7 +348,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='hde:hjg_24o_02_01'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_24o'
                                         ),
@@ -357,7 +357,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_03_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -372,7 +372,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_03_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -384,7 +384,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_03_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -423,7 +423,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='hde:hjg_24o_02_01'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_24o'
                                         ),
@@ -432,7 +432,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_04_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -447,7 +447,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_04_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -459,7 +459,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_04_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -498,7 +498,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='hde:hjg_24o_02_01'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_24o'
                                         ),
@@ -507,7 +507,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_05_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -522,7 +522,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_05_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -534,7 +534,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_05_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -565,7 +565,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='hde:svp_24o'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_24o'
                                         ),
@@ -574,7 +574,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_06_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -589,7 +589,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_06_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -601,7 +601,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_fg_24o_06_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),

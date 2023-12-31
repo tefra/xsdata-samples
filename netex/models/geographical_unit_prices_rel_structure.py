@@ -20,7 +20,7 @@ class GeographicalUnitPricesRelStructure(
     class Meta:
         name = "geographicalUnitPrices_RelStructure"
 
-    cell_ref: List[
+    geographical_unit_price_ref_or_geographical_unit_price_or_cell_ref: List[
         Union[
             GeographicalUnitPriceRef,
             "GeographicalUnitPriceVersionedChildStructure",

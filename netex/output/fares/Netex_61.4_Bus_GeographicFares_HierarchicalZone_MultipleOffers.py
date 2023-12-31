@@ -4,7 +4,6 @@ from netex.models.access_rights_in_product_rel_structure import AccessRightsInPr
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
-from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
 from netex.models.cell_versioned_child_structure import PriceGroup
 from netex.models.cell_versioned_child_structure import PriceGroupsRelStructure
@@ -43,6 +42,7 @@ from netex.models.geographical_unit_ref import GeographicalUnitRef
 from netex.models.geographical_units_rel_structure import GeographicalUnitsRelStructure
 from netex.models.interchanging import Interchanging
 from netex.models.interval_type_enumeration import IntervalTypeEnumeration
+from netex.models.logical_operation_enumeration import LogicalOperationEnumeration
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network import Network
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
@@ -113,7 +113,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='myfares:any'
@@ -128,12 +128,12 @@ obj = PublicationDelivery(
         value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='myfares:DTA@Nested_Zone',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             ValidBetween(
                                 from_date=XmlDateTime(2011, 1, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2011, 7, 1, 0, 0, 0, 0, 0)
@@ -293,7 +293,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Zonal fares - Nested zones'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -316,7 +316,7 @@ obj = PublicationDelivery(
                                                     number_of_units=1,
                                                     interval_type=IntervalTypeEnumeration.TARIFF_ZONE,
                                                     prices=GeographicalIntervalPricesRelStructure(
-                                                        cell_ref=[
+                                                        geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref=[
                                                             GeographicalIntervalPriceRef(
                                                                 version='1.0',
                                                                 ref='myfares:Nested_Zone@gi_1'
@@ -333,7 +333,7 @@ obj = PublicationDelivery(
                                                     number_of_units=2,
                                                     interval_type=IntervalTypeEnumeration.TARIFF_ZONE,
                                                     prices=GeographicalIntervalPricesRelStructure(
-                                                        cell_ref=[
+                                                        geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref=[
                                                             GeographicalIntervalPriceRef(
                                                                 version='1.0',
                                                                 ref='myfares:Nested_Zone@gi_2'
@@ -350,7 +350,7 @@ obj = PublicationDelivery(
                                                     number_of_units=3,
                                                     interval_type=IntervalTypeEnumeration.TARIFF_ZONE,
                                                     prices=GeographicalIntervalPricesRelStructure(
-                                                        cell_ref=[
+                                                        geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref=[
                                                             GeographicalIntervalPriceRef(
                                                                 version='1.0',
                                                                 ref='myfares:Nested_Zone@gi_3'
@@ -405,7 +405,7 @@ obj = PublicationDelivery(
                                                 FareStructureElement(
                                                     id='myfares:Nested_Zone@access',
                                                     version='1.0',
-                                                    choice=DistanceMatrixElementsRelStructure(
+                                                    choice_1=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
                                                                 version='any',
@@ -441,7 +441,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             group_of_lines_ref=[
                                                                 NetworkRef(
@@ -469,7 +469,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTrip(
@@ -653,7 +653,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         price_groups=PriceGroupsRelStructure(
-                                            price_group=[
+                                            price_group_ref_or_price_group=[
                                                 PriceGroupRef(
                                                     version='1.0',
                                                     ref='myfares:DTA@Nested_Zone'
@@ -675,7 +675,7 @@ obj = PublicationDelivery(
                                             version='ntx:v1.0',
                                             ref='ntx:trip'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -815,7 +815,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='ntx:Types_of_Tariff',
                                         version='ntx:v1.0',

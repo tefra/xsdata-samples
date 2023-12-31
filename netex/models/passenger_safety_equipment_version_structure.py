@@ -44,10 +44,10 @@ class PassengerSafetyEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sos_phones: Optional[bool] = field(
+    sos_panel: Optional[bool] = field(
         default=None,
         metadata={
-            "name": "SosPhones",
+            "name": "SosPanel",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

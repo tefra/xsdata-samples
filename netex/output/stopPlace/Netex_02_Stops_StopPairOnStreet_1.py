@@ -3,6 +3,7 @@ from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_info_facility_enumeration import AccessibilityInfoFacilityEnumeration
 from netex.models.accessibility_limitation import AccessibilityLimitation
 from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
+from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.codespace import Codespace
@@ -48,7 +49,6 @@ from netex.models.topographic_place_descriptor_versioned_child_structure import 
 from netex.models.topographic_place_ref import TopographicPlaceRef
 from netex.models.topographic_place_view import TopographicPlaceView
 from netex.models.topographic_places_in_frame_rel_structure import TopographicPlacesInFrameRelStructure
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
 from xsdata.models.datatype import XmlDateTime
 from xsdata.models.datatype import XmlDuration
@@ -67,7 +67,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    version_frame_ref=[
+                    choice_1=[
                         NetworkFilterByValueStructure(
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
@@ -95,12 +95,12 @@ obj = PublicationDelivery(
         value='Simple Stop pair On street example'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='mybus:CF002',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             AvailabilityCondition(
                                 id='jqx:CF002',
                                 version='any',
@@ -238,10 +238,10 @@ obj = PublicationDelivery(
                                                 ref='detop:TP_0032A'
                                             )
                                         ),
-                                        transport_mode=VehicleModeEnumeration.BUS,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='mybus:Q_SP_0751A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -401,11 +401,11 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='032',
                                             ref='jqx:SSP0021A'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='01',
                                             ref='mybus:SP_0751A'
                                         )
@@ -418,15 +418,15 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=2,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='032',
                                             ref='jqx:SSP0021A'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='01',
                                             ref='mybus:SP_0751A'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='01',
                                             ref='mybus:Q_SP_0751A_1'
                                         )
@@ -439,15 +439,15 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=3,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='032',
                                             ref='jqx:SSP0021A'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='01',
                                             ref='mybus:SP_0751A'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='01',
                                             ref='mybus:Q_SP_0751A_2'
                                         )

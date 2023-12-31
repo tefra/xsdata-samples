@@ -55,7 +55,7 @@ obj = PublicationDelivery(
         value='Olympic Venue Definitions'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='oda:OPK_all',
                 version='1.1',
@@ -4246,7 +4246,7 @@ obj = PublicationDelivery(
                                                     id='naptPoi:8100GRP@gBKH1',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='naptPoi:8100GRP@gBKH1',
                                                                     version='any',
@@ -4335,7 +4335,7 @@ obj = PublicationDelivery(
                                                     id='naptPoi:8100GRP@gBKH6',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='naptPoi:8100GRP@gBKH6',
                                                                     version='any',

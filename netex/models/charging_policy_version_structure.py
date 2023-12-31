@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
+from .deposit_policy_enumeration import DepositPolicyEnumeration
 from .travel_billing_policy_enumeration import TravelBillingPolicyEnumeration
 from .travel_credit_policy_enumeration import TravelCreditPolicyEnumeration
 from .usage_parameter_version_structure import UsageParameterVersionStructure
@@ -41,6 +42,14 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
         default=None,
         metadata={
             "name": "BillingPolicy",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    deposit_policy: Optional[DepositPolicyEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "DepositPolicy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

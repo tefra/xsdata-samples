@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .link_version_structure import LinkVersionStructure
+from .mode_restriction_assessments_rel_structure import (
+    ModeRestrictionAssessmentsRelStructure,
+)
 from .operational_context_ref import OperationalContextRef
 from .route_point_ref_structure import RoutePointRefStructure
 
@@ -34,6 +37,16 @@ class RouteLinkVersionStructure(LinkVersionStructure):
         default=None,
         metadata={
             "name": "OperationalContextRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    mode_restriction_assessments: Optional[
+        ModeRestrictionAssessmentsRelStructure
+    ] = field(
+        default=None,
+        metadata={
+            "name": "modeRestrictionAssessments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

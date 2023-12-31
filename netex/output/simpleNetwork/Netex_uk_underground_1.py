@@ -97,7 +97,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    version_frame_ref=[
+                    choice_1=[
                         CompositeFrameRef(
                             ref='tfl:LU_CF001'
                         ),
@@ -111,7 +111,7 @@ obj = PublicationDelivery(
         value='Netex basic Versioning Example Step 05'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='tfl:LU_CF001',
                 version='1',
@@ -255,7 +255,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='napt:Stop_types',
                                         version='any',

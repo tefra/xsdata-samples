@@ -825,14 +825,14 @@
           <serviceFacilitySets>
             <ServiceFacilitySet id="bbd:svcfc_general" version="any">
               <Description>General facilities</Description>
-              <AssistanceFacilityList>boardingAssistance conductor wheechairAssistance</AssistanceFacilityList>
+              <AssistanceFacilityList>boardingAssistance conductor wheelchairAssistance</AssistanceFacilityList>
               <CateringFacilityList>buffet</CateringFacilityList>
               <FareClasses>firstClass standardClass</FareClasses>
               <MobilityFacilityList>stepFreeAccess suitableForWheelchairs</MobilityFacilityList>
               <NuisanceFacilityList>mobilePhoneFreeZone noSmoking</NuisanceFacilityList>
               <PassengerCommsFacilityList>publicWifi</PassengerCommsFacilityList>
               <PassengerInformationFacilityList>nextStopIndicator passengerInformationDisplay realTimeConnections stopAnnouncements</PassengerInformationFacilityList>
-              <SanitaryFacilityList>toilet wheelChairAccessToilet</SanitaryFacilityList>
+              <SanitaryFacilityList>toilet wheelchairAccessToilet</SanitaryFacilityList>
               <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
               <AccommodationAccessList>reservation</AccommodationAccessList>
               <AccommodationFacilityList>couchette seating sleeper</AccommodationFacilityList>

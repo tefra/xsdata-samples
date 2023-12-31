@@ -80,6 +80,7 @@ from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStruc
 from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
+from netex.models.resource_frame import ResourceFrame
 from netex.models.route import Route
 from netex.models.route_link import RouteLink
 from netex.models.route_link_ref import RouteLinkRef
@@ -136,7 +137,11 @@ from netex.models.timing_point_status_enumeration import TimingPointStatusEnumer
 from netex.models.timing_points_in_frame_rel_structure import TimingPointsInFrameRelStructure
 from netex.models.timing_points_in_journey_pattern_rel_structure import TimingPointsInJourneyPatternRelStructure
 from netex.models.transport_submode import TransportSubmode
+from netex.models.type_of_flexible_service import TypeOfFlexibleService
 from netex.models.type_of_flexible_service_ref import TypeOfFlexibleServiceRef
+from netex.models.types_of_value_in_frame_rel_structure import TypesOfValueInFrameRelStructure
+from netex.models.types_of_value_structure import TypesOfValueStructure
+from netex.models.value_set import ValueSet
 from netex.models.vehicle_journey_run_time import VehicleJourneyRunTime
 from netex.models.vehicle_journey_run_times_rel_structure import VehicleJourneyRunTimesRelStructure
 from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
@@ -168,7 +173,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         TimetableFrameRef(
                             value='REQUEST',
                             ref='hde:TimetableFrameTIM_23_O'
@@ -183,7 +188,7 @@ obj = PublicationDelivery(
         value='Example  of simple flexible timetable  , zones and sequence   \n\t\n1. OVERVIEW\n============\n\n   The servIce has one zones  T.\n \tAll journeys go via stop A and B.\n \t\n\tThere are on demand services between specified start and end time.\n\t\t\n\t\t   9 to 5 Monday to Friday.\n\t   Booking starts 8 to 12: 1 to 4:30\n \t\t\t\t\t\t\t\t\t\t\n  There are two journesy scheduled for And B at specific times.\n\n==================================\n2. DETAILS\n\n FLEXIBLE LINE  mybus:FL_24\n\t\thas booking  and references one flexible stop places\n\nFLEXIBLE STOP PLACES defines  geometry of the FLEIXBLE zones  \n\t\ta)   FLEXIBLE STOP PLAcE: mybus:fsp_Tau\t\t\t\t\t \n\t\t\t\t with a two FLEXIBLE STOP AREAs     \t\n\t\t\t\t\t :mybus:fa_Tau_01\n\t\t\t \t :mybus:fa_Tau_02\n\nThere are just two    SERVICE JOURNEYs in the timetable  for LINE 24\n\n     (i)  SERVICE JOURNEY hde:sj_24o@01         \n             Departs 14:00             \n             has FLEXIBLE SERVICE PROPERTIES\n\n     (ii)  SERVICE JOURNEY hde:sj_24o@02     \n             Departs 15:00            \n          has FLEXIBLE SERVICE PROPERTIES\n\nSCHEDULED STOP POINTs\n\t    A)   mybus:ssp_001  Alpha\t\t\tFixed\t\t\t \n\t\tB)  mybus:ssp_002   Bravo\t\t\tFixed \t\t\t\t \n\t\tC)  mybus:ssp_077\t Charley=Tau    Zone\n\nSERVICE LINKS\n\t\t\tSERVICE LINK :\tA\t\t - B     \tmybus:SSP_001+SSP_002  \n\t\t\tSERVICE LINK :\tB\t\t - C\t\tmybus:SSP_002+SSP_077\n\n\nThere is a single SERVICE  PATTERN  has  three STOP POINTs IN JOURNEY PATTERN referencing the  three SCHEDULED STOP POINTs  \n which are connected by two      SERVICE LINKs   .\n \n SERVICE PATTERN:  ServicePattern:svp_24o  follows  SERVICE JOURNEY PATTERN:  ServiceJourneyPattern:sjp_24o\n\t1 A STOP POINT IN JOURNEY PATTERN\t hde:spip_24o@01\n\t\tSCHEDULED STOP POINT:  A  mybus:SSP_001  \n\t\tSERVICE LINK :\tA\t\t - B     \tmybus:SSP_001+SSP_002 \n\t2 B  STOP POINT IN JOURNEY PATTERN \t hde:spip_24o@02\n\t\tSCHEDULED STOP POINT: B     mybus:SSP_002\n\t\tSERVICE LINK :\tB\t\t - C\t\tmybus:SSP_002+SSP_077\n\t3 C  STOP POINT IN JOURNEY PATTERN \t hde:spip_24o@03\n\t\tSCHEDULED STOP POINT:   C   mybus:SSP_077\n \n \n   \nA COMPOSITE FRAME is used to group the component FRAMEs\n \n   - It has a VALIDITY CONDITION  that specifies it is valid from Sept to Matrch.\n\n\t\tA SERVICE  FRAME is used to contain the STOP POINT  elements   LINE, etc.\n\t\tA TIMETABLE FRAME is used to contain  the SERVICE JOURNEY   elements \n \n\t\t\t a SERVICE CALENDAR FRAMEb\tA SERVICE CALENDAR FRAME is used to contain the DAY TYPEs etc.\n\nThe Calendar is shown coded as\n      Compact : OPERATING DAYs are assumed for each calendar date within the period of the calendar.\n\t\n\t'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='hde:CAL_02',
                 version='1',
@@ -210,6 +215,33 @@ obj = PublicationDelivery(
                 ),
                 frames=FramesRelStructure(
                     common_frame=[
+                        ResourceFrame(
+                            id='mybus:svf_24',
+                            version='1',
+                            name=MultilingualString(
+                                value='ValueSet for TypeOfFlexibleService'
+                            ),
+                            types_of_value=TypesOfValueInFrameRelStructure(
+                                choice=[
+                                    ValueSet(
+                                        name_of_class_attribute='TypeOfFlexibleService',
+                                        id='myvalueset',
+                                        version='any',
+                                        values=TypesOfValueStructure(
+                                            type_of_value_or_type_of_entity=[
+                                                TypeOfFlexibleService(
+                                                    id='myfs',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='My Flexible Service'
+                                                    )
+                                                ),
+                                            ]
+                                        )
+                                    ),
+                                ]
+                            )
+                        ),
                         SiteFrame(
                             id='mybus:svf_24',
                             version='1',
@@ -289,7 +321,7 @@ obj = PublicationDelivery(
                                                             )
                                                         )
                                                     ),
-                                                    transport_mode=VehicleModeEnumeration.BUS,
+                                                    transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                                     boarding_use=True,
                                                     alighting_use=True
                                                 ),
@@ -347,7 +379,7 @@ obj = PublicationDelivery(
                                                             )
                                                         )
                                                     ),
-                                                    transport_mode=VehicleModeEnumeration.BUS,
+                                                    transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                                     boarding_use=True,
                                                     alighting_use=True
                                                 ),
@@ -756,7 +788,7 @@ obj = PublicationDelivery(
                                             value='Assigns Charley to Tau Zone ',
                                             lang='en'
                                         ),
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='mybus:SSP_077'
                                         ),
@@ -1000,7 +1032,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                journey_pattern=[
+                                choice=[
                                     ServiceJourneyPattern(
                                         id='hde:sjp_24o',
                                         version='any',
@@ -1113,7 +1145,7 @@ obj = PublicationDelivery(
                             id='hde:TIM_02',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='hde:AC_runs_02',
                                             version='any',
@@ -1134,8 +1166,8 @@ obj = PublicationDelivery(
                                                     TimebandVersionedChildStructure(
                                                         id='hde:AC_runs_01',
                                                         version='any',
-                                                        start_time=XmlTime(19, 0, 0, 0),
-                                                        end_time_or_day_offset_or_duration=[
+                                                        start_time_or_start_event=XmlTime(19, 0, 0, 0),
+                                                        choice=[
                                                             XmlTime(17, 0, 0, 0),
                                                         ]
                                                     ),
@@ -1180,16 +1212,16 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='hde:AC_booking_01',
                                                     version='any',
-                                                    start_time=XmlTime(8, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(8, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(12, 0, 0, 0),
                                                     ]
                                                 ),
                                                 TimebandVersionedChildStructure(
                                                     id='hde:AC_booking_02',
                                                     version='any',
-                                                    start_time=XmlTime(13, 0, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(13, 0, 0, 0),
+                                                    choice=[
                                                         XmlTime(16, 30, 0, 0),
                                                     ]
                                                 ),
@@ -1244,7 +1276,7 @@ obj = PublicationDelivery(
                                             value='EXTERNAL',
                                             ref='mybus:BLK_24o5'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:FL_24'
                                         ),
@@ -1337,7 +1369,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o@01_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -1366,7 +1398,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o@01_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -1399,7 +1431,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o@01_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -1449,7 +1481,7 @@ obj = PublicationDelivery(
                                             value='EXTERNAL',
                                             ref='mybus:BLK_24o8'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:FL_24'
                                         ),
@@ -1542,7 +1574,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o@02_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -1582,7 +1614,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o@02_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -1612,7 +1644,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o@02_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),

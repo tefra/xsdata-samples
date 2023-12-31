@@ -17,6 +17,7 @@ from .route_point_ref import RoutePointRef
 from .scheduled_stop_point_ref import ScheduledStopPointRef
 from .timing_point_ref import TimingPointRef
 from .traffic_control_point_ref import TrafficControlPointRef
+from .vehicle_meeting_point_ref import VehicleMeetingPointRef
 from .wire_point_ref import WirePointRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -45,6 +46,13 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
     )
     choice: List[
         Union[
+            VehicleMeetingPointRef,
+            WirePointRef,
+            RoadPointRef,
+            RailwayPointRef,
+            TrafficControlPointRef,
+            BeaconPointRef,
+            ActivationPointRef,
             BorderPointRef,
             FareScheduledStopPointRef,
             ScheduledStopPointRef,
@@ -53,12 +61,6 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
             ReliefPointRef,
             TimingPointRef,
             RoutePointRef,
-            WirePointRef,
-            RoadPointRef,
-            RailwayPointRef,
-            TrafficControlPointRef,
-            BeaconPointRef,
-            ActivationPointRef,
             PointRef,
         ]
     ] = field(
@@ -66,6 +68,41 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "VehicleMeetingPointRef",
+                    "type": VehicleMeetingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WirePointRef",
+                    "type": WirePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadPointRef",
+                    "type": RoadPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RailwayPointRef",
+                    "type": RailwayPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrafficControlPointRef",
+                    "type": TrafficControlPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BeaconPointRef",
+                    "type": BeaconPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActivationPointRef",
+                    "type": ActivationPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "BorderPointRef",
                     "type": BorderPointRef,
@@ -104,36 +141,6 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
                 {
                     "name": "RoutePointRef",
                     "type": RoutePointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "WirePointRef",
-                    "type": WirePointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RoadPointRef",
-                    "type": RoadPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RailwayPointRef",
-                    "type": RailwayPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrafficControlPointRef",
-                    "type": TrafficControlPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "BeaconPointRef",
-                    "type": BeaconPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ActivationPointRef",
-                    "type": ActivationPointRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

@@ -4,7 +4,6 @@ from netex.models.access_rights_in_product_rel_structure import AccessRightsInPr
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
-from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
 from netex.models.cell_versioned_child_structure import CellsRelStructure
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
 from netex.models.cell_versioned_child_structure import FareTable
@@ -49,6 +48,7 @@ from netex.models.line_ref import LineRef
 from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
+from netex.models.logical_operation_enumeration import LogicalOperationEnumeration
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network import Network
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
@@ -129,7 +129,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='myfares:FF01'
@@ -144,12 +144,12 @@ obj = PublicationDelivery(
         value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='myfares:DTA@z2Z',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             ValidBetween(
                                 from_date=XmlDateTime(2011, 1, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2011, 7, 1, 0, 0, 0, 0, 0)
@@ -457,7 +457,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Zone tozone tariff'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -466,7 +466,7 @@ obj = PublicationDelivery(
                                                 FareStructureElement(
                                                     id='myfares:Tz2z@access',
                                                     version='1.0',
-                                                    choice=DistanceMatrixElementsRelStructure(
+                                                    choice_1=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
                                                                 version='any',
@@ -502,7 +502,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             group_of_lines_ref=[
                                                                 NetworkRef(
@@ -527,7 +527,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:eligible'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.XOR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfile(
@@ -575,7 +575,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTrip(
@@ -701,7 +701,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         price_groups=PriceGroupsRelStructure(
-                                            price_group=[
+                                            price_group_ref_or_price_group=[
                                                 PriceGroupRef(
                                                     version='1.0',
                                                     ref='myfares:DTA@discounts'
@@ -727,7 +727,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Adult Zone to zone  Trip   '
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -922,7 +922,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         used_in=UsedInRefsRelStructure(
-                                            tariff_ref=[
+                                            choice=[
                                                 TariffRef(
                                                     version='1.0',
                                                     ref='myfares:Tz2z'
@@ -930,7 +930,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         cells=CellsRelStructure(
-                                            fare_price_or_fare_price_ref=[
+                                            choice=[
                                                 DistanceMatrixElementPrice(
                                                     id='myfares:Tz2z@Z1+Z1',
                                                     version='1.0',
@@ -1026,7 +1026,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='myfares:Types_of_Concession',
                                         version='any',

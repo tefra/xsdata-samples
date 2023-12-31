@@ -6,7 +6,7 @@ from .network_restriction_version_structure import (
     NetworkRestrictionVersionStructure,
 )
 from .point_ref_structure import PointRefStructure
-from .vehicle_type_ref_structure import VehicleTypeRefStructure
+from .transport_type_ref_structure import TransportTypeRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -43,7 +43,7 @@ class OvertakingPossibilityVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    overtaking_vehicle_type_ref: Optional[VehicleTypeRefStructure] = field(
+    overtaking_vehicle_type_ref: Optional[TransportTypeRefStructure] = field(
         default=None,
         metadata={
             "name": "OvertakingVehicleTypeRef",
@@ -51,7 +51,7 @@ class OvertakingPossibilityVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    overtaken_vehicle_type_ref: Optional[VehicleTypeRefStructure] = field(
+    overtaken_vehicle_type_ref: Optional[TransportTypeRefStructure] = field(
         default=None,
         metadata={
             "name": "OvertakenVehicleTypeRef",

@@ -1,6 +1,7 @@
 from decimal import Decimal
 from netex.models.access_right_in_product import AccessRightInProduct
 from netex.models.access_rights_in_product_rel_structure import AccessRightsInProductRelStructure
+from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_name import AlternativeName
 from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
@@ -23,7 +24,6 @@ from netex.models.availability_condition_ref import AvailabilityConditionRef
 from netex.models.baggage_type_enumeration import BaggageTypeEnumeration
 from netex.models.baggage_use_type_enumeration import BaggageUseTypeEnumeration
 from netex.models.blackout_start_enumeration import BlackoutStartEnumeration
-from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
 from netex.models.branding import Branding
 from netex.models.branding_ref import BrandingRef
 from netex.models.bus_submode_enumeration import BusSubmodeEnumeration
@@ -179,6 +179,7 @@ from netex.models.linear_ring import LinearRing
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.locale_structure import LocaleStructure
 from netex.models.location_structure_2 import LocationStructure2
+from netex.models.logical_operation_enumeration import LogicalOperationEnumeration
 from netex.models.luggage_allowance import LuggageAllowance
 from netex.models.luggage_allowance_ref import LuggageAllowanceRef
 from netex.models.luggage_allowance_type_enumeration import LuggageAllowanceTypeEnumeration
@@ -396,7 +397,7 @@ obj = PublicationDelivery(
         value='Example of Regional Toc  Based Tariff Regional Toc - Greater ANglia UK'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='atc:ATOC@Common_Toc_Products',
                 validity_conditions_or_valid_between=[
@@ -526,7 +527,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='types of trip'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -559,9 +560,9 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
-                                                            vehicle_modes=[
+                                                            vehicle_modes_or_transport_modes=[
                                                                 [
                                                                     VehicleModeEnumeration.RAIL,
                                                                 ],
@@ -578,7 +579,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        includes_grouping_type=LogicalOperationEnumeration.OR,
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
@@ -589,7 +590,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         type_of_product_category_ref=[
                                                                             TypeOfProductCategoryRef(
@@ -621,7 +622,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
                                                                 ClassOfUseRef(
@@ -648,7 +649,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfile(
@@ -860,7 +861,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfileRef(
@@ -877,7 +878,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        includes_grouping_type=LogicalOperationEnumeration.AND,
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
@@ -932,7 +933,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             type_of_product_category_ref=[
                                                                 TypeOfProductCategoryRef(
@@ -961,7 +962,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
                                                                 ClassOfUseRef(
@@ -975,7 +976,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        includes_grouping_type=LogicalOperationEnumeration.OR,
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
@@ -986,9 +987,9 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='Virgin Trains East Coast',
                                                                                 ref='atc:GR'
@@ -1010,9 +1011,9 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='East Midlands Trains',
                                                                                 ref='atc:EM'
@@ -1034,9 +1035,9 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='Great Western',
                                                                                 ref='atc:GW'
@@ -1068,7 +1069,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Routing(
@@ -1115,7 +1116,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Reserving(
@@ -1163,7 +1164,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Transferability(
@@ -1216,7 +1217,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 LuggageAllowance(
@@ -1263,7 +1264,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 PenaltyPolicy(
@@ -1308,7 +1309,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_purchase_when'
                                                         ),
-                                                        includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        includes_grouping_type=LogicalOperationEnumeration.OR,
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
@@ -1319,7 +1320,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             PurchaseWindow(
@@ -1342,7 +1343,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             PurchaseWindow(
@@ -1387,7 +1388,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:distribution_channel_restriction'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
@@ -1409,7 +1410,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:distribution_channel_restriction'
                                                                             ),
-                                                                            limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                            limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
@@ -1446,7 +1447,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:distribution_channel_restriction'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
@@ -1468,7 +1469,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:distribution_channel_restriction'
                                                                             ),
-                                                                            limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                            limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
@@ -1489,7 +1490,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:distribution_channel_restriction'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
@@ -1507,7 +1508,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:distribution_channel_restriction'
                                                                             ),
-                                                                            limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                            limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
@@ -1531,7 +1532,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:distribution_channel_restriction'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
@@ -1549,7 +1550,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:distribution_channel_restriction'
                                                                             ),
-                                                                            limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                            limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
@@ -1586,7 +1587,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='ATOC Trip  Tariff demand types /timebands'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -1605,7 +1606,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@off_peak_regular@all_stations@non_working_day',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='atc:ATOC@Tariff@Demand@off_peak_regular@non_working_day',
                                                                     version='01',
@@ -1639,7 +1640,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@off_peak_day@all_stations@non_working_day@leaving_from',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='atc:not_working_day'
@@ -1660,7 +1661,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@off_peak_day@all_stations@working_day@leaving_from',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='atc:ATOC@Tariff@Demand@off_peak_day@all_stations@working_day@leaving_from',
                                                                     version='01',
@@ -1683,7 +1684,7 @@ obj = PublicationDelivery(
                                                                             TimebandVersionedChildStructure(
                                                                                 id='atc:ATOC@Tariff@Demand@off_peak_day@all_stations@working_day@leaving_from',
                                                                                 version='01',
-                                                                                start_time=XmlTime(9, 30, 0, 0)
+                                                                                start_time_or_start_event=XmlTime(9, 30, 0, 0)
                                                                             ),
                                                                         ]
                                                                     )
@@ -1702,7 +1703,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@arriving_into',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='atc:working_day'
@@ -1738,7 +1739,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@leaving_from',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='atc:working_day'
@@ -1827,7 +1828,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@non_working_day',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='atc:ATOC@Tariff@Demand@super_off_peak@London_LST@non_working_day',
                                                                     version='01',
@@ -1882,7 +1883,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@working_day@arriving_into',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='atc:working_day'
@@ -1915,7 +1916,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@working_day@leaving_from',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='atc:working_day'
@@ -2001,10 +2002,12 @@ obj = PublicationDelivery(
                                                             ref='eura:can_access_when'
                                                         ),
                                                         temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                            day_type_ref=DayTypeRef(
-                                                                version='any',
-                                                                ref='atc:everyday'
-                                                            )
+                                                            day_type_ref=[
+                                                                DayTypeRef(
+                                                                    version='any',
+                                                                    ref='atc:everyday'
+                                                                ),
+                                                            ]
                                                         )
                                                     )
                                                 ),
@@ -2086,7 +2089,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                includes_grouping_type=LogicalOperationEnumeration.AND,
                                                                 includes=GenericParameterAssignmentsRelStructure(
                                                                     generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                         GenericParameterAssignment(
@@ -2400,7 +2403,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                includes_grouping_type=LogicalOperationEnumeration.AND,
                                                                 includes=GenericParameterAssignmentsRelStructure(
                                                                     generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                         GenericParameterAssignment(
@@ -2507,7 +2510,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                includes_grouping_type=LogicalOperationEnumeration.AND,
                                                                 includes=GenericParameterAssignmentsRelStructure(
                                                                     generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                         GenericParameterAssignment(
@@ -2854,7 +2857,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='types of trip'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -2951,7 +2954,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTrip(
@@ -3044,7 +3047,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTripRef(
@@ -3078,7 +3081,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
@@ -3123,7 +3126,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
@@ -3167,7 +3170,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@advance'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
@@ -3232,7 +3235,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
@@ -3322,7 +3325,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
@@ -3402,7 +3405,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
@@ -3492,7 +3495,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
@@ -3587,7 +3590,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     service_journey_ref=[
                                                                         ServiceJourneyRef(
@@ -3634,7 +3637,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     service_journey_ref=[
                                                                         ServiceJourneyRef(
@@ -3681,7 +3684,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     service_journey_ref=[
                                                                         ServiceJourneyRef(
@@ -3708,7 +3711,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Interchanging(
@@ -3749,7 +3752,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_purchase'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 GroupTicket(
@@ -3797,7 +3800,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicket(
@@ -3832,7 +3835,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    all_operators_ref_or_operator_ref=[
+                                                                    choice=[
                                                                         OperatorRef(
                                                                             value='Chiltern Railway',
                                                                             ref='atc:CH'
@@ -3854,7 +3857,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicket(
@@ -3889,7 +3892,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    all_operators_ref_or_operator_ref=[
+                                                                    choice=[
                                                                         OperatorRef(
                                                                             value='Stansted Express',
                                                                             ref='atc:SX'
@@ -3924,7 +3927,7 @@ obj = PublicationDelivery(
                                                             version='01',
                                                             ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 GroupTicket(
@@ -3986,12 +3989,14 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                         temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                            day_type_ref=DayTypeRef(
-                                                                ref='atc:Group_Saver_3-to-9_people@validDay',
-                                                                version_ref='TODO'
-                                                            )
+                                                            day_type_ref=[
+                                                                DayTypeRef(
+                                                                    ref='atc:Group_Saver_3-to-9_people@validDay',
+                                                                    version_ref='TODO'
+                                                                ),
+                                                            ]
                                                         ),
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
@@ -4000,7 +4005,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        includes_grouping_type=LogicalOperationEnumeration.AND,
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
@@ -4011,9 +4016,9 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     is_allowed=True,
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='c2c',
                                                                                 ref='atc:CC'
@@ -4106,9 +4111,9 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=2,
                                                                     is_allowed=True,
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='Arriva Trains Wales',
                                                                                 ref='atc:AW'
@@ -4132,9 +4137,9 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=3,
                                                                     is_allowed=False,
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='Great Western Railway',
                                                                                 ref='atc:GW'
@@ -4160,9 +4165,9 @@ obj = PublicationDelivery(
                                                                         value='Harlington  to  Heathrow Central',
                                                                         ref='atc:HAY_to_HXX'
                                                                     ),
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='Heathrow Express',
                                                                                 ref='atc:HX'
@@ -4181,9 +4186,9 @@ obj = PublicationDelivery(
                                                                     group_of_distance_matrix_elements_ref=GroupOfDistanceMatrixElementsRef(
                                                                         ref='atc:Group_Save@West_Midlands_exclusion_area'
                                                                     ),
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='West Midlands.',
                                                                                 ref='wm:WM'
@@ -4199,9 +4204,9 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=6,
                                                                     is_allowed=False,
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='London',
                                                                                 ref='atc:LT'
@@ -4227,9 +4232,9 @@ obj = PublicationDelivery(
                                                                         value='Or use type of product?',
                                                                         ref='tfl:oyster'
                                                                     ),
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='London .',
                                                                                 ref='atc:LT'
@@ -4261,7 +4266,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_purchase'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 GroupTicket(
@@ -4339,7 +4344,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 EntitlementGiven(
@@ -4380,7 +4385,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 EntitlementGiven(
@@ -4421,7 +4426,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 EntitlementGiven(
@@ -4454,7 +4459,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 EntitlementGiven(
@@ -4494,7 +4499,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 EntitlementGiven(
@@ -4530,7 +4535,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_purchase_when'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 PurchaseWindowRef(
@@ -4573,7 +4578,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             PurchaseWindow(
@@ -4590,7 +4595,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='Arriva Trains Wales',
                                                                                 ref='atc:AW'
@@ -4633,7 +4638,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='East Midlands Trains',
                                                                                 ref='atc:EM'
@@ -4681,7 +4686,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='Grand Central',
                                                                                 ref='atc:GC'
@@ -4713,7 +4718,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='Virgin Trains East Coast',
                                                                                 ref='atc:GR'
@@ -4749,7 +4754,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='Virgin Trains',
                                                                                 ref='atc:VT'
@@ -4784,7 +4789,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='c2c',
                                                                                 ref='atc:CC'
@@ -4831,7 +4836,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
-                                                                        all_operators_ref_or_operator_ref=[
+                                                                        choice=[
                                                                             OperatorRef(
                                                                                 value='Greater Anglia',
                                                                                 version='any',
@@ -4858,7 +4863,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_sale'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Replacing(
@@ -4894,7 +4899,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_sale'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Exchanging(
@@ -4955,7 +4960,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_sale'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Exchanging(
@@ -5010,7 +5015,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ExchangingRef(
@@ -5039,7 +5044,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ExchangingRef(
@@ -5068,7 +5073,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@advance'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ExchangingRef(
@@ -5118,7 +5123,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:can_access'
                                                                             ),
-                                                                            limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                            limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
@@ -5147,7 +5152,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTripRef(
@@ -5189,7 +5194,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
@@ -5268,7 +5273,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
@@ -5327,7 +5332,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
@@ -5365,7 +5370,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
@@ -5417,7 +5422,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
@@ -5489,7 +5494,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
@@ -5527,7 +5532,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
@@ -5595,7 +5600,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
@@ -5621,7 +5626,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='types of trip'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -5842,7 +5847,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Available  quotas'
                                                     ),
-                                                    choice=GroupOfDistanceMatrixElementsRef(
+                                                    choice_1=GroupOfDistanceMatrixElementsRef(
                                                         version='01',
                                                         ref='atc:TfL@ODs@London_transfers'
                                                     ),
@@ -5857,7 +5862,7 @@ obj = PublicationDelivery(
                                                                     ref='eura:quota_applies'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.METRO,
                                                                         ],
@@ -6046,7 +6051,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@COMMON'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
@@ -6084,7 +6089,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@COMMON'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
@@ -6122,7 +6127,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@COMMON'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
@@ -6163,9 +6168,9 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
-                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        all_operators_ref_or_operator_ref=[
+                                                        choice=[
                                                             OperatorRef(
                                                                 ref='LUL',
                                                                 version_ref='TODO'
@@ -6204,9 +6209,9 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
-                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -6355,7 +6360,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -6380,7 +6385,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             ExchangingRef(
@@ -6413,7 +6418,7 @@ obj = PublicationDelivery(
                                                         value='Group Tickets'
                                                     ),
                                                     order=1,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -6427,7 +6432,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicketRef(
@@ -6459,7 +6464,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicketRef(
@@ -6468,11 +6473,13 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    day_type_ref=DayTypeRef(
-                                                                        ref='atc:Group_Saver_3-to-9_people@validDay'
-                                                                    )
+                                                                    day_type_ref=[
+                                                                        DayTypeRef(
+                                                                            ref='atc:Group_Saver_3-to-9_people@validDay'
+                                                                        ),
+                                                                    ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     class_of_use_ref=[
@@ -6481,7 +6488,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                includes_grouping_type=LogicalOperationEnumeration.AND,
                                                                 includes=GenericParameterAssignmentsRelStructure(
                                                                     generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                         GenericParameterAssignment(
@@ -6492,9 +6499,9 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             is_allowed=True,
-                                                                            validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                            validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                all_operators_ref_or_operator_ref=[
+                                                                                choice=[
                                                                                     OperatorRef(
                                                                                         value='c2c',
                                                                                         ref='atc:CC'
@@ -6587,9 +6594,9 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=2,
                                                                             is_allowed=True,
-                                                                            validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                            validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                all_operators_ref_or_operator_ref=[
+                                                                                choice=[
                                                                                     OperatorRef(
                                                                                         value='Arriva Trains Wales',
                                                                                         ref='atc:AW'
@@ -6613,9 +6620,9 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=3,
                                                                             is_allowed=False,
-                                                                            validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                            validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                all_operators_ref_or_operator_ref=[
+                                                                                choice=[
                                                                                     OperatorRef(
                                                                                         value='Great Western Railway',
                                                                                         ref='atc:GW'
@@ -6641,9 +6648,9 @@ obj = PublicationDelivery(
                                                                                 value='Harlington  to  Heathrow Central',
                                                                                 ref='atc:HAY_to_HXX'
                                                                             ),
-                                                                            validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                            validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                all_operators_ref_or_operator_ref=[
+                                                                                choice=[
                                                                                     OperatorRef(
                                                                                         value='Heathrow Express',
                                                                                         ref='atc:HX'
@@ -6662,9 +6669,9 @@ obj = PublicationDelivery(
                                                                             group_of_distance_matrix_elements_ref=GroupOfDistanceMatrixElementsRef(
                                                                                 ref='atc:Group_Save@West_Midlands_exclusion_area'
                                                                             ),
-                                                                            validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                            validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                all_operators_ref_or_operator_ref=[
+                                                                                choice=[
                                                                                     OperatorRef(
                                                                                         value='West Midlands.',
                                                                                         ref='wm:WM'
@@ -6680,9 +6687,9 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=6,
                                                                             is_allowed=False,
-                                                                            validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                            validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                all_operators_ref_or_operator_ref=[
+                                                                                choice=[
                                                                                     OperatorRef(
                                                                                         value='London',
                                                                                         ref='atc:LT'
@@ -6708,9 +6715,9 @@ obj = PublicationDelivery(
                                                                                 value='Or use type of product?',
                                                                                 ref='tfl:oyster'
                                                                             ),
-                                                                            validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                            validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                all_operators_ref_or_operator_ref=[
+                                                                                choice=[
                                                                                     OperatorRef(
                                                                                         value='London .',
                                                                                         ref='atc:LT'
@@ -6745,7 +6752,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicketRef(
@@ -6755,7 +6762,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    all_operators_ref_or_operator_ref=[
+                                                                    choice=[
                                                                         OperatorRef(
                                                                             value='Chiltern Railway',
                                                                             ref='atc:CH'
@@ -6777,7 +6784,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicketRef(
@@ -6787,7 +6794,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    all_operators_ref_or_operator_ref=[
+                                                                    choice=[
                                                                         OperatorRef(
                                                                             value='Stansted Express',
                                                                             ref='atc:SX'
@@ -6809,7 +6816,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:gives_entitlement'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             LuggageAllowanceRef(
@@ -6909,7 +6916,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -6987,7 +6994,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@selected_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -7806,7 +7813,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@return@outbound@COMMON_rail_leg'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR
                                                             ),
                                                             GenericParameterAssignment(
                                                                 id='atc:ATOC@Products@Trip@Standard@return-COMMON-GSOP@trip@travel_document@inbound',
@@ -7823,7 +7830,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@return@inbound@COMMON_rail_leg'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR
                                                             ),
                                                         ]
                                                     ),
@@ -8386,7 +8393,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Flat rate supplements for TFC  trip products'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -8452,7 +8459,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:prerequisites'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 EntitlementRequired(
@@ -8753,7 +8760,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -8780,7 +8787,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             Exchanging(
@@ -8799,7 +8806,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         fare_class=[
                                                             FareClassEnumeration.SECOND_CLASS,
@@ -8854,7 +8861,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -8944,7 +8951,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -8970,7 +8977,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_purchase_when'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             PurchaseWindow(
@@ -9041,7 +9048,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -9098,7 +9105,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -9233,7 +9240,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
@@ -9398,7 +9405,7 @@ obj = PublicationDelivery(
                                             name=MultilingualString(
                                                 value='Dynamic pricing service for advance fares'
                                             ),
-                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                                 value='ATOC',
                                                 version='any',
                                                 ref='uic:1170'
@@ -9421,7 +9428,7 @@ obj = PublicationDelivery(
                                                 value='includes full derivation of child fare from adult '
                                             ),
                                         ],
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -9459,7 +9466,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                                                organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                                                     value='ATOC',
                                                                     version='any',
                                                                     ref='uic:1170'
@@ -9519,9 +9526,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('10.00')
@@ -9533,7 +9540,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -9545,7 +9552,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@onboard',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('12.00')
@@ -9574,9 +9581,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.60'),
@@ -9604,7 +9611,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
@@ -9632,7 +9639,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@child@onboard',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('8.00'),
@@ -9694,9 +9701,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('15.00')
@@ -9708,7 +9715,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('12.00')
@@ -9720,7 +9727,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@onboard',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -9749,9 +9756,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('10.00'),
@@ -9779,7 +9786,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('8.00'),
@@ -9807,7 +9814,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@child@onboard',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
@@ -9896,9 +9903,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('18.00')
@@ -9910,7 +9917,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('15.00')
@@ -9922,7 +9929,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                                                                choice=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@onboard',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -9954,9 +9961,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('12.00'),
@@ -9984,7 +9991,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('10.00'),
@@ -10012,7 +10019,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                                                                choice=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@onboard',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10061,9 +10068,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('17.00')
@@ -10075,7 +10082,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('21.00')
@@ -10087,7 +10094,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                                                                choice=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@onboard',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10115,9 +10122,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('18.00'),
@@ -10145,7 +10152,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('14.00'),
@@ -10173,7 +10180,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                                                                choice=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@onboard',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10213,7 +10220,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                                                organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                                                     value='ATOC',
                                                                     version='any',
                                                                     ref='uic:1170'
@@ -10273,9 +10280,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -10287,7 +10294,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -10316,9 +10323,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
@@ -10346,7 +10353,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
@@ -10408,9 +10415,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('12.00')
@@ -10422,7 +10429,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -10451,9 +10458,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('8.00'),
@@ -10481,7 +10488,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
@@ -10570,9 +10577,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('12.00')
@@ -10584,7 +10591,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -10613,9 +10620,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00'),
@@ -10643,7 +10650,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00'),
@@ -10705,9 +10712,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('9.00')
@@ -10719,7 +10726,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('2.00')
@@ -10748,9 +10755,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@child@in_station',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('6.00'),
@@ -10778,7 +10785,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@child@online',
                                                                                                                     version='01',
                                                                                                                     amount=Decimal('2.00'),
@@ -10836,7 +10843,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                                                organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                                                     value='ATOC',
                                                                     version='any',
                                                                     ref='uic:1170'
@@ -10907,9 +10914,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult@Q1',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10923,7 +10930,7 @@ obj = PublicationDelivery(
                                                                                                                         minimum_price=Decimal('3.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice=[
+                                                                                                                choice_1=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@first@Q1'
@@ -10932,7 +10939,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult@Q2',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10946,7 +10953,7 @@ obj = PublicationDelivery(
                                                                                                                         minimum_price=Decimal('4.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice=[
+                                                                                                                choice_1=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@first@Q2'
@@ -10955,7 +10962,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult@Q3',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -10969,7 +10976,7 @@ obj = PublicationDelivery(
                                                                                                                         minimum_price=Decimal('5.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice=[
+                                                                                                                choice_1=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@first@Q3'
@@ -10995,9 +11002,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@child@online',
                                                                                                                     version='01',
                                                                                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
@@ -11048,9 +11055,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult@Q1',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -11064,7 +11071,7 @@ obj = PublicationDelivery(
                                                                                                                         minimum_price=Decimal('2.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice=[
+                                                                                                                choice_1=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@second@Q1'
@@ -11073,7 +11080,7 @@ obj = PublicationDelivery(
                                                                                                                 order=1
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult@Q2',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -11087,7 +11094,7 @@ obj = PublicationDelivery(
                                                                                                                         minimum_price=Decimal('3.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice=[
+                                                                                                                choice_1=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@second@Q2'
@@ -11096,7 +11103,7 @@ obj = PublicationDelivery(
                                                                                                                 order=2
                                                                                                             ),
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult@Q3',
                                                                                                                     version='01',
                                                                                                                     name=MultilingualString(
@@ -11110,7 +11117,7 @@ obj = PublicationDelivery(
                                                                                                                         minimum_price=Decimal('4.00')
                                                                                                                     )
                                                                                                                 ),
-                                                                                                                choice=[
+                                                                                                                choice_1=[
                                                                                                                     FareQuotaFactorRef(
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@second@Q3'
@@ -11136,9 +11143,9 @@ obj = PublicationDelivery(
                                                                                                         ]
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
-                                                                                                        fare_price_or_fare_price_ref=[
+                                                                                                        choice=[
                                                                                                             CellVersionedChildStructure(
-                                                                                                                fare_price_ref_or_fare_price=SalesOfferPackagePrice(
+                                                                                                                choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@child@online',
                                                                                                                     version='01',
                                                                                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=LimitingRuleRef(
@@ -11197,7 +11204,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='ATOC Season pass Tariff'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -11290,7 +11297,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UsageValidityPeriod(
@@ -11342,7 +11349,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_purchase_when'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 PurchaseWindow(
@@ -11421,7 +11428,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Refunding(
@@ -11482,7 +11489,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    choice=GroupOfDistanceMatrixElementsRef(
+                                                    choice_1=GroupOfDistanceMatrixElementsRef(
                                                         version='01',
                                                         ref='atc:ATOC@ODs@LE@season'
                                                     ),
@@ -11513,7 +11520,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 FrequencyOfUse(
@@ -11545,7 +11552,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
-                                                        includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        includes_grouping_type=LogicalOperationEnumeration.OR,
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
@@ -11559,7 +11566,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:eligible'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             UserProfileRef(
@@ -11589,7 +11596,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:eligible'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             UserProfileRef(
@@ -11703,7 +11710,7 @@ obj = PublicationDelivery(
                                             value='\nThese are obtainable, free of charge, from any staffed railway ticket office. The adult rate photocard (for those aged 16 or over)  is the pink sample shown. All you need to get one of these is a passport size photograph. The child rate photocard (for those aged 5-15 when the term starts) is the yellow sample shown. To get one of these you must present a passport size photograph and a copy of the childs birth certificate to a staffed railway ticket office.\n\n***THE PHOTOCARD NUMBER***\n\nThis is combination of numbers and letters in black on the photocard. On the newer photocards this will be shown underneath the barcode (as in the samples shown).\n\n\n***CHILD PHOTOCARDS-MAKE SURE THEY ARE IN DATE***\nPlease make sure that your child rate photocard is in date (not past the "Valid Until" date shown on the card). Children who are aged 15 at the start fo the term but then turn 16 during the term can still obtain a child rate ticket for the whole term using their existing photocard (provided it was in date at the start of the term)turn 16 during the term can still obtain a child rate ticket for the whole term using their existing photocard (provided it was in date at the start of the term)\t\t\t\t\t\n\t\t\t\t\t'
                                         ),
                                         url='https://public.greenrailtravel.co.uk/scholars/photocard-information.html',
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -11751,7 +11758,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -11810,7 +11817,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -11855,7 +11862,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:condition_of_use'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             FrequencyOfUseRef(
@@ -11880,7 +11887,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RefundingRef(
@@ -11905,7 +11912,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_purchase_when'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             PurchaseWindowRef(
@@ -11938,7 +11945,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:gives_entitlement'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             LuggageAllowanceRef(
@@ -12257,7 +12264,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
@@ -12289,7 +12296,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_purchase_where'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -12365,7 +12372,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
@@ -12389,7 +12396,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -12413,7 +12420,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_purchase_where'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
@@ -12437,7 +12444,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:gives_entitlement'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             EntitlementGiven(
@@ -12457,7 +12464,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
@@ -12541,7 +12548,7 @@ obj = PublicationDelivery(
                                                                 id='atc:ATOC@Products@Pass@Season@annual-SOP@travel_documents@smart_card',
                                                                 version='01',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_operators_ref=[
                                                                         GroupOfOperatorsRef(
@@ -12732,7 +12739,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_operators_ref=[
                                                                         GroupOfOperatorsRef(
@@ -12804,7 +12811,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_operators_ref=[
                                                                         GroupOfOperatorsRef(
@@ -12857,7 +12864,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='ATOC Railcard   Tariff'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=RetailConsortiumRef(
+                                        choice=RetailConsortiumRef(
                                             value='National Rail enquiries',
                                             version='any',
                                             ref='atc:Consortium:NRE'
@@ -12904,7 +12911,7 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Tariff@Discount@demand@off_peak_day@all_stations@peak',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='atc:ATOC@Tariff@Discount@demand@off_peak_day@all_stations@peak@from',
                                                                     version='01',
@@ -12927,8 +12934,8 @@ obj = PublicationDelivery(
                                                                             TimebandVersionedChildStructure(
                                                                                 id='atc:ATOC@Tariff@Demand@peak@all_stations@from',
                                                                                 version='01',
-                                                                                start_time=XmlTime(4, 30, 0, 0),
-                                                                                end_time_or_day_offset_or_duration=[
+                                                                                start_time_or_start_event=XmlTime(4, 30, 0, 0),
+                                                                                choice=[
                                                                                     XmlTime(9, 59, 59, 0),
                                                                                 ]
                                                                             ),
@@ -12973,7 +12980,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    choice=GroupOfDistanceMatrixElementsRef(
+                                                    choice_1=GroupOfDistanceMatrixElementsRef(
                                                         version='01',
                                                         ref='atc:ATOC@ODs@LE@season'
                                                     )
@@ -12994,7 +13001,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         UserProfile(
@@ -13199,7 +13206,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicket(
@@ -13340,9 +13347,9 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                                 VehicleModeEnumeration.METRO,
@@ -13377,9 +13384,9 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                                 VehicleModeEnumeration.METRO,
@@ -13410,7 +13417,7 @@ obj = PublicationDelivery(
                                             value="National Railcards\n* Two Together Railcard. See GROUP TICKET\n* 16-25 Rail card - See USER PROFILE\n* Mature Student Railcard .  - See 16-25 USER PROFILE\n* Family & Friends Railcard. See GROUP TICKET\n* Senior Railcard\n* Disabled railcard  \n* HM Forces Railcard\n\nRailcards offer value for money if you travel by train, saving you at least 1/3 on most rail fares. You must carry your Railcard with you at all times during the journey in order to qualify for the discount\n\nYou can buy 16-25, Family & Friends, Senior, Two Together and Network Railcards online. \nAlternatively you can call your preferred Telesales line or visit your local station to apply\nTo make sure you don't miss out on any savings you can also renew your existing Railcard online up to 30 days in advance.  \n\nYou can buy a 3-year Family & Friends Railcard, available only online. It's great value at £70, saving you £20 on the cost of renewing your 1-year Railcard for three consecutive years\n\nIf you are travelling in a group and some members of your party have Railcards, you can now select and add more than one Railcard. When selecting different Railcards, choose the type from the drop down list in the 'Number of Railcards and Passengers' section, select the number of passengers holding that particular Railcard to be used and then click 'Add' after each selection.\n\nYour total journey cost will take into account the correct discounts for each of the Railcards and numbers of passengers entered.\n\n===============\n                                                         \nNetwork Railcard - £30 for a whole year\nExplore London and the South East area without the cost and hassle of driving and save money on days out with a Network Railcard.\n\nA Network Railcard gives you up to 1/3 off most rail fares for journeys in the Network Railcard area. \nAnyone 16 years and above can buy a Network Railcard.\nThe Network Railcard costs £30 and is valid for 12 months.  \n\nPlease note: Railcard discounts are not available on tickets for morning peak period services, for journeys wholly within the London & South East area on Monday to Friday, except on public holidays. See Time Restrictions for further details.\n\n==========\n\nRegional Railcards\nIn addition to these national railcards, a range of regional Railcards are available throughout the country. \n"
                                         ),
                                         url='http://www.nationalrail.co.uk/times_fares/46540.aspx',
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -13432,12 +13439,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
                                                         ],
-                                                        all_operators_ref_or_operator_ref=[
+                                                        choice=[
                                                             OperatorRef(
                                                                 value='ATOC',
                                                                 version='any',
@@ -13453,7 +13460,7 @@ obj = PublicationDelivery(
                                                         value='Available user profiles'
                                                     ),
                                                     order=1,
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -13547,7 +13554,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@selected_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -13642,11 +13649,11 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    time_structure_factor_ref=TimeIntervalRef(
+                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -13765,12 +13772,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='atc:gold_card_discount_day',
                                                                     version='01',
@@ -13833,7 +13840,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@selected_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -13933,7 +13940,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -14032,7 +14039,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -14053,7 +14060,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_access_when'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriod(
@@ -14065,7 +14072,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    time_structure_factor_ref=TimeIntervalRef(
+                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                     )
@@ -14139,7 +14146,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -14179,7 +14186,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -14204,7 +14211,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_purchase_where'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -14222,7 +14229,7 @@ obj = PublicationDelivery(
                                                                     value='One  year pass can be bought any channel'
                                                                 ),
                                                                 order=1,
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         UserProfileRef(
@@ -14235,7 +14242,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         GroupOfDistributionChannelsRef(
@@ -14244,7 +14251,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                time_structure_factor_ref=TimeIntervalRef(
+                                                                time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Discount@Rail_Cardrail_card@1year'
                                                                 )
@@ -14256,7 +14263,7 @@ obj = PublicationDelivery(
                                                                     value="You can buy a 3-year 16-25 Railcard, available only online. It's great value at £70, saving you an extra £20 on the cost of renewing your 1-year Railcard for three consecutive years. You can buy this 3-year Railcard up until the day before your 24th birthday."
                                                                 ),
                                                                 order=1,
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         UserProfile(
@@ -14267,7 +14274,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
@@ -14276,7 +14283,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                time_structure_factor_ref=TimeIntervalRef(
+                                                                time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Discount@Rail_Cardrail_card@3year'
                                                                 )
@@ -14295,7 +14302,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriod(
@@ -14344,7 +14351,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -14388,7 +14395,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -14428,7 +14435,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -14483,7 +14490,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -14523,7 +14530,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -14745,7 +14752,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='abga:ABGA@Branding',
                                         version='any',
@@ -14922,7 +14929,7 @@ obj = PublicationDelivery(
                                             value='Spring Term'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='abga:term@spring@2018'
                                         ),
@@ -14938,7 +14945,7 @@ obj = PublicationDelivery(
                                             value='summer Term'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='abga:term@summer@full@2018'
                                         ),
@@ -14954,7 +14961,7 @@ obj = PublicationDelivery(
                                             value='autumn Term'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='abga:term@autumn@2018'
                                         ),
@@ -15679,7 +15686,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Carnet Tariff'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15740,10 +15747,12 @@ obj = PublicationDelivery(
                                                                         ref='eura:can_access'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                        day_type_ref=FareDayTypeRef(
-                                                                            version='any',
-                                                                            ref='atc:everyday'
-                                                                        )
+                                                                        day_type_ref=[
+                                                                            FareDayTypeRef(
+                                                                                version='any',
+                                                                                ref='atc:everyday'
+                                                                            ),
+                                                                        ]
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         directions=[
@@ -15789,10 +15798,12 @@ obj = PublicationDelivery(
                                                                         ref='eura:can_access'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                        day_type_ref=FareDayTypeRef(
-                                                                            version='any',
-                                                                            ref='atc:everyday'
-                                                                        )
+                                                                        day_type_ref=[
+                                                                            FareDayTypeRef(
+                                                                                version='any',
+                                                                                ref='atc:everyday'
+                                                                            ),
+                                                                        ]
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         directions=[
@@ -15933,9 +15944,9 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -15956,7 +15967,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_product_category_ref=[
                                                                         TypeOfProductCategoryRef(
@@ -15981,7 +15992,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
@@ -16011,7 +16022,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     class_of_use_ref=[
                                                                         ClassOfUseRef(
@@ -16150,7 +16161,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:product@single_toc'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='Greater Anglia',
                                             version='any',
                                             ref='atc:LE'
@@ -16208,7 +16219,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -16229,7 +16240,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:condition_of_use'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
@@ -16250,7 +16261,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -16315,7 +16326,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             Refunding(
@@ -16344,7 +16355,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:gives_entitlement'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             LuggageAllowanceRef(
@@ -17167,7 +17178,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        all_operators_ref_or_operator_ref=[
+                                                        choice=[
                                                             OperatorRef(
                                                                 value='Greater Anglia',
                                                                 version='any',
@@ -17240,7 +17251,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@return@outbound@COMMON_rail_leg'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR
                                                             ),
                                                             GenericParameterAssignment(
                                                                 id='abga:LE@Products@Trip@return@anytime-DayTravelCard--SOP@trip@travel_document@inbound',
@@ -17257,7 +17268,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@return@inbound@COMMON_rail_leg'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR
                                                             ),
                                                         ]
                                                     ),
@@ -17409,7 +17420,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        all_operators_ref_or_operator_ref=[
+                                                        choice=[
                                                             OperatorRef(
                                                                 value='Greater Anglia',
                                                                 version='any',
@@ -17473,7 +17484,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Season  Tariff'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -17532,7 +17543,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Season  Tariff'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -17596,7 +17607,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 FrequencyOfUseRef(
@@ -17631,7 +17642,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:product@single_toc'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='Greater Anglia',
                                             version='any',
                                             ref='atc:LE'
@@ -17693,7 +17704,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -17785,7 +17796,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -17806,7 +17817,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_purchase'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
@@ -17827,7 +17838,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:gives_entitlement'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             EntitlementGiven(
@@ -17847,7 +17858,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
@@ -18099,7 +18110,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='nptg:TypeOfZone',
                                         version='any',
@@ -18166,7 +18177,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.RETAIL_CONSORTIUM,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.BUS,
+                                        primary_mode=AllModesEnumeration.BUS,
                                         operator_activities=[
                                             OperatorActivitiesEnumeration.PASSENGER,
                                         ]
@@ -18741,7 +18752,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                validity_condition_ref_or_validity_condition=[
+                                choice=[
                                     AvailabilityCondition(
                                         id='jsp:anytime@anyday',
                                         version='01',
@@ -18841,7 +18852,7 @@ obj = PublicationDelivery(
                                             value='Every day'
                                         ),
                                         description=MultilingualString(
-                                            value='ANy time'
+                                            value='Any time'
                                         ),
                                         earliest_time=XmlTime(0, 0, 0, 0),
                                         properties=PropertiesOfDayRelStructure(
@@ -18931,7 +18942,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='Tariff for plus bus passes'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='jsp:JSP'
                                         ),
@@ -18993,7 +19004,7 @@ obj = PublicationDelivery(
                                                     id='jsp:JSP@Tariff@PlusBus@Demand@anytime',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='jsp:anytime@anyday'
@@ -19011,7 +19022,7 @@ obj = PublicationDelivery(
                                                     id='jsp:JSP@Tariff@PlusBus@Demand@off_peak@after_1000am',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='jsp:working_day_after_10.00'
@@ -19033,7 +19044,7 @@ obj = PublicationDelivery(
                                                     id='jsp:JSP@Tariff@PlusBus@Demand@off_peak@after_0930am',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='jsp:working_day_after_9.30'
@@ -19055,7 +19066,7 @@ obj = PublicationDelivery(
                                                     id='jsp:JSP@Tariff@PlusBus@Demand@off_peak@varies_by_region',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 ValidityRuleParameter(
                                                                     id='jsp:JSP@Tariff@PlusBus@Demand@off_peak@varies_by_region@Outside_South_East',
                                                                     version='01',
@@ -19129,9 +19140,9 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
-                                                            vehicle_modes=[
+                                                            vehicle_modes_or_transport_modes=[
                                                                 [
                                                                     VehicleModeEnumeration.BUS,
                                                                 ],
@@ -19159,7 +19170,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:prerequisites'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 EntitlementRequired(
@@ -19197,7 +19208,7 @@ obj = PublicationDelivery(
                                                             ),
                                                         ]
                                                     ),
-                                                    quality_structure_factor_ref=QualityStructureFactorsRelStructure(
+                                                    choice=QualityStructureFactorsRelStructure(
                                                         quality_structure_factor_ref_or_quality_structure_factor=[
                                                             FareDemandFactorRef(
                                                                 version='01',
@@ -19228,7 +19239,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_lines_ref=[
                                                                         NetworkRef(
@@ -19236,7 +19247,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                includes_grouping_type=LogicalOperationEnumeration.AND,
                                                                 includes=GenericParameterAssignmentsRelStructure(
                                                                     generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                         GenericParameterAssignment(
@@ -19251,7 +19262,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:cannot_access'
                                                                             ),
-                                                                            validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                            validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 group_of_lines_ref=[
                                                                                     NetworkRef(
@@ -19278,7 +19289,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         UsageValidityPeriod(
@@ -19291,7 +19302,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                     ]
                                                                 ),
-                                                                includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                includes_grouping_type=LogicalOperationEnumeration.AND,
                                                                 includes=GenericParameterAssignmentsRelStructure(
                                                                     generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                         GenericParameterAssignment(
@@ -19429,7 +19440,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_lines_ref=[
                                                                         NetworkRef(
@@ -19448,7 +19459,7 @@ obj = PublicationDelivery(
                                                                                 version='any',
                                                                                 ref='eura:cannot_access'
                                                                             ),
-                                                                            validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                            validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 group_of_lines_ref=[
                                                                                     NetworkRef(
@@ -19649,7 +19660,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='jsp:JSP'
                                         ),
@@ -19701,7 +19712,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             GroupTicketRef(
@@ -19726,7 +19737,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_purchase_when'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             PurchaseWindow(
@@ -19759,7 +19770,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RefundingRef(
@@ -19807,7 +19818,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='jsp:JSP'
                                         ),
@@ -19832,7 +19843,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -19870,7 +19881,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:condition_of_use'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             FrequencyOfUseRef(
@@ -19898,7 +19909,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RefundingRef(
@@ -19995,7 +20006,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_purchase_when'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -20117,7 +20128,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
-                                                    time_structure_factor_ref=TimeIntervalRef(
+                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1week'
                                                     )
@@ -20155,7 +20166,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
-                                                    time_structure_factor_ref=TimeIntervalRef(
+                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1month'
                                                     )
@@ -20193,7 +20204,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
-                                                    time_structure_factor_ref=TimeIntervalRef(
+                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@3month'
                                                     )
@@ -20231,7 +20242,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
-                                                    time_structure_factor_ref=TimeIntervalRef(
+                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                     )
@@ -20275,7 +20286,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_purchase_where'
                                                     ),
-                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
@@ -20296,7 +20307,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_purchase_where'
                                                     ),
-                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         group_of_operators_ref=[
                                                             GroupOfOperatorsRef(
@@ -20376,7 +20387,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_operators_ref=[
                                                                         GroupOfOperatorsRef(
@@ -22248,7 +22259,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='P2P  based fares for  UK'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='ATOC',
                                             version='any',
                                             ref='uic:1170'
@@ -22265,7 +22276,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='A single O/D pair from the following'
                                                     ),
-                                                    choice=GroupOfDistanceMatrixElementsRef(
+                                                    choice_1=GroupOfDistanceMatrixElementsRef(
                                                         version='01',
                                                         ref='atc:ATOC@ODs@any_to_any'
                                                     )
@@ -22349,7 +22360,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='P2P  based fare structure elements for  UK, Greater Anglia'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -22881,7 +22892,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='London Transfers '
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -23051,7 +23062,7 @@ obj = PublicationDelivery(
                                 value='UK Specific  Calendar'
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                validity_condition_ref_or_validity_condition=[
+                                choice=[
                                     AvailabilityCondition(
                                         id='atc:not_working_day',
                                         version='01',
@@ -23479,7 +23490,7 @@ obj = PublicationDelivery(
                                             value='New Years Day'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 1, 1),
+                                        choice=XmlDate(2018, 1, 1),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
@@ -23492,7 +23503,7 @@ obj = PublicationDelivery(
                                             value='2nd Jan (Scotland)'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 1, 2),
+                                        choice=XmlDate(2018, 1, 2),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Scotland'
@@ -23505,7 +23516,7 @@ obj = PublicationDelivery(
                                             value='St Davids Day (Wales)'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 3, 1),
+                                        choice=XmlDate(2018, 3, 1),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Wales'
@@ -23518,7 +23529,7 @@ obj = PublicationDelivery(
                                             value="Substitute day (for St Patrick's Day) (Northern Ireland)"
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 3, 19),
+                                        choice=XmlDate(2018, 3, 19),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Northern_Ireland'
@@ -23531,7 +23542,7 @@ obj = PublicationDelivery(
                                             value='Good Friday'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 3, 30),
+                                        choice=XmlDate(2018, 3, 30),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
@@ -23544,7 +23555,7 @@ obj = PublicationDelivery(
                                             value='Easter Monday'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 4, 2),
+                                        choice=XmlDate(2018, 4, 2),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_not_Scotland'
@@ -23557,7 +23568,7 @@ obj = PublicationDelivery(
                                             value='Early May  Bank Holiday'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 5, 7),
+                                        choice=XmlDate(2018, 5, 7),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
@@ -23570,7 +23581,7 @@ obj = PublicationDelivery(
                                             value='Spring Bank Holiday Monday'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 5, 28),
+                                        choice=XmlDate(2018, 5, 28),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
@@ -23583,7 +23594,7 @@ obj = PublicationDelivery(
                                             value='Battle of the Boyne (Northern Ireland)'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 7, 12),
+                                        choice=XmlDate(2018, 7, 12),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Northern_Ireland'
@@ -23596,7 +23607,7 @@ obj = PublicationDelivery(
                                             value='August Bank Holiday Monday (Scotland)'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 8, 6),
+                                        choice=XmlDate(2018, 8, 6),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Scotland'
@@ -23609,7 +23620,7 @@ obj = PublicationDelivery(
                                             value='August Bank Holiday Monday (Not Scotland)'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 8, 27),
+                                        choice=XmlDate(2018, 8, 27),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_not_Scotland'
@@ -23622,7 +23633,7 @@ obj = PublicationDelivery(
                                             value="St Andrew's day (Scotland)"
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 11, 30),
+                                        choice=XmlDate(2018, 11, 30),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_Scotland'
@@ -23635,7 +23646,7 @@ obj = PublicationDelivery(
                                             value='Christmas Day'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 12, 15),
+                                        choice=XmlDate(2018, 12, 15),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
@@ -23648,7 +23659,7 @@ obj = PublicationDelivery(
                                             value='Boxng Day'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2018, 12, 26),
+                                        choice=XmlDate(2018, 12, 26),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
@@ -23661,7 +23672,7 @@ obj = PublicationDelivery(
                                             value='New Years Day'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2019, 1, 1),
+                                        choice=XmlDate(2019, 1, 1),
                                         day_type_ref=FareDayTypeRef(
                                             version='any',
                                             ref='atc:public_holiday_UK'
@@ -23674,7 +23685,7 @@ obj = PublicationDelivery(
                                             value='Week1'
                                         ),
                                         order=3,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='atc:op@2018_w1_d'
                                         ),
@@ -23690,7 +23701,7 @@ obj = PublicationDelivery(
                                             value='Week 1'
                                         ),
                                         order=3,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='atc:op@2018_w1_we'
                                         ),
@@ -23706,7 +23717,7 @@ obj = PublicationDelivery(
                                             value='Week 2'
                                         ),
                                         order=3,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='atc:op@2018_w2_d'
                                         ),
@@ -23722,7 +23733,7 @@ obj = PublicationDelivery(
                                             value='Week 2'
                                         ),
                                         order=2,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='atc:op@2018_w2_we'
                                         ),
@@ -23738,7 +23749,7 @@ obj = PublicationDelivery(
                                             value='Week 3'
                                         ),
                                         order=3,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='atc:op@2018_w3_d'
                                         ),
@@ -23754,7 +23765,7 @@ obj = PublicationDelivery(
                                             value='Week 3'
                                         ),
                                         order=3,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='atc:op@2018_w3_we'
                                         ),
@@ -23770,7 +23781,7 @@ obj = PublicationDelivery(
                                             value='Week 4'
                                         ),
                                         order=3,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='atc:op@2018_w4_d'
                                         ),
@@ -23786,7 +23797,7 @@ obj = PublicationDelivery(
                                             value='Week 4'
                                         ),
                                         order=3,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='atc:op@2018_w4_we'
                                         ),
@@ -23802,7 +23813,7 @@ obj = PublicationDelivery(
                                             value='Week 5'
                                         ),
                                         order=3,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='atc:op@2018_w5_d'
                                         ),
@@ -23818,7 +23829,7 @@ obj = PublicationDelivery(
                                             value='Week 5'
                                         ),
                                         order=3,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingPeriodRef(
+                                        choice=OperatingPeriodRef(
                                             version='01',
                                             ref='atc:op@2018_w5_we'
                                         ),
@@ -23931,7 +23942,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='atc:Types_of_ProductCategory_class',
                                         version='any',
@@ -24063,7 +24074,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Network Rail'
                                         ),
-                                        primary_mode=VehicleModeEnumeration.RAIL,
+                                        primary_mode=AllModesEnumeration.RAIL,
                                         operator_activities=[
                                             OperatorActivitiesEnumeration.INFRASTRUCTURE,
                                         ]
@@ -24077,7 +24088,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Any  Rail Operator'
                                         ),
-                                        primary_mode=VehicleModeEnumeration.RAIL,
+                                        primary_mode=AllModesEnumeration.RAIL,
                                         operator_activities=[
                                             OperatorActivitiesEnumeration.PASSENGER,
                                         ]
@@ -24105,7 +24116,8 @@ obj = PublicationDelivery(
                                         ],
                                         status=True,
                                         country_ref=CountryRef(
-                                            ref=IanaCountryTldEnumeration.UK
+                                            ref=IanaCountryTldEnumeration.UK,
+                                            ref_principality='ENG'
                                         ),
                                         address=PostalAddressVersionStructure(
                                             house_number='18-20',
@@ -24117,7 +24129,7 @@ obj = PublicationDelivery(
                                             ),
                                             post_code='EC4A 3AG'
                                         ),
-                                        primary_mode=VehicleModeEnumeration.RAIL,
+                                        primary_mode=AllModesEnumeration.RAIL,
                                         operator_activities=[
                                             OperatorActivitiesEnumeration.PASSENGER,
                                         ]
@@ -24159,7 +24171,7 @@ obj = PublicationDelivery(
                                             ),
                                             post_code='SE10 0ES'
                                         ),
-                                        primary_mode=VehicleModeEnumeration.METRO,
+                                        primary_mode=AllModesEnumeration.METRO,
                                         operator_activities=[
                                             OperatorActivitiesEnumeration.PASSENGER,
                                         ]
@@ -24185,7 +24197,7 @@ obj = PublicationDelivery(
                                             OrganisationTypeEnumeration.RETAIL_CONSORTIUM,
                                         ],
                                         members=OrganisationRefsRelStructure(
-                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=[
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=[
                                                 OperatorRef(
                                                     value='Alliance Rail',
                                                     ref='atc:AR'
@@ -24895,7 +24907,7 @@ obj = PublicationDelivery(
                                                                                     ),
                                                                                 ]
                                                                             ),
-                                                                            time_structure_factor_ref=TimeIntervalRef(
+                                                                            time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@Pass@PlusBus@day_pass@1day'
                                                                             ),
@@ -24910,7 +24922,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     travel_documents=TravelDocumentsRelStructure(
-                                                        travel_document_ref_or_travel_document=[
+                                                        choice=[
                                                             TravelDocumentRef(
                                                                 value='EXTERNAL REFERENCE',
                                                                 ref='abga-t:LE-T145634010',
@@ -25030,7 +25042,7 @@ obj = PublicationDelivery(
                                                                                     ),
                                                                                 ]
                                                                             ),
-                                                                            time_structure_factor_ref=TimeIntervalRef(
+                                                                            time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                                             )
@@ -25041,7 +25053,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     travel_documents=TravelDocumentsRelStructure(
-                                                        travel_document_ref_or_travel_document=[
+                                                        choice=[
                                                             TravelDocumentRef(
                                                                 value='EXTERNAL REFERENCE',
                                                                 ref='abga-t:LE-P4536',
@@ -25197,7 +25209,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     TypeOfFrame(
                                         id='eura:Fare',
                                         version='any',

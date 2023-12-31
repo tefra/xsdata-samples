@@ -12,6 +12,8 @@ class TypeOfInfolinkEnumeration(Enum):
     TIMETABLE_DOCUMENT = "timetableDocument"
     FARE_SHEET = "fareSheet"
     DATA_LICENCE = "dataLicence"
+    MOBILE_APP_DOWNLOAD = "mobileAppDownload"
+    MOBILE_APP_INSTALL_CHECK = "mobileAppInstallCheck"
     MAP = "map"
     ICON = "icon"
     OTHER = "other"

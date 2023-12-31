@@ -3315,9 +3315,9 @@ Oyster_PayAsYouGo_right -   PayAsYouGo_trip
                     <VehicleModes>metro</VehicleModes>
                   </validityParameters>
                 </GenericParameterAssignment>
-                <GenericParameterAssignment id="tfl:Prepaid_trip" version="any" order="2">
+                <GenericParameterAssignment id="tfl:Prepaid_trip@single" version="any" order="2">
                   <Name>Cant Break Metro journeys</Name>
-                  <Description>  														Flat far simgle tripcase. </Description>
+                  <Description>Flat fare single trip case.</Description>
                   <TypeOfAccessRightAssignmentRef version="any" ref="tfl:condition_of_use"/>
                   <limitations>
                     <InterchangingRef version="any" ref="tfl:no_interchange_cannot_break_journey"/>
@@ -4032,7 +4032,7 @@ Gold Card
                 </FareTable>
               </fareTables>
               <ChargingMomentRef version="any" ref="tfl:payAsYouGo"/>
-              <ChargingMomentType>onStarThenAdjustAtEndOfFareDay</ChargingMomentType>
+              <ChargingMomentType>onStartThenAdjustAtEndOfFareDay</ChargingMomentType>
               <AuthorityRef version="any" ref="tfl:TfL"/>
               <ConditionSummary>
                 <TariffBasis>flat</TariffBasis>
@@ -13189,7 +13189,7 @@ All other journeys on this service	£3.00	n/a	£2.00</Description>
                             <GroupTicketRef version="any" ref="lrs:River_cruise"/>
                           </limitations>
                         </GenericParameterAssignment>
-                        <GenericParameterAssignment id="lrs:London_Eye_River_tour@01@Freedom_passNot" version="any" order="2">
+                        <GenericParameterAssignment id="lrs:London_Eye_River_tour@01@TravelCard_Freedom_passNot" version="any" order="2">
                           <Description>Travelcard and Freedom Pass discounts do not apply on this route.</Description>
                           <IsAllowed>false</IsAllowed>
                           <TypeOfAccessRightAssignmentRef version="any" ref="tfl:eligible"/>
@@ -13883,7 +13883,7 @@ Oyster card holders who want to travel on the Emirates Air Line as part of a 360
                     <VehicleModes>cableway</VehicleModes>
                   </validityParameters>
                 </GenericParameterAssignment>
-                <GenericParameterAssignment id="ea:360_cableway_trip" version="any" order="2">
+                <GenericParameterAssignment id="ea:360_cableway_trip@CannotBreakJourney" version="any" order="2">
                   <TypeOfAccessRightAssignmentRef version="any" ref="tfl:condition_of_use"/>
                   <ValidableElementRef version="any" ref="ea:cableway_trip"/>
                   <limitations>

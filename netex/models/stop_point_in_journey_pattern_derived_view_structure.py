@@ -7,6 +7,7 @@ from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .onward_service_link_view import OnwardServiceLinkView
 from .onward_timing_link_view import OnwardTimingLinkView
 from .point_in_journey_pattern_ref import PointInJourneyPatternRef
+from .point_in_single_journey_path_ref import PointInSingleJourneyPathRef
 from .scheduled_stop_point_ref import ScheduledStopPointRef
 from .scheduled_stop_point_view import ScheduledStopPointView
 from .service_link_ref_structure import ServiceLinkRefStructure
@@ -26,6 +27,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
 
     point_in_journey_pattern_ref: Optional[
         Union[
+            PointInSingleJourneyPathRef,
             FarePointInPatternRef,
             StopPointInJourneyPatternRef,
             TimingPointInJourneyPatternRef,
@@ -36,6 +38,11 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "PointInSingleJourneyPathRef",
+                    "type": PointInSingleJourneyPathRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "FarePointInPatternRef",
                     "type": FarePointInPatternRef,
@@ -67,7 +74,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_point_ref: Optional[
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[
         Union[
             FareScheduledStopPointRef,
             ScheduledStopPointRef,

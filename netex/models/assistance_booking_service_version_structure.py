@@ -8,10 +8,16 @@ from .authority_ref import AuthorityRef
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .contact_structure import ContactStructure
 from .flexible_line_ref import FlexibleLineRef
+from .flexible_mode_of_operation_ref import FlexibleModeOfOperationRef
 from .line_ref import LineRef
 from .local_service_version_structure import LocalServiceVersionStructure
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .operator_ref import OperatorRef
+from .personal_mode_of_operation_ref import PersonalModeOfOperationRef
+from .scheduled_mode_of_operation_ref import ScheduledModeOfOperationRef
+from .vehicle_pooling_ref import VehiclePoolingRef
+from .vehicle_rental_ref import VehicleRentalRef
+from .vehicle_sharing_ref import VehicleSharingRef
 from .version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -62,6 +68,53 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "VehicleMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: Optional[
+        Union[
+            PersonalModeOfOperationRef,
+            VehiclePoolingRef,
+            VehicleSharingRef,
+            VehicleRentalRef,
+            FlexibleModeOfOperationRef,
+            ScheduledModeOfOperationRef,
+        ]
+    ] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PersonalModeOfOperationRef",
+                    "type": PersonalModeOfOperationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehiclePoolingRef",
+                    "type": VehiclePoolingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleSharingRef",
+                    "type": VehicleSharingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleRentalRef",
+                    "type": VehicleRentalRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleModeOfOperationRef",
+                    "type": FlexibleModeOfOperationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledModeOfOperationRef",
+                    "type": ScheduledModeOfOperationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )
     transport_organisation_ref: Optional[

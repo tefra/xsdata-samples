@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+from .additional_driver_option import AdditionalDriverOption
+from .additional_driver_option_ref import AdditionalDriverOptionRef
+from .booking_policy_ref import BookingPolicyRef
 from .cancelling import Cancelling
 from .cancelling_ref import CancellingRef
 from .charging_policy import ChargingPolicy
@@ -34,6 +37,10 @@ from .purchase_window import PurchaseWindow
 from .purchase_window_ref import PurchaseWindowRef
 from .refunding import Refunding
 from .refunding_ref import RefundingRef
+from .rental_option import RentalOption
+from .rental_option_ref import RentalOptionRef
+from .rental_penalty_policy import RentalPenaltyPolicy
+from .rental_penalty_policy_ref import RentalPenaltyPolicyRef
 from .replacing import Replacing
 from .replacing_ref import ReplacingRef
 from .reselling import Reselling
@@ -68,6 +75,8 @@ from .usage_validity_period import UsageValidityPeriod
 from .usage_validity_period_ref import UsageValidityPeriodRef
 from .user_profile import UserProfile
 from .user_profile_ref import UserProfileRef
+from .vehicle_pooler_profile import VehiclePoolerProfile
+from .vehicle_pooler_profile_ref import VehiclePoolerProfileRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -79,6 +88,9 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
 
     choice: List[
         Union[
+            AdditionalDriverOptionRef,
+            RentalOptionRef,
+            RentalPenaltyPolicyRef,
             SalesOfferPackageEntitlementGivenRef,
             SalesOfferPackageEntitlementRequiredRef,
             MinimumStayRef,
@@ -95,6 +107,7 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
             EligibilityChangePolicyRef,
             GroupTicketRef,
             CommercialProfileRef,
+            VehiclePoolerProfileRef,
             CompanionProfileRef,
             UserProfileRef,
             ProfileParameterRef,
@@ -108,7 +121,12 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
             ResellingRef,
             CancellingRef,
             ReservingRef,
+            BookingPolicyRef,
             PurchaseWindowRef,
+            AdditionalDriverOption,
+            RentalOption,
+            RentalPenaltyPolicy,
+            VehiclePoolerProfile,
             SalesOfferPackageEntitlementRequired,
             SalesOfferPackageEntitlementGiven,
             MinimumStay,
@@ -144,6 +162,21 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "AdditionalDriverOptionRef",
+                    "type": AdditionalDriverOptionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalOptionRef",
+                    "type": RentalOptionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalPenaltyPolicyRef",
+                    "type": RentalPenaltyPolicyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "SalesOfferPackageEntitlementGivenRef",
                     "type": SalesOfferPackageEntitlementGivenRef,
@@ -225,6 +258,11 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "VehiclePoolerProfileRef",
+                    "type": VehiclePoolerProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "CompanionProfileRef",
                     "type": CompanionProfileRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -290,8 +328,33 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "BookingPolicyRef",
+                    "type": BookingPolicyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "PurchaseWindowRef",
                     "type": PurchaseWindowRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AdditionalDriverOption",
+                    "type": AdditionalDriverOption,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalOption",
+                    "type": RentalOption,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalPenaltyPolicy",
+                    "type": RentalPenaltyPolicy,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehiclePoolerProfile",
+                    "type": VehiclePoolerProfile,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

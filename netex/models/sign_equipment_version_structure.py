@@ -2,17 +2,16 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from .audio_trigger_method_enumeration import AudioTriggerMethodEnumeration
-from .installed_equipment_version_structure import (
-    InstalledEquipmentVersionStructure,
-)
+from .font_size_enumeration import FontSizeEnumeration
 from .multilingual_string import MultilingualString
+from .place_equipment_version_structure import PlaceEquipmentVersionStructure
 from .print_presentation_structure import PrintPresentationStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
+class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
     class Meta:
         name = "SignEquipment_VersionStructure"
 
@@ -100,6 +99,14 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
         default=None,
         metadata={
             "name": "Contrast",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    font_size: Optional[FontSizeEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "FontSize",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

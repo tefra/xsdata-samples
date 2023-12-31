@@ -20,6 +20,7 @@ from .service_journey_ref_structure import ServiceJourneyRefStructure
 from .stop_area_ref_structure import StopAreaRefStructure
 from .stop_place_ref import StopPlaceRef
 from .stop_place_ref_structure import StopPlaceRefStructure
+from .taxi_rank_ref import TaxiRankRef
 from .time_demand_type_ref import TimeDemandTypeRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -51,12 +52,22 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_ref: Optional[StopPlaceRef] = field(
+    stop_place_ref: Optional[Union[TaxiRankRef, StopPlaceRef]] = field(
         default=None,
         metadata={
-            "name": "StopPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TaxiRankRef",
+                    "type": TaxiRankRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceRef",
+                    "type": StopPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )
     all_lines_or_lines_in_direction_refs_or_line_in_direction_ref: List[

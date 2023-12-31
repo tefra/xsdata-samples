@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from .ticketing_facility_enumeration import TicketingFacilityEnumeration
+from .scope_of_ticket_enumeration import ScopeOfTicketEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -10,7 +10,7 @@ class ScopeOfTicketList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: List[TicketingFacilityEnumeration] = field(
+    value: List[ScopeOfTicketEnumeration] = field(
         default_factory=list,
         metadata={
             "tokens": True,

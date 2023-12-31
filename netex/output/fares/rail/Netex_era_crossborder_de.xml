@@ -111,6 +111,10 @@
                   <GenericParameterAssignment id="tlx:Trilex@Tariff@Tagesticket@sections" version="01" order="1">
                     <ValidityParameterGroupingType>AND</ValidityParameterGroupingType>
                     <validityParameters>
+                      <VehicleModes>rail</VehicleModes>
+                      <TransportSubmode>
+                        <RailSubmode>longDistance</RailSubmode>
+                      </TransportSubmode>
                       <FareSectionRef version="01" ref="tlx:Trilex@Dresden-to-Goerlitz"/>
                       <FareSectionRef version="01" ref="tlx:Trilex@Dresden-to-Liberec"/>
                       <FareSectionRef version="01" ref="tlx:Trilex@Seifhennersdorf-to-Liberec"/>
@@ -370,6 +374,10 @@ Saturdays / Sundays / public holidays: 00:00 to 03:00 the following day</Descrip
                   <Name>Dresden to Wroclaw section</Name>
                   <GenericParameterAssignment id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@de_pl" version="01" order="1">
                     <validityParameters>
+                      <TransportModes>rail</TransportModes>
+                      <TransportSubmode>
+                        <RailSubmode>highSpeedRail</RailSubmode>
+                      </TransportSubmode>
                       <FareSectionRef version="01" ref="tlx:Trilex@Dresden-to-Wroclaw"/>
                     </validityParameters>
                   </GenericParameterAssignment>
@@ -1361,7 +1369,7 @@ issued to DB ticket vending machines.</Description>
           <dayTypes>
             <FareDayType id="tlx::everyday" version="any">
               <Name>Every day</Name>
-              <Description>ANy time</Description>
+              <Description>Any time</Description>
               <EarliestTime>00:00:00</EarliestTime>
               <DayLength>P1DT3H</DayLength>
               <properties>

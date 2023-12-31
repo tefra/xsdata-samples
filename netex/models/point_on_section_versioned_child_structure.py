@@ -12,6 +12,7 @@ from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point import GaragePoint
 from .garage_point_ref import GaragePointRef
 from .line_link_ref import LineLinkRef
+from .onward_vehicle_meeting_link_ref import OnwardVehicleMeetingLinkRef
 from .parking_point import ParkingPoint
 from .parking_point_ref import ParkingPointRef
 from .path_junction import PathJunction
@@ -40,6 +41,9 @@ from .timing_point import TimingPoint
 from .timing_point_ref import TimingPointRef
 from .traffic_control_point import TrafficControlPoint
 from .traffic_control_point_ref import TrafficControlPointRef
+from .vehicle_meeting_link_ref import VehicleMeetingLinkRef
+from .vehicle_meeting_point import VehicleMeetingPoint
+from .vehicle_meeting_point_ref import VehicleMeetingPointRef
 from .wire_junction import WireJunction
 from .wire_link_ref import WireLinkRef
 from .wire_point_ref import WirePointRef
@@ -56,6 +60,13 @@ class PointOnSectionVersionedChildStructure(
 
     choice_1: Optional[
         Union[
+            VehicleMeetingPointRef,
+            WirePointRef,
+            RoadPointRef,
+            RailwayPointRef,
+            TrafficControlPointRef,
+            BeaconPointRef,
+            ActivationPointRef,
             BorderPointRef,
             FareScheduledStopPointRef,
             ScheduledStopPointRef,
@@ -64,13 +75,8 @@ class PointOnSectionVersionedChildStructure(
             ReliefPointRef,
             TimingPointRef,
             RoutePointRef,
-            WirePointRef,
-            RoadPointRef,
-            RailwayPointRef,
-            TrafficControlPointRef,
-            BeaconPointRef,
-            ActivationPointRef,
             PointRef,
+            VehicleMeetingPoint,
             BorderPoint,
             FareScheduledStopPoint,
             ScheduledStopPoint,
@@ -93,6 +99,41 @@ class PointOnSectionVersionedChildStructure(
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "VehicleMeetingPointRef",
+                    "type": VehicleMeetingPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WirePointRef",
+                    "type": WirePointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoadPointRef",
+                    "type": RoadPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RailwayPointRef",
+                    "type": RailwayPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrafficControlPointRef",
+                    "type": TrafficControlPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BeaconPointRef",
+                    "type": BeaconPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActivationPointRef",
+                    "type": ActivationPointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "BorderPointRef",
                     "type": BorderPointRef,
@@ -134,38 +175,13 @@ class PointOnSectionVersionedChildStructure(
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "WirePointRef",
-                    "type": WirePointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RoadPointRef",
-                    "type": RoadPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RailwayPointRef",
-                    "type": RailwayPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrafficControlPointRef",
-                    "type": TrafficControlPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "BeaconPointRef",
-                    "type": BeaconPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "ActivationPointRef",
-                    "type": ActivationPointRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "PointRef",
                     "type": PointRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleMeetingPoint",
+                    "type": VehicleMeetingPoint,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -253,21 +269,33 @@ class PointOnSectionVersionedChildStructure(
     )
     link_ref_or_infrastructure_link_ref: Optional[
         Union[
+            OnwardVehicleMeetingLinkRef,
+            VehicleMeetingLinkRef,
             ServiceLinkRef,
             LineLinkRef,
-            PathLinkRef,
             TimingLinkRef,
-            RouteLinkRef,
             WireLinkRef,
             RoadLinkRef,
             RailwayLinkRef,
             ActivationLinkRef,
+            PathLinkRef,
+            RouteLinkRef,
         ]
     ] = field(
         default=None,
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "OnwardVehicleMeetingLinkRef",
+                    "type": OnwardVehicleMeetingLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleMeetingLinkRef",
+                    "type": VehicleMeetingLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "ServiceLinkRef",
                     "type": ServiceLinkRef,
@@ -279,18 +307,8 @@ class PointOnSectionVersionedChildStructure(
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PathLinkRef",
-                    "type": PathLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TimingLinkRef",
                     "type": TimingLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RouteLinkRef",
-                    "type": RouteLinkRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -311,6 +329,16 @@ class PointOnSectionVersionedChildStructure(
                 {
                     "name": "ActivationLinkRef",
                     "type": ActivationLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PathLinkRef",
+                    "type": PathLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RouteLinkRef",
+                    "type": RouteLinkRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

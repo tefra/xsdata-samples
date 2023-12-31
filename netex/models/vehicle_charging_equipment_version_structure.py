@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from decimal import Decimal
 from typing import Optional
 from .place_equipment_version_structure import PlaceEquipmentVersionStructure
 
@@ -30,6 +31,22 @@ class VehicleChargingEquipmentVersionStructure(PlaceEquipmentVersionStructure):
         default=None,
         metadata={
             "name": "ReservationUrl",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    maximum_power: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "MaximumPower",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    grid_voltage: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "GridVoltage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

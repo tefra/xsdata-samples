@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlPeriod
 from .companion_profiles_rel_structure import CompanionProfilesRelStructure
@@ -9,6 +10,7 @@ from .residential_qualifications_rel_structure import (
     ResidentialQualificationsRelStructure,
 )
 from .type_of_concession_ref import TypeOfConcessionRef
+from .types_of_proof_refs_rel_structure import TypesOfProofRefsRelStructure
 from .usage_parameter_version_structure import UsageParameterVersionStructure
 from .user_profile_ref_structure import UserProfileRefStructure
 from .user_type_enumeration import UserTypeEnumeration
@@ -69,7 +71,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_height: Optional[int] = field(
+    minimum_height: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "MinimumHeight",
@@ -77,7 +79,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_height: Optional[int] = field(
+    maximum_height: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "MaximumHeight",
@@ -115,6 +117,16 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
+        },
+    )
+    types_of_proof_required_ref: Optional[
+        TypesOfProofRefsRelStructure
+    ] = field(
+        default=None,
+        metadata={
+            "name": "typesOfProofRequiredRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         },
     )
     discount_basis: Optional[DiscountBasisEnumeration] = field(

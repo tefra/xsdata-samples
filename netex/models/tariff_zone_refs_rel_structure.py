@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
+from .fare_zone_ref import FareZoneRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .tariff_zone_ref import TariffZoneRef
 
@@ -11,12 +12,21 @@ class TariffZoneRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "tariffZoneRefs_RelStructure"
 
-    tariff_zone_ref: List[TariffZoneRef] = field(
+    tariff_zone_ref: List[Union[FareZoneRef, TariffZoneRef]] = field(
         default_factory=list,
         metadata={
-            "name": "TariffZoneRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "FareZoneRef",
+                    "type": FareZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TariffZoneRef",
+                    "type": TariffZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )

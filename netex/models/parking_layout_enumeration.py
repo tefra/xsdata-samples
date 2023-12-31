@@ -11,4 +11,5 @@ class ParkingLayoutEnumeration(Enum):
     ROADSIDE = "roadside"
     UNDEFINED = "undefined"
     OTHER = "other"
+    ON_PAVEMENT = "onPavement"
     CYCLE_HIRE = "cycleHire"

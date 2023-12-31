@@ -152,7 +152,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         TimetableFrameRef(
                             value='REQUEST',
                             ref='ao:TimetableFrameTIM_23_O'
@@ -167,7 +167,7 @@ obj = PublicationDelivery(
         value='Example  of simple timetable frame with two journeys and service calendar, with detailed timings'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='ao:CAL_02',
                 version='1',
@@ -700,7 +700,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                journey_pattern=[
+                                choice=[
                                     ServiceJourneyPattern(
                                         id='ao:sjp_24o',
                                         version='any',
@@ -936,7 +936,7 @@ obj = PublicationDelivery(
                             id='ao:TIM_23_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='ao:Cnd001',
                                             version='any',
@@ -1053,7 +1053,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='ao:K66_outbound_01_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='ao:Briga-p'
                                                     ),
@@ -1082,7 +1082,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='ao:K66_outbound_01_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='ao:Banjaloka-p'
                                                     ),
@@ -1115,7 +1115,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='ao:K66_outbound_01_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='ao:NovaSela-p'
                                                     ),
@@ -1185,7 +1185,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='ao:K66_inbound_02_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='ao:Briga-p'
                                                     ),
@@ -1225,7 +1225,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='ao:K66_inbound_02_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='ao:Banjaloka-p'
                                                     ),
@@ -1255,7 +1255,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='ao:K66_inbound_02_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='ao:NovaSela-p'
                                                     ),
@@ -1292,7 +1292,7 @@ obj = PublicationDelivery(
                                         assistance_facility_list=[
                                             AssistanceFacilityEnumeration.BOARDING_ASSISTANCE,
                                             AssistanceFacilityEnumeration.CONDUCTOR,
-                                            AssistanceFacilityEnumeration.WHEECHAIR_ASSISTANCE,
+                                            AssistanceFacilityEnumeration.WHEELCHAIR_ASSISTANCE,
                                         ],
                                         fare_classes=[
                                             FareClassEnumeration.STANDARD_CLASS,
@@ -1677,7 +1677,7 @@ obj = PublicationDelivery(
                                             value='Monday 2010-11-01'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                                        choice=OperatingDayRef(
                                             version='any',
                                             ref='ao:OD_2010-11-01'
                                         ),
@@ -1693,7 +1693,7 @@ obj = PublicationDelivery(
                                             value='Tuesday 2010-11-02'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 2),
+                                        choice=XmlDate(2010, 11, 2),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
@@ -1706,7 +1706,7 @@ obj = PublicationDelivery(
                                             value='Wednesday 2010-11-03'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 3),
+                                        choice=XmlDate(2010, 11, 3),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
@@ -1719,7 +1719,7 @@ obj = PublicationDelivery(
                                             value='Thusday 2010-11-04'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 4),
+                                        choice=XmlDate(2010, 11, 4),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
@@ -1732,7 +1732,7 @@ obj = PublicationDelivery(
                                             value='MFriday 2010-11-05'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 5),
+                                        choice=XmlDate(2010, 11, 5),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
@@ -1745,7 +1745,7 @@ obj = PublicationDelivery(
                                             value='Saturday 2010-11-06'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 6),
+                                        choice=XmlDate(2010, 11, 6),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_03-WE-NotHoliday'
@@ -1758,7 +1758,7 @@ obj = PublicationDelivery(
                                             value='Sunday 2010-11-07'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 7),
+                                        choice=XmlDate(2010, 11, 7),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_03-WE-NotHoliday'
@@ -1771,7 +1771,7 @@ obj = PublicationDelivery(
                                             value='Monday 2010-11-08'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 8),
+                                        choice=XmlDate(2010, 11, 8),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
@@ -1784,7 +1784,7 @@ obj = PublicationDelivery(
                                             value='Tuesday 2010-11-09'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 9),
+                                        choice=XmlDate(2010, 11, 9),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
@@ -1797,7 +1797,7 @@ obj = PublicationDelivery(
                                             value='Wednesday 2010-11-10'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 10),
+                                        choice=XmlDate(2010, 11, 10),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
@@ -1810,7 +1810,7 @@ obj = PublicationDelivery(
                                             value='Thusday 2010-11-11'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 11),
+                                        choice=XmlDate(2010, 11, 11),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
@@ -1823,7 +1823,7 @@ obj = PublicationDelivery(
                                             value='MFriday 2010-11-12'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 12),
+                                        choice=XmlDate(2010, 11, 12),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
@@ -1836,7 +1836,7 @@ obj = PublicationDelivery(
                                             value='Saturday 2010-11-13'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 13),
+                                        choice=XmlDate(2010, 11, 13),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_03-WE-NotHoliday'
@@ -1849,7 +1849,7 @@ obj = PublicationDelivery(
                                             value='Sunday 2010-11-14'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 14),
+                                        choice=XmlDate(2010, 11, 14),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_03-WE-NotHoliday'
@@ -1862,7 +1862,7 @@ obj = PublicationDelivery(
                                             value='Sunday 2010-12-24'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 31),
+                                        choice=XmlDate(2010, 12, 31),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_ChristmasEve'
@@ -1875,7 +1875,7 @@ obj = PublicationDelivery(
                                             value='Saturday 2010-12-25 Christams Day'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 25),
+                                        choice=XmlDate(2010, 12, 25),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_ChristmasDay'
@@ -1888,7 +1888,7 @@ obj = PublicationDelivery(
                                             value='Monday 2010-12-27 (Christjmas Day displacement holiday)'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 27),
+                                        choice=XmlDate(2010, 12, 27),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_ChristmasDayDisplacement'
@@ -1901,7 +1901,7 @@ obj = PublicationDelivery(
                                             value='Friday 2010-12-31  New Years eve'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 31),
+                                        choice=XmlDate(2010, 12, 31),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_NewYearsEve'
@@ -1914,7 +1914,7 @@ obj = PublicationDelivery(
                                             value='Saturday  2011-01-01 New Years day'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 1),
+                                        choice=XmlDate(2011, 1, 1),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_NewYearsDay'
@@ -1927,7 +1927,7 @@ obj = PublicationDelivery(
                                             value='Satuurday  2011-01-03 New Years day displacement'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 3),
+                                        choice=XmlDate(2011, 1, 3),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_NewYearsDayDisplacement'
@@ -1940,7 +1940,7 @@ obj = PublicationDelivery(
                                             value='Friday 2011-04-22 Good Friday'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 22),
+                                        choice=XmlDate(2011, 4, 22),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_GoodFriday'
@@ -1953,7 +1953,7 @@ obj = PublicationDelivery(
                                             value='Sunday 2011-04-24 Easter Sunday'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 24),
+                                        choice=XmlDate(2011, 4, 24),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_EasterSunday'
@@ -1966,7 +1966,7 @@ obj = PublicationDelivery(
                                             value='Monday 2011-04-25 Easter Monday'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 25),
+                                        choice=XmlDate(2011, 4, 25),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_EasterMonday'
@@ -1979,7 +1979,7 @@ obj = PublicationDelivery(
                                             value='Friday2011-04-29'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 29),
+                                        choice=XmlDate(2011, 4, 29),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
@@ -1992,7 +1992,7 @@ obj = PublicationDelivery(
                                             value='Saturday 2011-04-30'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                                        choice=OperatingDayRef(
                                             version='any',
                                             ref='ao:OD_2011-04-30'
                                         ),

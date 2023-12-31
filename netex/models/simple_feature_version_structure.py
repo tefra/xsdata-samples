@@ -4,6 +4,9 @@ from .access_zone_ref import AccessZoneRef
 from .administrative_zone_ref import AdministrativeZoneRef
 from .fare_zone_ref import FareZoneRef
 from .group_of_points_version_structure import GroupOfPointsVersionStructure
+from .mobility_service_constraint_zone_ref import (
+    MobilityServiceConstraintZoneRef,
+)
 from .stop_area_ref import StopAreaRef
 from .tariff_zone_ref import TariffZoneRef
 from .transport_administrative_zone_ref import TransportAdministrativeZoneRef
@@ -19,9 +22,10 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
 
     zone_ref_or_tariff_zone_ref: Optional[
         Union[
+            MobilityServiceConstraintZoneRef,
             StopAreaRef,
-            AccessZoneRef,
             TransportAdministrativeZoneRef,
+            AccessZoneRef,
             AdministrativeZoneRef,
             FareZoneRef,
             TariffZoneRef,
@@ -33,18 +37,23 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
             "type": "Elements",
             "choices": (
                 {
+                    "name": "MobilityServiceConstraintZoneRef",
+                    "type": MobilityServiceConstraintZoneRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "StopAreaRef",
                     "type": StopAreaRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AccessZoneRef",
-                    "type": AccessZoneRef,
+                    "name": "TransportAdministrativeZoneRef",
+                    "type": TransportAdministrativeZoneRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TransportAdministrativeZoneRef",
-                    "type": TransportAdministrativeZoneRef,
+                    "name": "AccessZoneRef",
+                    "type": AccessZoneRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

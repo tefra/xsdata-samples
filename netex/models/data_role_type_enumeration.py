@@ -13,5 +13,6 @@ class DataRoleTypeEnumeration(Enum):
     DISTRIBUTES = "distributes"
     SECURES = "secures"
     REDISTRIBUTES = "redistributes"
+    SUPPORTS = "supports"
     OWNS = "owns"
     OTHER = "other"

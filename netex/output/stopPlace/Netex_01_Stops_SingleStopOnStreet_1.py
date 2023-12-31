@@ -4,6 +4,7 @@ from netex.models.accessibility_info_facility_enumeration import AccessibilityIn
 from netex.models.accessibility_limitation import AccessibilityLimitation
 from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
 from netex.models.accessibility_tool_enumeration import AccessibilityToolEnumeration
+from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.authority import Authority
@@ -91,7 +92,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    version_frame_ref=[
+                    choice_1=[
                         NetworkFilterByValueStructure(
                             bounding_box=BoundingBoxStructure2(
                                 upper_left=LocationStructure2(
@@ -131,12 +132,12 @@ obj = PublicationDelivery(
         value='Single Stop On street example'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='frtop:RF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             AvailabilityCondition(
                                 id='mybus:RF01',
                                 version='any',
@@ -174,7 +175,7 @@ obj = PublicationDelivery(
                             id='frtop:SF005',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='frtop:SF005',
                                             version='any',
@@ -314,10 +315,10 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        transport_mode=VehicleModeEnumeration.BUS,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='mybus:Q_SSP_02456A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -442,15 +443,15 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='032',
                                             ref='frtop:SSP0042A'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='any',
                                             ref='mybus:SSP_02456A'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='any',
                                             ref='mybus:Q_SSP_02456A_1'
                                         )

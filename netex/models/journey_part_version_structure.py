@@ -4,10 +4,10 @@ from xsdata.models.datatype import XmlTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_part_ref import BlockPartRef
 from .journey_part_couple_ref import JourneyPartCoupleRef
-from .journey_part_couple_ref_structure import JourneyPartCoupleRefStructure
 from .journey_part_positions_rel_structure import (
     JourneyPartPositionsRelStructure,
 )
+from .journey_part_ref_structure import JourneyPartRefStructure
 from .multilingual_string import MultilingualString
 from .purpose_of_journey_partition_ref import PurposeOfJourneyPartitionRef
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
@@ -42,13 +42,12 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    main_part_ref: Optional[JourneyPartCoupleRefStructure] = field(
+    main_part_ref: Optional[JourneyPartRefStructure] = field(
         default=None,
         metadata={
             "name": "MainPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         },
     )
     journey_part_couple_ref: Optional[JourneyPartCoupleRef] = field(

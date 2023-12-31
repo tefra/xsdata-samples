@@ -10,6 +10,7 @@ from netex.models.access_summary import AccessSummary
 from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_limitation import AccessibilityLimitation
 from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
+from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_name import AlternativeName
 from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
@@ -162,7 +163,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    version_frame_ref=[
+                    choice_1=[
                         NetworkFilterByValueStructure(
                             places=NetworkFilterByValueStructure.Places(
                                 choice=[
@@ -183,12 +184,12 @@ obj = PublicationDelivery(
         value='Simple Stop pair On street example'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='zbt:CF001',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             AvailabilityCondition(
                                 id='zbt:CF0021',
                                 version='any',
@@ -263,8 +264,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='zbt:DT001Open_MF@TMB01',
                                                     version='any',
-                                                    start_time=XmlTime(5, 0, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(5, 0, 0, 0),
+                                                    choice=[
                                                         XmlDuration("PT19H30M"),
                                                     ]
                                                 ),
@@ -291,8 +292,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='zbt:DT002Open_Sat@TMB01',
                                                     version='any',
-                                                    start_time=XmlTime(6, 0, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(6, 0, 0, 0),
+                                                    choice=[
                                                         XmlDuration("PT18H30M"),
                                                     ]
                                                 ),
@@ -316,8 +317,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='zbt:DT003Open_Sun@TMB01',
                                                     version='any',
-                                                    start_time=XmlTime(8, 0, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(8, 0, 0, 0),
+                                                    choice=[
                                                         XmlDuration("PT17H30M"),
                                                     ]
                                                 ),
@@ -349,8 +350,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='zbt:DT004Open_MFS',
                                                     version='any',
-                                                    start_time=XmlTime(8, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(8, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(20, 0, 0, 0),
                                                     ]
                                                 ),
@@ -374,8 +375,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='zbt:DT005Open_Sun',
                                                     version='any',
-                                                    start_time=XmlTime(10, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(10, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(18, 0, 0, 0),
                                                     ]
                                                 ),
@@ -395,7 +396,7 @@ obj = PublicationDelivery(
                                 )
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                validity_condition_ref_or_validity_condition=[
+                                choice=[
                                     AvailabilityCondition(
                                         id='zbt:AC_02_CC_Opening',
                                         version='01',
@@ -617,7 +618,7 @@ obj = PublicationDelivery(
                                                     id='ztb:bh0023@A1-E1',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='zbt:AC_01_Main_Opening'
@@ -678,7 +679,7 @@ obj = PublicationDelivery(
                                                     id='ztb:bh0023@A1-E2',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='01',
                                                                     ref='zbt:AC_02_CC_Opening'
@@ -813,7 +814,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         public_code='1564',
-                                        transport_mode=VehicleModeEnumeration.RAIL,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION,
                                         served_places=TopographicPlaceRefsRelStructure(
                                             topographic_place_ref=[
@@ -824,7 +825,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='ztb:bh0023@Rail@Q1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -1055,7 +1056,7 @@ obj = PublicationDelivery(
                                                                             id='ztb:bh0023@A1@EqP01_01',
                                                                             version='any',
                                                                             vehicle_modes=[
-                                                                                VehicleModeEnumeration.RAIL,
+                                                                                AllModesEnumeration.RAIL,
                                                                             ],
                                                                             ticket_machines=True,
                                                                             ticketing_service_facility_list=[
@@ -2014,10 +2015,10 @@ obj = PublicationDelivery(
                                                 ref='topat:E0034695'
                                             )
                                         ),
-                                        transport_mode=VehicleModeEnumeration.BUS,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='ztb:bh0024_Rail@Q1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -2132,15 +2133,15 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=ConnectionEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            transport_mode=AllModesEnumeration.BUS,
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='002',
                                                 ref='ztb:ssa_bh0026'
                                             )
                                         ),
                                         to=ConnectionEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            transport_mode=AllModesEnumeration.RAIL,
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='032',
                                                 ref='ztb:ssa_bh0023'
                                             )
@@ -2157,11 +2158,11 @@ obj = PublicationDelivery(
                                             value='Rail Assignment regardless of Platform '
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='032',
                                             ref='ztb:ssa_bh0023'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='01',
                                             ref='ztb:bh0023'
                                         )
@@ -2173,15 +2174,15 @@ obj = PublicationDelivery(
                                             value='Rail Assignment Platform 1'
                                         ),
                                         order=2,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='032',
                                             ref='ztb:ssa_bh0023'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='01',
                                             ref='ztb:bh0023'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='01',
                                             ref='ztb:bh0023@Rail@Q1'
                                         )
@@ -2193,15 +2194,15 @@ obj = PublicationDelivery(
                                             value='Rail Assignment Platform 2 '
                                         ),
                                         order=3,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='032',
                                             ref='ztb:ssa_bh0023'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='01',
                                             ref='ztb:bh0023'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='01',
                                             ref='ztb:bh0023@Rail@Q2'
                                         )

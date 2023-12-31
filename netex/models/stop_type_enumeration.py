@@ -17,4 +17,5 @@ class StopTypeEnumeration(Enum):
     FERRY_STOP = "ferryStop"
     LIFT_STATION = "liftStation"
     VEHICLE_RAIL_INTERCHANGE = "vehicleRailInterchange"
+    TAXI_RANK = "taxiRank"
     OTHER = "other"

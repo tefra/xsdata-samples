@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .all_modes_enumeration import AllModesEnumeration
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .control_centre_ref import ControlCentreRef
 from .department_ref import DepartmentRef
@@ -77,7 +79,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_mode: Optional[AllModesEnumeration] = field(
+    vehicle_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
         metadata={
             "name": "VehicleMode",

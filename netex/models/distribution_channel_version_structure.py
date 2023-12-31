@@ -12,6 +12,7 @@ from .general_group_of_entities_ref_structure import (
 )
 from .general_organisation_ref import GeneralOrganisationRef
 from .management_agent_ref import ManagementAgentRef
+from .online_service_operator_ref import OnlineServiceOperatorRef
 from .operator_ref import OperatorRef
 from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
@@ -75,16 +76,17 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: Optional[
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
         Union[
             RetailConsortiumRef,
-            AuthorityRef,
-            OperatorRef,
+            OnlineServiceOperatorRef,
             GeneralOrganisationRef,
             ManagementAgentRef,
             ServicedOrganisationRef,
             TravelAgentRef,
             OtherOrganisationRef,
+            AuthorityRef,
+            OperatorRef,
             OrganisationRef,
         ]
     ] = field(
@@ -98,13 +100,8 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
+                    "name": "OnlineServiceOperatorRef",
+                    "type": OnlineServiceOperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -130,6 +127,16 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
                 {
                     "name": "OtherOrganisationRef",
                     "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

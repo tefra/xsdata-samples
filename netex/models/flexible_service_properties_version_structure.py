@@ -13,6 +13,7 @@ from .multilingual_string import MultilingualString
 from .purchase_moment_enumeration import PurchaseMomentEnumeration
 from .purchase_when_enumeration import PurchaseWhenEnumeration
 from .service_journey_ref import ServiceJourneyRef
+from .single_journey_ref import SingleJourneyRef
 from .special_service_ref import SpecialServiceRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .type_of_flexible_service_ref import TypeOfFlexibleServiceRef
@@ -28,6 +29,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
 
     choice: Optional[
         Union[
+            SingleJourneyRef,
             DatedVehicleJourneyRef,
             DatedSpecialServiceRef,
             SpecialServiceRef,
@@ -41,6 +43,11 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "SingleJourneyRef",
+                    "type": SingleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "DatedVehicleJourneyRef",
                     "type": DatedVehicleJourneyRef,
@@ -165,6 +172,14 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
         default=None,
         metadata={
             "name": "MinimumBookingPeriod",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    maximum_booking_period: Optional[XmlDuration] = field(
+        default=None,
+        metadata={
+            "name": "MaximumBookingPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

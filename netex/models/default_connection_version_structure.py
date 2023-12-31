@@ -4,6 +4,10 @@ from .access_space_ref import AccessSpaceRef
 from .boarding_position_ref import BoardingPositionRef
 from .default_connection_end_structure import DefaultConnectionEndStructure
 from .entrance_ref import EntranceRef
+from .monitored_vehicle_sharing_parking_bay_ref import (
+    MonitoredVehicleSharingParkingBayRef,
+)
+from .parking_area_ref import ParkingAreaRef
 from .parking_bay_ref import ParkingBayRef
 from .parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
 from .parking_entrance_ref import ParkingEntranceRef
@@ -25,9 +29,16 @@ from .stop_place_entrance_ref import StopPlaceEntranceRef
 from .stop_place_ref import StopPlaceRef
 from .stop_place_space_ref import StopPlaceSpaceRef
 from .stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
+from .taxi_parking_area_ref import TaxiParkingAreaRef
+from .taxi_rank_ref import TaxiRankRef
+from .taxi_stand_ref import TaxiStandRef
 from .topographic_place_view import TopographicPlaceView
 from .transfer_version_structure import TransferVersionStructure
 from .vehicle_entrance_ref import VehicleEntranceRef
+from .vehicle_pooling_parking_area_ref import VehiclePoolingParkingAreaRef
+from .vehicle_pooling_parking_bay_ref import VehiclePoolingParkingBayRef
+from .vehicle_sharing_parking_area_ref import VehicleSharingParkingAreaRef
+from .vehicle_sharing_parking_bay_ref import VehicleSharingParkingBayRef
 from .vehicle_stopping_place_ref import VehicleStoppingPlaceRef
 from .vehicle_stopping_position_ref import VehicleStoppingPositionRef
 
@@ -77,9 +88,17 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             VehicleStoppingPlaceRef,
             BoardingPositionRef,
             AccessSpaceRef,
+            TaxiStandRef,
             QuayRef,
             StopPlaceSpaceRef,
+            VehiclePoolingParkingBayRef,
+            MonitoredVehicleSharingParkingBayRef,
+            VehicleSharingParkingBayRef,
             ParkingBayRef,
+            VehiclePoolingParkingAreaRef,
+            VehicleSharingParkingAreaRef,
+            TaxiParkingAreaRef,
+            ParkingAreaRef,
             PointOfInterestSpaceRef,
             StopPlaceVehicleEntranceRef,
             StopPlaceEntranceRef,
@@ -91,6 +110,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             VehicleEntranceRef,
             EntranceRef,
             SiteComponentRef,
+            TaxiRankRef,
             StopPlaceRef,
             ParkingRef,
             PointOfInterestRef,
@@ -124,6 +144,11 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "TaxiStandRef",
+                    "type": TaxiStandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "QuayRef",
                     "type": QuayRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -134,8 +159,43 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "VehiclePoolingParkingBayRef",
+                    "type": VehiclePoolingParkingBayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MonitoredVehicleSharingParkingBayRef",
+                    "type": MonitoredVehicleSharingParkingBayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleSharingParkingBayRef",
+                    "type": VehicleSharingParkingBayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "ParkingBayRef",
                     "type": ParkingBayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehiclePoolingParkingAreaRef",
+                    "type": VehiclePoolingParkingAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleSharingParkingAreaRef",
+                    "type": VehicleSharingParkingAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TaxiParkingAreaRef",
+                    "type": TaxiParkingAreaRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingAreaRef",
+                    "type": ParkingAreaRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -191,6 +251,11 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
                 {
                     "name": "SiteComponentRef",
                     "type": SiteComponentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TaxiRankRef",
+                    "type": TaxiRankRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

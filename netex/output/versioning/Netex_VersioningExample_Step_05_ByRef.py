@@ -34,12 +34,12 @@ obj = PublicationDelivery(
         value='Netex basic Versioning Example Step 05 Variant using GENERAL FRAME references.'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             GeneralFrame(
                 id='mybus:ntwkf001',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             AvailabilityCondition(
                                 id='mybus:VC002_mf',
                                 created=XmlDateTime(2010, 5, 18, 10, 30, 47, 0, 0),

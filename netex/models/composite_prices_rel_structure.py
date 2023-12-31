@@ -53,7 +53,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "compositePrices_RelStructure"
 
-    fare_price_ref_or_fare_price_or_price_group: List[
+    choice: List[
         Union[
             CustomerPurchasePackagePriceRef,
             ParkingPriceRef,
@@ -65,11 +65,11 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
             GeographicalIntervalPriceRef,
             GeographicalUnitPriceRef,
             UsageParameterPriceRef,
+            SeriesConstraintPriceRef,
             SalesOfferPackagePriceRef,
             DistanceMatrixElementPriceRef,
             FareStructureElementPriceRef,
             FulfilmentMethodPriceRef,
-            SeriesConstraintPriceRef,
             CappingRulePriceRef,
             FareProductPriceRef,
             FarePriceRef,
@@ -149,6 +149,11 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "SeriesConstraintPriceRef",
+                    "type": SeriesConstraintPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "SalesOfferPackagePriceRef",
                     "type": SalesOfferPackagePriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -166,11 +171,6 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "FulfilmentMethodPriceRef",
                     "type": FulfilmentMethodPriceRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SeriesConstraintPriceRef",
-                    "type": SeriesConstraintPriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

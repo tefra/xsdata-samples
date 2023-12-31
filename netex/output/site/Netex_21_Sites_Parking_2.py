@@ -8,7 +8,7 @@ from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_limitation import AccessibilityLimitation
 from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
 from netex.models.accessibility_tool_enumeration import AccessibilityToolEnumeration
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import DayType
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
@@ -125,6 +125,7 @@ from netex.models.site_ref_structure import SiteRefStructure
 from netex.models.site_type_enumeration import SiteTypeEnumeration
 from netex.models.tax_category_enumeration import TaxCategoryEnumeration
 from netex.models.ticketing_equipment import TicketingEquipment
+from netex.models.time_of_day_enumeration import TimeOfDayEnumeration
 from netex.models.topographic_place import TopographicPlace
 from netex.models.topographic_place_descriptor_versioned_child_structure import TopographicPlaceDescriptorVersionedChildStructure
 from netex.models.topographic_place_ref import TopographicPlaceRef
@@ -152,12 +153,12 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             SiteFrame(
                 id='mypark:SF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             AvailabilityCondition(
                                 id='mypark:PP01@Opening_Hours',
                                 version='any',
@@ -189,8 +190,8 @@ obj = PublicationDelivery(
                                         TimebandVersionedChildStructure(
                                             id='mypark:PP01@Opening_Hours@range',
                                             version='any',
-                                            start_time=XmlTime(6, 30, 0, 0),
-                                            end_time_or_day_offset_or_duration=[
+                                            start_time_or_start_event=XmlTime(6, 30, 0, 0),
+                                            choice=[
                                                 XmlTime(12, 0, 0, 0),
                                             ]
                                         ),
@@ -271,7 +272,7 @@ obj = PublicationDelivery(
                             id='mypark:PP01',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityConditionRef(
                                             version='any',
                                             ref='mypark:PP01@Opening_Hours'
@@ -445,7 +446,7 @@ obj = PublicationDelivery(
                                         ],
                                         sanitary_facility_list=[
                                             SanitaryFacilityEnumeration.TOILET,
-                                            SanitaryFacilityEnumeration.WHEEL_CHAIR_ACCESS_TOILET,
+                                            SanitaryFacilityEnumeration.WHEELCHAIR_ACCESS_TOILET,
                                         ]
                                     ),
                                 ]
@@ -487,7 +488,7 @@ obj = PublicationDelivery(
                                         id='mypark:PP01@EP01',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                validity_condition_ref_or_validity_condition=[
+                                                choice=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mypark:PP01@Exit_Hours'
@@ -546,7 +547,7 @@ obj = PublicationDelivery(
                                         id='mypark:PP01@EP02',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                validity_condition_ref_or_validity_condition=[
+                                                choice=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mypark:PP01@Opening_Hours'
@@ -598,7 +599,7 @@ obj = PublicationDelivery(
                                         id='mypark:PP01@EV11@Entrance',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                validity_condition_ref_or_validity_condition=[
+                                                choice=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mypark:PP01@Opening_Hours'
@@ -637,7 +638,7 @@ obj = PublicationDelivery(
                                                                 id='mypark:PP01@EV11@Entrance@peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        validity_condition_ref_or_validity_condition=[
+                                                                        choice=[
                                                                             ValidityTriggerRef(
                                                                                 ref='mypark:Peek'
                                                                             ),
@@ -660,7 +661,7 @@ obj = PublicationDelivery(
                                                                 id='mypark:PP01@EV11@Entrance@off_peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        validity_condition_ref_or_validity_condition=[
+                                                                        choice=[
                                                                             ValidityTriggerRef(
                                                                                 ref='mypark:Off_peak'
                                                                             ),
@@ -724,7 +725,7 @@ obj = PublicationDelivery(
                                         id='mypark:PP01@EV12@Exit',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                validity_condition_ref_or_validity_condition=[
+                                                choice=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mypark:PP01@Opening_Hours'
@@ -763,7 +764,7 @@ obj = PublicationDelivery(
                                                                 id='mypark:PP01@EV12@Exit@peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        validity_condition_ref_or_validity_condition=[
+                                                                        choice=[
                                                                             ValidityTriggerRef(
                                                                                 ref='mypark:Peek'
                                                                             ),
@@ -785,7 +786,7 @@ obj = PublicationDelivery(
                                                                 id='mypark:PP01@EV12@Exit@Off_peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        validity_condition_ref_or_validity_condition=[
+                                                                        choice=[
                                                                             ValidityTriggerRef(
                                                                                 ref='mypark:Off_peak'
                                                                             ),
@@ -982,14 +983,14 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
+                                            transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
                                                 ref='napt:9100:00476',
                                                 version_ref='EXTERNAL'
                                             )
                                         ),
                                         to=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
+                                            transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
                                                 version='any',
                                                 ref='mypark:PP01'
@@ -1328,7 +1329,7 @@ obj = PublicationDelivery(
                             id='mypark:PS22',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='mypark:Parking_Charge_Hours',
                                             version='any',
@@ -1373,8 +1374,8 @@ obj = PublicationDelivery(
                                                     TimebandVersionedChildStructure(
                                                         id='mypark:Parking_Charge_Hours',
                                                         version='any',
-                                                        start_time=XmlTime(8, 30, 0, 0),
-                                                        end_time_or_day_offset_or_duration=[
+                                                        start_time_or_start_event=XmlTime(8, 30, 0, 0),
+                                                        choice=[
                                                             XmlTime(5, 30, 0, 0),
                                                         ]
                                                     ),
@@ -1473,14 +1474,14 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
+                                            transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
                                                 ref='napt:9100:00476',
                                                 version_ref='EXTERNAL'
                                             )
                                         ),
                                         to=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
+                                            transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
                                                 version='any',
                                                 ref='mypark:PP01'
@@ -1721,7 +1722,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         bays=ParkingBaysRelStructure(
-                                            parking_bay_ref_or_parking_bay=[
+                                            parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay=[
                                                 ParkingBay(
                                                     id='mypark:PB44@A01@B001',
                                                     version='any',
@@ -2138,6 +2139,48 @@ obj = PublicationDelivery(
                         ),
                         Parking(
                             id='mypark:PNR01',
+                            validity_conditions_or_valid_between=[
+                                ValidityConditionsRelStructure(
+                                    choice=[
+                                        AvailabilityCondition(
+                                            id='mypark:PNR01',
+                                            version='any',
+                                            name=MultilingualString(
+                                                value='open everyday dawn to dusk'
+                                            ),
+                                            day_types=DayTypesRelStructure(
+                                                day_type_ref_or_day_type=[
+                                                    DayType(
+                                                        id='mypark:PNR01',
+                                                        version='any',
+                                                        properties=PropertiesOfDayRelStructure(
+                                                            property_of_day=[
+                                                                PropertyOfDay(
+                                                                    days_of_week=[
+                                                                        DayOfWeekEnumeration.EVERYDAY,
+                                                                    ]
+                                                                ),
+                                                            ]
+                                                        ),
+                                                        timebands=TimebandsRelStructure(
+                                                            timeband_ref_or_timeband=[
+                                                                TimebandVersionedChildStructure(
+                                                                    id='mypark:PNR01',
+                                                                    version='any',
+                                                                    start_time_or_start_event=TimeOfDayEnumeration.DAWN,
+                                                                    choice=[
+                                                                        TimeOfDayEnumeration.DUSK,
+                                                                    ]
+                                                                ),
+                                                            ]
+                                                        )
+                                                    ),
+                                                ]
+                                            )
+                                        ),
+                                    ]
+                                ),
+                            ],
                             data_source_ref_attribute='parkopedia',
                             version='any',
                             name=MultilingualString(
@@ -2345,14 +2388,14 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
+                                            transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
                                                 ref='napt:9100:00476',
                                                 version_ref='EXTERNAL'
                                             )
                                         ),
                                         to=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
+                                            transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
                                                 version='any',
                                                 ref='mypark:PNR01'
@@ -2777,7 +2820,7 @@ obj = PublicationDelivery(
                 id='mypark:Resources',
                 version='any',
                 types_of_value=TypesOfValueInFrameRelStructure(
-                    type_of_value_or_type_of_entity=[
+                    choice=[
                         ValueSet(
                             id='mypark:Types_off_VAT_Categopry',
                             version='any',

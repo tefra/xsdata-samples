@@ -1,8 +1,9 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
 )
+from .flexible_mode_of_operation_ref import FlexibleModeOfOperationRef
 from .group_of_entities_version_structure import (
     GroupOfEntitiesVersionStructure,
 )
@@ -10,11 +11,16 @@ from .group_of_lines_type_enumeration import GroupOfLinesTypeEnumeration
 from .line_ref_structure import LineRefStructure
 from .line_refs_rel_structure import LineRefsRelStructure
 from .payment_method_enumeration import PaymentMethodEnumeration
+from .personal_mode_of_operation_ref import PersonalModeOfOperationRef
 from .purchase_moment_enumeration import PurchaseMomentEnumeration
+from .scheduled_mode_of_operation_ref import ScheduledModeOfOperationRef
 from .transport_submode import TransportSubmode
 from .type_of_payment_method_value_structure import (
     TypeOfPaymentMethodValueStructure,
 )
+from .vehicle_pooling_ref import VehiclePoolingRef
+from .vehicle_rental_ref import VehicleRentalRef
+from .vehicle_sharing_ref import VehicleSharingRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -61,6 +67,53 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "TransportSubmode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: Optional[
+        Union[
+            PersonalModeOfOperationRef,
+            VehiclePoolingRef,
+            VehicleSharingRef,
+            VehicleRentalRef,
+            FlexibleModeOfOperationRef,
+            ScheduledModeOfOperationRef,
+        ]
+    ] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PersonalModeOfOperationRef",
+                    "type": PersonalModeOfOperationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehiclePoolingRef",
+                    "type": VehiclePoolingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleSharingRef",
+                    "type": VehicleSharingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleRentalRef",
+                    "type": VehicleRentalRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleModeOfOperationRef",
+                    "type": FlexibleModeOfOperationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledModeOfOperationRef",
+                    "type": ScheduledModeOfOperationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )
     group_of_lines_type: Optional[GroupOfLinesTypeEnumeration] = field(

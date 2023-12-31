@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .boolean_operator_enumeration import BooleanOperatorEnumeration
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .distribution_assignment_ref import DistributionAssignmentRef
+from .logical_operation_enumeration import LogicalOperationEnumeration
 from .organisation_ref_structure import OrganisationRefStructure
 from .point_ref_structure import PointRefStructure
 from .validity_parameter_assignment_version_structure import (
@@ -27,7 +27,7 @@ class SpecificParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes_grouping_type: Optional[BooleanOperatorEnumeration] = field(
+    includes_grouping_type: Optional[LogicalOperationEnumeration] = field(
         default=None,
         metadata={
             "name": "IncludesGroupingType",

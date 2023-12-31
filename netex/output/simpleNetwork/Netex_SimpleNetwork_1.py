@@ -1,4 +1,5 @@
 from decimal import Decimal
+from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.authority import Authority
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -116,8 +117,9 @@ from netex.models.timing_point_ref import TimingPointRef
 from netex.models.timing_point_ref_structure import TimingPointRefStructure
 from netex.models.timing_points_in_frame_rel_structure import TimingPointsInFrameRelStructure
 from netex.models.timing_points_in_journey_pattern_rel_structure import TimingPointsInJourneyPatternRelStructure
-from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
+from netex.models.transport_type_ref_structure import TransportTypeRefStructure
 from netex.models.vehicle_type import VehicleType
+from netex.models.vehicle_type_ref import VehicleTypeRef
 from netex.models.vehicle_type_ref_structure import VehicleTypeRefStructure
 from netex.models.vehicle_types_in_frame_rel_structure import VehicleTypesInFrameRelStructure
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
@@ -137,7 +139,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    version_frame_ref=[
+                    choice_1=[
                         InfrastructureFrameRef(
                             value='REQUEST',
                             ref='mybus:ifwkf001'
@@ -156,7 +158,7 @@ obj = PublicationDelivery(
         value='Netex basic Versioning Example Step 05'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='mybus:SVC_01@composite',
                 version='1',
@@ -239,10 +241,10 @@ obj = PublicationDelivery(
                                                 value='Alexandra Road'
                                             )
                                         ),
-                                        transport_mode=VehicleModeEnumeration.BUS,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='mybus:Q_SP001A@1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -302,7 +304,7 @@ obj = PublicationDelivery(
                                         ),
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='mybus:Q_SP002B@1',
                                                     version='any',
@@ -385,10 +387,10 @@ obj = PublicationDelivery(
                                                 value='Foo Road'
                                             )
                                         ),
-                                        transport_mode=VehicleModeEnumeration.BUS,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='mybus:Q_SP002C@1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -472,10 +474,10 @@ obj = PublicationDelivery(
                                                 value='Bar Road'
                                             )
                                         ),
-                                        transport_mode=VehicleModeEnumeration.BUS,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='mybus:Q_SP004D_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -533,10 +535,10 @@ obj = PublicationDelivery(
                                                 value='Bar Road'
                                             )
                                         ),
-                                        transport_mode=VehicleModeEnumeration.BUS,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='mybus:Q_SP005E_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -816,7 +818,7 @@ obj = PublicationDelivery(
                                             version='1.0',
                                             ref='gis:rdJ003+rdJ004'
                                         ),
-                                        vehicle_type_ref=VehicleTypeRefStructure(
+                                        transport_type_ref_or_vehicle_type_ref=VehicleTypeRef(
                                             version='1.0',
                                             ref='hde:VT001'
                                         )
@@ -838,7 +840,7 @@ obj = PublicationDelivery(
                                             version='1.0',
                                             ref='hde:VT001'
                                         ),
-                                        against_vehicle_type_ref=VehicleTypeRefStructure(
+                                        against_vehicle_type_ref=TransportTypeRefStructure(
                                             version='1.0',
                                             ref='hde:VT001'
                                         )
@@ -857,11 +859,11 @@ obj = PublicationDelivery(
                                             version='1.0',
                                             ref='gis:rdJ021'
                                         ),
-                                        overtaking_vehicle_type_ref=VehicleTypeRefStructure(
+                                        overtaking_vehicle_type_ref=TransportTypeRefStructure(
                                             version='1.0',
                                             ref='hde:VT001'
                                         ),
-                                        overtaken_vehicle_type_ref=VehicleTypeRefStructure(
+                                        overtaken_vehicle_type_ref=TransportTypeRefStructure(
                                             version='1.0',
                                             ref='hde:VT001'
                                         )
@@ -869,7 +871,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             vehicle_types=VehicleTypesInFrameRelStructure(
-                                compound_train_or_train_or_vehicle_type=[
+                                choice=[
                                     VehicleType(
                                         id='hde:VT001',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
@@ -2566,15 +2568,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment A'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='032',
                                             ref='hde:SSP0001A'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='any',
                                             ref='mybus:SP001A'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='any',
                                             ref='mybus:Q_SP001A@1'
                                         )
@@ -2586,15 +2588,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment B'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='032',
                                             ref='hde:SSP0002B_a'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='any',
                                             ref='mybus:SP002B'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='any',
                                             ref='mybus:Q_SP002B@1'
                                         )
@@ -2606,15 +2608,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment B'
                                         ),
                                         order=2,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='032',
                                             ref='hde:SSP0002B_b'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='any',
                                             ref='mybus:SP002B'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='any',
                                             ref='mybus:Q_SP002B@2'
                                         )
@@ -2626,15 +2628,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment B'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='015',
                                             ref='hde:SSP0003C_a'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='any',
                                             ref='mybus:SP003C'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='any',
                                             ref='mybus:Q_SP002C@1'
                                         )
@@ -2646,15 +2648,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment B'
                                         ),
                                         order=2,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='015',
                                             ref='hde:SSP0003C_b'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='any',
                                             ref='mybus:SP003C'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='any',
                                             ref='mybus:Q_SP002C@2'
                                         )
@@ -2666,15 +2668,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment D'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='015',
                                             ref='hde:SSP0004D'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='any',
                                             ref='mybus:SP004D'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='any',
                                             ref='mybus:Q_SP004D_1'
                                         )
@@ -2686,15 +2688,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment E'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='015',
                                             ref='hde:SSP0005E'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='any',
                                             ref='mybus:SP005E'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='any',
                                             ref='mybus:Q_SP005E_1'
                                         )
@@ -3170,7 +3172,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                journey_pattern=[
+                                choice=[
                                     ServiceJourneyPattern(
                                         id='hde:JP001o',
                                         version='any',

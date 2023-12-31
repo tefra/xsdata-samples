@@ -49,7 +49,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_point_ref: Optional[
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[
         Union[
             FareScheduledStopPointRef,
             ScheduledStopPointRef,

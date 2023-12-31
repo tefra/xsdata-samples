@@ -6,6 +6,7 @@ from .multilingual_string import MultilingualString
 from .passenger_stop_assignment_ref import PassengerStopAssignmentRef
 from .quay_ref_structure import QuayRefStructure
 from .stop_place_ref import StopPlaceRef
+from .taxi_rank_ref import TaxiRankRef
 from .vehicle_journey_stop_assignment_ref import (
     VehicleJourneyStopAssignmentRef,
 )
@@ -47,12 +48,22 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    stop_place_ref: Optional[StopPlaceRef] = field(
+    stop_place_ref: Optional[Union[TaxiRankRef, StopPlaceRef]] = field(
         default=None,
         metadata={
-            "name": "StopPlaceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TaxiRankRef",
+                    "type": TaxiRankRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StopPlaceRef",
+                    "type": StopPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )
     quay_ref: Optional[QuayRefStructure] = field(

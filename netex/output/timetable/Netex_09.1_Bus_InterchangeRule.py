@@ -1,4 +1,5 @@
 from decimal import Decimal
+from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
@@ -69,7 +70,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         TimetableFrameRef(
                             value='REQUEST',
                             ref='hde:TimetableFrameTIM_23_O'
@@ -84,7 +85,7 @@ obj = PublicationDelivery(
         value='Example  of simple intyerchange rulkes'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='hde:CAL_02',
                 version='2',
@@ -405,15 +406,15 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=ConnectionEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            transport_mode=AllModesEnumeration.BUS,
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='mybus:SSP_025'
                                             )
                                         ),
                                         to=ConnectionEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            transport_mode=AllModesEnumeration.BUS,
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='mybus:SSP_025'
                                             )
@@ -426,7 +427,7 @@ obj = PublicationDelivery(
                             id='hde:TIM_23_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='hde:Cnd001',
                                             version='any',
@@ -651,7 +652,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Mission Central'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='101',
                                             ref='hde:TFO'
                                         )

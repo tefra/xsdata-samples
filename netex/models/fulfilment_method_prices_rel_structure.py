@@ -19,7 +19,7 @@ class FulfilmentMethodPricesRelStructure(
     class Meta:
         name = "fulfilmentMethodPrices_RelStructure"
 
-    cell_ref: List[
+    fulfilment_method_price_ref_or_fulfilment_method_price_or_cell_ref: List[
         Union[
             FulfilmentMethodPriceRef,
             FulfilmentMethodPriceVersionedChildStructure,

@@ -17,4 +17,7 @@ class UserTypeEnumeration(Enum):
     JOB_SEEKER = "jobSeeker"
     EMPLOYEE = "employee"
     ANIMAL = "animal"
+    GUIDE_DOG = "guideDog"
+    MEMBER = "member"
+    OTHER = "other"
     ANYONE = "anyone"

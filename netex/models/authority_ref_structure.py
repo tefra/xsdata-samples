@@ -1,9 +1,11 @@
 from dataclasses import dataclass
-from .organisation_ref_structure import OrganisationRefStructure
+from .transport_organisation_ref_structure import (
+    TransportOrganisationRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class AuthorityRefStructure(OrganisationRefStructure):
+class AuthorityRefStructure(TransportOrganisationRefStructure):
     pass

@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .access_facility_enumeration import AccessFacilityEnumeration
 from .accommodation_access_enumeration import AccommodationAccessEnumeration
 from .accommodation_facility_enumeration import (
     AccommodationFacilityEnumeration,
@@ -18,6 +17,9 @@ from .uic_product_characteristic_enumeration import (
     UicProductCharacteristicEnumeration,
 )
 from .uic_rate_type_enumeration import UicRateTypeEnumeration
+from .vehicle_access_facility_enumeration import (
+    VehicleAccessFacilityEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -27,7 +29,9 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
     class Meta:
         name = "ServiceFacilitySet_VersionStructure"
 
-    vehicle_access_facility_list: List[AccessFacilityEnumeration] = field(
+    vehicle_access_facility_list: List[
+        VehicleAccessFacilityEnumeration
+    ] = field(
         default_factory=list,
         metadata={
             "name": "VehicleAccessFacilityList",

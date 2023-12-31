@@ -7,6 +7,7 @@ from .journey_designator import JourneyDesignator
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .service_designator import ServiceDesignator
 from .service_journey_ref import ServiceJourneyRef
+from .single_journey_ref import SingleJourneyRef
 from .special_service_ref import SpecialServiceRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .vehicle_journey_ref import VehicleJourneyRef
@@ -21,6 +22,7 @@ class JourneyRefsRelStructure(OneToManyRelationshipStructure):
 
     choice: List[
         Union[
+            SingleJourneyRef,
             DatedVehicleJourneyRef,
             DatedSpecialServiceRef,
             SpecialServiceRef,
@@ -36,6 +38,11 @@ class JourneyRefsRelStructure(OneToManyRelationshipStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "SingleJourneyRef",
+                    "type": SingleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "DatedVehicleJourneyRef",
                     "type": DatedVehicleJourneyRef,

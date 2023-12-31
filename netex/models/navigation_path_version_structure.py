@@ -13,6 +13,7 @@ from .path_links_in_sequence_rel_structure import (
     PathLinksInSequenceRelStructure,
 )
 from .places_in_sequence_rel_structure import PlacesInSequenceRelStructure
+from .presentation_structure import PresentationStructure
 from .public_use_enumeration import PublicUseEnumeration
 from .section_in_sequence_versioned_child_structure import (
     LinkSequenceVersionStructure,
@@ -121,6 +122,14 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
         default=None,
         metadata={
             "name": "PersonCapacity",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    presentation: Optional[PresentationStructure] = field(
+        default=None,
+        metadata={
+            "name": "Presentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

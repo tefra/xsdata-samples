@@ -10,6 +10,7 @@ from .covered_enumeration import CoveredEnumeration
 from .gated_enumeration import GatedEnumeration
 from .lighting_enumeration import LightingEnumeration
 from .multilingual_string import MultilingualString
+from .presentation_structure import PresentationStructure
 from .public_use_enumeration import PublicUseEnumeration
 from .site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
 
@@ -114,6 +115,14 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
         default=None,
         metadata={
             "name": "PersonCapacity",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    presentation: Optional[PresentationStructure] = field(
+        default=None,
+        metadata={
+            "name": "Presentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

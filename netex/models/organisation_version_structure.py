@@ -14,6 +14,9 @@ from .organisation_refs_rel_structure import OrganisationRefsRelStructure
 from .organisation_type_enumeration import OrganisationTypeEnumeration
 from .private_code import PrivateCode
 from .private_code_structure import PrivateCodeStructure
+from .related_organisations_rel_structure import (
+    RelatedOrganisationsRelStructure,
+)
 from .responsibility_sets_rel_structure import ResponsibilitySetsRelStructure
 from .type_of_organisation_refs_rel_structure import (
     TypeOfOrganisationRefsRelStructure,
@@ -47,6 +50,14 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
         default=None,
         metadata={
             "name": "CompanyNumber",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    vatnumber: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "VATNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
@@ -203,6 +214,14 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
         default=None,
         metadata={
             "name": "delegatedFrom",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    related_organisations: Optional[RelatedOrganisationsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "relatedOrganisations",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

@@ -7,6 +7,7 @@ from .customer_account_status import CustomerAccountStatus
 from .data_source import DataSource
 from .direction import Direction
 from .open_transport_mode import OpenTransportMode
+from .parking_bay_status import ParkingBayStatus
 from .point_of_interest_classification import PointOfInterestClassification
 from .price_unit import PriceUnit
 from .purpose_of_equipment_profile import PurposeOfEquipmentProfile
@@ -19,6 +20,7 @@ from .submode import Submode
 from .timing_algorithm_type import TimingAlgorithmType
 from .type_of_access_right_assignment import TypeOfAccessRightAssignment
 from .type_of_activation import TypeOfActivation
+from .type_of_battery_chemistry import TypeOfBatteryChemistry
 from .type_of_codespace_assignment import TypeOfCodespaceAssignment
 from .type_of_concession import TypeOfConcession
 from .type_of_congestion import TypeOfCongestion
@@ -34,25 +36,32 @@ from .type_of_fare_structure_element import TypeOfFareStructureElement
 from .type_of_fare_structure_factor import TypeOfFareStructureFactor
 from .type_of_fare_table import TypeOfFareTable
 from .type_of_feature import TypeOfFeature
+from .type_of_fleet import TypeOfFleet
 from .type_of_flexible_service import TypeOfFlexibleService
 from .type_of_journey_pattern import TypeOfJourneyPattern
 from .type_of_line import TypeOfLine
 from .type_of_link import TypeOfLink
 from .type_of_link_sequence import TypeOfLinkSequence
 from .type_of_machine_readability import TypeOfMachineReadability
+from .type_of_medium_access_device import TypeOfMediumAccessDevice
+from .type_of_mobility_service import TypeOfMobilityService
+from .type_of_mode_of_operation import TypeOfModeOfOperation
 from .type_of_notice import TypeOfNotice
 from .type_of_operation import TypeOfOperation
 from .type_of_organisation import TypeOfOrganisation
 from .type_of_organisation_part import TypeOfOrganisationPart
+from .type_of_parking import TypeOfParking
 from .type_of_passenger_information_equipment import (
     TypeOfPassengerInformationEquipment,
 )
 from .type_of_payment_method import TypeOfPaymentMethod
 from .type_of_place import TypeOfPlace
+from .type_of_plug import TypeOfPlug
 from .type_of_point import TypeOfPoint
 from .type_of_pricing_rule import TypeOfPricingRule
 from .type_of_product_category import TypeOfProductCategory
 from .type_of_projection import TypeOfProjection
+from .type_of_proof import TypeOfProof
 from .type_of_responsibility_role import TypeOfResponsibilityRole
 from .type_of_retail_device import TypeOfRetailDevice
 from .type_of_sales_offer_package import TypeOfSalesOfferPackage
@@ -79,7 +88,11 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
 
     type_of_value_or_type_of_entity: List[
         Union[
+            TypeOfFleet,
+            ParkingBayStatus,
+            TypeOfMediumAccessDevice,
             TypeOfMachineReadability,
+            TypeOfProof,
             TypeOfConcession,
             ChargingMoment,
             TypeOfUsageParameter,
@@ -88,11 +101,12 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             PriceUnit,
             TimingAlgorithmType,
             PurposeOfJourneyPartition,
-            TypeOfServiceFeature,
             PointOfInterestClassification,
+            TypeOfParking,
+            TypeOfServiceFeature,
             Direction,
-            PurposeOfEquipmentProfile,
             TypeOfSecurityList,
+            PurposeOfEquipmentProfile,
             TypeOfProductCategory,
             TypeOfPaymentMethod,
             ClassOfUse,
@@ -103,6 +117,7 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             PurposeOfGrouping,
             Branding,
             DataSource,
+            TypeOfMobilityService,
             TypeOfRetailDevice,
             CustomerAccountStatus,
             TypeOfCustomerAccount,
@@ -118,12 +133,15 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             TypeOfFlexibleService,
             TypeOfTimeDemandType,
             TypeOfPassengerInformationEquipment,
-            TypeOfCongestion,
             TypeOfJourneyPattern,
-            TypeOfLine,
             TypeOfActivation,
+            TypeOfModeOfOperation,
+            TypeOfPlug,
+            TypeOfBatteryChemistry,
+            TypeOfLine,
             TypeOfDeliveryVariant,
             TypeOfNotice,
+            TypeOfCongestion,
             TypeOfFacility,
             TypeOfService,
             TypeOfEquipment,
@@ -149,8 +167,28 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
             "type": "Elements",
             "choices": (
                 {
+                    "name": "TypeOfFleet",
+                    "type": TypeOfFleet,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingBayStatus",
+                    "type": ParkingBayStatus,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfMediumAccessDevice",
+                    "type": TypeOfMediumAccessDevice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "TypeOfMachineReadability",
                     "type": TypeOfMachineReadability,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfProof",
+                    "type": TypeOfProof,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -194,13 +232,18 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TypeOfServiceFeature",
-                    "type": TypeOfServiceFeature,
+                    "name": "PointOfInterestClassification",
+                    "type": PointOfInterestClassification,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PointOfInterestClassification",
-                    "type": PointOfInterestClassification,
+                    "name": "TypeOfParking",
+                    "type": TypeOfParking,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfServiceFeature",
+                    "type": TypeOfServiceFeature,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -209,13 +252,13 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PurposeOfEquipmentProfile",
-                    "type": PurposeOfEquipmentProfile,
+                    "name": "TypeOfSecurityList",
+                    "type": TypeOfSecurityList,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TypeOfSecurityList",
-                    "type": TypeOfSecurityList,
+                    "name": "PurposeOfEquipmentProfile",
+                    "type": PurposeOfEquipmentProfile,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -266,6 +309,11 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "DataSource",
                     "type": DataSource,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfMobilityService",
+                    "type": TypeOfMobilityService,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -344,23 +392,33 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TypeOfCongestion",
-                    "type": TypeOfCongestion,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TypeOfJourneyPattern",
                     "type": TypeOfJourneyPattern,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TypeOfLine",
-                    "type": TypeOfLine,
+                    "name": "TypeOfActivation",
+                    "type": TypeOfActivation,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TypeOfActivation",
-                    "type": TypeOfActivation,
+                    "name": "TypeOfModeOfOperation",
+                    "type": TypeOfModeOfOperation,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfPlug",
+                    "type": TypeOfPlug,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfBatteryChemistry",
+                    "type": TypeOfBatteryChemistry,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfLine",
+                    "type": TypeOfLine,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -371,6 +429,11 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "TypeOfNotice",
                     "type": TypeOfNotice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfCongestion",
+                    "type": TypeOfCongestion,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

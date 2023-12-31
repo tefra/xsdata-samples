@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+from .access_mode_enumeration import AccessModeEnumeration
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .transfer_duration_structure import TransferDurationStructure
@@ -66,6 +67,14 @@ class TransferVersionStructure(DataManagedObjectStructure):
         default=None,
         metadata={
             "name": "BothWays",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    transfer_mode: Optional[AccessModeEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "TransferMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

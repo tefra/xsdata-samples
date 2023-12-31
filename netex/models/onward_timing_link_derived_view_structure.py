@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from decimal import Decimal
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
 from .derived_view_structure import DerivedViewStructure
@@ -36,6 +37,14 @@ class OnwardTimingLinkDerivedViewStructure(DerivedViewStructure):
         default=None,
         metadata={
             "name": "ToPointRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    distance: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "Distance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

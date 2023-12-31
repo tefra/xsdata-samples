@@ -220,3 +220,19 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    buttons_height: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "ButtonsHeight",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    netex_org_uk_netex_ground_markaligned_with_button: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "GroundMarkalignedWithButton",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )

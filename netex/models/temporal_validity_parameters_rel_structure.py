@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
+from typing import List, Union
 from .availability_condition_ref import AvailabilityConditionRef
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef
@@ -7,6 +7,7 @@ from .group_of_timebands_ref import GroupOfTimebandsRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .operating_day_ref import OperatingDayRef
 from .operating_period_ref import OperatingPeriodRef
+from .uic_operating_period_ref import UicOperatingPeriodRef
 from .validity_condition_ref import ValidityConditionRef
 from .validity_rule_parameter_ref import ValidityRuleParameterRef
 from .validity_trigger_ref import ValidityTriggerRef
@@ -19,8 +20,8 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "temporalValidityParameters_RelStructure"
 
-    day_type_ref: Optional[Union[FareDayTypeRef, DayTypeRef]] = field(
-        default=None,
+    day_type_ref: List[Union[FareDayTypeRef, DayTypeRef]] = field(
+        default_factory=list,
         metadata={
             "type": "Elements",
             "choices": (
@@ -37,31 +38,45 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    group_of_timebands_ref: Optional[GroupOfTimebandsRef] = field(
-        default=None,
+    group_of_timebands_ref: List[GroupOfTimebandsRef] = field(
+        default_factory=list,
         metadata={
             "name": "GroupOfTimebandsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "sequence": 1,
         },
     )
-    operating_day_ref: Optional[OperatingDayRef] = field(
-        default=None,
+    operating_day_ref: List[OperatingDayRef] = field(
+        default_factory=list,
         metadata={
             "name": "OperatingDayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "sequence": 1,
         },
     )
-    operating_period_ref: Optional[OperatingPeriodRef] = field(
-        default=None,
+    operating_period_ref: List[
+        Union[UicOperatingPeriodRef, OperatingPeriodRef]
+    ] = field(
+        default_factory=list,
         metadata={
-            "name": "OperatingPeriodRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "UicOperatingPeriodRef",
+                    "type": UicOperatingPeriodRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatingPeriodRef",
+                    "type": OperatingPeriodRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )
-    validity_condition_ref: Optional[
+    validity_condition_ref: List[
         Union[
             AvailabilityConditionRef,
             ValidityRuleParameterRef,
@@ -69,7 +84,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             ValidityConditionRef,
         ]
     ] = field(
-        default=None,
+        default_factory=list,
         metadata={
             "type": "Elements",
             "choices": (

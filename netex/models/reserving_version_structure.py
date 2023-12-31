@@ -2,19 +2,19 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
 from .booking_arrangements_structure import BookingArrangementsStructure
+from .booking_policy_version_structure import BookingPolicyVersionStructure
 from .per_basis_enumeration import PerBasisEnumeration
 from .reservation_charge_type_enumeration import (
     ReservationChargeTypeEnumeration,
 )
 from .reservation_enumeration import ReservationEnumeration
 from .seat_allocation_method_enumeration import SeatAllocationMethodEnumeration
-from .usage_parameter_version_structure import UsageParameterVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ReservingVersionStructure(UsageParameterVersionStructure):
+class ReservingVersionStructure(BookingPolicyVersionStructure):
     class Meta:
         name = "Reserving_VersionStructure"
 

@@ -5,6 +5,7 @@ from .gated_enumeration import GatedEnumeration
 from .lighting_enumeration import LightingEnumeration
 from .multilingual_string import MultilingualString
 from .point_version_structure import PointVersionStructure
+from .presentation_structure import PresentationStructure
 from .public_use_enumeration import PublicUseEnumeration
 from .site_component_ref_structure import SiteComponentRefStructure
 from .site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
@@ -70,6 +71,14 @@ class PathJunctionVersionStructure(PointVersionStructure):
         default=None,
         metadata={
             "name": "PersonCapacity",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    presentation: Optional[PresentationStructure] = field(
+        default=None,
+        metadata={
+            "name": "Presentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

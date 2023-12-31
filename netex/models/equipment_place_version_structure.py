@@ -2,13 +2,13 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .equipment_positions_rel_structure import EquipmentPositionsRelStructure
 from .equipments_rel_structure import EquipmentsRelStructure
-from .place_version_structure import PlaceVersionStructure
+from .site_element_version_structure import SiteElementVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class EquipmentPlaceVersionStructure(PlaceVersionStructure):
+class EquipmentPlaceVersionStructure(SiteElementVersionStructure):
     class Meta:
         name = "EquipmentPlace_VersionStructure"
 

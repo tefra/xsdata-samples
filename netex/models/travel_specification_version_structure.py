@@ -127,11 +127,11 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             GeographicalIntervalPriceRef,
             GeographicalUnitPriceRef,
             UsageParameterPriceRef,
+            SeriesConstraintPriceRef,
             SalesOfferPackagePriceRef,
             DistanceMatrixElementPriceRef,
             FareStructureElementPriceRef,
             FulfilmentMethodPriceRef,
-            SeriesConstraintPriceRef,
             CappingRulePriceRef,
             FareProductPriceRef,
             FarePriceRef,
@@ -193,6 +193,11 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "SeriesConstraintPriceRef",
+                    "type": SeriesConstraintPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "SalesOfferPackagePriceRef",
                     "type": SalesOfferPackagePriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -210,11 +215,6 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
                 {
                     "name": "FulfilmentMethodPriceRef",
                     "type": FulfilmentMethodPriceRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SeriesConstraintPriceRef",
-                    "type": SeriesConstraintPriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

@@ -1,9 +1,9 @@
 from dataclasses import dataclass
-from .version_of_object_ref_structure import VersionOfObjectRefStructure
+from .transport_type_ref_structure import TransportTypeRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class VehicleTypeRefStructure(VersionOfObjectRefStructure):
+class VehicleTypeRefStructure(TransportTypeRefStructure):
     pass

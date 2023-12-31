@@ -32,7 +32,7 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1Y2M3DT10H30M0S"),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             ServiceCalendarFrame(
                 id='hde:SCF01',
                 version='any',
@@ -58,7 +58,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 content_validity_conditions=ValidityConditionsRelStructure(
-                    validity_condition_ref_or_validity_condition=[
+                    choice=[
                         ValidityRuleParameter(
                             id='hde:VC_ntwkf003_002_icy',
                             version='any',

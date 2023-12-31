@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+from .additional_driver_option import AdditionalDriverOption
 from .cancelling import Cancelling
 from .charging_policy import ChargingPolicy
 from .commercial_profile import CommercialProfile
@@ -17,6 +18,8 @@ from .minimum_stay import MinimumStay
 from .penalty_policy import PenaltyPolicy
 from .purchase_window import PurchaseWindow
 from .refunding import Refunding
+from .rental_option import RentalOption
+from .rental_penalty_policy import RentalPenaltyPolicy
 from .replacing import Replacing
 from .reselling import Reselling
 from .reserving import Reserving
@@ -34,6 +37,7 @@ from .suspending import Suspending
 from .transferability import Transferability
 from .usage_validity_period import UsageValidityPeriod
 from .user_profile import UserProfile
+from .vehicle_pooler_profile import VehiclePoolerProfile
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -45,6 +49,10 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
 
     usage_parameter: List[
         Union[
+            AdditionalDriverOption,
+            RentalOption,
+            RentalPenaltyPolicy,
+            VehiclePoolerProfile,
             SalesOfferPackageEntitlementRequired,
             SalesOfferPackageEntitlementGiven,
             MinimumStay,
@@ -80,6 +88,26 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "AdditionalDriverOption",
+                    "type": AdditionalDriverOption,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalOption",
+                    "type": RentalOption,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalPenaltyPolicy",
+                    "type": RentalPenaltyPolicy,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehiclePoolerProfile",
+                    "type": VehiclePoolerProfile,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "SalesOfferPackageEntitlementRequired",
                     "type": SalesOfferPackageEntitlementRequired,

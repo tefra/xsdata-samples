@@ -295,7 +295,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    line_ref: Optional[
+    choice: Optional[
         Union[FlexibleLineRef, LineRef, LineView, FlexibleLineView]
     ] = field(
         default=None,

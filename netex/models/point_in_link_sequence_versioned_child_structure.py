@@ -14,9 +14,13 @@ from .route_ref import RouteRef
 from .service_journey_pattern_ref import ServiceJourneyPatternRef
 from .service_journey_ref import ServiceJourneyRef
 from .service_pattern_ref import ServicePatternRef
+from .single_journey_path_ref import SingleJourneyPathRef
+from .single_journey_ref import SingleJourneyRef
 from .special_service_ref import SpecialServiceRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .timing_pattern_ref import TimingPatternRef
+from .trip_pattern_trip_ref import TripPatternTripRef
+from .trip_ref import TripRef
 from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -29,6 +33,10 @@ class PointInLinkSequenceVersionedChildStructure(VersionedChildStructure):
 
     choice: Optional[
         Union[
+            TripRef,
+            TripPatternTripRef,
+            SingleJourneyPathRef,
+            SingleJourneyRef,
             DatedVehicleJourneyRef,
             DatedSpecialServiceRef,
             SpecialServiceRef,
@@ -36,12 +44,12 @@ class PointInLinkSequenceVersionedChildStructure(VersionedChildStructure):
             ServiceJourneyRef,
             DeadRunRef,
             VehicleJourneyRef,
-            NavigationPathRef,
             ServiceJourneyPatternRef,
             ServicePatternRef,
             DeadRunJourneyPatternRef,
             JourneyPatternRef,
             TimingPatternRef,
+            NavigationPathRef,
             RouteRef,
             LinkSequenceRef,
         ]
@@ -50,6 +58,26 @@ class PointInLinkSequenceVersionedChildStructure(VersionedChildStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "TripRef",
+                    "type": TripRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TripPatternTripRef",
+                    "type": TripPatternTripRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SingleJourneyPathRef",
+                    "type": SingleJourneyPathRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SingleJourneyRef",
+                    "type": SingleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "DatedVehicleJourneyRef",
                     "type": DatedVehicleJourneyRef,
@@ -86,11 +114,6 @@ class PointInLinkSequenceVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "NavigationPathRef",
-                    "type": NavigationPathRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "ServiceJourneyPatternRef",
                     "type": ServiceJourneyPatternRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -113,6 +136,11 @@ class PointInLinkSequenceVersionedChildStructure(VersionedChildStructure):
                 {
                     "name": "TimingPatternRef",
                     "type": TimingPatternRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "NavigationPathRef",
+                    "type": NavigationPathRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

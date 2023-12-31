@@ -10696,7 +10696,7 @@
           <serviceFacilitySets>
             <ServiceFacilitySet id="es:sfs_general" version="any">
               <Description>General</Description>
-              <AssistanceFacilityList>boardingAssistance conductor wheechairAssistance</AssistanceFacilityList>
+              <AssistanceFacilityList>boardingAssistance conductor wheelchairAssistance</AssistanceFacilityList>
               <NuisanceFacilityList>noSmoking</NuisanceFacilityList>
               <PassengerCommsFacilityList>publicWifi</PassengerCommsFacilityList>
               <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
@@ -10736,7 +10736,7 @@
               <FareClasses>firstClass</FareClasses>
               <MobilityFacilityList>suitableForWheelchairs</MobilityFacilityList>
               <PassengerCommsFacilityList>powerSupplySockets</PassengerCommsFacilityList>
-              <SanitaryFacilityList>wheelChairAccessToilet</SanitaryFacilityList>
+              <SanitaryFacilityList>wheelchairAccessToilet</SanitaryFacilityList>
               <AccommodationFacilityList>seating specialSeating</AccommodationFacilityList>
             </ServiceFacilitySet>
           </serviceFacilitySets>
@@ -10759,7 +10759,7 @@
               <Name>London Paris</Name>
               <Description>18 Coach Train</Description>
               <SelfPropelled>true</SelfPropelled>
-              <TypeOfFuel>electricity</TypeOfFuel>
+              <FuelType>electricity</FuelType>
               <facilities>
                 <ServiceFacilitySetRef version="any" ref="es:sfs_general"/>
               </facilities>

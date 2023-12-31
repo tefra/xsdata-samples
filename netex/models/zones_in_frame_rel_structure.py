@@ -19,6 +19,10 @@ from .flexible_stop_place import FlexibleStopPlace
 from .garage import Garage
 from .general_zone import GeneralZone
 from .hail_and_ride_area import HailAndRideArea
+from .mobility_service_constraint_zone import MobilityServiceConstraintZone
+from .monitored_vehicle_sharing_parking_bay import (
+    MonitoredVehicleSharingParkingBay,
+)
 from .parking import Parking
 from .parking_area import ParkingArea
 from .parking_bay import ParkingBay
@@ -39,7 +43,17 @@ from .stop_place import StopPlace
 from .stop_place_entrance import StopPlaceEntrance
 from .stop_place_vehicle_entrance import StopPlaceVehicleEntrance
 from .tariff_zone import TariffZone
+from .taxi_parking_area import TaxiParkingArea
+from .taxi_rank import TaxiRank
+from .taxi_stand import TaxiStand
 from .topographic_place import TopographicPlace
+from .vehicle_meeting_place_1 import VehicleMeetingPlace1
+from .vehicle_meeting_place_2 import VehicleMeetingPlace2
+from .vehicle_pooling_meeting_place import VehiclePoolingMeetingPlace
+from .vehicle_pooling_parking_area import VehiclePoolingParkingArea
+from .vehicle_pooling_parking_bay import VehiclePoolingParkingBay
+from .vehicle_sharing_parking_area import VehicleSharingParkingArea
+from .vehicle_sharing_parking_bay import VehicleSharingParkingBay
 from .vehicle_stopping_place import VehicleStoppingPlace
 from .vehicle_stopping_position import VehicleStoppingPosition
 from .zone import Zone
@@ -54,22 +68,35 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
 
     choice: List[
         Union[
+            MobilityServiceConstraintZone,
             RoutingConstraintZone,
             StopArea,
             AccessZone,
+            VehicleMeetingPlace1,
+            VehiclePoolingMeetingPlace,
+            VehicleMeetingPlace2,
             HailAndRideArea,
             FlexibleArea,
             FlexibleQuay,
             FlexibleStopPlace,
+            Garage,
+            EquipmentPlace,
+            TaxiStand,
             VehicleStoppingPlace,
             BoardingPosition,
             AccessSpace,
             Quay,
             PointOfInterestSpace,
-            ParkingBay,
-            ParkingArea,
             ParkingComponent,
             VehicleStoppingPosition,
+            VehiclePoolingParkingArea,
+            VehicleSharingParkingArea,
+            TaxiParkingArea,
+            ParkingArea,
+            MonitoredVehicleSharingParkingBay,
+            VehiclePoolingParkingBay,
+            VehicleSharingParkingBay,
+            ParkingBay,
             PointOfInterestVehicleEntrance,
             PointOfInterestEntrance,
             ParkingPassengerEntrance,
@@ -79,11 +106,10 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             Entrance,
             PointOfInterest,
             Parking,
+            TaxiRank,
             StopPlace,
             ServiceSite,
-            Garage,
             TopographicPlace,
-            EquipmentPlace,
             Country,
             AddressablePlace,
             PostalAddress,
@@ -101,6 +127,11 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
             "type": "Elements",
             "choices": (
                 {
+                    "name": "MobilityServiceConstraintZone",
+                    "type": MobilityServiceConstraintZone,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "RoutingConstraintZone",
                     "type": RoutingConstraintZone,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -113,6 +144,21 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "AccessZone",
                     "type": AccessZone,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleMeetingPlace",
+                    "type": VehicleMeetingPlace1,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehiclePoolingMeetingPlace",
+                    "type": VehiclePoolingMeetingPlace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleMeetingPlace_",
+                    "type": VehicleMeetingPlace2,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -133,6 +179,21 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "FlexibleStopPlace",
                     "type": FlexibleStopPlace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Garage",
+                    "type": Garage,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EquipmentPlace",
+                    "type": EquipmentPlace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TaxiStand",
+                    "type": TaxiStand,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -161,8 +222,28 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "ParkingBay",
-                    "type": ParkingBay,
+                    "name": "ParkingComponent",
+                    "type": ParkingComponent,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleStoppingPosition",
+                    "type": VehicleStoppingPosition,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehiclePoolingParkingArea",
+                    "type": VehiclePoolingParkingArea,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleSharingParkingArea",
+                    "type": VehicleSharingParkingArea,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TaxiParkingArea",
+                    "type": TaxiParkingArea,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -171,13 +252,23 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "ParkingComponent",
-                    "type": ParkingComponent,
+                    "name": "MonitoredVehicleSharingParkingBay",
+                    "type": MonitoredVehicleSharingParkingBay,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "VehicleStoppingPosition",
-                    "type": VehicleStoppingPosition,
+                    "name": "VehiclePoolingParkingBay",
+                    "type": VehiclePoolingParkingBay,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleSharingParkingBay",
+                    "type": VehicleSharingParkingBay,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ParkingBay",
+                    "type": ParkingBay,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -226,6 +317,11 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "TaxiRank",
+                    "type": TaxiRank,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "StopPlace",
                     "type": StopPlace,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -236,18 +332,8 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "Garage",
-                    "type": Garage,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TopographicPlace",
                     "type": TopographicPlace,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "EquipmentPlace",
-                    "type": EquipmentPlace,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

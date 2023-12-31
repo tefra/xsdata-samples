@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 from .commercial_profile_eligibility_ref import CommercialProfileEligibilityRef
-from .customer_eligibility_ref import CustomerEligibilityRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .residential_qualification_eligibility_ref import (
     ResidentialQualificationEligibilityRef,
@@ -21,7 +20,6 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
             ResidentialQualificationEligibilityRef,
             CommercialProfileEligibilityRef,
             UserProfileEligibilityRef,
-            CustomerEligibilityRef,
         ]
     ] = field(
         default_factory=list,
@@ -41,11 +39,6 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
                 {
                     "name": "UserProfileEligibilityRef",
                     "type": UserProfileEligibilityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CustomerEligibilityRef",
-                    "type": CustomerEligibilityRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

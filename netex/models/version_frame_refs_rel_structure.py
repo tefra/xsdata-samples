@@ -5,6 +5,8 @@ from .driver_schedule_frame_ref import DriverScheduleFrameRef
 from .fare_frame_ref import FareFrameRef
 from .general_frame_ref import GeneralFrameRef
 from .infrastructure_frame_ref import InfrastructureFrameRef
+from .mobility_journey_frame_ref import MobilityJourneyFrameRef
+from .mobility_service_frame_ref import MobilityServiceFrameRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .resource_frame_ref import ResourceFrameRef
 from .sales_transaction_frame_ref import SalesTransactionFrameRef
@@ -24,6 +26,8 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
 
     version_frame_ref: List[
         Union[
+            MobilityJourneyFrameRef,
+            MobilityServiceFrameRef,
             SalesTransactionFrameRef,
             FareFrameRef,
             ServiceFrameRef,
@@ -42,6 +46,16 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "MobilityJourneyFrameRef",
+                    "type": MobilityJourneyFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MobilityServiceFrameRef",
+                    "type": MobilityServiceFrameRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "SalesTransactionFrameRef",
                     "type": SalesTransactionFrameRef,

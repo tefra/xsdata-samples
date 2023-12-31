@@ -76,7 +76,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         TimetableFrameRef(
                             value='REQUEST',
                             ref='hde:TIM_23_O'
@@ -91,7 +91,7 @@ obj = PublicationDelivery(
         value='Example  of simple rhythmical  template timetable   with three    journeys  '
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='hde:CF_1',
                 version='1',
@@ -122,7 +122,7 @@ obj = PublicationDelivery(
                             id='hde:TIM_23_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='hde:Cnd001',
                                             version='any',
@@ -172,7 +172,7 @@ obj = PublicationDelivery(
                                             value='EXTERNAL',
                                             ref='hde:TDT_45_morning'
                                         ),
-                                        line_ref=LineView(
+                                        choice=LineView(
                                             line_ref=LineRef(
                                                 version='any',
                                                 ref='mybus:LN_234'
@@ -188,7 +188,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o_01_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -204,7 +204,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o_01_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -222,7 +222,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o_01_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -258,7 +258,7 @@ obj = PublicationDelivery(
                                             value='EXTERNAL',
                                             ref='hde:TDT_45'
                                         ),
-                                        line_ref=LineView(
+                                        choice=LineView(
                                             line_ref=LineRef(
                                                 version='any',
                                                 ref='mybus:LN_234'
@@ -277,7 +277,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:tvj_24o_02_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -295,7 +295,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:tvj_24o_02_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -316,7 +316,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:tvj_24o_02_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -385,7 +385,7 @@ obj = PublicationDelivery(
                                             value='EXTERNAL',
                                             ref='hde:TDT_45'
                                         ),
-                                        line_ref=LineView(
+                                        choice=LineView(
                                             line_ref=LineRef(
                                                 version='any',
                                                 ref='mybus:LN_234'
@@ -404,7 +404,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o_04_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -419,7 +419,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o_04_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -437,7 +437,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:sj_24o_04_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -606,8 +606,8 @@ obj = PublicationDelivery(
                                             name=MultilingualString(
                                                 value='20 minutes past the hourt'
                                             ),
-                                            start_time=XmlTime(10, 20, 0, 0),
-                                            end_time_or_day_offset_or_duration=[
+                                            start_time_or_start_event=XmlTime(10, 20, 0, 0),
+                                            choice=[
                                                 XmlTime(10, 20, 0, 0),
                                             ]
                                         ),
@@ -617,8 +617,8 @@ obj = PublicationDelivery(
                                             name=MultilingualString(
                                                 value='45 minutes past the hourt'
                                             ),
-                                            start_time=XmlTime(10, 45, 0, 0),
-                                            end_time_or_day_offset_or_duration=[
+                                            start_time_or_start_event=XmlTime(10, 45, 0, 0),
+                                            choice=[
                                                 XmlTime(10, 45, 0, 0),
                                             ]
                                         ),

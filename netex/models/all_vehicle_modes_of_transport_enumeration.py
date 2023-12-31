@@ -20,4 +20,8 @@ class AllVehicleModesOfTransportEnumeration(Enum):
     FUNICULAR = "funicular"
     SNOW_AND_ICE = "snowAndIce"
     TAXI = "taxi"
+    FERRY = "ferry"
+    LIFT = "lift"
     SELF_DRIVE = "selfDrive"
+    ANY_MODE = "anyMode"
+    OTHER = "other"

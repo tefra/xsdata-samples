@@ -1,10 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .flexible_stop_place_ref import FlexibleStopPlaceRef
 from .multilingual_string import MultilingualString
 from .place_version_structure import PlaceVersionStructure
-from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -38,7 +40,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: Optional[VehicleModeEnumeration] = field(
+    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
         metadata={
             "name": "TransportMode",

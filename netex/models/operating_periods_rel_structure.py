@@ -4,6 +4,7 @@ from .containment_aggregation_structure import ContainmentAggregationStructure
 from .operating_period import OperatingPeriod
 from .operating_period_ref import OperatingPeriodRef
 from .uic_operating_period import UicOperatingPeriod
+from .uic_operating_period_ref import UicOperatingPeriodRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -13,13 +14,23 @@ class OperatingPeriodsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingPeriods_RelStructure"
 
-    operating_period_ref_or_operating_period_or_uic_operating_period: List[
-        Union[OperatingPeriodRef, OperatingPeriod, UicOperatingPeriod]
+    choice: List[
+        Union[
+            UicOperatingPeriodRef,
+            OperatingPeriodRef,
+            OperatingPeriod,
+            UicOperatingPeriod,
+        ]
     ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "UicOperatingPeriodRef",
+                    "type": UicOperatingPeriodRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "OperatingPeriodRef",
                     "type": OperatingPeriodRef,

@@ -5,6 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 class AccountStatusTypeEnumeration(Enum):
     UNUSED = "unused"
+    UNVERIFIED = "unverified"
     ACTIVE = "active"
     DORMANT = "dormant"
     SUSPENDED = "suspended"

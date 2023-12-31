@@ -10,4 +10,8 @@ class SiteTypeEnumeration(Enum):
     OFFICE = "office"
     MILITARY_BASE = "militaryBase"
     RETAIL = "retail"
+    TRANSPORT = "transport"
+    SPORTS = "sports"
+    GOVERNMENT = "government"
+    CULTURAL_ATTRACTION = "culturalAttraction"
     OTHER = "other"

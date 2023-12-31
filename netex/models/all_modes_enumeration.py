@@ -5,6 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 class AllModesEnumeration(Enum):
     ALL = "all"
+    ANY_MODE = "anyMode"
     UNKNOWN = "unknown"
     AIR = "air"
     BUS = "bus"
@@ -16,6 +17,7 @@ class AllModesEnumeration(Enum):
     URBAN_RAIL = "urbanRail"
     METRO = "metro"
     WATER = "water"
+    FERRY = "ferry"
     CABLEWAY = "cableway"
     FUNICULAR = "funicular"
     LIFT = "lift"
@@ -25,5 +27,6 @@ class AllModesEnumeration(Enum):
     FOOT = "foot"
     BICYCLE = "bicycle"
     MOTORCYCLE = "motorcycle"
+    SCOOTER = "scooter"
     CAR = "car"
     SHUTTLE = "shuttle"

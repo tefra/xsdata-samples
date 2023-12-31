@@ -196,14 +196,15 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    passenger_information_equipment_list: Optional[
+    passenger_information_equipment_list: List[
         PassengerInformationEquipmentEnumeration
     ] = field(
-        default=None,
+        default_factory=list,
         metadata={
             "name": "PassengerInformationEquipmentList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "tokens": True,
         },
     )
     passenger_information_facility_list: List[

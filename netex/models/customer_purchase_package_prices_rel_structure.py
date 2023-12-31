@@ -21,7 +21,7 @@ class CustomerPurchasePackagePricesRelStructure(
     class Meta:
         name = "customerPurchasePackagePrices_RelStructure"
 
-    cell_ref: List[
+    customer_purchase_package_price_ref_or_customer_purchase_package_price_or_cell_ref: List[
         Union[
             CustomerPurchasePackagePriceRef,
             CustomerPurchasePackagePriceVersionedChildStructure,

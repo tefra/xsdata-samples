@@ -33,7 +33,7 @@ obj = PublicationDelivery(
         value='Example of simpleGrouping  '
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             ResourceFrame(
                 id='mybus:Example_Groups_of_Entities',
                 version='any',
@@ -53,7 +53,7 @@ obj = PublicationDelivery(
                     )
                 ),
                 types_of_value=TypesOfValueInFrameRelStructure(
-                    type_of_value_or_type_of_entity=[
+                    choice=[
                         ValueSet(
                             id='mybus:Purposes_of_Grouping',
                             version='001',

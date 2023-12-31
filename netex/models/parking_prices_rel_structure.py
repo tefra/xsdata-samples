@@ -15,7 +15,7 @@ class ParkingPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "parkingPrices_RelStructure"
 
-    cell_ref: List[
+    parking_price_ref_or_cell_ref_or_parking_price: List[
         Union[ParkingPriceRef, CellRef, ParkingPriceVersionedChildStructure]
     ] = field(
         default_factory=list,

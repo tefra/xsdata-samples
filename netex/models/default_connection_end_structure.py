@@ -1,14 +1,16 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .operator_view import OperatorView
-from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
 class DefaultConnectionEndStructure:
-    transport_mode: Optional[VehicleModeEnumeration] = field(
+    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
         metadata={
             "name": "TransportMode",

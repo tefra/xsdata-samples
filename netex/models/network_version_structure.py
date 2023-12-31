@@ -5,8 +5,8 @@ from .group_of_lines_version_structure import GroupOfLinesVersionStructure
 from .groups_of_lines_in_frame_rel_structure import (
     GroupsOfLinesInFrameRelStructure,
 )
-from .groups_of_transport_organisations_refs_rel_structure import (
-    GroupsOfTransportOrganisationsRefsRelStructure,
+from .groups_of_operators_refs_rel_structure import (
+    GroupsOfOperatorsRefsRelStructure,
 )
 from .operator_ref import OperatorRef
 from .tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
@@ -39,9 +39,7 @@ class NetworkVersionStructure(GroupOfLinesVersionStructure):
             ),
         },
     )
-    groups_of_operators: Optional[
-        GroupsOfTransportOrganisationsRefsRelStructure
-    ] = field(
+    groups_of_operators: Optional[GroupsOfOperatorsRefsRelStructure] = field(
         default=None,
         metadata={
             "name": "groupsOfOperators",

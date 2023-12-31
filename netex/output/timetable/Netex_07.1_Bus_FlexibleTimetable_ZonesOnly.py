@@ -74,7 +74,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         TimetableFrameRef(
                             value='REQUEST',
                             ref='hde:TimetableFrameTIM_23_O'
@@ -89,7 +89,7 @@ obj = PublicationDelivery(
         value='Example  of simple flexible timetable  , zones only  \n\t\n1. OVERVIEW\n============\n\n   The servIce has two zones     Sigma   and  Tau\n \n\t SIgma has a single area,  Tau is made up of  two areas \n\t \n\tThere are on demand services between specified start and end time\n\t\n\t   9 to 5 Monday to Friday.\n\t   Booking starts 8 to 12: 1 to 4:30\n \t\t\t\t\t\t\t\t\t\t\n day\n\n==================================\n2. DETAILS\n\n  FLEXIBLE LINE  mybus:FL_24\n\t\thas booking  and references two  two flexible stop places \n\nFLEXIBLE STOP PLACES defines the geometry of the XOnes\n\t    A)    FLEXIBLE STOP PLAcE:  mybus:fsp_Sigma   \n\t\t\t\t\t with a single FLEXIBLE STOP AREA:fsp_Sigma:  \t\t\t\t\t\t \n\t\tB)   FLEXIBLE STOP PLAcE: mybus:fsp_Tau\t\t\t\t\t \n\t\t\t\t with a two FLEXIBLE STOP AREAs     \t\n\t\t\t\t\t :mybus:fa_Tau_01\n\t\t\t \t :mybus:fa_Tau_02\n \n A SERVICE CALENDAR FRAME is used to contain the DAY TYPEs etc \n\n This has FLEXIBLE BOOKING TIMES with avalabiliuty conbditiosn for the booking and service \n   \nA COMPOSITE FRAME is used to group the component FRAMEs\n  \n\t\tA SITE   FRAME is used to contain the FLEXIBLE STOP PLACEs , etc\n\t\tA SERVICE  FRAME is used to contain the     LINEs, etc\n\t\tA TIMETABLE FRAME is used to define the Servce AVAILABILITY and the  the Booking times     \n\t\t\t\nThe Calendar is shown coded as\n      Compact : OPERATING DAYs are assumed for each calendar date within the period of the calendar \n\t\n\t'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='hde:CAL_02',
                 version='1',
@@ -203,7 +203,7 @@ obj = PublicationDelivery(
                                                             )
                                                         )
                                                     ),
-                                                    transport_mode=VehicleModeEnumeration.BUS,
+                                                    transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                                     boarding_use=True,
                                                     alighting_use=True
                                                 ),
@@ -294,7 +294,7 @@ obj = PublicationDelivery(
                                                             )
                                                         )
                                                     ),
-                                                    transport_mode=VehicleModeEnumeration.BUS,
+                                                    transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                                     boarding_use=True,
                                                     alighting_use=True
                                                 ),
@@ -357,7 +357,7 @@ obj = PublicationDelivery(
                                                             )
                                                         )
                                                     ),
-                                                    transport_mode=VehicleModeEnumeration.BUS,
+                                                    transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                                     boarding_use=True,
                                                     alighting_use=True
                                                 ),
@@ -409,7 +409,7 @@ obj = PublicationDelivery(
                             id='hde:TIM_02',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='hde:AC_runs_02',
                                             version='any',
@@ -430,8 +430,8 @@ obj = PublicationDelivery(
                                                     TimebandVersionedChildStructure(
                                                         id='hde:AC_runs_01',
                                                         version='any',
-                                                        start_time=XmlTime(9, 0, 0, 0),
-                                                        end_time_or_day_offset_or_duration=[
+                                                        start_time_or_start_event=XmlTime(9, 0, 0, 0),
+                                                        choice=[
                                                             XmlTime(17, 0, 0, 0),
                                                         ]
                                                     ),
@@ -476,16 +476,16 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='hde:AC_booking_01',
                                                     version='any',
-                                                    start_time=XmlTime(8, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(8, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(12, 0, 0, 0),
                                                     ]
                                                 ),
                                                 TimebandVersionedChildStructure(
                                                     id='hde:AC_booking_02',
                                                     version='any',
-                                                    start_time=XmlTime(13, 0, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(13, 0, 0, 0),
+                                                    choice=[
                                                         XmlTime(16, 30, 0, 0),
                                                     ]
                                                 ),

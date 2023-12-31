@@ -13,4 +13,8 @@ class TaxiSubmodeEnumeration(Enum):
     BIKE_TAXI = "bikeTaxi"
     BLACK_CAB = "blackCab"
     MINI_CAB = "miniCab"
+    APP_TAXI = "appTaxi"
+    FIACRE = "fiacre"
+    RICKSHAW = "rickshaw"
+    CYCLE_RICKSHAW = "cycleRickshaw"
     ALL_TAXI_SERVICES = "allTaxiServices"

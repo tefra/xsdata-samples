@@ -260,6 +260,14 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    maximum_booking_period: Optional[XmlDuration] = field(
+        default=None,
+        metadata={
+            "name": "MaximumBookingPeriod",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     booking_url: Optional[str] = field(
         default=None,
         metadata={

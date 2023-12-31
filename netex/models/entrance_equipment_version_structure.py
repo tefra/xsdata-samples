@@ -133,10 +133,10 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheechair_unaided: Optional[bool] = field(
+    wheelchair_unaided: Optional[bool] = field(
         default=None,
         metadata={
-            "name": "WheechairUnaided",
+            "name": "WheelchairUnaided",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
@@ -173,6 +173,14 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    suitable_for_cycles: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "SuitableForCycles",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     audio_passthrough_indicator: Optional[bool] = field(
         default=None,
         metadata={
@@ -181,10 +189,10 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    suitable_for_cycles: Optional[bool] = field(
+    opening_necessary_force: Optional[NecessaryForceEnumeration] = field(
         default=None,
         metadata={
-            "name": "SuitableForCycles",
+            "name": "OpeningNecessaryForce",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

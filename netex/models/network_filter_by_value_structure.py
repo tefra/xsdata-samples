@@ -12,8 +12,12 @@ from .flexible_quay_ref import FlexibleQuayRef
 from .flexible_stop_place_ref import FlexibleStopPlaceRef
 from .garage_ref import GarageRef
 from .hail_and_ride_area_ref import HailAndRideAreaRef
+from .monitored_vehicle_sharing_parking_bay_ref import (
+    MonitoredVehicleSharingParkingBayRef,
+)
 from .network_ref import NetworkRef
 from .object_filter_by_value_structure import ObjectFilterByValueStructure
+from .parking_area_ref import ParkingAreaRef
 from .parking_bay_ref import ParkingBayRef
 from .parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
 from .parking_entrance_ref import ParkingEntranceRef
@@ -37,8 +41,17 @@ from .stop_place_entrance_ref import StopPlaceEntranceRef
 from .stop_place_ref import StopPlaceRef
 from .stop_place_space_ref import StopPlaceSpaceRef
 from .stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
+from .taxi_parking_area_ref import TaxiParkingAreaRef
+from .taxi_rank_ref import TaxiRankRef
+from .taxi_stand_ref import TaxiStandRef
 from .topographic_place_ref import TopographicPlaceRef
 from .vehicle_entrance_ref import VehicleEntranceRef
+from .vehicle_meeting_place_ref import VehicleMeetingPlaceRef
+from .vehicle_pooling_meeting_place_ref import VehiclePoolingMeetingPlaceRef
+from .vehicle_pooling_parking_area_ref import VehiclePoolingParkingAreaRef
+from .vehicle_pooling_parking_bay_ref import VehiclePoolingParkingBayRef
+from .vehicle_sharing_parking_area_ref import VehicleSharingParkingAreaRef
+from .vehicle_sharing_parking_bay_ref import VehicleSharingParkingBayRef
 from .vehicle_stopping_place_ref import VehicleStoppingPlaceRef
 from .vehicle_stopping_position_ref import VehicleStoppingPositionRef
 
@@ -72,16 +85,27 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
                 FlexibleQuayRef,
                 FlexibleStopPlaceRef,
                 PathJunctionRef,
-                TopographicPlaceRef,
                 EquipmentPlaceRef,
                 EquipmentPositionRef,
+                TopographicPlaceRef,
+                VehiclePoolingMeetingPlaceRef,
+                VehicleMeetingPlaceRef,
+                GarageRef,
                 VehicleStoppingPositionRef,
                 VehicleStoppingPlaceRef,
                 BoardingPositionRef,
                 AccessSpaceRef,
+                TaxiStandRef,
                 QuayRef,
                 StopPlaceSpaceRef,
+                VehiclePoolingParkingBayRef,
+                MonitoredVehicleSharingParkingBayRef,
+                VehicleSharingParkingBayRef,
                 ParkingBayRef,
+                VehiclePoolingParkingAreaRef,
+                VehicleSharingParkingAreaRef,
+                TaxiParkingAreaRef,
+                ParkingAreaRef,
                 PointOfInterestSpaceRef,
                 StopPlaceVehicleEntranceRef,
                 StopPlaceEntranceRef,
@@ -93,13 +117,13 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
                 VehicleEntranceRef,
                 EntranceRef,
                 SiteComponentRef,
+                TaxiRankRef,
                 StopPlaceRef,
                 ParkingRef,
                 PointOfInterestRef,
                 ServiceSiteRef,
                 SiteRef,
                 SiteElementRef,
-                GarageRef,
                 AddressablePlaceRef,
                 PostalAddressRef,
                 RoadAddressRef,
@@ -136,11 +160,6 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
-                        "name": "TopographicPlaceRef",
-                        "type": TopographicPlaceRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
                         "name": "EquipmentPlaceRef",
                         "type": EquipmentPlaceRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -148,6 +167,26 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
                     {
                         "name": "EquipmentPositionRef",
                         "type": EquipmentPositionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TopographicPlaceRef",
+                        "type": TopographicPlaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehiclePoolingMeetingPlaceRef",
+                        "type": VehiclePoolingMeetingPlaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleMeetingPlaceRef",
+                        "type": VehicleMeetingPlaceRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "GarageRef",
+                        "type": GarageRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -171,6 +210,11 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
+                        "name": "TaxiStandRef",
+                        "type": TaxiStandRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
                         "name": "QuayRef",
                         "type": QuayRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -181,8 +225,43 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
+                        "name": "VehiclePoolingParkingBayRef",
+                        "type": VehiclePoolingParkingBayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "MonitoredVehicleSharingParkingBayRef",
+                        "type": MonitoredVehicleSharingParkingBayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleSharingParkingBayRef",
+                        "type": VehicleSharingParkingBayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
                         "name": "ParkingBayRef",
                         "type": ParkingBayRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehiclePoolingParkingAreaRef",
+                        "type": VehiclePoolingParkingAreaRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleSharingParkingAreaRef",
+                        "type": VehicleSharingParkingAreaRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TaxiParkingAreaRef",
+                        "type": TaxiParkingAreaRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "ParkingAreaRef",
+                        "type": ParkingAreaRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
@@ -241,6 +320,11 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {
+                        "name": "TaxiRankRef",
+                        "type": TaxiRankRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
                         "name": "StopPlaceRef",
                         "type": StopPlaceRef,
                         "namespace": "http://www.netex.org.uk/netex",
@@ -268,11 +352,6 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
                     {
                         "name": "SiteElementRef",
                         "type": SiteElementRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "GarageRef",
-                        "type": GarageRef,
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                     {

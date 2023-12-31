@@ -9,6 +9,7 @@ from .external_object_ref_structure import ExternalObjectRefStructure
 from .journey_pattern_ref_structure import JourneyPatternRefStructure
 from .operating_day_ref import OperatingDayRef
 from .service_journey_ref import ServiceJourneyRef
+from .single_journey_ref import SingleJourneyRef
 from .special_service_ref import SpecialServiceRef
 from .target_passing_times_rel_structure import TargetPassingTimesRelStructure
 from .template_service_journey_ref import TemplateServiceJourneyRef
@@ -25,6 +26,7 @@ class DatedVehicleJourneyVersionStructure(VehicleJourneyVersionStructure):
 
     choice: Optional[
         Union[
+            SingleJourneyRef,
             DatedVehicleJourneyRef,
             DatedSpecialServiceRef,
             SpecialServiceRef,
@@ -38,6 +40,11 @@ class DatedVehicleJourneyVersionStructure(VehicleJourneyVersionStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "SingleJourneyRef",
+                    "type": SingleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "DatedVehicleJourneyRef",
                     "type": DatedVehicleJourneyRef,

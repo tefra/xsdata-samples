@@ -1,10 +1,10 @@
 from decimal import Decimal
 from netex.models.access_right_in_product import AccessRightInProduct
 from netex.models.access_rights_in_product_rel_structure import AccessRightsInProductRelStructure
+from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
-from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
 from netex.models.cell_versioned_child_structure import PriceGroup
 from netex.models.cell_versioned_child_structure import PriceGroupsRelStructure
@@ -37,6 +37,7 @@ from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
+from netex.models.logical_operation_enumeration import LogicalOperationEnumeration
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.operator import Operator
@@ -105,7 +106,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='myfares:any'
@@ -120,12 +121,12 @@ obj = PublicationDelivery(
         value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='myfares:DTA@Line_1',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             ValidBetween(
                                 from_date=XmlDateTime(2011, 1, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2011, 7, 1, 0, 0, 0, 0, 0)
@@ -284,7 +285,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Point to pont tariff'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -297,7 +298,7 @@ obj = PublicationDelivery(
                                                 FareStructureElement(
                                                     id='myfares:PointToPoint@access',
                                                     version='1.0',
-                                                    choice=DistanceMatrixElementsRelStructure(
+                                                    choice_1=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
                                                                 version='1.0',
@@ -321,9 +322,9 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
-                                                            all_operators_ref_or_operator_ref=[
+                                                            choice=[
                                                                 OperatorRef(
                                                                     version='any',
                                                                     ref='mybus:DTA'
@@ -355,7 +356,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTrip(
@@ -378,8 +379,8 @@ obj = PublicationDelivery(
                                                                 Interchanging(
                                                                     id='myfares:PointToPoint@conditions_of_travel@interchanging',
                                                                     version='1.0',
-                                                                    from_mode=VehicleModeEnumeration.BUS,
-                                                                    to_mode=VehicleModeEnumeration.BUS,
+                                                                    from_mode=AllVehicleModesOfTransportEnumeration.BUS,
+                                                                    to_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                                                     maximum_number_of_interchanges=0,
                                                                     can_break_journey=False
                                                                 ),
@@ -406,7 +407,7 @@ obj = PublicationDelivery(
                                                         ref='mybus:SSP_002'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
-                                                        cell_ref=[
+                                                        distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
                                                                 version='1.0',
                                                                 ref='myfares:SSP_001+SSP_002'
@@ -429,7 +430,7 @@ obj = PublicationDelivery(
                                                         ref='mybus:SSP_077'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
-                                                        cell_ref=[
+                                                        distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
                                                                 version='1.0',
                                                                 ref='myfares:SSP_001+SSP_077'
@@ -452,7 +453,7 @@ obj = PublicationDelivery(
                                                         ref='mybus:SSP_077'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
-                                                        cell_ref=[
+                                                        distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
                                                                 version='1.0',
                                                                 ref='myfares:SSP_002+SSP_077'
@@ -463,7 +464,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         price_groups=PriceGroupsRelStructure(
-                                            price_group=[
+                                            price_group_ref_or_price_group=[
                                                 PriceGroupRef(
                                                     version='1.0',
                                                     ref='myfares:Line_1'
@@ -485,7 +486,7 @@ obj = PublicationDelivery(
                                             version='ntx:v1.0',
                                             ref='ntx:trip'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -636,7 +637,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='ntx:Types_of_Tariff',
                                         version='ntx:v1.0',

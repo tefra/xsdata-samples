@@ -1,12 +1,10 @@
 from dataclasses import dataclass
-from .all_transport_organisations_ref_structure import (
-    AllTransportOrganisationsRefStructure,
-)
+from .all_operators_ref_structure import AllOperatorsRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class AllOperatorsRef(AllTransportOrganisationsRefStructure):
+class AllOperatorsRef(AllOperatorsRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

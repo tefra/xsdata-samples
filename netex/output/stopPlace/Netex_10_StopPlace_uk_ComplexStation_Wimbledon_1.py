@@ -14,6 +14,7 @@ from netex.models.accessibility_limitation import AccessibilityLimitation
 from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
 from netex.models.administrative_zone_version_structure import AdministrativeZonesRelStructure
 from netex.models.administrative_zone_version_structure import TransportAdministrativeZone
+from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_name import AlternativeName
 from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
@@ -265,7 +266,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    version_frame_ref=[
+                    choice_1=[
                         NetworkFilterByValueStructure(
                             places=NetworkFilterByValueStructure.Places(
                                 choice=[
@@ -286,7 +287,7 @@ obj = PublicationDelivery(
         value='Wimbledon complex Station Example '
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='tbd:CF01',
                 validity_conditions_or_valid_between=[
@@ -389,8 +390,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tbd:DT001Open_MF_01',
                                                     version='any',
-                                                    start_time=XmlTime(5, 0, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(5, 0, 0, 0),
+                                                    choice=[
                                                         XmlDuration("PT19H30M"),
                                                     ]
                                                 ),
@@ -420,8 +421,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tbd:DT002Open_Sat_01',
                                                     version='any',
-                                                    start_time=XmlTime(6, 0, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(6, 0, 0, 0),
+                                                    choice=[
                                                         XmlDuration("PT18H30M"),
                                                     ]
                                                 ),
@@ -448,8 +449,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tbd:DT003Open_Sun',
                                                     version='any',
-                                                    start_time=XmlTime(8, 0, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(8, 0, 0, 0),
+                                                    choice=[
                                                         XmlDuration("PT15H30M"),
                                                     ]
                                                 ),
@@ -481,8 +482,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tbd:DT004Open_MFS',
                                                     version='any',
-                                                    start_time=XmlTime(8, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(8, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(20, 0, 0, 0),
                                                     ]
                                                 ),
@@ -513,8 +514,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tbd:DT004Open_MF',
                                                     version='any',
-                                                    start_time=XmlTime(8, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(8, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(9, 30, 0, 0),
                                                     ]
                                                 ),
@@ -538,8 +539,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tbd:DT005Open_Sun',
                                                     version='any',
-                                                    start_time=XmlTime(10, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(10, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(18, 0, 0, 0),
                                                     ]
                                                 ),
@@ -571,7 +572,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='napt:Stop_types',
                                         version='any',
@@ -735,7 +736,7 @@ obj = PublicationDelivery(
                                                         value='Greater London'
                                                     ),
                                                     administrative_zones=AdministrativeZonesRelStructure(
-                                                        administrative_zone=[
+                                                        administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone=[
                                                             TransportAdministrativeZone(
                                                                 id='nptg:Administrative_zone@82',
                                                                 version='any',
@@ -863,7 +864,7 @@ obj = PublicationDelivery(
                                                         value='Transport Direct'
                                                     ),
                                                     administrative_zones=AdministrativeZonesRelStructure(
-                                                        administrative_zone=[
+                                                        administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone=[
                                                             TransportAdministrativeZone(
                                                                 id='nptg:Administrative_zone@UK',
                                                                 version='any',
@@ -1121,7 +1122,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                validity_condition_ref_or_validity_condition=[
+                                choice=[
                                     AvailabilityCondition(
                                         id='tbd:AC_01_Main_Opening',
                                         version='any',
@@ -1857,8 +1858,8 @@ obj = PublicationDelivery(
                                                 ref='nptgLocality:E0034695'
                                             )
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationDerivedViewStructure(
-                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=GeneralOrganisationRef(
+                                        choice=OrganisationDerivedViewStructure(
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=GeneralOrganisationRef(
                                                 version='any',
                                                 ref='tbd:Org_Nr'
                                             ),
@@ -1908,7 +1909,7 @@ obj = PublicationDelivery(
                                                     id='tbd:9100WIMBLDN@A1-EE1',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='any',
                                                                     ref='tbd:AC_01_Main_Opening'
@@ -2301,7 +2302,7 @@ obj = PublicationDelivery(
                                                     id='tbd:9100WIMBLDN@A4-EE1',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='any',
                                                                     ref='tbd:AC_01_Main_Opening'
@@ -2505,7 +2506,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         public_code='WIM',
-                                        transport_mode=VehicleModeEnumeration.RAIL,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         other_transport_modes=[
                                             VehicleModeEnumeration.METRO,
                                             VehicleModeEnumeration.TRAM,
@@ -2578,7 +2579,7 @@ obj = PublicationDelivery(
                                         ),
                                         weighting=InterchangeWeightingEnumeration.PREFERRED_INTERCHANGE,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='naptStop:9100WIMBLDN@5n6',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
@@ -2964,7 +2965,7 @@ obj = PublicationDelivery(
                                                             value='Platform 10 is paired with Platform 9 with separate lift and stair access. It has shared use for tram'
                                                         ),
                                                     ],
-                                                    transport_mode=VehicleModeEnumeration.RAIL,
+                                                    transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                                     other_transport_modes=[
                                                         VehicleModeEnumeration.TRAM,
                                                     ],
@@ -3104,8 +3105,8 @@ obj = PublicationDelivery(
                                                                                 value='Ticket Office'
                                                                             ),
                                                                             vehicle_modes=[
-                                                                                VehicleModeEnumeration.METRO,
-                                                                                VehicleModeEnumeration.RAIL,
+                                                                                AllModesEnumeration.METRO,
+                                                                                AllModesEnumeration.RAIL,
                                                                             ],
                                                                             ticketing_service_facility_list=[
                                                                                 TicketingServiceFacilityEnumeration.CARD_TOP_UP,
@@ -3131,8 +3132,8 @@ obj = PublicationDelivery(
                                                                                 value='Coins and card'
                                                                             ),
                                                                             vehicle_modes=[
-                                                                                VehicleModeEnumeration.METRO,
-                                                                                VehicleModeEnumeration.RAIL,
+                                                                                AllModesEnumeration.METRO,
+                                                                                AllModesEnumeration.RAIL,
                                                                             ],
                                                                             ticket_machines=True,
                                                                             number_of_machines=2,
@@ -3154,8 +3155,8 @@ obj = PublicationDelivery(
                                                                                 value='Card only '
                                                                             ),
                                                                             vehicle_modes=[
-                                                                                VehicleModeEnumeration.METRO,
-                                                                                VehicleModeEnumeration.RAIL,
+                                                                                AllModesEnumeration.METRO,
+                                                                                AllModesEnumeration.RAIL,
                                                                             ],
                                                                             ticket_machines=True,
                                                                             number_of_machines=4,
@@ -3450,8 +3451,8 @@ obj = PublicationDelivery(
                                                                                 value='Coins and card'
                                                                             ),
                                                                             vehicle_modes=[
-                                                                                VehicleModeEnumeration.METRO,
-                                                                                VehicleModeEnumeration.RAIL,
+                                                                                AllModesEnumeration.METRO,
+                                                                                AllModesEnumeration.RAIL,
                                                                             ],
                                                                             ticket_machines=True,
                                                                             number_of_machines=3,
@@ -4018,7 +4019,7 @@ obj = PublicationDelivery(
                                                                 id='tbd:9100WIMBLDN@A1_Ck002',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        validity_condition_ref_or_validity_condition=[
+                                                                        choice=[
                                                                             AvailabilityConditionRef(
                                                                                 version='any',
                                                                                 ref='tbd:AC_01_Main_Opening'
@@ -4051,7 +4052,7 @@ obj = PublicationDelivery(
                                                                 id='tbd:9100WIMBLDN@A1_Ck003',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        validity_condition_ref_or_validity_condition=[
+                                                                        choice=[
                                                                             AvailabilityConditionRef(
                                                                                 version='any',
                                                                                 ref='tbd:AC_03_RushHourMF'
@@ -4969,7 +4970,7 @@ obj = PublicationDelivery(
                                                                 id='tbd:9100WIMBLDN@link_A2b-EL2g_5n6-EL1pl_by-L2_C1',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        validity_condition_ref_or_validity_condition=[
+                                                                        choice=[
                                                                             AvailabilityCondition(
                                                                                 id='tbd:Av_openingHrs01',
                                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -5084,7 +5085,7 @@ obj = PublicationDelivery(
                                                                 id='naptStop:9100WIMBLDN@5n6-EL1pl',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        validity_condition_ref_or_validity_condition=[
+                                                                        choice=[
                                                                             AvailabilityCondition(
                                                                                 id='tbd:AC_01_Main_Opening',
                                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -5199,7 +5200,7 @@ obj = PublicationDelivery(
                                                                 id='tbd:9100WIMBLDN@5n6-EL1pl_chk1',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
-                                                                        validity_condition_ref_or_validity_condition=[
+                                                                        choice=[
                                                                             AvailabilityConditionRef(
                                                                                 version='any',
                                                                                 ref='tbd:AC_01_Main_Opening'
@@ -9571,7 +9572,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        transport_mode=VehicleModeEnumeration.METRO,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
                                                 TariffZoneRef(
@@ -9626,7 +9627,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='naptStop:4900ZZLUWIM1n2',
                                                     data_source_ref_attribute='nptg:NaPTAN',
@@ -10004,7 +10005,7 @@ obj = PublicationDelivery(
                                                                             id='tbd:TicketingService:9100WIMBLDN@A5_PE-Eq1',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
-                                                                                    validity_condition_ref_or_validity_condition=[
+                                                                                    choice=[
                                                                                         AvailabilityCondition(
                                                                                             id='tbd:9100WIMBLDN1n2_Eq-Sv1',
                                                                                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
@@ -11605,10 +11606,10 @@ obj = PublicationDelivery(
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
-                                        transport_mode=VehicleModeEnumeration.TRAM,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                         stop_place_type=StopTypeEnumeration.TRAM_STATION,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 QuayRef(
                                                     version='001',
                                                     ref='naptStop:9100WIMBLDN10'
@@ -11667,8 +11668,8 @@ obj = PublicationDelivery(
                                                 ref='nptgLocality:E0034695'
                                             )
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationDerivedViewStructure(
-                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationRef(
+                                        choice=OrganisationDerivedViewStructure(
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OrganisationRef(
                                                 version='any',
                                                 ref='tbd:Org_Tfl'
                                             ),
@@ -11680,10 +11681,10 @@ obj = PublicationDelivery(
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
-                                        transport_mode=VehicleModeEnumeration.BUS,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='naptStop:490000272P',
                                                     data_source_ref_attribute='nptg:NaPTAN',
@@ -13202,8 +13203,8 @@ obj = PublicationDelivery(
                                                 ref='nptgLocality:E0034695'
                                             )
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationDerivedViewStructure(
-                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationRef(
+                                        choice=OrganisationDerivedViewStructure(
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OrganisationRef(
                                                 version='any',
                                                 ref='tbd:Org_Tfl'
                                             ),
@@ -13215,10 +13216,10 @@ obj = PublicationDelivery(
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
-                                        transport_mode=VehicleModeEnumeration.BUS,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='naptStop:490014734AnB',
                                                     version='any',
@@ -13476,8 +13477,8 @@ obj = PublicationDelivery(
                                                 ref='nptgLocality:E0034695'
                                             )
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationDerivedViewStructure(
-                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OrganisationRef(
+                                        choice=OrganisationDerivedViewStructure(
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OrganisationRef(
                                                 version='any',
                                                 ref='tbd:Org_Tfl'
                                             ),
@@ -13489,10 +13490,10 @@ obj = PublicationDelivery(
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
-                                        transport_mode=VehicleModeEnumeration.BUS,
+                                        transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='naptStop:490G00272L@quay',
                                                     data_source_ref_attribute='nptg:NaPTAN',
@@ -13988,10 +13989,10 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=False,
                                         from_value=DefaultConnectionEndStructure(
-                                            transport_mode=VehicleModeEnumeration.METRO
+                                            transport_mode=AllVehicleModesOfTransportEnumeration.METRO
                                         ),
                                         to=DefaultConnectionEndStructure(
-                                            transport_mode=VehicleModeEnumeration.RAIL
+                                            transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                         ),
                                         topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
@@ -14014,10 +14015,10 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=False,
                                         from_value=DefaultConnectionEndStructure(
-                                            transport_mode=VehicleModeEnumeration.RAIL
+                                            transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                         ),
                                         to=DefaultConnectionEndStructure(
-                                            transport_mode=VehicleModeEnumeration.METRO
+                                            transport_mode=AllVehicleModesOfTransportEnumeration.METRO
                                         ),
                                         topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
@@ -14040,10 +14041,10 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=DefaultConnectionEndStructure(
-                                            transport_mode=VehicleModeEnumeration.METRO
+                                            transport_mode=AllVehicleModesOfTransportEnumeration.METRO
                                         ),
                                         to=DefaultConnectionEndStructure(
-                                            transport_mode=VehicleModeEnumeration.METRO
+                                            transport_mode=AllVehicleModesOfTransportEnumeration.METRO
                                         ),
                                         topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
@@ -14066,10 +14067,10 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=DefaultConnectionEndStructure(
-                                            transport_mode=VehicleModeEnumeration.METRO
+                                            transport_mode=AllVehicleModesOfTransportEnumeration.METRO
                                         ),
                                         to=DefaultConnectionEndStructure(
-                                            transport_mode=VehicleModeEnumeration.BUS
+                                            transport_mode=AllVehicleModesOfTransportEnumeration.BUS
                                         ),
                                         topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
@@ -14092,10 +14093,10 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=DefaultConnectionEndStructure(
-                                            transport_mode=VehicleModeEnumeration.BUS
+                                            transport_mode=AllVehicleModesOfTransportEnumeration.BUS
                                         ),
                                         to=DefaultConnectionEndStructure(
-                                            transport_mode=VehicleModeEnumeration.BUS
+                                            transport_mode=AllVehicleModesOfTransportEnumeration.BUS
                                         ),
                                         topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
@@ -14122,14 +14123,14 @@ obj = PublicationDelivery(
                                         both_ways=True,
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             )
                                         ),
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             )
@@ -14151,7 +14152,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14167,7 +14168,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14226,7 +14227,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14242,11 +14243,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
@@ -14305,7 +14306,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14321,7 +14322,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14384,7 +14385,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14400,11 +14401,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZLUWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
@@ -14463,7 +14464,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14479,7 +14480,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14542,7 +14543,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14558,11 +14559,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14621,7 +14622,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14634,11 +14635,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14697,7 +14698,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14709,7 +14710,7 @@ obj = PublicationDelivery(
                                         ),
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:490G0019043'
@@ -14768,11 +14769,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
@@ -14788,11 +14789,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
@@ -14851,11 +14852,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
@@ -14871,7 +14872,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -14934,11 +14935,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
@@ -14954,11 +14955,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZLUWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
@@ -15017,11 +15018,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
@@ -15037,7 +15038,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15100,11 +15101,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
@@ -15120,11 +15121,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15187,11 +15188,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
@@ -15207,11 +15208,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15274,11 +15275,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
@@ -15290,7 +15291,7 @@ obj = PublicationDelivery(
                                         ),
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:490G0019043'
@@ -15356,7 +15357,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15376,11 +15377,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZLUWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
@@ -15439,7 +15440,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15459,7 +15460,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15522,7 +15523,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15542,11 +15543,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15609,7 +15610,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15629,11 +15630,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15696,7 +15697,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15712,7 +15713,7 @@ obj = PublicationDelivery(
                                         ),
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:490G0019043'
@@ -15771,11 +15772,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZLUWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
@@ -15791,11 +15792,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9400ZZLUWIM'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
@@ -15854,11 +15855,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
@@ -15874,7 +15875,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -15944,11 +15945,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
@@ -15964,11 +15965,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16031,11 +16032,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
@@ -16051,11 +16052,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16118,11 +16119,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
@@ -16134,7 +16135,7 @@ obj = PublicationDelivery(
                                         ),
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:490G0019043'
@@ -16200,7 +16201,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16220,11 +16221,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16287,7 +16288,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16307,11 +16308,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16374,7 +16375,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16390,7 +16391,7 @@ obj = PublicationDelivery(
                                         ),
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:490G0019043'
@@ -16449,11 +16450,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16473,11 +16474,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16540,7 +16541,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16560,11 +16561,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16627,7 +16628,7 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16643,7 +16644,7 @@ obj = PublicationDelivery(
                                         ),
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:490G0019043'
@@ -16709,11 +16710,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16733,11 +16734,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16800,11 +16801,11 @@ obj = PublicationDelivery(
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
@@ -16820,7 +16821,7 @@ obj = PublicationDelivery(
                                         ),
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            parking_entrance_ref=[
+                                            choice=[
                                                 StopPlaceRef(
                                                     version='001',
                                                     ref='naptStop:490G0019043'
@@ -16896,11 +16897,11 @@ obj = PublicationDelivery(
                                             value='Rail Assignment - could be implicit '
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='naptStop:9100WIMBLDN'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         )
@@ -16913,11 +16914,11 @@ obj = PublicationDelivery(
                                             value='Rail Assignment of second scheduled point '
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='naptStop:9100WIMBLDN10'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         )
@@ -16930,15 +16931,15 @@ obj = PublicationDelivery(
                                             value='Rail Assignment   to Platform 5 and 6 '
                                         ),
                                         order=2,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='naptStop:9100WIMBLDN10'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='001',
                                             ref='naptStop:9100WIMBLDN@5n6'
                                         )
@@ -16951,15 +16952,15 @@ obj = PublicationDelivery(
                                             value='Tram Assignment to Platform 10'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='naptStop:9400ZZCRWIM'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='001',
                                             ref='naptStop:9100WIMBLDN10'
                                         )
@@ -16972,15 +16973,15 @@ obj = PublicationDelivery(
                                             value='Lu Assignment to Platform 1-2'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='naptStop:9400ZZLUWIM'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='001',
                                             ref='naptStop:4900ZZLUWIM1n2'
                                         )
@@ -16993,15 +16994,15 @@ obj = PublicationDelivery(
                                             value='Lu Assignment to Platform 3-4'
                                         ),
                                         order=2,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='naptStop:9400ZZLUWIM'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='001',
                                             ref='naptStop:4900ZZLUWIM3n4'
                                         )
@@ -17014,15 +17015,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='naptStop:490000272P'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='001',
                                             ref='naptStop:490000272P'
                                         )
@@ -17035,15 +17036,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment Stop P'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='naptStop:490000272C'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='001',
                                             ref='naptStop:490000272P'
                                         )
@@ -17056,15 +17057,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment Stop D'
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='naptStop:490000272D'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='001',
                                             ref='naptStop:490015472D'
                                         )
@@ -17076,15 +17077,15 @@ obj = PublicationDelivery(
                                             value='Bus Assignment Stop L '
                                         ),
                                         order=1,
-                                        scheduled_stop_point_ref=ScheduledStopPointRef(
+                                        fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
                                             version='any',
                                             ref='naptStop:490000272L'
                                         ),
-                                        stop_place_ref_or_stop_place=StopPlaceRef(
+                                        taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
-                                        quay_ref_or_quay=QuayRef(
+                                        taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
                                             version='001',
                                             ref='naptStop:490014734A'
                                         )
@@ -17093,7 +17094,7 @@ obj = PublicationDelivery(
                                         id='tbd:NavigationPathAssignment:wimcon_04to00_both',
                                         version='any',
                                         order=1,
-                                        site_ref=StopPlaceRef(
+                                        stop_place_ref_or_site_ref=StopPlaceRef(
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),

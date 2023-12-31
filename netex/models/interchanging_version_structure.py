@@ -1,11 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .register_break_of_journey_enumeration import (
     RegisterBreakOfJourneyEnumeration,
 )
 from .usage_parameter_version_structure import UsageParameterVersionStructure
-from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -23,7 +25,7 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_mode: Optional[VehicleModeEnumeration] = field(
+    from_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
         metadata={
             "name": "FromMode",
@@ -31,7 +33,7 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_mode: Optional[VehicleModeEnumeration] = field(
+    to_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
         metadata={
             "name": "ToMode",

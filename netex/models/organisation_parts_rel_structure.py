@@ -8,6 +8,7 @@ from .department_ref import DepartmentRef
 from .operating_department import OperatingDepartment
 from .organisation_part import OrganisationPart
 from .organisation_part_ref import OrganisationPartRef
+from .organisational_unit import OrganisationalUnit
 from .organisational_unit_ref import OrganisationalUnitRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -26,6 +27,7 @@ class OrganisationPartsRelStructure(ContainmentAggregationStructure):
             OrganisationPartRef,
             ControlCentre,
             OperatingDepartment,
+            OrganisationalUnit,
             Department,
             OrganisationPart,
         ]
@@ -62,6 +64,11 @@ class OrganisationPartsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "OperatingDepartment",
                     "type": OperatingDepartment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OrganisationalUnit",
+                    "type": OrganisationalUnit,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

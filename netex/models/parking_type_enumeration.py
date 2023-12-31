@@ -15,6 +15,6 @@ class ParkingTypeEnumeration(Enum):
     MOTORWAY_PARKING = "motorwayParking"
     ROADSIDE = "roadside"
     PARKING_ZONE = "parkingZone"
-    UNDEFINED = "undefined"
     CYCLE_RENTAL = "cycleRental"
+    UNDEFINED = "undefined"
     OTHER = "other"

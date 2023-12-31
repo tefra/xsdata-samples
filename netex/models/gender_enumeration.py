@@ -6,3 +6,4 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 class GenderEnumeration(Enum):
     FEMALE = "female"
     MALE = "male"
+    UNSPECIFIED = "unspecified"

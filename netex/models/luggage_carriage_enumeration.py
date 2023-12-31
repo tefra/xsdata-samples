@@ -8,6 +8,8 @@ class LuggageCarriageEnumeration(Enum):
     NO_BAGGAGE_STORAGE = "noBaggageStorage"
     BAGGAGE_STORAGE = "baggageStorage"
     LUGGAGE_RACKS = "luggageRacks"
+    SKI_RACKS = "skiRacks"
+    SKI_RACKS_ON_REAR = "skiRacksOnRear"
     EXTRA_LARGE_LUGGAGE_RACKS = "extraLargeLuggageRacks"
     BAGGAGE_VAN = "baggageVan"
     NO_CYCLES = "noCycles"

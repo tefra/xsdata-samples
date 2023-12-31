@@ -19,7 +19,7 @@ class SeriesConstraintPricesRelStructure(
     class Meta:
         name = "seriesConstraintPrices_RelStructure"
 
-    cell_ref: List[
+    series_constraint_price_ref_or_series_constraint_price_or_cell_ref: List[
         Union[
             SeriesConstraintPriceRef,
             SeriesConstraintPriceVersionedChildStructure,

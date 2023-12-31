@@ -5,7 +5,6 @@ from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import DayType
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
-from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
 from netex.models.cell_versioned_child_structure import CellsRelStructure
 from netex.models.cell_versioned_child_structure import FareTable
 from netex.models.cell_versioned_child_structure import FareTablesRelStructure
@@ -59,6 +58,7 @@ from netex.models.line_ref import LineRef
 from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
+from netex.models.logical_operation_enumeration import LogicalOperationEnumeration
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network import Network
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
@@ -160,7 +160,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='myfares:FF01'
@@ -175,12 +175,12 @@ obj = PublicationDelivery(
         value='Example of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='myfares:DTA@z2z_time_banded',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             ValidBetween(
                                 from_date=XmlDateTime(2011, 1, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2011, 7, 1, 0, 0, 0, 0, 0)
@@ -514,7 +514,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Zone to Zone Trip tariff'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -550,7 +550,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Allowed zone to zone transitions'
                                                     ),
-                                                    choice=DistanceMatrixElementsRelStructure(
+                                                    choice_1=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
                                                                 version='any',
@@ -587,7 +587,7 @@ obj = PublicationDelivery(
                                                             ref='ntx:can_access'
                                                         ),
                                                         validity_parameters=ValidityParametersRelStructure(
-                                                            all_operators_ref_or_operator_ref=[
+                                                            choice=[
                                                                 OperatorRef(
                                                                     version='any',
                                                                     ref='mybus:DTA'
@@ -616,7 +616,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:eligible'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.XOR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfile(
@@ -695,7 +695,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access_when'
                                                         ),
-                                                        includes_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                        includes_grouping_type=LogicalOperationEnumeration.XOR,
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
@@ -709,16 +709,20 @@ obj = PublicationDelivery(
                                                                         version='ntx:v1.0',
                                                                         ref='ntx:can_access_when'
                                                                     ),
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                        day_type_ref=DayTypeRef(
-                                                                            version='any',
-                                                                            ref='myfares:DT_01-MF-NH'
-                                                                        ),
-                                                                        group_of_timebands_ref=GroupOfTimebandsRef(
-                                                                            version='any',
-                                                                            ref='myfares:peak'
-                                                                        )
+                                                                        day_type_ref=[
+                                                                            DayTypeRef(
+                                                                                version='any',
+                                                                                ref='myfares:DT_01-MF-NH'
+                                                                            ),
+                                                                        ],
+                                                                        group_of_timebands_ref=[
+                                                                            GroupOfTimebandsRef(
+                                                                                version='any',
+                                                                                ref='myfares:peak'
+                                                                            ),
+                                                                        ]
                                                                     ),
                                                                     quality_structure_factor_ref=FareDemandFactorRef(
                                                                         version='1.0',
@@ -737,10 +741,12 @@ obj = PublicationDelivery(
                                                                         ref='ntx:can_access_when'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                        day_type_ref=DayTypeRef(
-                                                                            version='any',
-                                                                            ref='myfares:DT_02-NotWorkingDay'
-                                                                        )
+                                                                        day_type_ref=[
+                                                                            DayTypeRef(
+                                                                                version='any',
+                                                                                ref='myfares:DT_02-NotWorkingDay'
+                                                                            ),
+                                                                        ]
                                                                     ),
                                                                     quality_structure_factor_ref=FareDemandFactorRef(
                                                                         version='1.0',
@@ -768,7 +774,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTrip(
@@ -816,7 +822,7 @@ obj = PublicationDelivery(
                                                         ref='myfares:1'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
-                                                        cell_ref=[
+                                                        distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
                                                                 version='any',
                                                                 ref='myfares:SingleTrip@Z1+Z1@peak'
@@ -843,7 +849,7 @@ obj = PublicationDelivery(
                                                         ref='myfares:2'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
-                                                        cell_ref=[
+                                                        distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
                                                                 version='any',
                                                                 ref='myfares:SingleTrip@Z1+Z2@peak'
@@ -870,7 +876,7 @@ obj = PublicationDelivery(
                                                         ref='myfares:3'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
-                                                        cell_ref=[
+                                                        distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
                                                                 version='any',
                                                                 ref='myfares:SingleTrip@Z1+Z3@peak'
@@ -897,7 +903,7 @@ obj = PublicationDelivery(
                                                         ref='myfares:2'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
-                                                        cell_ref=[
+                                                        distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
                                                                 version='any',
                                                                 ref='myfares:SingleTrip@Z2+Z2@peak'
@@ -924,7 +930,7 @@ obj = PublicationDelivery(
                                                         ref='myfares:3'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
-                                                        cell_ref=[
+                                                        distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
                                                                 version='any',
                                                                 ref='myfares:SingleTrip@Z2+Z3@peak'
@@ -951,7 +957,7 @@ obj = PublicationDelivery(
                                                         ref='myfares:3'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
-                                                        cell_ref=[
+                                                        distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
                                                                 version='any',
                                                                 ref='myfares:SingleTrip@Z3+Z3@peak'
@@ -988,7 +994,7 @@ obj = PublicationDelivery(
                                             version='ntx:v1.0',
                                             ref='ntx:trip'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -1161,7 +1167,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         used_in=UsedInRefsRelStructure(
-                                            tariff_ref=[
+                                            choice=[
                                                 TariffRef(
                                                     version='1.0',
                                                     ref='myfares:Tz2z'
@@ -1193,7 +1199,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             DistanceMatrixElementPrice(
                                                                 id='myfares:SingleTrip@Z1+Z1@offPeak',
                                                                 version='any',
@@ -1284,7 +1290,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             DistanceMatrixElementPrice(
                                                                 id='myfares:SingleTrip@Z1+Z1@peak',
                                                                 version='any',
@@ -1432,8 +1438,8 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Morning Peak'
                                         ),
-                                        start_time=XmlTime(8, 30, 0, 0),
-                                        end_time_or_day_offset_or_duration=[
+                                        start_time_or_start_event=XmlTime(8, 30, 0, 0),
+                                        choice=[
                                             XmlTime(10, 0, 0, 0),
                                         ]
                                     ),
@@ -1443,8 +1449,8 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Evening Peak'
                                         ),
-                                        start_time=XmlTime(17, 0, 0, 0),
-                                        end_time_or_day_offset_or_duration=[
+                                        start_time_or_start_event=XmlTime(17, 0, 0, 0),
+                                        choice=[
                                             XmlTime(18, 30, 0, 0),
                                         ]
                                     ),
@@ -1494,7 +1500,7 @@ obj = PublicationDelivery(
                     ]
                 ),
                 types_of_value=TypesOfValueInFrameRelStructure(
-                    type_of_value_or_type_of_entity=[
+                    choice=[
                         ValueSet(
                             id='ntx:Types_of_Tariff',
                             version='ntx:v1.0',

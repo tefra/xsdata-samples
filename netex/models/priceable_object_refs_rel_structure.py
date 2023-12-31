@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+from .additional_driver_option_ref import AdditionalDriverOptionRef
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
+from .booking_policy_ref import BookingPolicyRef
 from .cancelling_ref import CancellingRef
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_rule_ref import CappingRuleRef
@@ -42,6 +44,8 @@ from .profile_parameter_ref import ProfileParameterRef
 from .purchase_window_ref import PurchaseWindowRef
 from .quality_structure_factor_ref import QualityStructureFactorRef
 from .refunding_ref import RefundingRef
+from .rental_option_ref import RentalOptionRef
+from .rental_penalty_policy_ref import RentalPenaltyPolicyRef
 from .replacing_ref import ReplacingRef
 from .reselling_ref import ResellingRef
 from .reserving_ref import ReservingRef
@@ -70,6 +74,7 @@ from .usage_discount_right_ref import UsageDiscountRightRef
 from .usage_validity_period_ref import UsageValidityPeriodRef
 from .user_profile_ref import UserProfileRef
 from .validable_element_ref import ValidableElementRef
+from .vehicle_pooler_profile_ref import VehiclePoolerProfileRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -85,6 +90,9 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
             CustomerPurchasePackageRef,
             ControllableElementRef,
             ValidableElementRef,
+            AdditionalDriverOptionRef,
+            RentalOptionRef,
+            RentalPenaltyPolicyRef,
             SalesOfferPackageEntitlementGivenRef,
             SalesOfferPackageEntitlementRequiredRef,
             MinimumStayRef,
@@ -101,6 +109,7 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
             EligibilityChangePolicyRef,
             GroupTicketRef,
             CommercialProfileRef,
+            VehiclePoolerProfileRef,
             CompanionProfileRef,
             UserProfileRef,
             ProfileParameterRef,
@@ -114,14 +123,15 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
             ResellingRef,
             CancellingRef,
             ReservingRef,
+            BookingPolicyRef,
             PurchaseWindowRef,
+            SeriesConstraintRef,
             SalesOfferPackageElementRef,
             SalesOfferPackageRef,
             DistanceMatrixElementInverseRef,
             DistanceMatrixElementRef,
             FareStructureElementRef,
             FulfilmentMethodRef,
-            SeriesConstraintRef,
             CappingRuleRef,
             EntitlementProductRef,
             SupplementProductRef,
@@ -166,6 +176,21 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
                 {
                     "name": "ValidableElementRef",
                     "type": ValidableElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AdditionalDriverOptionRef",
+                    "type": AdditionalDriverOptionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalOptionRef",
+                    "type": RentalOptionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalPenaltyPolicyRef",
+                    "type": RentalPenaltyPolicyRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -249,6 +274,11 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "VehiclePoolerProfileRef",
+                    "type": VehiclePoolerProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "CompanionProfileRef",
                     "type": CompanionProfileRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -314,8 +344,18 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "BookingPolicyRef",
+                    "type": BookingPolicyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "PurchaseWindowRef",
                     "type": PurchaseWindowRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SeriesConstraintRef",
+                    "type": SeriesConstraintRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -346,11 +386,6 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
                 {
                     "name": "FulfilmentMethodRef",
                     "type": FulfilmentMethodRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SeriesConstraintRef",
-                    "type": SeriesConstraintRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

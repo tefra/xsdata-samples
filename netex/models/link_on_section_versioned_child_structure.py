@@ -6,6 +6,7 @@ from .line_link_ref import LineLinkRef
 from .link_in_link_sequence_versioned_child_structure import (
     LinkInLinkSequenceVersionedChildStructure,
 )
+from .onward_vehicle_meeting_link_ref import OnwardVehicleMeetingLinkRef
 from .path_link import PathLink
 from .path_link_ref import PathLinkRef
 from .railway_element import RailwayElement
@@ -19,6 +20,8 @@ from .service_link_ref import ServiceLinkRef
 from .site_path_link import SitePathLink
 from .timing_link import TimingLink
 from .timing_link_ref import TimingLinkRef
+from .vehicle_meeting_link import VehicleMeetingLink
+from .vehicle_meeting_link_ref import VehicleMeetingLinkRef
 from .wire_element import WireElement
 from .wire_link_ref import WireLinkRef
 
@@ -34,15 +37,18 @@ class LinkOnSectionVersionedChildStructure(
 
     choice_1: Optional[
         Union[
+            OnwardVehicleMeetingLinkRef,
+            VehicleMeetingLinkRef,
             ServiceLinkRef,
             LineLinkRef,
-            PathLinkRef,
             TimingLinkRef,
-            RouteLinkRef,
             WireLinkRef,
             RoadLinkRef,
             RailwayLinkRef,
             ActivationLinkRef,
+            PathLinkRef,
+            RouteLinkRef,
+            VehicleMeetingLink,
             ServiceLink,
             SitePathLink,
             PathLink,
@@ -59,6 +65,16 @@ class LinkOnSectionVersionedChildStructure(
             "type": "Elements",
             "choices": (
                 {
+                    "name": "OnwardVehicleMeetingLinkRef",
+                    "type": OnwardVehicleMeetingLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleMeetingLinkRef",
+                    "type": VehicleMeetingLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "ServiceLinkRef",
                     "type": ServiceLinkRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -69,18 +85,8 @@ class LinkOnSectionVersionedChildStructure(
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PathLinkRef",
-                    "type": PathLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TimingLinkRef",
                     "type": TimingLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RouteLinkRef",
-                    "type": RouteLinkRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -101,6 +107,21 @@ class LinkOnSectionVersionedChildStructure(
                 {
                     "name": "ActivationLinkRef",
                     "type": ActivationLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PathLinkRef",
+                    "type": PathLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RouteLinkRef",
+                    "type": RouteLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleMeetingLink",
+                    "type": VehicleMeetingLink,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

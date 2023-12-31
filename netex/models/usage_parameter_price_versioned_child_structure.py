@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+from .additional_driver_option_ref import AdditionalDriverOptionRef
+from .booking_policy_ref import BookingPolicyRef
 from .cancelling_ref import CancellingRef
 from .charging_policy_ref import ChargingPolicyRef
 from .commercial_profile_ref import CommercialProfileRef
@@ -20,6 +22,8 @@ from .penalty_policy_ref import PenaltyPolicyRef
 from .profile_parameter_ref import ProfileParameterRef
 from .purchase_window_ref import PurchaseWindowRef
 from .refunding_ref import RefundingRef
+from .rental_option_ref import RentalOptionRef
+from .rental_penalty_policy_ref import RentalPenaltyPolicyRef
 from .replacing_ref import ReplacingRef
 from .reselling_ref import ResellingRef
 from .reserving_ref import ReservingRef
@@ -37,6 +41,7 @@ from .suspending_ref import SuspendingRef
 from .transferability_ref import TransferabilityRef
 from .usage_validity_period_ref import UsageValidityPeriodRef
 from .user_profile_ref import UserProfileRef
+from .vehicle_pooler_profile_ref import VehiclePoolerProfileRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -50,6 +55,9 @@ class UsageParameterPriceVersionedChildStructure(
 
     choice: Optional[
         Union[
+            AdditionalDriverOptionRef,
+            RentalOptionRef,
+            RentalPenaltyPolicyRef,
             SalesOfferPackageEntitlementGivenRef,
             SalesOfferPackageEntitlementRequiredRef,
             MinimumStayRef,
@@ -66,6 +74,7 @@ class UsageParameterPriceVersionedChildStructure(
             EligibilityChangePolicyRef,
             GroupTicketRef,
             CommercialProfileRef,
+            VehiclePoolerProfileRef,
             CompanionProfileRef,
             UserProfileRef,
             ProfileParameterRef,
@@ -79,6 +88,7 @@ class UsageParameterPriceVersionedChildStructure(
             ResellingRef,
             CancellingRef,
             ReservingRef,
+            BookingPolicyRef,
             PurchaseWindowRef,
         ]
     ] = field(
@@ -86,6 +96,21 @@ class UsageParameterPriceVersionedChildStructure(
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "AdditionalDriverOptionRef",
+                    "type": AdditionalDriverOptionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalOptionRef",
+                    "type": RentalOptionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalPenaltyPolicyRef",
+                    "type": RentalPenaltyPolicyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "SalesOfferPackageEntitlementGivenRef",
                     "type": SalesOfferPackageEntitlementGivenRef,
@@ -167,6 +192,11 @@ class UsageParameterPriceVersionedChildStructure(
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "VehiclePoolerProfileRef",
+                    "type": VehiclePoolerProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "CompanionProfileRef",
                     "type": CompanionProfileRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -229,6 +259,11 @@ class UsageParameterPriceVersionedChildStructure(
                 {
                     "name": "ReservingRef",
                     "type": ReservingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BookingPolicyRef",
+                    "type": BookingPolicyRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

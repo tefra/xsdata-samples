@@ -127,7 +127,7 @@ class DepartureStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_stop_assignment_ref: Optional[
+    choice: Optional[
         Union[
             VehicleJourneyStopAssignmentRef,
             DynamicStopAssignmentRef,

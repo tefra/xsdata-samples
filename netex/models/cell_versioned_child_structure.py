@@ -1,27 +1,41 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
+from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
+from .activated_equipment_ref import ActivatedEquipmentRef
+from .additional_driver_option_ref import AdditionalDriverOptionRef
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .alternative_texts_rel_structure import (
     DataManagedObjectStructure,
     VersionedChildStructure,
 )
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
+from .assistance_booking_service_ref import AssistanceBookingServiceRef
+from .assistance_service_ref import AssistanceServiceRef
 from .authority_ref import AuthorityRef
+from .battery_equipment_ref import BatteryEquipmentRef
+from .booking_policy_ref import BookingPolicyRef
 from .cancelling_ref import CancellingRef
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_rule_price import CappingRulePrice
 from .capping_rule_price_ref import CappingRulePriceRef
 from .capping_rule_ref import CappingRuleRef
+from .car_model_profile_ref import CarModelProfileRef
+from .car_pooling_service_ref import CarPoolingServiceRef
+from .catering_service_ref import CateringServiceRef
 from .cell_ref import CellRef
 from .charging_policy_ref import ChargingPolicyRef
+from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
 from .class_of_use_ref import ClassOfUseRef
 from .commercial_profile_ref import CommercialProfileRef
+from .communication_service_ref import CommunicationServiceRef
 from .companion_profile_ref import CompanionProfileRef
+from .complaints_service_ref import ComplaintsServiceRef
 from .compound_train_ref import CompoundTrainRef
 from .controllable_element_price import ControllableElementPrice
 from .controllable_element_price_ref import ControllableElementPriceRef
 from .controllable_element_ref import ControllableElementRef
+from .crossing_equipment_ref import CrossingEquipmentRef
 from .customer_purchase_package_element_ref import (
     CustomerPurchasePackageElementRef,
 )
@@ -30,6 +44,9 @@ from .customer_purchase_package_price_ref import (
     CustomerPurchasePackagePriceRef,
 )
 from .customer_purchase_package_ref import CustomerPurchasePackageRef
+from .customer_service_ref import CustomerServiceRef
+from .cycle_model_profile_ref import CycleModelProfileRef
+from .cycle_storage_equipment_ref import CycleStorageEquipmentRef
 from .discounting_rule_ref import DiscountingRuleRef
 from .distance_matrix_element_inverse_ref import (
     DistanceMatrixElementInverseRef,
@@ -42,6 +59,9 @@ from .eligibility_change_policy_ref import EligibilityChangePolicyRef
 from .entitlement_given_ref import EntitlementGivenRef
 from .entitlement_product_ref import EntitlementProductRef
 from .entitlement_required_ref import EntitlementRequiredRef
+from .entrance_equipment_ref import EntranceEquipmentRef
+from .equipment_ref import EquipmentRef
+from .escalator_equipment_ref import EscalatorEquipmentRef
 from .exchanging_ref import ExchangingRef
 from .facility_set_ref import FacilitySetRef
 from .fare_class_enumeration import FareClassEnumeration
@@ -72,6 +92,7 @@ from .fulfilment_method_price import FulfilmentMethodPrice
 from .fulfilment_method_price_ref import FulfilmentMethodPriceRef
 from .fulfilment_method_ref import FulfilmentMethodRef
 from .general_organisation_ref import GeneralOrganisationRef
+from .general_sign_ref import GeneralSignRef
 from .geographical_interval_price import GeographicalIntervalPrice
 from .geographical_interval_price_ref import GeographicalIntervalPriceRef
 from .geographical_interval_ref import GeographicalIntervalRef
@@ -87,17 +108,31 @@ from .group_of_entities_version_structure import (
 )
 from .group_of_lines_ref import GroupOfLinesRef
 from .group_of_services_ref import GroupOfServicesRef
+from .group_of_single_journeys_ref import GroupOfSingleJourneysRef
 from .group_ticket_ref import GroupTicketRef
+from .heading_sign_ref import HeadingSignRef
+from .help_point_equipment_ref import HelpPointEquipmentRef
+from .hire_service_ref import HireServiceRef
 from .info_links_rel_structure import InfoLinksRelStructure
 from .interchanging_ref import InterchangingRef
+from .left_luggage_service_ref import LeftLuggageServiceRef
+from .lift_equipment_ref import LiftEquipmentRef
 from .limiting_rule_ref import LimitingRuleRef
 from .line_ref import LineRef
+from .local_service_ref import LocalServiceRef
+from .lost_property_service_ref import LostPropertyServiceRef
 from .luggage_allowance_ref import LuggageAllowanceRef
+from .luggage_locker_equipment_ref import LuggageLockerEquipmentRef
+from .luggage_service_ref import LuggageServiceRef
 from .management_agent_ref import ManagementAgentRef
+from .meeting_point_service_ref import MeetingPointServiceRef
 from .minimum_stay_ref import MinimumStayRef
+from .money_service_ref import MoneyServiceRef
 from .multilingual_string import MultilingualString
 from .network_ref import NetworkRef
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .online_service_operator_ref import OnlineServiceOperatorRef
+from .online_service_ref import OnlineServiceRef
 from .operator_ref import OperatorRef
 from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
@@ -107,8 +142,15 @@ from .parking_properties_ref import ParkingPropertiesRef
 from .parking_ref import ParkingRef
 from .parking_tariff_ref import ParkingTariffRef
 from .parking_vehicle_enumeration import ParkingVehicleEnumeration
+from .passenger_equipment_ref import PassengerEquipmentRef
+from .passenger_information_equipment_ref import (
+    PassengerInformationEquipmentRef,
+)
+from .passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .penalty_policy_ref import PenaltyPolicyRef
+from .place_lighting_equipment_ref import PlaceLightingEquipmentRef
+from .place_sign_ref import PlaceSignRef
 from .point_of_interest_ref import PointOfInterestRef
 from .preassigned_fare_product_ref import PreassignedFareProductRef
 from .price_group_ref import PriceGroupRef
@@ -124,16 +166,25 @@ from .purchase_window_ref import PurchaseWindowRef
 from .quality_structure_factor_price import QualityStructureFactorPrice
 from .quality_structure_factor_price_ref import QualityStructureFactorPriceRef
 from .quality_structure_factor_ref import QualityStructureFactorRef
+from .queueing_equipment_ref import QueueingEquipmentRef
+from .ramp_equipment_ref import RampEquipmentRef
+from .refuelling_equipment_ref import RefuellingEquipmentRef
 from .refunding_ref import RefundingRef
 from .relative_direction_enumeration import RelativeDirectionEnumeration
+from .rental_option_ref import RentalOptionRef
+from .rental_penalty_policy_ref import RentalPenaltyPolicyRef
 from .replacing_ref import ReplacingRef
 from .reselling_ref import ResellingRef
 from .reserving_ref import ReservingRef
 from .retail_consortium_ref import RetailConsortiumRef
+from .retail_device_ref import RetailDeviceRef
+from .retail_service_ref import RetailServiceRef
+from .rough_surface_ref import RoughSurfaceRef
 from .round_trip_ref import RoundTripRef
 from .rounding_ref import RoundingRef
 from .routing_ref import RoutingRef
 from .routing_type_enumeration import RoutingTypeEnumeration
+from .rubbish_disposal_equipment_ref import RubbishDisposalEquipmentRef
 from .sale_discount_right_ref import SaleDiscountRightRef
 from .sales_offer_package_element_ref import SalesOfferPackageElementRef
 from .sales_offer_package_entitlement_given_ref import (
@@ -145,6 +196,8 @@ from .sales_offer_package_entitlement_required_ref import (
 from .sales_offer_package_price import SalesOfferPackagePrice
 from .sales_offer_package_price_ref import SalesOfferPackagePriceRef
 from .sales_offer_package_ref import SalesOfferPackageRef
+from .sanitary_equipment_ref import SanitaryEquipmentRef
+from .seating_equipment_ref import SeatingEquipmentRef
 from .series_constraint_price import SeriesConstraintPrice
 from .series_constraint_price_ref import SeriesConstraintPriceRef
 from .series_constraint_ref import SeriesConstraintRef
@@ -153,8 +206,14 @@ from .service_facility_set_ref import ServiceFacilitySetRef
 from .service_journey_ref import ServiceJourneyRef
 from .service_site_ref import ServiceSiteRef
 from .serviced_organisation_ref import ServicedOrganisationRef
+from .shelter_equipment_ref import ShelterEquipmentRef
+from .sign_equipment_ref import SignEquipmentRef
+from .simple_vehicle_type_ref import SimpleVehicleTypeRef
+from .single_journey_ref import SingleJourneyRef
+from .site_equipment_ref import SiteEquipmentRef
 from .site_facility_set_ref import SiteFacilitySetRef
 from .site_ref import SiteRef
+from .staircase_equipment_ref import StaircaseEquipmentRef
 from .standard_fare_table import StandardFareTable
 from .standard_fare_table_ref import StandardFareTableRef
 from .step_limit_ref import StepLimitRef
@@ -167,8 +226,13 @@ from .supplement_product_ref import SupplementProductRef
 from .suspending_ref import SuspendingRef
 from .tariff_ref import TariffRef
 from .tariff_zone_ref import TariffZoneRef
+from .taxi_rank_ref import TaxiRankRef
+from .taxi_service_ref import TaxiServiceRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .third_party_product_ref import ThirdPartyProductRef
+from .ticket_validator_equipment_ref import TicketValidatorEquipmentRef
+from .ticketing_equipment_ref import TicketingEquipmentRef
+from .ticketing_service_ref import TicketingServiceRef
 from .time_interval_price import TimeIntervalPrice
 from .time_interval_price_ref import TimeIntervalPriceRef
 from .time_interval_ref import TimeIntervalRef
@@ -179,10 +243,14 @@ from .time_unit_ref import TimeUnitRef
 from .train_number_ref import TrainNumberRef
 from .train_ref import TrainRef
 from .transferability_ref import TransferabilityRef
+from .transport_type_ref import TransportTypeRef
 from .travel_agent_ref import TravelAgentRef
+from .travelator_equipment_ref import TravelatorEquipmentRef
+from .trolley_stand_equipment_ref import TrolleyStandEquipmentRef
 from .type_of_fare_product_ref import TypeOfFareProductRef
 from .type_of_fare_structure_factor_ref import TypeOfFareStructureFactorRef
 from .type_of_fare_table_ref import TypeOfFareTableRef
+from .type_of_parking_ref import TypeOfParkingRef
 from .type_of_payment_method_ref import TypeOfPaymentMethodRef
 from .type_of_product_category_ref import TypeOfProductCategoryRef
 from .type_of_service_ref import TypeOfServiceRef
@@ -197,7 +265,19 @@ from .user_profile_ref import UserProfileRef
 from .validable_element_price import ValidableElementPrice
 from .validable_element_price_ref import ValidableElementPriceRef
 from .validable_element_ref import ValidableElementRef
+from .vehicle_charging_equipment_ref import VehicleChargingEquipmentRef
+from .vehicle_equipment_ref import VehicleEquipmentRef
+from .vehicle_meeting_place_ref import VehicleMeetingPlaceRef
+from .vehicle_model_ref import VehicleModelRef
+from .vehicle_pooler_profile_ref import VehiclePoolerProfileRef
+from .vehicle_pooling_meeting_place_ref import VehiclePoolingMeetingPlaceRef
+from .vehicle_release_equipment_ref import VehicleReleaseEquipmentRef
+from .vehicle_rental_service_ref import VehicleRentalServiceRef
+from .vehicle_sharing_service_ref import VehicleSharingServiceRef
 from .vehicle_type_ref import VehicleTypeRef
+from .waiting_equipment_ref import WaitingEquipmentRef
+from .waiting_room_equipment_ref import WaitingRoomEquipmentRef
+from .wheelchair_vehicle_ref import WheelchairVehicleRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -223,7 +303,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_price_ref_or_fare_price: Optional[
+    choice: Optional[
         Union[
             FarePriceVersionedChildStructure,
             CustomerPurchasePackagePriceRef,
@@ -236,11 +316,11 @@ class CellVersionedChildStructure(VersionedChildStructure):
             GeographicalIntervalPriceRef,
             GeographicalUnitPriceRef,
             UsageParameterPriceRef,
+            SeriesConstraintPriceRef,
             SalesOfferPackagePriceRef,
             DistanceMatrixElementPriceRef,
             FareStructureElementPriceRef,
             FulfilmentMethodPriceRef,
-            SeriesConstraintPriceRef,
             CappingRulePriceRef,
             FareProductPriceRef,
             FarePriceRef,
@@ -324,6 +404,11 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "SeriesConstraintPriceRef",
+                    "type": SeriesConstraintPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "SalesOfferPackagePriceRef",
                     "type": SalesOfferPackagePriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -341,11 +426,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
                 {
                     "name": "FulfilmentMethodPriceRef",
                     "type": FulfilmentMethodPriceRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SeriesConstraintPriceRef",
-                    "type": SeriesConstraintPriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -456,12 +536,15 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    choice: List[
+    choice_1: List[
         Union[
             CustomerPurchasePackageElementRef,
             CustomerPurchasePackageRef,
             ControllableElementRef,
             ValidableElementRef,
+            AdditionalDriverOptionRef,
+            RentalOptionRef,
+            RentalPenaltyPolicyRef,
             SalesOfferPackageEntitlementGivenRef,
             SalesOfferPackageEntitlementRequiredRef,
             MinimumStayRef,
@@ -478,6 +561,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             EligibilityChangePolicyRef,
             GroupTicketRef,
             CommercialProfileRef,
+            VehiclePoolerProfileRef,
             CompanionProfileRef,
             UserProfileRef,
             ProfileParameterRef,
@@ -491,14 +575,15 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ResellingRef,
             CancellingRef,
             ReservingRef,
+            BookingPolicyRef,
             PurchaseWindowRef,
+            SeriesConstraintRef,
             SalesOfferPackageElementRef,
             SalesOfferPackageRef,
             DistanceMatrixElementInverseRef,
             DistanceMatrixElementRef,
             FareStructureElementRef,
             FulfilmentMethodRef,
-            SeriesConstraintRef,
             CappingRuleRef,
             EntitlementProductRef,
             SupplementProductRef,
@@ -543,6 +628,21 @@ class CellVersionedChildStructure(VersionedChildStructure):
                 {
                     "name": "ValidableElementRef",
                     "type": ValidableElementRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AdditionalDriverOptionRef",
+                    "type": AdditionalDriverOptionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalOptionRef",
+                    "type": RentalOptionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RentalPenaltyPolicyRef",
+                    "type": RentalPenaltyPolicyRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -626,6 +726,11 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "VehiclePoolerProfileRef",
+                    "type": VehiclePoolerProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "CompanionProfileRef",
                     "type": CompanionProfileRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -691,8 +796,18 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "BookingPolicyRef",
+                    "type": BookingPolicyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "PurchaseWindowRef",
                     "type": PurchaseWindowRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SeriesConstraintRef",
+                    "type": SeriesConstraintRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -723,11 +838,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
                 {
                     "name": "FulfilmentMethodRef",
                     "type": FulfilmentMethodRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SeriesConstraintRef",
-                    "type": SeriesConstraintRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -859,12 +969,24 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operator_ref: Optional[OperatorRef] = field(
+    transport_organisation_ref: Optional[
+        Union[AuthorityRef, OperatorRef]
+    ] = field(
         default=None,
         metadata={
-            "name": "OperatorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )
     group_of_lines_ref: Optional[Union[NetworkRef, GroupOfLinesRef]] = field(
@@ -903,8 +1025,9 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    site_ref: Optional[
+    stop_place_ref_or_site_ref: Optional[
         Union[
+            TaxiRankRef,
             StopPlaceRef,
             ParkingRef,
             PointOfInterestRef,
@@ -916,6 +1039,11 @@ class CellVersionedChildStructure(VersionedChildStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "TaxiRankRef",
+                    "type": TaxiRankRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "StopPlaceRef",
                     "type": StopPlaceRef,
@@ -942,6 +1070,34 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
+        },
+    )
+    vehicle_meeting_place_ref: Optional[
+        Union[VehiclePoolingMeetingPlaceRef, VehicleMeetingPlaceRef]
+    ] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "VehiclePoolingMeetingPlaceRef",
+                    "type": VehiclePoolingMeetingPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleMeetingPlaceRef",
+                    "type": VehicleMeetingPlaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
+    )
+    type_of_parking_ref: Optional[TypeOfParkingRef] = field(
+        default=None,
+        metadata={
+            "name": "TypeOfParkingRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         },
     )
     tariff_zone_ref: Optional[TariffZoneRef] = field(
@@ -1017,12 +1173,14 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_journey_ref: Optional[
+    choice_2: Optional[
         Union[
             TemplateServiceJourneyRef,
             ServiceJourneyRef,
+            SingleJourneyRef,
             TrainNumberRef,
             GroupOfServicesRef,
+            GroupOfSingleJourneysRef,
         ]
     ] = field(
         default=None,
@@ -1040,6 +1198,11 @@ class CellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "SingleJourneyRef",
+                    "type": SingleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "TrainNumberRef",
                     "type": TrainNumberRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -1047,6 +1210,457 @@ class CellVersionedChildStructure(VersionedChildStructure):
                 {
                     "name": "GroupOfServicesRef",
                     "type": GroupOfServicesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GroupOfSingleJourneysRef",
+                    "type": GroupOfSingleJourneysRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
+    )
+    transport_type_ref_or_vehicle_type_ref: Optional[
+        Union[
+            SimpleVehicleTypeRef,
+            CompoundTrainRef,
+            TrainRef,
+            VehicleTypeRef,
+            TransportTypeRef,
+        ]
+    ] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "SimpleVehicleTypeRef",
+                    "type": SimpleVehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CompoundTrainRef",
+                    "type": CompoundTrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrainRef",
+                    "type": TrainRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleTypeRef",
+                    "type": VehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransportTypeRef",
+                    "type": TransportTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
+    )
+    vehicle_model_ref: Optional[VehicleModelRef] = field(
+        default=None,
+        metadata={
+            "name": "VehicleModelRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    vehicle_model_profile_ref: Optional[
+        Union[CycleModelProfileRef, CarModelProfileRef]
+    ] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CycleModelProfileRef",
+                    "type": CycleModelProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CarModelProfileRef",
+                    "type": CarModelProfileRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
+    )
+    choice_3: Optional[
+        Union[
+            RetailDeviceRef,
+            OnlineServiceRef,
+            VehicleRentalServiceRef,
+            VehicleSharingServiceRef,
+            ChauffeuredVehicleServiceRef,
+            TaxiServiceRef,
+            CarPoolingServiceRef,
+            ActivatedEquipmentRef,
+            BatteryEquipmentRef,
+            RefuellingEquipmentRef,
+            VehicleChargingEquipmentRef,
+            AssistanceBookingServiceRef,
+            CateringServiceRef,
+            RetailServiceRef,
+            MoneyServiceRef,
+            HireServiceRef,
+            CommunicationServiceRef,
+            MeetingPointServiceRef,
+            LeftLuggageServiceRef,
+            LuggageServiceRef,
+            LostPropertyServiceRef,
+            ComplaintsServiceRef,
+            CustomerServiceRef,
+            AssistanceServiceRef,
+            TicketingServiceRef,
+            LocalServiceRef,
+            VehicleReleaseEquipmentRef,
+            TicketValidatorEquipmentRef,
+            TicketingEquipmentRef,
+            PassengerInformationEquipmentRef,
+            CycleStorageEquipmentRef,
+            TrolleyStandEquipmentRef,
+            SeatingEquipmentRef,
+            ShelterEquipmentRef,
+            LuggageLockerEquipmentRef,
+            WaitingRoomEquipmentRef,
+            WaitingEquipmentRef,
+            SiteEquipmentRef,
+            PlaceLightingEquipmentRef,
+            RoughSurfaceRef,
+            StaircaseEquipmentRef,
+            QueueingEquipmentRef,
+            TravelatorEquipmentRef,
+            EscalatorEquipmentRef,
+            LiftEquipmentRef,
+            CrossingEquipmentRef,
+            RampEquipmentRef,
+            EntranceEquipmentRef,
+            HeadingSignRef,
+            GeneralSignRef,
+            PlaceSignRef,
+            SignEquipmentRef,
+            RubbishDisposalEquipmentRef,
+            HelpPointEquipmentRef,
+            PassengerSafetyEquipmentRef,
+            SanitaryEquipmentRef,
+            WheelchairVehicleRef,
+            AccessVehicleEquipmentRef,
+            VehicleEquipmentRef,
+            PassengerEquipmentRef,
+            EquipmentRef,
+        ]
+    ] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "RetailDeviceRef",
+                    "type": RetailDeviceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OnlineServiceRef",
+                    "type": OnlineServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleRentalServiceRef",
+                    "type": VehicleRentalServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleSharingServiceRef",
+                    "type": VehicleSharingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ChauffeuredVehicleServiceRef",
+                    "type": ChauffeuredVehicleServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TaxiServiceRef",
+                    "type": TaxiServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CarPoolingServiceRef",
+                    "type": CarPoolingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActivatedEquipmentRef",
+                    "type": ActivatedEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BatteryEquipmentRef",
+                    "type": BatteryEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RefuellingEquipmentRef",
+                    "type": RefuellingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleChargingEquipmentRef",
+                    "type": VehicleChargingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceBookingServiceRef",
+                    "type": AssistanceBookingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CateringServiceRef",
+                    "type": CateringServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailServiceRef",
+                    "type": RetailServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MoneyServiceRef",
+                    "type": MoneyServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HireServiceRef",
+                    "type": HireServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommunicationServiceRef",
+                    "type": CommunicationServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MeetingPointServiceRef",
+                    "type": MeetingPointServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LeftLuggageServiceRef",
+                    "type": LeftLuggageServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageServiceRef",
+                    "type": LuggageServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LostPropertyServiceRef",
+                    "type": LostPropertyServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ComplaintsServiceRef",
+                    "type": ComplaintsServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerServiceRef",
+                    "type": CustomerServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceServiceRef",
+                    "type": AssistanceServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingServiceRef",
+                    "type": TicketingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LocalServiceRef",
+                    "type": LocalServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleReleaseEquipmentRef",
+                    "type": VehicleReleaseEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketValidatorEquipmentRef",
+                    "type": TicketValidatorEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingEquipmentRef",
+                    "type": TicketingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerInformationEquipmentRef",
+                    "type": PassengerInformationEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CycleStorageEquipmentRef",
+                    "type": CycleStorageEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrolleyStandEquipmentRef",
+                    "type": TrolleyStandEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SeatingEquipmentRef",
+                    "type": SeatingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ShelterEquipmentRef",
+                    "type": ShelterEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageLockerEquipmentRef",
+                    "type": LuggageLockerEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WaitingRoomEquipmentRef",
+                    "type": WaitingRoomEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WaitingEquipmentRef",
+                    "type": WaitingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteEquipmentRef",
+                    "type": SiteEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PlaceLightingEquipmentRef",
+                    "type": PlaceLightingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoughSurfaceRef",
+                    "type": RoughSurfaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StaircaseEquipmentRef",
+                    "type": StaircaseEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QueueingEquipmentRef",
+                    "type": QueueingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelatorEquipmentRef",
+                    "type": TravelatorEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EscalatorEquipmentRef",
+                    "type": EscalatorEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LiftEquipmentRef",
+                    "type": LiftEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CrossingEquipmentRef",
+                    "type": CrossingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RampEquipmentRef",
+                    "type": RampEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntranceEquipmentRef",
+                    "type": EntranceEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HeadingSignRef",
+                    "type": HeadingSignRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralSignRef",
+                    "type": GeneralSignRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PlaceSignRef",
+                    "type": PlaceSignRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SignEquipmentRef",
+                    "type": SignEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RubbishDisposalEquipmentRef",
+                    "type": RubbishDisposalEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HelpPointEquipmentRef",
+                    "type": HelpPointEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerSafetyEquipmentRef",
+                    "type": PassengerSafetyEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SanitaryEquipmentRef",
+                    "type": SanitaryEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WheelchairVehicleRef",
+                    "type": WheelchairVehicleRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessVehicleEquipmentRef",
+                    "type": AccessVehicleEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleEquipmentRef",
+                    "type": VehicleEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerEquipmentRef",
+                    "type": PassengerEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EquipmentRef",
+                    "type": EquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -1200,7 +1814,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cells_RelStructure"
 
-    fare_price_or_fare_price_ref: List[
+    choice: List[
         Union[
             Cell,
             CellVersionedChildStructure,
@@ -1231,11 +1845,11 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
             GeographicalIntervalPriceRef,
             GeographicalUnitPriceRef,
             UsageParameterPriceRef,
+            SeriesConstraintPriceRef,
             SalesOfferPackagePriceRef,
             DistanceMatrixElementPriceRef,
             FareStructureElementPriceRef,
             FulfilmentMethodPriceRef,
-            SeriesConstraintPriceRef,
             CappingRulePriceRef,
             FareProductPriceRef,
             FarePriceRef,
@@ -1392,6 +2006,11 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "SeriesConstraintPriceRef",
+                    "type": SeriesConstraintPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "SalesOfferPackagePriceRef",
                     "type": SalesOfferPackagePriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -1409,11 +2028,6 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "FulfilmentMethodPriceRef",
                     "type": FulfilmentMethodPriceRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SeriesConstraintPriceRef",
-                    "type": SeriesConstraintPriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1458,11 +2072,11 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
             GeographicalIntervalPriceRef,
             GeographicalUnitPriceRef,
             UsageParameterPriceRef,
+            SeriesConstraintPriceRef,
             SalesOfferPackagePriceRef,
             DistanceMatrixElementPriceRef,
             FareStructureElementPriceRef,
             FulfilmentMethodPriceRef,
-            SeriesConstraintPriceRef,
             CappingRulePriceRef,
             FareProductPriceRef,
             FarePriceRef,
@@ -1541,6 +2155,11 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "SeriesConstraintPriceRef",
+                    "type": SeriesConstraintPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "SalesOfferPackagePriceRef",
                     "type": SalesOfferPackagePriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -1558,11 +2177,6 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
                 {
                     "name": "FulfilmentMethodPriceRef",
                     "type": FulfilmentMethodPriceRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SeriesConstraintPriceRef",
-                    "type": SeriesConstraintPriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1728,16 +2342,17 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: Optional[
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
         Union[
             RetailConsortiumRef,
-            AuthorityRef,
-            OperatorRef,
+            OnlineServiceOperatorRef,
             GeneralOrganisationRef,
             ManagementAgentRef,
             ServicedOrganisationRef,
             TravelAgentRef,
             OtherOrganisationRef,
+            AuthorityRef,
+            OperatorRef,
             OrganisationRef,
         ]
     ] = field(
@@ -1751,13 +2366,8 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
+                    "name": "OnlineServiceOperatorRef",
+                    "type": OnlineServiceOperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1783,6 +2393,16 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
                 {
                     "name": "OtherOrganisationRef",
                     "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -1908,11 +2528,11 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
             GeographicalIntervalPriceRef,
             GeographicalUnitPriceRef,
             UsageParameterPriceRef,
+            SeriesConstraintPriceRef,
             SalesOfferPackagePriceRef,
             DistanceMatrixElementPriceRef,
             FareStructureElementPriceRef,
             FulfilmentMethodPriceRef,
-            SeriesConstraintPriceRef,
             CappingRulePriceRef,
             FareProductPriceRef,
             FarePriceRef,
@@ -1973,6 +2593,11 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "SeriesConstraintPriceRef",
+                    "type": SeriesConstraintPriceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "SalesOfferPackagePriceRef",
                     "type": SalesOfferPackagePriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -1990,11 +2615,6 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
                 {
                     "name": "FulfilmentMethodPriceRef",
                     "type": FulfilmentMethodPriceRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SeriesConstraintPriceRef",
-                    "type": SeriesConstraintPriceRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2088,7 +2708,9 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "priceGroups_RelStructure"
 
-    price_group: List[Union[PriceGroupRef, PriceGroup]] = field(
+    price_group_ref_or_price_group: List[
+        Union[PriceGroupRef, PriceGroup]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -2334,13 +2956,24 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_type_ref: Optional[
-        Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
+    transport_type_ref_or_vehicle_type_ref: Optional[
+        Union[
+            SimpleVehicleTypeRef,
+            CompoundTrainRef,
+            TrainRef,
+            VehicleTypeRef,
+            TransportTypeRef,
+        ]
     ] = field(
         default=None,
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "SimpleVehicleTypeRef",
+                    "type": SimpleVehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "CompoundTrainRef",
                     "type": CompoundTrainRef,
@@ -2354,6 +2987,11 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
                 {
                     "name": "VehicleTypeRef",
                     "type": VehicleTypeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TransportTypeRef",
+                    "type": TransportTypeRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

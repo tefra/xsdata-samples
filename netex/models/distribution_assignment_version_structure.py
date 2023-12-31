@@ -5,6 +5,9 @@ from .all_countries_ref import AllCountriesRef
 from .all_distribution_channels_ref import AllDistributionChannelsRef
 from .all_operators_ref import AllOperatorsRef
 from .all_organisations_ref import AllOrganisationsRef
+from .all_public_transport_organisations_ref import (
+    AllPublicTransportOrganisationsRef,
+)
 from .all_transport_organisations_ref import AllTransportOrganisationsRef
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .assignment_version_structure_2 import AssignmentVersionStructure2
@@ -24,6 +27,7 @@ from .group_of_distribution_channels_ref import GroupOfDistributionChannelsRef
 from .group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
 from .management_agent_ref import ManagementAgentRef
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .online_service_operator_ref import OnlineServiceOperatorRef
 from .operator_ref import OperatorRef
 from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
@@ -277,16 +281,18 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
         Union[
             AllAuthoritiesRef,
             AllOperatorsRef,
+            AllPublicTransportOrganisationsRef,
             AllTransportOrganisationsRef,
             AllOrganisationsRef,
             RetailConsortiumRef,
-            AuthorityRef,
-            OperatorRef,
+            OnlineServiceOperatorRef,
             GeneralOrganisationRef,
             ManagementAgentRef,
             ServicedOrganisationRef,
             TravelAgentRef,
             OtherOrganisationRef,
+            AuthorityRef,
+            OperatorRef,
             OrganisationRef,
         ]
     ] = field(
@@ -305,6 +311,11 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "AllPublicTransportOrganisationsRef",
+                    "type": AllPublicTransportOrganisationsRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "AllTransportOrganisationsRef",
                     "type": AllTransportOrganisationsRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -320,13 +331,8 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
+                    "name": "OnlineServiceOperatorRef",
+                    "type": OnlineServiceOperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -352,6 +358,16 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
                 {
                     "name": "OtherOrganisationRef",
                     "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

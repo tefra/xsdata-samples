@@ -20,6 +20,8 @@ from .payment_by_mobile_structure import PaymentByMobileStructure
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .site_path_links_rel_structure import SitePathLinksRelStructure
 from .site_version_structure import SiteVersionStructure
+from .transport_type_refs_rel_structure import TransportTypeRefsRelStructure
+from .type_of_parking_ref import TypeOfParkingRef
 from .type_of_payment_method_refs_rel_structure import (
     TypeOfPaymentMethodRefsRelStructure,
 )
@@ -87,6 +89,14 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    type_of_parking_ref: Optional[TypeOfParkingRef] = field(
+        default=None,
+        metadata={
+            "name": "TypeOfParkingRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     parking_vehicle_types: List[ParkingVehicleEnumeration] = field(
         default_factory=list,
         metadata={
@@ -94,6 +104,14 @@ class ParkingVersionStructure(SiteVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
+        },
+    )
+    vehicle_types: Optional[TransportTypeRefsRelStructure] = field(
+        default=None,
+        metadata={
+            "name": "vehicleTypes",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
         },
     )
     parking_layout: Optional[ParkingLayoutEnumeration] = field(

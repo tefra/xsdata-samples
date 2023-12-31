@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2.2">
+  <PublicationTimestamp>2020-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRequest>
+    <RequestTimestamp>2020-12-17T09:30:46Z</RequestTimestamp>
+    <ParticipantRef>SYS002</ParticipantRef>
+    <Description>Request for ryde 1  tariff</Description>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition id="r1" version="any">
+            <FromDate>2020-01-01T00:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <NetworkFilterByValue>
+          <LayerRef ref="fxc:fareNetwork_fareProducts_farePrices"/>
+          <objectReferences>
+            <OperatorRef version="any" ref="noc:XRYD"/>
+            <VehiclePoolingRef ref="ride_share"/>
+          </objectReferences>
+        </NetworkFilterByValue>
+      </NetworkFrameTopic>
+    </topics>
+  </PublicationRequest>
+  <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+  <Description>Example  of simple car pooling  ride offfer and fare </Description>
+  <dataObjects>
+    <CompositeFrame id="rd:ride_sharing_example" dataSourceRef="rd:ryde" version="1.0" responsibilitySetRef="rd:tariffs">
+      <ValidBetween>
+        <FromDate>2020-06-01T00:00:00</FromDate>
+        <ToDate>2020-12-31T12:00:00</ToDate>
+      </ValidBetween>
+      <Name>Ride Sharing  Example</Name>
+      <Description>This is an example showing how one might encode  static aspects of a car ride  sharing scheme "ryde"  in NeTEx.  It includes some  prices.</Description>
+      <codespaces>
+        <CodespaceRef ref="ryd_data"/>
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="ryd_data"/>
+        <DefaultDataSourceRef version="any" ref="rd:ryde"/>
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <frames>
+        <ResourceFrame id="rd:ride_sharing_example" version="1.0" responsibilitySetRef="rd:network_data">
+          <Name>ryde Operator specific  common resources</Name>
+          <codespaces>
+            <Codespace id="ryd_data">
+              <Xmlns>rd</Xmlns>
+              <XmlnsUrl>http://www.ryde.eu/data</XmlnsUrl>
+              <Description>ryde data</Description>
+            </Codespace>
+          </codespaces>
+          <dataSources>
+            <DataSource id="rd:ryde" version="any">
+              <Email>feedback@ryde.eu</Email>
+              <DataLicenceCode type="SPX" ref="GSCYQ"/>
+              <DataLicenceUrl>https://opendata.eu/vanilla</DataLicenceUrl>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet id="rd:tariffs" version="any">
+              <Name>Operator Tariffs</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="rd:tariff_data@creates" version="any">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="any" ref="noc:XRYD">noc:XRYD</ResponsibleOrganisationRef>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet id="rd:network_data" version="any">
+              <Name>Operator data</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="rd:network_data@creates" version="any">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="any" ref="noc:XRYD">noc:XRYD</ResponsibleOrganisationRef>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet id="allBranding" version="any" classOfValues="Branding">
+              <Name>Brands</Name>
+              <values>
+                <Branding id="myBrand" version="any">
+                  <Name>ryde</Name>
+                  <Url>https://www.ryde.eu/static/images/logo.png</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator id="noc:XRYD" version="any">
+              <Name>ryde</Name>
+              <ShortName>Ryde</ShortName>
+              <TradingName>Ticket to Ryde SA</TradingName>
+              <Description>Members only system to  to allocate and match ride shares between commuters in the Metropolis  area</Description>
+              <ContactDetails>
+                <Phone>+32 1293 449191</Phone>
+                <Url>https://www.ryde.eu</Url>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <Address>
+                <Street>Alpha1</Street>
+                <Town>Metropolis</Town>
+                <PostCode>RH10 9UA</PostCode>
+                <PostalRegion>Metroland</PostalRegion>
+              </Address>
+              <PrimaryMode>selfDrive</PrimaryMode>
+              <SelfDriveSubmode>ownCar</SelfDriveSubmode>
+              <VehiclePoolingRef version="any" ref="ride_share"/>
+            </Operator>
+            <OnlineServiceOperator id="floggit" version="any">
+              <Name>Online transport services</Name>
+              <TradingName>Web Floggers SA</TradingName>
+              <Description>Thord  party providers of on;ine systems for Ryde</Description>
+              <ContactDetails>
+                <Email>barrowboy@floggit.com</Email>
+              </ContactDetails>
+              <OrganisationType>onlineProvider</OrganisationType>
+              <Address>
+                <Street>Rue des Postes.</Street>
+                <Town>Betaville</Town>
+                <PostalRegion>Metroland</PostalRegion>
+              </Address>
+            </OnlineServiceOperator>
+          </organisations>
+          <modesOfOperation>
+            <VehiclePooling id="ride_share" version="any">
+              <Name>Commuter  car pool</Name>
+              <Description>Available/ wanted Rides in comtters own cars matched</Description>
+              <submodes>
+                <Submode id="ride_share" version="any">
+                  <TransportMode>selfDrive</TransportMode>
+                  <SelfDriveSubmode>ownCar</SelfDriveSubmode>
+                </Submode>
+              </submodes>
+              <VehiclePoolingType>commuterCarPooling</VehiclePoolingType>
+            </VehiclePooling>
+          </modesOfOperation>
+          <serviceFacilitySets>
+            <ServiceFacilitySet id="no_smoking" version="any">
+              <NuisanceFacilityList>noSmoking</NuisanceFacilityList>
+            </ServiceFacilitySet>
+            <ServiceFacilitySet id="smoking" version="any">
+              <NuisanceFacilityList>smoking</NuisanceFacilityList>
+            </ServiceFacilitySet>
+            <ServiceFacilitySet id="no_pets" version="any">
+              <NuisanceFacilityList>noAnimals</NuisanceFacilityList>
+            </ServiceFacilitySet>
+            <ServiceFacilitySet id="pets_allowed" version="any">
+              <NuisanceFacilityList>animalsAllowed</NuisanceFacilityList>
+            </ServiceFacilitySet>
+          </serviceFacilitySets>
+        </ResourceFrame>
+        <SiteFrame id="rd:ride_sharing_example" version="1.0" responsibilitySetRef="rd:network_data">
+          <Name>Places localities used by services</Name>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="rd:ride_sharing_example"/>
+          </prerequisites>
+          <topographicPlaces>
+            <TopographicPlace id="alphaville" version="any">
+              <Centroid>
+                <Location id="alphaville">
+                  <Longitude>1.35250</Longitude>
+                  <Latitude>52.44692</Latitude>
+                </Location>
+              </Centroid>
+              <Descriptor>
+                <Name>Alphaville</Name>
+              </Descriptor>
+            </TopographicPlace>
+            <TopographicPlace id="gamma_sur_mer" version="any">
+              <Name>Gamma</Name>
+              <Centroid>
+                <Location id="Gamma-sur-mer">
+                  <Longitude>2.35250</Longitude>
+                  <Latitude>53.44692</Latitude>
+                </Location>
+              </Centroid>
+              <Descriptor>
+                <Name>Gamma-sur-mer</Name>
+              </Descriptor>
+            </TopographicPlace>
+          </topographicPlaces>
+          <stopPlaces>
+            <StopPlace id="alphaville_gare@taxi" version="any">
+              <Name lang="fr">Gare d'Alphaville</Name>
+              <TopographicPlaceRef version="any" ref="alphaville"/>
+              <TransportMode>rail</TransportMode>
+              <quays>
+                <Quay id="alphaville_gare@taxi_set_down" version="any">
+                  <Name>Alphaville station set down Area</Name>
+                  <Covered>covered</Covered>
+                  <TransportMode>taxi</TransportMode>
+                  <BoardingUse>false</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                </Quay>
+                <Quay id="alphaville_gare@taxi_pick_up" version="any">
+                  <Name>&gt;Alphaville station pick up   Area</Name>
+                  <Covered>covered</Covered>
+                  <TransportMode>taxi</TransportMode>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>false</AlightingUse>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <TaxiRank id="alphaville_hdv_taxi" version="any">
+              <Name>Taxi Rank at Alphaville Hotel de Ville</Name>
+              <adjacentSites>
+                <PointOfInterestRef version="any" ref="alphaville_hdv"/>
+              </adjacentSites>
+              <StopPlaceType>taxiRank</StopPlaceType>
+              <taxiStands>
+                <TaxiStand id="alphaville_hdv_taxi@s1" version="any">
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                  <QuayType>taxiStand</QuayType>
+                </TaxiStand>
+              </taxiStands>
+            </TaxiRank>
+          </stopPlaces>
+          <pointsOfInterest>
+            <PointOfInterest id="alphaville_hdv" version="any">
+              <Name>ALphaville Hotel de Ville</Name>
+              <Centroid>
+                <Location id="alphaville_hdv">
+                  <Longitude>2.35250</Longitude>
+                  <Latitude>53.44692</Latitude>
+                </Location>
+              </Centroid>
+              <TopographicPlaceRef version="any" ref="alphaville"/>
+              <SiteType>government</SiteType>
+            </PointOfInterest>
+          </pointsOfInterest>
+          <parkings>
+            <Parking id="delta_park_and_ride" version="any">
+              <Name lang="en">Delta Park and Ride </Name>
+              <CrossRoad>Delta road</CrossRoad>
+              <Landmark>Gas works</Landmark>
+              <Covered>outdoors</Covered>
+              <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
+              <TopographicPlaceRef version="any" ref="gamma_sur_mer"/>
+              <OperatorRef version="any" ref="noc:XRYD"/>
+              <ParkingType>parkAndRide</ParkingType>
+              <ParkingVehicleTypes>allPassengerVehicles</ParkingVehicleTypes>
+              <ParkingLayout>openSpace</ParkingLayout>
+              <TotalCapacity>3</TotalCapacity>
+              <OvernightParkingPermitted>true</OvernightParkingPermitted>
+              <RechargingAvailable>true</RechargingAvailable>
+              <Secure>false</Secure>
+              <RealTimeOccupancyAvailable>true</RealTimeOccupancyAvailable>
+              <ParkingPaymentProcess>payAtMachineOnFootPriorToExit payByMobileDevice</ParkingPaymentProcess>
+              <PaymentMethods>creditCard debitCard mobileApp</PaymentMethods>
+              <ParkingReservation>noReservations</ParkingReservation>
+              <FreeParkingOutOfHours>true</FreeParkingOutOfHours>
+              <parkingProperties>
+                <ParkingProperties id="delta_park_and_ride_overall" version="any">
+                  <Name>Overall properties</Name>
+                  <ParkingUserTypes>all</ParkingUserTypes>
+                  <ParkingVehicleTypes>allPassengerVehicles</ParkingVehicleTypes>
+                  <MaximumStay>P1D</MaximumStay>
+                  <SecureParking>false</SecureParking>
+                  <BayGeometry>orthogonal</BayGeometry>
+                  <ParkingVisibility>demarcated</ParkingVisibility>
+                </ParkingProperties>
+              </parkingProperties>
+              <parkingAreas>
+                <VehiclePoolingParkingArea id="delta_park_and_ride@A1" version="any">
+                  <Name>Resereved area for car pooling - allowed to leave cars for longer</Name>
+                  <equipmentPlaces>
+                    <EquipmentPlace id="delta_park_and_ride@A1_charger" version="any"/>
+                  </equipmentPlaces>
+                  <placeEquipments>
+                    <VehicleChargingEquipment id="delta_park_and_ride@A1@01" version="any">
+                      <FreeRecharging>true</FreeRecharging>
+                      <ReservationRequired>true</ReservationRequired>
+                      <ReservationUrl>chargme.eu/bookings</ReservationUrl>
+                    </VehicleChargingEquipment>
+                  </placeEquipments>
+                  <ParkingProperties id="delta_park_and_ride@A1" version="any">
+                    <ParkingUserTypes>vehicleSharing</ParkingUserTypes>
+                    <ParkingStayList>midTerm</ParkingStayList>
+                    <MaximumStay>P3D</MaximumStay>
+                    <ParkingVisibility>demarcated</ParkingVisibility>
+                  </ParkingProperties>
+                  <bays>
+                    <VehiclePoolingParkingBay id="delta_park_and_ride@A1@01" version="any">
+                      <ParkingVehicleType>car</ParkingVehicleType>
+                      <BayGeometry>angled</BayGeometry>
+                    </VehiclePoolingParkingBay>
+                    <VehiclePoolingParkingBay id="delta_park_and_ride@A1@02" version="any">
+                      <ParkingVehicleType>car</ParkingVehicleType>
+                      <BayGeometry>angled</BayGeometry>
+                      <Length>4.00</Length>
+                      <Width>3.00</Width>
+                      <RechargingAvailable>false</RechargingAvailable>
+                    </VehiclePoolingParkingBay>
+                    <VehiclePoolingParkingBay id="delta_park_and_ride@A1@03" version="any">
+                      <ParkingVehicleType>car</ParkingVehicleType>
+                      <BayGeometry>orthogonal</BayGeometry>
+                      <Length>4.00</Length>
+                      <Width>3.00</Width>
+                      <RechargingAvailable>true</RechargingAvailable>
+                    </VehiclePoolingParkingBay>
+                  </bays>
+                </VehiclePoolingParkingArea>
+              </parkingAreas>
+              <vehicleEntrances>
+                <ParkingEntranceForVehicles id="delta_park_and_ride@main_entrance" version="any">
+                  <Name>Main Entrance</Name>
+                  <PublicUse>all</PublicUse>
+                  <Label>ENTRANCE A -y</Label>
+                  <IsEntry>true</IsEntry>
+                </ParkingEntranceForVehicles>
+                <ParkingEntranceForVehicles id="delta_park_and_ride@pooler_entrance" version="any">
+                  <Name>Special entrance for car poolers</Name>
+                  <PublicUse>authorisedPublicOnly</PublicUse>
+                  <Label>ENTRANCE B - Car Poolers only</Label>
+                  <IsEntry>true</IsEntry>
+                  <DropOffPointClose>true</DropOffPointClose>
+                  <VehiclePoolingRef version="any" ref="ride_share"/>
+                </ParkingEntranceForVehicles>
+              </vehicleEntrances>
+            </Parking>
+          </parkings>
+        </SiteFrame>
+        <ServiceFrame id="rd:ride_sharing_example" version="1.0" responsibilitySetRef="rd:route_data">
+          <Name>Routes</Name>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="rd:ride_sharing_example"/>
+          </prerequisites>
+          <routePoints>
+            <RoutePoint id="rd:h1@p1" version="1.0"/>
+            <RoutePoint id="rd:h1@p2" version="1.0"/>
+            <RoutePoint id="rd:h1@p3" version="1.0"/>
+          </routePoints>
+          <routeLinks>
+            <RouteLink id="h1@p1+h1@p2" version="any">
+              <FromPointRef version="1.0" ref="rd:h1@p1"/>
+              <ToPointRef version="1.0" ref="rd:h1@p2"/>
+              <modeRestrictionAssessments>
+                <ModeRestrictionAssessment id="h1@p1+h1@p2" version="1.0">
+                  <transportModes>
+                    <TransportMode>
+                      <TransportMode>selfDrive</TransportMode>
+                      <SelfDriveSubmode>allHireVehicles</SelfDriveSubmode>
+                    </TransportMode>
+                  </transportModes>
+                  <VehiclePoolingRef version="any" ref="ride_share"/>
+                  <MinimumNumberOfPassengers>1</MinimumNumberOfPassengers>
+                </ModeRestrictionAssessment>
+              </modeRestrictionAssessments>
+            </RouteLink>
+          </routeLinks>
+          <connections>
+            <SiteConnection id="alphaville_gare1+alphaville_station" version="any">
+              <TransferDuration>
+                <DefaultDuration>PT6M</DefaultDuration>
+              </TransferDuration>
+              <From>
+                <TransportMode>selfDrive</TransportMode>
+                <VehicleMeetingPointRef version="any" ref="alphaville_gare"/>
+              </From>
+              <To>
+                <TransportMode>rail</TransportMode>
+                <VehicleMeetingPointRef ref="alphaville_station" versionRef="EXTERNAL"/>
+                <TaxiRankRef ref="alphaville_station@taxi" versionRef="EXTERNAL"/>
+              </To>
+            </SiteConnection>
+          </connections>
+        </ServiceFrame>
+        <MobilityServiceFrame id="rd:ride_sharing_example" version="1.0" responsibilitySetRef="rd:network_data">
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="rd:ride_sharing_example"/>
+          </prerequisites>
+          <mobilityServices>
+            <CarPoolingService id="ryde" version="any">
+              <BrandingRef version="any" ref="myBrand"/>
+              <Name>Ryde car scharing scheme.</Name>
+              <StartDate>2018-01-01</StartDate>
+              <OperatorRef version="any" ref="noc:XRYD"/>
+              <ServiceBookingArrangements>
+                <BookingContact>
+                  <Url>https://www.ryde.eu/booking</Url>
+                </BookingContact>
+                <BookingMethods>mobileApp online</BookingMethods>
+                <BookingAccess>authorisedPublic</BookingAccess>
+                <BookWhen>advanceAndDayOfTravel</BookWhen>
+                <BuyWhen>onCheckOut</BuyWhen>
+                <MinimumBookingPeriod>PT2H</MinimumBookingPeriod>
+                <BookingUrl>https://www.ryde.eu/booking</BookingUrl>
+                <BookingNote>Booklings made using app. Bookings can be made up to two hour before travel. </BookingNote>
+                <DepositRequired>false</DepositRequired>
+                <BookingChargeType>none</BookingChargeType>
+              </ServiceBookingArrangements>
+              <BookingRequired>true</BookingRequired>
+              <RegistrationRequired>true</RegistrationRequired>
+              <proposedByServices>
+                <OnlineServiceRef version="any" ref="ryde_online"/>
+              </proposedByServices>
+              <VehiclePoolingRef version="any" ref="ride_share"/>
+            </CarPoolingService>
+          </mobilityServices>
+          <onlineServices>
+            <OnlineService id="ryde_online" version="any">
+              <Name>Online registration for ryde</Name>
+              <OnlineServiceOperatorRef version="any" ref="floggit"/>
+              <proposingServices>
+                <CarPoolingServiceRef version="any" ref="ryde"/>
+              </proposingServices>
+            </OnlineService>
+          </onlineServices>
+          <vehicleMeetingPoints>
+            <VehicleMeetingPoint id="gamma_area" version="any">
+              <Name>Pickup/Set down  in Gamma area</Name>
+              <Location>
+                <Longitude>1.45250</Longitude>
+                <Latitude>52.54692</Latitude>
+              </Location>
+            </VehicleMeetingPoint>
+            <VehicleMeetingPoint id="alphaville_centre" version="any">
+              <Name>Pickup/Set down  in Alphaville centre</Name>
+              <Location>
+                <Longitude>1.35250</Longitude>
+                <Latitude>52.44692</Latitude>
+              </Location>
+            </VehicleMeetingPoint>
+            <VehicleMeetingPoint id="alphaville_gare" version="any">
+              <Name>Pickup/Set down  at Alphaville station</Name>
+              <Location>
+                <Longitude>1.36250</Longitude>
+                <Latitude>52.45692</Latitude>
+              </Location>
+            </VehicleMeetingPoint>
+          </vehicleMeetingPoints>
+          <vehicleMeetingLinks>
+            <VehicleMeetingLink id="gamma_area+alphaville_centre" version="any">
+              <Distance>20</Distance>
+              <FromPointRef version="any" ref="gamma_area"/>
+              <ToPointRef version="any" ref="alphaville_centre"/>
+            </VehicleMeetingLink>
+            <VehicleMeetingLink id="gamma_area+alphaville_gare" version="any">
+              <Distance>23</Distance>
+              <FromPointRef version="any" ref="gamma_area"/>
+              <ToPointRef version="any" ref="alphaville_gare"/>
+            </VehicleMeetingLink>
+            <VehicleMeetingLink id="alphaville_gare+alphaville_centre" version="any">
+              <Distance>3</Distance>
+              <FromPointRef version="any" ref="alphaville_gare"/>
+              <ToPointRef version="any" ref="alphaville_centre"/>
+            </VehicleMeetingLink>
+          </vehicleMeetingLinks>
+          <vehicleMeetingPlaces>
+            <VehiclePoolingMeetingPlace id="delta_park_and_ride" version="any">
+              <Name>Delta Park and ride</Name>
+              <TopographicPlaceRef version="any" ref="gamma_sur_mer"> </TopographicPlaceRef>
+            </VehiclePoolingMeetingPlace>
+            <VehiclePoolingMeetingPlace id="bull_and_bush_inn" version="any">
+              <Name>TheBull and bush, Gamma</Name>
+              <RoadAddress id="bull_and_bush_inn" version="any">
+                <RoadNumber>A512</RoadNumber>
+                <RoadName>High Street</RoadName>
+              </RoadAddress>
+              <TopographicPlaceRef version="any" ref="gamma_sur_mer"> </TopographicPlaceRef>
+            </VehiclePoolingMeetingPlace>
+            <VehiclePoolingMeetingPlace id="town_hall" version="any">
+              <Name>Town Hall</Name>
+              <PostalAddress id="town_hall" version="any">
+                <Street>Grand Rue</Street>
+                <Town>Alphaville</Town>
+              </PostalAddress>
+              <TopographicPlaceRef version="any" ref="alphaville"> </TopographicPlaceRef>
+            </VehiclePoolingMeetingPlace>
+            <VehiclePoolingMeetingPlace id="alphaville_gare" version="any">
+              <Name>Alphaville Station</Name>
+              <PostalAddress id="alphaville_gare" version="any">
+                <Street>Rue de Gare</Street>
+                <Town>Alphaville</Town>
+              </PostalAddress>
+              <TopographicPlaceRef version="any" ref="alphaville"> </TopographicPlaceRef>
+              <TaxiRankRef ref="alphaville_gare@taxi" versionRef="EXTERNAL"/>
+            </VehiclePoolingMeetingPlace>
+          </vehicleMeetingPlaces>
+          <vehicleMeetingPlaceAssignments>
+            <VehiclePoolingPlaceAssignment id="delta_park_and_ride" version="any" order="1">
+              <CarPoolingServiceRef version="any" ref="ryde"/>
+              <VehiclePoolingMeetingPlaceRef version="any" ref="delta_park_and_ride"/>
+            </VehiclePoolingPlaceAssignment>
+            <VehiclePoolingPlaceAssignment id="delta_park_and_ride@A1" version="any" order="2">
+              <CarPoolingServiceRef version="any" ref="ryde"/>
+              <VehiclePoolingMeetingPlaceRef version="any" ref="delta_park_and_ride"/>
+              <VehiclePoolingParkingBayRef version="any" ref="delta_park_and_ride@A1@01"/>
+            </VehiclePoolingPlaceAssignment>
+          </vehicleMeetingPlaceAssignments>
+        </MobilityServiceFrame>
+        <FareFrame id="rd:ride_sharing_example" dataSourceRef="rd:ryde" version="1.0" responsibilitySetRef="rd:tariffs">
+          <Name>ryde 1</Name>
+          <prerequisites>
+            <MobilityServiceFrameRef version="1.0" ref="rd:ride_sharing_example"/>
+            <SiteFrameRef version="1.0" ref="rd:ride_sharing_example"/>
+          </prerequisites>
+          <tariffs>
+            <Tariff id="ryde@single_trip" version="any">
+              <Name>ryde   - Tariff</Name>
+              <documentLinks>
+                <InfoLink typeOfInfoLink="info">https://ryde.eu/tariff.pdf</InfoLink>
+                <InfoLink typeOfInfoLink="map">https://ryde.eu/tariffMap.pdf</InfoLink>
+              </documentLinks>
+              <OperatorRef version="any" ref="noc:XRYD"/>
+              <CarPoolingServiceRef version="any" ref="ryde"/>
+              <fareStructureElements>
+                <FareStructureElement id="ryde@single_trip@access" version="any">
+                  <Name>A ride on the service -  </Name>
+                  <TypeOfFareStructureElementRef ref="fxc:access" versionRef="EXTERNAL"/>
+                  <DistanceMatrixElementRef version="any" ref="gamma_area+alphaville_centre"/>
+                  <GenericParameterAssignment id="ryde@single_trip@access" version="any" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:access" versionRef="EXTERNAL"/>
+                    <validityParameters>
+                      <OperatorRef version="any" ref="noc:XRYD"/>
+                      <CarPoolingServiceRef version="any" ref="ryde"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="ryde@single_trip@eligibility" version="any">
+                  <Name>eligible user types</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:eligibility" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="ryde@single_trip@eligibility" version="any" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:eligible" versionRef="EXTERNAL"/>
+                    <limitations>
+                      <VehiclePoolerProfile id="smoker" version="any">
+                        <Name>Adult</Name>
+                        <UserType>adult</UserType>
+                        <MinimumAge>16</MinimumAge>
+                        <SmokingAllowed>true</SmokingAllowed>
+                        <PetsAllowed>true</PetsAllowed>
+                        <DetourAccepted>false</DetourAccepted>
+                      </VehiclePoolerProfile>
+                      <VehiclePoolerProfile id="non_smoker" version="any">
+                        <Name>Adult</Name>
+                        <UserType>adult</UserType>
+                        <MinimumAge>16</MinimumAge>
+                        <SmokingAllowed>false</SmokingAllowed>
+                        <LuggageAllowed>false</LuggageAllowed>
+                        <DetourAccepted>true</DetourAccepted>
+                      </VehiclePoolerProfile>
+                      <LuggageAllowance id="non_smoker@skis" version="any">
+                        <Name>Will accept up to one pair of skis</Name>
+                        <BaggageType>skis</BaggageType>
+                        <MaximumNumberItems>1</MaximumNumberItems>
+                      </LuggageAllowance>
+                      <LuggageAllowance id="non_smoker@bag" version="any">
+                        <Name>Will accept one suitcase</Name>
+                        <BaggageType>smallSuitcase</BaggageType>
+                        <MaximumNumberItems>1</MaximumNumberItems>
+                      </LuggageAllowance>
+                      <LuggageAllowance id="non_smoker@wheelchair" version="any">
+                        <Name>Will accept wheelchair up to stated dimensions</Name>
+                        <BaggageType>wheelchair</BaggageType>
+                        <MaximumNumberItems>1</MaximumNumberItems>
+                        <MaximumBagHeight>1.5</MaximumBagHeight>
+                        <MaximumBagWidth>1.2</MaximumBagWidth>
+                        <MaximumBagDepth>0.3</MaximumBagDepth>
+                      </LuggageAllowance>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="ryde@single_trip@conditions_of_travel" version="any">
+                  <Name>COnditions on travel</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:travel_conditions" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="ryde@single_trip@conditions_of_travel" version="any" order="1">
+                    <Name>Conditions of travel</Name>
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_use" versionRef="EXTERNAL"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <UsageValidityPeriod id="ryde@single_trip@usageValidity" version="any">
+                        <ValidityPeriodType>singleTrip</ValidityPeriodType>
+                        <UsageTrigger>startOutboundRide</UsageTrigger>
+                        <UsageEnd>endOfTrip</UsageEnd>
+                      </UsageValidityPeriod>
+                      <FrequencyOfUse id="ryde@single_trip@frequency" version="any">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="ryde@single_trip@conditions_of_sale" version="any">
+                  <Name>Conditions of sale</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:sale_conditions" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="ryde@single_trip@conditions_of_sale" version="any" order="1">
+                    <Name>Conditions of sale</Name>
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_sale" versionRef="EXTERNAL"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Refunding id="ryde@single_trip@refunding" version="any">
+                        <RefundType>cancellation</RefundType>
+                        <RefundPolicy>any</RefundPolicy>
+                        <PaymentMethod>epayAccount</PaymentMethod>
+                      </Refunding>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="ryde@single_trip@accommodation" version="any">
+                  <Name>Accomodation</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:condition_of_travel" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="ryde@single_trip@facilities" version="any" order="1">
+                    <Name>facilities</Name>
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_travel" versionRef="EXTERNAL"/>
+                    <LimitationGroupingType>OR</LimitationGroupingType>
+                    <validityParameters>
+                      <ServiceFacilitySetRef version="any" ref="smoking"/>
+                      <ServiceFacilitySetRef version="any" ref="no_smoking"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+              <distanceMatrixElements>
+                <DistanceMatrixElement id="gamma_area+alphaville_centre" version="any">
+                  <StartMeetingPointRef version="any" ref="gamma_area"/>
+                  <EndMeetingPointRef version="any" ref="alphaville_centre"/>
+                </DistanceMatrixElement>
+                <DistanceMatrixElement id="gamma_area+alphaville_gare" version="any">
+                  <StartMeetingPointRef version="any" ref="gamma_area"/>
+                  <EndMeetingPointRef version="any" ref="alphaville_gare"/>
+                </DistanceMatrixElement>
+                <DistanceMatrixElement id="alphaville_centre+alphaville_gare" version="any">
+                  <StartMeetingPointRef version="any" ref="alphaville_centre"/>
+                  <EndMeetingPointRef version="any" ref="alphaville_gare"/>
+                </DistanceMatrixElement>
+              </distanceMatrixElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <ThirdPartyProduct id="ryde_online@membership" version="any">
+              <BrandingRef version="any" ref="myBrand"/>
+              <Name>Registered member of ryde online</Name>
+              <infoLinks>
+                <InfoLink typeOfInfoLink="mobileAppDownload">https://tickettoryde/apps</InfoLink>
+              </infoLinks>
+              <OnlineServiceOperatorRef version="any" ref="floggit"/>
+            </ThirdPartyProduct>
+            <PreassignedFareProduct id="ryde@single_trip" version="any">
+              <Name>One off trip</Name>
+              <ChargingMomentType>beforeTravelThenAdjustAtEndOfTravel</ChargingMomentType>
+              <OperatorRef version="any" ref="noc:XRYD"/>
+              <ConditionSummary>
+                <FareStructureType>networkFlatFare</FareStructureType>
+                <TariffBasis>flat</TariffBasis>
+                <IsRefundable>false</IsRefundable>
+                <HasDiscountedFares>false</HasDiscountedFares>
+                <RequiresDeposit>true</RequiresDeposit>
+                <NoCashPayment>true</NoCashPayment>
+                <RequiresReservation>false</RequiresReservation>
+              </ConditionSummary>
+              <validableElements>
+                <ValidableElement id="ryde@single_trip@travel" version="any">
+                  <Name>Single  ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="any" ref="ryde@single_trip@access"/>
+                    <FareStructureElementRef version="any" ref="ryde@single_trip@eligibility"/>
+                    <FareStructureElementRef version="any" ref="ryde@single_trip@conditions_of_travel"/>
+                    <FareStructureElementRef version="any" ref="ryde@single_trip@accommodation"/>
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct id="ryde@single_trip" version="any" order="1">
+                  <ValidableElementRef version="any" ref="ryde@single_trip@travel"/>
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>singleTrip</ProductType>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <distributionChannels>
+            <DistributionChannel id="online" version="any">
+              <Name>Online</Name>
+              <DistributionChannelType>online</DistributionChannelType>
+              <OnlineServiceOperatorRef version="any" ref="floggit"/>
+              <PaymentMethods>debitCard creditCard</PaymentMethods>
+              <DistributionRights>sell</DistributionRights>
+            </DistributionChannel>
+            <DistributionChannel id="mobile_application" version="any">
+              <Name>Mobile application</Name>
+              <DistributionChannelType>mobileDevice</DistributionChannelType>
+              <OnlineServiceOperatorRef version="any" ref="floggit"/>
+              <PaymentMethods>debitCard creditCard</PaymentMethods>
+              <DistributionRights>sell</DistributionRights>
+            </DistributionChannel>
+          </distributionChannels>
+          <fulfilmentMethods>
+            <FulfilmentMethod id="mobile_device" version="any">
+              <Name>Collect from machine</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument id="mobile_application_data" version="any">
+              <Name>Mobile app with access code</Name>
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>nfc</MachineReadable>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+          <salesOfferPackages>
+            <SalesOfferPackage id="ryde@membership-SOP@mobileApp" version="any">
+              <BrandingRef version="any" ref="myBrand"/>
+              <Name>ryde one off Mobile app purchase</Name>
+              <ConditionSummary>
+                <RequiresAccount>true</RequiresAccount>
+              </ConditionSummary>
+              <distributionAssignments>
+                <DistributionAssignment id="ryde@membership-SOP@online" version="any" order="1">
+                  <Name>By Mobile app</Name>
+                  <DistributionChannelRef version="any" ref="online"/>
+                  <DistributionChannelType>online</DistributionChannelType>
+                  <TicketingServiceFacilityList>purchase</TicketingServiceFacilityList>
+                  <FulfilmentMethodRef version="any" ref="mobile_device"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement id="ryde@membership-SOP@mobileApp" version="any" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+                  <ThirdPartyProductRef version="any" ref="ryde_online@membership"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+            <SalesOfferPackage id="ryde@single_trip-SOP@mobileApp" version="any">
+              <BrandingRef version="any" ref="myBrand"/>
+              <Name>ryde one off Mobile app purchase</Name>
+              <ConditionSummary>
+                <RequiresAccount>true</RequiresAccount>
+              </ConditionSummary>
+              <validityParameterAssignments>
+                <GenericParameterAssignment id="ryde@single_trip-SOP@mobileApp" version="any" order="1">
+                  <Name>Registered member of floggit </Name>
+                  <limitations>
+                    <EntitlementRequired id="ryde@single_trip-SOP@mobileApp@registered" version="any">
+                      <ThirdPartyProductRef version="any" ref="ryde_online@membership"/>
+                      <EntitlementConstraint>
+                        <UserConstraint>samePerson</UserConstraint>
+                      </EntitlementConstraint>
+                    </EntitlementRequired>
+                  </limitations>
+                  <validityParameters>
+                    <OnlineServiceRef version="any" ref="ryde_online"/>
+                  </validityParameters>
+                </GenericParameterAssignment>
+              </validityParameterAssignments>
+              <distributionAssignments>
+                <DistributionAssignment id="ryde@single_trip-SOP@mobileApp" version="any" order="1">
+                  <Name>By Mobile app</Name>
+                  <DistributionChannelRef version="any" ref="mobile_application"/>
+                  <DistributionChannelType>mobileDevice</DistributionChannelType>
+                  <TicketingServiceFacilityList>purchase refund</TicketingServiceFacilityList>
+                  <FulfilmentMethodRef version="any" ref="mobile_device"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement id="ryde@single_trip-SOP@mobileApp" version="any" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+                  <PreassignedFareProductRef version="any" ref="ryde@single_trip"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame id="rd:ride_sharing_example_Prices" dataSourceRef="rd:ryde" version="1.0" responsibilitySetRef="rd:tariffs">
+          <FrameDefaults>
+            <DefaultCurrency>EUR</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites>
+            <FareFrameRef version="1.0" ref="rd:ride_sharing_example"/>
+          </prerequisites>
+          <PricingParameterSet id="rd:ride_sharing_example_Prices" version="any">
+            <pricingServices>
+              <PricingService id="ryde_pricer" version="any">
+                <Name>Dynamic pricing engine</Name>
+                <OperatorRef version="any" ref="noc:XRYD"/>
+                <Url>https://ticketToRyde/engine</Url>
+              </PricingService>
+            </pricingServices>
+          </PricingParameterSet>
+          <fareTables>
+            <FareTable id="ryde@single_trip" version="any">
+              <Name>ryde one off use prices</Name>
+              <pricesFor>
+                <SalesOfferPackageRef version="any" ref="ryde@single_trip-SOP@mobileApp"/>
+              </pricesFor>
+              <usedIn>
+                <TariffRef version="any" ref="ryde@single_trip"/>
+              </usedIn>
+              <OperatorRef version="any" ref="noc:XRYD"/>
+              <specifics>
+                <CarPoolingServiceRef version="any" ref="ryde"/>
+              </specifics>
+              <prices>
+                <DistanceMatrixElementPrice id="gamma_area+alphaville_centre" version="any">
+                  <Name>Dynamic Price</Name>
+                  <PricingServiceRef version="any" ref="ryde_pricer"/>
+                  <DistanceMatrixElementRef version="any" ref="gamma_area+alphaville_centre"/>
+                </DistanceMatrixElementPrice>
+              </prices>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+    <CompositeFrame id="rd:ride_sharing_example_transaction_examples" dataSourceRef="rd:ryde" version="1.0" responsibilitySetRef="rd:transaction_data">
+      <Name>Sample Transactions for ryde trips </Name>
+      <prerequisites>
+        <CompositeFrameRef version="1.0" ref="rd:ride_sharing_example"/>
+      </prerequisites>
+      <frames>
+        <ResourceFrame id="rd:ride_sharing_example_data" version="1.0">
+          <Name>Transaction common resources</Name>
+          <vehicleTypes>
+            <SimpleVehicleType id="fast_car" version="any">
+              <SelfPropelled>true</SelfPropelled>
+              <PropulsionType>combustion</PropulsionType>
+              <FuelType>petrolUnleaded</FuelType>
+              <MaximumRange>400</MaximumRange>
+              <LicenceRequirements>full</LicenceRequirements>
+              <VehicleCategory>mediumCar</VehicleCategory>
+              <Portable>false</Portable>
+            </SimpleVehicleType>
+          </vehicleTypes>
+          <vehicleModels>
+            <VehicleModel id="porsche_404" version="any">
+              <Manufacturer>Porsche</Manufacturer>
+              <CarModelProfileRef version="any" ref="porsche_404@A2"/>
+            </VehicleModel>
+          </vehicleModels>
+          <vehicleModelProfiles>
+            <CarModelProfile id="porsche_404@A2" version="any">
+              <Name>Porsche 404 model A2</Name>
+              <NumberOfGears>6</NumberOfGears>
+              <ChildSeat>baby</ChildSeat>
+              <Seats>4</Seats>
+              <Doors>2</Doors>
+              <Transmission>automatic</Transmission>
+              <CruiseControl>true</CruiseControl>
+              <SatNav>true</SatNav>
+              <AirConditioning>true</AirConditioning>
+              <Convertible>true</Convertible>
+              <UsbPowerSockets>true</UsbPowerSockets>
+              <TrailerHitch>false</TrailerHitch>
+              <RoofRack>false</RoofRack>
+              <CycleRack>false</CycleRack>
+              <SkiRack>true</SkiRack>
+            </CarModelProfile>
+          </vehicleModelProfiles>
+          <vehicles>
+            <Vehicle id="db54278" created="2019-01-05T12:00:00" version="any">
+              <Name>Freddy's car</Name>
+              <Description>Bright red Porsche convertible</Description>
+              <RegistrationNumber>db54278</RegistrationNumber>
+              <SimpleVehicleTypeRef version="any" ref="fast_car"/>
+              <VehicleModelRef version="any" ref="porsche_404"/>
+              <CarModelProfileRef version="any" ref="porsche_404@A2"/>
+            </Vehicle>
+          </vehicles>
+        </ResourceFrame>
+        <ServiceCalendarFrame id="rd:ride_sharing_example_data" version="1.0">
+          <operatingDays>
+            <OperatingDay id="2020-08-10" version="any">
+              <CalendarDate>2020-08-10</CalendarDate>
+            </OperatingDay>
+          </operatingDays>
+        </ServiceCalendarFrame>
+        <MobilityJourneyFrame id="rydt:sample_transactions" version="1.2">
+          <singleJourneyPaths>
+            <SingleJourneyPath id="rydt:Cust777@trans001@ride1234" version="any">
+              <Name>Path from Delta park and ride to Alphaville  hotel de ville.</Name>
+              <Distance>25.00</Distance>
+              <pointsInSequence>
+                <VehicleMeetingPointInPath id="rydt:Cust777@trans001@ride1234" version="any" order="1">
+                  <VehicleMeetingPointRef version="any" ref="gamma_area"/>
+                  <OnwardVehicleMeetingLinkRef version="any" ref="gamma_area+alphaville_centre"/>
+                </VehicleMeetingPointInPath>
+                <VehicleMeetingPointInPath id="rydt:Cust777@trans001@ride1234" version="any" order="2">
+                  <VehicleMeetingPointRef version="any" ref="alphaville_centre"/>
+                </VehicleMeetingPointInPath>
+              </pointsInSequence>
+            </SingleJourneyPath>
+          </singleJourneyPaths>
+          <singleJourneys>
+            <SingleJourney id="rydt:Cust777@trans001@ride1234" version="any">
+              <Name>Offered Car pool journey from Delta, park and ride, to Alphaville,  hotel de ville</Name>
+              <TransportMode>selfDrive</TransportMode>
+              <TransportSubmode>
+                <SelfDriveSubmode>ownCar</SelfDriveSubmode>
+              </TransportSubmode>
+              <CarPoolingServiceRef version="any" ref="ryde"/>
+              <VehicleRef version="any" ref="db54278"/>
+              <SingleJourneyPathRef version="any" ref="rydt:Cust777@trans001@ride1234"/>
+              <DepartureTime>07:00:00</DepartureTime>
+              <OperatingDayRef version="any" ref="2020-08-10"/>
+              <datedPassingTimes>
+                <TargetPassingTime id="rydt:Cust777@trans001@ride1234" version="any">
+                  <PointInSingleJourneyPathRef version="any" ref="rydt:Cust777@trans001@ride1234" order="1"/>
+                  <AimedDepartureTime>07:00:00</AimedDepartureTime>
+                </TargetPassingTime>
+                <TargetPassingTime id="rydt:Cust777@trans001@ride1234" version="any">
+                  <PointInSingleJourneyPathRef version="any" ref="rydt:Cust777@trans001@ride1234" order="2"/>
+                  <AimedArrivalTime>09:15:00</AimedArrivalTime>
+                </TargetPassingTime>
+              </datedPassingTimes>
+              <meetingPointAssignments>
+                <VehicleMeetingPointAssignment id="rydt:Cust777@trans001@ride1234" version="any" order="1">
+                  <VehicleMeetingPointRef version="any" ref="gamma_area"/>
+                  <VehiclePoolingParkingAreaRef version="any" ref="delta_park_and_ride@A1"/>
+                  <Usage>pickUp</Usage>
+                </VehicleMeetingPointAssignment>
+                <VehicleMeetingPointAssignment id="rydt:Cust777@trans001@ride1234" version="any" order="2">
+                  <VehicleMeetingPointRef version="any" ref="alphaville_centre"/>
+                  <PointOfInterestRef version="any" ref="alphaville_hdv"/>
+                  <Usage>setDown</Usage>
+                </VehicleMeetingPointAssignment>
+              </meetingPointAssignments>
+            </SingleJourney>
+          </singleJourneys>
+          <individualTravellers>
+            <IndividualTraveller id="rydt:Cust555" created="2020-02-28T13:00:00" changed="2020-08-10T09:55:00" version="any">
+              <Name>Esmerelda</Name>
+              <CustomerRef version="any" ref="rydt:Cust555"/>
+              <IdentityVerified>true</IdentityVerified>
+              <Ranking>2</Ranking>
+              <Gender>female</Gender>
+              <Talkative>true</Talkative>
+              <Smoker>true</Smoker>
+              <Languages>fr de en ru it es nl</Languages>
+              <individualPassengerInfos>
+                <IndividualPassengerInfo id="rydt:Cust555-01" created="2020-02-28T13:00:00" changed="2020-08-10T09:55:00" version="any">
+                  <IndividualTravellerRef version="any" ref="rydt:Cust555"/>
+                  <Ranking>9</Ranking>
+                  <LastTripDate>2020-08-10T07:00:00</LastTripDate>
+                  <CommentsAbout>Never stopped talking, dog was sick everywhere</CommentsAbout>
+                  <TravellingWithPet>true</TravellingWithPet>
+                </IndividualPassengerInfo>
+              </individualPassengerInfos>
+            </IndividualTraveller>
+            <IndividualTraveller id="rydt:Cust777" created="2019-01-05T12:00:00" changed="2020-08-10T14:20:00" version="any">
+              <Name>Freddy</Name>
+              <CustomerRef version="any" ref="rydt:Cust777"/>
+              <IdentityVerified>true</IdentityVerified>
+              <Ranking>4</Ranking>
+              <Gender>male</Gender>
+              <Talkative>false</Talkative>
+              <Smoker>false</Smoker>
+              <Languages>ga en</Languages>
+              <vehiclePoolingDriverInfos>
+                <VehiclePoolingDriverInfo id="rydt:Cust777-01" created="2020-02-28T13:00:00" changed="2020-08-10T14:20:00" version="any">
+                  <IndividualTravellerRef version="any" ref="rydt:Cust777"/>
+                  <Ranking>5</Ranking>
+                  <LastTripDate>2020-08-10T07:00:00</LastTripDate>
+                  <CommentsAbout>Crazy, drove like a bat out of hell</CommentsAbout>
+                  <TravellingWithPet>false</TravellingWithPet>
+                  <DrivingLicenceVerified>true</DrivingLicenceVerified>
+                  <InsuranceVerified>true</InsuranceVerified>
+                  <DrivingStyle>fast</DrivingStyle>
+                  <NumberOfProposedTrips>3</NumberOfProposedTrips>
+                  <NumberOfTravellersCarried>5</NumberOfTravellersCarried>
+                  <VehicleRef version="any" ref="db54278"/>
+                </VehiclePoolingDriverInfo>
+              </vehiclePoolingDriverInfos>
+            </IndividualTraveller>
+          </individualTravellers>
+        </MobilityJourneyFrame>
+        <SalesTransactionFrame id="rydt:sample_transactions" version="1.2">
+          <Name>ryde Sample Transactions</Name>
+          <codespaces>
+            <CodespaceRef ref="ryd_data"/>
+            <Codespace id="ryd_transactions">
+              <Xmlns>rydt</Xmlns>
+              <XmlnsUrl>http://www.ryde.eu/transactions</XmlnsUrl>
+              <Description>Operator transaction data</Description>
+            </Codespace>
+          </codespaces>
+          <customers>
+            <Customer id="rydt:Cust555" created="2020-02-28T13:00:00" version="any">
+              <Surname>von Ritter</Surname>
+              <FirstName>Esmerelda Z</FirstName>
+              <Title>Baronin</Title>
+              <Gender>female</Gender>
+              <Smoker>true</Smoker>
+              <Email>esmerelda@almanachdegotha.de</Email>
+              <Phone>
+                <TelNationalNumber>078671234567</TelNationalNumber>
+                <TelCountryCode>41</TelCountryCode>
+              </Phone>
+              <customerEligibilities>
+                <UserProfileEligibility id="rydt:Cust555@trans001@pooler" version="any">
+                  <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                </UserProfileEligibility>
+              </customerEligibilities>
+              <customerAccounts>
+                <CustomerAccount id="rydt:Cust555@AC7651" created="2020-02-28T13:00:00" version="any">
+                  <Name>hotrider</Name>
+                  <StartDate>2020-02-28T13:00:00</StartDate>
+                  <CustomerAccountStatusType>active</CustomerAccountStatusType>
+                  <customerPurchasePackages>
+                    <CustomerPurchasePackageRef version="any" ref="rydt:CPP@Cust555@001"/>
+                    <CustomerPurchasePackageRef version="any" ref="rydt:CPP@Cust555@005"/>
+                  </customerPurchasePackages>
+                  <CustomerPaymentMeansRef version="any" ref="rydt:Cust555@AC7651@p1"/>
+                  <paymentMeans>
+                    <CustomerPaymentMeans id="rydt:Cust555@AC7651@p1" version="any">
+                      <Name>EZRitter Visa Card</Name>
+                      <EmvCardRef version="any" ref="visa:47594444555666"/>
+                    </CustomerPaymentMeans>
+                    <CustomerPaymentMeans id="rydt:Cust555@AC7651@p2" version="any">
+                      <Name>EZRitter mobile device</Name>
+                      <MobileDeviceRef version="any" ref="rydt:4178671234567"/>
+                    </CustomerPaymentMeans>
+                  </paymentMeans>
+                  <mediumAccessDevices>
+                    <MobileDeviceRef version="any" ref="rydt:4178671234567"/>
+                  </mediumAccessDevices>
+                </CustomerAccount>
+              </customerAccounts>
+              <fareContracts>
+                <FareContract id="rydt:Cust555@trans001" created="2020-02-28T13:00:00" version="any">
+                  <CustomerRef version="any" ref="rydt:Cust555"/>
+                  <fareContractEntries>
+                    <SalesTransaction id="rydt:Cust555@trans001@join_as_member" created="2020-02-28T13:00:00" version="any">
+                      <Name>Join AS Member</Name>
+                      <Date>2020-02-28T13:00:00</Date>
+                      <TypeOfFareContractEntryRef ref="fxc:product_purchase" versionRef="EXTERNAL"/>
+                      <Amount>0</Amount>
+                      <travelSpecifications>
+                        <OfferedTravelSpecification id="rydt:Cust555@trans001@join_as_member" version="any">
+                          <Date>2020-02-28T13:00:00</Date>
+                          <SalesTransactionRef version="any" ref="rydt:Cust555@trans001@join_as_member"/>
+                          <Amount>0</Amount>
+                          <StartOfValidity>2020-02-28T13:00:00</StartOfValidity>
+                          <TravelSpecificationSummaryView>
+                            <Start>2020-02-28T13:00:00</Start>
+                            <OperatorRef version="any" ref="noc:XRYD"/>
+                            <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                            <CarPoolingServiceRef version="any" ref="ryde"/>
+                          </TravelSpecificationSummaryView>
+                          <specificParameterAssignments>
+                            <SpecificParameterAssignment id="rydt:Cust555@trans001@purchase_member" version="any" order="1">
+                              <Name>Join as member</Name>
+                              <ThirdPartyProductRef version="any" ref="ryde_online@membership"/>
+                            </SpecificParameterAssignment>
+                          </specificParameterAssignments>
+                        </OfferedTravelSpecification>
+                      </travelSpecifications>
+                      <travelDocuments>
+                        <TravelDocument id="rydt:ticket@765452230" version="any">
+                          <ValidBetween>
+                            <FromDate>2020-02-28T13:00:00</FromDate>
+                          </ValidBetween>
+                          <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+                          <CustomerPurchasePackageRef version="any" ref="rydt:CPP@Cust555@001"/>
+                        </TravelDocument>
+                      </travelDocuments>
+                    </SalesTransaction>
+                    <SalesTransaction id="rydt:Cust555@trans005@purchase_ride" created="2020-08-08T12:00:00" version="any">
+                      <Name>Buy Single   ride Adult</Name>
+                      <Description>Cust555 pays for ride from Cust777. For simplicity we show  as a single  prepaid. If payment waslaterm e.g. completion, could have separate transactiosn for reservation and payment. </Description>
+                      <Date>2020-08-08T12:00:00</Date>
+                      <TypeOfFareContractEntryRef ref="fxc:product_purchase" versionRef="EXTERNAL"/>
+                      <Amount>10.00</Amount>
+                      <PaymentMethod>cash</PaymentMethod>
+                      <travelSpecifications>
+                        <OfferedTravelSpecification id="rydt:Cust555@trans005@purchase_ride" created="2020-08-08T12:00:00" version="any">
+                          <Date>2020-08-10T07:00:00</Date>
+                          <SalesTransactionRef version="any" ref="rydt:Cust555@trans005@purchase_ride"/>
+                          <DistanceMatrixElementPriceRef version="any" ref="gamma_area+alphaville_centre"/>
+                          <Amount>10.00</Amount>
+                          <StartOfValidity>2020-08-10T07:00:00</StartOfValidity>
+                          <TravelSpecificationSummaryView>
+                            <Origin>
+                              <VehicleMeetingPointRef version="any" ref="gamma_area"/>
+                            </Origin>
+                            <Destination>
+                              <VehicleMeetingPointRef version="any" ref="alphaville_centre"/>
+                            </Destination>
+                            <Start>2020-08-10T07:00:00</Start>
+                            <Duration>PT45M</Duration>
+                            <OperatorRef version="any" ref="noc:XRYD"/>
+                            <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                            <CarPoolingServiceRef version="any" ref="ryde"/>
+                          </TravelSpecificationSummaryView>
+                          <specificParameterAssignments>
+                            <SpecificParameterAssignment id="rydt:Cust555@trans005@purchase_ride" version="any" order="1">
+                              <Name>Single ride</Name>
+                              <ValidableElementRef version="any" ref="ryde@single_trip@travel"/>
+                              <PreassignedFareProductRef version="any" ref="ryde@single_trip"/>
+                              <FareStructureElementRef version="any" ref="ryde@single_trip@access"/>
+                              <SalesOfferPackageRef version="any" ref="ryde@single_trip-SOP@mobileApp"/>
+                              <limitations>
+                                <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                              </limitations>
+                              <validityParameters>
+                                <VehiclePoolingRef version="any" ref="ride_share"/>
+                                <OperatorRef version="any" ref="noc:XRYD"/>
+                                <VehicleMeetingPointRef version="any" ref="gamma_area"/>
+                                <VehiclePoolingMeetingPlaceRef version="any" ref="delta_park_and_ride"/>
+                                <VehiclePoolingParkingAreaRef version="any" ref="delta_park_and_ride@A1"/>
+                                <ServiceFacilitySetRef version="any" ref="no_smoking"/>
+                                <SingleJourneyRef version="any" ref="rydt:Cust777@trans001@ride1234"/>
+                                <CarPoolingServiceRef version="any" ref="ryde"/>
+                                <VehicleRef version="any" ref="db54278"/>
+                                <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+                                <DistributionChannelRef version="any" ref="mobile_application"/>
+                                <FulfilmentMethodRef version="any" ref="mobile_device"/>
+                                <VehicleMeetingPointRef version="any" ref="alphaville_centre"/>
+                                <VehiclePoolingMeetingPlaceRef version="any" ref="town_hall"/>
+                              </validityParameters>
+                            </SpecificParameterAssignment>
+                          </specificParameterAssignments>
+                        </OfferedTravelSpecification>
+                      </travelSpecifications>
+                      <travelDocuments>
+                        <TravelDocument id="rydt:ticket@765452234" created="2020-08-08T12:00:00" version="any">
+                          <ValidBetween>
+                            <FromDate>2020-08-10T07:00:00</FromDate>
+                            <ToDate>2020-08-10T08:00:00</ToDate>
+                          </ValidBetween>
+                          <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+                          <CustomerPurchasePackageRef version="any" ref="rydt:CPP@Cust555@005"/>
+                        </TravelDocument>
+                      </travelDocuments>
+                    </SalesTransaction>
+                  </fareContractEntries>
+                </FareContract>
+              </fareContracts>
+            </Customer>
+            <Customer id="rydt:Cust777" created="2019-01-05T12:00:00" version="any">
+              <Surname>Gonzalez</Surname>
+              <FirstName>Freddy</FirstName>
+              <Gender>male</Gender>
+              <Smoker>true</Smoker>
+              <Email>freddy@gofast.fr</Email>
+              <Phone>
+                <TelNationalNumber>078672020202</TelNationalNumber>
+                <TelCountryCode>31</TelCountryCode>
+              </Phone>
+              <customerEligibilities>
+                <UserProfileEligibility id="rydt:Cust777@trans001@pooler" version="any">
+                  <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                </UserProfileEligibility>
+              </customerEligibilities>
+              <customerAccounts>
+                <CustomerAccount id="rydt:Cust777@AC8145" created="2019-01-05T12:00:00" version="any">
+                  <Name>fastrunner</Name>
+                  <StartDate>2018-01-28T12:00:00</StartDate>
+                  <CustomerAccountStatusType>active</CustomerAccountStatusType>
+                  <customerPurchasePackages>
+                    <CustomerPurchasePackageRef version="any" ref="rydt:CPP@Cust777@001">Join</CustomerPurchasePackageRef>
+                    <CustomerPurchasePackageRef version="any" ref="rydt:CPP@Cust777@021">sell ride</CustomerPurchasePackageRef>
+                  </customerPurchasePackages>
+                  <CustomerPaymentMeansRef version="any" ref="rydt:Cust777@AC8145@p1"/>
+                  <paymentMeans>
+                    <CustomerPaymentMeans id="rydt:Cust777@AC8145@p1" version="any">
+                      <Name>Freddy master Card</Name>
+                      <EmvCardRef ref="mc:47594444555666" versionRef="ETXERNAL"/>
+                    </CustomerPaymentMeans>
+                  </paymentMeans>
+                </CustomerAccount>
+              </customerAccounts>
+              <fareContracts>
+                <FareContract id="rydt:Cust777@trans001" created="2019-01-05T12:00:00" version="any">
+                  <CustomerRef ref="rydt:Cust777"/>
+                  <fareContractEntries>
+                    <SalesTransaction id="rydt:Cust777@trans001@join_as_member" created="2019-01-05T12:00:00" version="any">
+                      <Name>Join AS Member</Name>
+                      <Date>2019-01-05T12:00:00</Date>
+                      <TypeOfFareContractEntryRef ref="fxc:product_purchase" versionRef="EXTERNAL"/>
+                      <Amount>0</Amount>
+                      <travelSpecifications>
+                        <OfferedTravelSpecification id="rydt:Cust777@trans001@join_as_member" version="any">
+                          <Date>2019-01-05T12:00:00</Date>
+                          <SalesTransactionRef version="any" ref="rydt:Cust777@trans001@join_as_member"/>
+                          <Amount>0</Amount>
+                          <StartOfValidity>2019-01-05T12:00:00</StartOfValidity>
+                          <TravelSpecificationSummaryView>
+                            <Start>2019-01-05T12:00:00</Start>
+                            <OperatorRef version="any" ref="noc:XRYD"/>
+                            <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                            <CarPoolingServiceRef version="any" ref="ryde"/>
+                          </TravelSpecificationSummaryView>
+                          <specificParameterAssignments>
+                            <SpecificParameterAssignment id="rydt:Cust777@trans001@purchase_member" version="any" order="1">
+                              <Name>Join as member</Name>
+                              <ThirdPartyProductRef version="any" ref="ryde_online@membership"/>
+                            </SpecificParameterAssignment>
+                          </specificParameterAssignments>
+                        </OfferedTravelSpecification>
+                      </travelSpecifications>
+                    </SalesTransaction>
+                    <SalesTransaction id="rydt:Cust777@trans005@offer_ride" created="2020-08-06T16:00:00" version="any">
+                      <Name>Offer a Single  ride Adult beteen gamma and alphavile on 2020-08-10T07:00:00 </Name>
+                      <Description>Cust777 a offers ride. </Description>
+                      <Date>2020-08-06T16:00:00</Date>
+                      <TypeOfFareContractEntryRef ref="fxc:offer_ride" versionRef="EXTERNAL"/>
+                      <Amount>-8.00</Amount>
+                      <PaymentMethod>cash</PaymentMethod>
+                      <travelSpecifications>
+                        <OfferedTravelSpecification id="rydt:Cust777@trans005@offer_ride" created="2020-08-06T16:00:00" version="any">
+                          <Date>2020-08-10T07:00:00</Date>
+                          <SalesTransactionRef version="any" ref="rydt:Cust777@trans005@sell_ride"/>
+                          <DistanceMatrixElementPriceRef version="any" ref="gamma_area+alphaville_centre"/>
+                          <Amount>10.00</Amount>
+                          <TravelSpecificationSummaryView>
+                            <Origin>
+                              <VehicleMeetingPointRef version="any" ref="gamma_area"/>
+                            </Origin>
+                            <Destination>
+                              <VehicleMeetingPointRef version="any" ref="alphaville_centre"/>
+                            </Destination>
+                            <Start>2020-08-10T07:00:00</Start>
+                            <Duration>PT45M</Duration>
+                            <OperatorRef version="any" ref="noc:XRYD"/>
+                            <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                            <CarPoolingServiceRef version="any" ref="ryde"/>
+                          </TravelSpecificationSummaryView>
+                          <specificParameterAssignments>
+                            <SpecificParameterAssignment id="rydt:Cust777@trans005@offer_ride" version="any" order="1">
+                              <Name>Single ride</Name>
+                              <ValidableElementRef version="any" ref="ryde@single_trip@travel"/>
+                              <PreassignedFareProductRef version="any" ref="ryde@single_trip"/>
+                              <FareStructureElementRef version="any" ref="ryde@single_trip@access"/>
+                              <SalesOfferPackageRef version="any" ref="ryde@single_trip-SOP@mobileApp"/>
+                              <limitations>
+                                <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                              </limitations>
+                              <validityParameters>
+                                <VehiclePoolingRef version="any" ref="ride_share"/>
+                                <OperatorRef version="any" ref="noc:XRYD"/>
+                                <ServiceFacilitySetRef version="any" ref="no_smoking"/>
+                                <SingleJourneyRef version="any" ref="rydt:Cust777@trans001@ride1234"/>
+                                <CarPoolingServiceRef version="any" ref="ryde"/>
+                                <VehicleRef version="any" ref="db54278"/>
+                                <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+                                <DistributionChannelRef version="any" ref="mobile_application"/>
+                                <FulfilmentMethodRef version="any" ref="mobile_device"/>
+                              </validityParameters>
+                            </SpecificParameterAssignment>
+                          </specificParameterAssignments>
+                        </OfferedTravelSpecification>
+                      </travelSpecifications>
+                    </SalesTransaction>
+                    <SalesTransaction id="rydt:Cust777@trans005@sell_ride" created="2020-08-08T12:00:00" version="any">
+                      <Name>Sell Single  ride Adult</Name>
+                      <Description>Cust777 accepts to provides ride by  Cust555. For simplicity we show  as a single  prepaid. If payment was later e.g.  on completion, could have separate transactions for reservation and payment. </Description>
+                      <Date>2020-08-08T12:00:00</Date>
+                      <TypeOfFareContractEntryRef ref="fxc:sell_ride" versionRef="EXTERNAL"/>
+                      <Amount>-8.00</Amount>
+                      <PaymentMethod>cash</PaymentMethod>
+                      <travelSpecifications>
+                        <OfferedTravelSpecification id="rydt:Cust777@trans005@sell_ride" version="any">
+                          <Date>2020-08-10T07:00:00</Date>
+                          <SalesTransactionRef version="any" ref="rydt:Cust777@trans005@sell_ride"/>
+                          <DistanceMatrixElementPriceRef version="any" ref="gamma_area+alphaville_centre"/>
+                          <Amount>-8.00</Amount>
+                          <ruleStepResults>
+                            <RuleStepResult id="rydt:Cust777@trans005@sell_ride" order="1">
+                              <Amount>-10</Amount>
+                              <AdjustmentAmount>2.00</AdjustmentAmount>
+                              <PricingRuleRef ref="ryde_fee"/>
+                              <Narrative>10 charge less Â£2 Ryde fee</Narrative>
+                            </RuleStepResult>
+                          </ruleStepResults>
+                          <StartOfValidity>2020-08-10T07:00:00</StartOfValidity>
+                          <TravelSpecificationSummaryView>
+                            <Origin>
+                              <VehicleMeetingPointRef version="any" ref="gamma_area"/>
+                            </Origin>
+                            <Destination>
+                              <VehicleMeetingPointRef version="any" ref="alphaville_centre"/>
+                            </Destination>
+                            <Start>2020-08-10T07:00:00</Start>
+                            <Duration>PT45M</Duration>
+                            <OperatorRef version="any" ref="noc:XRYD"/>
+                            <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                            <CarPoolingServiceRef version="any" ref="ryde"/>
+                          </TravelSpecificationSummaryView>
+                          <specificParameterAssignments>
+                            <SpecificParameterAssignment id="rydt:Cust777@trans005@sell_ride" version="any" order="1">
+                              <Name>Single ride</Name>
+                              <ValidableElementRef version="any" ref="ryde@single_trip@travel"/>
+                              <PreassignedFareProductRef version="any" ref="ryde@single_trip"/>
+                              <FareStructureElementRef version="any" ref="ryde@single_trip@access"/>
+                              <SalesOfferPackageRef version="any" ref="ryde@single_trip-SOP@mobileApp"/>
+                              <limitations>
+                                <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                              </limitations>
+                              <validityParameters>
+                                <VehiclePoolingRef version="any" ref="ride_share"/>
+                                <OperatorRef version="any" ref="noc:XRYD"/>
+                                <VehicleMeetingPointRef version="any" ref="gamma_area"/>
+                                <VehiclePoolingMeetingPlaceRef version="any" ref="delta_park_and_ride"/>
+                                <VehiclePoolingParkingAreaRef version="any" ref="delta_park_and_ride@A1"/>
+                                <ServiceFacilitySetRef version="any" ref="no_smoking"/>
+                                <SingleJourneyRef version="any" ref="rydt:Cust777@trans001@ride1234"/>
+                                <CarPoolingServiceRef version="any" ref="ryde"/>
+                                <VehicleRef version="any" ref="db54278"/>
+                                <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+                                <DistributionChannelRef version="any" ref="mobile_application"/>
+                                <FulfilmentMethodRef version="any" ref="mobile_device"/>
+                                <VehicleMeetingPointRef version="any" ref="alphaville_centre"/>
+                                <VehiclePoolingMeetingPlaceRef version="any" ref="town_hall"/>
+                              </validityParameters>
+                            </SpecificParameterAssignment>
+                          </specificParameterAssignments>
+                        </OfferedTravelSpecification>
+                      </travelSpecifications>
+                      <travelDocuments>
+                        <TravelDocument id="rydt:ticket@765452235" created="2020-08-08T12:00:00" version="any">
+                          <ValidBetween>
+                            <FromDate>2020-08-10T07:00:00</FromDate>
+                            <ToDate>2020-08-10T08:00:00</ToDate>
+                          </ValidBetween>
+                          <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+                          <CustomerPurchasePackageRef version="any" ref="rydt:CPP@Cust777@021"/>
+                        </TravelDocument>
+                      </travelDocuments>
+                    </SalesTransaction>
+                  </fareContractEntries>
+                </FareContract>
+              </fareContracts>
+            </Customer>
+          </customers>
+          <mediumAccessDevices>
+            <EmvCard id="visa:47594444555666" created="2020-02-28T13:00:00" version="any">
+              <Name>E.von Ritter - Visa card</Name>
+            </EmvCard>
+            <MobileDevice id="rydt:4178671234567" created="2020-02-28T13:00:00" version="any">
+              <Name>Esmerelda's phone</Name>
+              <CustomerRef version="any" ref="rydt:Cust555"/>
+              <applicationInstances>
+                <MediumApplicationInstance id="rydt:4178671234567@Ryde" version="any">
+                  <Name>Ryde app</Name>
+                  <TravelDocumentRef version="any" ref="rydt:ticket@765452234"/>
+                </MediumApplicationInstance>
+              </applicationInstances>
+            </MobileDevice>
+            <MobileDevice id="rydt:3178672020202" created="2019-01-05T12:00:00" version="any">
+              <Name>Freddy's phone</Name>
+              <CustomerRef version="any" ref="rydt:Cust777"/>
+              <applicationInstances>
+                <MediumApplicationInstance id="rydt:3178672020202@Ryde" version="any">
+                  <Name>Ryde app</Name>
+                  <TravelDocumentRef version="any" ref="rydt:ticket@765452234"/>
+                </MediumApplicationInstance>
+              </applicationInstances>
+            </MobileDevice>
+          </mediumAccessDevices>
+          <blacklists>
+            <Blacklist id="rydt:Bad" version="any">
+              <OperatorRef version="any" ref="noc:XRYD"/>
+              <securityListings>
+                <MediumAccessDeviceSecurityListing id="rydt:Bad@visa@47594444555666" version="any" order="1">
+                  <EmvCardRef version="any" ref="visa:47594444555666"/>
+                </MediumAccessDeviceSecurityListing>
+              </securityListings>
+            </Blacklist>
+          </blacklists>
+          <whitelists>
+            <Whitelist id="rydt:Good" version="any">
+              <Name>Approved listimgs&gt;</Name>
+              <OperatorRef version="any" ref="noc:XRYD"/>
+              <securityListings>
+                <CustomerSecurityListing id="rydt:Good@Cust555" version="any" order="1">
+                  <CustomerRef version="any" ref="rydt:Cust555"/>
+                </CustomerSecurityListing>
+                <MediumAccessDeviceSecurityListing id="rydt:Good@4178671234567" version="any" order="1">
+                  <MobileDeviceRef version="any" ref="rydt:4178671234567"/>
+                </MediumAccessDeviceSecurityListing>
+                <CustomerSecurityListing id="rydt:Good@Cust777" version="any" order="1">
+                  <CustomerRef version="any" ref="rydt:Cust777"/>
+                </CustomerSecurityListing>
+                <MediumAccessDeviceSecurityListing id="rydt:Good@47594444555666" version="any" order="1">
+                  <EmvCardRef ref="mc:47594444555666" versionRef="ETXERNAL"/>
+                </MediumAccessDeviceSecurityListing>
+                <MediumAccessDeviceSecurityListing id="rydt:Good@3178672020202" version="any" order="1">
+                  <MobileDeviceRef version="any" ref="rydt:3178672020202"/>
+                </MediumAccessDeviceSecurityListing>
+              </securityListings>
+            </Whitelist>
+          </whitelists>
+          <customerPurchasePackages>
+            <CustomerPurchasePackage id="rydt:CPP@Cust555@001" created="2020-02-28T13:00:00" version="any">
+              <ValidBetween>
+                <FromDate>2020-02-28T13:00:00</FromDate>
+              </ValidBetween>
+              <Name>Membership</Name>
+              <Description>Cust555 joins ride schem as a member</Description>
+              <CustomerRef version="any" ref="rydt:Cust555"/>
+              <CustomerAccountRef version="any" ref="rydt:Cust555@AC7651"/>
+              <customerPurchasePackageElements>
+                <CustomerPurchasePackageElement id="rydt:CPP@Cust555@001" version="any" order="1">
+                  <SalesOfferPackageElementRef version="any" ref="ryde@membership-SOP@mobileApp"/>
+                </CustomerPurchasePackageElement>
+              </customerPurchasePackageElements>
+              <SalesTransactionRef version="any" ref="rydt:Cust555@trans001@join_as_member"/>
+              <MobileDeviceRef version="any" ref="rydt:4178671234567"/>
+              <MediumApplicationInstanceRef version="any" ref="rydt:4178671234567@Ryde"/>
+            </CustomerPurchasePackage>
+            <CustomerPurchasePackage id="rydt:CPP@Cust555@005" created="2020-08-08T12:00:00" changed="2020-08-10T11:50:00" version="any">
+              <Name>Book Single ride, prepaid</Name>
+              <Description>Cust555 Purchase of ride from CUST777 to be made on   2020-08-10 at - 07:00:00  </Description>
+              <CustomerRef version="any" ref="rydt:Cust555"/>
+              <CustomerAccountRef version="any" ref="rydt:Cust555@AC7651"/>
+              <travelSpecifications>
+                <OfferedTravelSpecificationRef version="any" ref="rydt:Cust555@trans005@purchase_ride"/>
+              </travelSpecifications>
+              <customerPurchasePackageElements>
+                <CustomerPurchasePackageElement id="rydt:CPP@Cust555@005" created="2020-08-08T12:00:00" changed="2020-08-10T11:50:00" version="any" order="1">
+                  <SalesOfferPackageElementRef version="any" ref="ryde@single_trip-SOP@mobileApp"/>
+                  <MarkedAs>used</MarkedAs>
+                  <elementAccesses>
+                    <CustomerPurchasePackageElementAccess id="rydt:CPP@Cust555@005@001" created="2020-08-08T12:00:00" version="any">
+                      <MarkedAs>unused</MarkedAs>
+                    </CustomerPurchasePackageElementAccess>
+                    <CustomerPurchasePackageElementAccess id="rydt:CPP@Cust555@005@002" changed="2020-08-10T07:00:00" version="any">
+                      <MarkedAs>activated</MarkedAs>
+                      <validityParameterAssignments>
+                        <CustomerPurchaseParameterAssignment id="rydt:Cust555@trans005@002" version="any" order="1">
+                          <Name>Pick up at designated point</Name>
+                          <validityParameters>
+                            <VehicleMeetingPointRef version="any" ref="gamma_area"/>
+                            <VehiclePoolingMeetingPlaceRef version="any" ref="delta_park_and_ride"/>
+                            <VehiclePoolingParkingAreaRef version="any" ref="delta_park_and_ride@A1"/>
+                          </validityParameters>
+                        </CustomerPurchaseParameterAssignment>
+                      </validityParameterAssignments>
+                    </CustomerPurchasePackageElementAccess>
+                    <CustomerPurchasePackageElementAccess id="rydt:CPP@Cust555@005@003" changed="2020-08-10T07:55:00" version="any">
+                      <MarkedAs>used</MarkedAs>
+                      <validityParameterAssignments>
+                        <CustomerPurchaseParameterAssignment id="rydt:Cust555@trans005@003" version="any" order="1">
+                          <Name>Set down at designated point</Name>
+                          <validityParameters>
+                            <VehicleMeetingPointRef version="any" ref="alphaville_centre"/>
+                            <VehiclePoolingMeetingPlaceRef version="any" ref="town_hall"/>
+                          </validityParameters>
+                        </CustomerPurchaseParameterAssignment>
+                      </validityParameterAssignments>
+                    </CustomerPurchasePackageElementAccess>
+                  </elementAccesses>
+                  <validityParameterAssignments>
+                    <CustomerPurchaseParameterAssignment id="rydt:CPP@Cust555@005" version="any" order="1">
+                      <limitations>
+                        <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                      </limitations>
+                      <validityParameters>
+                        <VehiclePoolingRef version="any" ref="ride_share"/>
+                        <OperatorRef version="any" ref="noc:XRYD"/>
+                        <ServiceFacilitySetRef version="any" ref="no_smoking"/>
+                        <SingleJourneyRef version="any" ref="rydt:Cust777@trans001@ride1234"/>
+                        <CarPoolingServiceRef version="any" ref="ryde"/>
+                        <VehicleRef version="any" ref="db54278"/>
+                        <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+                        <DistributionChannelRef version="any" ref="mobile_application"/>
+                        <FulfilmentMethodRef version="any" ref="mobile_device"/>
+                      </validityParameters>
+                      <IndividualTravellerRef version="any" ref="rydt:Cust555"/>
+                      <VehiclePoolingDriverInfoRef version="any" ref="rydt:Cust777-01"/>
+                      <TripRef ref="123456"/>
+                      <TripLegRef ref="123456-1"/>
+                    </CustomerPurchaseParameterAssignment>
+                  </validityParameterAssignments>
+                </CustomerPurchasePackageElement>
+              </customerPurchasePackageElements>
+              <SalesTransactionRef version="any" ref="rydt:Cust555@trans005@purchase_ride"/>
+              <prices>
+                <CustomerPurchasePackagePrice id="rydt:CPP@Cust555@005" version="any">
+                  <Amount>8.00</Amount>
+                  <PricingServiceRef version="any" ref="ryde_pricer"/>
+                </CustomerPurchasePackagePrice>
+              </prices>
+              <MobileDeviceRef version="any" ref="rydt:4178671234567"/>
+              <MediumApplicationInstanceRef version="any" ref="rydt:4178671234567@Ryde"/>
+            </CustomerPurchasePackage>
+            <CustomerPurchasePackage id="rydt:CPP@Cust777@001" created="2019-01-05T12:00:00" version="any">
+              <ValidBetween>
+                <FromDate>2019-01-05T12:00:00</FromDate>
+              </ValidBetween>
+              <Name>Membership</Name>
+              <Description>Cust777 joins ride scheme</Description>
+              <CustomerRef version="any" ref="rydt:Cust777"/>
+              <CustomerAccountRef version="any" ref="rydt:Cust777@AC8145"/>
+              <customerPurchasePackageElements>
+                <CustomerPurchasePackageElement id="rydt:CPP@Cust777@001" version="any" order="1">
+                  <SalesOfferPackageElementRef version="any" ref="ryde@membership-SOP@mobileApp"/>
+                </CustomerPurchasePackageElement>
+              </customerPurchasePackageElements>
+              <SalesTransactionRef version="any" ref="rydt:Cust777@trans001@join_as_member"/>
+              <MobileDeviceRef version="any" ref="rydt:3178672020202"/>
+              <MediumApplicationInstanceRef version="any" ref="rydt:3178672020202@Ryde"/>
+            </CustomerPurchasePackage>
+            <CustomerPurchasePackage id="rydt:CPP@Cust777@021" created="2020-08-06T16:00:00" changed="2020-08-10T11:50:00" version="any">
+              <Name>Provide Single ride</Name>
+              <Description>Cust777 to provide a ride to CUst555 on 2020-08-10</Description>
+              <CustomerRef version="any" ref="rydt:Cust777"/>
+              <CustomerAccountRef version="any" ref="rydt:Cust777@AC8145"/>
+              <travelSpecifications>
+                <OfferedTravelSpecificationRef version="any" ref="rydt:Cust777@trans005@sell_ride"/>
+              </travelSpecifications>
+              <customerPurchasePackageElements>
+                <CustomerPurchasePackageElement id="rydt:CPP@Cust777@021" version="any" order="1">
+                  <SalesOfferPackageElementRef version="any" ref="ryde@single_trip-SOP@mobileApp"/>
+                  <elementAccesses>
+                    <CustomerPurchasePackageElementAccess id="rydt:CPP@Cust777@005@001" created="2020-08-06T16:00:00" version="any">
+                      <MarkedAs>unused</MarkedAs>
+                    </CustomerPurchasePackageElementAccess>
+                    <CustomerPurchasePackageElementAccess id="rydt:CPP@Cust777@005@002" changed="2020-08-10T07:00:00" version="any">
+                      <MarkedAs>activated</MarkedAs>
+                    </CustomerPurchasePackageElementAccess>
+                    <CustomerPurchasePackageElementAccess id="rydt:CPP@Cust777@005@003" changed="2020-08-10T07:55:00" version="any">
+                      <MarkedAs>used</MarkedAs>
+                    </CustomerPurchasePackageElementAccess>
+                  </elementAccesses>
+                  <validityParameterAssignments>
+                    <CustomerPurchaseParameterAssignment id="rydt:CPP@Cust777@021" version="any" order="1">
+                      <limitations>
+                        <VehiclePoolerProfileRef version="any" ref="non_smoker"/>
+                      </limitations>
+                      <validityParameters>
+                        <VehiclePoolingRef version="any" ref="ride_share"/>
+                        <OperatorRef version="any" ref="noc:XRYD"/>
+                        <ServiceFacilitySetRef version="any" ref="no_smoking"/>
+                        <SingleJourneyRef version="any" ref="rydt:Cust777@trans001@ride1234"/>
+                        <CarPoolingServiceRef version="any" ref="ryde"/>
+                        <VehicleRef version="any" ref="db54278"/>
+                        <TypeOfTravelDocumentRef version="any" ref="mobile_application_data"/>
+                        <DistributionChannelRef version="any" ref="mobile_application"/>
+                        <FulfilmentMethodRef version="any" ref="mobile_device"/>
+                      </validityParameters>
+                    </CustomerPurchaseParameterAssignment>
+                  </validityParameterAssignments>
+                </CustomerPurchasePackageElement>
+              </customerPurchasePackageElements>
+              <SalesTransactionRef version="any" ref="rydt:Cust777@trans005@sell_ride"/>
+              <prices>
+                <CustomerPurchasePackagePrice id="rydt:CPP@Cust777@021" version="any">
+                  <Amount>8.00</Amount>
+                  <PricingServiceRef version="any" ref="ryde_pricer"/>
+                </CustomerPurchasePackagePrice>
+              </prices>
+              <MobileDeviceRef version="any" ref="rydt:3178672020202"/>
+              <MediumApplicationInstanceRef version="any" ref="rydt:3178672020202@Ryde"/>
+            </CustomerPurchasePackage>
+          </customerPurchasePackages>
+        </SalesTransactionFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
+

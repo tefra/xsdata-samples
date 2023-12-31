@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from .access_facility_enumeration import AccessFacilityEnumeration
+from .vehicle_access_facility_enumeration import (
+    VehicleAccessFacilityEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -10,9 +12,9 @@ class VehicleAccessFacilityList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: List[AccessFacilityEnumeration] = field(
+    value: List[VehicleAccessFacilityEnumeration] = field(
         default_factory=lambda: [
-            AccessFacilityEnumeration.UNKNOWN,
+            VehicleAccessFacilityEnumeration.UNKNOWN,
         ],
         metadata={
             "tokens": True,

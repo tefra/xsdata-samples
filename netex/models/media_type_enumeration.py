@@ -11,6 +11,7 @@ class MediaTypeEnumeration(Enum):
     SELF_PRINT_PAPER_TICKET = "selfPrintPaperTicket"
     SMART_CARD = "smartCard"
     MOBILE_APP = "mobileApp"
+    LICENCE_PLATE = "licencePlate"
     CARD = "card"
     MMS = "mms"
     SMS = "sms"

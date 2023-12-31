@@ -3,6 +3,7 @@ from typing import Optional
 from .infrastructure_link_restriction_version_structure import (
     InfrastructureLinkRestrictionVersionStructure,
 )
+from .transport_type_ref_structure import TransportTypeRefStructure
 from .vehicle_type_ref_structure import VehicleTypeRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -23,7 +24,7 @@ class MeetingRestrictionVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    against_vehicle_type_ref: Optional[VehicleTypeRefStructure] = field(
+    against_vehicle_type_ref: Optional[TransportTypeRefStructure] = field(
         default=None,
         metadata={
             "name": "AgainstVehicleTypeRef",

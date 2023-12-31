@@ -15,7 +15,7 @@ class TimeStructureFactorsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "timeStructureFactors_RelStructure"
 
-    time_structure_factor_ref: List[
+    parking_charge_band_ref_or_time_structure_factor_ref_or_time_structure_factor: List[
         Union[
             ParkingChargeBandRef, TimeStructureFactorRef, TimeStructureFactor
         ]

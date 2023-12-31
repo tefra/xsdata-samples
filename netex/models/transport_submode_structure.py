@@ -6,7 +6,9 @@ from .coach_submode_enumeration import CoachSubmodeEnumeration
 from .funicular_submode_enumeration import FunicularSubmodeEnumeration
 from .metro_submode_enumeration import MetroSubmodeEnumeration
 from .rail_submode_enumeration import RailSubmodeEnumeration
+from .self_drive_submode_enumeration import SelfDriveSubmodeEnumeration
 from .snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration
+from .taxi_submode_enumeration import TaxiSubmodeEnumeration
 from .telecabin_submode_enumeration import TelecabinSubmodeEnumeration
 from .tram_submode_enumeration import TramSubmodeEnumeration
 from .water_submode_enumeration import WaterSubmodeEnumeration
@@ -28,6 +30,8 @@ class TransportSubmodeStructure:
             RailSubmodeEnumeration,
             WaterSubmodeEnumeration,
             SnowAndIceSubmodeEnumeration,
+            TaxiSubmodeEnumeration,
+            SelfDriveSubmodeEnumeration,
         ]
     ] = field(
         default=None,
@@ -82,6 +86,16 @@ class TransportSubmodeStructure:
                 {
                     "name": "SnowAndIceSubmode",
                     "type": SnowAndIceSubmodeEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TaxiSubmode",
+                    "type": TaxiSubmodeEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SelfDriveSubmode",
+                    "type": SelfDriveSubmodeEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

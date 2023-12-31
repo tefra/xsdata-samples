@@ -592,13 +592,13 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
     class Meta:
         name = "FareSection_VersionStructure"
 
-    journey_pattern_ref: Optional[
+    choice: Optional[
         Union[
             ServiceJourneyPatternRef,
             ServicePatternRef,
             DeadRunJourneyPatternRef,
             JourneyPatternRef,
-            JourneyPattern,
+            "JourneyPattern",
         ]
     ] = field(
         default=None,
@@ -627,7 +627,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
                 },
                 {
                     "name": "JourneyPattern",
-                    "type": JourneyPattern,
+                    "type": Type["JourneyPattern"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

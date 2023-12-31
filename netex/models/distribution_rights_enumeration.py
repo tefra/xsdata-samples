@@ -9,5 +9,6 @@ class DistributionRightsEnumeration(Enum):
     EXCHANGE = "exchange"
     REFUND = "refund"
     INFORM = "inform"
+    BOOK = "book"
     PRIVATE = "private"
     OTHER = "other"

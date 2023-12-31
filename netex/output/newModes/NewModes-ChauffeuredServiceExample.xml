@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2.2">
+  <PublicationTimestamp>2020-12-17T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>SYS001</ParticipantRef>
+  <PublicationRequest>
+    <RequestTimestamp>2020-12-17T09:30:46Z</RequestTimestamp>
+    <ParticipantRef>SYS002</ParticipantRef>
+    <Description>Request for hme james tariff</Description>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition id="r1" version="any">
+            <FromDate>2020-01-01T00:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <NetworkFilterByValue>
+          <LayerRef ref="fxc:fareNetwork_fareProducts_farePrices"/>
+          <objectReferences>
+            <OperatorRef version="any" ref="noc:HJM"/>
+            <VehiclePoolingRef ref="chauffeured_car"/>
+          </objectReferences>
+        </NetworkFilterByValue>
+      </NetworkFrameTopic>
+    </topics>
+  </PublicationRequest>
+  <PublicationRefreshInterval>P1M</PublicationRefreshInterval>
+  <Description>Example  of simple point to point fares</Description>
+  <dataObjects>
+    <CompositeFrame id="hjm:chauffeured_taxi_example" dataSourceRef="hjm:home_james" version="1.0" responsibilitySetRef="hjm:tariffs">
+      <ValidBetween>
+        <FromDate>2020-01-01T00:00:00</FromDate>
+        <ToDate>2020-12-31T12:00:00</ToDate>
+      </ValidBetween>
+      <Name>Chauffered car  Example</Name>
+      <Description>This is an example showing how one might encode  static aspects of a Chauffered car offering  "home james"  in NeTEx.  It includes some  prices.</Description>
+      <codespaces>
+        <CodespaceRef ref="hjm_data"/>
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="hjm_data"/>
+        <DefaultDataSourceRef version="any" ref="hjm:home_james"/>
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <frames>
+        <ResourceFrame id="hjm:chauffeured_taxi_example" version="1.0" responsibilitySetRef="hjm:network_data">
+          <Name>Home James  Operator specific  common resources</Name>
+          <codespaces>
+            <Codespace id="hjm_data">
+              <Xmlns>rd</Xmlns>
+              <XmlnsUrl>http://www.home_james.eu/data</XmlnsUrl>
+              <Description>ryde data</Description>
+            </Codespace>
+          </codespaces>
+          <dataSources>
+            <DataSource id="hjm:home_james" version="any">
+              <Email>feedback@homeJames.eu</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet id="hjm:tariffs" version="any">
+              <Name>Operator Tariffs</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="hjm:tariff_data@creates" version="any">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="any" ref="noc:HJM">noc:HJM</ResponsibleOrganisationRef>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet id="hjm:network_data" version="any">
+              <Name>Operator data</Name>
+              <roles>
+                <ResponsibilityRoleAssignment id="hjm:network_data@creates" version="any">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="any" ref="noc:HJM">noc:HJM</ResponsibleOrganisationRef>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet id="AllBranding" version="any" classOfValues="Branding">
+              <Name>Brandingr</Name>
+              <values>
+                <Branding id="myBrand" version="any">
+                  <Name>Home James</Name>
+                  <Url>https://www.home_james.eu/static/images//logo.png</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+            <ValueSet id="TypeOfParking" version="any" classOfValues="TypeOfParking">
+              <Name>Types Of Parking</Name>
+              <values>
+                <TypeOfParking id="airport" version="any">
+                  <Name>Airport Parking </Name>
+                </TypeOfParking>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator id="noc:HJM" version="any">
+              <Name>Home James Cars</Name>
+              <ShortName>Home James</ShortName>
+              <TradingName>HJ Driver services Ltd.</TradingName>
+              <Description>Chauffeured car service service</Description>
+              <ContactDetails>
+                <Phone>+32 1293 449191</Phone>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <CountryRef ref="fr"/>
+              <Address>
+                <Street>Alpha1</Street>
+                <Town>Metropolis</Town>
+                <PostCode>RH10 9UA</PostCode>
+                <PostalRegion>Metroland</PostalRegion>
+              </Address>
+              <PrimaryMode>taxi</PrimaryMode>
+              <TaxiSubmode>charterTaxi</TaxiSubmode>
+              <VehiclePoolingRef version="any" ref="chauffeured_car"/>
+            </Operator>
+            <OnlineServiceOperator id="floggit" version="any">
+              <Name>Online transport services</Name>
+              <TradingName>Web Floggers SA</TradingName>
+              <Description>Thord  party providers of on;ine systems for HJ</Description>
+              <ContactDetails>
+                <Email>barrowboy@floggit.com</Email>
+              </ContactDetails>
+              <OrganisationType>onlineProvider</OrganisationType>
+              <Address>
+                <Street>Rue des Postes.</Street>
+                <Town>Betaville</Town>
+                <PostalRegion>Metroland</PostalRegion>
+              </Address>
+            </OnlineServiceOperator>
+          </organisations>
+          <modesOfOperation>
+            <VehiclePooling id="chauffeured_car" version="any">
+              <Name>Chauffeured car</Name>
+              <Description>Prebooked car for  a period  or specific journey</Description>
+              <submodes>
+                <Submode id="chauffeured_car" version="any">
+                  <TransportMode>taxi</TransportMode>
+                  <TaxiSubmode>charterTaxi</TaxiSubmode>
+                </Submode>
+              </submodes>
+              <VehiclePoolingType>chaffeuredVehicle</VehiclePoolingType>
+            </VehiclePooling>
+            <ScheduledOperation id="scheduled_flights" version="any">
+              <Name>Scheduled flights</Name>
+              <submodes>
+                <Submode id="scheduled_flights@international" version="any">
+                  <TransportMode>air</TransportMode>
+                  <AirSubmode>internationalFlight</AirSubmode>
+                </Submode>
+                <Submode id="scheduled_flights@charter" version="any">
+                  <TransportMode>air</TransportMode>
+                  <AirSubmode>internationalCharterFlight</AirSubmode>
+                </Submode>
+                <Submode id="scheduled_flights@domestic" version="any">
+                  <TransportMode>air</TransportMode>
+                  <AirSubmode>domesticFlight</AirSubmode>
+                </Submode>
+              </submodes>
+              <ScheduledOperationType>scheduledService</ScheduledOperationType>
+            </ScheduledOperation>
+            <ScheduledOperation id="scheduled_trains" version="any">
+              <Name>Scheduled trains</Name>
+              <submodes>
+                <Submode id="scheduled_trains@tgv" version="any">
+                  <TransportMode>rail</TransportMode>
+                  <RailSubmode>highSpeedRail</RailSubmode>
+                </Submode>
+                <Submode id="scheduled_trains@regional" version="any">
+                  <TransportMode>rail</TransportMode>
+                  <RailSubmode>regionalRail</RailSubmode>
+                </Submode>
+                <Submode id="scheduled_trains@suburban" version="any">
+                  <TransportMode>rail</TransportMode>
+                  <RailSubmode>suburbanRailway</RailSubmode>
+                </Submode>
+              </submodes>
+              <ScheduledOperationType>scheduledService</ScheduledOperationType>
+            </ScheduledOperation>
+          </modesOfOperation>
+          <serviceFacilitySets>
+            <ServiceFacilitySet id="no_smoking" version="any">
+              <NuisanceFacilityList>noSmoking</NuisanceFacilityList>
+            </ServiceFacilitySet>
+            <ServiceFacilitySet id="smoking" version="any">
+              <NuisanceFacilityList>smoking</NuisanceFacilityList>
+            </ServiceFacilitySet>
+            <ServiceFacilitySet id="wifi" version="any">
+              <PassengerCommsFacilityList>freeWifi</PassengerCommsFacilityList>
+            </ServiceFacilitySet>
+          </serviceFacilitySets>
+          <vehicleTypes>
+            <VehicleType id="stretch_limo" version="any">
+              <Name>Strech limo</Name>
+              <ReversingDirection>true</ReversingDirection>
+              <SelfPropelled>true</SelfPropelled>
+              <PropulsionType>combustion</PropulsionType>
+              <FuelType>petrol</FuelType>
+              <TransportMode>selfDrive</TransportMode>
+              <PassengerCapacity id="stretch_limo" version="any">
+                <SeatingCapacity>7</SeatingCapacity>
+              </PassengerCapacity>
+              <Length>20</Length>
+              <Height>1.8</Height>
+              <Weight>1000</Weight>
+              <FirstAxleHeight>0.25</FirstAxleHeight>
+              <facilities>
+                <ServiceFacilitySet id="stretch_limo" version="any">
+                  <CateringFacilityList>bar</CateringFacilityList>
+                  <PassengerCommsFacilityList>videoEntertainment publicWifi</PassengerCommsFacilityList>
+                </ServiceFacilitySet>
+              </facilities>
+            </VehicleType>
+          </vehicleTypes>
+          <vehicleModels>
+            <VehicleModel id="stretch_cadillac" version="any">
+              <Name>Strech Cadillac</Name>
+              <Manufacturer>Cadillac</Manufacturer>
+              <VehicleTypeRef version="any" ref="stretch_limo"/>
+              <CarModelProfileRef version="any" ref="stretch_model"/>
+            </VehicleModel>
+          </vehicleModels>
+          <vehicleModelProfiles>
+            <CarModelProfile id="stretch_model" version="any">
+              <AirConditioning>true</AirConditioning>
+              <UsbPowerSockets>true</UsbPowerSockets>
+            </CarModelProfile>
+          </vehicleModelProfiles>
+        </ResourceFrame>
+        <SiteFrame id="hjm:chauffeured_taxi_example" version="1.0" responsibilitySetRef="hjm:network_data">
+          <Name>Places used by services.</Name>
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="hjm:chauffeured_taxi_example"/>
+          </prerequisites>
+          <topographicPlaces>
+            <TopographicPlace id="pays_de_soleil" version="any">
+              <Descriptor>
+                <Name>Pays de soleil</Name>
+              </Descriptor>
+            </TopographicPlace>
+            <TopographicPlace id="alphaville" version="any">
+              <Name>Alphaville, Pays de soleil</Name>
+              <Centroid>
+                <Location id="alphaville">
+                  <Longitude>1.35250</Longitude>
+                  <Latitude>52.44692</Latitude>
+                </Location>
+              </Centroid>
+              <Descriptor>
+                <Name>Alphaville</Name>
+                <Qualify>
+                  <QualifierName>en soleil</QualifierName>
+                  <TopographicPlaceRef version="any" ref="pays_de_soleil"/>
+                </Qualify>
+              </Descriptor>
+              <ParentTopographicPlaceRef version="any" ref="pays_de_soleil"/>
+            </TopographicPlace>
+            <TopographicPlace id="belaire" version="any">
+              <Centroid>
+                <Location id="belaire">
+                  <Longitude>1.40250</Longitude>
+                  <Latitude>52.74692</Latitude>
+                </Location>
+              </Centroid>
+              <Descriptor>
+                <Name>Belaire</Name>
+              </Descriptor>
+              <ParentTopographicPlaceRef version="any" ref="pays_de_soleil"/>
+            </TopographicPlace>
+            <TopographicPlace id="gamma_sur_mer" version="any">
+              <Name>Gamma</Name>
+              <Centroid>
+                <Location id="gamma_sur_me">
+                  <Longitude>2.35250</Longitude>
+                  <Latitude>53.44692</Latitude>
+                </Location>
+              </Centroid>
+              <Descriptor>
+                <Name>Gamma-sur-mer</Name>
+              </Descriptor>
+              <ParentTopographicPlaceRef version="any" ref="pays_de_soleil"/>
+            </TopographicPlace>
+          </topographicPlaces>
+          <addresses>
+            <PostalAddress id="chez_ritter" version="any">
+              <Name>Chez Ritter</Name>
+              <Centroid>
+                <Location id="chez_ritter">
+                  <Longitude>2.35250</Longitude>
+                  <Latitude>53.44692</Latitude>
+                </Location>
+              </Centroid>
+              <BuildingName>Chateau Ritter</BuildingName>
+              <Street>Rue de Ritter</Street>
+              <Town>Gamma-sur-mer</Town>
+              <Province>Pays de soleil</Province>
+            </PostalAddress>
+          </addresses>
+          <stopPlaces>
+            <StopPlace id="alphaville_aeroport" version="any">
+              <Name lang="fr">Aeroporte Internationale d'Alphaville</Name>
+              <TopographicPlaceRef version="any" ref="belaire"/>
+              <TransportMode>air</TransportMode>
+              <ScheduledModeOfOperationRef version="any" ref="scheduled_flights"/>
+              <OtherTransportModes>rail</OtherTransportModes>
+              <servedPlaces>
+                <TopographicPlaceRef version="any" ref="alphaville"/>
+                <TopographicPlaceRef version="any" ref="gamma_sur_mer"/>
+                <TopographicPlaceRef version="any" ref="pays_de_soleil"/>
+              </servedPlaces>
+              <mainTerminusForPlaces>
+                <TopographicPlaceRef version="any" ref="alphaville"/>
+              </mainTerminusForPlaces>
+              <quays>
+                <Quay id="alphaville_aeroport@taxi_set_down" version="any">
+                  <Name>set down Aeea</Name>
+                  <Covered>covered</Covered>
+                  <TransportMode>taxi</TransportMode>
+                  <BoardingUse>false</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                </Quay>
+                <Quay id="alphaville_aeroport@taxi_pick_up" version="any">
+                  <Name>Pick up   Area</Name>
+                  <Covered>covered</Covered>
+                  <TransportMode>taxi</TransportMode>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>false</AlightingUse>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="alphaville_gare" version="any">
+              <Name lang="fr">Gare d'Alphaville</Name>
+              <TopographicPlaceRef version="any" ref="alphaville"/>
+              <TransportMode>rail</TransportMode>
+              <ScheduledModeOfOperationRef version="any" ref="scheduled_flights"/>
+              <mainTerminusForPlaces>
+                <TopographicPlaceRef version="any" ref="alphaville"/>
+              </mainTerminusForPlaces>
+              <quays>
+                <Quay id="alphaville_gare@platform_1" version="any">
+                  <Name>Platform 1</Name>
+                  <Covered>indoors</Covered>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                </Quay>
+                <Quay id="alphaville_gare@platform_2" version="any">
+                  <Name>Platform 2</Name>
+                  <Covered>indoors</Covered>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>false</AlightingUse>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <StopPlace id="alphaville_gare@taxi" version="any">
+              <Name lang="fr">Taxi Rank at the Gare d'Alphaville</Name>
+              <TopographicPlaceRef version="any" ref="alphaville"/>
+              <ParentSiteRef version="any" ref="alphaville_gare"/>
+              <ContainedInPlaceRef version="any" ref="alphaville"/>
+              <TransportMode>taxi</TransportMode>
+              <quays>
+                <Quay id="alphaville_gare@taxi_set_down" version="any">
+                  <Name>Set down Aeea</Name>
+                  <Covered>covered</Covered>
+                  <BoardingUse>false</BoardingUse>
+                  <AlightingUse>true</AlightingUse>
+                </Quay>
+                <Quay id="alphaville_gare@taxi_pick_up" version="any">
+                  <Name>Pick up   Area</Name>
+                  <Covered>covered</Covered>
+                  <BoardingUse>true</BoardingUse>
+                  <AlightingUse>false</AlightingUse>
+                </Quay>
+              </quays>
+            </StopPlace>
+            <TaxiRank id="alphaville_hdv_taxi" version="any">
+              <Name>Taxi Rank at Alphaville Hotel de Ville</Name>
+              <adjacentSites>
+                <PointOfInterestRef version="any" ref="alphaville_hdv"/>
+              </adjacentSites>
+              <StopPlaceType>taxiRank</StopPlaceType>
+              <taxiStands>
+                <TaxiStand id="alphaville_hdv_taxi@s1" version="any">
+                  <QuayType>taxiStand</QuayType>
+                </TaxiStand>
+              </taxiStands>
+            </TaxiRank>
+          </stopPlaces>
+          <pointsOfInterest>
+            <PointOfInterest id="alphaville_hdv" version="any">
+              <Name>Alphaville Hotel de Ville</Name>
+              <Centroid>
+                <Location id="alphaville_hdv">
+                  <Longitude>2.35250</Longitude>
+                  <Latitude>53.44692</Latitude>
+                </Location>
+              </Centroid>
+              <TopographicPlaceRef version="any" ref="alphaville"/>
+              <SiteType>government</SiteType>
+            </PointOfInterest>
+          </pointsOfInterest>
+          <parkings>
+            <Parking id="alphaville_airport_taxi_parking" version="any">
+              <Name lang="en">Alphaville Airport taxi parking</Name>
+              <CrossRoad>Delta road</CrossRoad>
+              <Landmark>Alphaville airports</Landmark>
+              <Covered>outdoors</Covered>
+              <TopographicPlaceRef version="any" ref="belaire"/>
+              <OperatorRef version="any" ref="noc:HJM"/>
+              <ParkingType>airportParking</ParkingType>
+              <TypeOfParkingRef version="any" ref="airport"/>
+              <ParkingVehicleTypes>taxi</ParkingVehicleTypes>
+              <parkingAreas>
+                <TaxiParkingArea id="alphaville_airport_taxi_parking@A1" version="any">
+                  <TotalCapacity>20</TotalCapacity>
+                  <bays>
+                    <ParkingBay id="alphaville_airport_taxi_parking@A1@chauff_1" version="any">
+                      <Name>Chauffeured service pickup Bay</Name>
+                      <Label>Chauffeur 1</Label>
+                    </ParkingBay>
+                    <ParkingBay id="alphaville_airport_taxi_parking@A1@chauff_2" version="any">
+                      <Name>Chauffeured service pickup Bay</Name>
+                      <Label>Chauffeur 1</Label>
+                    </ParkingBay>
+                  </bays>
+                </TaxiParkingArea>
+              </parkingAreas>
+            </Parking>
+          </parkings>
+        </SiteFrame>
+        <MobilityServiceFrame id="hjm:chauffeured_taxi_example" version="1.0" responsibilitySetRef="hjm:network_data">
+          <prerequisites>
+            <ResourceFrameRef version="1.0" ref="hjm:chauffeured_taxi_example"/>
+          </prerequisites>
+          <fleets>
+            <Fleet id="MetrobikeFleet" version="any">
+              <Name>The metrobike fleet</Name>
+              <members>
+                <Vehicle id="SWK007" version="any">
+                  <RegistrationNumber>SWK007</RegistrationNumber>
+                  <OperatorRef version="any" ref="noc:HJM"/>
+                  <VehicleTypeRef version="any" ref="stretch_limo"/>
+                  <VehicleModelRef version="any" ref="stretch_cadillac"/>
+                  <CarModelProfileRef version="any" ref="stretch_model"/>
+                </Vehicle>
+                <Vehicle id="SWK044" version="any">
+                  <RegistrationNumber>SWK044</RegistrationNumber>
+                  <OperatorRef version="any" ref="noc:HJM"/>
+                  <VehicleTypeRef version="any" ref="stretch_limo"/>
+                  <VehicleModelRef version="any" ref="stretch_cadillac"/>
+                  <CarModelProfileRef version="any" ref="stretch_model"/>
+                </Vehicle>
+              </members>
+            </Fleet>
+          </fleets>
+          <mobilityServices>
+            <ChauffeuredVehicleService id="hj_cars" version="any">
+              <BrandingRef version="any" ref="myBrand"/>
+              <Name>Home James Cars.</Name>
+              <OperatorRef version="any" ref="noc:HJM"/>
+              <ServiceBookingArrangements>
+                <BookingContact>
+                  <Phone>=31666777</Phone>
+                  <Url>https://www.homeJames.eu/booking</Url>
+                </BookingContact>
+                <BookingMethods>mobileApp online</BookingMethods>
+                <BookingAccess>authorisedPublic</BookingAccess>
+                <BookWhen>advanceOnly</BookWhen>
+                <BuyWhen>onCheckOut</BuyWhen>
+                <LatestBookingTime>20:00:00</LatestBookingTime>
+                <MinimumBookingPeriod>P1D</MinimumBookingPeriod>
+                <BookingUrl>https://www.homeJames.eu/booking</BookingUrl>
+                <BookingNote>Booklings made online or by pyone  Bookings can be made up to two hour before travel. </BookingNote>
+                <MinimumBookingDuration>PT2H</MinimumBookingDuration>
+                <DepositRequired>true</DepositRequired>
+                <BookingChargeType>none</BookingChargeType>
+              </ServiceBookingArrangements>
+              <BookingRequired>true</BookingRequired>
+              <RegistrationRequired>true</RegistrationRequired>
+              <proposedByServices>
+                <OnlineServiceRef version="any" ref="hjm_online"/>
+              </proposedByServices>
+              <VehiclePoolingRef version="any" ref="chauffeured_car"/>
+            </ChauffeuredVehicleService>
+          </mobilityServices>
+          <onlineServices>
+            <OnlineService id="hjm_online" version="any">
+              <Name>Online booking for HJ Cars</Name>
+              <OnlineServiceOperatorRef version="any" ref="floggit"/>
+              <proposingServices>
+                <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+              </proposingServices>
+            </OnlineService>
+          </onlineServices>
+          <vehicleMeetingPoints>
+            <VehicleMeetingPoint id="alphaville_airport" version="any">
+              <Name>Pick up/Set down Alphaville airport</Name>
+              <Location>
+                <Longitude>1.65250</Longitude>
+                <Latitude>53.54692</Latitude>
+              </Location>
+            </VehicleMeetingPoint>
+            <VehicleMeetingPoint id="gamma_area" version="any">
+              <Name>Pick up/Set down Gamma area</Name>
+              <Location>
+                <Longitude>1.45250</Longitude>
+                <Latitude>52.54692</Latitude>
+              </Location>
+            </VehicleMeetingPoint>
+            <VehicleMeetingPoint id="alphaville_centre" version="any">
+              <Name>Pick up/Set down  in Alphaville centre</Name>
+              <Location>
+                <Longitude>1.35250</Longitude>
+                <Latitude>52.44692</Latitude>
+              </Location>
+            </VehicleMeetingPoint>
+            <VehicleMeetingPoint id="alphaville_gare" version="any">
+              <Name>Pick up/Set down  at Alphaville station</Name>
+              <Location>
+                <Longitude>1.36250</Longitude>
+                <Latitude>52.45692</Latitude>
+              </Location>
+            </VehicleMeetingPoint>
+          </vehicleMeetingPoints>
+          <vehicleMeetingLinks>
+            <VehicleMeetingLink id="gamma_area+alphaville_airport" version="any">
+              <Distance>40</Distance>
+              <FromPointRef version="any" ref="gamma_area"/>
+              <ToPointRef version="any" ref="alphaville_airport"/>
+            </VehicleMeetingLink>
+            <VehicleMeetingLink id="alphaville_airport+gamma_area" version="any">
+              <Distance>40</Distance>
+              <FromPointRef version="any" ref="alphaville_airport"/>
+              <ToPointRef version="any" ref="gamma_area"/>
+            </VehicleMeetingLink>
+            <VehicleMeetingLink id="gamma_area+alphaville_gare" version="any">
+              <Distance>15</Distance>
+              <FromPointRef version="any" ref="gamma_area"/>
+              <ToPointRef version="any" ref="alphaville_gare"/>
+            </VehicleMeetingLink>
+            <VehicleMeetingLink id="alphaville_gare+gamma_area" version="any">
+              <Distance>15</Distance>
+              <FromPointRef version="any" ref="alphaville_gare"/>
+              <ToPointRef version="any" ref="gamma_area"/>
+            </VehicleMeetingLink>
+            <VehicleMeetingLink id="alphaville_airport+alphaville_centre" version="any">
+              <Distance>20</Distance>
+              <FromPointRef version="any" ref="alphaville_airport"/>
+              <ToPointRef version="any" ref="alphaville_centre"/>
+            </VehicleMeetingLink>
+            <VehicleMeetingLink id="alphaville_centre+alphaville_airport" version="any">
+              <Distance>20</Distance>
+              <FromPointRef version="any" ref="alphaville_centre"/>
+              <ToPointRef version="any" ref="alphaville_airport"/>
+            </VehicleMeetingLink>
+          </vehicleMeetingLinks>
+          <vehicleMeetingPlaces>
+            <VehiclePoolingMeetingPlace id="alphaville_airport_set_down" version="any">
+              <Name>Alphaville pick up</Name>
+              <TopographicPlaceRef version="any" ref="belaire"> </TopographicPlaceRef>
+              <QuayRef version="any" ref="alphaville_gare@taxi_set_down"/>
+            </VehiclePoolingMeetingPlace>
+            <VehiclePoolingMeetingPlace id="alphaville_airport_pick_up" version="any">
+              <Name>Alphaville pick up</Name>
+              <TopographicPlaceRef version="any" ref="belaire"> </TopographicPlaceRef>
+              <QuayRef version="any" ref="alphaville_gare@taxi_pick_up"/>
+            </VehiclePoolingMeetingPlace>
+          </vehicleMeetingPlaces>
+          <vehicleMeetingPlaceAssignments>
+            <VehiclePoolingPlaceAssignment id="alphaville_airport_taxi_parking@pick_up" version="any" order="1">
+              <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+              <VehiclePoolingMeetingPlaceRef version="any" ref="alphaville_airport_pick_up"/>
+              <ParkingBayRef version="any" ref="alphaville_airport_taxi_parking@A1@chauff_1"/>
+            </VehiclePoolingPlaceAssignment>
+            <VehiclePoolingPlaceAssignment id="alphaville_airport_taxi_parking@set_down" version="any" order="1">
+              <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+              <VehiclePoolingMeetingPlaceRef version="any" ref="alphaville_airport_set_down"/>
+              <ParkingBayRef version="any" ref="alphaville_airport_taxi_parking@A1@chauff_2"/>
+            </VehiclePoolingPlaceAssignment>
+            <VehiclePoolingPlaceAssignment id="alphaville_gare_taxi_parking@pick_up" version="any" order="1">
+              <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+              <VehiclePoolingMeetingPlaceRef version="any" ref="alphaville_gare_pick_up"/>
+            </VehiclePoolingPlaceAssignment>
+            <VehiclePoolingPlaceAssignment id="alphaville_gare_taxi_parking@set_down" version="any" order="1">
+              <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+              <VehiclePoolingMeetingPlaceRef version="any" ref="alphaville_gare_set_down"/>
+            </VehiclePoolingPlaceAssignment>
+          </vehicleMeetingPlaceAssignments>
+        </MobilityServiceFrame>
+        <FareFrame id="hjm:chauffeured_taxi_example-prepriced_trips" dataSourceRef="hjm:home_james" version="1.0" responsibilitySetRef="hjm:tariffs">
+          <Name>ome James - Chaufferred car hire - prepriced trips</Name>
+          <prerequisites>
+            <MobilityServiceFrameRef version="1.0" ref="hjm:chauffeured_taxi_example"/>
+            <SiteFrameRef version="1.0" ref="hjm:chauffeured_taxi_example"/>
+          </prerequisites>
+          <tariffs>
+            <Tariff id="home_james@prepriced_trip" version="any">
+              <Name>Tariff for standard trips</Name>
+              <documentLinks>
+                <InfoLink typeOfInfoLink="info">https://homeJames.eu/tariff.pdf</InfoLink>
+                <InfoLink typeOfInfoLink="map">https://homeJames.eu/tariffMap.pdf</InfoLink>
+              </documentLinks>
+              <OperatorRef version="any" ref="noc:HJM"/>
+              <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+              <fareStructureElements>
+                <FareStructureElement id="home_james@prepriced_trip@access" version="any">
+                  <Name>Access to one of the prepriced trips</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:access" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="home_james@prepriced_trip@access" version="any" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:access" versionRef="EXTERNAL"/>
+                    <ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+                    <validityParameters>
+                      <VehicleMeetingLinkRef version="any" ref="gamma_area+alphaville_airport"/>
+                      <VehicleMeetingLinkRef version="any" ref="alphaville_airport+gamma_area"/>
+                      <VehicleMeetingLinkRef version="any" ref="gamma_area+alphaville_gare"/>
+                      <VehicleMeetingLinkRef version="any" ref="alphaville_gare+gamma_area"/>
+                      <VehicleMeetingLinkRef version="any" ref="alphaville_airport+alphaville_centre"/>
+                      <VehicleMeetingLinkRef version="any" ref="alphaville_centre+alphaville_airport"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="home_james@prepriced_trip@eligibility" version="any">
+                  <Name>Eligible user types</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:eligibility" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="home_james@prepriced_trip@eligibility" version="any" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:eligible" versionRef="EXTERNAL"/>
+                    <limitations>
+                      <UserProfile id="person" version="any">
+                        <Name>Person</Name>
+                        <UserType>anyone</UserType>
+                        <MinimumAge>6</MinimumAge>
+                        <companionProfiles>
+                          <CompanionProfile id="'pet_with_person" version="any">
+                            <UserProfileRef version="any" ref="pet"/>
+                            <MaximumNumberOfPersons>1</MaximumNumberOfPersons>
+                            <DiscountBasis>free</DiscountBasis>
+                          </CompanionProfile>
+                        </companionProfiles>
+                      </UserProfile>
+                      <UserProfile id="pet" version="any">
+                        <Name>Pet </Name>
+                        <UserType>animal</UserType>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="home_james@prepriced_trip@conditions_of_travel" version="any">
+                  <Name>COnditions on travel</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:travel_conditions" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="home_james@prepriced_trip@conditions_of_travel" version="any" order="1">
+                    <Name>Conditions of travel</Name>
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_use" versionRef="EXTERNAL"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <UsageValidityPeriod id="home_james@prepriced_trip@usagValidity" version="any">
+                        <ValidityPeriodType>singleTrip</ValidityPeriodType>
+                        <UsageTrigger>startOutboundRide</UsageTrigger>
+                        <UsageEnd>endOfTrip</UsageEnd>
+                      </UsageValidityPeriod>
+                      <FrequencyOfUse id="home_james@prepriced_trip@frequency" version="any">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="home_james@prepriced_trip@conditions_of_sale" version="any">
+                  <Name>Conditions of sale</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:sale_conditions" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="home_james@prepriced_trip@conditions_of_sale" version="any" order="1">
+                    <Name>Conditions of sale</Name>
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_sale" versionRef="EXTERNAL"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Cancelling id="home_james@prepriced_trip@refunding" version="any">
+                        <CancellationAllowed>true</CancellationAllowed>
+                      </Cancelling>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="home_james@prepriced_trip@accommodation" version="any">
+                  <Name>Conditions of sale</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:sale_conditions" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="home_james@prepriced_trip@facilities" version="any" order="1">
+                    <Name>facilities</Name>
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_travel" versionRef="EXTERNAL"/>
+                    <LimitationGroupingType>OR</LimitationGroupingType>
+                    <validityParameters>
+                      <ServiceFacilitySetRef version="any" ref="no_smoking"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+              <distanceMatrixElements>
+                <DistanceMatrixElement id="gamma_area+alphaville_airport" version="any">
+                  <InverseAllowed>true</InverseAllowed>
+                  <StartMeetingPointRef version="any" ref="gamma_area"/>
+                  <EndMeetingPointRef version="any" ref="alphaville_airport"/>
+                </DistanceMatrixElement>
+                <DistanceMatrixElement id="alphaville_airport+alphaville_centre" version="any">
+                  <InverseAllowed>true</InverseAllowed>
+                  <StartMeetingPointRef version="any" ref="alphaville_airport"/>
+                  <EndMeetingPointRef version="any" ref="alphaville_centre"/>
+                </DistanceMatrixElement>
+                <DistanceMatrixElement id="gamma_area+alphaville_gare" version="any">
+                  <InverseAllowed>true</InverseAllowed>
+                  <StartMeetingPointRef version="any" ref="gamma_area"/>
+                  <EndMeetingPointRef version="any" ref="alphaville_gare"/>
+                </DistanceMatrixElement>
+              </distanceMatrixElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct id="home_james@prepriced_trip" version="any">
+              <Name>One off trip for fixed price route </Name>
+              <ChargingMomentType>atEndOfTravel</ChargingMomentType>
+              <OperatorRef version="any" ref="noc:HJM"/>
+              <ConditionSummary>
+                <FareStructureType>networkFlatFare</FareStructureType>
+                <TariffBasis>flat</TariffBasis>
+                <IsRefundable>false</IsRefundable>
+                <HasDiscountedFares>false</HasDiscountedFares>
+                <RequiresDeposit>true</RequiresDeposit>
+                <NoCashPayment>true</NoCashPayment>
+                <RequiresReservation>false</RequiresReservation>
+              </ConditionSummary>
+              <validableElements>
+                <ValidableElement id="home_james@prepriced_trip@travel" version="any">
+                  <Name>Single  ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="any" ref="home_james@prepriced_trip@access"/>
+                    <FareStructureElementRef version="any" ref="home_james@prepriced_trip@eligibility"/>
+                    <FareStructureElementRef version="any" ref="home_james@prepriced_trip@conditions_of_travel"/>
+                    <FareStructureElementRef version="any" ref="home_james@prepriced_trip@accommodation"/>
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct id="home_james@prepriced_trip" version="any" order="1">
+                  <ValidableElementRef version="any" ref="home_james@prepriced_trip@travel"/>
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>singleTrip</ProductType>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <distributionChannels>
+            <DistributionChannel id="online" version="any">
+              <Name>Online</Name>
+              <DistributionChannelType>online</DistributionChannelType>
+              <OnlineServiceOperatorRef version="any" ref="floggit"/>
+              <PaymentMethods>debitCard creditCard</PaymentMethods>
+              <DistributionRights>sell</DistributionRights>
+            </DistributionChannel>
+            <DistributionChannel id="call_centre" version="any">
+              <Name>MCall centre</Name>
+              <DistributionChannelType>telephone</DistributionChannelType>
+              <OperatorRef version="any" ref="noc:HJM"/>
+              <PaymentMethods>debitCard creditCard</PaymentMethods>
+            </DistributionChannel>
+          </distributionChannels>
+          <fulfilmentMethods>
+            <FulfilmentMethod id="email" version="any">
+              <FulfilmentMethodType>email</FulfilmentMethodType>
+              <typesOfTravelDocument>
+                <TypeOfTravelDocumentRef version="any" ref="email_confirmation"/>
+              </typesOfTravelDocument>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument id="email_confirmation" version="any">
+              <MediaType>none</MediaType>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+          <salesOfferPackages>
+            <SalesOfferPackage id="home_james@prepriced_trip-SOP@online" version="any">
+              <BrandingRef version="any" ref="myBrand"/>
+              <Name>One of prebooked, pay on completeion</Name>
+              <ConditionSummary>
+                <RequiresAccount>true</RequiresAccount>
+              </ConditionSummary>
+              <distributionAssignments>
+                <DistributionAssignment id="home_james@prepriced_trip-SOP@online" version="any" order="1">
+                  <DistributionChannelRef version="any" ref="online"/>
+                  <DistributionChannelType>online</DistributionChannelType>
+                  <TicketingServiceFacilityList>reservations purchase refund</TicketingServiceFacilityList>
+                  <FulfilmentMethodRef version="any" ref="email"/>
+                </DistributionAssignment>
+                <DistributionAssignment id="home_james@prepriced_trip-SOP@call_centre" version="any" order="1">
+                  <DistributionChannelRef version="any" ref="call_centre"/>
+                  <DistributionChannelType>telephone</DistributionChannelType>
+                  <TicketingServiceFacilityList>reservations purchase refund</TicketingServiceFacilityList>
+                  <FulfilmentMethodRef version="any" ref="email"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement id="home_james@prepriced_trip-SOP@online" version="any" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="email_confirmation"/>
+                  <PreassignedFareProductRef version="any" ref="home_james@prepriced_trip"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame id="hjm:chauffeured_taxi_example_prices-prepriced_trips" dataSourceRef="hjm:home_james" version="1.0" responsibilitySetRef="hjm:tariffs">
+          <FrameDefaults>
+            <DefaultCurrency>EUR</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites>
+            <FareFrameRef version="1.0" ref="hjm:chauffeured_taxi_example-prepriced_trips"/>
+          </prerequisites>
+          <fareTables>
+            <FareTable id="home_james@prepriced_trip" version="any">
+              <Name>Home james  prepriced trip  use prices</Name>
+              <pricesFor>
+                <SalesOfferPackageRef version="any" ref="home_james@prepriced_trip-SOP@online"/>
+              </pricesFor>
+              <usedIn>
+                <TariffRef version="any" ref="home_james@prepriced_trip"/>
+              </usedIn>
+              <OperatorRef version="any" ref="noc:HJM"/>
+              <specifics>
+                <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+              </specifics>
+              <prices>
+                <DistanceMatrixElementPrice id="gamma_area+alphaville_airport" version="any">
+                  <Amount>80</Amount>
+                  <DistanceMatrixElementRef version="any" ref="gamma_area+alphaville_airport"/>
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice id="alphaville_airport+alphaville_centre" version="any">
+                  <Amount>60</Amount>
+                  <DistanceMatrixElementRef version="any" ref="alphaville_airport+alphaville_centre"/>
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice id="gamma_area+alphaville_gare" version="any">
+                  <Amount>40</Amount>
+                  <DistanceMatrixElementRef version="any" ref="gamma_area+alphaville_gare"/>
+                </DistanceMatrixElementPrice>
+              </prices>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+        <FareFrame id="hjm:chauffeured_taxi_example-charters" dataSourceRef="hjm:home_james" version="1.0" responsibilitySetRef="hjm:tariffs">
+          <Name>Home James - Chaufferred car hire by charter  period </Name>
+          <prerequisites>
+            <MobilityServiceFrameRef version="1.0" ref="hjm:chauffeured_taxi_example"/>
+            <SiteFrameRef version="1.0" ref="hjm:chauffeured_taxi_example"/>
+          </prerequisites>
+          <timeUnits>
+            <TimeUnit id="half_day" version="any"/>
+          </timeUnits>
+          <tariffs>
+            <Tariff id="home_james@charter" version="any">
+              <Name>Tariff for time hired</Name>
+              <documentLinks>
+                <InfoLink typeOfInfoLink="info">https://homeJames.eu/tariffBespoke.pdf</InfoLink>
+                <InfoLink typeOfInfoLink="map">https://homeJames.eu/tariffMap.pdf</InfoLink>
+              </documentLinks>
+              <OperatorRef version="any" ref="noc:HJM"/>
+              <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+              <timeIntervals>
+                <TimeInterval id="charter@4H" version="any">
+                  <Duration>PT4H</Duration>
+                </TimeInterval>
+                <TimeInterval id="charter@1D" version="any">
+                  <Duration>P1D</Duration>
+                </TimeInterval>
+                <TimeInterval id="charter@2D" version="any">
+                  <Duration>P2D</Duration>
+                </TimeInterval>
+                <TimeInterval id="charter@3D" version="any">
+                  <Duration>P3D</Duration>
+                </TimeInterval>
+                <TimeInterval id="charter@4D" version="any">
+                  <Duration>P4D</Duration>
+                </TimeInterval>
+                <TimeInterval id="charter@5D" version="any">
+                  <Duration>P5D</Duration>
+                </TimeInterval>
+                <TimeInterval id="charter@6D" version="any">
+                  <Duration>P6D</Duration>
+                </TimeInterval>
+              </timeIntervals>
+              <fareStructureElements>
+                <FareStructureElement id="home_james@charter@access" version="any">
+                  <Name>Access to one of the servic</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:access" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="home_james@charter@access" version="any" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:access" versionRef="EXTERNAL"/>
+                    <ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+                    <validityParameters>
+                      <OperatorRef version="any" ref="noc:HJM"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="home_james@charter@durations" version="any">
+                  <Name>Access to one of the servic</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:can_access_when" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="home_james@charter@durations" version="any" order="1">
+                    <TypeOfAccessRightAssignmentRef ref="fxc:can_access_when" versionRef="EXTERNAL"/>
+                    <ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+                    <validityParameters>
+                      <OperatorRef version="any" ref="noc:HJM"/>
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="home_james@charter@conditions_of_travel" version="any">
+                  <Name>COnditions on travel</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:travel_conditions" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="home_james@charter@conditions_of_travel" version="any" order="1">
+                    <Name>Conditions of travel</Name>
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_use" versionRef="EXTERNAL"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <UsageValidityPeriod id="home_james@charter@usagValidity" version="any">
+                        <ValidityPeriodType>other</ValidityPeriodType>
+                        <UsageTrigger>specifiedStartDate</UsageTrigger>
+                        <UsageEnd>standardDuration</UsageEnd>
+                        <UsageStartConstraintType>fixed</UsageStartConstraintType>
+                      </UsageValidityPeriod>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement id="home_james@charter@conditions_of_sale" version="any">
+                  <Name>Conditions of sale</Name>
+                  <TypeOfFareStructureElementRef ref="fxc:sale_conditions" versionRef="EXTERNAL"/>
+                  <GenericParameterAssignment id="home_james@charter@conditions_of_sale" version="any" order="1">
+                    <Name>Conditions of sale</Name>
+                    <TypeOfAccessRightAssignmentRef ref="fxc:condition_of_sale" versionRef="EXTERNAL"/>
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Cancelling id="home_james@charter@refunding" version="any">
+                        <Name>Can cancel up top 3 hours before</Name>
+                        <BookingArrangements>
+                          <MinimumBookingPeriod>PT3H</MinimumBookingPeriod>
+                        </BookingArrangements>
+                        <CancellationAllowed>true</CancellationAllowed>
+                      </Cancelling>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct id="home_james@charter" version="any">
+              <Name>One off trip for fixed price route </Name>
+              <ChargingMomentType>atEndOfTravel</ChargingMomentType>
+              <OperatorRef version="any" ref="noc:HJM"/>
+              <ConditionSummary>
+                <FareStructureType>networkFlatFare</FareStructureType>
+                <TariffBasis>flat</TariffBasis>
+                <IsRefundable>false</IsRefundable>
+                <HasDiscountedFares>false</HasDiscountedFares>
+                <RequiresDeposit>true</RequiresDeposit>
+                <NoCashPayment>true</NoCashPayment>
+                <RequiresReservation>false</RequiresReservation>
+              </ConditionSummary>
+              <validableElements>
+                <ValidableElement id="home_james@charter@travel" version="any">
+                  <Name>Single  ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="any" ref="home_james@charter@access"/>
+                    <FareStructureElementRef version="any" ref="home_james@prepriced_trip@eligibility"/>
+                    <FareStructureElementRef version="any" ref="home_james@charter@conditions_of_travel"/>
+                    <FareStructureElementRef version="any" ref="home_james@prepriced_trip@accommodation"/>
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct id="home_james@charter" version="any" order="1">
+                  <ValidableElementRef version="any" ref="home_james@charter@travel"/>
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>singleTrip</ProductType>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage id="home_james@charter-SOP@online" version="any">
+              <BrandingRef version="any" ref="myBrand"/>
+              <Name>Chart for a specifed tome interval, pay on completion</Name>
+              <ConditionSummary>
+                <RequiresAccount>true</RequiresAccount>
+              </ConditionSummary>
+              <distributionAssignments>
+                <DistributionAssignment id="home_james@charter-SOP@online" version="any" order="1">
+                  <DistributionChannelRef version="any" ref="online"/>
+                  <DistributionChannelType>online</DistributionChannelType>
+                  <TicketingServiceFacilityList>reservations purchase refund</TicketingServiceFacilityList>
+                  <FulfilmentMethodRef version="any" ref="email"/>
+                </DistributionAssignment>
+                <DistributionAssignment id="home_james@charter-SOP@call_centre" version="any" order="1">
+                  <DistributionChannelRef version="any" ref="call_centre"/>
+                  <DistributionChannelType>telephone</DistributionChannelType>
+                  <TicketingServiceFacilityList>reservations purchase refund</TicketingServiceFacilityList>
+                  <FulfilmentMethodRef version="any" ref="email"/>
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement id="home_james@charter-SOP@online" version="any" order="1">
+                  <TypeOfTravelDocumentRef version="any" ref="email_confirmation"/>
+                  <PreassignedFareProductRef version="any" ref="home_james@charter"/>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame id="hjm:chauffeured_taxi_example_prices-charter" dataSourceRef="hjm:home_james" version="1.0" responsibilitySetRef="hjm:tariffs">
+          <FrameDefaults>
+            <DefaultCurrency>EUR</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites>
+            <FareFrameRef version="1.0" ref="hjm:chauffeured_taxi_example-charters"/>
+          </prerequisites>
+          <fareTables>
+            <FareTable id="home_james@charter" version="any">
+              <Name>Home james charter prices</Name>
+              <pricesFor>
+                <SalesOfferPackageRef version="any" ref="home_james@charter-SOP@online"/>
+              </pricesFor>
+              <usedIn>
+                <TariffRef version="any" ref="home_james@charter"/>
+              </usedIn>
+              <OperatorRef version="any" ref="noc:HJM"/>
+              <specifics>
+                <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+              </specifics>
+              <prices>
+                <TimeIntervalPrice id="charter@4H" version="any">
+                  <Amount>80</Amount>
+                  <TimeIntervalRef version="any" ref="charter@4H"/>
+                </TimeIntervalPrice>
+                <TimeIntervalPrice id="charter@2D" version="any">
+                  <Amount>120</Amount>
+                  <TimeIntervalRef version="any" ref="charter@1D"/>
+                </TimeIntervalPrice>
+              </prices>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+    <CompositeFrame id="hjm:chauffeured_taxi_example_transaction_examples" dataSourceRef="hjm:home_james" version="1.0" responsibilitySetRef="hjm:transaction_data">
+      <prerequisites>
+        <CompositeFrameRef version="1.0" ref="hjm:chauffeured_taxi_example"/>
+      </prerequisites>
+      <frames>
+        <ResourceFrame id="_data" version="1.0">
+          <Name>Transaction common resources</Name>
+          <vehicles>
+            <Vehicle id="db54278" version="any">
+              <Name>Freddy's car</Name>
+            </Vehicle>
+          </vehicles>
+        </ResourceFrame>
+        <MobilityJourneyFrame id="hjmt:sample_transactions" version="1.2">
+          <singleJourneyPaths>
+            <SingleJourneyPath id="hmjt:anon@trans005@ride5163" version="any">
+              <Name>Path from Airportand   to Chez Ritter.</Name>
+              <Distance>25.00</Distance>
+              <pointsInSequence>
+                <VehicleMeetingPointInPath id="hmjt:anon@trans005@ride5163" version="any" order="1">
+                  <VehicleMeetingPointRef version="any" ref="alphaville_airport"/>
+                  <OnwardVehicleMeetingLinkRef version="any" ref="alphaville_airport+alphaville_centre"/>
+                </VehicleMeetingPointInPath>
+                <VehicleMeetingPointInPath id="hmjt:anon@trans005@ride5163" version="any" order="2">
+                  <VehicleMeetingPointRef version="any" ref="alphaville_centre"/>
+                </VehicleMeetingPointInPath>
+              </pointsInSequence>
+            </SingleJourneyPath>
+          </singleJourneyPaths>
+          <singleJourneys>
+            <SingleJourney id="hjmt:anon@trans005@ride5163" version="any">
+              <Name>Single journey from airport to Chez ritter</Name>
+              <TransportMode>taxi</TransportMode>
+              <TransportSubmode>
+                <TaxiSubmode>charterTaxi</TaxiSubmode>
+              </TransportSubmode>
+              <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+              <VehicleRef version="any" ref="SWK007"/>
+              <DepartureTime>10:15:00</DepartureTime>
+              <OperatingDayRef ref="opday_7656" versionRef="EXTERNAL"/>
+              <datedPassingTimes>
+                <TargetPassingTime id="hjmt:anon@trans005@ride5163" version="any">
+                  <PointInSingleJourneyPathRef version="any" ref="hmjt:anon@trans005@ride5163" order="1"/>
+                  <AimedDepartureTime>10:15:00</AimedDepartureTime>
+                </TargetPassingTime>
+                <TargetPassingTime id="hjmt:anon@trans005@ride5163" version="any">
+                  <PointInSingleJourneyPathRef version="any" ref="hmjt:anon@trans005@ride5163" order="2"/>
+                  <AimedArrivalTime>11:10:00</AimedArrivalTime>
+                </TargetPassingTime>
+              </datedPassingTimes>
+              <meetingPointAssignments>
+                <VehicleMeetingPointAssignment id="hjmt:anon@trans005@ride5163" version="any" order="1">
+                  <VehicleMeetingPointRef version="any" ref="alphaville_airport"/>
+                  <QuayRef version="any" ref="alphaville_aeroport@taxi_pick_up"/>
+                  <Usage>pickUp</Usage>
+                </VehicleMeetingPointAssignment>
+                <VehicleMeetingPointAssignment id="hjmt:anon@trans005@ride5163" version="any" order="2">
+                  <VehicleMeetingPointRef version="any" ref="gamma_area"/>
+                  <AddressablePlaceRef version="any" ref="chez_ritter"/>
+                  <Usage>setDown</Usage>
+                </VehicleMeetingPointAssignment>
+              </meetingPointAssignments>
+            </SingleJourney>
+          </singleJourneys>
+        </MobilityJourneyFrame>
+        <SalesTransactionFrame id="hjmt:sample_transactions" version="1.2">
+          <Name>Home James  Sample Transactions</Name>
+          <codespaces>
+            <CodespaceRef ref="hjm_data"/>
+            <Codespace id="hmj_transactions">
+              <Xmlns>hmjt</Xmlns>
+              <XmlnsUrl>http://www.homeJames.eu/transactions</XmlnsUrl>
+              <Description>Operator transaction data</Description>
+            </Codespace>
+          </codespaces>
+          <fareContracts>
+            <FareContract id="hjmt:anon@trans005" version="any">
+              <CustomerRef ref="hjmt:Anon" versionRef="EXTERNAL"/>
+              <fareContractEntries>
+                <SalesTransaction id="hjmt:anon@trans005@purchase_ride" version="any">
+                  <Name>Buy Single   ride Adult</Name>
+                  <Date>2020-10-08T11:07:00</Date>
+                  <TypeOfFareContractEntryRef ref="fxc:product_purchase" versionRef="EXTERNAL"/>
+                  <Amount>10.00</Amount>
+                  <PaymentMethod>cash</PaymentMethod>
+                  <travelSpecifications>
+                    <OfferedTravelSpecification id="hjmt:anon@trans005@purchase_ride" version="any">
+                      <Date>2020-10-08T11:07:00</Date>
+                      <SalesTransactionRef version="any" ref="hjmt:anon@trans005@purchase_ride"/>
+                      <DistanceMatrixElementPriceRef version="any" ref="gamma_area+alphaville_airport"/>
+                      <Amount>80.00</Amount>
+                      <StartOfValidity>2020-10-08T11:07:00</StartOfValidity>
+                      <TravelSpecificationSummaryView>
+                        <Origin>
+                          <VehicleMeetingPointRef version="any" ref="alphaville_airport"/>
+                        </Origin>
+                        <Destination>
+                          <AddressRef version="any" ref="chez_ritter"/>
+                        </Destination>
+                        <Start>2020-10-08T11:07:00</Start>
+                        <Duration>PT60M</Duration>
+                        <OperatorRef version="any" ref="noc:HJM"/>
+                        <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+                      </TravelSpecificationSummaryView>
+                      <specificParameterAssignments>
+                        <SpecificParameterAssignment id="hjmt:anon@trans005@purchase_ride" version="any" order="1">
+                          <Name>Single ride</Name>
+                          <ValidableElementRef version="any" ref="home_james@prepriced_trip@travel"/>
+                          <PreassignedFareProductRef version="any" ref="home_james@prepriced_trip"/>
+                          <FareStructureElementRef version="any" ref="home_james@prepriced_trip@access"/>
+                          <SalesOfferPackageRef version="any" ref="home_james@prepriced_trip-SOP@online"/>
+                          <validityParameters>
+                            <VehiclePoolingRef version="any" ref="chauffeured_car"/>
+                            <OperatorRef version="any" ref="noc:HJM"/>
+                            <ServiceFacilitySetRef version="any" ref="no_smoking"/>
+                            <SingleJourneyRef version="any" ref="hjmt:anon@trans005@ride5163"/>
+                            <ChauffeuredVehicleServiceRef version="any" ref="hj_cars"/>
+                            <VehicleRef ref="CD886645" versionRef="external"/>
+                            <TypeOfTravelDocumentRef version="any" ref="email_confirmation"/>
+                            <DistributionChannelRef version="any" ref="online"/>
+                          </validityParameters>
+                        </SpecificParameterAssignment>
+                      </specificParameterAssignments>
+                    </OfferedTravelSpecification>
+                  </travelSpecifications>
+                  <travelDocuments>
+                    <TravelDocument id="hjmt:ticket@765452234" version="any">
+                      <ValidBetween>
+                        <FromDate>2020-10-08T11:07:00</FromDate>
+                      </ValidBetween>
+                      <TypeOfTravelDocumentRef version="any" ref="email_confirmation"/>
+                    </TravelDocument>
+                  </travelDocuments>
+                </SalesTransaction>
+              </fareContractEntries>
+            </FareContract>
+          </fareContracts>
+        </SalesTransactionFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
+

@@ -6,6 +6,7 @@ from netex.models.access_space import AccessSpace
 from netex.models.access_space_ref import AccessSpaceRef
 from netex.models.access_space_type_enumeration import AccessSpaceTypeEnumeration
 from netex.models.access_spaces_rel_structure import AccessSpacesRelStructure
+from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.allowed_line_direction import AllowedLineDirection
 from netex.models.allowed_line_directions_rel_structure import AllowedLineDirectionsRelStructure
@@ -25,7 +26,6 @@ from netex.models.availability_condition_ref import AvailabilityConditionRef
 from netex.models.blacklist import Blacklist
 from netex.models.blacklists_in_frame_rel_structure import BlacklistsInFrameRelStructure
 from netex.models.blackout_start_enumeration import BlackoutStartEnumeration
-from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
 from netex.models.capped_discount_right import CappedDiscountRight
 from netex.models.capped_discount_right_ref import CappedDiscountRightRef
 from netex.models.capping_period_enumeration import CappingPeriodEnumeration
@@ -170,6 +170,7 @@ from netex.models.line import Line
 from netex.models.line_ref import LineRef
 from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
+from netex.models.logical_operation_enumeration import LogicalOperationEnumeration
 from netex.models.machine_readable_enumeration import MachineReadableEnumeration
 from netex.models.media_type_enumeration import MediaTypeEnumeration
 from netex.models.multilingual_string import MultilingualString
@@ -360,7 +361,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='tfl:any'
@@ -375,12 +376,12 @@ obj = PublicationDelivery(
         value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='tfl:TfL_Tariff_Example2013',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             ValidBetween(
                                 from_date=XmlDateTime(2013, 1, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2014, 7, 1, 0, 0, 0, 0, 0)
@@ -412,7 +413,7 @@ obj = PublicationDelivery(
                     default_currency='GBP'
                 ),
                 content_validity_conditions=ValidityConditionsRelStructure(
-                    validity_condition_ref_or_validity_condition=[
+                    choice=[
                         AvailabilityCondition(
                             id='tfl:Peak',
                             version='any',
@@ -441,8 +442,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tfl:Peak',
                                                     version='any',
-                                                    start_time=XmlTime(4, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(4, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(9, 29, 0, 0),
                                                     ]
                                                 ),
@@ -474,8 +475,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tfl:OffPeak',
                                                     version='any',
-                                                    start_time=XmlTime(9, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(9, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(4, 29, 0, 0),
                                                         1,
                                                     ]
@@ -501,8 +502,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tfl:OffPeak_Weekend',
                                                     version='any',
-                                                    start_time=XmlTime(4, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(4, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(4, 29, 0, 0),
                                                         1,
                                                     ]
@@ -527,8 +528,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tfl:OffPeak_Holiday',
                                                     version='any',
-                                                    start_time=XmlTime(4, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(4, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(4, 29, 0, 0),
                                                         1,
                                                     ]
@@ -561,8 +562,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tfl:Travel_times_MF_day',
                                                     version='any',
-                                                    start_time=XmlTime(4, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(4, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(19, 0, 0, 0),
                                                     ]
                                                 ),
@@ -594,8 +595,8 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tfl:Travel_times_MF_evening_and_Saturday',
                                                     version='any',
-                                                    start_time=XmlTime(4, 30, 0, 0),
-                                                    end_time_or_day_offset_or_duration=[
+                                                    start_time_or_start_event=XmlTime(4, 30, 0, 0),
+                                                    choice=[
                                                         XmlTime(19, 0, 0, 0),
                                                     ]
                                                 ),
@@ -661,7 +662,7 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tfl:Travel_times_FamilyDay',
                                                     version='any',
-                                                    start_time=XmlTime(10, 0, 0, 0)
+                                                    start_time_or_start_event=XmlTime(10, 0, 0, 0)
                                                 ),
                                             ]
                                         )
@@ -705,7 +706,7 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='tfl:Travel_times_Freedom_pass',
                                                     version='any',
-                                                    start_time=XmlTime(10, 0, 0, 0)
+                                                    start_time_or_start_event=XmlTime(10, 0, 0, 0)
                                                 ),
                                             ]
                                         )
@@ -746,7 +747,7 @@ obj = PublicationDelivery(
                                             value='Liverpool Street Station'
                                         ),
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 QuayRef(
                                                     ref='dummy'
                                                 ),
@@ -758,7 +759,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Liverpool_Street_Station_Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='tfl:Visitor_Centre_opening_times@LVP_EUS',
                                                                     version='1',
@@ -791,8 +792,8 @@ obj = PublicationDelivery(
                                                                                         TimebandVersionedChildStructure(
                                                                                             id='tfl:LVP_EUS@DayType:Mon-Tue-Wed--Thur-Sat',
                                                                                             version='1',
-                                                                                            start_time=XmlTime(7, 15, 0, 0),
-                                                                                            end_time_or_day_offset_or_duration=[
+                                                                                            start_time_or_start_event=XmlTime(7, 15, 0, 0),
+                                                                                            choice=[
                                                                                                 XmlTime(19, 0, 0, 0),
                                                                                             ]
                                                                                         ),
@@ -819,8 +820,8 @@ obj = PublicationDelivery(
                                                                                         TimebandVersionedChildStructure(
                                                                                             id='tfl:LVP_EUS@Friday',
                                                                                             version='1',
-                                                                                            start_time=XmlTime(7, 15, 0, 0),
-                                                                                            end_time_or_day_offset_or_duration=[
+                                                                                            start_time_or_start_event=XmlTime(7, 15, 0, 0),
+                                                                                            choice=[
                                                                                                 XmlTime(20, 0, 0, 0),
                                                                                             ]
                                                                                         ),
@@ -848,8 +849,8 @@ obj = PublicationDelivery(
                                                                                         TimebandVersionedChildStructure(
                                                                                             id='tfl:LVP_EUS@Sunday',
                                                                                             version='1',
-                                                                                            start_time=XmlTime(8, 15, 0, 0),
-                                                                                            end_time_or_day_offset_or_duration=[
+                                                                                            start_time_or_start_event=XmlTime(8, 15, 0, 0),
+                                                                                            choice=[
                                                                                                 XmlTime(19, 0, 0, 0),
                                                                                             ]
                                                                                         ),
@@ -876,8 +877,8 @@ obj = PublicationDelivery(
                                                                                         TimebandVersionedChildStructure(
                                                                                             id='tfl:LVP_EUS@Holiday',
                                                                                             version='1',
-                                                                                            start_time=XmlTime(8, 15, 0, 0),
-                                                                                            end_time_or_day_offset_or_duration=[
+                                                                                            start_time_or_start_event=XmlTime(8, 15, 0, 0),
+                                                                                            choice=[
                                                                                                 XmlTime(19, 0, 0, 0),
                                                                                             ]
                                                                                         ),
@@ -911,7 +912,7 @@ obj = PublicationDelivery(
                                             value='Picadilly Circus Station'
                                         ),
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 QuayRef(
                                                     ref='dummy'
                                                 ),
@@ -923,7 +924,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Piccadilly_Circus_Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='tfl:Visitor_Centre_opening_times@PIC',
                                                                     version='1',
@@ -952,8 +953,8 @@ obj = PublicationDelivery(
                                                                                         TimebandVersionedChildStructure(
                                                                                             id='tfl:PIC@Weekdays',
                                                                                             version='1',
-                                                                                            start_time=XmlTime(7, 15, 0, 0),
-                                                                                            end_time_or_day_offset_or_duration=[
+                                                                                            start_time_or_start_event=XmlTime(7, 15, 0, 0),
+                                                                                            choice=[
                                                                                                 XmlTime(19, 0, 0, 0),
                                                                                             ]
                                                                                         ),
@@ -980,8 +981,8 @@ obj = PublicationDelivery(
                                                                                         TimebandVersionedChildStructure(
                                                                                             id='tfl:PIC@Saturday',
                                                                                             version='1',
-                                                                                            start_time=XmlTime(9, 15, 0, 0),
-                                                                                            end_time_or_day_offset_or_duration=[
+                                                                                            start_time_or_start_event=XmlTime(9, 15, 0, 0),
+                                                                                            choice=[
                                                                                                 XmlTime(19, 0, 0, 0),
                                                                                             ]
                                                                                         ),
@@ -1008,8 +1009,8 @@ obj = PublicationDelivery(
                                                                                         TimebandVersionedChildStructure(
                                                                                             id='tfl:PIC@Sunday',
                                                                                             version='1',
-                                                                                            start_time=XmlTime(9, 15, 0, 0),
-                                                                                            end_time_or_day_offset_or_duration=[
+                                                                                            start_time_or_start_event=XmlTime(9, 15, 0, 0),
+                                                                                            choice=[
                                                                                                 XmlTime(18, 0, 0, 0),
                                                                                             ]
                                                                                         ),
@@ -1043,7 +1044,7 @@ obj = PublicationDelivery(
                                             value='Euston  Station'
                                         ),
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 QuayRef(
                                                     ref='nre:Euston@10'
                                                 ),
@@ -1055,7 +1056,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Euston_Station_Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='1',
                                                                     ref='tfl:Visitor_Centre_opening_times@LVP_EUS'
@@ -1084,7 +1085,7 @@ obj = PublicationDelivery(
                                             value='Victoria Station'
                                         ),
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 QuayRef(
                                                     ref='nre:Platform8'
                                                 ),
@@ -1096,7 +1097,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Victoria_Station_Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='tfl:Visitor_Centre_opening_times@VIC_KGX',
                                                                     version='1',
@@ -1130,8 +1131,8 @@ obj = PublicationDelivery(
                                                                                         TimebandVersionedChildStructure(
                                                                                             id='tfl:VIC_KGX@Mon-Tue-Wed-Thur-Fri-Sat',
                                                                                             version='1',
-                                                                                            start_time=XmlTime(7, 15, 0, 0),
-                                                                                            end_time_or_day_offset_or_duration=[
+                                                                                            start_time_or_start_event=XmlTime(7, 15, 0, 0),
+                                                                                            choice=[
                                                                                                 XmlTime(20, 0, 0, 0),
                                                                                             ]
                                                                                         ),
@@ -1173,7 +1174,7 @@ obj = PublicationDelivery(
                                             value='Heathrow Terminal123 Underground Station'
                                         ),
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 QuayRef(
                                                     ref='dummy'
                                                 ),
@@ -1185,7 +1186,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Heathrow_Terminal_123_Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityCondition(
                                                                     id='tfl:Visitor_Centre_opening_times@HTR',
                                                                     version='1',
@@ -1215,8 +1216,8 @@ obj = PublicationDelivery(
                                                                                         TimebandVersionedChildStructure(
                                                                                             id='tfl:HTR@Everyday',
                                                                                             version='1',
-                                                                                            start_time=XmlTime(7, 30, 0, 0),
-                                                                                            end_time_or_day_offset_or_duration=[
+                                                                                            start_time_or_start_event=XmlTime(7, 30, 0, 0),
+                                                                                            choice=[
                                                                                                 XmlTime(19, 30, 0, 0),
                                                                                             ]
                                                                                         ),
@@ -1250,7 +1251,7 @@ obj = PublicationDelivery(
                                             value="King's Cross Station"
                                         ),
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 QuayRef(
                                                     ref='dummy'
                                                 ),
@@ -1262,7 +1263,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Kings_Cross_Station_ Visitor_Centre',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='1',
                                                                     ref='tfl:Visitor_Centre_opening_times@VIC_KGX'
@@ -3397,7 +3398,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                journey_pattern=[
+                                choice=[
                                     ServiceJourneyPattern(
                                         id='nr:Chingford+Liverpool_Street',
                                         version='any',
@@ -4647,7 +4648,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -4666,10 +4667,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -4688,10 +4691,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -4710,10 +4715,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -4738,7 +4745,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -4757,10 +4764,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -4779,10 +4788,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -4801,10 +4812,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -4829,7 +4842,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -4848,10 +4861,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -4870,10 +4885,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -4892,10 +4909,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -4920,7 +4939,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -4939,10 +4958,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -4961,10 +4982,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -4983,10 +5006,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -5011,7 +5036,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -5030,10 +5055,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5052,10 +5079,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5074,10 +5103,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -5102,7 +5133,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -5121,10 +5152,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5143,10 +5176,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5165,10 +5200,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -5193,7 +5230,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -5212,10 +5249,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5234,10 +5273,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5256,10 +5297,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -5284,7 +5327,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -5303,10 +5346,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5325,10 +5370,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5347,10 +5394,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -5375,7 +5424,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -5394,10 +5443,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5416,10 +5467,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5438,10 +5491,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -5466,7 +5521,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -5485,10 +5540,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5507,10 +5564,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5529,10 +5588,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -5557,7 +5618,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -5576,10 +5637,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5598,10 +5661,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5620,10 +5685,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -5648,7 +5715,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -5667,10 +5734,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5689,10 +5758,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5711,10 +5782,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -5739,7 +5812,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -5758,10 +5831,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5780,10 +5855,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5802,10 +5879,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -5830,7 +5909,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:maximum_travel_time'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -5849,10 +5928,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_day'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_day'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5871,10 +5952,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_MF_evening_and_Saturday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_MF_evening_and_Saturday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -5893,10 +5976,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Sunday'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Sunday'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                         ]
@@ -6271,18 +6356,18 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfl:child_5-10@TravelCard_on_Oyster@bus',
                                                                 version='any',
                                                                 name=MultilingualString(
                                                                     value='Free on bus or tram'
                                                                 ),
-                                                                fare_price_ref_or_fare_price=UsageParameterPriceRef(
+                                                                choice=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@free'
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     ValidableElementRef(
                                                                         version='any',
                                                                         ref='lbsl:bus_or_tram_trip'
@@ -6293,11 +6378,11 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfl:child_5-10@metro',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=UsageParameterPriceRef(
+                                                                choice=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@free'
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     ValidableElementRef(
                                                                         version='any',
                                                                         ref='lul:metro_trip'
@@ -6308,11 +6393,11 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfl:child_5-10@rail',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=UsageParameterPriceRef(
+                                                                choice=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@free'
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     ValidableElementRef(
                                                                         version='any',
                                                                         ref='nr:rail_trip'
@@ -6323,11 +6408,11 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfl:child_5-10@river',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=UsageParameterPriceRef(
+                                                                choice=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@free'
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     ValidableElementRef(
                                                                         version='any',
                                                                         ref='lrs:river_trip'
@@ -6338,13 +6423,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfl:child_5-10@cableway',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfl:50%'
                                                                     )
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     ValidableElementRef(
                                                                         version='any',
                                                                         ref='ea:cableway_trip'
@@ -6391,7 +6476,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             ValidableElementPrice(
                                                                 id='tfl:child_11-15@PayAsYouGo_trip@bus',
                                                                 version='any',
@@ -6446,7 +6531,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareProductPrice(
                                                                 id='nr:child_11-15@student_RailCard',
                                                                 version='any',
@@ -6502,7 +6587,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareProductPrice(
                                                                 id='tfl:child_11to15@TravelCard_on_Oyster',
                                                                 version='any',
@@ -6542,7 +6627,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareProductPrice(
                                                                 id='tfl:child_11to15@student_RailCard',
                                                                 version='any',
@@ -6601,7 +6686,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareProductPrice(
                                                                 id='tfl:youth_16to18@TravelCard_on_Oyster',
                                                                 version='any',
@@ -6644,7 +6729,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareProductPrice(
                                                                 id='tfl:youth_16to18@student_RailCard',
                                                                 version='any',
@@ -6709,20 +6794,20 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfl:18Plus@TravelCard_on_Oyster@discount',
                                                                 version='any',
                                                                 description=MultilingualString(
                                                                     value='\t\t http://www.tfl.gov.uk/tickets/14416.aspx\nYou must have an 18+ Student Oyster photocard to get 30 per cent off 7 Day, Monthly and longer period Travelcards'
                                                                 ),
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
                                                                         version='any',
                                                                         ref='tfl:30%'
                                                                     )
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     FareDemandFactorRef(
                                                                         ref='tfl:anytime'
                                                                     ),
@@ -6739,11 +6824,11 @@ obj = PublicationDelivery(
                                                                 description=MultilingualString(
                                                                     value='\t\t http://www.tfl.gov.uk/tickets/14416.aspx\nYou can get 34 per cent off off-peak pay as you go single fares and off-peak daily price caps on Tube, DLR and London Overground if you get a 16-25 National RailCard and add the discount GIVING ENTITLEMENT your 18+ Student Oyster photocard '
                                                                 ),
-                                                                fare_price_ref_or_fare_price=UsageParameterPriceRef(
+                                                                choice=UsageParameterPriceRef(
                                                                     version='any',
                                                                     ref='tfl:concession@34pct'
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     FareDemandFactorRef(
                                                                         ref='tfl:offPeak'
                                                                     ),
@@ -6769,7 +6854,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareProductPrice(
                                                                 id='tfl:18Plus@student_RailCard@discount',
                                                                 version='any',
@@ -7590,7 +7675,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -7622,7 +7707,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.METRO,
                                                             ],
@@ -7630,13 +7715,13 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 GenericParameterAssignment(
-                                                    id='tfl:Prepaid_trip',
+                                                    id='tfl:Prepaid_trip@single',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Cant Break Metro journeys'
                                                     ),
                                                     description=MultilingualString(
-                                                        value='  \t\t\t\t\t\t\t\t\t\t\t\t\t\tFlat far simgle tripcase. '
+                                                        value='Flat fare single trip case.'
                                                     ),
                                                     order=2,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -7652,7 +7737,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.BUS,
                                                                 VehicleModeEnumeration.TRAM,
@@ -7665,7 +7750,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Prepaid_trip@eligible',
                                                     version='any',
                                                     order=3,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -7736,7 +7821,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -7899,7 +7984,7 @@ obj = PublicationDelivery(
                                             ref='tfl:payAsYouGo'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.ON_START_THEN_ADJUST_AT_END_OF_CHARGE_PERIOD,
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -7931,7 +8016,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                                 VehicleModeEnumeration.METRO,
@@ -8016,7 +8101,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -8049,7 +8134,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='tfl:Oyster_Top_Up',
                                                     version='any',
@@ -8083,7 +8168,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='tfl:prepaid'
                                         ),
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -8108,7 +8193,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:entitlement'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -8140,7 +8225,7 @@ obj = PublicationDelivery(
                                                                     value="You can't set up an Oyster online account if you have an Oyster photocard, Freedom Pass or Visitor Oyster card.  TO DO "
                                                                 ),
                                                                 order=2,
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.NOT,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.NOT,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         UserProfileRef(
@@ -8172,7 +8257,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='tfl:Oyster_Auto_Top_Up',
                                                     version='any',
@@ -8207,7 +8292,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -8267,7 +8352,7 @@ obj = PublicationDelivery(
                                                         value='Travel card products allows use of bus metro and overgorund - 1 Day Products only'
                                                     ),
                                                     order=3,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -8279,7 +8364,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access_if_purchased'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
@@ -8309,7 +8394,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access_if_purchased'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.METRO,
                                                                         ],
@@ -8328,7 +8413,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access_if_purchased'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.BUS,
                                                                             VehicleModeEnumeration.TRAM,
@@ -8348,7 +8433,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access_if_purchased'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.WATER,
                                                                         ],
@@ -8367,7 +8452,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access_if_purchased'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.CABLEWAY,
                                                                         ],
@@ -8384,7 +8469,7 @@ obj = PublicationDelivery(
                                                         value='Travel Periods'
                                                     ),
                                                     order=4,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.XOR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -8457,7 +8542,7 @@ obj = PublicationDelivery(
                                                         value='Purchase window'
                                                     ),
                                                     order=5,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -8626,7 +8711,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareProductPrice(
                                                                 id='tfl:TravelCard_Sale_discount@metro_tram_bus',
                                                                 version='any',
@@ -8652,7 +8737,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.FREE,
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -8673,7 +8758,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:entitlement'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             EntitlementRequiredRef(
@@ -8698,7 +8783,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:entitlement'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             EntitlementGivenRef(
@@ -8719,7 +8804,7 @@ obj = PublicationDelivery(
                                                         value='Travel card allows use of bus metro and overgorund - 1 Day Products only'
                                                     ),
                                                     order=3,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -8735,7 +8820,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.WATER,
                                                                         ],
@@ -8758,7 +8843,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.CABLEWAY,
                                                                         ],
@@ -8802,7 +8887,7 @@ obj = PublicationDelivery(
                                             value="You can put Adult, 18+ Student, 16+, child and job_centre Plus Travel Discount 7 Day monthly and longer period Travelcards and Bus and Tram passes on Oyster.\n\nIf you are travelling in London and using a Travelcard, it must cover all the zones you intend to travel through. For example, if you are going somewhere in Zone 3, you must make sure that you have paid enough money for your Travelcard to cover you. If you travel beyond the zones covered by your Travelcard, you can expect to be charged an extension fare which will be deducted from your Oyster pay as you go balance. If your Oyster pay as you go displays a minus sign before the balance, you may need to top up your Oyster card before you travel again, even if you have a valid Travelcard for the zones of your travel.\n\nYour Oyster card will automatically work out when to switch between a Travelcard and pay as you go.\n\nDay Travelcards for travel in London are not available on Oyster. However, if you use Oyster to pay as you go and make a number of journeys in one day, you won't pay more than the equivalent Day Travelcard.*\n\n* Does not apply for travel to/from Grays, Purfleet, Ockendon or Chafford Hundred.\n\nOyster cards that have a Travelcard or Bus and Tram pass on it are non transferable. They cannot be used by anyone other than the registered owner. \n"
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -8829,7 +8914,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:entitlement'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             EntitlementGivenRef(
@@ -8850,7 +8935,7 @@ obj = PublicationDelivery(
                                                         value='Travel card allows use of bus metro and overground  for a predetermined period if pruchased to cover'
                                                     ),
                                                     order=2,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -8865,7 +8950,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access_if_purchased'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
@@ -8895,7 +8980,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access_if_purchased'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.BUS,
                                                                             VehicleModeEnumeration.METRO,
@@ -8916,7 +9001,7 @@ obj = PublicationDelivery(
                                                         value='Eligibility to use'
                                                     ),
                                                     order=3,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -9034,7 +9119,7 @@ obj = PublicationDelivery(
                                                         value='Purchase windows'
                                                     ),
                                                     order=4,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -9294,7 +9379,7 @@ obj = PublicationDelivery(
                                                         ),
                                                     ],
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='tfl:Oyster@senior_resident',
                                                                 version='any',
@@ -9388,8 +9473,8 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='tfl:payAsYouGo'
                                         ),
-                                        charging_moment_type=ChargingMomentEnumeration.ON_STAR_THEN_ADJUST_AT_END_OF_FARE_DAY,
-                                        transport_organisation_ref=AuthorityRef(
+                                        charging_moment_type=ChargingMomentEnumeration.ON_START_THEN_ADJUST_AT_END_OF_FARE_DAY,
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -9428,7 +9513,7 @@ obj = PublicationDelivery(
                                                         value="Splitting your journey  http://www.tfl.gov.uk/tickets/14872.aspx  You can't split your journey when using Oyster pay as you go. You can with National Rail tickets."
                                                     ),
                                                     order=2,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -9443,7 +9528,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_use_to_pay_for'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.METRO,
                                                                             VehicleModeEnumeration.TRAM,
@@ -9465,7 +9550,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_use_to_pay_for'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
@@ -9490,7 +9575,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_use_to_pay_for'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
@@ -9519,7 +9604,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.WATER,
                                                                         ],
@@ -9573,7 +9658,7 @@ obj = PublicationDelivery(
                                                         value='Eligibility'
                                                     ),
                                                     order=4,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.XOR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -9657,7 +9742,7 @@ obj = PublicationDelivery(
                                                         value='Transferability'
                                                     ),
                                                     order=5,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -9743,7 +9828,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='tfl:Oyster@costOfCard',
                                                     version='any',
@@ -9772,11 +9857,11 @@ obj = PublicationDelivery(
                                                                     value='Maximum fare price'
                                                                 ),
                                                                 cells=CellsRelStructure(
-                                                                    fare_price_or_fare_price_ref=[
+                                                                    choice=[
                                                                         Cell(
                                                                             id='tfl:Oyster@MaxPrice@rail@adult',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 name=MultilingualString(
                                                                                     value='Maximum daily price to charge'
                                                                                 ),
@@ -9785,7 +9870,7 @@ obj = PublicationDelivery(
                                                                                     ref='tfl:max-8.50'
                                                                                 )
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 ValidableElementRef(
                                                                                     version='any',
                                                                                     ref='nr:rail_trip'
@@ -9865,11 +9950,11 @@ obj = PublicationDelivery(
                                                                 id='tfl:Oyster@metro',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
-                                                                    fare_price_or_fare_price_ref=[
+                                                                    choice=[
                                                                         Cell(
                                                                             id='tfl:Oyster@MaxPrice@metro@adult',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 name=MultilingualString(
                                                                                     value='Maximum daily price to charge'
                                                                                 ),
@@ -9878,7 +9963,7 @@ obj = PublicationDelivery(
                                                                                     ref='tfl:max-8.50'
                                                                                 )
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 ValidableElementRef(
                                                                                     version='any',
                                                                                     ref='lul:metro_trip'
@@ -9958,11 +10043,11 @@ obj = PublicationDelivery(
                                                                 id='tfl:Oyster@bus',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
-                                                                    fare_price_or_fare_price_ref=[
+                                                                    choice=[
                                                                         Cell(
                                                                             id='tfl:Oyster@MaxPrice@Bus_Tram@adult',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 name=MultilingualString(
                                                                                     value='Maximum daily price to charge'
                                                                                 ),
@@ -9971,7 +10056,7 @@ obj = PublicationDelivery(
                                                                                     ref='tfl:max-4.40'
                                                                                 )
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 ValidableElementRef(
                                                                                     version='any',
                                                                                     ref='lbsl:bus_or_tram_trip'
@@ -10068,11 +10153,11 @@ obj = PublicationDelivery(
                                                                 id='tfl:Oyster@cableway',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
-                                                                    fare_price_or_fare_price_ref=[
+                                                                    choice=[
                                                                         Cell(
                                                                             id='tfl:Oyster@MaxPrice@cableway@adult',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 name=MultilingualString(
                                                                                     value='5+ discount  TODO'
                                                                                 ),
@@ -10081,7 +10166,7 @@ obj = PublicationDelivery(
                                                                                     ref='tfl:5+'
                                                                                 )
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 ValidableElementRef(
                                                                                     version='any',
                                                                                     ref='ea:cableway_trip'
@@ -10146,7 +10231,7 @@ obj = PublicationDelivery(
                                             value=' Gold Cards are annual season tickets with a difference:\n\nWhen you buy an annual Travelcard on an Oyster card you are automatically issued with a separate printed Gold Record Card\nWhen you buy an annual season ticket at a station within the Network RailCard Area and the origin and/or destination are also in the Network RailCard Area, you are automatically issued with a Gold Card'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -10166,7 +10251,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:entitlement'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             EntitlementRequiredRef(
@@ -10185,7 +10270,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -10204,7 +10289,7 @@ obj = PublicationDelivery(
                                         ),
                                         url='http://www.tfl.gov.uk/tickets/14416.aspx',
                                         charging_moment_type=ChargingMomentEnumeration.ON_START_OF_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -10222,7 +10307,7 @@ obj = PublicationDelivery(
                                                         value='Freedom pass  right'
                                                     ),
                                                     order=1,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -10312,7 +10397,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='tfl:disabled_personsRailCard',
                                                     version='any',
@@ -10334,7 +10419,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value="    \n\t\t\t\t\t\t\t http://www.tfl.gov.uk/tickets/14305.aspx\n\tYou can get a Freedom Pass if your only or main home is in a London borough and:\n\nYou were 60 or older before 6 April 2010\nYou turned 60 on or after 6 April 2010 and meet the new age criteria\nOr have an eligible disability\nEligible disability\nYou can also get a Freedom Pass if you:\n\nAre blind or partially sighted\nOr are profoundly or severely deaf\nOr are without speech\nOr have a disability, or have suffered an injury which makes walking more difficult\nOr have no arms or have a long-term loss of the use of both arms\nOr have a learning disability\nOr have been refused a licence on the grounds of your disability\n\n\nHow do I use my Freedom Pass?\n\nOnce you've got your pass you can start using it immediately.\n\ntouch_ing in and out\nMake sure you touch your card on the yellow card readers. It's a bit different for each type of transport. Find out more about touch_ing in and out.\n\nUsing your pass outside London\nIf you've got a rose symbol or a bus hologram on your pass you can use it on local buses all over England. You can use it between 09:30 and 23:00 on weekdays and at any time on weekends and public holidays.\n\nConcessionary bus passes from outside London\nIf you've got a National Concessionary pass from an English council outside London you can use it at any time on buses in London displaying this symbol.\n\nOn buses not showing this sign check with the driver - most will let you travel free between 09:30 and 23:00 on weekdays and at any time on weekends and public holidays.\n\nYou'll need to show your pass to the driver.\n\nNo one else can use your pass. You can't use it on Tube, tram, DLR, London Overground or National Rail services.\t\n\t\t\t\t\t\t\t "
                                         ),
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -10401,7 +10486,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.BUS,
                                                                         ],
@@ -10431,7 +10516,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.METRO,
                                                                         ],
@@ -10458,7 +10543,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.TRAM,
                                                                         ],
@@ -10485,7 +10570,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.WATER,
                                                                         ],
@@ -10518,7 +10603,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.CABLEWAY,
                                                                         ],
@@ -10542,13 +10627,15 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Freedom_pass'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Freedom_pass'
+                                                                        ),
+                                                                    ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
@@ -10570,13 +10657,15 @@ obj = PublicationDelivery(
                                                                 order=7,
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Freedom_pass'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Freedom_pass'
+                                                                        ),
+                                                                    ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
@@ -10601,13 +10690,15 @@ obj = PublicationDelivery(
                                                                 order=8,
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_Freedom_pass'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_Freedom_pass'
+                                                                        ),
+                                                                    ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
@@ -10632,12 +10723,12 @@ obj = PublicationDelivery(
                                                                 order=9,
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
                                                                     ],
-                                                                    all_operators_ref_or_operator_ref=[
+                                                                    choice=[
                                                                         OperatorRef(
                                                                             version='any',
                                                                             ref='nr:toc_se'
@@ -10680,7 +10771,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.BUS,
                                                                             VehicleModeEnumeration.TRAM,
@@ -10702,7 +10793,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.CABLEWAY,
                                                                         ],
@@ -10723,7 +10814,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -10795,7 +10886,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:Group@peak@adult@Zones_1-6',
                                                                 version='any',
@@ -10854,7 +10945,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:Group@peak@under18@Zones_1-6',
                                                                 version='any',
@@ -10901,7 +10992,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -10911,7 +11002,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Group@Access',
                                                     version='any',
                                                     order=1,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -10932,7 +11023,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.METRO,
                                                                         ],
@@ -10952,7 +11043,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.BUS,
                                                                             VehicleModeEnumeration.TRAM,
@@ -10973,7 +11064,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
@@ -11016,7 +11107,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='tfl:Family_day_TravelCard',
                                                                 version='any',
@@ -11036,7 +11127,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -11053,7 +11144,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='tfl:entitlement'
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -11122,7 +11213,7 @@ obj = PublicationDelivery(
                                                     id='tfl:Family_day_TravelCard@access',
                                                     version='any',
                                                     order=2,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -11134,10 +11225,12 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access'
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='tfl:Travel_times_FamilyDay'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='tfl:Travel_times_FamilyDay'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -11149,7 +11242,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.METRO,
                                                                             VehicleModeEnumeration.BUS,
@@ -11166,7 +11259,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.TRAM,
                                                                         ],
@@ -11182,7 +11275,7 @@ obj = PublicationDelivery(
                                                                     ref='tfl:can_access'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
-                                                                    vehicle_modes=[
+                                                                    vehicle_modes_or_transport_modes=[
                                                                         [
                                                                             VehicleModeEnumeration.RAIL,
                                                                         ],
@@ -11254,7 +11347,7 @@ obj = PublicationDelivery(
                                             value=' On card contactless '
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.AT_END_OF_CHARGE_PERIOD,
-                                        transport_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:TfL'
                                         ),
@@ -11271,7 +11364,7 @@ obj = PublicationDelivery(
                                                         value='Oyster discount right'
                                                     ),
                                                     order=1,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -11301,7 +11394,7 @@ obj = PublicationDelivery(
                                                         value='Purchase windwn'
                                                     ),
                                                     order=2,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -11343,7 +11436,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.BUS,
                                                             ],
@@ -11353,7 +11446,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='tfl:PAYG_with contactless_card',
                                                     version='any',
@@ -11483,7 +11576,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='\tNB only adults can top up their pay as you go online or by phone\t\t\t \t\t\t\t '
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=AuthorityRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
                                             version='any',
                                             ref='tfl:Oyster_Sales_line'
                                         ),
@@ -11642,7 +11735,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FulfilmentMethodPricesRelStructure(
-                                            cell_ref=[
+                                            fulfilment_method_price_ref_or_fulfilment_method_price_or_cell_ref=[
                                                 FulfilmentMethodPriceVersionedChildStructure(
                                                     id='tfl:normal_post',
                                                     version='any',
@@ -11675,7 +11768,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FulfilmentMethodPricesRelStructure(
-                                            cell_ref=[
+                                            fulfilment_method_price_ref_or_fulfilment_method_price_or_cell_ref=[
                                                 FulfilmentMethodPriceVersionedChildStructure(
                                                     id='tfl:registered_post',
                                                     version='any',
@@ -12085,7 +12178,7 @@ obj = PublicationDelivery(
                                                         value='Who can use a Visitor Oyster card'
                                                     ),
                                                     order=1,
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -12362,7 +12455,7 @@ obj = PublicationDelivery(
                                         id='tfl:YellowBlue11-15_OysterPhotoCard-SOP',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                validity_condition_ref_or_validity_condition=[
+                                                choice=[
                                                     AvailabilityCondition(
                                                         id='tfl:YellowBlue11-15_OysterPhotoCard',
                                                         version='any',
@@ -12417,7 +12510,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=SalesOfferPackagePricesRelStructure(
-                                            cell_ref=[
+                                            sales_offer_package_price_ref_or_sales_offer_package_price_or_cell_ref=[
                                                 SalesOfferPackagePriceVersionedChildStructure(
                                                     id='tfl:16PlusZip_OysterPhotoCard-SOP',
                                                     version='any',
@@ -12506,7 +12599,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=SalesOfferPackagePricesRelStructure(
-                                            cell_ref=[
+                                            sales_offer_package_price_ref_or_sales_offer_package_price_or_cell_ref=[
                                                 SalesOfferPackagePriceVersionedChildStructure(
                                                     id='tfl:18Plus_OysterPhotoCard-SOP',
                                                     version='any',
@@ -12851,7 +12944,7 @@ obj = PublicationDelivery(
                                                     id='tfl:peak',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='any',
                                                                     ref='tfl:Peak'
@@ -12868,7 +12961,7 @@ obj = PublicationDelivery(
                                                     id='tfl:offPeak',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
-                                                            validity_condition_ref_or_validity_condition=[
+                                                            choice=[
                                                                 AvailabilityConditionRef(
                                                                     version='any',
                                                                     ref='tfl:OffPeak'
@@ -13103,7 +13196,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.METRO,
                                                                                     ],
@@ -13138,7 +13231,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.METRO,
                                                                                     ],
@@ -13176,7 +13269,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:TfL_Network@products',
                                                                 version='any',
                                                                 order=2,
-                                                                includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                includes_grouping_type=LogicalOperationEnumeration.OR,
                                                                 includes=GenericParameterAssignmentsRelStructure(
                                                                     generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                         GenericParameterAssignment(
@@ -13237,7 +13330,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zone_1_only',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13266,7 +13359,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-2@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13299,7 +13392,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Euston-Zone_2@Euston',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13332,7 +13425,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-3@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13369,7 +13462,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Euston-Zone_3@Euston-Zone_3',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13402,7 +13495,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-4@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13443,7 +13536,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Euston-Zone_4@Euston',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13476,7 +13569,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-5@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13521,7 +13614,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Euston-Zone_5@Euston',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13554,7 +13647,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-6@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13603,7 +13696,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Euston-Zone_6@Euston',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13636,7 +13729,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-7@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13689,7 +13782,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Euston-Zone_7@Euston',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13722,7 +13815,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-8@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13779,7 +13872,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-8-Watford@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13840,7 +13933,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Euston-Zone_8@Euston',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13873,7 +13966,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-9@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13934,7 +14027,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-9-Watford@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -13999,7 +14092,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_1-9-Grays@Zone_1',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14064,7 +14157,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Euston-Watford_Junction@Euston',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14097,7 +14190,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zone_2_only@Zone_2',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14126,7 +14219,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_2-3@Zone_2',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14159,7 +14252,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_2-4@Zone_2',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14196,7 +14289,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_2-5@Zone_2',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14237,7 +14330,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_2-6@Zone_2',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14282,7 +14375,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_2-7@Zone_2',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14331,7 +14424,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_2-8@Zone_2',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14384,7 +14477,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_2-9@Zone_2',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14441,7 +14534,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_2-9-Watford@Zone_2',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14502,7 +14595,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_2-9-Grays@Zone_2',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14563,7 +14656,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zone_3_only@Zone_3',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14592,7 +14685,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_3-4@Zone_3',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14625,7 +14718,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_3-5@Zone_3',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14662,7 +14755,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_3-6@Zone_3',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14703,7 +14796,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_3-7@Zone_3',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14748,7 +14841,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_3-8@Zone_3',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14797,7 +14890,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_3-9@Zone_3',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14850,7 +14943,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_3-9-Watford@Zone_3',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14907,7 +15000,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_3-9-Grays@Zone_3',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14964,7 +15057,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zone_4_only@Zone_4',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -14993,7 +15086,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_4-5@Zone_4',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15026,7 +15119,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_4-6@Zone_4',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15063,7 +15156,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_4-7@Zone_4',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15104,7 +15197,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_4-8@Zone_4',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15149,7 +15242,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_4-9@Zone_4',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15198,7 +15291,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_4-9-Watford@Zone_4',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15251,7 +15344,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_4-9-Grays@Zone_4',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15304,7 +15397,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zone_5_only@Zone_5',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15333,7 +15426,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_5-6@Zone_5',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15366,7 +15459,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_5-7@Zone_5',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15403,7 +15496,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_5-8@Zone_5',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15444,7 +15537,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_5-9@Zone_5',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15489,7 +15582,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_5-9-Watford@Zone_5',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15538,7 +15631,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_5-9-Grays@Zone_5',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15587,7 +15680,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zone_6_only@Zone_6',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15616,7 +15709,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_6-7@Zone_6',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15649,7 +15742,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_6-8@Zone_6',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15686,7 +15779,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_6-9@Zone_6',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15727,7 +15820,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_6-9-Watford@Zone_6',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15772,7 +15865,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_6-9-Grays@Zone_6',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15817,7 +15910,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zone_7_only@Zone_7',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15846,7 +15939,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_7-8@Zone_7',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15879,7 +15972,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_7-9@Zone_7',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15916,7 +16009,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_7-9-Watford_Junction@Zone_7',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15957,7 +16050,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zone_8_only@Zone_8',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -15986,7 +16079,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_8-9@Zone_8',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -16019,7 +16112,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zone_9_only@Zone_9',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -16048,7 +16141,7 @@ obj = PublicationDelivery(
                                                                 id='tfl:Zones_8-Watford_Junction@Zone_8',
                                                                 version='any',
                                                                 order=1,
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     tariff_zone_ref=[
                                                                         TariffZoneRef(
@@ -16096,7 +16189,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:Prepaid_trip@Single@anytime@Adult@Zone_1_only',
                                                                 version='any',
@@ -16931,7 +17024,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:Oyster@Single@peak@Adult@Zone_1_only',
                                                                 version='any',
@@ -18010,7 +18103,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:Oyster@Single@offPeak@Adult@Zone_1_only',
                                                                 version='any',
@@ -19093,7 +19186,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:TravelCard@Day@anytime@Adult@Zone_1_only',
                                                                 version='any',
@@ -19932,7 +20025,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:TravelCard@Day@offPeak@Adult@Zone_1_only',
                                                                 version='any',
@@ -20771,7 +20864,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:TravelCard_on_Oyster@Week@anytime@Adult@Zone_1_only',
                                                                 version='any',
@@ -21610,7 +21703,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:TravelCard_on_Oyster@Monthly@anytime@Adult@Zone_1_only',
                                                                 version='any',
@@ -22449,7 +22542,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='tfl:TravelCard@Annual@anytime@Adult@Zone_1_only',
                                                                 version='any',
@@ -23277,7 +23370,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.METRO,
                                                             ],
@@ -23323,7 +23416,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.METRO,
                                                             ],
@@ -23666,7 +23759,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Chingford to Walthamstow Central'
                                         ),
-                                        journey_pattern_ref=ServiceJourneyPatternRef(
+                                        choice=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='nr:Chingford+Liverpool_Street'
                                         ),
@@ -23685,7 +23778,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Walthamstow Central to Liverpool street'
                                         ),
-                                        journey_pattern_ref=ServiceJourneyPatternRef(
+                                        choice=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='nr:Chingford+Liverpool_Street'
                                         ),
@@ -23704,7 +23797,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Shenfield to Stratford'
                                         ),
-                                        journey_pattern_ref=ServiceJourneyPatternRef(
+                                        choice=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='nr:Shenfield+Liverpool_Street'
                                         ),
@@ -23723,7 +23816,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Stratford to Liverpool street'
                                         ),
-                                        journey_pattern_ref=ServiceJourneyPatternRef(
+                                        choice=ServiceJourneyPatternRef(
                                             version='any',
                                             ref='nr:Shenfield+Liverpool_Street'
                                         ),
@@ -23746,7 +23839,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Special Fares  for Rail and Travel cards'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -23784,7 +23877,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.RAIL,
                                                                                     ],
@@ -23837,7 +23930,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.RAIL,
                                                                                     ],
@@ -23876,7 +23969,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.METRO,
                                                                                     ],
@@ -23932,7 +24025,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.RAIL,
                                                                                     ],
@@ -23968,7 +24061,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.METRO,
                                                                                     ],
@@ -24018,7 +24111,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.RAIL,
                                                                                     ],
@@ -24709,7 +24802,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_only@Single@peak@Adult@Zone_1_only',
                                                                 version='any',
@@ -25084,7 +25177,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_only@Single@offPeak@Adult@Zone_1_only',
                                                                 version='any',
@@ -25471,7 +25564,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             DistanceMatrixElementPrice(
                                                                 id='nr:Oyster_rail_only@Single@peak@Adult@Watford_Junction@Zone_1',
                                                                 version='any',
@@ -25534,7 +25627,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             DistanceMatrixElementPrice(
                                                                 id='nr:Oyster_rail_only@Single@offPeak@Adult@Watford_Junction@Zone_1',
                                                                 version='any',
@@ -25597,7 +25690,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Single@peak@Adult@Zone_1_only',
                                                                 version='any',
@@ -26088,7 +26181,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Single@offPeak@Adult@Zone_1_only',
                                                                 version='any',
@@ -26603,7 +26696,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Day@anyTime@Adult@Zone_1_only',
                                                                 version='any',
@@ -26646,7 +26739,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Day@offPeak@Adult@Zone_1_only',
                                                                 version='any',
@@ -26693,7 +26786,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Week@anyTime@Adult@Zone_1_only',
                                                                 version='any',
@@ -26736,7 +26829,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Month@anyTime@Adult@Zone_1_only',
                                                                 version='any',
@@ -26783,7 +26876,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Year@anyTime@Adult@Zone_1_only',
                                                                 version='any',
@@ -26822,7 +26915,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Single@peak@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -26897,7 +26990,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Single@offPeak@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -26980,7 +27073,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Watford_Junction@Day@anytime@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -27047,7 +27140,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Watford_Junction@Day@offPeak@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -27118,7 +27211,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Watford_Junction@Week@anytime@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -27185,7 +27278,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Watford_Junction@Month@anytime@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -27256,7 +27349,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareStructureElementPrice(
                                                                 id='nr:Oyster_rail_through@Watford_Junction@Year@anytime@Adult@Watford_Junction@Zone_1-9',
                                                                 version='any',
@@ -27316,7 +27409,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -27339,7 +27432,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -27361,7 +27454,7 @@ obj = PublicationDelivery(
                                             value='A rail Trip'
                                         ),
                                         discount_rights=DiscountRightRefsRelStructure(
-                                            sale_discount_right_ref=[
+                                            capped_discount_right_ref_or_sale_discount_right_ref_or_usage_discount_right_ref=[
                                                 CappedDiscountRightRef(
                                                     version='any',
                                                     ref='tfl:Oyster_PayAsYouGo_right'
@@ -27375,7 +27468,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.METRO,
                                                                 VehicleModeEnumeration.RAIL,
@@ -27499,7 +27592,7 @@ obj = PublicationDelivery(
                                                         value='TfL Discount - TODO THIS IS BOGUS AS IT APPLIES TO TRAVEL WITH CARD NOT CARD'
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             FareProductPrice(
                                                                 id='tfl:RailCard',
                                                                 version='any',
@@ -27519,7 +27612,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     end_date=XmlDate(2013, 5, 18),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             TimeIntervalPrice(
                                                                 id='nr:Standard_RailCard@Cost@1y',
                                                                 version='any',
@@ -27560,7 +27653,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     start_date=XmlDate(2013, 5, 19),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             TimeIntervalPrice(
                                                                 id='nr:Standard_RailCard@Cost@1y@2013-05-19',
                                                                 version='any',
@@ -27595,7 +27688,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -27631,7 +27724,7 @@ obj = PublicationDelivery(
                                                         value='Periofdfor which card is valid'
                                                     ),
                                                     order=2,
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
@@ -27671,7 +27764,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -27701,7 +27794,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -27729,7 +27822,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.METRO,
                                                             ],
@@ -27763,7 +27856,7 @@ obj = PublicationDelivery(
                                                         value='Periof for which card is valid'
                                                     ),
                                                     order=4,
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
@@ -27820,7 +27913,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -27850,7 +27943,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -27878,7 +27971,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.METRO,
                                                             ],
@@ -27912,7 +28005,7 @@ obj = PublicationDelivery(
                                                         value='Period for which card is valid'
                                                     ),
                                                     order=4,
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
@@ -27978,7 +28071,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -28006,7 +28099,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.METRO,
                                                             ],
@@ -28040,7 +28133,7 @@ obj = PublicationDelivery(
                                                         value='Periof for which card is valid'
                                                     ),
                                                     order=4,
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
@@ -28077,7 +28170,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='tfl:hm_forcesRailCard',
                                                     version='any',
@@ -28116,7 +28209,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             TimeIntervalPrice(
                                                                 id='nr:DisabledRailCard@Cost@1y',
                                                                 version='any',
@@ -28151,7 +28244,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -28181,7 +28274,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -28209,7 +28302,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.METRO,
                                                             ],
@@ -28243,7 +28336,7 @@ obj = PublicationDelivery(
                                                         value='Periof for which card is valid'
                                                     ),
                                                     order=4,
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
@@ -28300,7 +28393,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -28330,7 +28423,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -28358,7 +28451,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.METRO,
                                                             ],
@@ -28392,7 +28485,7 @@ obj = PublicationDelivery(
                                                         value='Periof for which card is valid'
                                                     ),
                                                     order=4,
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
@@ -28449,7 +28542,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='nr:National_Rail'
                                         ),
@@ -28479,7 +28572,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     charging_basis=ChargingBasisEnumeration.DISCOUNTED,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.RAIL,
                                                             ],
@@ -28507,7 +28600,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.METRO,
                                                             ],
@@ -28541,7 +28634,7 @@ obj = PublicationDelivery(
                                                         value='Period for which card is valid'
                                                     ),
                                                     order=4,
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
@@ -28600,7 +28693,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Bus and Tram Fares'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='tfl:LBSL'
                                         ),
@@ -28670,17 +28763,17 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Cash@Adult',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare'
                                                                     ),
                                                                     amount=Decimal('2.40')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     UserProfileRef(
                                                                         version='any',
                                                                         ref='tfl:adult'
@@ -28699,13 +28792,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Contactless_card@Adult',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare Contact less card'
                                                                     ),
                                                                     amount=Decimal('1.40')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     EntitlementRequiredRef(
                                                                         version='any',
                                                                         ref='tfl:Contactless_cardHolder'
@@ -28728,7 +28821,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@Adult',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare Oyster with capping'
                                                                     ),
@@ -28738,7 +28831,7 @@ obj = PublicationDelivery(
                                                                         ref='tfl:max-4.40'
                                                                     )
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1d'
@@ -28757,13 +28850,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@Adult',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='weekly Travelcard Bus pass'
                                                                     ),
                                                                     amount=Decimal('19.60')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1w'
@@ -28782,13 +28875,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@Adult',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Monthly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('75.30')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1m'
@@ -28807,13 +28900,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@Adult',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Annual Bus pass'
                                                                     ),
                                                                     amount=Decimal('784.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1y'
@@ -28847,17 +28940,17 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Cash@18Plus',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare'
                                                                     ),
                                                                     amount=Decimal('2.40')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     FareStructureElementRef(
                                                                         version='any',
                                                                         ref='lbsl:bus_or_tram_trip'
@@ -28872,7 +28965,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@18Plus',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare Oyster with capping'
                                                                     ),
@@ -28882,7 +28975,7 @@ obj = PublicationDelivery(
                                                                         ref='tfl:max-4.40'
                                                                     )
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1d'
@@ -28901,13 +28994,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@18Plus',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='weekly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('13.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1w'
@@ -28926,13 +29019,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@18Plus',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Monthly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('52.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1m'
@@ -28951,13 +29044,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@18Plus',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Annual Bus pass'
                                                                     ),
                                                                     amount=Decimal('548.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1y'
@@ -28991,17 +29084,17 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Cash@16To18',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare'
                                                                     ),
                                                                     amount=Decimal('0.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     FareStructureElementRef(
                                                                         version='any',
                                                                         ref='lbsl:bus_or_tram_trip'
@@ -29016,7 +29109,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@16To18',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare Oyster with capping'
                                                                     ),
@@ -29026,7 +29119,7 @@ obj = PublicationDelivery(
                                                                         ref='tfl:max-4.40'
                                                                     )
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     UserProfileRef(
                                                                         version='any',
                                                                         ref='tfl:18Plus'
@@ -29049,13 +29142,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@16To18',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='weekly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('9.80')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1w'
@@ -29074,13 +29167,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@16To18',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Monthly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('37.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1m'
@@ -29095,13 +29188,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@16To18',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Annual Bus pass'
                                                                     ),
                                                                     amount=Decimal('392.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1y'
@@ -29135,17 +29228,17 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Cash@11To15',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare'
                                                                     ),
                                                                     amount=Decimal('0.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     FareStructureElementRef(
                                                                         version='any',
                                                                         ref='lbsl:bus_or_tram_trip'
@@ -29160,7 +29253,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Day@11To15',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Single fare Oyster with capping'
                                                                     ),
@@ -29170,7 +29263,7 @@ obj = PublicationDelivery(
                                                                         ref='tfl:max-4.40'
                                                                     )
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1d'
@@ -29189,13 +29282,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Week@11To15',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='weekly Travelcard Bus pass'
                                                                     ),
                                                                     amount=Decimal('9.80')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1w'
@@ -29214,13 +29307,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@Monthly@11To15',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Monthly TravelCard_on_Oyster Bus pass'
                                                                     ),
                                                                     amount=Decimal('37.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     TimeIntervalRef(
                                                                         version='any',
                                                                         ref='tfl:1m'
@@ -29239,13 +29332,13 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lbsl:Bus_Tram@Oyster@AnnualMonthly@11To15',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     name=MultilingualString(
                                                                         value='Annual Bus pass'
                                                                     ),
                                                                     amount=Decimal('392.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     EntitlementRequiredRef(
                                                                         version='any',
                                                                         ref='tfl:TravelCardHolder'
@@ -29296,7 +29389,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.BUS,
                                                                 VehicleModeEnumeration.TRAM,
@@ -29322,7 +29415,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='tfl:LBSL'
                                         ),
@@ -29350,7 +29443,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.BUS,
                                                             ],
@@ -29371,7 +29464,7 @@ obj = PublicationDelivery(
                                 value='TfL River fares'
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
-                                validity_condition_ref_or_validity_condition=[
+                                choice=[
                                     AvailabilityCondition(
                                         id='lrs:notJulyAugust',
                                         version='any',
@@ -29418,7 +29511,7 @@ obj = PublicationDelivery(
                                                 TimebandVersionedChildStructure(
                                                     id='lrs:after9am',
                                                     version='any',
-                                                    start_time=XmlTime(9, 0, 0, 0)
+                                                    start_time_or_start_event=XmlTime(9, 0, 0, 0)
                                                 ),
                                             ]
                                         )
@@ -29468,7 +29561,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.WATER,
                                                                                     ],
@@ -29512,7 +29605,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.WATER,
                                                                                     ],
@@ -29556,7 +29649,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.WATER,
                                                                                     ],
@@ -29581,7 +29674,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='RB1: Embankement - Woolich Arsenal\n\t\t\t\t\t\t\t\tRB3: London Bridge - Canary Wharf (for fares see route RB1)\n\t\t\t\t\t\t\t\tRB5: North Greenwich - Woolwich Arsenal (for fares see route RB1)\n\t\t\t\t\t\t\t\t'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         ),
@@ -29621,7 +29714,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.WATER,
                                                                                     ],
@@ -29690,7 +29783,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Single@Prepaid_trip@adult',
                                                                 version='any',
@@ -29757,7 +29850,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Single@Oyster_PayAsYouGo@adult',
                                                                 version='any',
@@ -29824,7 +29917,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Single@TravelCard@adult',
                                                                 version='any',
@@ -29891,7 +29984,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Week@TravelCard@adult',
                                                                 version='any',
@@ -29958,7 +30051,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Month@TravelCard@adult',
                                                                 version='any',
@@ -30025,7 +30118,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@7Month@TravelCard@adult',
                                                                 version='any',
@@ -30092,7 +30185,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='lrs:RB1@Year@TravelCard@adult',
                                                                 version='any',
@@ -30144,7 +30237,7 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='RB2: Bankside - Embankment - Millbank - St George Wharf (Tate to Tate and St George Wharf)\nOperated by KPMG Thames Clippers\n\t\t\t\t\t\t\t\t'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         ),
@@ -30184,7 +30277,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.WATER,
                                                                                     ],
@@ -30276,14 +30369,14 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@single@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('5.50')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30302,10 +30395,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@single@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.30')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30324,10 +30417,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@other@single@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('6.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30342,10 +30435,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('4.95')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30364,10 +30457,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.97')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30386,10 +30479,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@other@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('5.40')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30404,10 +30497,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30426,10 +30519,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.20')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30448,10 +30541,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@other@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('4.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30466,10 +30559,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@Millbank+Bankside@return@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('11.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30488,10 +30581,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@St_George_Wharf+Millbank@return@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('6.60')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30510,10 +30603,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Adult@other@return@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('12.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30552,14 +30645,14 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@single@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.80')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30578,10 +30671,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@single@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('1.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30600,10 +30693,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@other@single@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30618,10 +30711,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30640,10 +30733,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30662,10 +30755,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@other@single@PayAsYouGo_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30680,10 +30773,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30702,10 +30795,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.20')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30724,10 +30817,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@other@single@TravelCard_Sale_discount',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('4.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30742,10 +30835,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@Millbank+Bankside@return@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30764,10 +30857,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@St_George_Wharf+Millbank@return@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30786,10 +30879,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Child@other@return@Prepaid_trip',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:return'
@@ -30828,14 +30921,14 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@Millbank+Bankside@single@Freedom_pass',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.80')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30854,10 +30947,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@St_George_Wharf+Millbank@single@Freedom_pass',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('1.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30876,10 +30969,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@other@single@Freedom_pass',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30894,10 +30987,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@Millbank+Bankside@single@18Plus_OysterPhotoCard',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30916,10 +31009,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@St_George_Wharf+Millbank@single@18Plus_OysterPhotoCard',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('2.20')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30938,10 +31031,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@other@single@18Plus_OysterPhotoCard',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('4.00')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30956,10 +31049,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@Millbank+Bankside@single@Tate_member',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     amount=Decimal('3.70')
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -30978,10 +31071,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@St_George_Wharf+Millbank@single@Tate_member',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -31000,10 +31093,10 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='lrs:RB2@Concessions@other@single@Tate_member',
                                                                 version='any',
-                                                                fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                choice=FarePriceVersionedChildStructure(
                                                                     is_allowed=False
                                                                 ),
-                                                                choice=[
+                                                                choice_1=[
                                                                     RoundTripRef(
                                                                         version='any',
                                                                         ref='tfl:single'
@@ -31027,7 +31120,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='River Roamer'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='lrs:Kpmg_Thames_Clippers'
                                         ),
@@ -31061,7 +31154,7 @@ obj = PublicationDelivery(
                                                                                 ref='tfl:can_access'
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.WATER,
                                                                                     ],
@@ -31128,7 +31221,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='lrs:River_Roamer@Prepaid@adult',
                                                                 version='any',
@@ -31197,7 +31290,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='lrs:River_Roamer@TravelCard@adult',
                                                                 version='any',
@@ -31228,7 +31321,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='London Eye Rover Cruise Experience - River Tour Services'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='lrs:London_Eye'
                                         ),
@@ -31272,13 +31365,15 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                                validity_condition_ref=AvailabilityConditionRef(
-                                                                                    version='any',
-                                                                                    ref='lrs:after9am'
-                                                                                )
+                                                                                validity_condition_ref=[
+                                                                                    AvailabilityConditionRef(
+                                                                                        version='any',
+                                                                                        ref='lrs:after9am'
+                                                                                    ),
+                                                                                ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.WATER,
                                                                                     ],
@@ -31313,7 +31408,7 @@ obj = PublicationDelivery(
                                                                 id='lrs:London_Eye_River_tour@group_Ticket',
                                                                 version='any',
                                                                 order=2,
-                                                                includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                includes_grouping_type=LogicalOperationEnumeration.AND,
                                                                 includes=GenericParameterAssignmentsRelStructure(
                                                                     generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                         GenericParameterAssignment(
@@ -31337,7 +31432,7 @@ obj = PublicationDelivery(
                                                                             )
                                                                         ),
                                                                         GenericParameterAssignment(
-                                                                            id='lrs:London_Eye_River_tour@01@Freedom_passNot',
+                                                                            id='lrs:London_Eye_River_tour@01@TravelCard_Freedom_passNot',
                                                                             version='any',
                                                                             description=MultilingualString(
                                                                                 value='Travelcard and Freedom Pass discounts do not apply on this route.'
@@ -31368,7 +31463,7 @@ obj = PublicationDelivery(
                                                                 id='ea:London_Eye_River_tour@discount@NotEligible',
                                                                 version='any',
                                                                 order=3,
-                                                                includes_grouping_type=BooleanOperatorEnumeration.NOT,
+                                                                includes_grouping_type=LogicalOperationEnumeration.NOT,
                                                                 includes=GenericParameterAssignmentsRelStructure(
                                                                     generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                         GenericParameterAssignment(
@@ -31441,7 +31536,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='lrs:River_tour@adult',
                                                                 version='any',
@@ -31508,7 +31603,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Westminster - London Eye - Tower - Greenwich'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='lrs:City_Cruises'
                                         ),
@@ -31552,7 +31647,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.WATER,
                                                                                     ],
@@ -31602,14 +31697,14 @@ obj = PublicationDelivery(
                                                                 id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
-                                                                    fare_price_or_fare_price_ref=[
+                                                                    choice=[
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@adult@single',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('9.50')
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:single'
@@ -31624,10 +31719,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@adult@return',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('12.50')
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:return'
@@ -31642,10 +31737,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@child@single',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('4.75')
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:single'
@@ -31660,10 +31755,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Tower-Greenwich_Pier@child@return',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('6.25')
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:return'
@@ -31720,14 +31815,14 @@ obj = PublicationDelivery(
                                                                 id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier',
                                                                 version='any',
                                                                 cells=CellsRelStructure(
-                                                                    fare_price_or_fare_price_ref=[
+                                                                    choice=[
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@adult@single',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('12.00')
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:single'
@@ -31742,10 +31837,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@adult@return',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('15.50')
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:return'
@@ -31760,10 +31855,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@child@single',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('6.00')
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:single'
@@ -31778,10 +31873,10 @@ obj = PublicationDelivery(
                                                                         Cell(
                                                                             id='lrs:Westminster-London_Eye-Greenwich+Westminster-London_Eye-Greenwich_Pier@child@return',
                                                                             version='any',
-                                                                            fare_price_ref_or_fare_price=FarePriceVersionedChildStructure(
+                                                                            choice=FarePriceVersionedChildStructure(
                                                                                 amount=Decimal('7.75')
                                                                             ),
-                                                                            choice=[
+                                                                            choice_1=[
                                                                                 RoundTripRef(
                                                                                     version='any',
                                                                                     ref='tfl:return'
@@ -31846,7 +31941,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.WATER,
                                                             ],
@@ -31867,7 +31962,7 @@ obj = PublicationDelivery(
                                                         ref='tfl:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        all_operators_ref_or_operator_ref=[
+                                                        choice=[
                                                             OperatorRef(
                                                                 version='any',
                                                                 ref='lrs:Thames_River_Services'
@@ -31892,7 +31987,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        all_operators_ref_or_operator_ref=[
+                                                        choice=[
                                                             OperatorRef(
                                                                 version='any',
                                                                 ref='lrs:Crown_River_cruises'
@@ -31924,7 +32019,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.WATER,
                                                             ],
@@ -31960,7 +32055,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.WATER,
                                                             ],
@@ -31970,7 +32065,7 @@ obj = PublicationDelivery(
                                                                 choice=WaterSubmodeEnumeration.SHUTTLE_FERRY_SERVICE
                                                             ),
                                                         ],
-                                                        all_operators_ref_or_operator_ref=[
+                                                        choice=[
                                                             OperatorRef(
                                                                 version='any',
                                                                 ref='lrs:City_Cruises'
@@ -31993,13 +32088,15 @@ obj = PublicationDelivery(
                                                         ref='tfl:can_access'
                                                     ),
                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                        validity_condition_ref=AvailabilityConditionRef(
-                                                            version='any',
-                                                            ref='lrs:after9am'
-                                                        )
+                                                        validity_condition_ref=[
+                                                            AvailabilityConditionRef(
+                                                                version='any',
+                                                                ref='lrs:after9am'
+                                                            ),
+                                                        ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        all_operators_ref_or_operator_ref=[
+                                                        choice=[
                                                             OperatorRef(
                                                                 version='any',
                                                                 ref='lrs:Kpmg_Thames_Clippers'
@@ -32157,7 +32254,7 @@ obj = PublicationDelivery(
                                             value='Travel card  - River Rover'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:LRS'
                                         ),
@@ -32299,7 +32396,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:LRS'
                                         ),
@@ -32327,7 +32424,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.WATER,
                                                             ],
@@ -32401,7 +32498,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:LRS'
                                         ),
@@ -32473,10 +32570,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='lrs:notJulyAugust'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='lrs:notJulyAugust'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -32499,10 +32598,12 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                                    validity_condition_ref=AvailabilityConditionRef(
-                                                                        version='any',
-                                                                        ref='lrs:notJulyAugust'
-                                                                    )
+                                                                    validity_condition_ref=[
+                                                                        AvailabilityConditionRef(
+                                                                            version='any',
+                                                                            ref='lrs:notJulyAugust'
+                                                                        ),
+                                                                    ]
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
@@ -32565,7 +32666,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='- Emirates Air Line'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='tfl:Emirates'
                                         ),
@@ -32609,7 +32710,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
-                                                                                vehicle_modes=[
+                                                                                vehicle_modes_or_transport_modes=[
                                                                                     [
                                                                                         VehicleModeEnumeration.CABLEWAY,
                                                                                     ],
@@ -32631,7 +32732,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='tfl:eligible'
                                                                 ),
-                                                                includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                includes_grouping_type=LogicalOperationEnumeration.OR,
                                                                 includes=GenericParameterAssignmentsRelStructure(
                                                                     generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                         GenericParameterAssignment(
@@ -32703,7 +32804,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 cells=CellsRelStructure(
-                                                                    fare_price_or_fare_price_ref=[
+                                                                    choice=[
                                                                         UsageParameterPrice(
                                                                             id='ea:Boarding_Pass@Prepaid_trip@adult@single',
                                                                             version='any',
@@ -32745,7 +32846,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 cells=CellsRelStructure(
-                                                                    fare_price_or_fare_price_ref=[
+                                                                    choice=[
                                                                         UsageParameterPrice(
                                                                             id='ea:Boarding_Pass@Prepaid_trip@child@single',
                                                                             version='any',
@@ -32822,7 +32923,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 cells=CellsRelStructure(
-                                                                    fare_price_or_fare_price_ref=[
+                                                                    choice=[
                                                                         UsageParameterPrice(
                                                                             id='ea:Boarding_Pass@discounted@adult@single',
                                                                             version='any',
@@ -32867,7 +32968,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 cells=CellsRelStructure(
-                                                                    fare_price_or_fare_price_ref=[
+                                                                    choice=[
                                                                         UsageParameterPrice(
                                                                             id='ea:Boarding_Pass@discounted@child@single',
                                                                             version='any',
@@ -32935,7 +33036,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             UsageParameterPrice(
                                                                 id='ea:Boarding_Pass@Oyster_PayAsYouGo@adult@single',
                                                                 version='any',
@@ -32977,7 +33078,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.CABLEWAY,
                                                             ],
@@ -33008,7 +33109,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validity_parameters=ValidityParametersRelStructure(
-                                                        vehicle_modes=[
+                                                        vehicle_modes_or_transport_modes=[
                                                             [
                                                                 VehicleModeEnumeration.CABLEWAY,
                                                             ],
@@ -33016,7 +33117,7 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 GenericParameterAssignment(
-                                                    id='ea:360_cableway_trip',
+                                                    id='ea:360_cableway_trip@CannotBreakJourney',
                                                     version='any',
                                                     order=2,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
@@ -33107,7 +33208,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='lrs:LRS'
                                         ),
@@ -33134,7 +33235,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='ea:Multi_journey_Boarding_Pass',
                                                     version='any',
@@ -33159,7 +33260,7 @@ obj = PublicationDelivery(
                                             ref='tfl:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='tfl:Emirates'
                                         ),
@@ -33231,7 +33332,7 @@ obj = PublicationDelivery(
                                             value='Oyster'
                                         ),
                                         members=OrganisationRefsRelStructure(
-                                            organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=[
+                                            organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=[
                                                 OperatorRef(
                                                     version='any',
                                                     ref='tfl:LBSL'
@@ -34944,7 +35045,7 @@ obj = PublicationDelivery(
                                 value='TfL Example - code values-'
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='tfl:Charging_Moments',
                                         version='any',
@@ -35517,7 +35618,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.METRO
+                                        primary_mode=AllModesEnumeration.METRO
                                     ),
                                     Operator(
                                         id='tfl:DLR',
@@ -35531,7 +35632,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.METRO
+                                        primary_mode=AllModesEnumeration.METRO
                                     ),
                                     Operator(
                                         id='tfl:LBSL',
@@ -35542,7 +35643,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.BUS
+                                        primary_mode=AllModesEnumeration.BUS
                                     ),
                                     Operator(
                                         id='nr:National_Rail',
@@ -35556,7 +35657,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_c2c',
@@ -35570,7 +35671,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_chl',
@@ -35584,7 +35685,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_ec',
@@ -35598,7 +35699,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_gc',
@@ -35612,7 +35713,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_em',
@@ -35626,7 +35727,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_fcc',
@@ -35640,7 +35741,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_ge',
@@ -35654,7 +35755,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_hc',
@@ -35668,7 +35769,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_he',
@@ -35682,7 +35783,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_ht',
@@ -35696,7 +35797,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_ga',
@@ -35710,7 +35811,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_lm',
@@ -35724,7 +35825,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:lo',
@@ -35738,7 +35839,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_se',
@@ -35752,7 +35853,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='nr:toc_vg',
@@ -35766,7 +35867,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.RAIL
+                                        primary_mode=AllModesEnumeration.RAIL
                                     ),
                                     Operator(
                                         id='lrs:LRS',
@@ -35777,7 +35878,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.WATER
+                                        primary_mode=AllModesEnumeration.WATER
                                     ),
                                     Operator(
                                         id='lrs:Kpmg_Thames_Clippers',
@@ -35788,7 +35889,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.WATER
+                                        primary_mode=AllModesEnumeration.WATER
                                     ),
                                     Operator(
                                         id='lrs:London_Eye',
@@ -35799,7 +35900,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.WATER
+                                        primary_mode=AllModesEnumeration.WATER
                                     ),
                                     Operator(
                                         id='lrs:Thames_River_Services',
@@ -35810,7 +35911,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.WATER
+                                        primary_mode=AllModesEnumeration.WATER
                                     ),
                                     Operator(
                                         id='lrs:WPSA',
@@ -35821,7 +35922,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.WATER
+                                        primary_mode=AllModesEnumeration.WATER
                                     ),
                                     Operator(
                                         id='lrs:Crown_River_cruises',
@@ -35832,7 +35933,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.WATER
+                                        primary_mode=AllModesEnumeration.WATER
                                     ),
                                     Operator(
                                         id='lrs:City_Cruises',
@@ -35843,7 +35944,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.WATER
+                                        primary_mode=AllModesEnumeration.WATER
                                     ),
                                     Operator(
                                         id='lrs:Turk_Launches',
@@ -35854,7 +35955,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.WATER
+                                        primary_mode=AllModesEnumeration.WATER
                                     ),
                                     Operator(
                                         id='tfl:Emirates',
@@ -35865,7 +35966,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        primary_mode=VehicleModeEnumeration.CABLEWAY
+                                        primary_mode=AllModesEnumeration.CABLEWAY
                                     ),
                                 ]
                             ),

@@ -13,4 +13,6 @@ class OrganisationTypeEnumeration(Enum):
     TRAVEL_AGENT = "travelAgent"
     SERVICED_ORGANISATION = "servicedOrganisation"
     RETAIL_CONSORTIUM = "retailConsortium"
+    ALTERNATIVE_MODE_OPERATOR = "alternativeModeOperator"
+    ONLINE_PROVIDER = "onlineProvider"
     OTHER = "other"

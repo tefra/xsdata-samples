@@ -8449,7 +8449,7 @@ Short Term (1/4/18-1/6/18): £135.00	Short term (1/4-1/6): £230.00d with this g
           <dayTypes>
             <FareDayType id="jsp:everyday" version="any">
               <Name>Every day</Name>
-              <Description>ANy time</Description>
+              <Description>Any time</Description>
               <EarliestTime>00:00:00</EarliestTime>
               <properties>
                 <PropertyOfDay>
@@ -10744,7 +10744,7 @@ http://www.nationalrail.co.uk/stations_destinations/44863.aspx
               </ContactDetails>
               <OrganisationType>operator</OrganisationType>
               <Status>true</Status>
-              <CountryRef ref="uk"/>
+              <CountryRef ref="uk" refPrincipality="ENG"/>
               <Address>
                 <HouseNumber>18-20</HouseNumber>
                 <Street>St Andrew's Street</Street>

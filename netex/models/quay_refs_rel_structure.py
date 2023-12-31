@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .quay_ref import QuayRef
+from .taxi_stand_ref import TaxiStandRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -11,12 +12,21 @@ class QuayRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "quayRefs_RelStructure"
 
-    quay_ref: List[QuayRef] = field(
+    quay_ref: List[Union[TaxiStandRef, QuayRef]] = field(
         default_factory=list,
         metadata={
-            "name": "QuayRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "min_occurs": 1,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "TaxiStandRef",
+                    "type": TaxiStandRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QuayRef",
+                    "type": QuayRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )

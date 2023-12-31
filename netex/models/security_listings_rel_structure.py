@@ -4,6 +4,9 @@ from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer_account_security_listing import CustomerAccountSecurityListing
 from .customer_security_listing import CustomerSecurityListing
 from .fare_contract_security_listing import FareContractSecurityListing
+from .medium_access_device_security_listing import (
+    MediumAccessDeviceSecurityListing,
+)
 from .retail_device_security_listing import RetailDeviceSecurityListing
 from .travel_document_security_listing import TravelDocumentSecurityListing
 
@@ -17,6 +20,7 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
 
     security_listing: List[
         Union[
+            MediumAccessDeviceSecurityListing,
             TravelDocumentSecurityListing,
             RetailDeviceSecurityListing,
             FareContractSecurityListing,
@@ -28,6 +32,11 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "MediumAccessDeviceSecurityListing",
+                    "type": MediumAccessDeviceSecurityListing,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "TravelDocumentSecurityListing",
                     "type": TravelDocumentSecurityListing,

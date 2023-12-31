@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from xsdata.models.datatype import XmlDate
+from xsdata.models.datatype import XmlDate, XmlDateTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .customer_accounts_rel_structure import CustomerAccountsRelStructure
 from .customer_eligibilities_rel_structure import (
@@ -77,6 +77,14 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    smoker: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "Smoker",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     email: Optional[str] = field(
         default=None,
         metadata={
@@ -85,10 +93,26 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    email_verified: Optional[XmlDateTime] = field(
+        default=None,
+        metadata={
+            "name": "EmailVerified",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     phone: Optional[TelephoneContactStructure] = field(
         default=None,
         metadata={
             "name": "Phone",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    phone_verified: Optional[XmlDateTime] = field(
+        default=None,
+        metadata={
+            "name": "PhoneVerified",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

@@ -13,7 +13,7 @@ class DiscountRightRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "discountRightRefs_RelStructure"
 
-    sale_discount_right_ref: List[
+    capped_discount_right_ref_or_sale_discount_right_ref_or_usage_discount_right_ref: List[
         Union[
             CappedDiscountRightRef, SaleDiscountRightRef, UsageDiscountRightRef
         ]

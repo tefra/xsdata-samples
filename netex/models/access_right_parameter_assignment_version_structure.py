@@ -3,7 +3,6 @@ from typing import Optional, Union
 from .access_right_in_product_ref import AccessRightInProductRef
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .assignment_version_structure_1 import AssignmentVersionStructure1
-from .boolean_operator_enumeration import BooleanOperatorEnumeration
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .charging_basis_enumeration import ChargingBasisEnumeration
 from .controllable_element_in_sequence_ref import (
@@ -24,6 +23,7 @@ from .group_of_distance_matrix_elements_ref import (
     GroupOfDistanceMatrixElementsRef,
 )
 from .group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
+from .logical_operation_enumeration import LogicalOperationEnumeration
 from .parking_tariff_ref import ParkingTariffRef
 from .preassigned_fare_product_ref import PreassignedFareProductRef
 from .relative_operator_enumeration import RelativeOperatorEnumeration
@@ -262,7 +262,7 @@ class AccessRightParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    limitation_grouping_type: Optional[BooleanOperatorEnumeration] = field(
+    limitation_grouping_type: Optional[LogicalOperationEnumeration] = field(
         default=None,
         metadata={
             "name": "LimitationGroupingType",
@@ -296,7 +296,7 @@ class AccessRightParameterAssignmentVersionStructure(
         },
     )
     validity_parameter_grouping_type: Optional[
-        BooleanOperatorEnumeration
+        LogicalOperationEnumeration
     ] = field(
         default=None,
         metadata={

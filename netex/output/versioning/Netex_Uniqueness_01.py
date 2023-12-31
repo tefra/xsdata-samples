@@ -187,7 +187,7 @@ obj = PublicationDelivery(
         value='Netex basic Uniquness check '
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='mybus:ntwkf001',
                 version='001',
@@ -239,7 +239,7 @@ obj = PublicationDelivery(
                                         id='bar:foo5',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                validity_condition_ref_or_validity_condition=[
+                                                choice=[
                                                     ValidityCondition(
                                                         id='bar:foo',
                                                         version='001'
@@ -256,7 +256,7 @@ obj = PublicationDelivery(
                                                                 TimebandVersionedChildStructure(
                                                                     id='bar:foo',
                                                                     version='001',
-                                                                    start_time=XmlTime(0, 0, 0, 0)
+                                                                    start_time_or_start_event=XmlTime(0, 0, 0, 0)
                                                                 ),
                                                             ]
                                                         ),
@@ -325,7 +325,7 @@ obj = PublicationDelivery(
                                                     id='bar:foo',
                                                     version='001',
                                                     administrative_zones=AdministrativeZonesRelStructure(
-                                                        administrative_zone=[
+                                                        administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone=[
                                                             AdministrativeZone(
                                                                 id='bar:foo',
                                                                 version='001'
@@ -391,7 +391,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             vehicle_types=VehicleTypesInFrameRelStructure(
-                                compound_train_or_train_or_vehicle_type=[
+                                choice=[
                                     Train(
                                         id='bar:foo',
                                         version='001',
@@ -456,7 +456,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             vehicle_equipment_profiles=VehicleEquipmenProfilesInFrameRelStructure(
-                                vehicle_equipment_profile=[
+                                vehicle_equipment_profile_or_charging_equipment_profile=[
                                     VehicleEquipmentProfile(
                                         id='bar:foo',
                                         version='001'
@@ -696,7 +696,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         quays=QuaysRelStructure(
-                                            quay_ref_or_quay=[
+                                            taxi_stand_ref_or_quay_ref_or_quay=[
                                                 Quay(
                                                     id='bar:foo2-a',
                                                     version='001',
@@ -783,7 +783,7 @@ obj = PublicationDelivery(
                                                         value='ZONE'
                                                     ),
                                                     bays=ParkingBaysRelStructure(
-                                                        parking_bay_ref_or_parking_bay=[
+                                                        parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay=[
                                                             ParkingBay(
                                                                 id='bar:foo8',
                                                                 version='001',
@@ -957,7 +957,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                journey_pattern=[
+                                choice=[
                                     JourneyPattern(
                                         id='bar:foo2',
                                         version='001',

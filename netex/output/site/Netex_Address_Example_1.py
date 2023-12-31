@@ -5,7 +5,7 @@ from netex.models.access_mode_enumeration import AccessModeEnumeration
 from netex.models.accesses_rel_structure import AccessesRelStructure
 from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_tool_enumeration import AccessibilityToolEnumeration
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import DayType
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
@@ -76,12 +76,12 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             SiteFrame(
                 id='SiteFrame:SF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             AvailabilityCondition(
                                 id='mysite:PP01_OpeningHours',
                                 version='any',
@@ -113,8 +113,8 @@ obj = PublicationDelivery(
                                         TimebandVersionedChildStructure(
                                             id='mysite:OpeningHours',
                                             version='any',
-                                            start_time=XmlTime(6, 30, 0, 0),
-                                            end_time_or_day_offset_or_duration=[
+                                            start_time_or_start_event=XmlTime(6, 30, 0, 0),
+                                            choice=[
                                                 XmlTime(12, 0, 0, 0),
                                             ]
                                         ),
@@ -173,7 +173,7 @@ obj = PublicationDelivery(
                             id='mysite::PP01',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityConditionRef(
                                             version='any',
                                             ref='mysite:PP01_OpeningHours'
@@ -247,7 +247,7 @@ obj = PublicationDelivery(
                                         id='mysite:PP_E11_Entrance',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                validity_condition_ref_or_validity_condition=[
+                                                choice=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mysite:PP01_OpeningHours'
@@ -277,7 +277,7 @@ obj = PublicationDelivery(
                                         id='mysite:PP_E12_Exit',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
-                                                validity_condition_ref_or_validity_condition=[
+                                                choice=[
                                                     AvailabilityConditionRef(
                                                         version='any',
                                                         ref='mysite:PP01_ExitHours'
@@ -319,13 +319,13 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
+                                            transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
                                                 ref='napt:9100:00476'
                                             )
                                         ),
                                         to=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
+                                            transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=PlaceRefStructure(
                                                 ref='mysite::PP01'
                                             )
@@ -415,7 +415,7 @@ obj = PublicationDelivery(
                             id='mysite::PS22',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='mysite:ParkingChargeHours',
                                             version='any',
@@ -463,8 +463,8 @@ obj = PublicationDelivery(
                                                     TimebandVersionedChildStructure(
                                                         id='mysite:ParkingChargeHours',
                                                         version='any',
-                                                        start_time=XmlTime(8, 30, 0, 0),
-                                                        end_time_or_day_offset_or_duration=[
+                                                        start_time_or_start_event=XmlTime(8, 30, 0, 0),
+                                                        choice=[
                                                             XmlTime(5, 30, 0, 0),
                                                         ]
                                                     ),
@@ -513,13 +513,13 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
+                                            transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
                                                 ref='napt:9100:00476'
                                             )
                                         ),
                                         to=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
+                                            transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=PlaceRefStructure(
                                                 ref='mysite::PP01'
                                             )

@@ -17,7 +17,7 @@ class TimeIntervalPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "timeIntervalPrices_RelStructure"
 
-    cell_ref: List[
+    time_interval_price_ref_or_time_interval_price_or_cell_ref: List[
         Union[
             TimeIntervalPriceRef,
             TimeIntervalPriceVersionedChildStructure,

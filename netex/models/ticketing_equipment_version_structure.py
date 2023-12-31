@@ -1,27 +1,28 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from .installed_equipment_version_structure import (
-    InstalledEquipmentVersionStructure,
+from .all_modes_enumeration import AllModesEnumeration
+from .passenger_equipment_version_structure import (
+    PassengerEquipmentVersionStructure,
 )
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .queue_management_enumeration import QueueManagementEnumeration
+from .scope_of_ticket_enumeration import ScopeOfTicketEnumeration
 from .ticket_type_enumeration import TicketTypeEnumeration
 from .ticketing_facility_enumeration import TicketingFacilityEnumeration
 from .ticketing_service_facility_enumeration import (
     TicketingServiceFacilityEnumeration,
 )
-from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
+class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
     class Meta:
         name = "TicketingEquipment_VersionStructure"
 
-    vehicle_modes: List[VehicleModeEnumeration] = field(
+    vehicle_modes: List[AllModesEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModes",
@@ -124,7 +125,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "tokens": True,
         },
     )
-    scope_of_tickets_available: List[TicketingFacilityEnumeration] = field(
+    scope_of_tickets_available: List[ScopeOfTicketEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ScopeOfTicketsAvailable",

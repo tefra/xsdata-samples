@@ -1,4 +1,5 @@
 from decimal import Decimal
+from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import DayType
@@ -130,7 +131,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    version_frame_ref=[
+                    choice_1=[
                         TimetableFrameRef(
                             ref='hde:TimetableFrameTIM_24o_O'
                         ),
@@ -144,7 +145,7 @@ obj = PublicationDelivery(
         value='Example  of simple timetable frame for line with branched bus route'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='hde:CF_1',
                 version='1',
@@ -1563,15 +1564,15 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=ConnectionEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            transport_mode=AllModesEnumeration.BUS,
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='mybus:Charley'
                                             )
                                         ),
                                         to=ConnectionEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                            scheduled_stop_point_ref=ScheduledStopPointRefStructure(
+                                            transport_mode=AllModesEnumeration.BUS,
+                                            scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
                                                 version='any',
                                                 ref='mybus:Charley'
                                             )
@@ -1983,7 +1984,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
-                                journey_pattern=[
+                                choice=[
                                     ServiceJourneyPattern(
                                         id='hde:sjp_YAo',
                                         version='any',
@@ -2367,7 +2368,7 @@ obj = PublicationDelivery(
                             id='hde:TIM_24o_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='hde:Cnd001',
                                             version='any',
@@ -2417,7 +2418,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:TDT01'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_24'
                                         ),
@@ -2453,7 +2454,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:TDT01'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_24'
                                         ),
@@ -2489,7 +2490,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:TDT01'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_24'
                                         ),
@@ -2531,7 +2532,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:TDT01'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_24'
                                         ),
@@ -2665,7 +2666,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT1M"),
                                         minimum_transfer_time=XmlDuration("PT1M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            notice_assignment=[
+                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
                                                 NoticeAssignment(
                                                     id='hde::sji_YP_01_YQ_02',
                                                     version='any',
@@ -2716,7 +2717,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT1M"),
                                         minimum_transfer_time=XmlDuration("PT1M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            notice_assignment=[
+                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
                                                 NoticeAssignment(
                                                     id='hde::sji_ZP_02_YP_03',
                                                     version='any',
@@ -2767,7 +2768,7 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT1M"),
                                         minimum_transfer_time=XmlDuration("PT1M"),
                                         notice_assignments=NoticeAssignmentsRelStructure(
-                                            notice_assignment=[
+                                            sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
                                                 NoticeAssignment(
                                                     id='hde::sji_ZP_03_ZQ_04',
                                                     version='any',
@@ -2848,7 +2849,7 @@ obj = PublicationDelivery(
                                             value='Monday 2010-11-01'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 1),
+                                        choice=XmlDate(2010, 11, 1),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
@@ -2861,7 +2862,7 @@ obj = PublicationDelivery(
                                             value='Tuesday 2010-11-02'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 2),
+                                        choice=XmlDate(2010, 11, 2),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
@@ -2874,7 +2875,7 @@ obj = PublicationDelivery(
                                             value='Wednesday 2010-11-03'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 3),
+                                        choice=XmlDate(2010, 11, 3),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
@@ -2887,7 +2888,7 @@ obj = PublicationDelivery(
                                             value='Thusday 2010-11-04'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 4),
+                                        choice=XmlDate(2010, 11, 4),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
@@ -2900,7 +2901,7 @@ obj = PublicationDelivery(
                                             value='MFriday 2010-11-05'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 5),
+                                        choice=XmlDate(2010, 11, 5),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
@@ -2913,7 +2914,7 @@ obj = PublicationDelivery(
                                             value='Saturday 2010-11-06'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 6),
+                                        choice=XmlDate(2010, 11, 6),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
@@ -2926,7 +2927,7 @@ obj = PublicationDelivery(
                                             value='Sunday 2010-11-07'
                                         ),
                                         order=1,
-                                        operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 7),
+                                        choice=XmlDate(2010, 11, 7),
                                         day_type_ref=DayTypeRef(
                                             version='any',
                                             ref='hde:DT_01-MF-NH'

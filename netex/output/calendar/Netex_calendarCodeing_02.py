@@ -46,7 +46,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         TimetableFrameRef(
                             ref='hde:TimetableFrameTIM_23_O'
                         ),
@@ -60,7 +60,7 @@ obj = PublicationDelivery(
         value='Example  of compact and verobose service calendar'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             ServiceCalendarFrame(
                 id='hde:ServiceCalendarFrame:CAL_02',
                 version='any',
@@ -97,7 +97,7 @@ obj = PublicationDelivery(
                                 value='Monday 2010-11-01'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 1),
+                            choice=XmlDate(2010, 11, 1),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
@@ -110,7 +110,7 @@ obj = PublicationDelivery(
                                 value='Tuesday 2010-11-02'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 2),
+                            choice=XmlDate(2010, 11, 2),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
@@ -123,7 +123,7 @@ obj = PublicationDelivery(
                                 value='Wednesday 2010-11-03'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 3),
+                            choice=XmlDate(2010, 11, 3),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
@@ -136,7 +136,7 @@ obj = PublicationDelivery(
                                 value='Thusday 2010-11-04'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 4),
+                            choice=XmlDate(2010, 11, 4),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
@@ -149,7 +149,7 @@ obj = PublicationDelivery(
                                 value='MFriday 2010-11-05'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 5),
+                            choice=XmlDate(2010, 11, 5),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
@@ -162,7 +162,7 @@ obj = PublicationDelivery(
                                 value='Saturday 2010-11-06'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 6),
+                            choice=XmlDate(2010, 11, 6),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
@@ -175,7 +175,7 @@ obj = PublicationDelivery(
                                 value='Sunday 2010-11-07'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 7),
+                            choice=XmlDate(2010, 11, 7),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
@@ -188,7 +188,7 @@ obj = PublicationDelivery(
                                 value='Monday 2010-11-08'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 8),
+                            choice=XmlDate(2010, 11, 8),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
@@ -201,7 +201,7 @@ obj = PublicationDelivery(
                                 value='Tuesday 2010-11-09'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 9),
+                            choice=XmlDate(2010, 11, 9),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
@@ -214,7 +214,7 @@ obj = PublicationDelivery(
                                 value='Wednesday 2010-11-10'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 10),
+                            choice=XmlDate(2010, 11, 10),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
@@ -227,7 +227,7 @@ obj = PublicationDelivery(
                                 value='Thusday 2010-11-11'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 11),
+                            choice=XmlDate(2010, 11, 11),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
@@ -240,7 +240,7 @@ obj = PublicationDelivery(
                                 value='MFriday 2010-11-12'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 12),
+                            choice=XmlDate(2010, 11, 12),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
@@ -253,7 +253,7 @@ obj = PublicationDelivery(
                                 value='Saturday 2010-11-13'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 13),
+                            choice=XmlDate(2010, 11, 13),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
@@ -266,7 +266,7 @@ obj = PublicationDelivery(
                                 value='Sunday 2010-11-14'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 14),
+                            choice=XmlDate(2010, 11, 14),
                             day_type_ref=DayTypeRef(
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
@@ -455,7 +455,7 @@ obj = PublicationDelivery(
                                 value='Monday 2010-11-01'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-01'
                             ),
@@ -471,7 +471,7 @@ obj = PublicationDelivery(
                                 value='Tuesday 2010-11-02'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-02'
                             ),
@@ -487,7 +487,7 @@ obj = PublicationDelivery(
                                 value='Wednesday 2010-11-03'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-03'
                             ),
@@ -503,7 +503,7 @@ obj = PublicationDelivery(
                                 value='Thusday 2010-11-04'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-04'
                             ),
@@ -519,7 +519,7 @@ obj = PublicationDelivery(
                                 value='MFriday 2010-11-05'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-05'
                             ),
@@ -535,7 +535,7 @@ obj = PublicationDelivery(
                                 value='Saturday 2010-11-06'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-06'
                             ),
@@ -551,7 +551,7 @@ obj = PublicationDelivery(
                                 value='Sunday 2010-11-07'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-07'
                             ),
@@ -567,7 +567,7 @@ obj = PublicationDelivery(
                                 value='Monday 2010-11-08'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-08'
                             ),
@@ -583,7 +583,7 @@ obj = PublicationDelivery(
                                 value='Tuesday 2010-11-09'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-09'
                             ),
@@ -599,7 +599,7 @@ obj = PublicationDelivery(
                                 value='Wednesday 2010-11-10'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-10'
                             ),
@@ -615,7 +615,7 @@ obj = PublicationDelivery(
                                 value='Thusday 2010-11-11'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-11'
                             ),
@@ -631,7 +631,7 @@ obj = PublicationDelivery(
                                 value='MFriday 2010-11-12'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-12'
                             ),
@@ -647,7 +647,7 @@ obj = PublicationDelivery(
                                 value='Saturday 2010-11-13'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-13'
                             ),
@@ -663,7 +663,7 @@ obj = PublicationDelivery(
                                 value='Sunday 2010-11-14'
                             ),
                             order=1,
-                            operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
+                            choice=OperatingDayRef(
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-14'
                             ),

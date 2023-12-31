@@ -45,7 +45,7 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1Y2M3DT10H30M0S"),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='mybus:CompositeFrame:CF1',
                 version='any',
@@ -197,7 +197,7 @@ obj = PublicationDelivery(
                             id='mybus:GeneralFrame:ntwkf002',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='mybus:AvailabilityCondition:VC_ntwkf002_002_mf',
                                             created=XmlDateTime(2010, 5, 18, 10, 30, 47, 0, 0),
@@ -294,7 +294,7 @@ obj = PublicationDelivery(
                             id='mybus:GeneralFrame:ntwkf003',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         ValidityRuleParameter(
                                             id='mybus:ValidityRuleParameter:VC_ntwkf003_002_icy',
                                             created=XmlDateTime(2010, 5, 18, 10, 30, 47, 0, 0),

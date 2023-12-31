@@ -14,7 +14,7 @@ class FlexibleQuaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexibleQuays_RelStructure"
 
-    flexible_quay_ref: List[
+    choice: List[
         Union[
             HailAndRideAreaRef, FlexibleAreaRef, FlexibleQuayRef, FlexibleQuay
         ]

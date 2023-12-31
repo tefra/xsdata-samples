@@ -22,6 +22,7 @@ from .status_enumeration import StatusEnumeration
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
 )
+from .time_of_day_enumeration import TimeOfDayEnumeration
 from .timeband_ref import TimebandRef
 from .validity_condition_ref import ValidityConditionRef
 from .validity_condition_ref_structure import ValidityConditionRefStructure
@@ -155,7 +156,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityConditions_RelStructure"
 
-    validity_condition_ref_or_validity_condition: List[
+    choice: List[
         Union[
             AvailabilityConditionRef,
             ValidityRuleParameterRef,
@@ -570,17 +571,28 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time: Optional[XmlTime] = field(
+    start_time_or_start_event: Optional[
+        Union[XmlTime, TimeOfDayEnumeration]
+    ] = field(
         default=None,
         metadata={
-            "name": "StartTime",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StartTime",
+                    "type": XmlTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StartEvent",
+                    "type": TimeOfDayEnumeration,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
         },
     )
-    end_time_or_day_offset_or_duration: List[
-        Union[XmlTime, int, XmlDuration]
+    choice: List[
+        Union[XmlTime, TimeOfDayEnumeration, int, XmlDuration]
     ] = field(
         default_factory=list,
         metadata={
@@ -589,6 +601,11 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
                 {
                     "name": "EndTime",
                     "type": XmlTime,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EndEvent",
+                    "type": TimeOfDayEnumeration,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -865,7 +882,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
 
-    day_type_ref: Optional[
+    choice: Optional[
         Union[FareDayTypeRef, DayTypeRef, DayOfWeekEnumeration, str]
     ] = field(
         default=None,

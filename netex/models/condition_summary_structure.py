@@ -4,6 +4,7 @@ from .fare_structure_type_enumeration import FareStructureTypeEnumeration
 from .operator_restrictions_enumeration import OperatorRestrictionsEnumeration
 from .tariff_basis_enumeration import TariffBasisEnumeration
 from .train_restrictions_enumeration import TrainRestrictionsEnumeration
+from .vehicle_collection_enumeration import VehicleCollectionEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -244,6 +245,22 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    requires_deposit: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "RequiresDeposit",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    no_cash_payment: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "NoCashPayment",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     has_purchase_conditions: Optional[bool] = field(
         default=None,
         metadata={
@@ -280,6 +297,46 @@ class ConditionSummaryStructure:
         default=None,
         metadata={
             "name": "HasQuota",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    penalty_if_without_ticket: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "PenaltyIfWithoutTicket",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    available_on_subscription: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "AvailableOnSubscription",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    unlimited_mileage: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "UnlimitedMileage",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    like_for_like_refuelling: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "LikeForLikeRefuelling",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    vehicle_collection: Optional[VehicleCollectionEnumeration] = field(
+        default=None,
+        metadata={
+            "name": "VehicleCollection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

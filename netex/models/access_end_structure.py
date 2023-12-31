@@ -1,8 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .all_vehicle_modes_of_transport_enumeration import (
-    AllVehicleModesOfTransportEnumeration,
-)
+from .all_modes_enumeration import AllModesEnumeration
 from .place_ref_structure import PlaceRefStructure
 from .point_ref_structure import PointRefStructure
 
@@ -11,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class AccessEndStructure:
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: Optional[AllModesEnumeration] = field(
         default=None,
         metadata={
             "name": "TransportMode",

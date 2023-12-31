@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+from .access_vehicle_equipment import AccessVehicleEquipment
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .help_point_equipment import HelpPointEquipment
@@ -12,7 +13,10 @@ from .rubbish_disposal_equipment import RubbishDisposalEquipment
 from .rubbish_disposal_equipment_ref import RubbishDisposalEquipmentRef
 from .sanitary_equipment import SanitaryEquipment
 from .sanitary_equipment_ref import SanitaryEquipmentRef
+from .ticket_validator_equipment import TicketValidatorEquipment
+from .ticketing_equipment import TicketingEquipment
 from .vehicle_equipment_ref import VehicleEquipmentRef
+from .wheelchair_vehicle_equipment import WheelchairVehicleEquipment
 from .wheelchair_vehicle_ref import WheelchairVehicleRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -38,6 +42,10 @@ class PassengerEquipmentsRelStructure(ContainmentAggregationStructure):
             HelpPointEquipment,
             PassengerSafetyEquipment,
             SanitaryEquipment,
+            TicketValidatorEquipment,
+            TicketingEquipment,
+            WheelchairVehicleEquipment,
+            AccessVehicleEquipment,
         ]
     ] = field(
         default_factory=list,
@@ -107,6 +115,26 @@ class PassengerEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "SanitaryEquipment",
                     "type": SanitaryEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketValidatorEquipment",
+                    "type": TicketValidatorEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingEquipment",
+                    "type": TicketingEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WheelchairVehicleEquipment",
+                    "type": WheelchairVehicleEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessVehicleEquipment",
+                    "type": AccessVehicleEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

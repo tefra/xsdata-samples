@@ -2,8 +2,12 @@ from dataclasses import dataclass, field
 from typing import List, Union
 from .all_distribution_channels_ref import AllDistributionChannelsRef
 from .customer_account_status_ref import CustomerAccountStatusRef
+from .flexible_mode_of_operation_ref import FlexibleModeOfOperationRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .personal_mode_of_operation_ref import PersonalModeOfOperationRef
+from .scheduled_mode_of_operation_ref import ScheduledModeOfOperationRef
 from .type_of_access_right_assignment_ref import TypeOfAccessRightAssignmentRef
+from .type_of_battery_chemistry_ref import TypeOfBatteryChemistryRef
 from .type_of_congestion_ref import TypeOfCongestionRef
 from .type_of_customer_account_ref import TypeOfCustomerAccountRef
 from .type_of_delivery_variant_ref import TypeOfDeliveryVariantRef
@@ -22,6 +26,8 @@ from .type_of_line_ref import TypeOfLineRef
 from .type_of_link_ref import TypeOfLinkRef
 from .type_of_link_sequence_ref import TypeOfLinkSequenceRef
 from .type_of_machine_readability_ref import TypeOfMachineReadabilityRef
+from .type_of_mobility_service_ref import TypeOfMobilityServiceRef
+from .type_of_mode_of_operation_ref import TypeOfModeOfOperationRef
 from .type_of_notice_ref import TypeOfNoticeRef
 from .type_of_organisation_part_ref import TypeOfOrganisationPartRef
 from .type_of_organisation_ref import TypeOfOrganisationRef
@@ -29,6 +35,7 @@ from .type_of_passenger_information_equipment_ref import (
     TypeOfPassengerInformationEquipmentRef,
 )
 from .type_of_place_ref import TypeOfPlaceRef
+from .type_of_plug_ref import TypeOfPlugRef
 from .type_of_point_ref import TypeOfPointRef
 from .type_of_pricing_rule_ref import TypeOfPricingRuleRef
 from .type_of_projection_ref import TypeOfProjectionRef
@@ -43,6 +50,9 @@ from .type_of_transfer_ref import TypeOfTransferRef
 from .type_of_travel_document_ref import TypeOfTravelDocumentRef
 from .type_of_validity_ref import TypeOfValidityRef
 from .type_of_zone_ref import TypeOfZoneRef
+from .vehicle_pooling_ref import VehiclePoolingRef
+from .vehicle_rental_ref import VehicleRentalRef
+from .vehicle_sharing_ref import VehicleSharingRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -52,7 +62,7 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfEntityRefs_RelStructure"
 
-    type_of_entity_ref: List[
+    choice: List[
         Union[
             TypeOfRetailDeviceRef,
             CustomerAccountStatusRef,
@@ -66,20 +76,30 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
             AllDistributionChannelsRef,
             TypeOfMachineReadabilityRef,
             TypeOfTravelDocumentRef,
+            TypeOfMobilityServiceRef,
             TypeOfFareProductRef,
             TypeOfFareStructureFactorRef,
             TypeOfPricingRuleRef,
             TypeOfFlexibleServiceRef,
             TypeOfPassengerInformationEquipmentRef,
-            TypeOfServiceFeatureRef,
-            TypeOfCongestionRef,
             TypeOfTimeDemandTypeRef,
             TypeOfJourneyPatternRef,
             TypeOfSecurityListRef,
+            TypeOfPlugRef,
+            TypeOfBatteryChemistryRef,
+            TypeOfServiceFeatureRef,
             TypeOfDeliveryVariantRef,
             TypeOfNoticeRef,
+            TypeOfCongestionRef,
             TypeOfServiceRef,
             TypeOfFacilityRef,
+            TypeOfModeOfOperationRef,
+            PersonalModeOfOperationRef,
+            VehiclePoolingRef,
+            VehicleSharingRef,
+            VehicleRentalRef,
+            FlexibleModeOfOperationRef,
+            ScheduledModeOfOperationRef,
             TypeOfEquipmentRef,
             TypeOfProjectionRef,
             TypeOfFeatureRef,
@@ -161,6 +181,11 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "TypeOfMobilityServiceRef",
+                    "type": TypeOfMobilityServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "TypeOfFareProductRef",
                     "type": TypeOfFareProductRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -186,16 +211,6 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TypeOfServiceFeatureRef",
-                    "type": TypeOfServiceFeatureRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TypeOfCongestionRef",
-                    "type": TypeOfCongestionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TypeOfTimeDemandTypeRef",
                     "type": TypeOfTimeDemandTypeRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -211,6 +226,21 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "TypeOfPlugRef",
+                    "type": TypeOfPlugRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfBatteryChemistryRef",
+                    "type": TypeOfBatteryChemistryRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfServiceFeatureRef",
+                    "type": TypeOfServiceFeatureRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "TypeOfDeliveryVariantRef",
                     "type": TypeOfDeliveryVariantRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -221,6 +251,11 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "TypeOfCongestionRef",
+                    "type": TypeOfCongestionRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "TypeOfServiceRef",
                     "type": TypeOfServiceRef,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -228,6 +263,41 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
                 {
                     "name": "TypeOfFacilityRef",
                     "type": TypeOfFacilityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfModeOfOperationRef",
+                    "type": TypeOfModeOfOperationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PersonalModeOfOperationRef",
+                    "type": PersonalModeOfOperationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehiclePoolingRef",
+                    "type": VehiclePoolingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleSharingRef",
+                    "type": VehicleSharingRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleRentalRef",
+                    "type": VehicleRentalRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FlexibleModeOfOperationRef",
+                    "type": FlexibleModeOfOperationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ScheduledModeOfOperationRef",
+                    "type": ScheduledModeOfOperationRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

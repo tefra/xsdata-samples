@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2.2">
+  <PublicationTimestamp>2019-06-12T09:30:47Z</PublicationTimestamp>
+  <ParticipantRef>AURIGE001</ParticipantRef>
+  <dataObjects>
+    <CompositeFrame id="FR:CompositeFrame:myFrame01:LOC" created="2019-06-12T09:30:47Z" version="1">
+      <frames>
+        <GeneralFrame id="FR:TypeOfFrame:NETEX_PARKING-Example1:LOC" version="001">
+          <TypeOfFrameRef ref="FR:TypeOfFrame:NETEX_PARKING">version="2.01:FR-NETEX_PARKING-1.0"</TypeOfFrameRef>
+          <members>
+            <Parking id="GE:Parking:633:Stadtmobil" version="2" responsibilitySetRef="GE:ResponsibilitySet:0123">
+              <Name>Rosdorfer Weg 18/ Hinterhof</Name>
+              <Centroid>
+                <Location>
+                  <Longitude>9.925000000</Longitude>
+                  <Latitude>51.53000000</Latitude>
+                </Location>
+              </Centroid>
+              <ParkingType>urbanParking</ParkingType>
+              <ParkingVehicleTypes>car</ParkingVehicleTypes>
+              <ParkingLayout>roadside</ParkingLayout>
+              <TotalCapacity>5</TotalCapacity>
+              <ParkingReservation>noReservations</ParkingReservation>
+              <parkingAreas>
+                <ParkingArea id="GE:ParkingArea:633-1:Stadtmobil" version="any">
+                  <PublicUse>authorisedPublicOnly</PublicUse>
+                  <ParkingProperties id="GE:ParkingProperties:633-1:Stadtmobil" version="any">
+                    <ParkingUserTypes>vehicleSharing</ParkingUserTypes>
+                  </ParkingProperties>
+                </ParkingArea>
+              </parkingAreas>
+            </Parking>
+            <GeneralOrganisation id="GE:Organsation:25" version="any">
+              <Name>stadt-teil-auto Car Sharing Göttingen</Name>
+              <Description>Comment here if the organisation is a customer making a private place available for carSharing, and set the OrganisationType to "other"</Description>
+              <OrganisationType>facilityOperator</OrganisationType>
+            </GeneralOrganisation>
+            <ResponsibilitySet id="FR:ResponsibilitySet:0123" version="any">
+              <roles>
+                <ResponsibilityRoleAssignment id="GE:ResponsibilityRoleAssignment:01" version="any">
+                  <StakeholderRoleType>EntityLegalOwnership</StakeholderRoleType>
+                  <ResponsibleOrganisationRef ref="GE:Organsation:25"/>
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <Vehicle id="GE:Vehicle:7292" version="any">
+              <Name>Renault Trafic (GÖ-D 9849)</Name>
+              <RegistrationNumber>GÖ-D 9849</RegistrationNumber>
+              <VehicleTypeRef ref="GE:SimpleVehicleType:1"/>
+              <VehicleModelRef ref="GE:VehicleModel:1"/>
+            </Vehicle>
+            <SimpleVehicleType id="GE:SimpleVehicleType:1" version="any">
+              <EuroClass>3</EuroClass>
+              <PropulsionType>combustion</PropulsionType>
+              <FuelType>diesel</FuelType>
+              <MaximumRange>845</MaximumRange>
+              <TransportMode>selfDrive</TransportMode>
+              <Length>4</Length>
+              <Width>1.9</Width>
+              <Height>1.4</Height>
+              <VehicleCategory>car</VehicleCategory>
+            </SimpleVehicleType>
+            <VehicleModel id="GE:VehicleModel:1" version="any">
+              <Name>Renault Trafic</Name>
+              <CarModelProfileRef ref="GE:CarEquipmentProfile:1"/>
+            </VehicleModel>
+            <CarModelProfile id="GE:CarEquipmentProfile:1" version="any">
+              <ChildSeat>smallChild</ChildSeat>
+              <Seats>5</Seats>
+            </CarModelProfile>
+            <Fleet id="GE:Fleet:1" version="any">
+              <Name>Stadtmobil car fleet</Name>
+              <members>
+                <VehicleRef ref="GE:Vehicle:7292"/>
+              </members>
+              <transportTypes>
+                <VehicleTypeRef ref="GE:VehicleType:1"/>
+              </transportTypes>
+            </Fleet>
+            <VehicleSharingService id="GE:VehicleSharingService:1" version="any">
+              <OperatorRef ref="GE:Operator:1"/>
+              <BookingRequired>true</BookingRequired>
+              <RegistrationRequired>true</RegistrationRequired>
+              <proposedByServices>
+                <OnlineServiceRef version="any" ref="GE:OnlineServiceRef:12"/>
+              </proposedByServices>
+              <VehicleSharingRef version="any" ref="GE:VehicleSharing:12"/>
+              <MinimumSharingPeriod>PT30M</MinimumSharingPeriod>
+              <MaximumSharingPeriod>PT24H</MaximumSharingPeriod>
+              <fleets>
+                <FleetRef version="any" ref="GE:Fleet:1"/>
+              </fleets>
+            </VehicleSharingService>
+            <OnlineService id="GE:OnlineServiceRef:12" version="any">
+              <Name>Stadtmobil</Name>
+              <ServiceBookingArrangements>
+                <BookingUrl>https://www.stadtmobil.de/</BookingUrl>
+              </ServiceBookingArrangements>
+              <LogInRequired>true</LogInRequired>
+            </OnlineService>
+            <VehicleSharing id="GE:VehicleSharing:12" version="any">
+              <Name>German vehicle sharing service</Name>
+              <VehicleSharingType>vehicleSharing</VehicleSharingType>
+            </VehicleSharing>
+            <Operator id="GE:Operator:1" version="any">
+              <Name>Stadtmobil</Name>
+              <PrimaryMode>car</PrimaryMode>
+            </Operator>
+          </members>
+        </GeneralFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
+

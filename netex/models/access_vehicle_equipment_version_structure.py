@@ -9,7 +9,6 @@ from .assisted_boarding_location_enumeration import (
     AssistedBoardingLocationEnumeration,
 )
 from .mobility_enumeration import MobilityEnumeration
-from .type_of_entity_version_structure import TypeOfEntityVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -77,7 +76,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_height: Optional[TypeOfEntityVersionStructure] = field(
+    boarding_height: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "BoardingHeight",
@@ -85,7 +84,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gap_to_platform: Optional[TypeOfEntityVersionStructure] = field(
+    gap_to_platform: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "GapToPlatform",

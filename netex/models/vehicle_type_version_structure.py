@@ -1,21 +1,17 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .facility_requirements_rel_structure import (
     FacilityRequirementsRelStructure,
 )
-from .multilingual_string import MultilingualString
 from .passenger_capacities_rel_structure import PassengerCapacitiesRelStructure
-from .passenger_capacity_structure import PassengerCapacityStructure
 from .passenger_carrying_requirements_rel_structure import (
     PassengerCarryingRequirementsRelStructure,
 )
-from .private_code import PrivateCode
 from .service_facility_sets_rel_structure import (
     ServiceFacilitySetsRelStructure,
 )
-from .type_of_fuel_enumeration import TypeOfFuelEnumeration
+from .transport_type_version_structure import TransportTypeVersionStructure
 from .vehicle_manoeuvring_requirements_rel_structure import (
     VehicleManoeuvringRequirementsRelStructure,
 )
@@ -26,82 +22,10 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class VehicleTypeVersionStructure(DataManagedObjectStructure):
+class VehicleTypeVersionStructure(TransportTypeVersionStructure):
     class Meta:
         name = "VehicleType_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
-        default=None,
-        metadata={
-            "name": "Name",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    short_name: Optional[MultilingualString] = field(
-        default=None,
-        metadata={
-            "name": "ShortName",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    description: Optional[MultilingualString] = field(
-        default=None,
-        metadata={
-            "name": "Description",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    private_code: Optional[PrivateCode] = field(
-        default=None,
-        metadata={
-            "name": "PrivateCode",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    reversing_direction: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "ReversingDirection",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    self_propelled: Optional[bool] = field(
-        default=None,
-        metadata={
-            "name": "SelfPropelled",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    type_of_fuel: Optional[TypeOfFuelEnumeration] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfFuel",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    euro_class: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "EuroClass",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    passenger_capacity: Optional[PassengerCapacityStructure] = field(
-        default=None,
-        metadata={
-            "name": "PassengerCapacity",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
     capacities: Optional[PassengerCapacitiesRelStructure] = field(
         default=None,
         metadata={
@@ -177,6 +101,14 @@ class VehicleTypeVersionStructure(DataManagedObjectStructure):
         default=None,
         metadata={
             "name": "Weight",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    first_axle_height: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "FirstAxleHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

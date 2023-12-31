@@ -12,7 +12,7 @@ class BoardingPositionTypeEnumeration(Enum):
     POSITION_AT_BUS_STOP = "positionAtBusStop"
     BOAT_GANGWAY = "boatGangway"
     FERRY_GANGWAY = "ferryGangway"
-    TELECABINEPLATFORM = "telecabineplatform"
+    TELECABIN_PLATFORM = "telecabinPlatform"
     SET_DOWN_POINT = "setDownPoint"
     TAXI_BAY = "taxiBay"
     VEHICLE_LOADING_RAMP = "vehicleLoadingRamp"

@@ -13,6 +13,7 @@ from .info_links_rel_structure import InfoLinksRelStructure
 from .management_agent_ref import ManagementAgentRef
 from .multilingual_string import MultilingualString
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .online_service_operator_ref import OnlineServiceOperatorRef
 from .operator_ref import OperatorRef
 from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
@@ -32,9 +33,9 @@ from .time_structure_factors_rel_structure import (
     TimeStructureFactorsRelStructure,
 )
 from .time_unit_ref import TimeUnitRef
+from .transport_type_refs_rel_structure import TransportTypeRefsRelStructure
 from .travel_agent_ref import TravelAgentRef
 from .type_of_tariff_ref import TypeOfTariffRef
-from .vehicle_type_refs_rel_structure import VehicleTypeRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -84,16 +85,17 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: Optional[
+    choice: Optional[
         Union[
             RetailConsortiumRef,
-            AuthorityRef,
-            OperatorRef,
+            OnlineServiceOperatorRef,
             GeneralOrganisationRef,
             ManagementAgentRef,
             ServicedOrganisationRef,
             TravelAgentRef,
             OtherOrganisationRef,
+            AuthorityRef,
+            OperatorRef,
             OrganisationRef,
             GroupOfOperatorsRef,
         ]
@@ -108,13 +110,8 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
+                    "name": "OnlineServiceOperatorRef",
+                    "type": OnlineServiceOperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -140,6 +137,16 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
                 {
                     "name": "OtherOrganisationRef",
                     "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -214,7 +221,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    vehicle_types: Optional[VehicleTypeRefsRelStructure] = field(
+    vehicle_types: Optional[TransportTypeRefsRelStructure] = field(
         default=None,
         metadata={
             "name": "vehicleTypes",

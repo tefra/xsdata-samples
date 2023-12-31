@@ -2,15 +2,13 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from .direction_of_use_enumeration import DirectionOfUseEnumeration
-from .installed_equipment_version_structure import (
-    InstalledEquipmentVersionStructure,
-)
+from .place_equipment_version_structure import PlaceEquipmentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class AccessEquipmentVersionStructure(InstalledEquipmentVersionStructure):
+class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
     class Meta:
         name = "AccessEquipment_VersionStructure"
 

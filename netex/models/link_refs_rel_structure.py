@@ -7,6 +7,7 @@ from .line_link_ref_by_value import LineLinkRefByValue
 from .link_ref_by_value import LinkRefByValue
 from .modal_link_ref_by_value import ModalLinkRefByValue
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
+from .onward_vehicle_meeting_link_ref import OnwardVehicleMeetingLinkRef
 from .path_link_ref import PathLinkRef
 from .path_link_ref_by_value import PathLinkRefByValue
 from .railway_link_ref import RailwayLinkRef
@@ -19,6 +20,7 @@ from .service_link_ref import ServiceLinkRef
 from .service_link_ref_by_value import ServiceLinkRefByValue
 from .timing_link_ref import TimingLinkRef
 from .timing_link_ref_by_value import TimingLinkRefByValue
+from .vehicle_meeting_link_ref import VehicleMeetingLinkRef
 from .wire_link_ref import WireLinkRef
 from .wire_link_ref_by_value import WireLinkRefByValue
 
@@ -32,25 +34,27 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
 
     link_ref_or_infrastructure_link_ref_or_link_ref_by_value: List[
         Union[
+            OnwardVehicleMeetingLinkRef,
+            VehicleMeetingLinkRef,
             ServiceLinkRef,
             LineLinkRef,
-            PathLinkRef,
             TimingLinkRef,
-            RouteLinkRef,
             WireLinkRef,
             RoadLinkRef,
             RailwayLinkRef,
             ActivationLinkRef,
+            PathLinkRef,
+            RouteLinkRef,
             ServiceLinkRefByValue,
             LineLinkRefByValue,
-            PathLinkRefByValue,
             TimingLinkRefByValue,
-            RouteLinkRefByValue,
             WireLinkRefByValue,
             RoadLinkRefByValue,
             RailwayLinkRefByValue,
             ActivationLinkRefByValue,
             ModalLinkRefByValue,
+            PathLinkRefByValue,
+            RouteLinkRefByValue,
             LinkRefByValue,
         ]
     ] = field(
@@ -58,6 +62,16 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "OnwardVehicleMeetingLinkRef",
+                    "type": OnwardVehicleMeetingLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleMeetingLinkRef",
+                    "type": VehicleMeetingLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "ServiceLinkRef",
                     "type": ServiceLinkRef,
@@ -69,18 +83,8 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PathLinkRef",
-                    "type": PathLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TimingLinkRef",
                     "type": TimingLinkRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RouteLinkRef",
-                    "type": RouteLinkRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -104,6 +108,16 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
+                    "name": "PathLinkRef",
+                    "type": PathLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RouteLinkRef",
+                    "type": RouteLinkRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
                     "name": "ServiceLinkRefByValue",
                     "type": ServiceLinkRefByValue,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -114,18 +128,8 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PathLinkRefByValue",
-                    "type": PathLinkRefByValue,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TimingLinkRefByValue",
                     "type": TimingLinkRefByValue,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RouteLinkRefByValue",
-                    "type": RouteLinkRefByValue,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -151,6 +155,16 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
                 {
                     "name": "ModalLinkRefByValue",
                     "type": ModalLinkRefByValue,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PathLinkRefByValue",
+                    "type": PathLinkRefByValue,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RouteLinkRefByValue",
+                    "type": RouteLinkRefByValue,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

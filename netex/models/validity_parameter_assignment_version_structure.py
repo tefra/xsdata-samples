@@ -22,7 +22,7 @@ class ValidityParameterAssignmentVersionStructure(
     class Meta:
         name = "ValidityParameterAssignment_VersionStructure"
 
-    time_structure_factor_ref: Optional[
+    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: Optional[
         Union[TimeIntervalRef, ParkingChargeBandRef, TimeStructureFactorRef]
     ] = field(
         default=None,

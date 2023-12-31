@@ -13,6 +13,7 @@ from .notice_assignment_views_rel_structure import (
 )
 from .service_designator import ServiceDesignator
 from .service_journey_ref import ServiceJourneyRef
+from .single_journey_ref import SingleJourneyRef
 from .special_service_ref import SpecialServiceRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 from .train_number_ref import TrainNumberRef
@@ -35,6 +36,7 @@ class GroupOfServicesMemberStructure(
     )
     choice: Optional[
         Union[
+            SingleJourneyRef,
             DatedVehicleJourneyRef,
             DatedSpecialServiceRef,
             SpecialServiceRef,
@@ -51,6 +53,11 @@ class GroupOfServicesMemberStructure(
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "SingleJourneyRef",
+                    "type": SingleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "DatedVehicleJourneyRef",
                     "type": DatedVehicleJourneyRef,

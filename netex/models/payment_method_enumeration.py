@@ -25,6 +25,7 @@ class PaymentMethodEnumeration(Enum):
     EPAY_ACCOUNT = "epayAccount"
     SMS = "sms"
     MOBILE_PHONE = "mobilePhone"
+    MOBILE_APP = "mobileApp"
     VOUCHER = "voucher"
     TOKEN = "token"
     WARRANT = "warrant"

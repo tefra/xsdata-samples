@@ -1,13 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .access_equipment_ref import AccessEquipmentRef
 from .access_feature_enumeration import AccessFeatureEnumeration
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .activated_equipment_ref import ActivatedEquipmentRef
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .assistance_service_ref import AssistanceServiceRef
+from .battery_equipment_ref import BatteryEquipmentRef
+from .car_pooling_service_ref import CarPoolingServiceRef
 from .catering_service_ref import CateringServiceRef
+from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
 from .check_constraint_delays_rel_structure import (
     CheckConstraintDelaysRelStructure,
 )
@@ -40,6 +42,7 @@ from .luggage_locker_equipment_ref import LuggageLockerEquipmentRef
 from .luggage_service_ref import LuggageServiceRef
 from .meeting_point_service_ref import MeetingPointServiceRef
 from .money_service_ref import MoneyServiceRef
+from .online_service_ref import OnlineServiceRef
 from .passenger_equipment_ref import PassengerEquipmentRef
 from .passenger_information_equipment_ref import (
     PassengerInformationEquipmentRef,
@@ -50,6 +53,7 @@ from .place_ref import PlaceRef
 from .place_sign_ref import PlaceSignRef
 from .queueing_equipment_ref import QueueingEquipmentRef
 from .ramp_equipment_ref import RampEquipmentRef
+from .refuelling_equipment_ref import RefuellingEquipmentRef
 from .retail_device_ref import RetailDeviceRef
 from .retail_service_ref import RetailServiceRef
 from .rough_surface_ref import RoughSurfaceRef
@@ -60,6 +64,7 @@ from .shelter_equipment_ref import ShelterEquipmentRef
 from .sign_equipment_ref import SignEquipmentRef
 from .site_equipment_ref import SiteEquipmentRef
 from .staircase_equipment_ref import StaircaseEquipmentRef
+from .taxi_service_ref import TaxiServiceRef
 from .ticket_validator_equipment_ref import TicketValidatorEquipmentRef
 from .ticketing_equipment_ref import TicketingEquipmentRef
 from .ticketing_service_ref import TicketingServiceRef
@@ -69,6 +74,9 @@ from .type_of_congestion_ref import TypeOfCongestionRef
 from .type_of_equipment_ref import TypeOfEquipmentRef
 from .vehicle_charging_equipment_ref import VehicleChargingEquipmentRef
 from .vehicle_equipment_ref import VehicleEquipmentRef
+from .vehicle_release_equipment_ref import VehicleReleaseEquipmentRef
+from .vehicle_rental_service_ref import VehicleRentalServiceRef
+from .vehicle_sharing_service_ref import VehicleSharingServiceRef
 from .waiting_equipment_ref import WaitingEquipmentRef
 from .waiting_room_equipment_ref import WaitingRoomEquipmentRef
 from .wheelchair_vehicle_ref import WheelchairVehicleRef
@@ -164,6 +172,16 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
     choice: Optional[
         Union[
             RetailDeviceRef,
+            OnlineServiceRef,
+            VehicleRentalServiceRef,
+            VehicleSharingServiceRef,
+            ChauffeuredVehicleServiceRef,
+            TaxiServiceRef,
+            CarPoolingServiceRef,
+            ActivatedEquipmentRef,
+            BatteryEquipmentRef,
+            RefuellingEquipmentRef,
+            VehicleChargingEquipmentRef,
             AssistanceBookingServiceRef,
             CateringServiceRef,
             RetailServiceRef,
@@ -179,10 +197,11 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             AssistanceServiceRef,
             TicketingServiceRef,
             LocalServiceRef,
-            VehicleChargingEquipmentRef,
-            CycleStorageEquipmentRef,
+            VehicleReleaseEquipmentRef,
             TicketValidatorEquipmentRef,
             TicketingEquipmentRef,
+            PassengerInformationEquipmentRef,
+            CycleStorageEquipmentRef,
             TrolleyStandEquipmentRef,
             SeatingEquipmentRef,
             ShelterEquipmentRef,
@@ -190,10 +209,6 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             WaitingRoomEquipmentRef,
             WaitingEquipmentRef,
             SiteEquipmentRef,
-            HeadingSignRef,
-            GeneralSignRef,
-            PlaceSignRef,
-            SignEquipmentRef,
             PlaceLightingEquipmentRef,
             RoughSurfaceRef,
             StaircaseEquipmentRef,
@@ -204,9 +219,10 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             CrossingEquipmentRef,
             RampEquipmentRef,
             EntranceEquipmentRef,
-            AccessEquipmentRef,
-            ActivatedEquipmentRef,
-            PassengerInformationEquipmentRef,
+            HeadingSignRef,
+            GeneralSignRef,
+            PlaceSignRef,
+            SignEquipmentRef,
             RubbishDisposalEquipmentRef,
             HelpPointEquipmentRef,
             PassengerSafetyEquipmentRef,
@@ -225,6 +241,56 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
                 {
                     "name": "RetailDeviceRef",
                     "type": RetailDeviceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OnlineServiceRef",
+                    "type": OnlineServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleRentalServiceRef",
+                    "type": VehicleRentalServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleSharingServiceRef",
+                    "type": VehicleSharingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ChauffeuredVehicleServiceRef",
+                    "type": ChauffeuredVehicleServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TaxiServiceRef",
+                    "type": TaxiServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CarPoolingServiceRef",
+                    "type": CarPoolingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ActivatedEquipmentRef",
+                    "type": ActivatedEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "BatteryEquipmentRef",
+                    "type": BatteryEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RefuellingEquipmentRef",
+                    "type": RefuellingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleChargingEquipmentRef",
+                    "type": VehicleChargingEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -303,13 +369,8 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "VehicleChargingEquipmentRef",
-                    "type": VehicleChargingEquipmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CycleStorageEquipmentRef",
-                    "type": CycleStorageEquipmentRef,
+                    "name": "VehicleReleaseEquipmentRef",
+                    "type": VehicleReleaseEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -320,6 +381,16 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
                 {
                     "name": "TicketingEquipmentRef",
                     "type": TicketingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PassengerInformationEquipmentRef",
+                    "type": PassengerInformationEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CycleStorageEquipmentRef",
+                    "type": CycleStorageEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -355,26 +426,6 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
                 {
                     "name": "SiteEquipmentRef",
                     "type": SiteEquipmentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "HeadingSignRef",
-                    "type": HeadingSignRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "GeneralSignRef",
-                    "type": GeneralSignRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PlaceSignRef",
-                    "type": PlaceSignRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "SignEquipmentRef",
-                    "type": SignEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -428,18 +479,23 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AccessEquipmentRef",
-                    "type": AccessEquipmentRef,
+                    "name": "HeadingSignRef",
+                    "type": HeadingSignRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "ActivatedEquipmentRef",
-                    "type": ActivatedEquipmentRef,
+                    "name": "GeneralSignRef",
+                    "type": GeneralSignRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "PassengerInformationEquipmentRef",
-                    "type": PassengerInformationEquipmentRef,
+                    "name": "PlaceSignRef",
+                    "type": PlaceSignRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SignEquipmentRef",
+                    "type": SignEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

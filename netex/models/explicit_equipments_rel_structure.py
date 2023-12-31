@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Union
-from .access_equipment import AccessEquipment
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .assistance_service import AssistanceService
 from .assistance_service_ref import AssistanceServiceRef
+from .battery_equipment import BatteryEquipment
 from .catering_service import CateringService
 from .catering_service_ref import CateringServiceRef
 from .communication_service import CommunicationService
@@ -15,13 +15,19 @@ from .complaints_service import ComplaintsService
 from .complaints_service_ref import ComplaintsServiceRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .crossing_equipment import CrossingEquipment
+from .crossing_equipment_ref import CrossingEquipmentRef
 from .customer_service import CustomerService
 from .customer_service_ref import CustomerServiceRef
 from .cycle_storage_equipment import CycleStorageEquipment
+from .cycle_storage_equipment_ref import CycleStorageEquipmentRef
 from .entrance_equipment import EntranceEquipment
+from .entrance_equipment_ref import EntranceEquipmentRef
 from .escalator_equipment import EscalatorEquipment
+from .escalator_equipment_ref import EscalatorEquipmentRef
 from .general_sign import GeneralSign
+from .general_sign_ref import GeneralSignRef
 from .heading_sign import HeadingSign
+from .heading_sign_ref import HeadingSignRef
 from .help_point_equipment import HelpPointEquipment
 from .help_point_equipment_ref import HelpPointEquipmentRef
 from .hire_service import HireService
@@ -29,9 +35,11 @@ from .hire_service_ref import HireServiceRef
 from .left_luggage_service import LeftLuggageService
 from .left_luggage_service_ref import LeftLuggageServiceRef
 from .lift_equipment import LiftEquipment
+from .lift_equipment_ref import LiftEquipmentRef
 from .local_service_ref import LocalServiceRef
 from .lost_property_service import LostPropertyService
 from .lost_property_service_ref import LostPropertyServiceRef
+from .luggage_locker_equipment_ref import LuggageLockerEquipmentRef
 from .luggage_service import LuggageService
 from .luggage_service_ref import LuggageServiceRef
 from .meeting_point_service import MeetingPointService
@@ -47,30 +55,46 @@ from .passenger_information_equipment_ref import (
 from .passenger_safety_equipment import PassengerSafetyEquipment
 from .passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
 from .place_lighting import PlaceLighting
+from .place_lighting_equipment_ref import PlaceLightingEquipmentRef
 from .place_sign import PlaceSign
+from .place_sign_ref import PlaceSignRef
 from .queueing_equipment import QueueingEquipment
+from .queueing_equipment_ref import QueueingEquipmentRef
 from .ramp_equipment import RampEquipment
+from .ramp_equipment_ref import RampEquipmentRef
+from .refuelling_equipment import RefuellingEquipment
 from .retail_device import RetailDevice
 from .retail_service import RetailService
 from .retail_service_ref import RetailServiceRef
 from .rough_surface import RoughSurface
+from .rough_surface_ref import RoughSurfaceRef
 from .rubbish_disposal_equipment import RubbishDisposalEquipment
 from .rubbish_disposal_equipment_ref import RubbishDisposalEquipmentRef
 from .sanitary_equipment import SanitaryEquipment
 from .sanitary_equipment_ref import SanitaryEquipmentRef
 from .seating_equipment import SeatingEquipment
+from .seating_equipment_ref import SeatingEquipmentRef
 from .shelter_equipment import ShelterEquipment
+from .shelter_equipment_ref import ShelterEquipmentRef
 from .sign_equipment import SignEquipment
+from .sign_equipment_ref import SignEquipmentRef
+from .site_equipment_ref import SiteEquipmentRef
 from .staircase_equipment import StaircaseEquipment
+from .staircase_equipment_ref import StaircaseEquipmentRef
 from .ticket_validator_equipment import TicketValidatorEquipment
 from .ticketing_equipment import TicketingEquipment
 from .ticketing_service import TicketingService
 from .ticketing_service_ref import TicketingServiceRef
 from .travelator_equipment import TravelatorEquipment
+from .travelator_equipment_ref import TravelatorEquipmentRef
 from .trolley_stand_equipment import TrolleyStandEquipment
+from .trolley_stand_equipment_ref import TrolleyStandEquipmentRef
 from .vehicle_charging_equipment import VehicleChargingEquipment
 from .vehicle_equipment_ref import VehicleEquipmentRef
+from .vehicle_release_equipment import VehicleReleaseEquipment
+from .waiting_equipment_ref import WaitingEquipmentRef
 from .waiting_room_equipment import WaitingRoomEquipment
+from .waiting_room_equipment_ref import WaitingRoomEquipmentRef
 from .wheelchair_vehicle_equipment import WheelchairVehicleEquipment
 from .wheelchair_vehicle_ref import WheelchairVehicleRef
 
@@ -85,6 +109,28 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
     choice: List[
         Union[
             PassengerInformationEquipmentRef,
+            CycleStorageEquipmentRef,
+            TrolleyStandEquipmentRef,
+            SeatingEquipmentRef,
+            ShelterEquipmentRef,
+            LuggageLockerEquipmentRef,
+            WaitingRoomEquipmentRef,
+            WaitingEquipmentRef,
+            SiteEquipmentRef,
+            PlaceLightingEquipmentRef,
+            RoughSurfaceRef,
+            StaircaseEquipmentRef,
+            QueueingEquipmentRef,
+            TravelatorEquipmentRef,
+            EscalatorEquipmentRef,
+            LiftEquipmentRef,
+            CrossingEquipmentRef,
+            RampEquipmentRef,
+            EntranceEquipmentRef,
+            HeadingSignRef,
+            GeneralSignRef,
+            PlaceSignRef,
+            SignEquipmentRef,
             RubbishDisposalEquipmentRef,
             HelpPointEquipmentRef,
             PassengerSafetyEquipmentRef,
@@ -94,8 +140,11 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
             VehicleEquipmentRef,
             PassengerEquipmentRef,
             RetailDevice,
-            TicketValidatorEquipment,
-            TicketingEquipment,
+            BatteryEquipment,
+            VehicleReleaseEquipment,
+            RefuellingEquipment,
+            VehicleChargingEquipment,
+            CycleStorageEquipment,
             SeatingEquipment,
             ShelterEquipment,
             TrolleyStandEquipment,
@@ -110,20 +159,19 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
             EscalatorEquipment,
             PlaceLighting,
             RoughSurface,
-            AccessEquipment,
             GeneralSign,
             HeadingSign,
             PlaceSign,
             SignEquipment,
-            WheelchairVehicleEquipment,
-            AccessVehicleEquipment,
-            VehicleChargingEquipment,
-            CycleStorageEquipment,
             PassengerInformationEquipment,
             RubbishDisposalEquipment,
             HelpPointEquipment,
             PassengerSafetyEquipment,
             SanitaryEquipment,
+            TicketValidatorEquipment,
+            TicketingEquipment,
+            WheelchairVehicleEquipment,
+            AccessVehicleEquipment,
             AssistanceBookingServiceRef,
             CateringServiceRef,
             RetailServiceRef,
@@ -163,6 +211,116 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "PassengerInformationEquipmentRef",
                     "type": PassengerInformationEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CycleStorageEquipmentRef",
+                    "type": CycleStorageEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TrolleyStandEquipmentRef",
+                    "type": TrolleyStandEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SeatingEquipmentRef",
+                    "type": SeatingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ShelterEquipmentRef",
+                    "type": ShelterEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageLockerEquipmentRef",
+                    "type": LuggageLockerEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WaitingRoomEquipmentRef",
+                    "type": WaitingRoomEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WaitingEquipmentRef",
+                    "type": WaitingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SiteEquipmentRef",
+                    "type": SiteEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PlaceLightingEquipmentRef",
+                    "type": PlaceLightingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RoughSurfaceRef",
+                    "type": RoughSurfaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "StaircaseEquipmentRef",
+                    "type": StaircaseEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "QueueingEquipmentRef",
+                    "type": QueueingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TravelatorEquipmentRef",
+                    "type": TravelatorEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EscalatorEquipmentRef",
+                    "type": EscalatorEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LiftEquipmentRef",
+                    "type": LiftEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CrossingEquipmentRef",
+                    "type": CrossingEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RampEquipmentRef",
+                    "type": RampEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "EntranceEquipmentRef",
+                    "type": EntranceEquipmentRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HeadingSignRef",
+                    "type": HeadingSignRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "GeneralSignRef",
+                    "type": GeneralSignRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PlaceSignRef",
+                    "type": PlaceSignRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SignEquipmentRef",
+                    "type": SignEquipmentRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -211,13 +369,28 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TicketValidatorEquipment",
-                    "type": TicketValidatorEquipment,
+                    "name": "BatteryEquipment",
+                    "type": BatteryEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TicketingEquipment",
-                    "type": TicketingEquipment,
+                    "name": "VehicleReleaseEquipment",
+                    "type": VehicleReleaseEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RefuellingEquipment",
+                    "type": RefuellingEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleChargingEquipment",
+                    "type": VehicleChargingEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CycleStorageEquipment",
+                    "type": CycleStorageEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -291,11 +464,6 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AccessEquipment",
-                    "type": AccessEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "GeneralSign",
                     "type": GeneralSign,
                     "namespace": "http://www.netex.org.uk/netex",
@@ -313,26 +481,6 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "SignEquipment",
                     "type": SignEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "WheelchairVehicleEquipment",
-                    "type": WheelchairVehicleEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "AccessVehicleEquipment",
-                    "type": AccessVehicleEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleChargingEquipment",
-                    "type": VehicleChargingEquipment,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CycleStorageEquipment",
-                    "type": CycleStorageEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -358,6 +506,26 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "SanitaryEquipment",
                     "type": SanitaryEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketValidatorEquipment",
+                    "type": TicketValidatorEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingEquipment",
+                    "type": TicketingEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "WheelchairVehicleEquipment",
+                    "type": WheelchairVehicleEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AccessVehicleEquipment",
+                    "type": AccessVehicleEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

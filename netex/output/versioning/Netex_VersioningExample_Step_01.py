@@ -32,7 +32,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    version_frame_ref=[
+                    choice_1=[
                         ServiceFrameRef(
                             value='REQUEST',
                             ref='mybus:ntwkf001'
@@ -47,7 +47,7 @@ obj = PublicationDelivery(
         value='Netex basic Versioning Example Step 01'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='mybus:ntwkf001',
                 version='001',

@@ -14,7 +14,7 @@ class BaggageTypeEnumeration(Enum):
     MOTORCYCLE = "motorcycle"
     SPORTING_EQUIPMENT = "sportingEquipment"
     SKIS = "skis"
-    MUSICALNSTRUMENT = "musicalnstrument"
+    MUSICAL_INSTRUMENT = "musicalInstrument"
     PUSH_CHAIR = "pushChair"
     WHEELCHAIR = "wheelchair"
     MOTORIZED_WHEELCHAIR = "motorizedWheelchair"

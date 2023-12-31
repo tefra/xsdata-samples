@@ -9,7 +9,7 @@ from netex.models.accesses_rel_structure import AccessesRelStructure
 from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_limitation import AccessibilityLimitation
 from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
-from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.assistance_service import AssistanceService
@@ -111,12 +111,12 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             SiteFrame(
                 id='oda:SF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             AvailabilityCondition(
                                 id='oda:SF01',
                                 version='any',
@@ -1307,7 +1307,7 @@ obj = PublicationDelivery(
                                         ),
                                         both_ways=True,
                                         from_value=AccessEndStructure(
-                                            transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
+                                            transport_mode=AllModesEnumeration.METRO,
                                             place_ref=StopPlaceRefStructure(
                                                 ref='naptStop:470012345'
                                             )

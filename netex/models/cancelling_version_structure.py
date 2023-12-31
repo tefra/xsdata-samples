@@ -19,3 +19,19 @@ class CancellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    cancellation_allowed: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "CancellationAllowed",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    booking_deposit_refundable: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "BookingDepositRefundable",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )

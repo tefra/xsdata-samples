@@ -1,56 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .multilingual_string import MultilingualString
+from .contact_details_structure import ContactDetailsStructure
+from .contact_ref import ContactRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ContactStructure:
-    contact_person: Optional[MultilingualString] = field(
+class ContactStructure(ContactDetailsStructure):
+    contact_ref: Optional[ContactRef] = field(
         default=None,
         metadata={
-            "name": "ContactPerson",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    email: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Email",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    phone: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Phone",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    fax: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Fax",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    url: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Url",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
-    )
-    further_details: Optional[MultilingualString] = field(
-        default=None,
-        metadata={
-            "name": "FurtherDetails",
+            "name": "ContactRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

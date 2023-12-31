@@ -8,6 +8,7 @@ class MachineReadableEnumeration(Enum):
     MAGNETIC_STRIP = "magneticStrip"
     CHIP = "chip"
     OCR = "ocr"
+    APNR = "apnr"
     BAR_CODE = "barCode"
     SHOT_CODE = "shotCode"
     NFC = "nfc"

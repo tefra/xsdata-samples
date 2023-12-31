@@ -17,7 +17,7 @@ class TimeUnitPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "timeUnitPrices_RelStructure"
 
-    cell_ref: List[
+    time_unit_price_ref_or_time_unit_price_or_cell_ref: List[
         Union[TimeUnitPriceRef, TimeUnitPriceVersionedChildStructure, CellRef]
     ] = field(
         default_factory=list,

@@ -2,11 +2,19 @@ from dataclasses import dataclass, field
 from typing import Optional, Union
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .alternative_texts_rel_structure import DataManagedObjectStructure
+from .assistance_booking_service_ref import AssistanceBookingServiceRef
+from .assistance_service_ref import AssistanceServiceRef
 from .authority_ref import AuthorityRef
+from .car_pooling_service_ref import CarPoolingServiceRef
+from .catering_service_ref import CateringServiceRef
 from .cell_versioned_child_structure import (
     FareTablesRelStructure,
     PriceGroupsRelStructure,
 )
+from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
+from .communication_service_ref import CommunicationServiceRef
+from .complaints_service_ref import ComplaintsServiceRef
+from .customer_service_ref import CustomerServiceRef
 from .distance_matrix_elements_rel_structure import (
     DistanceMatrixElementsRelStructure,
 )
@@ -27,12 +35,21 @@ from .group_of_operators_ref import GroupOfOperatorsRef
 from .groups_of_distance_matrix_elements_rel_structure import (
     GroupsOfDistanceMatrixElementsRelStructure,
 )
+from .hire_service_ref import HireServiceRef
 from .info_links_rel_structure import InfoLinksRelStructure
+from .left_luggage_service_ref import LeftLuggageServiceRef
 from .line_ref import LineRef
+from .local_service_ref import LocalServiceRef
+from .lost_property_service_ref import LostPropertyServiceRef
+from .luggage_service_ref import LuggageServiceRef
 from .management_agent_ref import ManagementAgentRef
+from .meeting_point_service_ref import MeetingPointServiceRef
+from .money_service_ref import MoneyServiceRef
 from .multilingual_string import MultilingualString
 from .network_ref import NetworkRef
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
+from .online_service_operator_ref import OnlineServiceOperatorRef
+from .online_service_ref import OnlineServiceRef
 from .operator_ref import OperatorRef
 from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
@@ -42,8 +59,11 @@ from .quality_structure_factors_rel_structure import (
     QualityStructureFactorsRelStructure,
 )
 from .retail_consortium_ref import RetailConsortiumRef
+from .retail_service_ref import RetailServiceRef
 from .serviced_organisation_ref import ServicedOrganisationRef
 from .tariff_basis_enumeration import TariffBasisEnumeration
+from .taxi_service_ref import TaxiServiceRef
+from .ticketing_service_ref import TicketingServiceRef
 from .time_intervals_rel_structure import TimeIntervalsRelStructure
 from .time_structure_factors_rel_structure import (
     TimeStructureFactorsRelStructure,
@@ -51,6 +71,8 @@ from .time_structure_factors_rel_structure import (
 from .time_unit_ref import TimeUnitRef
 from .travel_agent_ref import TravelAgentRef
 from .type_of_tariff_ref import TypeOfTariffRef
+from .vehicle_rental_service_ref import VehicleRentalServiceRef
+from .vehicle_sharing_service_ref import VehicleSharingServiceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -108,16 +130,17 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_transport_organisation_ref_or_other_organisation_ref: Optional[
+    choice: Optional[
         Union[
             RetailConsortiumRef,
-            AuthorityRef,
-            OperatorRef,
+            OnlineServiceOperatorRef,
             GeneralOrganisationRef,
             ManagementAgentRef,
             ServicedOrganisationRef,
             TravelAgentRef,
             OtherOrganisationRef,
+            AuthorityRef,
+            OperatorRef,
             OrganisationRef,
             GroupOfOperatorsRef,
         ]
@@ -132,13 +155,8 @@ class TariffVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
+                    "name": "OnlineServiceOperatorRef",
+                    "type": OnlineServiceOperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -164,6 +182,16 @@ class TariffVersionStructure(DataManagedObjectStructure):
                 {
                     "name": "OtherOrganisationRef",
                     "type": OtherOrganisationRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -204,6 +232,143 @@ class TariffVersionStructure(DataManagedObjectStructure):
                 {
                     "name": "GroupOfLinesRef",
                     "type": GroupOfLinesRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
+    )
+    choice_1: Optional[
+        Union[
+            OnlineServiceRef,
+            VehicleRentalServiceRef,
+            VehicleSharingServiceRef,
+            ChauffeuredVehicleServiceRef,
+            TaxiServiceRef,
+            CarPoolingServiceRef,
+            AssistanceBookingServiceRef,
+            CateringServiceRef,
+            RetailServiceRef,
+            MoneyServiceRef,
+            HireServiceRef,
+            CommunicationServiceRef,
+            MeetingPointServiceRef,
+            LeftLuggageServiceRef,
+            LuggageServiceRef,
+            LostPropertyServiceRef,
+            ComplaintsServiceRef,
+            CustomerServiceRef,
+            AssistanceServiceRef,
+            TicketingServiceRef,
+            LocalServiceRef,
+        ]
+    ] = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "OnlineServiceRef",
+                    "type": OnlineServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleRentalServiceRef",
+                    "type": VehicleRentalServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleSharingServiceRef",
+                    "type": VehicleSharingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ChauffeuredVehicleServiceRef",
+                    "type": ChauffeuredVehicleServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TaxiServiceRef",
+                    "type": TaxiServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CarPoolingServiceRef",
+                    "type": CarPoolingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceBookingServiceRef",
+                    "type": AssistanceBookingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CateringServiceRef",
+                    "type": CateringServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "RetailServiceRef",
+                    "type": RetailServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MoneyServiceRef",
+                    "type": MoneyServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "HireServiceRef",
+                    "type": HireServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CommunicationServiceRef",
+                    "type": CommunicationServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MeetingPointServiceRef",
+                    "type": MeetingPointServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LeftLuggageServiceRef",
+                    "type": LeftLuggageServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageServiceRef",
+                    "type": LuggageServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LostPropertyServiceRef",
+                    "type": LostPropertyServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ComplaintsServiceRef",
+                    "type": ComplaintsServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "CustomerServiceRef",
+                    "type": CustomerServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "AssistanceServiceRef",
+                    "type": AssistanceServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TicketingServiceRef",
+                    "type": TicketingServiceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LocalServiceRef",
+                    "type": LocalServiceRef,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

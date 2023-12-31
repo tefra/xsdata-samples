@@ -12,6 +12,9 @@ from .customers_in_frame_rel_structure import CustomersInFrameRelStructure
 from .fare_contracts_in_frame_rel_structure import (
     FareContractsInFrameRelStructure,
 )
+from .medium_access_devices_in_frame_rel_structure import (
+    MediumAccessDevicesInFrameRelStructure,
+)
 from .retail_consortiums_in_frame_rel_structure import (
     RetailConsortiumsInFrameRelStructure,
 )
@@ -75,6 +78,16 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
         default=None,
         metadata={
             "name": "fareContracts",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    medium_access_devices: Optional[
+        MediumAccessDevicesInFrameRelStructure
+    ] = field(
+        default=None,
+        metadata={
+            "name": "mediumAccessDevices",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

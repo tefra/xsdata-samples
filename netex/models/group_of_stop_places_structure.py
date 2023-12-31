@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from .air_submode_enumeration import AirSubmodeEnumeration
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .bus_submode_enumeration import BusSubmodeEnumeration
 from .coach_submode_enumeration import CoachSubmodeEnumeration
@@ -16,7 +19,6 @@ from .snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration
 from .stop_place_refs_rel_structure import StopPlaceRefsRelStructure
 from .telecabin_submode_enumeration import TelecabinSubmodeEnumeration
 from .tram_submode_enumeration import TramSubmodeEnumeration
-from .vehicle_mode_enumeration import VehicleModeEnumeration
 from .water_submode_enumeration import WaterSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -63,7 +65,7 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    transport_mode: Optional[VehicleModeEnumeration] = field(
+    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
         metadata={
             "name": "TransportMode",

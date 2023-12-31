@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .destination_display_ref import DestinationDisplayRef
 from .direction_ref import DirectionRef
 from .flexible_line_ref import FlexibleLineRef
@@ -7,7 +10,6 @@ from .line_ref import LineRef
 from .multilingual_string import MultilingualString
 from .sign_equipment_version_structure import SignEquipmentVersionStructure
 from .transport_submode import TransportSubmode
-from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -49,7 +51,7 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: Optional[VehicleModeEnumeration] = field(
+    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
         metadata={
             "name": "TransportMode",

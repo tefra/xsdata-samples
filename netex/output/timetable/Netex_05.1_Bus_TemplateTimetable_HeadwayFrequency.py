@@ -69,7 +69,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         TimetableFrameRef(
                             value='REQUEST',
                             ref='hde:TIM_24o_FS_Outbound'
@@ -84,7 +84,7 @@ obj = PublicationDelivery(
         value='Example  of simple Headwayal  template timetable   with three    journeys  '
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='hde:CF_1',
                 version='1',
@@ -166,7 +166,7 @@ obj = PublicationDelivery(
                             id='hde:TIM_24o_FS_Outbound',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='hde:TIM_24o_FS_Outbound',
                                             version='any',
@@ -204,7 +204,7 @@ obj = PublicationDelivery(
                                             value='EXTERNAL',
                                             ref='hde:svp_24o'
                                         ),
-                                        line_ref=LineRef(
+                                        choice=LineRef(
                                             version='any',
                                             ref='mybus:LN_234'
                                         ),
@@ -213,7 +213,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:tvjh_24o_02_001',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -228,7 +228,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:tvjh_24o_02_002',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -244,7 +244,7 @@ obj = PublicationDelivery(
                                                 Call(
                                                     id='hde:tvjh_24o_02_003',
                                                     version='any',
-                                                    scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),

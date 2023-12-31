@@ -68,6 +68,14 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+    access_number: Optional[int] = field(
+        default=None,
+        metadata={
+            "name": "AccessNumber",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
     validity_parameter_assignments: Optional[
         CustomerPurchaseParameterAssignmentsRelStructure
     ] = field(

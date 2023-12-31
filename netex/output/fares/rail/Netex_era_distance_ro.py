@@ -12,7 +12,6 @@ from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidBetweenVersionStructure
 from netex.models.baggage_type_enumeration import BaggageTypeEnumeration
 from netex.models.baggage_use_type_enumeration import BaggageUseTypeEnumeration
-from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
 from netex.models.branding import Branding
 from netex.models.branding_ref import BrandingRef
 from netex.models.cell_versioned_child_structure import Cell
@@ -151,6 +150,7 @@ from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.line_type_enumeration import LineTypeEnumeration
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.locale_structure import LocaleStructure
+from netex.models.logical_operation_enumeration import LogicalOperationEnumeration
 from netex.models.luggage_allowance import LuggageAllowance
 from netex.models.luggage_allowance_type_enumeration import LuggageAllowanceTypeEnumeration
 from netex.models.machine_readable_enumeration import MachineReadableEnumeration
@@ -351,7 +351,7 @@ obj = PublicationDelivery(
         value='Distance based fare - Romania '
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='tfc:TFC@DistanceTariff_Example',
                 validity_conditions_or_valid_between=[
@@ -564,7 +564,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Distance based fares for '
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -770,9 +770,9 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
-                                                            vehicle_modes=[
+                                                            vehicle_modes_or_transport_modes=[
                                                                 [
                                                                     VehicleModeEnumeration.RAIL,
                                                                 ],
@@ -784,7 +784,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        includes_grouping_type=LogicalOperationEnumeration.OR,
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
@@ -795,7 +795,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             Routing(
@@ -808,7 +808,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                         ]
                                                                     ),
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         type_of_product_category_ref=[
                                                                             TypeOfProductCategoryRef(
@@ -826,7 +826,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             Routing(
@@ -839,7 +839,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                         ]
                                                                     ),
-                                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         type_of_product_category_ref=[
                                                                             TypeOfProductCategoryRef(
@@ -867,7 +867,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfile(
@@ -1548,7 +1548,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
                                                                 ClassOfUseRef(
@@ -1559,7 +1559,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                             ]
                                                         ),
-                                                        includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        includes_grouping_type=LogicalOperationEnumeration.OR,
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
@@ -1573,7 +1573,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:eligible'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             UserProfileRef(
@@ -1602,7 +1602,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                         ]
                                                                     ),
-                                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                                     includes=GenericParameterAssignmentsRelStructure(
                                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                             GenericParameterAssignment(
@@ -1635,7 +1635,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:eligible'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             UserProfileRef(
@@ -1672,7 +1672,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                         ]
                                                                     ),
-                                                                    includes_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                    includes_grouping_type=LogicalOperationEnumeration.AND,
                                                                     includes=GenericParameterAssignmentsRelStructure(
                                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                             GenericParameterAssignment(
@@ -1683,7 +1683,7 @@ obj = PublicationDelivery(
                                                                                     version='any',
                                                                                     ref='eura:can_access'
                                                                                 ),
-                                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                                     class_of_use_ref=[
                                                                                         ClassOfUseRef(
@@ -1716,7 +1716,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
                                                                 ClassOfUseRef(
@@ -1743,7 +1743,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Routing(
@@ -1790,7 +1790,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_purchase_when'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 PurchaseWindow(
@@ -1838,7 +1838,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Reserving(
@@ -1916,7 +1916,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_purchase_when'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 LuggageAllowance(
@@ -1967,7 +1967,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 PenaltyPolicy(
@@ -2138,7 +2138,7 @@ obj = PublicationDelivery(
                                             value='Surcharge for online'
                                         ),
                                         prices=FulfilmentMethodPricesRelStructure(
-                                            cell_ref=[
+                                            fulfilment_method_price_ref_or_fulfilment_method_price_or_cell_ref=[
                                                 FulfilmentMethodPriceVersionedChildStructure(
                                                     id='tfc:TFC@Common@onboard@price',
                                                     version='01',
@@ -2186,7 +2186,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Distance based Trip fares for TFC for '
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -2257,10 +2257,12 @@ obj = PublicationDelivery(
                                                             ref='eura:can_access_when'
                                                         ),
                                                         temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                            day_type_ref=FareDayTypeRef(
-                                                                version='any',
-                                                                ref='tfc:everyday'
-                                                            )
+                                                            day_type_ref=[
+                                                                FareDayTypeRef(
+                                                                    version='any',
+                                                                    ref='tfc:everyday'
+                                                                ),
+                                                            ]
                                                         )
                                                     )
                                                 ),
@@ -2278,7 +2280,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTrip(
@@ -2337,7 +2339,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfileRef(
@@ -2377,7 +2379,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 EntitlementGiven(
@@ -2446,7 +2448,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_purchase'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 GroupTicket(
@@ -2475,7 +2477,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_purchase'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 FrequencyOfUse(
@@ -2675,7 +2677,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Common@leg'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             FrequencyOfUseRef(
@@ -2713,7 +2715,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Common@leg'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
@@ -2747,7 +2749,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         ref='tfc:TFC@Trip_Common@leg'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
@@ -2787,7 +2789,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -2858,7 +2860,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -3013,7 +3015,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='tfc:TFC@Trip_period_return@travel@out'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
@@ -3038,7 +3040,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     ref='tfc:TFC@Trip_period_return@travel@back'
                                                                 ),
-                                                                validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                validity_parameter_grouping_type=LogicalOperationEnumeration.OR,
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
@@ -3148,7 +3150,7 @@ obj = PublicationDelivery(
                                             value='Group Discount'
                                         ),
                                         prices=SalesOfferPackagePricesRelStructure(
-                                            cell_ref=[
+                                            sales_offer_package_price_ref_or_sales_offer_package_price_or_cell_ref=[
                                                 SalesOfferPackagePriceVersionedChildStructure(
                                                     id='tfc:Trip@Group_single-SOP',
                                                     version='any',
@@ -3342,7 +3344,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Flat rate supplements for TFC  trip products '
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -3400,7 +3402,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:prerequisites'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 EntitlementRequired(
@@ -3589,7 +3591,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             CompanionProfileRef(
@@ -3610,7 +3612,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
-                                                    validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
+                                                    validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
@@ -3678,7 +3680,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -3717,7 +3719,7 @@ obj = PublicationDelivery(
                                                             version_ref='netex:SAME_AS_TRIP'
                                                         )
                                                     ),
-                                                    includes_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    includes_grouping_type=LogicalOperationEnumeration.OR,
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
@@ -3731,7 +3733,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:reservation_condition'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         Routing(
@@ -3778,7 +3780,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:reservation_condition'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         Routing(
@@ -3825,7 +3827,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:reservation_condition'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ReservingRef(
@@ -3861,7 +3863,7 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     ref='eura:reservation_condition'
                                                                 ),
-                                                                limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ReservingRef(
@@ -3957,7 +3959,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='tfc:TFC@Trip_Supplement@Seat_Reservation',
                                                     version='01',
@@ -4004,7 +4006,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -4041,7 +4043,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='tfc:TFC@Trip_Supplement@Bicycle',
                                                     version='01',
@@ -4088,7 +4090,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -4125,7 +4127,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='tfc:TFC@Trip_Supplement@Baggage',
                                                     version='01',
@@ -4172,7 +4174,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -4209,7 +4211,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         prices=FareProductPricesRelStructure(
-                                            cell_ref=[
+                                            fare_product_price_ref_or_cell_ref_or_fare_product_price=[
                                                 FareProductPrice(
                                                     id='tfc:TFC@Trip_Supplement@Dog',
                                                     version='01',
@@ -4507,7 +4509,7 @@ obj = PublicationDelivery(
                                         columns=FareTableColumnsRelStructure(
                                             fare_table_column=[
                                                 FareTableColumn(
-                                                    id='tfc:Single@preboard@R',
+                                                    id='tfc:Single@preboard@R@km',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Zona km',
@@ -4523,7 +4525,7 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Single@preboard@R',
+                                                    id='tfc:Single@preboard@R@clasa1',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Clasa 1',
@@ -4544,7 +4546,7 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Single@preboard@R',
+                                                    id='tfc:Single@preboard@R@clasa1_50',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='50 % Clasa 1',
@@ -4565,7 +4567,7 @@ obj = PublicationDelivery(
                                                     order=3
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Single@preboard@R',
+                                                    id='tfc:Single@preboard@R@clasa2',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Clasa 2',
@@ -4586,7 +4588,7 @@ obj = PublicationDelivery(
                                                     order=4
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Single@preboard@R',
+                                                    id='tfc:Single@preboard@R@clasa2_50',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='50 % Clasa 2',
@@ -4617,7 +4619,7 @@ obj = PublicationDelivery(
                                                         value='1-5*'
                                                     ),
                                                     notice_assignments=NoticeAssignmentsRelStructure(
-                                                        notice_assignment=[
+                                                        sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
                                                             NoticeAssignment(
                                                                 id='tfc:Single@preboard@R@001+005',
                                                                 version='01',
@@ -4955,7 +4957,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@R@C1@full',
+                                                                id='tfc:Single@preboard@R@C1@full@adult',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -4972,7 +4974,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@R@C1@full',
+                                                                id='tfc:Single@preboard@R@C1@full@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -4990,11 +4992,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@001+005',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@001+005',
                                                                     version='01',
                                                                     is_allowed=False,
@@ -5008,7 +5010,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@006+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@006+010',
                                                                     version='01',
                                                                     amount=Decimal('4.00'),
@@ -5034,7 +5036,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@011+020',
                                                                     version='01',
                                                                     amount=Decimal('5.50'),
@@ -5060,7 +5062,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@021+030',
                                                                     version='01',
                                                                     amount=Decimal('8.00'),
@@ -5086,7 +5088,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@031+040',
                                                                     version='01',
                                                                     amount=Decimal('9.50'),
@@ -5112,7 +5114,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@041+050',
                                                                     version='01',
                                                                     amount=Decimal('12.50'),
@@ -5138,7 +5140,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@051+060',
                                                                     version='01',
                                                                     amount=Decimal('13.00'),
@@ -5164,7 +5166,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@061+070',
                                                                     version='01',
                                                                     amount=Decimal('15.50'),
@@ -5190,7 +5192,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@071+080',
                                                                     version='01',
                                                                     amount=Decimal('17.50'),
@@ -5216,7 +5218,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@081+090',
                                                                     version='01',
                                                                     amount=Decimal('19.50'),
@@ -5242,7 +5244,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@091+100',
                                                                     version='01',
                                                                     amount=Decimal('22.00'),
@@ -5268,7 +5270,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@101+120',
                                                                     version='01',
                                                                     amount=Decimal('26.00'),
@@ -5294,7 +5296,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@121+140',
                                                                     version='01',
                                                                     amount=Decimal('30.50'),
@@ -5320,7 +5322,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@141+160',
                                                                     version='01',
                                                                     amount=Decimal('34.00'),
@@ -5346,7 +5348,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@161+180',
                                                                     version='01',
                                                                     amount=Decimal('39.00'),
@@ -5372,7 +5374,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@181+200',
                                                                     version='01',
                                                                     amount=Decimal('43.00'),
@@ -5398,7 +5400,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@201+250',
                                                                     version='01',
                                                                     amount=Decimal('49.50'),
@@ -5423,7 +5425,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@251+300',
                                                                     version='01',
                                                                     amount=Decimal('57.50'),
@@ -5449,7 +5451,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@full@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@full@301+350',
                                                                     version='01',
                                                                     amount=Decimal('65.50'),
@@ -5511,7 +5513,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@R@C1@fac',
+                                                                id='tfc:Single@preboard@R@C1@fac@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -5520,7 +5522,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@R@C1@fac',
+                                                                id='tfc:Single@preboard@R@C1@fac@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -5531,11 +5533,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@001+005',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@001+005',
                                                                     version='01',
                                                                     is_allowed=False,
@@ -5549,7 +5551,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@006+010',
                                                                     version='01',
                                                                     amount=Decimal('2.00'),
@@ -5587,7 +5589,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@011+020',
                                                                     version='01',
                                                                     amount=Decimal('2.75'),
@@ -5625,7 +5627,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@021+030',
                                                                     version='01',
                                                                     amount=Decimal('4.00'),
@@ -5663,7 +5665,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@031+040',
                                                                     version='01',
                                                                     amount=Decimal('45.75'),
@@ -5701,7 +5703,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@041+050',
                                                                     version='01',
                                                                     amount=Decimal('6.25'),
@@ -5739,7 +5741,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@051+060',
                                                                     version='01',
                                                                     amount=Decimal('6.50'),
@@ -5777,7 +5779,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@061+070',
                                                                     version='01',
                                                                     amount=Decimal('7.75'),
@@ -5815,7 +5817,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@071+080',
                                                                     version='01',
                                                                     amount=Decimal('8.75'),
@@ -5853,7 +5855,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@081+090',
                                                                     version='01',
                                                                     amount=Decimal('9.75'),
@@ -5891,7 +5893,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@091+100',
                                                                     version='01',
                                                                     amount=Decimal('11.00'),
@@ -5929,7 +5931,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@101+120',
                                                                     version='01',
                                                                     amount=Decimal('13.00'),
@@ -5967,7 +5969,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@121+140',
                                                                     version='01',
                                                                     amount=Decimal('15.25'),
@@ -6005,7 +6007,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@141+160',
                                                                     version='01',
                                                                     amount=Decimal('17.00'),
@@ -6043,7 +6045,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@161+180',
                                                                     version='01',
                                                                     amount=Decimal('19.5'),
@@ -6081,7 +6083,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@181+200',
                                                                     version='01',
                                                                     amount=Decimal('21.50'),
@@ -6119,7 +6121,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@201+250',
                                                                     version='01',
                                                                     amount=Decimal('24.75'),
@@ -6157,7 +6159,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@251+300',
                                                                     version='01',
                                                                     amount=Decimal('28.75'),
@@ -6195,7 +6197,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C1@fac@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C1@fac@301+350',
                                                                     version='01',
                                                                     amount=Decimal('32.75'),
@@ -6249,7 +6251,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@R@C2@full',
+                                                                id='tfc:Single@preboard@R@C2@full@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -6258,7 +6260,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@R@C2@full',
+                                                                id='tfc:Single@preboard@R@C2@full@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -6269,11 +6271,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@001+005',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@001+005',
                                                                     version='01',
                                                                     amount=Decimal('2.00'),
@@ -6299,7 +6301,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@006+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@006+010',
                                                                     version='01',
                                                                     amount=Decimal('3.50'),
@@ -6325,7 +6327,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@011+020',
                                                                     version='01',
                                                                     amount=Decimal('4.00'),
@@ -6351,7 +6353,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@021+030',
                                                                     version='01',
                                                                     amount=Decimal('4.50'),
@@ -6377,7 +6379,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@031+040',
                                                                     version='01',
                                                                     amount=Decimal('5.50'),
@@ -6403,7 +6405,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@041+050',
                                                                     version='01',
                                                                     amount=Decimal('7.00'),
@@ -6429,7 +6431,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@051+060',
                                                                     version='01',
                                                                     amount=Decimal('7.50'),
@@ -6455,7 +6457,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@061+070',
                                                                     version='01',
                                                                     amount=Decimal('9.50'),
@@ -6481,7 +6483,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@071+080',
                                                                     version='01',
                                                                     amount=Decimal('11.00'),
@@ -6507,7 +6509,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@081+090',
                                                                     version='01',
                                                                     amount=Decimal('12.50'),
@@ -6533,7 +6535,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@091+100',
                                                                     version='01',
                                                                     amount=Decimal('13.50'),
@@ -6559,7 +6561,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@101+120',
                                                                     version='01',
                                                                     amount=Decimal('16.00'),
@@ -6585,7 +6587,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@121+140',
                                                                     version='01',
                                                                     amount=Decimal('19.00'),
@@ -6611,7 +6613,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@141+160',
                                                                     version='01',
                                                                     amount=Decimal('21.50'),
@@ -6637,7 +6639,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@161+180',
                                                                     version='01',
                                                                     amount=Decimal('25.00'),
@@ -6663,7 +6665,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@181+200',
                                                                     version='01',
                                                                     amount=Decimal('26.50'),
@@ -6689,7 +6691,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@201+250',
                                                                     version='01',
                                                                     amount=Decimal('30.50'),
@@ -6714,7 +6716,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@251+300',
                                                                     version='01',
                                                                     amount=Decimal('36.00'),
@@ -6740,7 +6742,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@full@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@full@301+350',
                                                                     version='01',
                                                                     amount=Decimal('42.00'),
@@ -6803,7 +6805,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@R@C2@fac',
+                                                                id='tfc:Single@preboard@R@C2@fac@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -6819,7 +6821,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@R@C2@fac',
+                                                                id='tfc:Single@preboard@R@C2@fac@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -6840,11 +6842,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@001+005',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@001+005',
                                                                     version='01',
                                                                     is_allowed=False,
@@ -6858,7 +6860,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@006+010',
                                                                     version='01',
                                                                     amount=Decimal('1.75'),
@@ -6896,7 +6898,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@011+020',
                                                                     version='01',
                                                                     amount=Decimal('2.00'),
@@ -6934,7 +6936,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@021+030',
                                                                     version='01',
                                                                     amount=Decimal('2.25'),
@@ -6972,7 +6974,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@031+040',
                                                                     version='01',
                                                                     amount=Decimal('2.75'),
@@ -7010,7 +7012,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@041+050',
                                                                     version='01',
                                                                     amount=Decimal('3.50'),
@@ -7048,7 +7050,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@051+060',
                                                                     version='01',
                                                                     amount=Decimal('3.75'),
@@ -7086,7 +7088,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@061+070',
                                                                     version='01',
                                                                     amount=Decimal('4.75'),
@@ -7124,7 +7126,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@071+080',
                                                                     version='01',
                                                                     amount=Decimal('5.50'),
@@ -7162,7 +7164,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@081+090',
                                                                     version='01',
                                                                     amount=Decimal('6.25'),
@@ -7200,7 +7202,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@091+100',
                                                                     version='01',
                                                                     amount=Decimal('6.75'),
@@ -7238,7 +7240,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@101+120',
                                                                     version='01',
                                                                     amount=Decimal('8.00'),
@@ -7276,7 +7278,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@121+140',
                                                                     version='01',
                                                                     amount=Decimal('9.50'),
@@ -7314,7 +7316,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@141+160',
                                                                     version='01',
                                                                     amount=Decimal('10.75'),
@@ -7352,7 +7354,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@161+180',
                                                                     version='01',
                                                                     amount=Decimal('12.50'),
@@ -7390,7 +7392,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@181+200',
                                                                     version='01',
                                                                     amount=Decimal('13.25'),
@@ -7428,7 +7430,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@201+250',
                                                                     version='01',
                                                                     amount=Decimal('15.25'),
@@ -7466,7 +7468,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@251+300',
                                                                     version='01',
                                                                     amount=Decimal('18.00'),
@@ -7504,7 +7506,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@R@C2@fac@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@preboard@R@C2@fac@301+350',
                                                                     version='01',
                                                                     amount=Decimal('21.00'),
@@ -7591,7 +7593,7 @@ obj = PublicationDelivery(
                                         columns=FareTableColumnsRelStructure(
                                             fare_table_column=[
                                                 FareTableColumn(
-                                                    id='tfc:Single@preboard@IR',
+                                                    id='tfc:Single@preboard@IR@km',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Zona km',
@@ -7600,7 +7602,7 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Single@preboard@IR',
+                                                    id='tfc:Single@preboard@IR@clasa1',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Clasa 1',
@@ -7609,7 +7611,7 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Single@preboard@IR',
+                                                    id='tfc:Single@preboard@IR@clasa1_50',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='50 % Clasa 1',
@@ -7618,7 +7620,7 @@ obj = PublicationDelivery(
                                                     order=3
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Single@preboard@IR',
+                                                    id='tfc:Single@preboard@IR@clasa2',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Clasa 2',
@@ -7627,7 +7629,7 @@ obj = PublicationDelivery(
                                                     order=4
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Single@preboard@IR',
+                                                    id='tfc:Single@preboard@IR@clas2_50',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='50 % Clasa 2',
@@ -7672,20 +7674,12 @@ obj = PublicationDelivery(
                                                     order=5
                                                 ),
                                                 FareTableRow(
-                                                    id='tfc:Single@preboard@IR_031+040',
-                                                    version='01',
-                                                    name=MultilingualString(
-                                                        value='31-40'
-                                                    ),
-                                                    order=6
-                                                ),
-                                                FareTableRow(
                                                     id='tfc:Single@preboard@IR_041+050',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='41-50'
                                                     ),
-                                                    order=7
+                                                    order=6
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_051+060',
@@ -7693,7 +7687,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='51-60'
                                                     ),
-                                                    order=8
+                                                    order=7
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_061+070',
@@ -7701,7 +7695,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='61-70'
                                                     ),
-                                                    order=9
+                                                    order=8
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_071+080',
@@ -7709,7 +7703,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='71-80'
                                                     ),
-                                                    order=10
+                                                    order=9
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_081+090',
@@ -7717,7 +7711,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='81-90'
                                                     ),
-                                                    order=11
+                                                    order=10
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_091+100',
@@ -7725,7 +7719,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='91-100'
                                                     ),
-                                                    order=12
+                                                    order=11
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_101+120',
@@ -7733,7 +7727,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='101-120'
                                                     ),
-                                                    order=13
+                                                    order=12
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_121+140',
@@ -7741,7 +7735,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='121-140'
                                                     ),
-                                                    order=14
+                                                    order=13
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_141+160',
@@ -7749,7 +7743,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='141-160'
                                                     ),
-                                                    order=15
+                                                    order=13
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_161+180',
@@ -7757,7 +7751,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='161-180'
                                                     ),
-                                                    order=16
+                                                    order=15
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_181+200',
@@ -7765,7 +7759,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='181-200'
                                                     ),
-                                                    order=17
+                                                    order=16
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_201+250',
@@ -7773,7 +7767,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='201-250'
                                                     ),
-                                                    order=18
+                                                    order=17
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_251+300',
@@ -7781,7 +7775,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='251-300'
                                                     ),
-                                                    order=19
+                                                    order=18
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Single@preboard@IR_301+350',
@@ -7789,7 +7783,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='301-350'
                                                     ),
-                                                    order=20
+                                                    order=19
                                                 ),
                                             ]
                                         ),
@@ -7811,7 +7805,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@IR_C1@full',
+                                                                id='tfc:Single@preboard@IR_C1@full@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -7820,7 +7814,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@IR_C1@full',
+                                                                id='tfc:Single@preboard@IR_C1@full@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -7831,11 +7825,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@006+010'
                                                                 ),
@@ -7844,7 +7838,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@011+020'
                                                                 ),
@@ -7853,7 +7847,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@021+030'
                                                                 ),
@@ -7862,7 +7856,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@031+040'
                                                                 ),
@@ -7871,7 +7865,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@041+050'
                                                                 ),
@@ -7880,7 +7874,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@051+060'
                                                                 ),
@@ -7889,7 +7883,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@061+070'
                                                                 ),
@@ -7898,7 +7892,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@071+080'
                                                                 ),
@@ -7907,7 +7901,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@081+090'
                                                                 ),
@@ -7916,7 +7910,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@091+100'
                                                                 ),
@@ -7925,7 +7919,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@101+120'
                                                                 ),
@@ -7934,7 +7928,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@121+140'
                                                                 ),
@@ -7943,7 +7937,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@141+160'
                                                                 ),
@@ -7952,7 +7946,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@161+180'
                                                                 ),
@@ -7961,7 +7955,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@181+200'
                                                                 ),
@@ -7970,7 +7964,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@201+250'
                                                                 ),
@@ -7979,7 +7973,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@251+300'
                                                                 ),
@@ -7988,7 +7982,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@full@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@full@301+350'
                                                                 ),
@@ -8033,7 +8027,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@IR_C1@fac',
+                                                                id='tfc:Single@preboard@IR_C1@fac@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -8042,7 +8036,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@IR_C1@fac',
+                                                                id='tfc:Single@preboard@IR_C1@fac@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -8053,11 +8047,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@006+010'
                                                                 ),
@@ -8066,7 +8060,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@011+020'
                                                                 ),
@@ -8075,7 +8069,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@021+030'
                                                                 ),
@@ -8084,7 +8078,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@031+040'
                                                                 ),
@@ -8093,7 +8087,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@041+050'
                                                                 ),
@@ -8102,7 +8096,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@051+060'
                                                                 ),
@@ -8111,7 +8105,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@061+070'
                                                                 ),
@@ -8120,7 +8114,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@071+080'
                                                                 ),
@@ -8129,7 +8123,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@081+090'
                                                                 ),
@@ -8138,7 +8132,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@091+100'
                                                                 ),
@@ -8147,7 +8141,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@101+120'
                                                                 ),
@@ -8156,7 +8150,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@121+140'
                                                                 ),
@@ -8165,7 +8159,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@141+160'
                                                                 ),
@@ -8174,7 +8168,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@161+180'
                                                                 ),
@@ -8183,7 +8177,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@181+200'
                                                                 ),
@@ -8192,7 +8186,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@201+250'
                                                                 ),
@@ -8201,7 +8195,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@251+300'
                                                                 ),
@@ -8210,7 +8204,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C1@fac@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C1@fac@301+350'
                                                                 ),
@@ -8235,7 +8229,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@IR_C2@full',
+                                                                id='tfc:Single@preboard@IR_C2@full@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -8244,7 +8238,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@IR_C2@full',
+                                                                id='tfc:Single@preboard@IR_C2@full@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -8255,11 +8249,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@006+010'
                                                                 ),
@@ -8268,7 +8262,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@011+020'
                                                                 ),
@@ -8277,7 +8271,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@021+030'
                                                                 ),
@@ -8286,7 +8280,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@031+040'
                                                                 ),
@@ -8295,7 +8289,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@041+050'
                                                                 ),
@@ -8304,7 +8298,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@051+060'
                                                                 ),
@@ -8313,7 +8307,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@061+070'
                                                                 ),
@@ -8322,7 +8316,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@071+080'
                                                                 ),
@@ -8331,7 +8325,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@081+090'
                                                                 ),
@@ -8340,7 +8334,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@091+100'
                                                                 ),
@@ -8349,7 +8343,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@101+120'
                                                                 ),
@@ -8358,7 +8352,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@121+140'
                                                                 ),
@@ -8367,7 +8361,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@141+160'
                                                                 ),
@@ -8376,7 +8370,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@161+180'
                                                                 ),
@@ -8385,7 +8379,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@181+200'
                                                                 ),
@@ -8394,7 +8388,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@201+250'
                                                                 ),
@@ -8403,7 +8397,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@251+300'
                                                                 ),
@@ -8412,7 +8406,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@full@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@full@301+350'
                                                                 ),
@@ -8458,7 +8452,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@IR_C2@fac',
+                                                                id='tfc:Single@preboard@IR_C2@fac@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -8467,7 +8461,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Single@preboard@IR_C2@fac',
+                                                                id='tfc:Single@preboard@IR_C2@fac@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -8478,11 +8472,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@006+010'
                                                                 ),
@@ -8491,7 +8485,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@011+020'
                                                                 ),
@@ -8500,7 +8494,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@021+030'
                                                                 ),
@@ -8509,7 +8503,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@031+040'
                                                                 ),
@@ -8518,7 +8512,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@041+050'
                                                                 ),
@@ -8527,7 +8521,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@051+060'
                                                                 ),
@@ -8536,7 +8530,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@061+070'
                                                                 ),
@@ -8545,7 +8539,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@071+080'
                                                                 ),
@@ -8554,7 +8548,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@081+090'
                                                                 ),
@@ -8563,7 +8557,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@091+100'
                                                                 ),
@@ -8572,7 +8566,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@101+120'
                                                                 ),
@@ -8581,7 +8575,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@121+140'
                                                                 ),
@@ -8590,7 +8584,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@141+160'
                                                                 ),
@@ -8599,7 +8593,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@161+180'
                                                                 ),
@@ -8608,7 +8602,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@181+200'
                                                                 ),
@@ -8617,7 +8611,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@201+250'
                                                                 ),
@@ -8626,7 +8620,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@251+300'
                                                                 ),
@@ -8635,7 +8629,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@preboard@IR_C2@fac@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPriceRef(
+                                                                choice=GeographicalIntervalPriceRef(
                                                                     version='01',
                                                                     ref='tfc:Single@preboard@R@C2@fac@301+350'
                                                                 ),
@@ -8698,7 +8692,7 @@ obj = PublicationDelivery(
                                         columns=FareTableColumnsRelStructure(
                                             fare_table_column=[
                                                 FareTableColumn(
-                                                    id='tfc:Single@onboard',
+                                                    id='tfc:Single@onboard@km',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Zona km',
@@ -8707,7 +8701,7 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Single@onboard',
+                                                    id='tfc:Single@onboard@clasa1',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Clasa 1',
@@ -8716,7 +8710,7 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Single@onboard',
+                                                    id='tfc:Single@onboard@clasa2',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Clasa 2',
@@ -8898,7 +8892,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Single@onboard@C1@full',
+                                                                id='tfc:Single@onboard@C1@full@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -8907,7 +8901,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Single@onboard@C1@full',
+                                                                id='tfc:Single@onboard@C1@full@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -8918,11 +8912,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_006+010',
                                                                     version='01',
                                                                     amount=Decimal('6.00'),
@@ -8948,7 +8942,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_011+020',
                                                                     version='01',
                                                                     amount=Decimal('7.50'),
@@ -8974,7 +8968,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_021+030',
                                                                     version='01',
                                                                     amount=Decimal('10.00'),
@@ -9000,7 +8994,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_031+040',
                                                                     version='01',
                                                                     amount=Decimal('11.50'),
@@ -9026,7 +9020,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_041+050',
                                                                     version='01',
                                                                     amount=Decimal('14.50'),
@@ -9052,7 +9046,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_051+060',
                                                                     version='01',
                                                                     amount=Decimal('15.00'),
@@ -9078,7 +9072,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_061+070',
                                                                     version='01',
                                                                     amount=Decimal('17.50'),
@@ -9104,7 +9098,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_071+080',
                                                                     version='01',
                                                                     amount=Decimal('19.50'),
@@ -9130,7 +9124,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_081+090',
                                                                     version='01',
                                                                     amount=Decimal('21.50'),
@@ -9156,7 +9150,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_091+100',
                                                                     version='01',
                                                                     amount=Decimal('24.00'),
@@ -9182,7 +9176,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_101+120',
                                                                     version='01',
                                                                     amount=Decimal('28.00'),
@@ -9208,7 +9202,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_121+140',
                                                                     version='01',
                                                                     amount=Decimal('32.50'),
@@ -9234,7 +9228,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_141+160',
                                                                     version='01',
                                                                     amount=Decimal('36.00'),
@@ -9260,7 +9254,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_161+180',
                                                                     version='01',
                                                                     amount=Decimal('41.00'),
@@ -9286,7 +9280,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_181+200',
                                                                     version='01',
                                                                     amount=Decimal('45.00'),
@@ -9312,7 +9306,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_201+250',
                                                                     version='01',
                                                                     amount=Decimal('51.50'),
@@ -9337,7 +9331,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_251+300',
                                                                     version='01',
                                                                     amount=Decimal('59.50'),
@@ -9363,7 +9357,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C1@full_301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C1@full_301+350',
                                                                     version='01',
                                                                     amount=Decimal('67.50'),
@@ -9405,7 +9399,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Single@onboard@C2@full',
+                                                                id='tfc:Single@onboard@C2@full@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -9414,7 +9408,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Single@onboard@C2@full',
+                                                                id='tfc:Single@onboard@C2@full@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -9425,11 +9419,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_006+010',
                                                                     version='01',
                                                                     amount=Decimal('5.50'),
@@ -9455,7 +9449,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_011+020',
                                                                     version='01',
                                                                     amount=Decimal('6.00'),
@@ -9481,7 +9475,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_021+030',
                                                                     version='01',
                                                                     amount=Decimal('6.50'),
@@ -9507,7 +9501,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_031+040',
                                                                     version='01',
                                                                     amount=Decimal('7.50'),
@@ -9533,7 +9527,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_041+050',
                                                                     version='01',
                                                                     amount=Decimal('9.00'),
@@ -9559,7 +9553,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_051+060',
                                                                     version='01',
                                                                     amount=Decimal('9.50'),
@@ -9585,7 +9579,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_061+070',
                                                                     version='01',
                                                                     amount=Decimal('11.50'),
@@ -9611,7 +9605,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_071+080',
                                                                     version='01',
                                                                     amount=Decimal('13.00'),
@@ -9637,7 +9631,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_081+090',
                                                                     version='01',
                                                                     amount=Decimal('14.50'),
@@ -9663,7 +9657,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_091+100',
                                                                     version='01',
                                                                     amount=Decimal('15.50'),
@@ -9689,7 +9683,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_101+120',
                                                                     version='01',
                                                                     amount=Decimal('18.00'),
@@ -9715,7 +9709,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_121+140',
                                                                     version='01',
                                                                     amount=Decimal('21.00'),
@@ -9741,7 +9735,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_141+160',
                                                                     version='01',
                                                                     amount=Decimal('23.50'),
@@ -9767,7 +9761,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_161+180',
                                                                     version='01',
                                                                     amount=Decimal('27.00'),
@@ -9793,7 +9787,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_181+200',
                                                                     version='01',
                                                                     amount=Decimal('28.50'),
@@ -9819,7 +9813,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_201+250',
                                                                     version='01',
                                                                     amount=Decimal('32.50'),
@@ -9844,7 +9838,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_251+300',
                                                                     version='01',
                                                                     amount=Decimal('38.00'),
@@ -9870,7 +9864,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Single@onboard@C2@full_301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Single@onboard@C2@full_301+350',
                                                                     version='01',
                                                                     amount=Decimal('44.00'),
@@ -9946,7 +9940,7 @@ obj = PublicationDelivery(
                                         columns=FareTableColumnsRelStructure(
                                             fare_table_column=[
                                                 FareTableColumn(
-                                                    id='tfc:Return@preboard@IR',
+                                                    id='tfc:Return@preboard@IR@km',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Zona km',
@@ -9955,7 +9949,7 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Return@preboard@IR',
+                                                    id='tfc:Return@preboard@IR@dus-intors_clasa1',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='dus-intors, Clasa 1',
@@ -9964,7 +9958,7 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Return@preboard@IR',
+                                                    id='tfc:Return@preboard@IR@copil_clasa1',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='dus-intors copil Clasa 1',
@@ -9973,7 +9967,7 @@ obj = PublicationDelivery(
                                                     order=3
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Return@preboard@IR',
+                                                    id='tfc:Return@preboard@IR@dus-intors_clasa2',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='dus-intors, Clasa 2',
@@ -9982,7 +9976,7 @@ obj = PublicationDelivery(
                                                     order=4
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Return@preboard@IR',
+                                                    id='tfc:Return@preboard@IR@copil_clasa2',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='5dus-intors copilClasa 2',
@@ -10027,20 +10021,12 @@ obj = PublicationDelivery(
                                                     order=5
                                                 ),
                                                 FareTableRow(
-                                                    id='tfc:Return@preboard@IR@031+040',
-                                                    version='01',
-                                                    name=MultilingualString(
-                                                        value='31-40'
-                                                    ),
-                                                    order=6
-                                                ),
-                                                FareTableRow(
                                                     id='tfc:Return@preboard@IR@041+050',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='41-50'
                                                     ),
-                                                    order=7
+                                                    order=6
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@051+060',
@@ -10048,7 +10034,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='51-60'
                                                     ),
-                                                    order=8
+                                                    order=7
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@061+070',
@@ -10056,7 +10042,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='61-70'
                                                     ),
-                                                    order=9
+                                                    order=8
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@071+080',
@@ -10064,7 +10050,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='71-80'
                                                     ),
-                                                    order=10
+                                                    order=9
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@081+090',
@@ -10072,7 +10058,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='81-90'
                                                     ),
-                                                    order=11
+                                                    order=10
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@091+100',
@@ -10080,7 +10066,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='91-100'
                                                     ),
-                                                    order=12
+                                                    order=11
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@101+120',
@@ -10088,7 +10074,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='101-120'
                                                     ),
-                                                    order=13
+                                                    order=12
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@121+140',
@@ -10096,7 +10082,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='121-140'
                                                     ),
-                                                    order=14
+                                                    order=13
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@141+160',
@@ -10104,7 +10090,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='141-160'
                                                     ),
-                                                    order=15
+                                                    order=14
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@161+180',
@@ -10112,7 +10098,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='161-180'
                                                     ),
-                                                    order=16
+                                                    order=15
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@181+200',
@@ -10120,7 +10106,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='181-200'
                                                     ),
-                                                    order=17
+                                                    order=16
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@201+250',
@@ -10128,7 +10114,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='201-250'
                                                     ),
-                                                    order=18
+                                                    order=17
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@251+300',
@@ -10136,7 +10122,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='251-300'
                                                     ),
-                                                    order=19
+                                                    order=18
                                                 ),
                                                 FareTableRow(
                                                     id='tfc:Return@preboard@IR@301+350',
@@ -10144,7 +10130,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='301-350'
                                                     ),
-                                                    order=20
+                                                    order=19
                                                 ),
                                             ]
                                         ),
@@ -10166,7 +10152,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Return@preboard@IR@C1@full',
+                                                                id='tfc:Return@preboard@IR@C1@full@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -10175,7 +10161,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Return@preboard@IR@C1@full',
+                                                                id='tfc:Return@preboard@IR@C1@full@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -10186,11 +10172,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@001+010',
                                                                     version='01',
                                                                     amount=Decimal('7.20'),
@@ -10216,7 +10202,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@011+020',
                                                                     version='01',
                                                                     amount=Decimal('9.90'),
@@ -10242,7 +10228,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@021+030',
                                                                     version='01',
                                                                     amount=Decimal('14.40'),
@@ -10268,7 +10254,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@031+040',
                                                                     version='01',
                                                                     amount=Decimal('17.10'),
@@ -10294,7 +10280,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@041+050',
                                                                     version='01',
                                                                     amount=Decimal('22.50'),
@@ -10320,7 +10306,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@051+060',
                                                                     version='01',
                                                                     amount=Decimal('23.40'),
@@ -10346,7 +10332,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@061+070',
                                                                     version='01',
                                                                     amount=Decimal('35.10'),
@@ -10372,7 +10358,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@071+080',
                                                                     version='01',
                                                                     amount=Decimal('31.50'),
@@ -10398,7 +10384,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@081+090',
                                                                     version='01',
                                                                     amount=Decimal('35.10'),
@@ -10424,7 +10410,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@091+100',
                                                                     version='01',
                                                                     amount=Decimal('39.60'),
@@ -10450,7 +10436,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@101+120',
                                                                     version='01',
                                                                     amount=Decimal('46.80'),
@@ -10476,7 +10462,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@121+140',
                                                                     version='01',
                                                                     amount=Decimal('30.50'),
@@ -10502,7 +10488,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@141+160',
                                                                     version='01',
                                                                     amount=Decimal('61.20'),
@@ -10528,7 +10514,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@161+180',
                                                                     version='01',
                                                                     amount=Decimal('70.20'),
@@ -10554,7 +10540,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@181+200',
                                                                     version='01',
                                                                     amount=Decimal('77.40'),
@@ -10580,7 +10566,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@201+250',
                                                                     version='01',
                                                                     amount=Decimal('89.10'),
@@ -10605,7 +10591,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@251+300',
                                                                     version='01',
                                                                     amount=Decimal('103.50'),
@@ -10631,7 +10617,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@full@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@full@301+350',
                                                                     version='01',
                                                                     amount=Decimal('117.90'),
@@ -10694,7 +10680,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Return@preboard@IR@C1@fac',
+                                                                id='tfc:Return@preboard@IR@C1@fac@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -10703,7 +10689,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Return@preboard@IR@C1@fac',
+                                                                id='tfc:Return@preboard@IR@C1@fac@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -10714,11 +10700,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@001+010',
                                                                     version='01',
                                                                     amount=Decimal('3.60'),
@@ -10756,7 +10742,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@011+020',
                                                                     version='01',
                                                                     amount=Decimal('4.95'),
@@ -10794,7 +10780,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@021+030',
                                                                     version='01',
                                                                     amount=Decimal('7.20'),
@@ -10832,7 +10818,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@031+040',
                                                                     version='01',
                                                                     amount=Decimal('8.55'),
@@ -10870,7 +10856,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@041+050',
                                                                     version='01',
                                                                     amount=Decimal('11.25'),
@@ -10908,7 +10894,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@051+060',
                                                                     version='01',
                                                                     amount=Decimal('13.95'),
@@ -10946,7 +10932,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@061+070',
                                                                     version='01',
                                                                     amount=Decimal('15.75'),
@@ -10984,7 +10970,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@071+080',
                                                                     version='01',
                                                                     amount=Decimal('15.75'),
@@ -11022,7 +11008,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@081+090',
                                                                     version='01',
                                                                     amount=Decimal('17.55'),
@@ -11060,7 +11046,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@091+100',
                                                                     version='01',
                                                                     amount=Decimal('19.80'),
@@ -11098,7 +11084,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@101+120',
                                                                     version='01',
                                                                     amount=Decimal('23.40'),
@@ -11136,7 +11122,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@121+140',
                                                                     version='01',
                                                                     amount=Decimal('27.45'),
@@ -11174,7 +11160,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@141+160',
                                                                     version='01',
                                                                     amount=Decimal('30.60'),
@@ -11212,7 +11198,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@161+180',
                                                                     version='01',
                                                                     amount=Decimal('35.10'),
@@ -11250,7 +11236,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@181+200',
                                                                     version='01',
                                                                     amount=Decimal('38.70'),
@@ -11288,7 +11274,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@201+250',
                                                                     version='01',
                                                                     amount=Decimal('44.55'),
@@ -11326,7 +11312,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@251+300',
                                                                     version='01',
                                                                     amount=Decimal('51.75'),
@@ -11364,7 +11350,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C1@fac@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C1@fac@301+350',
                                                                     version='01',
                                                                     amount=Decimal('58.95'),
@@ -11418,7 +11404,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Return@preboard@IR@C2@full',
+                                                                id='tfc:Return@preboard@IR@C2@full@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -11427,7 +11413,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Return@preboard@IR@C2@full',
+                                                                id='tfc:Return@preboard@IR@C2@full@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -11438,11 +11424,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@001+010',
                                                                     version='01',
                                                                     amount=Decimal('6.30'),
@@ -11468,7 +11454,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@011+020',
                                                                     version='01',
                                                                     amount=Decimal('7.20'),
@@ -11494,7 +11480,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@021+030',
                                                                     version='01',
                                                                     amount=Decimal('8.10'),
@@ -11520,7 +11506,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@031+040',
                                                                     version='01',
                                                                     amount=Decimal('9.90'),
@@ -11546,7 +11532,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@041+050',
                                                                     version='01',
                                                                     amount=Decimal('12.60'),
@@ -11572,7 +11558,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@051+060',
                                                                     version='01',
                                                                     amount=Decimal('13.50'),
@@ -11598,7 +11584,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@061+070',
                                                                     version='01',
                                                                     amount=Decimal('17.10'),
@@ -11624,7 +11610,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@071+080',
                                                                     version='01',
                                                                     amount=Decimal('19.80'),
@@ -11650,7 +11636,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@081+090',
                                                                     version='01',
                                                                     amount=Decimal('22.50'),
@@ -11676,7 +11662,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@091+100',
                                                                     version='01',
                                                                     amount=Decimal('24.30'),
@@ -11702,7 +11688,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@101+120',
                                                                     version='01',
                                                                     amount=Decimal('28.80'),
@@ -11728,7 +11714,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@121+140',
                                                                     version='01',
                                                                     amount=Decimal('34.20'),
@@ -11754,7 +11740,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@141+160',
                                                                     version='01',
                                                                     amount=Decimal('38.70'),
@@ -11780,7 +11766,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@161+180',
                                                                     version='01',
                                                                     amount=Decimal('45.00'),
@@ -11806,7 +11792,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@181+200',
                                                                     version='01',
                                                                     amount=Decimal('47.70'),
@@ -11832,7 +11818,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@201+250',
                                                                     version='01',
                                                                     amount=Decimal('54.90'),
@@ -11857,7 +11843,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@251+300',
                                                                     version='01',
                                                                     amount=Decimal('64.80'),
@@ -11883,7 +11869,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@full@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@full@301+350',
                                                                     version='01',
                                                                     amount=Decimal('75.69'),
@@ -11946,7 +11932,7 @@ obj = PublicationDelivery(
                                                     columns=FareTableColumnsRelStructure(
                                                         fare_table_column=[
                                                             FareTableColumn(
-                                                                id='tfc:Return@preboard@IR@C2@fac',
+                                                                id='tfc:Return@preboard@IR@C2@fac@LEI',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='LEI',
@@ -11955,7 +11941,7 @@ obj = PublicationDelivery(
                                                                 order=1
                                                             ),
                                                             FareTableColumn(
-                                                                id='tfc:Return@preboard@IR@C2@fac',
+                                                                id='tfc:Return@preboard@IR@C2@fac@tva_tax',
                                                                 version='01',
                                                                 name=MultilingualString(
                                                                     value='din care tva 19%',
@@ -11966,11 +11952,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@001+010',
                                                                     version='01',
                                                                     amount=Decimal('3.15'),
@@ -12008,7 +11994,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@011+020',
                                                                     version='01',
                                                                     amount=Decimal('3.60'),
@@ -12046,7 +12032,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@021+030',
                                                                     version='01',
                                                                     amount=Decimal('4.05'),
@@ -12084,7 +12070,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@031+040',
                                                                     version='01',
                                                                     amount=Decimal('4.95'),
@@ -12122,7 +12108,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@041+050',
                                                                     version='01',
                                                                     amount=Decimal('6.30'),
@@ -12160,7 +12146,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@051+060',
                                                                     version='01',
                                                                     amount=Decimal('6.75'),
@@ -12198,7 +12184,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@061+070',
                                                                     version='01',
                                                                     amount=Decimal('8.55'),
@@ -12236,7 +12222,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@071+080',
                                                                     version='01',
                                                                     amount=Decimal('9.90'),
@@ -12274,7 +12260,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@081+090',
                                                                     version='01',
                                                                     amount=Decimal('11.25'),
@@ -12312,7 +12298,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@091+100',
                                                                     version='01',
                                                                     amount=Decimal('12.15'),
@@ -12350,7 +12336,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@101+120',
                                                                     version='01',
                                                                     amount=Decimal('14.40'),
@@ -12388,7 +12374,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@121+140',
                                                                     version='01',
                                                                     amount=Decimal('17.10'),
@@ -12426,7 +12412,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@141+160',
                                                                     version='01',
                                                                     amount=Decimal('19.35'),
@@ -12464,7 +12450,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@161+180',
                                                                     version='01',
                                                                     amount=Decimal('22.50'),
@@ -12502,7 +12488,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@181+200',
                                                                     version='01',
                                                                     amount=Decimal('23.85'),
@@ -12540,7 +12526,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@201+250',
                                                                     version='01',
                                                                     amount=Decimal('27.45'),
@@ -12578,7 +12564,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@251+300',
                                                                     version='01',
                                                                     amount=Decimal('32.40'),
@@ -12616,7 +12602,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Return@preboard@IR@C2@fac@301+350',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Return@preboard@IR@C2@fac@301+350',
                                                                     version='01',
                                                                     amount=Decimal('37.80'),
@@ -12696,7 +12682,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Season Pass Distance based fares for Transferoviar '
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -12770,7 +12756,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:can_access_when'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 FrequencyOfUse(
@@ -12790,7 +12776,7 @@ obj = PublicationDelivery(
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
-                                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             UsageValidityPeriod(
@@ -12828,7 +12814,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfileRef(
@@ -12957,7 +12943,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -13049,7 +13035,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='eura:condition_of_use'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             PurchaseWindowRef(
@@ -13166,7 +13152,7 @@ obj = PublicationDelivery(
                                         columns=FareTableColumnsRelStructure(
                                             fare_table_column=[
                                                 FareTableColumn(
-                                                    id='tfc:Pass@Season@adult@1M',
+                                                    id='tfc:Pass@Season@adult@1M@km',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Zona km',
@@ -13175,7 +13161,7 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Pass@Season@adult@1M',
+                                                    id='tfc:Pass@Season@adult@1M@Regio-R',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='las trenuri Regio-R Clasa 2',
@@ -13184,7 +13170,7 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Pass@Season@adult@1M',
+                                                    id='tfc:Pass@Season@adult@1M@Interrgio',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='las trenuri interregio-IR Clasa 2',
@@ -13367,11 +13353,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@006+010',
                                                                     version='01',
                                                                     amount=Decimal('96.00'),
@@ -13385,7 +13371,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@011+020',
                                                                     version='01',
                                                                     amount=Decimal('107.00'),
@@ -13399,7 +13385,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@021+030',
                                                                     version='01',
                                                                     amount=Decimal('129.00'),
@@ -13413,7 +13399,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@031+040',
                                                                     version='01',
                                                                     amount=Decimal('146.00'),
@@ -13427,7 +13413,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@041+050',
                                                                     version='01',
                                                                     amount=Decimal('185.00'),
@@ -13441,7 +13427,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@051+060',
                                                                     version='01',
                                                                     amount=Decimal('196.00'),
@@ -13455,7 +13441,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@061+070',
                                                                     version='01',
                                                                     amount=Decimal('230.00'),
@@ -13469,7 +13455,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@071+080',
                                                                     version='01',
                                                                     amount=Decimal('252.00'),
@@ -13483,7 +13469,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@081+090',
                                                                     version='01',
                                                                     amount=Decimal('286.00'),
@@ -13497,7 +13483,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@091+100',
                                                                     version='01',
                                                                     amount=Decimal('314.00'),
@@ -13511,7 +13497,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@101+120',
                                                                     version='01',
                                                                     amount=Decimal('341.00'),
@@ -13525,7 +13511,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@121+140',
                                                                     version='01',
                                                                     amount=Decimal('408.00'),
@@ -13539,7 +13525,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@141+160',
                                                                     version='01',
                                                                     amount=Decimal('454.00'),
@@ -13553,7 +13539,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@161+180',
                                                                     version='01',
                                                                     amount=Decimal('526.00'),
@@ -13567,7 +13553,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@181+200',
                                                                     version='01',
                                                                     amount=Decimal('548.00'),
@@ -13581,7 +13567,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@201+250',
                                                                     version='01',
                                                                     amount=Decimal('622.00'),
@@ -13595,7 +13581,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R@251+300',
                                                                     version='01',
                                                                     amount=Decimal('733.00'),
@@ -13640,11 +13626,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@001+010',
                                                                     version='01',
                                                                     amount=Decimal('99.00'),
@@ -13658,7 +13644,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@011+020',
                                                                     version='01',
                                                                     amount=Decimal('109.00'),
@@ -13672,7 +13658,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@021+030',
                                                                     version='01',
                                                                     amount=Decimal('133.00'),
@@ -13686,7 +13672,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@031+040',
                                                                     version='01',
                                                                     amount=Decimal('150.00'),
@@ -13700,7 +13686,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@041+050',
                                                                     version='01',
                                                                     amount=Decimal('191.00'),
@@ -13714,7 +13700,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@051+060',
                                                                     version='01',
                                                                     amount=Decimal('202.00'),
@@ -13728,7 +13714,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@061+070',
                                                                     version='01',
                                                                     amount=Decimal('237.00'),
@@ -13742,7 +13728,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@071+080',
                                                                     version='01',
                                                                     amount=Decimal('260.00'),
@@ -13756,7 +13742,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@081+090',
                                                                     version='01',
                                                                     amount=Decimal('295.00'),
@@ -13770,7 +13756,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@091+100',
                                                                     version='01',
                                                                     amount=Decimal('323.00'),
@@ -13784,7 +13770,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@101+120',
                                                                     version='01',
                                                                     amount=Decimal('351.00'),
@@ -13798,7 +13784,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@121+140',
                                                                     version='01',
                                                                     amount=Decimal('420.00'),
@@ -13812,7 +13798,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@141+160',
                                                                     version='01',
                                                                     amount=Decimal('468.00'),
@@ -13826,7 +13812,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@161+180',
                                                                     version='01',
                                                                     amount=Decimal('542.00'),
@@ -13840,7 +13826,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@181+200',
                                                                     version='01',
                                                                     amount=Decimal('564.00'),
@@ -13854,7 +13840,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@201+250',
                                                                     version='01',
                                                                     amount=Decimal('641.00'),
@@ -13868,7 +13854,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@251+300',
                                                                     version='01',
                                                                     amount=Decimal('755.00'),
@@ -13911,7 +13897,7 @@ obj = PublicationDelivery(
                                         columns=FareTableColumnsRelStructure(
                                             fare_table_column=[
                                                 FareTableColumn(
-                                                    id='tfc:Pass@Season@student@1M',
+                                                    id='tfc:Pass@Season@student@1M@km',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Zona km',
@@ -13920,7 +13906,7 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Pass@Season@student@1M',
+                                                    id='tfc:Pass@Season@student@1M@Regio-R',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='las trenuri Regio-R Clasa 2',
@@ -13929,7 +13915,7 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Pass@Season@student@1M',
+                                                    id='tfc:Pass@Season@student@1M@interregio',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='las trenuri interregio-IR Clasa 2',
@@ -14112,11 +14098,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@006+010',
                                                                     version='01',
                                                                     amount=Decimal('48.00'),
@@ -14130,7 +14116,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@011+020',
                                                                     version='01',
                                                                     amount=Decimal('53.00'),
@@ -14144,7 +14130,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@021+030',
                                                                     version='01',
                                                                     amount=Decimal('64.50'),
@@ -14158,7 +14144,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@031+040',
                                                                     version='01',
                                                                     amount=Decimal('73.00'),
@@ -14172,7 +14158,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@041+050',
                                                                     version='01',
                                                                     amount=Decimal('92.50'),
@@ -14186,7 +14172,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@051+060',
                                                                     version='01',
                                                                     amount=Decimal('98.00'),
@@ -14200,7 +14186,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@061+070',
                                                                     version='01',
                                                                     amount=Decimal('115.00'),
@@ -14214,7 +14200,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@071+080',
                                                                     version='01',
                                                                     amount=Decimal('126.00'),
@@ -14228,7 +14214,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@081+090',
                                                                     version='01',
                                                                     amount=Decimal('143.00'),
@@ -14242,7 +14228,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@091+100',
                                                                     version='01',
                                                                     amount=Decimal('157.00'),
@@ -14256,7 +14242,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@101+120',
                                                                     version='01',
                                                                     amount=Decimal('170.50'),
@@ -14270,7 +14256,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@121+140',
                                                                     version='01',
                                                                     amount=Decimal('204.00'),
@@ -14284,7 +14270,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@141+160',
                                                                     version='01',
                                                                     amount=Decimal('227.00'),
@@ -14298,7 +14284,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@161+180',
                                                                     version='01',
                                                                     amount=Decimal('263.00'),
@@ -14312,7 +14298,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@181+200',
                                                                     version='01',
                                                                     amount=Decimal('274.00'),
@@ -14326,7 +14312,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@201+250',
                                                                     version='01',
                                                                     amount=Decimal('31100'),
@@ -14340,7 +14326,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R@251+300',
                                                                     version='01',
                                                                     amount=Decimal('366.50'),
@@ -14385,11 +14371,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@001+010',
                                                                     version='01',
                                                                     amount=Decimal('49.50'),
@@ -14403,7 +14389,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@011+020',
                                                                     version='01',
                                                                     amount=Decimal('54.50'),
@@ -14417,7 +14403,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@021+030',
                                                                     version='01',
                                                                     amount=Decimal('66.50'),
@@ -14431,7 +14417,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@031+040',
                                                                     version='01',
                                                                     amount=Decimal('75.00'),
@@ -14445,7 +14431,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@041+050',
                                                                     version='01',
                                                                     amount=Decimal('95.50'),
@@ -14459,7 +14445,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@051+060',
                                                                     version='01',
                                                                     amount=Decimal('101.00'),
@@ -14473,7 +14459,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@061+070',
                                                                     version='01',
                                                                     amount=Decimal('118.50'),
@@ -14487,7 +14473,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@071+080',
                                                                     version='01',
                                                                     amount=Decimal('130.00'),
@@ -14501,7 +14487,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@081+090',
                                                                     version='01',
                                                                     amount=Decimal('147.50'),
@@ -14515,7 +14501,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@091+100',
                                                                     version='01',
                                                                     amount=Decimal('161.50'),
@@ -14529,7 +14515,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@101+120',
                                                                     version='01',
                                                                     amount=Decimal('175.50'),
@@ -14543,7 +14529,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@121+140',
                                                                     version='01',
                                                                     amount=Decimal('210.00'),
@@ -14557,7 +14543,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@141+160',
                                                                     version='01',
                                                                     amount=Decimal('234.00'),
@@ -14571,7 +14557,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@161+180',
                                                                     version='01',
                                                                     amount=Decimal('271.00'),
@@ -14585,7 +14571,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@181+200',
                                                                     version='01',
                                                                     amount=Decimal('282.00'),
@@ -14599,7 +14585,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@201+250',
                                                                     version='01',
                                                                     amount=Decimal('320.50'),
@@ -14613,7 +14599,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@251+300',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR@251+300',
                                                                     version='01',
                                                                     amount=Decimal('377.50'),
@@ -14656,7 +14642,7 @@ obj = PublicationDelivery(
                                         columns=FareTableColumnsRelStructure(
                                             fare_table_column=[
                                                 FareTableColumn(
-                                                    id='tfc:Pass@Season@adult@1W',
+                                                    id='tfc:Pass@Season@adult@1W@km',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='Zona km',
@@ -14665,7 +14651,7 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Pass@Season@adult@1W',
+                                                    id='tfc:Pass@Season@adult@1W@Regio-R',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='las trenuri Regio-R Clasa 2',
@@ -14674,7 +14660,7 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 FareTableColumn(
-                                                    id='tfc:Pass@Season@adult@1W',
+                                                    id='tfc:Pass@Season@adult@1W@interregio',
                                                     version='01',
                                                     name=MultilingualString(
                                                         value='las trenuri interregio-IR Clasa 2',
@@ -14849,11 +14835,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@006+010',
                                                                     version='01',
                                                                     amount=Decimal('31.00'),
@@ -14867,7 +14853,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@011+020',
                                                                     version='01',
                                                                     amount=Decimal('37.00'),
@@ -14881,7 +14867,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@021+030',
                                                                     version='01',
                                                                     amount=Decimal('42.00'),
@@ -14895,7 +14881,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@031+040',
                                                                     version='01',
                                                                     amount=Decimal('47.00'),
@@ -14909,7 +14895,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@041+050',
                                                                     version='01',
                                                                     amount=Decimal('59.00'),
@@ -14923,7 +14909,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@051+060',
                                                                     version='01',
                                                                     amount=Decimal('64.00'),
@@ -14937,7 +14923,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@061+070',
                                                                     version='01',
                                                                     amount=Decimal('75.00'),
@@ -14951,7 +14937,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@071+080',
                                                                     version='01',
                                                                     amount=Decimal('80.00'),
@@ -14965,7 +14951,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@081+090',
                                                                     version='01',
                                                                     amount=Decimal('87.00'),
@@ -14979,7 +14965,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@091+100',
                                                                     version='01',
                                                                     amount=Decimal('92.00'),
@@ -14993,7 +14979,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@101+120',
                                                                     version='01',
                                                                     amount=Decimal('108.00'),
@@ -15007,7 +14993,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@121+140',
                                                                     version='01',
                                                                     amount=Decimal('125.00'),
@@ -15021,7 +15007,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@141+160',
                                                                     version='01',
                                                                     amount=Decimal('135.00'),
@@ -15035,7 +15021,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@161+180',
                                                                     version='01',
                                                                     amount=Decimal('151.00'),
@@ -15049,7 +15035,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@181+200',
                                                                     version='01',
                                                                     amount=Decimal('158.00'),
@@ -15063,7 +15049,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R@201+250',
                                                                     version='01',
                                                                     amount=Decimal('174.00'),
@@ -15108,11 +15094,11 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@001+010',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@001+010',
                                                                     version='01',
                                                                     amount=Decimal('33.00'),
@@ -15126,7 +15112,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@011+020',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@011+020',
                                                                     version='01',
                                                                     amount=Decimal('39.00'),
@@ -15140,7 +15126,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@021+030',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@021+030',
                                                                     version='01',
                                                                     amount=Decimal('44.00'),
@@ -15154,7 +15140,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@031+040',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@031+040',
                                                                     version='01',
                                                                     amount=Decimal('49.00'),
@@ -15168,7 +15154,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@041+050',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@041+050',
                                                                     version='01',
                                                                     amount=Decimal('62.00'),
@@ -15182,7 +15168,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@051+060',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@051+060',
                                                                     version='01',
                                                                     amount=Decimal('67.00'),
@@ -15196,7 +15182,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@061+070',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@061+070',
                                                                     version='01',
                                                                     amount=Decimal('79.00'),
@@ -15210,7 +15196,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@071+080',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@071+080',
                                                                     version='01',
                                                                     amount=Decimal('84.00'),
@@ -15224,7 +15210,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@081+090',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@081+090',
                                                                     version='01',
                                                                     amount=Decimal('91.00'),
@@ -15238,7 +15224,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@091+100',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@091+100',
                                                                     version='01',
                                                                     amount=Decimal('96.00'),
@@ -15252,7 +15238,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@101+120',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@101+120',
                                                                     version='01',
                                                                     amount=Decimal('113.00'),
@@ -15266,7 +15252,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@121+140',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@121+140',
                                                                     version='01',
                                                                     amount=Decimal('131.00'),
@@ -15280,7 +15266,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@141+160',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@141+160',
                                                                     version='01',
                                                                     amount=Decimal('142.00'),
@@ -15294,7 +15280,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@161+180',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@161+180',
                                                                     version='01',
                                                                     amount=Decimal('159.00'),
@@ -15308,7 +15294,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@181+200',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@181+200',
                                                                     version='01',
                                                                     amount=Decimal('166.00'),
@@ -15322,7 +15308,7 @@ obj = PublicationDelivery(
                                                             Cell(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@201+250',
                                                                 version='01',
-                                                                fare_price_ref_or_fare_price=GeographicalIntervalPrice(
+                                                                choice=GeographicalIntervalPrice(
                                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@201+250',
                                                                     version='01',
                                                                     amount=Decimal('182.00'),
@@ -15397,7 +15383,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Special Statutory Right to Travel Discounts '
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -15473,12 +15459,14 @@ obj = PublicationDelivery(
                                                             ]
                                                         ),
                                                         temporal_validity_parameters=TemporalValidityParametersRelStructure(
-                                                            day_type_ref=FareDayTypeRef(
-                                                                version='01',
-                                                                ref='tfc:January@1'
-                                                            )
+                                                            day_type_ref=[
+                                                                FareDayTypeRef(
+                                                                    version='01',
+                                                                    ref='tfc:January@1'
+                                                                ),
+                                                            ]
                                                         ),
-                                                        time_structure_factor_ref=TimeIntervalRef(
+                                                        time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                             version='01',
                                                             ref='tfc:TFC@Tariff@Discount@Statutory_Right+Travel@1Y'
                                                         )
@@ -15526,7 +15514,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfileRef(
@@ -15583,7 +15571,7 @@ obj = PublicationDelivery(
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.OR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfileRef(
@@ -15694,7 +15682,7 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -16845,7 +16833,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Distance based fares for  TFC - ODs'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             value='TFC',
                                             version='any',
                                             ref='uic:3181'
@@ -16862,7 +16850,7 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='A single O/D pair from the following'
                                                     ),
-                                                    choice=GroupOfDistanceMatrixElementsRef(
+                                                    choice_1=GroupOfDistanceMatrixElementsRef(
                                                         version='01',
                                                         ref='tfc:TFC@ODs@all'
                                                     )
@@ -17738,7 +17726,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='tfc:Branding',
                                         version='any',
@@ -18238,7 +18226,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             travel_documents=TravelDocumentsRelStructure(
-                                                                                travel_document_ref_or_travel_document=[
+                                                                                choice=[
                                                                                     TravelDocumentRef(
                                                                                         value='Ticket number',
                                                                                         ref='tfc_t:1267459',
@@ -18504,7 +18492,7 @@ obj = PublicationDelivery(
                                                                                                             ),
                                                                                                         ]
                                                                                                     ),
-                                                                                                    time_structure_factor_ref=TimeIntervalRef(
+                                                                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Tariff@Pass@Season@1M'
                                                                                                     ),
@@ -18519,7 +18507,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             travel_documents=TravelDocumentsRelStructure(
-                                                                                travel_document_ref_or_travel_document=[
+                                                                                choice=[
                                                                                     TravelDocumentRef(
                                                                                         value='EXTERNAL REFERENCE',
                                                                                         ref='tfc_t:PASS134455',
@@ -18693,7 +18681,7 @@ obj = PublicationDelivery(
                                                                                                         version='01',
                                                                                                         ref='tfc:TFC@Discount@Statutory_Right+Travel-SOP'
                                                                                                     ),
-                                                                                                    limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                                                                    limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                                                                     limitations=UsageParametersRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
@@ -19391,7 +19379,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             travel_documents=TravelDocumentsRelStructure(
-                                                                                travel_document_ref_or_travel_document=[
+                                                                                choice=[
                                                                                     TravelDocumentRef(
                                                                                         value='EXTERNAL REFERENCE',
                                                                                         ref='tfc_t:PASS134455',
@@ -19552,7 +19540,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     TypeOfFrame(
                                         id='eura:Fare',
                                         version='any',
@@ -20168,7 +20156,7 @@ obj = PublicationDelivery(
                                         ),
                                         country_ref=CountryRef(
                                             ref=IanaCountryTldEnumeration.UK,
-                                            ref_principality='GB-UKM'
+                                            ref_principality='iso3166-2:GB-UKM'
                                         )
                                     ),
                                     Operator(
@@ -20189,7 +20177,7 @@ obj = PublicationDelivery(
                                         ),
                                         country_ref=CountryRef(
                                             ref=IanaCountryTldEnumeration.UK,
-                                            ref_principality='GB-UKM'
+                                            ref_principality='iso3166-2:GB-UKM'
                                         )
                                     ),
                                     Operator(

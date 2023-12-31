@@ -18,8 +18,8 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
 
     stop_assignment: List[
         Union[
-            FlexibleStopAssignment,
             VehicleJourneyStopAssignment,
+            FlexibleStopAssignment,
             NavigationPathAssignment,
             TrainStopAssignment,
             DynamicStopAssignment,
@@ -31,13 +31,13 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
             "type": "Elements",
             "choices": (
                 {
-                    "name": "FlexibleStopAssignment",
-                    "type": FlexibleStopAssignment,
+                    "name": "VehicleJourneyStopAssignment",
+                    "type": VehicleJourneyStopAssignment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "VehicleJourneyStopAssignment",
-                    "type": VehicleJourneyStopAssignment,
+                    "name": "FlexibleStopAssignment",
+                    "type": FlexibleStopAssignment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

@@ -4,6 +4,7 @@ from .authority import Authority
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .general_organisation import GeneralOrganisation
 from .management_agent import ManagementAgent
+from .online_service_operator import OnlineServiceOperator
 from .operator import Operator
 from .other_organisation import OtherOrganisation
 from .retail_consortium import RetailConsortium
@@ -21,13 +22,14 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
     organisation_or_transport_organisation: List[
         Union[
             RetailConsortium,
-            Authority,
-            Operator,
             ServicedOrganisation,
             GeneralOrganisation,
             ManagementAgent,
             TravelAgent,
             OtherOrganisation,
+            OnlineServiceOperator,
+            Authority,
+            Operator,
         ]
     ] = field(
         default_factory=list,
@@ -37,16 +39,6 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "RetailConsortium",
                     "type": RetailConsortium,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Authority",
-                    "type": Authority,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Operator",
-                    "type": Operator,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -72,6 +64,21 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "OtherOrganisation",
                     "type": OtherOrganisation,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OnlineServiceOperator",
+                    "type": OnlineServiceOperator,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Authority",
+                    "type": Authority,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Operator",
+                    "type": Operator,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

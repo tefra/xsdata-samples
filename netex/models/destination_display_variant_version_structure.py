@@ -7,6 +7,7 @@ from .destination_display_context_enumeration import (
 )
 from .destination_display_ref import DestinationDisplayRef
 from .multilingual_string import MultilingualString
+from .presentation_structure import PresentationStructure
 from .vias_rel_structure import ViasRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -82,6 +83,14 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
         default=None,
         metadata={
             "name": "DriverDisplayText",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    presentation: Optional[PresentationStructure] = field(
+        default=None,
+        metadata={
+            "name": "Presentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

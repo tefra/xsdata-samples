@@ -6,7 +6,6 @@ from netex.models.alternative_texts_rel_structure import DayType
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
-from netex.models.boolean_operator_enumeration import BooleanOperatorEnumeration
 from netex.models.cell_versioned_child_structure import CellsRelStructure
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
 from netex.models.cell_versioned_child_structure import FareTable
@@ -35,6 +34,7 @@ from netex.models.generic_parameter_assignment_version_structure import GenericP
 from netex.models.group_of_sales_offer_packages import GroupOfSalesOfferPackages
 from netex.models.group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
 from netex.models.groups_of_sales_offer_packages_in_frame_rel_structure import GroupsOfSalesOfferPackagesInFrameRelStructure
+from netex.models.logical_operation_enumeration import LogicalOperationEnumeration
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.operator import Operator
@@ -136,7 +136,7 @@ obj = PublicationDelivery(
                             ),
                         ]
                     ),
-                    version_frame_ref=[
+                    choice_1=[
                         FareFrameRef(
                             value='REQUEST',
                             ref='myfares:any'
@@ -151,12 +151,12 @@ obj = PublicationDelivery(
         value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='myfares:DTA@RailCards',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             ValidBetween(
                                 from_date=XmlDateTime(2011, 1, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2011, 7, 1, 0, 0, 0, 0, 0)
@@ -205,7 +205,7 @@ obj = PublicationDelivery(
                                         name=MultilingualString(
                                             value='Railcard Discount  tariff'
                                         ),
-                                        organisation_ref_or_transport_organisation_ref_or_other_organisation_ref=OperatorRef(
+                                        choice=OperatorRef(
                                             version='any',
                                             ref='mytoc:DTA'
                                         ),
@@ -264,14 +264,14 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
-                                                            vehicle_modes=[
+                                                            vehicle_modes_or_transport_modes=[
                                                                 [
                                                                     VehicleModeEnumeration.RAIL,
                                                                 ],
                                                             ],
-                                                            all_operators_ref_or_operator_ref=[
+                                                            choice=[
                                                                 OperatorRef(
                                                                     version='any',
                                                                     ref='mytoc:DTA'
@@ -306,7 +306,7 @@ obj = PublicationDelivery(
                                                             ref='fxc:can_access_when',
                                                             version_ref='fxc:v1.0'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UsageValidityPeriod(
@@ -368,7 +368,7 @@ obj = PublicationDelivery(
                                                             ref='fxc:can_purchase',
                                                             version_ref='fxc:v1.0'
                                                         ),
-                                                        validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR
+                                                        validity_parameter_grouping_type=LogicalOperationEnumeration.XOR
                                                     )
                                                 ),
                                                 FareStructureElement(
@@ -385,7 +385,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:eligible'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.XOR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfile(
@@ -459,7 +459,7 @@ obj = PublicationDelivery(
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_sale'
                                                         ),
-                                                        limitation_grouping_type=BooleanOperatorEnumeration.AND,
+                                                        limitation_grouping_type=LogicalOperationEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UsageValidityPeriod(
@@ -498,7 +498,7 @@ obj = PublicationDelivery(
                                             version='ntx:v1.0',
                                             ref='ntx:discount_card'
                                         ),
-                                        transport_organisation_ref=OperatorRef(
+                                        organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
                                             version='any',
                                             ref='mytoc:DTA'
                                         ),
@@ -566,7 +566,7 @@ obj = PublicationDelivery(
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.XOR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -603,7 +603,7 @@ obj = PublicationDelivery(
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.XOR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -624,7 +624,7 @@ obj = PublicationDelivery(
                                                         version='ntx:v1.0',
                                                         ref='ntx:can_access_when'
                                                     ),
-                                                    time_structure_factor_ref=TimeIntervalRef(
+                                                    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
                                                         version='1.0',
                                                         ref='myfares:Railcard_discount@1year'
                                                     )
@@ -652,7 +652,7 @@ obj = PublicationDelivery(
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.XOR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
@@ -670,7 +670,7 @@ obj = PublicationDelivery(
                                                         version='ntx:v1.0',
                                                         ref='ntx:can_purchase'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.XOR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             Subscribing(
@@ -792,7 +792,7 @@ obj = PublicationDelivery(
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
-                                                    limitation_grouping_type=BooleanOperatorEnumeration.XOR,
+                                                    limitation_grouping_type=LogicalOperationEnumeration.XOR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             SalesOfferPackageEntitlementGiven(
@@ -988,7 +988,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         used_in=UsedInRefsRelStructure(
-                                            tariff_ref=[
+                                            choice=[
                                                 TariffRef(
                                                     version='1.0',
                                                     ref='myfares:Railcard_discount'
@@ -1020,7 +1020,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             TimeIntervalPrice(
                                                                 id='myfares:railcard@adult@1year',
                                                                 version='1.0',
@@ -1071,7 +1071,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             TimeIntervalPrice(
                                                                 id='myfares:railcard@child@1year',
                                                                 version='1.0',
@@ -1122,7 +1122,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             TimeIntervalPrice(
                                                                 id='myfares:railcard@student@1year',
                                                                 version='1.0',
@@ -1173,7 +1173,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
-                                                        fare_price_or_fare_price_ref=[
+                                                        choice=[
                                                             TimeIntervalPrice(
                                                                 id='myfares:railcard@senior@1year',
                                                                 version='1.0',
@@ -1221,7 +1221,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
-                                type_of_value_or_type_of_entity=[
+                                choice=[
                                     ValueSet(
                                         id='ntx:Types_of_Tariff',
                                         version='ntx:v1.0',

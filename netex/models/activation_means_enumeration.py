@@ -10,4 +10,5 @@ class ActivationMeansEnumeration(Enum):
     USE_OF_MOBILE_DEVICE = "useOfMobileDevice"
     AUTOMATIC_BY_TIME = "automaticByTime"
     AUTOMATIC_BY_PROXIMITY = "automaticByProximity"
+    ACCESS_CODE = "accessCode"
     OTHER = "other"

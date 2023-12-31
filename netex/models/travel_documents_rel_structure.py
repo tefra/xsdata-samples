@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 from .frame_containment_structure import FrameContainmentStructure
+from .service_access_code import ServiceAccessCode
+from .service_access_code_ref import ServiceAccessCodeRef
 from .travel_document import TravelDocument
 from .travel_document_ref import TravelDocumentRef
 
@@ -12,13 +14,23 @@ class TravelDocumentsRelStructure(FrameContainmentStructure):
     class Meta:
         name = "travelDocuments_RelStructure"
 
-    travel_document_ref_or_travel_document: List[
-        Union[TravelDocumentRef, TravelDocument]
+    choice: List[
+        Union[
+            ServiceAccessCodeRef,
+            TravelDocumentRef,
+            TravelDocument,
+            ServiceAccessCode,
+        ]
     ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "ServiceAccessCodeRef",
+                    "type": ServiceAccessCodeRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "TravelDocumentRef",
                     "type": TravelDocumentRef,
@@ -27,6 +39,11 @@ class TravelDocumentsRelStructure(FrameContainmentStructure):
                 {
                     "name": "TravelDocument",
                     "type": TravelDocument,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "ServiceAccessCode",
+                    "type": ServiceAccessCode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

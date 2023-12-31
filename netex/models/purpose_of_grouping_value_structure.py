@@ -4,6 +4,7 @@ from .class_refs_rel_structure import ClassRefsRelStructure
 from .customer_account_status import CustomerAccountStatus
 from .type_of_access_right_assignment import TypeOfAccessRightAssignment
 from .type_of_activation import TypeOfActivation
+from .type_of_battery_chemistry import TypeOfBatteryChemistry
 from .type_of_congestion import TypeOfCongestion
 from .type_of_customer_account import TypeOfCustomerAccount
 from .type_of_delivery_variant import TypeOfDeliveryVariant
@@ -21,6 +22,8 @@ from .type_of_journey_pattern import TypeOfJourneyPattern
 from .type_of_line import TypeOfLine
 from .type_of_link import TypeOfLink
 from .type_of_link_sequence import TypeOfLinkSequence
+from .type_of_mobility_service import TypeOfMobilityService
+from .type_of_mode_of_operation import TypeOfModeOfOperation
 from .type_of_notice import TypeOfNotice
 from .type_of_operation import TypeOfOperation
 from .type_of_organisation import TypeOfOrganisation
@@ -29,6 +32,7 @@ from .type_of_passenger_information_equipment import (
     TypeOfPassengerInformationEquipment,
 )
 from .type_of_place import TypeOfPlace
+from .type_of_plug import TypeOfPlug
 from .type_of_point import TypeOfPoint
 from .type_of_projection import TypeOfProjection
 from .type_of_responsibility_role import TypeOfResponsibilityRole
@@ -60,6 +64,7 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
     )
     type_of_entity: Optional[
         Union[
+            TypeOfMobilityService,
             TypeOfRetailDevice,
             CustomerAccountStatus,
             TypeOfCustomerAccount,
@@ -75,12 +80,15 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
             TypeOfFlexibleService,
             TypeOfTimeDemandType,
             TypeOfPassengerInformationEquipment,
-            TypeOfCongestion,
             TypeOfJourneyPattern,
-            TypeOfLine,
             TypeOfActivation,
+            TypeOfModeOfOperation,
+            TypeOfPlug,
+            TypeOfBatteryChemistry,
+            TypeOfLine,
             TypeOfDeliveryVariant,
             TypeOfNotice,
+            TypeOfCongestion,
             TypeOfFacility,
             TypeOfService,
             TypeOfEquipment,
@@ -104,6 +112,11 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
         metadata={
             "type": "Elements",
             "choices": (
+                {
+                    "name": "TypeOfMobilityService",
+                    "type": TypeOfMobilityService,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
                 {
                     "name": "TypeOfRetailDevice",
                     "type": TypeOfRetailDevice,
@@ -180,23 +193,33 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TypeOfCongestion",
-                    "type": TypeOfCongestion,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
                     "name": "TypeOfJourneyPattern",
                     "type": TypeOfJourneyPattern,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TypeOfLine",
-                    "type": TypeOfLine,
+                    "name": "TypeOfActivation",
+                    "type": TypeOfActivation,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
-                    "name": "TypeOfActivation",
-                    "type": TypeOfActivation,
+                    "name": "TypeOfModeOfOperation",
+                    "type": TypeOfModeOfOperation,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfPlug",
+                    "type": TypeOfPlug,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfBatteryChemistry",
+                    "type": TypeOfBatteryChemistry,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfLine",
+                    "type": TypeOfLine,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -207,6 +230,11 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
                 {
                     "name": "TypeOfNotice",
                     "type": TypeOfNotice,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "TypeOfCongestion",
+                    "type": TypeOfCongestion,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

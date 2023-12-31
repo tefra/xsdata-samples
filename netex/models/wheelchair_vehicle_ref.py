@@ -1,10 +1,10 @@
 from dataclasses import dataclass
-from .installed_equipment_ref_structure import InstalledEquipmentRefStructure
+from .wheelchair_vehicle_ref_structure import WheelchairVehicleRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class WheelchairVehicleRef(InstalledEquipmentRefStructure):
+class WheelchairVehicleRef(WheelchairVehicleRefStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"

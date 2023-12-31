@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
-from .boolean_operator_enumeration import BooleanOperatorEnumeration
 from .containment_aggregation_structure import ContainmentAggregationStructure
+from .logical_operation_enumeration import LogicalOperationEnumeration
 from .validity_parameter_assignment_version_structure import (
     ValidityParameterAssignmentVersionStructure,
 )
@@ -16,7 +16,7 @@ class GenericParameterAssignmentVersionStructure(
     class Meta:
         name = "GenericParameterAssignment_VersionStructure"
 
-    includes_grouping_type: Optional[BooleanOperatorEnumeration] = field(
+    includes_grouping_type: Optional[LogicalOperationEnumeration] = field(
         default=None,
         metadata={
             "name": "IncludesGroupingType",

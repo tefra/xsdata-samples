@@ -14,10 +14,10 @@ class RubbishDisposalEquipmentVersionStructure(
     class Meta:
         name = "RubbishDisposalEquipment_VersionStructure"
 
-    sharps_dispsal: Optional[bool] = field(
+    sharps_disposal: Optional[bool] = field(
         default=None,
         metadata={
-            "name": "SharpsDispsal",
+            "name": "SharpsDisposal",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

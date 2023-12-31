@@ -7,6 +7,8 @@ from .entities_in_version_rel_structure import (
 )
 from .fare_frame import FareFrame
 from .infrastructure_frame import InfrastructureFrame
+from .mobility_journey_frame import MobilityJourneyFrame
+from .mobility_service_frame import MobilityServiceFrame
 from .resource_frame import ResourceFrame
 from .sales_transaction_frame import SalesTransactionFrame
 from .service_calendar_frame import ServiceCalendarFrame
@@ -23,9 +25,11 @@ class DataObjectsRelStructure:
     class Meta:
         name = "dataObjects_RelStructure"
 
-    common_frame: List[
+    choice: List[
         Union[
             CompositeFrame,
+            MobilityJourneyFrame,
+            MobilityServiceFrame,
             SalesTransactionFrame,
             FareFrame,
             DriverScheduleFrame,
@@ -46,6 +50,16 @@ class DataObjectsRelStructure:
                 {
                     "name": "CompositeFrame",
                     "type": CompositeFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MobilityJourneyFrame",
+                    "type": MobilityJourneyFrame,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "MobilityServiceFrame",
+                    "type": MobilityServiceFrame,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

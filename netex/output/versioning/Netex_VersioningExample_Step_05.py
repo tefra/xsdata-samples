@@ -54,7 +54,7 @@ obj = PublicationDelivery(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice='',
-                    version_frame_ref=[
+                    choice_1=[
                         ServiceFrameRef(
                             ref='mybus:ntwkf001',
                             version_ref='ANY'
@@ -69,12 +69,12 @@ obj = PublicationDelivery(
         value='Netex basic Versioning Example Step 05'
     ),
     data_objects=DataObjectsRelStructure(
-        common_frame=[
+        choice=[
             CompositeFrame(
                 id='mybus:ntwkf001',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
-                        validity_condition_ref_or_validity_condition=[
+                        choice=[
                             AvailabilityCondition(
                                 id='mybus:ntwkf001',
                                 version='any',
@@ -215,7 +215,7 @@ obj = PublicationDelivery(
                             id='mybus:ntwkf001@service',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
-                                    validity_condition_ref_or_validity_condition=[
+                                    choice=[
                                         AvailabilityCondition(
                                             id='mybus:VC002_mf',
                                             created=XmlDateTime(2010, 5, 18, 10, 30, 47, 0, 0),

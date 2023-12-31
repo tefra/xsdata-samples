@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from decimal import Decimal
 from typing import Optional, Union
 from .group_of_lines_ref import GroupOfLinesRef
 from .line_refs_rel_structure import LineRefsRelStructure
@@ -21,6 +22,14 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
         default=None,
         metadata={
             "name": "ZoneUse",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
+    )
+    maximum_speed: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "MaximumSpeed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },

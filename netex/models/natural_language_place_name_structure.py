@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .lang_value import LangValue
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
@@ -15,10 +14,9 @@ class NaturalLanguagePlaceNameStructure:
             "pattern": r"[^,\[\]\{\}\?$%\^=@#;:]+",
         },
     )
-    lang: Optional[LangValue] = field(
+    lang: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )

@@ -10,4 +10,6 @@ class BookingMethodEnumeration(Enum):
     OTHER = "other"
     PHONE_AT_STOP = "phoneAtStop"
     TEXT = "text"
+    MOBILE_APP = "mobileApp"
+    AT_OFFICE = "atOffice"
     NONE = "none"

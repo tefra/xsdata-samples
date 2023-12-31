@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Union
 from .compound_train import CompoundTrain
 from .containment_aggregation_structure import ContainmentAggregationStructure
+from .simple_vehicle_type import SimpleVehicleType
 from .train import Train
 from .vehicle_type import VehicleType
 
@@ -13,8 +14,8 @@ class VehicleTypesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleTypesInFrame_RelStructure"
 
-    compound_train_or_train_or_vehicle_type: List[
-        Union[CompoundTrain, Train, VehicleType]
+    choice: List[
+        Union[CompoundTrain, Train, VehicleType, SimpleVehicleType]
     ] = field(
         default_factory=list,
         metadata={
@@ -33,6 +34,11 @@ class VehicleTypesInFrameRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "VehicleType",
                     "type": VehicleType,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "SimpleVehicleType",
+                    "type": SimpleVehicleType,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
