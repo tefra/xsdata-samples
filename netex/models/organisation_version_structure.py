@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Any
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .alternative_texts_rel_structure import (
     DataManagedObjectStructure,
@@ -177,7 +177,9 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_period: Optional[ValidBetweenVersionStructure] = field(
+    validity_period: Optional[
+        "OrganisationVersionStructure.ValidityPeriod"
+    ] = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -226,3 +228,60 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+
+    @dataclass
+    class ValidityPeriod(ValidBetweenVersionStructure):
+        validity_conditions_or_valid_between: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        alternative_texts: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        key_list: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        extensions: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        branding_ref: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        name: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        description: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        conditioned_object_ref: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        with_condition_ref: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )

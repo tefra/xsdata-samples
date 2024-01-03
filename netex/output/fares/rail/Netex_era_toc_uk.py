@@ -14,7 +14,6 @@ from netex.models.alternative_texts_rel_structure import OperatingDay
 from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
 from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidBetween
-from netex.models.alternative_texts_rel_structure import ValidBetweenVersionStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityRuleParameter
 from netex.models.amount_of_price_unit_enumeration import AmountOfPriceUnitEnumeration
@@ -27,7 +26,6 @@ from netex.models.blackout_start_enumeration import BlackoutStartEnumeration
 from netex.models.branding import Branding
 from netex.models.branding_ref import BrandingRef
 from netex.models.bus_submode_enumeration import BusSubmodeEnumeration
-from netex.models.cell_versioned_child_structure import CellVersionedChildStructure
 from netex.models.cell_versioned_child_structure import CellsRelStructure
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
 from netex.models.cell_versioned_child_structure import FareTable
@@ -201,6 +199,7 @@ from netex.models.operator_ref import OperatorRef
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_refs_rel_structure import OrganisationRefsRelStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
+from netex.models.organisation_version_structure import OrganisationVersionStructure
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.penalty_policy import PenaltyPolicy
@@ -209,7 +208,6 @@ from netex.models.per_basis_enumeration import PerBasisEnumeration
 from netex.models.point_refs_rel_structure import PointRefsRelStructure
 from netex.models.polygon import Polygon
 from netex.models.pos import Pos
-from netex.models.postal_address_version_structure import PostalAddressVersionStructure
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.preassigned_fare_product_enumeration import PreassignedFareProductEnumeration
 from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
@@ -325,6 +323,7 @@ from netex.models.train_restrictions_enumeration import TrainRestrictionsEnumera
 from netex.models.transferability import Transferability
 from netex.models.transferability_ref import TransferabilityRef
 from netex.models.transport_organisation_refs_rel_structure import TransportOrganisationRefsRelStructure
+from netex.models.transport_organisation_version_structure import TransportOrganisationVersionStructure
 from netex.models.transport_submode import TransportSubmode
 from netex.models.travel_document_ref import TravelDocumentRef
 from netex.models.travel_documents_rel_structure import TravelDocumentsRelStructure
@@ -9527,7 +9526,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station',
                                                                                                                     version='01',
@@ -9539,7 +9538,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@online',
                                                                                                                     version='01',
@@ -9551,7 +9550,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=2
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@onboard',
                                                                                                                     version='01',
@@ -9582,7 +9581,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@child@in_station',
                                                                                                                     version='01',
@@ -9610,7 +9609,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@child@online',
                                                                                                                     version='01',
@@ -9638,7 +9637,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=2
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@first@child@onboard',
                                                                                                                     version='01',
@@ -9702,7 +9701,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@in_station',
                                                                                                                     version='01',
@@ -9714,7 +9713,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@online',
                                                                                                                     version='01',
@@ -9726,7 +9725,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=2
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@onboard',
                                                                                                                     version='01',
@@ -9757,7 +9756,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@child@in_station',
                                                                                                                     version='01',
@@ -9785,7 +9784,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@child@online',
                                                                                                                     version='01',
@@ -9813,7 +9812,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=2
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@single@second@child@onboard',
                                                                                                                     version='01',
@@ -9904,7 +9903,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@in_station',
                                                                                                                     version='01',
@@ -9916,7 +9915,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@online',
                                                                                                                     version='01',
@@ -9928,7 +9927,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=2
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@onboard',
                                                                                                                     version='01',
@@ -9962,7 +9961,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@in_station',
                                                                                                                     version='01',
@@ -9990,7 +9989,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@online',
                                                                                                                     version='01',
@@ -10018,7 +10017,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=2
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@onboard',
                                                                                                                     version='01',
@@ -10069,7 +10068,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult@in_station',
                                                                                                                     version='01',
@@ -10081,7 +10080,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult@online',
                                                                                                                     version='01',
@@ -10093,7 +10092,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=2
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@onboard',
                                                                                                                     version='01',
@@ -10123,7 +10122,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@child@in_station',
                                                                                                                     version='01',
@@ -10151,7 +10150,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@second@child@online',
                                                                                                                     version='01',
@@ -10179,7 +10178,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=2
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=FarePriceVersionedChildStructure(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@anytime@return@first@child@onboard',
                                                                                                                     version='01',
@@ -10281,7 +10280,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult@in_station',
                                                                                                                     version='01',
@@ -10293,7 +10292,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult@online',
                                                                                                                     version='01',
@@ -10324,7 +10323,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@child@in_station',
                                                                                                                     version='01',
@@ -10352,7 +10351,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@first@child@online',
                                                                                                                     version='01',
@@ -10416,7 +10415,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult@in_station',
                                                                                                                     version='01',
@@ -10428,7 +10427,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult@online',
                                                                                                                     version='01',
@@ -10459,7 +10458,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@child@in_station',
                                                                                                                     version='01',
@@ -10487,7 +10486,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@single@second@child@online',
                                                                                                                     version='01',
@@ -10578,7 +10577,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult@in_station',
                                                                                                                     version='01',
@@ -10590,7 +10589,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult@online',
                                                                                                                     version='01',
@@ -10621,7 +10620,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@child@in_station',
                                                                                                                     version='01',
@@ -10649,7 +10648,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@first@child@online',
                                                                                                                     version='01',
@@ -10713,7 +10712,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult@in_station',
                                                                                                                     version='01',
@@ -10725,7 +10724,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult@online',
                                                                                                                     version='01',
@@ -10756,7 +10755,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@child@in_station',
                                                                                                                     version='01',
@@ -10784,7 +10783,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@off_peak@return@second@child@online',
                                                                                                                     version='01',
@@ -10915,7 +10914,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult@Q1',
                                                                                                                     version='01',
@@ -10938,7 +10937,7 @@ obj = PublicationDelivery(
                                                                                                                 ],
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult@Q2',
                                                                                                                     version='01',
@@ -10961,7 +10960,7 @@ obj = PublicationDelivery(
                                                                                                                 ],
                                                                                                                 order=2
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@adult@Q3',
                                                                                                                     version='01',
@@ -11003,7 +11002,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@first@child@online',
                                                                                                                     version='01',
@@ -11056,7 +11055,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult@Q1',
                                                                                                                     version='01',
@@ -11079,7 +11078,7 @@ obj = PublicationDelivery(
                                                                                                                 ],
                                                                                                                 order=1
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult@Q2',
                                                                                                                     version='01',
@@ -11102,7 +11101,7 @@ obj = PublicationDelivery(
                                                                                                                 ],
                                                                                                                 order=2
                                                                                                             ),
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@adult@Q3',
                                                                                                                     version='01',
@@ -11144,7 +11143,7 @@ obj = PublicationDelivery(
                                                                                                     ),
                                                                                                     cells=CellsRelStructure(
                                                                                                         choice=[
-                                                                                                            CellVersionedChildStructure(
+                                                                                                            CellsRelStructure.CellInContext(
                                                                                                                 choice=SalesOfferPackagePrice(
                                                                                                                     id='atc:ATOC@Products@Trip@Prices@advance@single@second@child@online',
                                                                                                                     version='01',
@@ -24119,7 +24118,7 @@ obj = PublicationDelivery(
                                             ref=IanaCountryTldEnumeration.UK,
                                             ref_principality='ENG'
                                         ),
-                                        address=PostalAddressVersionStructure(
+                                        address=TransportOrganisationVersionStructure.Address(
                                             house_number='18-20',
                                             street=MultilingualString(
                                                 value="St Andrew's Street"
@@ -24158,7 +24157,7 @@ obj = PublicationDelivery(
                                             ref=IanaCountryTldEnumeration.UK,
                                             ref_principality='GB-ENG'
                                         ),
-                                        address=PostalAddressVersionStructure(
+                                        address=TransportOrganisationVersionStructure.Address(
                                             house_number='14',
                                             building_name=MultilingualString(
                                                 value='4th Floor'
@@ -25767,7 +25766,7 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='UIC'
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(2001, 1, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         ),
@@ -25788,7 +25787,7 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='Network Rail'
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(2003, 9, 22, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         ),
@@ -25809,7 +25808,7 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='UIC'
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(2001, 1, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         )

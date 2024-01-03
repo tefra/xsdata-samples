@@ -254,6 +254,7 @@ from netex.models.train_stop_assignment import TrainStopAssignment
 from netex.models.train_stop_assignments_rel_structure import TrainStopAssignmentsRelStructure
 from netex.models.transfer_duration_structure import TransferDurationStructure
 from netex.models.transfers_in_frame_rel_structure import TransfersInFrameRelStructure
+from netex.models.transport_organisation_version_structure import TransportOrganisationVersionStructure
 from netex.models.type_of_place import TypeOfPlace
 from netex.models.type_of_place_ref import TypeOfPlaceRef
 from netex.models.type_of_place_refs_rel_structure import TypeOfPlaceRefsRelStructure
@@ -619,7 +620,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.RAIL_OPERATOR,
                                         ],
-                                        address=PostalAddressVersionStructure(
+                                        address=TransportOrganisationVersionStructure.Address(
                                             id='uic920-1:Address:0019',
                                             version='any',
                                             name=MultilingualString(

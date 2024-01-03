@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import List, Optional, Type, Union, Any
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
 from .availability_condition_ref import AvailabilityConditionRef
 from .branding_ref import BrandingRef
@@ -668,6 +668,25 @@ class AlternativeText(AlternativeTextVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
+    validity_conditions_or_valid_between: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    alternative_texts: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    extensions: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+
 
 @dataclass
 class DayType(DayTypeVersionStructure):
@@ -737,6 +756,19 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
 class ValidityCondition(ValidityConditionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
+
+    validity_conditions_or_valid_between: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    alternative_texts: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
 
 
 @dataclass
@@ -876,6 +908,61 @@ class ValidBetween(ValidBetweenVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
+    validity_conditions_or_valid_between: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    alternative_texts: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    key_list: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    extensions: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    branding_ref: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    name: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    description: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    conditioned_object_ref: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    with_condition_ref: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+
 
 @dataclass
 class ValidDuringVersionStructure(ValidBetweenVersionStructure):
@@ -931,17 +1018,56 @@ class ValidityRuleParameter(ValidityRuleParameterVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
+    validity_conditions_or_valid_between: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    alternative_texts: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+
 
 @dataclass
 class ValidityTrigger(ValidityTriggerVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
+    validity_conditions_or_valid_between: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    alternative_texts: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+
 
 @dataclass
 class AvailabilityCondition(AvailabilityConditionVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
+
+    validity_conditions_or_valid_between: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    alternative_texts: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
 
 
 @dataclass
@@ -954,3 +1080,34 @@ class SimpleAvailabilityCondition(ValidDuringVersionStructure):
 class ValidDuring(ValidDuringVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
+
+    validity_conditions_or_valid_between: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    alternative_texts: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    key_list: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    extensions: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    branding_ref: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )

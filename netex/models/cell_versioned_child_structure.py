@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union
+from typing import List, Optional, Type, Union, Any
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .activated_equipment_ref import ActivatedEquipmentRef
@@ -1802,6 +1802,19 @@ class Cell(CellVersionedChildStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
+    validity_conditions_or_valid_between: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    alternative_texts: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+
 
 @dataclass
 class ParkingPrice(ParkingPriceVersionedChildStructure):
@@ -1817,7 +1830,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
     choice: List[
         Union[
             Cell,
-            CellVersionedChildStructure,
+            "CellsRelStructure.CellInContext",
             CustomerPurchasePackagePrice,
             "ParkingPrice",
             SalesOfferPackagePrice,
@@ -1867,7 +1880,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellInContext",
-                    "type": CellVersionedChildStructure,
+                    "type": Type["CellsRelStructure.CellInContext"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -2053,6 +2066,21 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
             ),
         },
     )
+
+    @dataclass
+    class CellInContext(CellVersionedChildStructure):
+        validity_conditions_or_valid_between: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        alternative_texts: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
 
 
 @dataclass

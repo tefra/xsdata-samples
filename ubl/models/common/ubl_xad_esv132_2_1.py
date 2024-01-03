@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, Optional, Tuple
+from typing import Dict, Optional, Tuple, Any
 from xsdata.models.datatype import XmlDateTime
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import (
     CanonicalizationMethod,
@@ -1097,6 +1097,12 @@ class DataObjectFormat(DataObjectFormatType):
 
 @dataclass(frozen=True)
 class OtherTimeStampType(GenericTimeStampType):
+    include: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
     reference_info: Tuple[ReferenceInfo, ...] = field(
         default_factory=tuple,
         metadata={
@@ -1138,6 +1144,13 @@ class SigningCertificate(CertIdlistType):
 class XadEstimeStampType(GenericTimeStampType):
     class Meta:
         name = "XAdESTimeStampType"
+
+    reference_info: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
 
 
 @dataclass(frozen=True)

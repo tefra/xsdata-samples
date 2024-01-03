@@ -9,7 +9,6 @@ from netex.models.alternative_texts_rel_structure import AlternativeText
 from netex.models.alternative_texts_rel_structure import AlternativeTextsRelStructure
 from netex.models.alternative_texts_rel_structure import FareDayType
 from netex.models.alternative_texts_rel_structure import ValidBetween
-from netex.models.alternative_texts_rel_structure import ValidBetweenVersionStructure
 from netex.models.baggage_type_enumeration import BaggageTypeEnumeration
 from netex.models.baggage_use_type_enumeration import BaggageUseTypeEnumeration
 from netex.models.branding import Branding
@@ -169,6 +168,7 @@ from netex.models.operator_ref import OperatorRef
 from netex.models.operator_restrictions_enumeration import OperatorRestrictionsEnumeration
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
+from netex.models.organisation_version_structure import OrganisationVersionStructure
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
 from netex.models.passenger_seat_ref import PassengerSeatRef
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
@@ -176,7 +176,6 @@ from netex.models.penalty_policy import PenaltyPolicy
 from netex.models.penalty_policy_type_enumeration import PenaltyPolicyTypeEnumeration
 from netex.models.per_basis_enumeration import PerBasisEnumeration
 from netex.models.point_refs_rel_structure import PointRefsRelStructure
-from netex.models.postal_address_version_structure import PostalAddressVersionStructure
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.preassigned_fare_product_enumeration import PreassignedFareProductEnumeration
 from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
@@ -279,6 +278,7 @@ from netex.models.train_element_ref import TrainElementRef
 from netex.models.train_number_ref import TrainNumberRef
 from netex.models.transferability import Transferability
 from netex.models.transferability_ref import TransferabilityRef
+from netex.models.transport_organisation_version_structure import TransportOrganisationVersionStructure
 from netex.models.travel_document_ref import TravelDocumentRef
 from netex.models.travel_documents_rel_structure import TravelDocumentsRelStructure
 from netex.models.travel_specifications_rel_structure import TravelSpecificationsRelStructure
@@ -17806,7 +17806,7 @@ obj = PublicationDelivery(
                                         country_ref=CountryRef(
                                             ref=IanaCountryTldEnumeration.RO
                                         ),
-                                        address=PostalAddressVersionStructure(
+                                        address=TransportOrganisationVersionStructure.Address(
                                             house_number='nr. 2-4',
                                             street=MultilingualString(
                                                 value='Strada Tudor Vladimirescu'
@@ -20150,7 +20150,7 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='UIC'
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(2001, 1, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         ),
@@ -20171,7 +20171,7 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='Network Rail'
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(2003, 9, 22, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         ),
@@ -20192,7 +20192,7 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='UIC'
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(2001, 1, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         )

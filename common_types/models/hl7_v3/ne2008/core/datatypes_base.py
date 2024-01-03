@@ -2525,11 +2525,21 @@ class Cv(Ce):
     text.
 
     Used when a single code value must be sent.
+
+    :ivar qualifier: Specifies additional codes that increase the
+        specificity of the primary code.
+    :ivar translation:
     """
 
     class Meta:
         name = "CV"
 
+    qualifier: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
     translation: Any = field(
         init=False,
         metadata={
@@ -2543,11 +2553,38 @@ class EivlEvent(Ce):
     """
     A code for a common (periodical) activity of daily living based on which the
     event related periodic interval is specified.
+
+    :ivar original_text: The text or phrase used as the basis for the
+        coding.
+    :ivar qualifier: Specifies additional codes that increase the
+        specificity of the primary code.
+    :ivar translation: A set of other concept descriptors that translate
+        this concept descriptor into other code systems.
+    :ivar code_system:
+    :ivar code_system_name:
     """
 
     class Meta:
         name = "EIVL.event"
 
+    original_text: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    qualifier: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    translation: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
     code_system: str = field(
         init=False,
         default="2.16.840.1.113883.5.139",
@@ -3304,11 +3341,40 @@ class Cs(Cv):
     text.
 
     Used when a single code value must be sent.
+
+    :ivar original_text: The text or phrase used as the basis for the
+        coding.
+    :ivar qualifier: Specifies additional codes that increase the
+        specificity of the primary code.
+    :ivar translation: A set of other concept descriptors that translate
+        this concept descriptor into other code systems.
+    :ivar code_system:
+    :ivar code_system_name:
+    :ivar code_system_version:
+    :ivar display_name:
     """
 
     class Meta:
         name = "CS"
 
+    original_text: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    qualifier: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
+    translation: Any = field(
+        init=False,
+        metadata={
+            "type": "Ignore",
+        },
+    )
     code_system: Any = field(
         init=False,
         metadata={

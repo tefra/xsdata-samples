@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
+from typing import Optional, Type, Union, Any
 from .country_ref import CountryRef
 from .online_service_refs_rel_structure import OnlineServiceRefsRelStructure
 from .organisation_version_structure import OrganisationVersionStructure
@@ -24,7 +24,11 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
         },
     )
     address: Optional[
-        Union[PostalAddress, RoadAddress, PostalAddressVersionStructure]
+        Union[
+            PostalAddress,
+            RoadAddress,
+            "OnlineServiceOperatorVersionStructure.Address",
+        ]
     ] = field(
         default=None,
         metadata={
@@ -42,7 +46,9 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
                 },
                 {
                     "name": "Address",
-                    "type": PostalAddressVersionStructure,
+                    "type": Type[
+                        "OnlineServiceOperatorVersionStructure.Address"
+                    ],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -55,3 +61,42 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+
+    @dataclass
+    class Address(PostalAddressVersionStructure):
+        validity_conditions_or_valid_between: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        alternative_texts: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        key_list: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        extensions: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        branding_ref: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )
+        members: Any = field(
+            init=False,
+            metadata={
+                "type": "Ignore",
+            },
+        )

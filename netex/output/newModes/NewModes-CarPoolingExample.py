@@ -147,6 +147,7 @@ from netex.models.offered_travel_specification_ref import OfferedTravelSpecifica
 from netex.models.online_service import OnlineService
 from netex.models.online_service_operator import OnlineServiceOperator
 from netex.models.online_service_operator_ref import OnlineServiceOperatorRef
+from netex.models.online_service_operator_version_structure import OnlineServiceOperatorVersionStructure
 from netex.models.online_service_ref import OnlineServiceRef
 from netex.models.online_service_refs_rel_structure import OnlineServiceRefsRelStructure
 from netex.models.online_services_rel_structure import OnlineServicesRelStructure
@@ -182,7 +183,6 @@ from netex.models.point_of_interest_ref import PointOfInterestRef
 from netex.models.point_ref_structure import PointRefStructure
 from netex.models.points_of_interest_in_frame_rel_structure import PointsOfInterestInFrameRelStructure
 from netex.models.postal_address import PostalAddress
-from netex.models.postal_address_version_structure import PostalAddressVersionStructure
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.preassigned_fare_product_enumeration import PreassignedFareProductEnumeration
 from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
@@ -283,6 +283,7 @@ from netex.models.transfers_in_frame_rel_structure import TransfersInFrameRelStr
 from netex.models.transmission_enumeration import TransmissionEnumeration
 from netex.models.transport_mode_structure import TransportModeStructure
 from netex.models.transport_modes_rel_structure import TransportModesRelStructure
+from netex.models.transport_organisation_version_structure import TransportOrganisationVersionStructure
 from netex.models.transport_submode import TransportSubmode
 from netex.models.travel_document import TravelDocument
 from netex.models.travel_document_ref import TravelDocumentRef
@@ -582,7 +583,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
-                                        address=PostalAddressVersionStructure(
+                                        address=TransportOrganisationVersionStructure.Address(
                                             street=MultilingualString(
                                                 value='Alpha1'
                                             ),
@@ -617,7 +618,7 @@ obj = PublicationDelivery(
                                         organisation_type=[
                                             OrganisationTypeEnumeration.ONLINE_PROVIDER,
                                         ],
-                                        address=PostalAddressVersionStructure(
+                                        address=OnlineServiceOperatorVersionStructure.Address(
                                             street=MultilingualString(
                                                 value='Rue des Postes.'
                                             ),

@@ -11,7 +11,6 @@ from netex.models.alternative_texts_rel_structure import FareDayType
 from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
 from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidBetween
-from netex.models.alternative_texts_rel_structure import ValidBetweenVersionStructure
 from netex.models.branding import Branding
 from netex.models.branding_ref import BrandingRef
 from netex.models.cell_versioned_child_structure import Cell
@@ -121,13 +120,13 @@ from netex.models.operator import Operator
 from netex.models.operator_ref import OperatorRef
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
+from netex.models.organisation_version_structure import OrganisationVersionStructure
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.per_basis_enumeration import PerBasisEnumeration
 from netex.models.point_on_section import PointOnSection
 from netex.models.point_refs_rel_structure import PointRefsRelStructure
 from netex.models.points_on_section_rel_structure import PointsOnSectionRelStructure
-from netex.models.postal_address_version_structure import PostalAddressVersionStructure
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.preassigned_fare_product_ref import PreassignedFareProductRef
 from netex.models.price_rule_step_result_structure import PriceRuleStepResultStructure
@@ -175,6 +174,7 @@ from netex.models.temporal_validity_parameters_rel_structure import TemporalVali
 from netex.models.time_interval import TimeInterval
 from netex.models.time_interval_ref import TimeIntervalRef
 from netex.models.time_intervals_rel_structure import TimeIntervalsRelStructure
+from netex.models.transport_organisation_version_structure import TransportOrganisationVersionStructure
 from netex.models.transport_submode import TransportSubmode
 from netex.models.travel_document_ref import TravelDocumentRef
 from netex.models.travel_documents_rel_structure import TravelDocumentsRelStructure
@@ -8135,7 +8135,7 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(2003, 11, 13, 0, 0, 0, 0, 0)
                                         ),
                                         country_ref=CountryRef(
@@ -8165,13 +8165,13 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(2009, 1, 1, 0, 0, 0, 0, 0)
                                         ),
                                         country_ref=CountryRef(
                                             ref=IanaCountryTldEnumeration.CZ
                                         ),
-                                        address=PostalAddressVersionStructure(
+                                        address=TransportOrganisationVersionStructure.Address(
                                             info_links=InfoLinksRelStructure(
                                                 info_link=[
                                                     InfoLink(
@@ -8193,7 +8193,7 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='Bahn'
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(1999, 11, 29, 0, 0, 0, 0, 0)
                                         ),
                                         country_ref=CountryRef(
@@ -8212,7 +8212,7 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='DB Netz AG'
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(1999, 11, 29, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         ),
@@ -8232,7 +8232,7 @@ obj = PublicationDelivery(
                                         short_name=MultilingualString(
                                             value='UIC'
                                         ),
-                                        validity_period=ValidBetweenVersionStructure(
+                                        validity_period=OrganisationVersionStructure.ValidityPeriod(
                                             from_date=XmlDateTime(2001, 1, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         )
