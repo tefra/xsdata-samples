@@ -95,7 +95,8 @@
             <fr:program>
               <fr:assertion name="fundgroup">
                 <fr:assertion name="funder_name"> National Science Foundation
-                                    <fr:assertion name="funder_identifier">100000001</fr:assertion></fr:assertion>
+                                    <fr:assertion name="funder_identifier">100000001</fr:assertion>
+                </fr:assertion>
                 <fr:assertion name="award_number">CHE-1152342</fr:assertion>
               </fr:assertion>
             </fr:program>

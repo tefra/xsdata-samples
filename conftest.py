@@ -30,7 +30,7 @@ def xml_context(output_format):
 
 @pytest.fixture
 def serializer_config():
-    return SerializerConfig(pretty_print=True, ignore_default_attributes=True)
+    return SerializerConfig(indent="  ", ignore_default_attributes=True)
 
 
 @pytest.fixture
@@ -45,7 +45,7 @@ def xml_serializer(xml_context, serializer_config):
 
 @pytest.fixture
 def code_serializer(xml_context, serializer_config):
-    return PycodeSerializer(context=xml_context, config=serializer_config)
+    return PycodeSerializer(context=xml_context)
 
 
 @pytest.fixture

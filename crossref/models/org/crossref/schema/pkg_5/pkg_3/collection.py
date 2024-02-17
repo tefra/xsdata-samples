@@ -17,16 +17,20 @@ class Collection:
     item being registered.
 
     Collections are supported for the following (defined in the property
-    attribute): <ul xmlns=""><li>list-based:  Multiple Resolution, more
+    attribute): <ul xmlns=""> <li>list-based:  Multiple Resolution, more
     info:
-    https://www.crossref.org/education/content-registration/creating-and-managing-dois/multiple-resolution/</li><li>country-based:
+    https://www.crossref.org/education/content-registration/creating-and-managing-dois/multiple-resolution/</li>
+     <li>country-based: more info:
+    https://www.crossref.org/education/content-registration/creating-and-managing-dois/multiple-resolution/#00130</li>
+     <li>crawler-based: for Similarity Check URLs, more info:
+    https://www.crossref.org/education/similarity-check/participate/urls-for-new-deposits/</li>
+     <li>text-mining: supply specific URLs for text and data mining,
     more info:
-    https://www.crossref.org/education/content-registration/creating-and-managing-dois/multiple-resolution/#00130</li><li>crawler-based:
-    for Similarity Check URLs, more info:
-    https://www.crossref.org/education/similarity-check/participate/urls-for-new-deposits/</li><li>text-mining:
-    supply specific URLs for text and data mining, more info:
-    https://www.crossref.org/education/retrieve-metadata/rest-api/text-and-data-mining-for-members/</li><li>unspecified:
-    can be used for additional URLs</li><li>syndication: identifies resources to be used for syndication</li><li>link-header: identifies resources to be used as an endpoint</li></ul>
+    https://www.crossref.org/education/retrieve-metadata/rest-api/text-and-data-mining-for-members/</li>
+    <li>unspecified: can be used for additional URLs</li>
+    <li>syndication: identifies resources to be used for syndication</li>
+    <li>link-header: identifies resources to be used as an endpoint</li>
+    </ul>
     """
 
     class Meta:

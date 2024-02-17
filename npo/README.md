@@ -8,8 +8,8 @@ $ xsdata download https://rs.poms.omroep.nl/v1/schema/urn:vpro:api:2013 --output
 
 ## Notes
 
-This suite works a lot with **xs:anyType** derived elements and the binding tests
-check the lookup capabilities of the xml parser.
+This suite works a lot with **xs:anyType** derived elements and the binding tests check
+the lookup capabilities of the xml parser.
 
 ## Makefile commands
 

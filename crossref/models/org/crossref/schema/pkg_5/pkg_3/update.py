@@ -19,8 +19,12 @@ class Update:
     formatting, etc.
 
     :ivar type_value: This attribute should be used to list the update
-        type. Allowed update types are: <ul
-        xmlns=""><li>addendum</li><li>clarification</li><li>correction</li><li>corrigendum</li><li>erratum</li><li>expression_of_concern</li><li>new_edition</li><li>new_version</li><li>partial_retraction</li><li>removal</li><li>retraction</li><li>withdrawal</li></ul>
+        type. Allowed update types are: <ul xmlns=""> <li>addendum</li>
+        <li>clarification</li> <li>correction</li> <li>corrigendum</li>
+        <li>erratum</li> <li>expression_of_concern</li>
+        <li>new_edition</li> <li>new_version</li>
+        <li>partial_retraction</li> <li>removal</li> <li>retraction</li>
+        <li>withdrawal</li> </ul>
     :ivar date: The date of the update will be displayed in the
         CrossMark dialog and can help the researcher easily tell whether
         they are likley to have seen the update.

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vortaro>
   <art mrk="$Id: abak.xml,v 1.48 2022/03/11 10:37:22 revo Exp $">
-    <kap><rad>abak</rad>/o
+    <kap>
+      <rad>abak</rad>/o
 </kap>
     <drv mrk="abak.0o">
-      <kap><tld/>o</kap>
+      <kap>
+        <tld/>o</kap>
       <snc mrk="abak.0o.ARKI">
         <uzo tip="fak">ARKI</uzo>
         <dif>
@@ -17,39 +19,60 @@
         <trd lng="en">abacus</trd>
         <trd lng="fa">سرستونی</trd>
         <trd lng="fi">abakus</trd>
-        <trd lng="fr">abaque<klr tip="ind"> (architecture)</klr></trd>
+        <trd lng="fr">abaque<klr tip="ind"> (architecture)</klr>
+        </trd>
         <trd lng="hr">abak</trd>
         <trd lng="it">abaco</trd>
         <trd lng="nl">abacus</trd>
         <trd lng="pt">ábaco</trd>
         <trd lng="ru">абака</trd>
         <trd lng="sk">abakus</trd>
-        <trdgrp lng="be"><trd>абак</trd>,
-      <trd>абака</trd></trdgrp>
-        <trdgrp lng="de"><trd>Säulenplatte</trd>,
-      <trd>Kapitelldeckplatte</trd></trdgrp>
-        <trdgrp lng="hu"><trd>abakusz</trd>,
-      <trd>fejlemez<klr> (oszlopfőn)</klr></trd></trdgrp>
-        <trdgrp lng="pl"><trd>abakus</trd>,
+        <trdgrp lng="be">
+          <trd>абак</trd>,
+      <trd>абака</trd>
+        </trdgrp>
+        <trdgrp lng="de">
+          <trd>Säulenplatte</trd>,
+      <trd>Kapitelldeckplatte</trd>
+        </trdgrp>
+        <trdgrp lng="hu">
+          <trd>abakusz</trd>,
+      <trd>fejlemez<klr> (oszlopfőn)</klr>
+          </trd>
+        </trdgrp>
+        <trdgrp lng="pl">
+          <trd>abakus</trd>,
       <trd>abak</trd>,
-      <trd>płyta głowicowa<klr> (kolumny)</klr></trd></trdgrp>
+      <trd>płyta głowicowa<klr> (kolumny)</klr>
+          </trd>
+        </trdgrp>
       </snc>
       <snc mrk="abak.0o.kalkulilo">
         <fnt>
           <bib>PV</bib>
         </fnt>
         <uzo tip="fak">MAT</uzo>
-        <dif><ref tip="super" cel="kalkul.0ilo">kalkulilo</ref>
+        <dif>
+          <ref tip="super" cel="kalkul.0ilo">kalkulilo</ref>
       por plenumi aritmetikajn operaciojn,
       konsistanta ĉefe el buletoj ŝoveblaj sur
       stangetoj:
       <ekz>
 	vi mispuŝas globetojn de via <tld/>o
-	<fnt><bib>RugxDom</bib><lok>ĉapitro 65a, p. 408a</lok>;
-      </fnt></ekz><ekz>
+	<fnt>
+              <bib>RugxDom</bib>
+              <lok>ĉapitro 65a, p. 408a</lok>;
+      </fnt>
+          </ekz>
+          <ekz>
         en sia animo li restis ĉeflibrotenisto, kaj nun al li mankis <tld/>o
-        <fnt><vrk><url ref="https://esperanto.mv.ru/TRIZ/pretere.html">Ni iros pretere ― kaj plu</url></vrk>.
-      </fnt></ekz></dif>
+        <fnt>
+              <vrk>
+                <url ref="https://esperanto.mv.ru/TRIZ/pretere.html">Ni iros pretere ― kaj plu</url>
+              </vrk>.
+      </fnt>
+          </ekz>
+        </dif>
         <ref tip="sub" cel="soroban.0o">sorobano</ref>
         <trd lng="be">лічыльнікі</trd>
         <trd lng="bg">абакус</trd>
@@ -59,32 +82,49 @@
         <trd lng="pt">ábaco</trd>
         <trd lng="ru">счёты</trd>
         <trd lng="sk">počítadlo<klr>
-    (guličkové)</klr></trd>
-        <trdgrp lng="da"><trd>regnebræt</trd>,
-      <trd>kugleramme</trd></trdgrp>
-        <trdgrp lng="de"><trd>Rechenbrett</trd>,
-      <trd>Abakus</trd></trdgrp>
-        <trdgrp lng="en"><trd>abacus</trd>,
-      <trd>calculating frame</trd></trdgrp>
-        <trdgrp lng="fa"><trd>چتکه</trd>,
-      <trd>چرتکه</trd></trdgrp>
+    (guličkové)</klr>
+        </trd>
+        <trdgrp lng="da">
+          <trd>regnebræt</trd>,
+      <trd>kugleramme</trd>
+        </trdgrp>
+        <trdgrp lng="de">
+          <trd>Rechenbrett</trd>,
+      <trd>Abakus</trd>
+        </trdgrp>
+        <trdgrp lng="en">
+          <trd>abacus</trd>,
+      <trd>calculating frame</trd>
+        </trdgrp>
+        <trdgrp lng="fa">
+          <trd>چتکه</trd>,
+      <trd>چرتکه</trd>
+        </trdgrp>
         <trdgrp lng="fr">
           <trd>abaque<klr tip="ind"> (boulier)</klr>,
       </trd>
           <trd>boulier</trd>
         </trdgrp>
-        <trdgrp lng="hu"><trd>abakusz</trd>,
-      <trd>számológép</trd></trdgrp>
-        <trdgrp lng="it"><trd>abaco</trd>,
-      <trd>pallottoliere</trd></trdgrp>
+        <trdgrp lng="hu">
+          <trd>abakusz</trd>,
+      <trd>számológép</trd>
+        </trdgrp>
+        <trdgrp lng="it">
+          <trd>abaco</trd>,
+      <trd>pallottoliere</trd>
+        </trdgrp>
         <trdgrp lng="hr">
           <trd>abak</trd>
         </trdgrp>
-        <trdgrp lng="nl"><trd>abacus</trd>,
-      <trd>telraam</trd></trdgrp>
-        <trdgrp lng="pl"><trd>abakus</trd>,
+        <trdgrp lng="nl">
+          <trd>abacus</trd>,
+      <trd>telraam</trd>
+        </trdgrp>
+        <trdgrp lng="pl">
+          <trd>abakus</trd>,
       <trd>liczydło</trd>,
-      <trd>tabliczka Pitagorasa</trd></trdgrp>
+      <trd>tabliczka Pitagorasa</trd>
+        </trdgrp>
       </snc>
       <snc mrk="abak.0o.grafika_tabela">
         <fnt>
@@ -102,38 +142,63 @@
         <trd lng="pl">nomogram</trd>
         <trd lng="pt">ábaco</trd>
         <trd lng="sk">matematická tabuľka</trd>
-        <trdgrp lng="be"><trd>намаграма</trd>,
+        <trdgrp lng="be">
+          <trd>намаграма</trd>,
       <trd>матэматычная
-      <ind>табліца</ind></trd></trdgrp>
-        <trdgrp lng="ca"><trd>nomograma</trd>,
+      <ind>табліца</ind>
+          </trd>
+        </trdgrp>
+        <trdgrp lng="ca">
+          <trd>nomograma</trd>,
       <trd>àbac</trd>,
-      <trd>gràfic</trd></trdgrp>
-        <trdgrp lng="en"><trd>nomogram</trd>,
-      <trd>chart</trd></trdgrp>
-        <trdgrp lng="fa"><trd>دستورنگار</trd>,
-      <trd>نوموگرام</trd></trdgrp>
-        <trdgrp lng="fi"><trd>nomogrammi</trd>,
-      <trd>laskutaulukko</trd></trdgrp>
-        <trdgrp lng="fr"><trd>nomogramme</trd>,
+      <trd>gràfic</trd>
+        </trdgrp>
+        <trdgrp lng="en">
+          <trd>nomogram</trd>,
+      <trd>chart</trd>
+        </trdgrp>
+        <trdgrp lng="fa">
+          <trd>دستورنگار</trd>,
+      <trd>نوموگرام</trd>
+        </trdgrp>
+        <trdgrp lng="fi">
+          <trd>nomogrammi</trd>,
+      <trd>laskutaulukko</trd>
+        </trdgrp>
+        <trdgrp lng="fr">
+          <trd>nomogramme</trd>,
       <trd>abaque<klr tip="ind"> (nomogramme)</klr>,
-      </trd><trd>table<klr tip="ind"> (nomogramme)</klr></trd></trdgrp>
-        <trdgrp lng="hu"><trd>nomogram</trd>,
-      <trd>számolótábla</trd></trdgrp>
-        <trdgrp lng="it"><trd>abaco</trd>,
+      </trd>
+          <trd>table<klr tip="ind"> (nomogramme)</klr>
+          </trd>
+        </trdgrp>
+        <trdgrp lng="hu">
+          <trd>nomogram</trd>,
+      <trd>számolótábla</trd>
+        </trdgrp>
+        <trdgrp lng="it">
+          <trd>abaco</trd>,
       <trd>nomogramma</trd>,
-      <trd>nomografo</trd></trdgrp>
-        <trdgrp lng="ru"><trd>номограмма</trd>,
+      <trd>nomografo</trd>
+        </trdgrp>
+        <trdgrp lng="ru">
+          <trd>номограмма</trd>,
       <trd>математические
-      таблицы</trd></trdgrp>
+      таблицы</trd>
+        </trdgrp>
       </snc>
       <trd lng="es">ábaco</trd>
       <trd lng="th">ลูกคิด</trd>
       <trd lng="tr">abaküs</trd>
       <trd lng="uk">абак</trd>
-      <trdgrp lng="cs"><trd>abak</trd>,
-    <trd>nomogram</trd></trdgrp>
-      <trdgrp lng="sk"><trd>guľkové počítadlo</trd>,
-    <trd>guľkové počítadlo, abakus</trd></trdgrp>
+      <trdgrp lng="cs">
+        <trd>abak</trd>,
+    <trd>nomogram</trd>
+      </trdgrp>
+      <trdgrp lng="sk">
+        <trd>guľkové počítadlo</trd>,
+    <trd>guľkové počítadlo, abakus</trd>
+      </trdgrp>
     </drv>
   </art>
 </vortaro>

@@ -66,12 +66,14 @@
             <assertion group_label="Publication History" group_name="publication_history" label="Published" name="published" order="2">2013-02-03</assertion>
             <fr:program>
               <fr:assertion name="fundgroup">
-                <fr:assertion name="funder_name"> National Science Foundation <fr:assertion name="funder_identifier">100000001</fr:assertion></fr:assertion>
+                <fr:assertion name="funder_name"> National Science Foundation <fr:assertion name="funder_identifier">100000001</fr:assertion>
+                </fr:assertion>
                 <fr:assertion name="award_number">psychoceramics-1152342</fr:assertion>
               </fr:assertion>
               <fr:assertion name="fundgroup">
                 <fr:assertion name="funder_name"> Basic Energy Sciences, Office of Science, U.S.
-                  Department of Energy <fr:assertion name="funder_identifier">100006151</fr:assertion></fr:assertion>
+                  Department of Energy <fr:assertion name="funder_identifier">100006151</fr:assertion>
+                </fr:assertion>
                 <fr:assertion name="award_number">high-energy-metaphysics-SC0001091</fr:assertion>
               </fr:assertion>
             </fr:program>
