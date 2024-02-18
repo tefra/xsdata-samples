@@ -12,6 +12,12 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_metadata_langua
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_metadata_reference_distribution_opts import (
     ProceedingsMetadataReferenceDistributionOpts,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_subject import (
+    ProceedingsSubject,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_title import (
+    ProceedingsTitle,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_date import (
     PublicationDate,
 )
@@ -34,21 +40,17 @@ class ProceedingsMetadata:
         name = "proceedings_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    proceedings_title: Optional[str] = field(
+    proceedings_title: Optional[ProceedingsTitle] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 1,
-            "max_length": 511,
         },
     )
-    proceedings_subject: Optional[str] = field(
+    proceedings_subject: Optional[ProceedingsSubject] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 255,
         },
     )
     publisher: List[Publisher] = field(

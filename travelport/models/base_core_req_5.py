@@ -4,6 +4,7 @@ from travelport.models.agent_idoverride_5 import AgentIdoverride5
 from travelport.models.billing_point_of_sale_info_5 import (
     BillingPointOfSaleInfo5,
 )
+from travelport.models.terminal_session_info_5 import TerminalSessionInfo5
 from travelport.models.type_logging_level_5 import TypeLoggingLevel5
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
@@ -61,7 +62,7 @@ class BaseCoreReq5:
             "max_occurs": 999,
         },
     )
-    terminal_session_info: None | str = field(
+    terminal_session_info: None | TerminalSessionInfo5 = field(
         default=None,
         metadata={
             "name": "TerminalSessionInfo",

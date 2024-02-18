@@ -1,5 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
+from travelport.models.address_line_2 import AddressLine2
 from travelport.models.type_key_element_2 import TypeKeyElement2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -34,7 +35,7 @@ class TypeAddress2(TypeKeyElement2):
     class Meta:
         name = "typeAddress"
 
-    address_line: list[str] = field(
+    address_line: list[AddressLine2] = field(
         default_factory=list,
         metadata={
             "name": "AddressLine",
@@ -42,8 +43,6 @@ class TypeAddress2(TypeKeyElement2):
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
             "min_occurs": 1,
             "max_occurs": 3,
-            "min_length": 1,
-            "max_length": 128,
         },
     )
     city: None | str = field(

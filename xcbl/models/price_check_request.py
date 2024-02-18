@@ -1,8 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xcbl.models.price_check_result import (
+    BuyerIdreferenceDate,
+    GeneralLineItemNote,
     LineItemAttachment,
     PriceCheckShipToParty,
+    QuoteDate,
+    SupplierIdreferenceDate,
+    TotalNumberOfLineItem,
 )
 from xcbl.models.remittance_advice import SupplierParty
 from xcbl.models.shipping_schedule import AccountCode
@@ -22,6 +27,7 @@ from xcbl.models.sourcing_result import (
     ListOfItemReferences,
     ListOfQuantityCoded,
     MaxBackOrderQuantity,
+    OffCatalogFlag,
     ParentItemNumber,
     TotalQuantity,
     Transport,
@@ -36,12 +42,21 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
-class PriceCheckRequestSummary:
-    total_number_of_line_item: Optional[str] = field(
-        default=None,
+class PriceCheckRequestIssueDate:
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumberOfLineItem",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PriceCheckRequestNotes:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -68,6 +83,17 @@ class PriceCheckRequestLanguage:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class PriceCheckRequestSummary:
+    total_number_of_line_item: Optional[TotalNumberOfLineItem] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberOfLineItem",
+            "type": "Element",
+        },
     )
 
 
@@ -162,7 +188,7 @@ class PriceCheckRequestBaseItemDetail:
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[str] = field(
+    off_catalog_flag: Optional[OffCatalogFlag] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
@@ -259,7 +285,7 @@ class PriceCheckRequestHeader:
             "required": True,
         }
     )
-    price_check_request_issue_date: str = field(
+    price_check_request_issue_date: PriceCheckRequestIssueDate = field(
         metadata={
             "name": "PriceCheckRequestIssueDate",
             "type": "Element",
@@ -273,7 +299,7 @@ class PriceCheckRequestHeader:
             "required": True,
         }
     )
-    supplier_idreference_date: Optional[str] = field(
+    supplier_idreference_date: Optional[SupplierIdreferenceDate] = field(
         default=None,
         metadata={
             "name": "SupplierIDReferenceDate",
@@ -287,7 +313,7 @@ class PriceCheckRequestHeader:
             "required": True,
         }
     )
-    buyer_idreference_date: Optional[str] = field(
+    buyer_idreference_date: Optional[BuyerIdreferenceDate] = field(
         default=None,
         metadata={
             "name": "BuyerIDReferenceDate",
@@ -315,7 +341,7 @@ class PriceCheckRequestHeader:
             "type": "Element",
         },
     )
-    quote_date: Optional[str] = field(
+    quote_date: Optional[QuoteDate] = field(
         default=None,
         metadata={
             "name": "QuoteDate",
@@ -329,7 +355,7 @@ class PriceCheckRequestHeader:
             "type": "Element",
         },
     )
-    price_check_request_notes: Optional[str] = field(
+    price_check_request_notes: Optional[PriceCheckRequestNotes] = field(
         default=None,
         metadata={
             "name": "PriceCheckRequestNotes",
@@ -356,7 +382,7 @@ class PriceCheckRequestItemDetail:
             }
         )
     )
-    general_line_item_note: Optional[str] = field(
+    general_line_item_note: Optional[GeneralLineItemNote] = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",

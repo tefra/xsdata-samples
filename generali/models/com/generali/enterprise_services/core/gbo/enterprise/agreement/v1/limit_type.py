@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
     BaseIdentifiedComponentType,
@@ -64,7 +66,7 @@ class LimitType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    time_specification: Optional[Decimal] = field(
+    time_specification: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "TimeSpecification",

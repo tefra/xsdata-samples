@@ -6,6 +6,7 @@ from netex.models.entities_in_version_rel_structure import CompositeFrame
 from netex.models.entities_in_version_rel_structure import FramesRelStructure
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.responsibility_set_ref_structure import ResponsibilitySetRefStructure
@@ -24,10 +25,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(

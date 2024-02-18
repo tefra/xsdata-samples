@@ -5,7 +5,7 @@ from .destination_display_refs_rel_structure import (
     DestinationDisplayRefsRelStructure,
 )
 from .direction_ref import DirectionRef
-from .direction_type_enumeration import DirectionTypeEnumeration
+from .direction_type import DirectionType
 from .direction_view import DirectionView
 from .group_of_entities_version_structure import (
     GroupOfEntitiesVersionStructure,
@@ -34,7 +34,7 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_type: Optional[DirectionTypeEnumeration] = field(
+    direction_type: Optional[DirectionType] = field(
         default=None,
         metadata={
             "name": "DirectionType",

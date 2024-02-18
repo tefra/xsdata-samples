@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
-from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     Consignment,
     DocumentReference,
@@ -20,6 +19,8 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
     CustomizationId,
     Description,
     Id,
+    IssueDate,
+    IssueTime,
     Name,
     Note,
     OtherInstruction,
@@ -105,7 +106,7 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[XmlDate] = field(
+    issue_date: Optional[IssueDate] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -113,7 +114,7 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[XmlTime] = field(
+    issue_time: Optional[IssueTime] = field(
         default=None,
         metadata={
             "name": "IssueTime",

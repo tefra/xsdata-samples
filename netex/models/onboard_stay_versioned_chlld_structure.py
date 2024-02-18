@@ -2,9 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDuration
 from .alternative_texts_rel_structure import VersionedChildStructure
-from .boarding_permission_enumeration import BoardingPermissionEnumeration
+from .boarding_permission import BoardingPermission
 from .class_of_use_ref import ClassOfUseRef
-from .fare_class_enumeration import FareClassEnumeration
+from .fare_class import FareClass
 from .multilingual_string import MultilingualString
 from .service_facility_set_ref import ServiceFacilitySetRef
 
@@ -32,7 +32,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: Optional[FareClassEnumeration] = field(
+    fare_class: Optional[FareClass] = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -48,7 +48,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_permission: Optional[BoardingPermissionEnumeration] = field(
+    boarding_permission: Optional[BoardingPermission] = field(
         default=None,
         metadata={
             "name": "BoardingPermission",

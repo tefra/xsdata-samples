@@ -17,6 +17,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import (
     Contributors,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark import Crossmark
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi import Doi
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.institution import (
     Institution,
 )
@@ -131,14 +132,11 @@ class PendingPublication:
             "namespace": "http://www.crossref.org/relations.xsd",
         },
     )
-    doi: Optional[str] = field(
+    doi: Optional[Doi] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 6,
-            "max_length": 2048,
-            "pattern": r"10\.[0-9]{4,9}/.{1,200}",
         },
     )
     language: Optional[PendingPublicationLanguage] = field(

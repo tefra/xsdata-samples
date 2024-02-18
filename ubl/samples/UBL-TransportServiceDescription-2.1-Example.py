@@ -22,11 +22,18 @@ from ubl.models.common.ubl_common_basic_components_2_1 import Amount
 from ubl.models.common.ubl_common_basic_components_2_1 import AttributeId
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
+from ubl.models.common.ubl_common_basic_components_2_1 import EndTime
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import LocationTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Measure
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
+from ubl.models.common.ubl_common_basic_components_2_1 import PaymentDueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import Telephone
 from ubl.models.common.ubl_common_basic_components_2_1 import TransportEquipmentTypeCode
@@ -44,8 +51,12 @@ obj = TransportServiceDescription(
     id=Id(
         value='TSD_RESP_1'
     ),
-    issue_date=XmlDate(2011, 9, 12),
-    issue_time=XmlTime(11, 1, 10, 0, 60),
+    issue_date=IssueDate(
+        value=XmlDate(2011, 9, 12)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(11, 1, 10, 0, 60)
+    ),
     sender_party=SenderParty(
         party_identification=[
             PartyIdentification(
@@ -143,12 +154,20 @@ obj = TransportServiceDescription(
             value=Decimal('2500'),
             currency_id='EUR'
         ),
-        payment_due_date=XmlDate(2011, 11, 6)
+        payment_due_date=PaymentDueDate(
+            value=XmlDate(2011, 11, 6)
+        )
     ),
     validity_period=ValidityPeriod(
-        start_date=XmlDate(2011, 9, 12),
-        end_date=XmlDate(2011, 9, 30),
-        end_time=XmlTime(16, 0, 0, 0, 60)
+        start_date=StartDate(
+            value=XmlDate(2011, 9, 12)
+        ),
+        end_date=EndDate(
+            value=XmlDate(2011, 9, 30)
+        ),
+        end_time=EndTime(
+            value=XmlTime(16, 0, 0, 0, 60)
+        )
     ),
     transportation_service=[
         TransportationService(
@@ -259,10 +278,18 @@ obj = TransportServiceDescription(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 3),
-                                start_time=XmlTime(9, 30, 10, 0, 60),
-                                end_date=XmlDate(2011, 10, 3),
-                                end_time=XmlTime(12, 30, 10, 0, 60)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 3)
+                                ),
+                                start_time=StartTime(
+                                    value=XmlTime(9, 30, 10, 0, 60)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 3)
+                                ),
+                                end_time=EndTime(
+                                    value=XmlTime(12, 30, 10, 0, 60)
+                                )
                             ),
                         ]
                     ),
@@ -292,10 +319,18 @@ obj = TransportServiceDescription(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 3),
-                                start_time=XmlTime(18, 30, 10, 0, 60),
-                                end_date=XmlDate(2011, 10, 3),
-                                end_time=XmlTime(21, 30, 10, 0, 60)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 3)
+                                ),
+                                start_time=StartTime(
+                                    value=XmlTime(18, 30, 10, 0, 60)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 3)
+                                ),
+                                end_time=EndTime(
+                                    value=XmlTime(21, 30, 10, 0, 60)
+                                )
                             ),
                         ]
                     )
@@ -330,10 +365,18 @@ obj = TransportServiceDescription(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 4),
-                                start_time=XmlTime(9, 30, 10, 0, 60),
-                                end_date=XmlDate(2011, 10, 4),
-                                end_time=XmlTime(9, 30, 10, 0, 60)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 4)
+                                ),
+                                start_time=StartTime(
+                                    value=XmlTime(9, 30, 10, 0, 60)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 4)
+                                ),
+                                end_time=EndTime(
+                                    value=XmlTime(9, 30, 10, 0, 60)
+                                )
                             ),
                         ]
                     ),
@@ -358,10 +401,18 @@ obj = TransportServiceDescription(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 4),
-                                start_time=XmlTime(15, 30, 10, 0, 60),
-                                end_date=XmlDate(2011, 10, 4),
-                                end_time=XmlTime(18, 30, 10, 0, 60)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 4)
+                                ),
+                                start_time=StartTime(
+                                    value=XmlTime(15, 30, 10, 0, 60)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 4)
+                                ),
+                                end_time=EndTime(
+                                    value=XmlTime(18, 30, 10, 0, 60)
+                                )
                             ),
                         ]
                     )
@@ -391,10 +442,18 @@ obj = TransportServiceDescription(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 6),
-                                start_time=XmlTime(9, 30, 10, 0, 60),
-                                end_date=XmlDate(2011, 10, 6),
-                                end_time=XmlTime(12, 30, 10, 0, 60)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 6)
+                                ),
+                                start_time=StartTime(
+                                    value=XmlTime(9, 30, 10, 0, 60)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 6)
+                                ),
+                                end_time=EndTime(
+                                    value=XmlTime(12, 30, 10, 0, 60)
+                                )
                             ),
                         ]
                     ),
@@ -416,10 +475,18 @@ obj = TransportServiceDescription(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 6),
-                                start_time=XmlTime(12, 30, 10, 0, 60),
-                                end_date=XmlDate(2011, 10, 6),
-                                end_time=XmlTime(15, 30, 10, 0, 60)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 6)
+                                ),
+                                start_time=StartTime(
+                                    value=XmlTime(12, 30, 10, 0, 60)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 6)
+                                ),
+                                end_time=EndTime(
+                                    value=XmlTime(15, 30, 10, 0, 60)
+                                )
                             ),
                         ]
                     )

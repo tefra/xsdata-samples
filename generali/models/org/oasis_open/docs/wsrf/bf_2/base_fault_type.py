@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 from xsdata.models.datatype import XmlDateTime
+from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type_description import (
+    BaseFaultTypeDescription,
+)
 from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type_error_code import (
     BaseFaultTypeErrorCode,
 )
@@ -48,7 +51,7 @@ class BaseFaultType:
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
         },
     )
-    description: List[str] = field(
+    description: List[BaseFaultTypeDescription] = field(
         default_factory=list,
         metadata={
             "name": "Description",

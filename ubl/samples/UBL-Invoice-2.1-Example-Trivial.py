@@ -8,10 +8,13 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import LegalMonetaryT
 from ubl.models.common.ubl_common_aggregate_components_2_1 import Party
 from ubl.models.common.ubl_common_aggregate_components_2_1 import PartyName
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import LineExtensionAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import PayableAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.maindoc.ubl_invoice_2_1 import Invoice
 from xsdata.models.datatype import XmlDate
 
@@ -20,11 +23,17 @@ obj = Invoice(
     id=Id(
         value='123'
     ),
-    issue_date=XmlDate(2011, 9, 22),
+    issue_date=IssueDate(
+        value=XmlDate(2011, 9, 22)
+    ),
     invoice_period=[
         InvoicePeriod(
-            start_date=XmlDate(2011, 8, 1),
-            end_date=XmlDate(2011, 8, 31)
+            start_date=StartDate(
+                value=XmlDate(2011, 8, 1)
+            ),
+            end_date=EndDate(
+                value=XmlDate(2011, 8, 31)
+            )
         ),
     ],
     accounting_supplier_party=AccountingSupplierParty(

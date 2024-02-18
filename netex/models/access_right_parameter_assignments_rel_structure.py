@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Union
-from .access_right_parameter_assignment import AccessRightParameterAssignment
+from .access_right_parameter_assignment_1 import (
+    AccessRightParameterAssignment1,
+)
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer_purchase_parameter_assignment import (
     CustomerPurchaseParameterAssignment,
@@ -31,7 +33,7 @@ class AccessRightParameterAssignmentsRelStructure(
             GenericParameterAssignmentInContext,
             GenericParameterAssignment,
             ValidityParameterAssignment,
-            AccessRightParameterAssignment,
+            AccessRightParameterAssignment1,
         ]
     ] = field(
         default_factory=list,
@@ -65,7 +67,7 @@ class AccessRightParameterAssignmentsRelStructure(
                 },
                 {
                     "name": "AccessRightParameterAssignment",
-                    "type": AccessRightParameterAssignment,
+                    "type": AccessRightParameterAssignment1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

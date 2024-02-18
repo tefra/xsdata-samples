@@ -1,5 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
+from travelport.models.ful_fillment_type import FulFillmentType
 from travelport.models.operating_company import OperatingCompany
 from travelport.models.rail_avail_info import RailAvailInfo
 from travelport.models.rail_segment_info import RailSegmentInfo
@@ -93,14 +94,12 @@ class RailSegment(Segment1):
             "max_occurs": 999,
         },
     )
-    ful_fillment_type: list[str] = field(
+    ful_fillment_type: list[FulFillmentType] = field(
         default_factory=list,
         metadata={
             "name": "FulFillmentType",
             "type": "Element",
             "max_occurs": 999,
-            "min_length": 0,
-            "max_length": 255,
         },
     )
     train_number: None | str = field(

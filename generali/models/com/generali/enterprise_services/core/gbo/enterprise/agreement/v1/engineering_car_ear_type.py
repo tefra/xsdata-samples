@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
 )
 
 __NAMESPACE__ = (
@@ -20,7 +22,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_md: Optional[Decimal] = field(
+    rate_md: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "RateMD",
@@ -36,7 +38,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_cpm_cpe_mb: Optional[Decimal] = field(
+    rate_cpm_cpe_mb: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "RateCpmCpeMB",
@@ -52,7 +54,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_mdother: Optional[Decimal] = field(
+    rate_mdother: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "RateMDOther",
@@ -68,7 +70,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    months_alop_dsu: Optional[Decimal] = field(
+    months_alop_dsu: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "MonthsAlopDsu",
@@ -92,7 +94,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_alop_dsu: Optional[Decimal] = field(
+    rate_alop_dsu: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "RateAlopDsu",
@@ -116,7 +118,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductible_days_alop_dsu: Optional[Decimal] = field(
+    deductible_days_alop_dsu: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "DeductibleDaysAlopDsu",

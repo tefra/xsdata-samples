@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 from .cell_versioned_child_structure import (
-    FareTable,
     FareTableInContext,
+    FareTable1,
 )
 from .frame_containment_structure import FrameContainmentStructure
 from .standard_fare_table import StandardFareTable
@@ -16,7 +16,7 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
         name = "fareTablesInFrame_RelStructure"
 
     fare_table: List[
-        Union[StandardFareTable, FareTableInContext, FareTable]
+        Union[StandardFareTable, FareTableInContext, FareTable1]
     ] = field(
         default_factory=list,
         metadata={
@@ -34,7 +34,7 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
                 },
                 {
                     "name": "FareTable",
-                    "type": FareTable,
+                    "type": FareTable1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

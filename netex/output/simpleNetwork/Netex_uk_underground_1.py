@@ -4,6 +4,7 @@ from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleMo
 from netex.models.allowed_line_direction import AllowedLineDirection
 from netex.models.allowed_line_directions_rel_structure import AllowedLineDirectionsRelStructure
 from netex.models.authority import Authority
+from netex.models.bus_submode import BusSubmode
 from netex.models.bus_submode_enumeration import BusSubmodeEnumeration
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -19,7 +20,7 @@ from netex.models.entities_in_version_rel_structure import FramesRelStructure
 from netex.models.general_organisation import GeneralOrganisation
 from netex.models.group_of_lines import GroupOfLines
 from netex.models.groups_of_lines_in_frame_rel_structure import GroupsOfLinesInFrameRelStructure
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.line_network import LineNetwork
 from netex.models.line_networks_in_frame_rel_structure import LineNetworksInFrameRelStructure
 from netex.models.line_ref import LineRef
@@ -27,6 +28,7 @@ from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.line_sections_rel_structure import LineSectionsRelStructure
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
+from netex.models.metro_submode import MetroSubmode
 from netex.models.metro_submode_enumeration import MetroSubmodeEnumeration
 from netex.models.modification_enumeration import ModificationEnumeration
 from netex.models.multilingual_string import MultilingualString
@@ -38,6 +40,7 @@ from netex.models.operator_ref import OperatorRef
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.point_on_line_section import PointOnLineSection
 from netex.models.point_on_line_sections_rel_structure import PointOnLineSectionsRelStructure
 from netex.models.pos import Pos
@@ -67,10 +70,11 @@ from netex.models.stop_area import StopArea
 from netex.models.stop_area_ref_structure import StopAreaRefStructure
 from netex.models.stop_area_refs_rel_structure import StopAreaRefsRelStructure
 from netex.models.stop_areas_in_frame_rel_structure import StopAreasInFrameRelStructure
-from netex.models.tariff_zone_ref import TariffZoneRef
+from netex.models.tariff_zone_ref_1 import TariffZoneRef1
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.topographic_place_ref import TopographicPlaceRef
 from netex.models.topographic_place_view import TopographicPlaceView
+from netex.models.tram_submode import TramSubmode
 from netex.models.tram_submode_enumeration import TramSubmodeEnumeration
 from netex.models.type_of_point import TypeOfPoint
 from netex.models.type_of_point_ref import TypeOfPointRef
@@ -89,10 +93,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -321,7 +329,9 @@ obj = PublicationDelivery(
                                                         value='Metro'
                                                     ),
                                                     transport_mode=AllModesEnumeration.METRO,
-                                                    choice=MetroSubmodeEnumeration.TUBE
+                                                    choice=MetroSubmode(
+                                                        value=MetroSubmodeEnumeration.TUBE
+                                                    )
                                                 ),
                                                 OpenTransportMode(
                                                     id='napt:Bus',
@@ -330,7 +340,9 @@ obj = PublicationDelivery(
                                                         value='Bus'
                                                     ),
                                                     transport_mode=AllModesEnumeration.BUS,
-                                                    choice=BusSubmodeEnumeration.LOCAL_BUS
+                                                    choice=BusSubmode(
+                                                        value=BusSubmodeEnumeration.LOCAL_BUS
+                                                    )
                                                 ),
                                                 OpenTransportMode(
                                                     id='napt:NightBus',
@@ -339,7 +351,9 @@ obj = PublicationDelivery(
                                                         value='Bus'
                                                     ),
                                                     transport_mode=AllModesEnumeration.BUS,
-                                                    choice=BusSubmodeEnumeration.NIGHT_BUS
+                                                    choice=BusSubmode(
+                                                        value=BusSubmodeEnumeration.NIGHT_BUS
+                                                    )
                                                 ),
                                                 OpenTransportMode(
                                                     id='napt:Tram',
@@ -348,7 +362,9 @@ obj = PublicationDelivery(
                                                         value='Tram'
                                                     ),
                                                     transport_mode=AllModesEnumeration.TRAM,
-                                                    choice=TramSubmodeEnumeration.CITY_TRAM
+                                                    choice=TramSubmode(
+                                                        value=TramSubmodeEnumeration.CITY_TRAM
+                                                    )
                                                 ),
                                             ]
                                         )
@@ -529,7 +545,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='lul:BAK',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -585,7 +601,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:CEN',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -625,7 +641,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:CIR',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -665,7 +681,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:TRM',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -721,7 +737,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:DIS',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -761,7 +777,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:JUB',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -817,7 +833,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:DLR',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -873,7 +889,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:HAM',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -913,7 +929,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:MET',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -969,7 +985,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:NTN',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1009,7 +1025,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:OVR',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1049,7 +1065,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:PIC',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1089,7 +1105,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:VIC',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -1129,7 +1145,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='lul:WAC',
                                         created=XmlDateTime(2011, 1, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2011, 2, 8, 9, 30, 47, 0, 0),
@@ -26786,7 +26802,7 @@ obj = PublicationDelivery(
                                         ),
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     created=XmlDateTime(2009, 10, 29, 16, 30, 45),
                                                     changed=XmlDateTime(2009, 10, 29, 16, 30, 45),
                                                     ref='WATFDJ'

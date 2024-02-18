@@ -1,6 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_1 import BaseReq1
+from travelport.models.reference_point_1 import ReferencePoint1
 from travelport.models.type_pickup_date_location import TypePickupDateLocation
 from travelport.models.type_vehicle_search_distance import (
     TypeVehicleSearchDistance,
@@ -49,13 +50,12 @@ class VehicleLocationReq(BaseReq1):
             "required": True,
         },
     )
-    reference_point: None | str = field(
+    reference_point: None | ReferencePoint1 = field(
         default=None,
         metadata={
             "name": "ReferencePoint",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "max_length": 30,
         },
     )
     search_distance: None | TypeVehicleSearchDistance = field(

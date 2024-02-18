@@ -7,7 +7,7 @@ from .passenger_equipment_version_structure import (
     PassengerEquipmentVersionStructure,
 )
 from .payment_method_enumeration import PaymentMethodEnumeration
-from .sanitary_facility_enumeration import SanitaryFacilityEnumeration
+from .sanitary_facility_list import SanitaryFacilityList
 from .staffing_enumeration import StaffingEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -34,13 +34,12 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sanitary_facility_list: List[SanitaryFacilityEnumeration] = field(
-        default_factory=list,
+    sanitary_facility_list: Optional[SanitaryFacilityList] = field(
+        default=None,
         metadata={
             "name": "SanitaryFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
     number_of_toilets: Optional[int] = field(

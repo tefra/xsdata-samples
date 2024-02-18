@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .data_object_delivery import DataObjectDelivery
+from .error_description_structure import ErrorDescriptionStructure
 from .other_error import OtherError
 from .producer_response_structure import ProducerResponseStructure
 
@@ -74,7 +75,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
                 ),
             },
         )
-        description: Optional[str] = field(
+        description: Optional[ErrorDescriptionStructure] = field(
             default=None,
             metadata={
                 "name": "Description",

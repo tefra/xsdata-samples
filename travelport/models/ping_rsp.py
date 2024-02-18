@@ -1,6 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_rsp_3 import BaseRsp3
+from travelport.models.payload import Payload
 
 __NAMESPACE__ = "http://www.travelport.com/schema/system_v32_0"
 
@@ -15,11 +16,10 @@ class PingRsp(BaseRsp3):
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"
 
-    payload: None | str = field(
+    payload: None | Payload = field(
         default=None,
         metadata={
             "name": "Payload",
             "type": "Element",
-            "max_length": 32768,
         },
     )

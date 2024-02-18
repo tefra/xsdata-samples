@@ -5,7 +5,7 @@ from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
-from netex.models.cell_versioned_child_structure import PriceGroup
+from netex.models.cell_versioned_child_structure import PriceGroup1
 from netex.models.cell_versioned_child_structure import PriceGroupsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -50,6 +50,7 @@ from netex.models.network_ref import NetworkRef
 from netex.models.operator import Operator
 from netex.models.operator_ref import OperatorRef
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.price_group_ref import PriceGroupRef
 from netex.models.price_unit import PriceUnit
@@ -65,7 +66,7 @@ from netex.models.round_trip_type_enumeration import RoundTripTypeEnumeration
 from netex.models.service_frame import ServiceFrame
 from netex.models.service_frame_ref import ServiceFrameRef
 from netex.models.tariff import Tariff
-from netex.models.tariff_zone_ref import TariffZoneRef
+from netex.models.tariff_zone_ref_1 import TariffZoneRef1
 from netex.models.tariff_zone_ref_structure import TariffZoneRefStructure
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
@@ -97,10 +98,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -189,15 +194,15 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef(
+                                        TariffZoneRef1(
                                             version='any',
                                             ref='mybus:A'
                                         ),
-                                        TariffZoneRef(
+                                        TariffZoneRef1(
                                             version='any',
                                             ref='mybus:B'
                                         ),
-                                        TariffZoneRef(
+                                        TariffZoneRef1(
                                             version='any',
                                             ref='mybus:C'
                                         ),
@@ -235,7 +240,7 @@ obj = PublicationDelivery(
                                         ),
                                         contains=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='mybus:A'
                                                 ),
@@ -253,7 +258,7 @@ obj = PublicationDelivery(
                                         ),
                                         contains=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='mybus:B'
                                                 ),
@@ -757,7 +762,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup(
+                                    PriceGroup1(
                                         id='myfares:DTA@Nested_Zone',
                                         version='1.0',
                                         name=MultilingualString(

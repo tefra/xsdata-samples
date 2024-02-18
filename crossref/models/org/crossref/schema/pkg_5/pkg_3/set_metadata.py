@@ -9,6 +9,9 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import (
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.isbn import Isbn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.noisbn import Noisbn
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.part_number import (
+    PartNumber,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_item import (
     PublisherItem,
 )
@@ -55,12 +58,10 @@ class SetMetadata:
             "type": "Element",
         },
     )
-    part_number: Optional[str] = field(
+    part_number: Optional[PartNumber] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 15,
         },
     )
     publisher_item: Optional[PublisherItem] = field(

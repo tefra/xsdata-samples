@@ -5,9 +5,10 @@ from netex.models.access_mode_enumeration import AccessModeEnumeration
 from netex.models.accesses_rel_structure import AccessesRelStructure
 from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_tool_enumeration import AccessibilityToolEnumeration
+from netex.models.accessibility_tool_list import AccessibilityToolList
 from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
 from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
@@ -45,6 +46,7 @@ from netex.models.parking_type_enumeration import ParkingTypeEnumeration
 from netex.models.parking_user_enumeration import ParkingUserEnumeration
 from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
 from netex.models.parkings_in_frame_rel_structure import ParkingsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.payment_by_mobile_structure import PaymentByMobileStructure
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.place_ref_structure import PlaceRefStructure
@@ -70,10 +72,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002'
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        )
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
@@ -88,7 +94,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType(
+                                        DayType1(
                                             id='pkg:EveryDay',
                                             version='any',
                                             name=MultilingualString(
@@ -127,7 +133,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType(
+                                        DayType1(
                                             id='pkg:24HrsEveryDay',
                                             version='any',
                                             name=MultilingualString(
@@ -233,10 +239,12 @@ obj = PublicationDelivery(
                                     SiteFacilitySet(
                                         id='pkg:PP01',
                                         version='any',
-                                        accessibility_tool_list=[
-                                            AccessibilityToolEnumeration.PUSHCHAIR,
-                                            AccessibilityToolEnumeration.WHEELCHAIR,
-                                        ]
+                                        accessibility_tool_list=AccessibilityToolList(
+                                            value=[
+                                                AccessibilityToolEnumeration.PUSHCHAIR,
+                                                AccessibilityToolEnumeration.WHEELCHAIR,
+                                            ]
+                                        )
                                     ),
                                 ]
                             ),
@@ -432,7 +440,7 @@ obj = PublicationDelivery(
                                             ),
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
-                                                    DayType(
+                                                    DayType1(
                                                         id='pkg:WorkingDay',
                                                         version='any',
                                                         name=MultilingualString(

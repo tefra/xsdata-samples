@@ -5,15 +5,101 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
+class GeneralNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PurposeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PurposeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingResultResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingResultResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingResultResponseId:
+    class Meta:
+        name = "SourcingResultResponseID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingresultResponseissueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TrackingId:
+    class Meta:
+        name = "TrackingID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class Purpose:
-    purpose_coded: str = field(
+    purpose_coded: PurposeCoded = field(
         metadata={
             "name": "PurposeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    purpose_coded_other: Optional[str] = field(
+    purpose_coded_other: Optional[PurposeCodedOther] = field(
         default=None,
         metadata={
             "name": "PurposeCodedOther",
@@ -64,21 +150,21 @@ class SourcingResultResponse:
             "required": True,
         }
     )
-    sourcingresult_responseissue_date: str = field(
+    sourcingresult_responseissue_date: SourcingresultResponseissueDate = field(
         metadata={
             "name": "SourcingresultResponseissueDate",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_result_response_id: str = field(
+    sourcing_result_response_id: SourcingResultResponseId = field(
         metadata={
             "name": "SourcingResultResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    tracking_id: str = field(
+    tracking_id: TrackingId = field(
         metadata={
             "name": "TrackingID",
             "type": "Element",
@@ -99,14 +185,16 @@ class SourcingResultResponse:
             "type": "Element",
         },
     )
-    sourcing_result_response_coded: str = field(
+    sourcing_result_response_coded: SourcingResultResponseCoded = field(
         metadata={
             "name": "SourcingResultResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_result_response_coded_other: Optional[str] = field(
+    sourcing_result_response_coded_other: Optional[
+        SourcingResultResponseCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "SourcingResultResponseCodedOther",
@@ -120,7 +208,7 @@ class SourcingResultResponse:
             "required": True,
         }
     )
-    general_note: Optional[str] = field(
+    general_note: Optional[GeneralNote] = field(
         default=None,
         metadata={
             "name": "GeneralNote",

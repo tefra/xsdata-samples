@@ -9,13 +9,16 @@ from travelport.models.email_1 import Email1
 from travelport.models.guarantee_1 import Guarantee1
 from travelport.models.guest_information import GuestInformation
 from travelport.models.hotel_bedding import HotelBedding
+from travelport.models.hotel_commission import HotelCommission
 from travelport.models.hotel_detail_item import HotelDetailItem
 from travelport.models.hotel_property import HotelProperty
 from travelport.models.hotel_rate_detail import HotelRateDetail
+from travelport.models.hotel_special_request import HotelSpecialRequest
 from travelport.models.hotel_stay import HotelStay
 from travelport.models.phone_number_1 import PhoneNumber1
 from travelport.models.promotion_code import PromotionCode
 from travelport.models.reservation_name_1 import ReservationName1
+from travelport.models.sell_message_1 import SellMessage1
 from travelport.models.third_party_information_1 import ThirdPartyInformation1
 from travelport.models.type_adapted_room_guest_allocation import (
     TypeAdaptedRoomGuestAllocation,
@@ -152,12 +155,11 @@ class HotelReservation(BaseReservation1):
             "required": True,
         },
     )
-    hotel_special_request: None | str = field(
+    hotel_special_request: None | HotelSpecialRequest = field(
         default=None,
         metadata={
             "name": "HotelSpecialRequest",
             "type": "Element",
-            "max_length": 250,
         },
     )
     guarantee: None | Guarantee1 = field(
@@ -206,7 +208,7 @@ class HotelReservation(BaseReservation1):
             "max_occurs": 999,
         },
     )
-    sell_message: list[str] = field(
+    sell_message: list[SellMessage1] = field(
         default_factory=list,
         metadata={
             "name": "SellMessage",
@@ -215,7 +217,7 @@ class HotelReservation(BaseReservation1):
             "max_occurs": 999,
         },
     )
-    hotel_commission: None | str = field(
+    hotel_commission: None | HotelCommission = field(
         default=None,
         metadata={
             "name": "HotelCommission",

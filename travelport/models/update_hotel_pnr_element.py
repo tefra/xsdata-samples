@@ -6,7 +6,9 @@ from travelport.models.corporate_discount_id_1 import CorporateDiscountId1
 from travelport.models.guarantee_1 import Guarantee1
 from travelport.models.guest_information import GuestInformation
 from travelport.models.hotel_bedding import HotelBedding
+from travelport.models.hotel_commission import HotelCommission
 from travelport.models.hotel_rate_info import HotelRateInfo
+from travelport.models.hotel_special_request import HotelSpecialRequest
 from travelport.models.hotel_stay import HotelStay
 from travelport.models.loyalty_card_1 import LoyaltyCard1
 from travelport.models.reservation_name_1 import ReservationName1
@@ -57,13 +59,12 @@ class UpdateHotelPnrElement:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    hotel_special_request: None | str = field(
+    hotel_special_request: None | HotelSpecialRequest = field(
         default=None,
         metadata={
             "name": "HotelSpecialRequest",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            "max_length": 250,
         },
     )
     hotel_rate_info: None | HotelRateInfo = field(
@@ -82,7 +83,7 @@ class UpdateHotelPnrElement:
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
         },
     )
-    hotel_commission: None | str = field(
+    hotel_commission: None | HotelCommission = field(
         default=None,
         metadata={
             "name": "HotelCommission",

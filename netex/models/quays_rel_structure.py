@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .quay import Quay
+from .quay_1 import Quay1
 from .quay_ref import QuayRef
 from .taxi_stand_ref import TaxiStandRef
 
@@ -14,7 +14,7 @@ class QuaysRelStructure(ContainmentAggregationStructure):
         name = "quays_RelStructure"
 
     taxi_stand_ref_or_quay_ref_or_quay: List[
-        Union[TaxiStandRef, QuayRef, Quay]
+        Union[TaxiStandRef, QuayRef, Quay1]
     ] = field(
         default_factory=list,
         metadata={
@@ -32,7 +32,7 @@ class QuaysRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "Quay",
-                    "type": Quay,
+                    "type": Quay1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -7,11 +7,15 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import (
     Contributors,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.issue import Issue
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.journal_volume import (
     JournalVolume,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_date import (
     PublicationDate,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.special_numbering import (
+    SpecialNumbering,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 
@@ -54,20 +58,16 @@ class JournalIssue:
             "type": "Element",
         },
     )
-    issue: Optional[str] = field(
+    issue: Optional[Issue] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 32,
         },
     )
-    special_numbering: Optional[str] = field(
+    special_numbering: Optional[SpecialNumbering] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 15,
         },
     )
     archive_locations: Optional[ArchiveLocations] = field(

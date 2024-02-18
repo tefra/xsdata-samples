@@ -31,6 +31,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import FamilyName
 from ubl.models.common.ubl_common_basic_components_2_1 import FirstName
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import JobTitle
 from ubl.models.common.ubl_common_basic_components_2_1 import LineExtensionAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import MiddleName
@@ -58,7 +59,9 @@ obj = Reminder(
     id=Id(
         value='12'
     ),
-    issue_date=XmlDate(2010, 4, 14),
+    issue_date=IssueDate(
+        value=XmlDate(2010, 4, 14)
+    ),
     accounting_supplier_party=AccountingSupplierParty(
         party=Party(
             endpoint_id=EndpointId(

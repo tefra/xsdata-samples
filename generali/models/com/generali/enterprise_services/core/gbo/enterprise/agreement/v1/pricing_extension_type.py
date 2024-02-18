@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
     BaseIdentifiedComponentType,
 )
@@ -28,7 +30,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_pc: Optional[Decimal] = field(
+    rate_pc: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "RatePC",
@@ -36,7 +38,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    exposure: Optional[Decimal] = field(
+    exposure: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "Exposure",
@@ -44,7 +46,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    sublimit: Optional[Decimal] = field(
+    sublimit: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "Sublimit",
@@ -52,7 +54,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    premium: Optional[Decimal] = field(
+    premium: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "Premium",

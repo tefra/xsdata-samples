@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
-from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
     AccountingSupplierParty,
@@ -31,10 +30,13 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import (
 from ubl.models.common.ubl_common_basic_components_2_1 import (
     AccountingCost,
     AccountingCostCode,
+    CopyIndicator,
     CustomizationId,
     DocumentCurrencyCode,
     Id,
     InvoiceTypeCode,
+    IssueDate,
+    IssueTime,
     LineCountNumeric,
     Note,
     PaymentAlternativeCurrencyCode,
@@ -43,6 +45,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
     ProfileExecutionId,
     ProfileId,
     TaxCurrencyCode,
+    TaxPointDate,
     UblversionId,
     Uuid,
 )
@@ -102,7 +105,7 @@ class FreightInvoiceType:
             "required": True,
         },
     )
-    copy_indicator: Optional[bool] = field(
+    copy_indicator: Optional[CopyIndicator] = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -118,7 +121,7 @@ class FreightInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[XmlDate] = field(
+    issue_date: Optional[IssueDate] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -127,7 +130,7 @@ class FreightInvoiceType:
             "required": True,
         },
     )
-    issue_time: Optional[XmlTime] = field(
+    issue_time: Optional[IssueTime] = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -151,7 +154,7 @@ class FreightInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_point_date: Optional[XmlDate] = field(
+    tax_point_date: Optional[TaxPointDate] = field(
         default=None,
         metadata={
             "name": "TaxPointDate",

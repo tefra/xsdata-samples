@@ -1,17 +1,34 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xcbl.models.shipping_schedule_response import (
+    CommitmentLevelCoded,
+    CommitmentLevelCodedOther,
+    DetailResponseCoded,
+    DetailResponseCodedOther,
+    ForecastFrequencyCoded,
+    ForecastFrequencyCodedOther,
     ItemQuantities,
+    ItemReleaseStatusCoded,
+    ItemReleaseStatusCodedOther,
     ItemResourceAuthorization,
     ItemScheduleReference,
+    RecordKeepingYear,
+    ReleaseNumber,
     RequestedResponse,
     ResponseType,
     ScheduleDates,
+    ScheduleId,
+    ScheduleNote,
     ScheduleParty,
     SchedulePurpose,
     ScheduleQuantities,
     ScheduleReference,
     ScheduleReferences,
+    ScheduleResponseId,
+    ScheduleResponseIssueDate,
+    ScheduleTypeCoded,
+    ScheduleTypeCodedOther,
+    TotalNumberOfLineItems,
 )
 from xcbl.models.sourcing_result import (
     BuyerParty,
@@ -23,6 +40,7 @@ from xcbl.models.sourcing_result import (
     HazardousMaterials,
     ItemContractReferences,
     ItemIdentifiers,
+    LineItemNote,
     LineItemNum,
     LineItemType,
     ListOfAttachment,
@@ -31,7 +49,10 @@ from xcbl.models.sourcing_result import (
     ListOfReferenceCoded,
     ListOfStructuredNote,
     MaxBackOrderQuantity,
+    OffCatalogFlag,
     ParentItemNumber,
+    QuantityQualifierCoded,
+    QuantityQualifierCodedOther,
     SellerParty,
     TotalQuantity,
 )
@@ -49,13 +70,32 @@ from xcbl.models.trading_partner_user_information import (
 
 
 @dataclass(kw_only=True)
-class PlanningScheduleSummary:
-    total_number_of_line_items: str = field(
+class PlanningScheduleHeaderNote:
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumberOfLineItems",
-            "type": "Element",
             "required": True,
-        }
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PlanningScheduleResponseHeaderNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ScheduleIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
     )
 
 
@@ -117,7 +157,7 @@ class BasePlanningDetail:
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[str] = field(
+    off_catalog_flag: Optional[OffCatalogFlag] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
@@ -187,7 +227,7 @@ class BasePlanningDetail:
             "type": "Element",
         },
     )
-    record_keeping_year: Optional[str] = field(
+    record_keeping_year: Optional[RecordKeepingYear] = field(
         default=None,
         metadata={
             "name": "RecordKeepingYear",
@@ -201,14 +241,16 @@ class BasePlanningDetail:
             "type": "Element",
         },
     )
-    forecast_frequency_coded: str = field(
+    forecast_frequency_coded: ForecastFrequencyCoded = field(
         metadata={
             "name": "ForecastFrequencyCoded",
             "type": "Element",
             "required": True,
         }
     )
-    forecast_frequency_coded_other: Optional[str] = field(
+    forecast_frequency_coded_other: Optional[
+        ForecastFrequencyCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "ForecastFrequencyCodedOther",
@@ -222,14 +264,16 @@ class BasePlanningDetail:
             "type": "Element",
         },
     )
-    item_release_status_coded: Optional[str] = field(
+    item_release_status_coded: Optional[ItemReleaseStatusCoded] = field(
         default=None,
         metadata={
             "name": "ItemReleaseStatusCoded",
             "type": "Element",
         },
     )
-    item_release_status_coded_other: Optional[str] = field(
+    item_release_status_coded_other: Optional[
+        ItemReleaseStatusCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "ItemReleaseStatusCodedOther",
@@ -240,14 +284,14 @@ class BasePlanningDetail:
 
 @dataclass(kw_only=True)
 class PlanningScheduleHeader:
-    schedule_id: str = field(
+    schedule_id: ScheduleId = field(
         metadata={
             "name": "ScheduleID",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_issue_date: str = field(
+    schedule_issue_date: ScheduleIssueDate = field(
         metadata={
             "name": "ScheduleIssueDate",
             "type": "Element",
@@ -261,7 +305,7 @@ class PlanningScheduleHeader:
             "type": "Element",
         },
     )
-    release_number: Optional[str] = field(
+    release_number: Optional[ReleaseNumber] = field(
         default=None,
         metadata={
             "name": "ReleaseNumber",
@@ -282,28 +326,30 @@ class PlanningScheduleHeader:
             "type": "Element",
         },
     )
-    schedule_type_coded: str = field(
+    schedule_type_coded: ScheduleTypeCoded = field(
         metadata={
             "name": "ScheduleTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_type_coded_other: Optional[str] = field(
+    schedule_type_coded_other: Optional[ScheduleTypeCodedOther] = field(
         default=None,
         metadata={
             "name": "ScheduleTypeCodedOther",
             "type": "Element",
         },
     )
-    quantity_qualifier_coded: str = field(
+    quantity_qualifier_coded: QuantityQualifierCoded = field(
         metadata={
             "name": "QuantityQualifierCoded",
             "type": "Element",
             "required": True,
         }
     )
-    quantity_qualifier_coded_other: Optional[str] = field(
+    quantity_qualifier_coded_other: Optional[
+        QuantityQualifierCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "QuantityQualifierCodedOther",
@@ -331,7 +377,9 @@ class PlanningScheduleHeader:
             "required": True,
         }
     )
-    planning_schedule_header_note: Optional[str] = field(
+    planning_schedule_header_note: Optional[
+        PlanningScheduleHeaderNote
+    ] = field(
         default=None,
         metadata={
             "name": "PlanningScheduleHeaderNote",
@@ -355,10 +403,10 @@ class PlanningScheduleHeader:
 
 
 @dataclass(kw_only=True)
-class PlanningScheduleResponseSummary:
-    planning_schedule_summary: PlanningScheduleSummary = field(
+class PlanningScheduleSummary:
+    total_number_of_line_items: TotalNumberOfLineItems = field(
         metadata={
-            "name": "PlanningScheduleSummary",
+            "name": "TotalNumberOfLineItems",
             "type": "Element",
             "required": True,
         }
@@ -367,14 +415,14 @@ class PlanningScheduleResponseSummary:
 
 @dataclass(kw_only=True)
 class ScheduleDetail:
-    commitment_level_coded: str = field(
+    commitment_level_coded: CommitmentLevelCoded = field(
         metadata={
             "name": "CommitmentLevelCoded",
             "type": "Element",
             "required": True,
         }
     )
-    commitment_level_coded_other: Optional[str] = field(
+    commitment_level_coded_other: Optional[CommitmentLevelCodedOther] = field(
         default=None,
         metadata={
             "name": "CommitmentLevelCodedOther",
@@ -402,7 +450,7 @@ class ScheduleDetail:
             "type": "Element",
         },
     )
-    schedule_note: Optional[str] = field(
+    schedule_note: Optional[ScheduleNote] = field(
         default=None,
         metadata={
             "name": "ScheduleNote",
@@ -446,6 +494,17 @@ class OriginalPlanningScheduleHeader:
 
 
 @dataclass(kw_only=True)
+class PlanningScheduleResponseSummary:
+    planning_schedule_summary: PlanningScheduleSummary = field(
+        metadata={
+            "name": "PlanningScheduleSummary",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class LocationPlanningItemDetail:
     base_planning_detail: BasePlanningDetail = field(
         metadata={
@@ -461,7 +520,7 @@ class LocationPlanningItemDetail:
             "required": True,
         }
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
@@ -504,14 +563,14 @@ class LocationSchedule:
 
 @dataclass(kw_only=True)
 class PlanningScheduleResponseHeader:
-    schedule_response_id: str = field(
+    schedule_response_id: ScheduleResponseId = field(
         metadata={
             "name": "ScheduleResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_response_issue_date: str = field(
+    schedule_response_issue_date: ScheduleResponseIssueDate = field(
         metadata={
             "name": "ScheduleResponseIssueDate",
             "type": "Element",
@@ -585,7 +644,9 @@ class PlanningScheduleResponseHeader:
             "type": "Element",
         },
     )
-    planning_schedule_response_header_note: Optional[str] = field(
+    planning_schedule_response_header_note: Optional[
+        PlanningScheduleResponseHeaderNote
+    ] = field(
         default=None,
         metadata={
             "name": "PlanningScheduleResponseHeaderNote",
@@ -675,7 +736,7 @@ class MaterialGroupedPlanningDetail:
             "required": True,
         }
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
@@ -737,14 +798,14 @@ class OriginalMaterialGroupedPlanningDetail:
 
 @dataclass(kw_only=True)
 class LocationGroupedPlanningResponse:
-    detail_response_coded: str = field(
+    detail_response_coded: DetailResponseCoded = field(
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    detail_response_coded_other: Optional[str] = field(
+    detail_response_coded_other: Optional[DetailResponseCodedOther] = field(
         default=None,
         metadata={
             "name": "DetailResponseCodedOther",
@@ -769,7 +830,7 @@ class LocationGroupedPlanningResponse:
             "type": "Element",
         },
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
@@ -794,14 +855,14 @@ class LocationGroupedPlanningResponse:
 
 @dataclass(kw_only=True)
 class MaterialGroupedPlanningResponse:
-    detail_response_coded: str = field(
+    detail_response_coded: DetailResponseCoded = field(
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    detail_response_coded_other: Optional[str] = field(
+    detail_response_coded_other: Optional[DetailResponseCodedOther] = field(
         default=None,
         metadata={
             "name": "DetailResponseCodedOther",
@@ -826,7 +887,7 @@ class MaterialGroupedPlanningResponse:
             "type": "Element",
         },
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",

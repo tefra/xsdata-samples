@@ -7,6 +7,7 @@ from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.fare_rule import FareRule
 from travelport.models.host_token_1 import HostToken1
 from travelport.models.optional_services import OptionalServices
+from travelport.models.ticket_number_1 import TicketNumber1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -36,15 +37,13 @@ class AirExchangeQuoteRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    ticket_number: list[str] = field(
+    ticket_number: list[TicketNumber1] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-            "min_length": 1,
-            "max_length": 13,
         },
     )
     air_pricing_solution: list[AirPricingSolution] = field(

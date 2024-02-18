@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDate
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_type import (
+    DateType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
@@ -18,7 +20,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class VehicleType(RiskElementType):
-    manufactured_date: Optional[XmlDate] = field(
+    manufactured_date: Optional[DateType] = field(
         default=None,
         metadata={
             "name": "ManufacturedDate",

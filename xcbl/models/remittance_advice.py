@@ -9,7 +9,13 @@ from xcbl.models.request_for_quotation import (
     PriceListNumber,
     PriceListVersionNumber,
 )
-from xcbl.models.shipping_schedule_response import ListOfMessageId
+from xcbl.models.shipping_schedule_response import (
+    BuyerOrderNumber,
+    ListOfMessageId,
+    SellerOrderNumber,
+    Sequence,
+    TransportRouteId,
+)
 from xcbl.models.sourcing_result import (
     Attachment,
     BillToParty,
@@ -25,6 +31,7 @@ from xcbl.models.sourcing_result import (
     ItemContractReferences,
     ItemIdentifiers,
     LineItemAttachments,
+    LineItemNote,
     LineItemNum,
     LineItemType,
     ListOfDateCoded,
@@ -37,6 +44,7 @@ from xcbl.models.sourcing_result import (
     MaxBackOrderQuantity,
     MonetaryValue,
     NameValuePair,
+    OffCatalogFlag,
     ParentItemNumber,
     Quantity,
     RateOfExchangeDetail,
@@ -46,12 +54,16 @@ from xcbl.models.sourcing_result import (
     TotalQuantity,
     TotalValue,
 )
-from xcbl.models.sourcing_result_response import Purpose
+from xcbl.models.sourcing_result_response import (
+    GeneralNote,
+    Purpose,
+)
 from xcbl.models.time_series_response import (
     ContactNumber,
     ListOfDimension,
     ListOfIdentifier,
     ListOfPartyCoded,
+    Mdfbusiness,
     NameAddress,
     OrderContact,
     OtherContacts,
@@ -70,76 +82,443 @@ from xcbl.models.trading_partner_user_information import (
 
 
 @dataclass(kw_only=True)
-class AsnpartialOrder:
+class AsnpartialOrderCoded:
     class Meta:
-        name = "ASNPartialOrder"
+        name = "ASNPartialOrderCoded"
 
-    asnpartial_order_coded: str = field(
+    value: str = field(
+        default="",
         metadata={
-            "name": "ASNPartialOrderCoded",
-            "type": "Element",
             "required": True,
-        }
-    )
-    asnpartial_order_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ASNPartialOrderCodedOther",
-            "type": "Element",
         },
     )
 
 
 @dataclass(kw_only=True)
-class ActualPaymentStatus:
-    actual_payment_status_coded: Optional[str] = field(
-        default=None,
+class AsnpartialOrderCodedOther:
+    class Meta:
+        name = "ASNPartialOrderCodedOther"
+
+    value: str = field(
+        default="",
         metadata={
-            "name": "ActualPaymentStatusCoded",
-            "type": "Element",
-        },
-    )
-    actual_payment_status_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ActualPaymentStatusCodedOther",
-            "type": "Element",
+            "required": True,
         },
     )
 
 
 @dataclass(kw_only=True)
-class EncryptedField:
-    sequence: Optional[str] = field(
-        default=None,
+class ActualPaymentStatusCoded:
+    value: str = field(
+        default="",
         metadata={
-            "name": "Sequence",
-            "type": "Element",
-        },
-    )
-    encrypted_data: str = field(
-        metadata={
-            "name": "EncryptedData",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
-class InvoiceType:
-    invoice_type_coded: str = field(
+class ActualPaymentStatusCodedOther:
+    value: str = field(
+        default="",
         metadata={
-            "name": "InvoiceTypeCoded",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    invoice_type_coded_other: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class ActualShipToDateTime:
+    value: str = field(
+        default="",
         metadata={
-            "name": "InvoiceTypeCodedOther",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AdjustmentDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AdjustmentNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AdjustmentPercent:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AdjustmentReasonCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AdjustmentReasonCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CertificateAuthority:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class EncryptedData:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ExpectedShipToDateTime:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FinancialInstitutionQaulifierCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FinancialInstitutionQaulifierCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FixedAsset:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceDueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceLineItemNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class IsCredit:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LineItemReference:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PartialOrderCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PartialOrderCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentReasonCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentReasonCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentSettlementDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PurchaseOrderDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PurchaseOrderLineItemNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ReceiptDateTime:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RemittaceAdviceIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RemittanceAdviceStatusCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RemittanceAdviceStatusCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SummaryNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalLineItem:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalPaymentDocuments:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TraceTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TraceTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TrackingCallUrl:
+    class Meta:
+        name = "TrackingCallURL"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TransactionHandlingCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TransactionHandlingCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Url:
+    class Meta:
+        name = "URL"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class WorkBreakdownStructure:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -159,6 +538,27 @@ class Asnnumber:
 
 
 @dataclass(kw_only=True)
+class AsnpartialOrder:
+    class Meta:
+        name = "ASNPartialOrder"
+
+    asnpartial_order_coded: AsnpartialOrderCoded = field(
+        metadata={
+            "name": "ASNPartialOrderCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    asnpartial_order_coded_other: Optional[AsnpartialOrderCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "ASNPartialOrderCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class ActualAmount:
     monetary_value: MonetaryValue = field(
         metadata={
@@ -166,6 +566,26 @@ class ActualAmount:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class ActualPaymentStatus:
+    actual_payment_status_coded: Optional[ActualPaymentStatusCoded] = field(
+        default=None,
+        metadata={
+            "name": "ActualPaymentStatusCoded",
+            "type": "Element",
+        },
+    )
+    actual_payment_status_coded_other: Optional[
+        ActualPaymentStatusCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "ActualPaymentStatusCodedOther",
+            "type": "Element",
+        },
     )
 
 
@@ -297,6 +717,24 @@ class DeliveryNoteNumber:
 
 
 @dataclass(kw_only=True)
+class EncryptedField:
+    sequence: Optional[Sequence] = field(
+        default=None,
+        metadata={
+            "name": "Sequence",
+            "type": "Element",
+        },
+    )
+    encrypted_data: EncryptedData = field(
+        metadata={
+            "name": "EncryptedData",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class ExpectedAmount:
     monetary_value: MonetaryValue = field(
         metadata={
@@ -320,14 +758,16 @@ class ExportLicenceNumber:
 
 @dataclass(kw_only=True)
 class FinancialInstitutionCoded:
-    financial_institution_qaulifier_coded: str = field(
+    financial_institution_qaulifier_coded: FinancialInstitutionQaulifierCoded = field(
         metadata={
             "name": "FinancialInstitutionQaulifierCoded",
             "type": "Element",
             "required": True,
         }
     )
-    financial_institution_qaulifier_coded_other: Optional[str] = field(
+    financial_institution_qaulifier_coded_other: Optional[
+        FinancialInstitutionQaulifierCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "FinancialInstitutionQaulifierCodedOther",
@@ -373,6 +813,24 @@ class InvoiceNumber:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceType:
+    invoice_type_coded: InvoiceTypeCoded = field(
+        metadata={
+            "name": "InvoiceTypeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    invoice_type_coded_other: Optional[InvoiceTypeCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "InvoiceTypeCodedOther",
+            "type": "Element",
+        },
     )
 
 
@@ -428,18 +886,6 @@ class LetterOfCreditNumber:
             "type": "Element",
             "required": True,
         }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfEncryptedField:
-    encrypted_field: List[EncryptedField] = field(
-        default_factory=list,
-        metadata={
-            "name": "EncryptedField",
-            "type": "Element",
-            "min_occurs": 1,
-        },
     )
 
 
@@ -588,7 +1034,7 @@ class PayerParty:
             "type": "Element",
         },
     )
-    mdfbusiness: Optional[str] = field(
+    mdfbusiness: Optional[Mdfbusiness] = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
@@ -637,7 +1083,7 @@ class PayerParty:
             "type": "Element",
         },
     )
-    certificate_authority: Optional[str] = field(
+    certificate_authority: Optional[CertificateAuthority] = field(
         default=None,
         metadata={
             "name": "CertificateAuthority",
@@ -684,17 +1130,6 @@ class PurchaseOrderNumber:
     reference: Reference = field(
         metadata={
             "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class RelatedInvoiceType:
-    invoice_type: InvoiceType = field(
-        metadata={
-            "name": "InvoiceType",
             "type": "Element",
             "required": True,
         }
@@ -893,28 +1328,30 @@ class Unusable:
 
 @dataclass(kw_only=True)
 class Adjustment:
-    line_item_reference: Optional[str] = field(
+    line_item_reference: Optional[LineItemReference] = field(
         default=None,
         metadata={
             "name": "LineItemReference",
             "type": "Element",
         },
     )
-    adjustment_reason_coded: str = field(
+    adjustment_reason_coded: AdjustmentReasonCoded = field(
         metadata={
             "name": "AdjustmentReasonCoded",
             "type": "Element",
             "required": True,
         }
     )
-    adjustment_reason_coded_other: Optional[str] = field(
+    adjustment_reason_coded_other: Optional[
+        AdjustmentReasonCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "AdjustmentReasonCodedOther",
             "type": "Element",
         },
     )
-    adjustment_date: Optional[str] = field(
+    adjustment_date: Optional[AdjustmentDate] = field(
         default=None,
         metadata={
             "name": "AdjustmentDate",
@@ -935,7 +1372,7 @@ class Adjustment:
             "type": "Element",
         },
     )
-    adjustment_percent: Optional[str] = field(
+    adjustment_percent: Optional[AdjustmentPercent] = field(
         default=None,
         metadata={
             "name": "AdjustmentPercent",
@@ -949,7 +1386,7 @@ class Adjustment:
             "required": True,
         }
     )
-    adjustment_note: Optional[str] = field(
+    adjustment_note: Optional[AdjustmentNote] = field(
         default=None,
         metadata={
             "name": "AdjustmentNote",
@@ -985,7 +1422,7 @@ class CarrierReference:
             "required": True,
         }
     )
-    transport_route_id: str = field(
+    transport_route_id: TransportRouteId = field(
         metadata={
             "name": "TransportRouteID",
             "type": "Element",
@@ -1003,37 +1440,19 @@ class CostAllocation:
             "required": True,
         }
     )
-    work_breakdown_structure: Optional[str] = field(
+    work_breakdown_structure: Optional[WorkBreakdownStructure] = field(
         default=None,
         metadata={
             "name": "WorkBreakdownStructure",
             "type": "Element",
         },
     )
-    fixed_asset: Optional[str] = field(
+    fixed_asset: Optional[FixedAsset] = field(
         default=None,
         metadata={
             "name": "FixedAsset",
             "type": "Element",
         },
-    )
-
-
-@dataclass(kw_only=True)
-class EncryptedInfo:
-    certificate_authority: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CertificateAuthority",
-            "type": "Element",
-        },
-    )
-    list_of_encrypted_field: ListOfEncryptedField = field(
-        metadata={
-            "name": "ListOfEncryptedField",
-            "type": "Element",
-            "required": True,
-        }
     )
 
 
@@ -1078,28 +1497,28 @@ class ExceptionQuantities:
 
 @dataclass(kw_only=True)
 class InvoiceDates:
-    invoice_due_date: Optional[str] = field(
+    invoice_due_date: Optional[InvoiceDueDate] = field(
         default=None,
         metadata={
             "name": "InvoiceDueDate",
             "type": "Element",
         },
     )
-    expected_ship_to_date_time: Optional[str] = field(
+    expected_ship_to_date_time: Optional[ExpectedShipToDateTime] = field(
         default=None,
         metadata={
             "name": "ExpectedShipToDateTime",
             "type": "Element",
         },
     )
-    actual_ship_to_date_time: Optional[str] = field(
+    actual_ship_to_date_time: Optional[ActualShipToDateTime] = field(
         default=None,
         metadata={
             "name": "ActualShipToDateTime",
             "type": "Element",
         },
     )
-    receipt_date_time: Optional[str] = field(
+    receipt_date_time: Optional[ReceiptDateTime] = field(
         default=None,
         metadata={
             "name": "ReceiptDateTime",
@@ -1199,6 +1618,18 @@ class InvoicePricingDetail:
 
 
 @dataclass(kw_only=True)
+class ListOfEncryptedField:
+    encrypted_field: List[EncryptedField] = field(
+        default_factory=list,
+        metadata={
+            "name": "EncryptedField",
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class ListOfFinancialInstitutionCoded:
     financial_institution_coded: List[FinancialInstitutionCoded] = field(
         default_factory=list,
@@ -1276,28 +1707,30 @@ class PurchaseOrderReference:
             "required": True,
         }
     )
-    purchase_order_date: Optional[str] = field(
+    purchase_order_date: Optional[PurchaseOrderDate] = field(
         default=None,
         metadata={
             "name": "PurchaseOrderDate",
             "type": "Element",
         },
     )
-    purchase_order_line_item_number: Optional[str] = field(
+    purchase_order_line_item_number: Optional[
+        PurchaseOrderLineItemNumber
+    ] = field(
         default=None,
         metadata={
             "name": "PurchaseOrderLineItemNumber",
             "type": "Element",
         },
     )
-    partial_order_coded: Optional[str] = field(
+    partial_order_coded: Optional[PartialOrderCoded] = field(
         default=None,
         metadata={
             "name": "PartialOrderCoded",
             "type": "Element",
         },
     )
-    partial_order_coded_other: Optional[str] = field(
+    partial_order_coded_other: Optional[PartialOrderCodedOther] = field(
         default=None,
         metadata={
             "name": "PartialOrderCodedOther",
@@ -1307,40 +1740,26 @@ class PurchaseOrderReference:
 
 
 @dataclass(kw_only=True)
-class RelatedInvoiceRef:
-    related_invoice_type: RelatedInvoiceType = field(
+class RelatedInvoiceType:
+    invoice_type: InvoiceType = field(
         metadata={
-            "name": "RelatedInvoiceType",
+            "name": "InvoiceType",
             "type": "Element",
             "required": True,
         }
-    )
-    invoice_number: InvoiceNumber = field(
-        metadata={
-            "name": "InvoiceNumber",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    invoice_line_item_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "InvoiceLineItemNumber",
-            "type": "Element",
-        },
     )
 
 
 @dataclass(kw_only=True)
 class TraceType:
-    trace_type_coded: str = field(
+    trace_type_coded: TraceTypeCoded = field(
         metadata={
             "name": "TraceTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    trace_type_coded_other: Optional[str] = field(
+    trace_type_coded_other: Optional[TraceTypeCodedOther] = field(
         default=None,
         metadata={
             "name": "TraceTypeCodedOther",
@@ -1365,12 +1784,30 @@ class TrackingInformation:
             "required": True,
         }
     )
-    tracking_call_url: Optional[str] = field(
+    tracking_call_url: Optional[TrackingCallUrl] = field(
         default=None,
         metadata={
             "name": "TrackingCallURL",
             "type": "Element",
         },
+    )
+
+
+@dataclass(kw_only=True)
+class EncryptedInfo:
+    certificate_authority: Optional[CertificateAuthority] = field(
+        default=None,
+        metadata={
+            "name": "CertificateAuthority",
+            "type": "Element",
+        },
+    )
+    list_of_encrypted_field: ListOfEncryptedField = field(
+        metadata={
+            "name": "ListOfEncryptedField",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 
@@ -1410,58 +1847,25 @@ class ListOfCarrierReference:
 
 
 @dataclass(kw_only=True)
-class ListOfRelatedInvoiceRef:
-    related_invoice_ref: List[RelatedInvoiceRef] = field(
-        default_factory=list,
+class RelatedInvoiceRef:
+    related_invoice_type: RelatedInvoiceType = field(
         metadata={
-            "name": "RelatedInvoiceRef",
+            "name": "RelatedInvoiceType",
             "type": "Element",
-            "min_occurs": 1,
-        },
+            "required": True,
+        }
     )
-
-
-@dataclass(kw_only=True)
-class PaymentRequestSummary:
-    total_payment_documents: Optional[str] = field(
+    invoice_number: InvoiceNumber = field(
+        metadata={
+            "name": "InvoiceNumber",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    invoice_line_item_number: Optional[InvoiceLineItemNumber] = field(
         default=None,
         metadata={
-            "name": "TotalPaymentDocuments",
-            "type": "Element",
-        },
-    )
-    total_line_item: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TotalLineItem",
-            "type": "Element",
-        },
-    )
-    total_settlement_amount: Optional[TotalSettlementAmount] = field(
-        default=None,
-        metadata={
-            "name": "TotalSettlementAmount",
-            "type": "Element",
-        },
-    )
-    encrypted_info: Optional[EncryptedInfo] = field(
-        default=None,
-        metadata={
-            "name": "EncryptedInfo",
-            "type": "Element",
-        },
-    )
-    list_of_summary_items: Optional[ListOfSummaryItems] = field(
-        default=None,
-        metadata={
-            "name": "ListOfSummaryItems",
-            "type": "Element",
-        },
-    )
-    summary_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SummaryNote",
+            "name": "InvoiceLineItemNumber",
             "type": "Element",
         },
     )
@@ -1476,7 +1880,7 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    remittace_advice_issue_date: str = field(
+    remittace_advice_issue_date: RemittaceAdviceIssueDate = field(
         metadata={
             "name": "RemittaceAdviceIssueDate",
             "type": "Element",
@@ -1490,21 +1894,25 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    remittance_advice_status_coded: Optional[str] = field(
+    remittance_advice_status_coded: Optional[
+        RemittanceAdviceStatusCoded
+    ] = field(
         default=None,
         metadata={
             "name": "RemittanceAdviceStatusCoded",
             "type": "Element",
         },
     )
-    remittance_advice_status_coded_other: Optional[str] = field(
+    remittance_advice_status_coded_other: Optional[
+        RemittanceAdviceStatusCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "RemittanceAdviceStatusCodedOther",
             "type": "Element",
         },
     )
-    payment_settlement_date: Optional[str] = field(
+    payment_settlement_date: Optional[PaymentSettlementDate] = field(
         default=None,
         metadata={
             "name": "PaymentSettlementDate",
@@ -1555,7 +1963,7 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    is_credit: Optional[str] = field(
+    is_credit: Optional[IsCredit] = field(
         default=None,
         metadata={
             "name": "IsCredit",
@@ -1585,28 +1993,30 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    payment_reason_coded: Optional[str] = field(
+    payment_reason_coded: Optional[PaymentReasonCoded] = field(
         default=None,
         metadata={
             "name": "PaymentReasonCoded",
             "type": "Element",
         },
     )
-    payment_reason_coded_other: Optional[str] = field(
+    payment_reason_coded_other: Optional[PaymentReasonCodedOther] = field(
         default=None,
         metadata={
             "name": "PaymentReasonCodedOther",
             "type": "Element",
         },
     )
-    transaction_handling_coded: Optional[str] = field(
+    transaction_handling_coded: Optional[TransactionHandlingCoded] = field(
         default=None,
         metadata={
             "name": "TransactionHandlingCoded",
             "type": "Element",
         },
     )
-    transaction_handling_coded_other: Optional[str] = field(
+    transaction_handling_coded_other: Optional[
+        TransactionHandlingCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "TransactionHandlingCodedOther",
@@ -1636,7 +2046,7 @@ class RemittanceAdviceHeader:
             "type": "Element",
         },
     )
-    general_note: Optional[str] = field(
+    general_note: Optional[GeneralNote] = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -1706,7 +2116,7 @@ class Asnreferences:
             "type": "Element",
         },
     )
-    url: Optional[str] = field(
+    url: Optional[Url] = field(
         default=None,
         metadata={
             "name": "URL",
@@ -1737,13 +2147,60 @@ class Asnreferences:
 
 
 @dataclass(kw_only=True)
-class RemittanceAdviceSummary:
-    payment_request_summary: PaymentRequestSummary = field(
+class ListOfRelatedInvoiceRef:
+    related_invoice_ref: List[RelatedInvoiceRef] = field(
+        default_factory=list,
         metadata={
-            "name": "PaymentRequestSummary",
+            "name": "RelatedInvoiceRef",
             "type": "Element",
-            "required": True,
-        }
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentRequestSummary:
+    total_payment_documents: Optional[TotalPaymentDocuments] = field(
+        default=None,
+        metadata={
+            "name": "TotalPaymentDocuments",
+            "type": "Element",
+        },
+    )
+    total_line_item: Optional[TotalLineItem] = field(
+        default=None,
+        metadata={
+            "name": "TotalLineItem",
+            "type": "Element",
+        },
+    )
+    total_settlement_amount: Optional[TotalSettlementAmount] = field(
+        default=None,
+        metadata={
+            "name": "TotalSettlementAmount",
+            "type": "Element",
+        },
+    )
+    encrypted_info: Optional[EncryptedInfo] = field(
+        default=None,
+        metadata={
+            "name": "EncryptedInfo",
+            "type": "Element",
+        },
+    )
+    list_of_summary_items: Optional[ListOfSummaryItems] = field(
+        default=None,
+        metadata={
+            "name": "ListOfSummaryItems",
+            "type": "Element",
+        },
+    )
+    summary_note: Optional[SummaryNote] = field(
+        default=None,
+        metadata={
+            "name": "SummaryNote",
+            "type": "Element",
+        },
     )
 
 
@@ -1752,14 +2209,14 @@ class AsnorderNumber:
     class Meta:
         name = "ASNOrderNumber"
 
-    buyer_order_number: str = field(
+    buyer_order_number: BuyerOrderNumber = field(
         metadata={
             "name": "BuyerOrderNumber",
             "type": "Element",
             "required": True,
         }
     )
-    seller_order_number: Optional[str] = field(
+    seller_order_number: Optional[SellerOrderNumber] = field(
         default=None,
         metadata={
             "name": "SellerOrderNumber",
@@ -1786,6 +2243,17 @@ class AsnorderNumber:
             "name": "ASNReferences",
             "type": "Element",
         },
+    )
+
+
+@dataclass(kw_only=True)
+class RemittanceAdviceSummary:
+    payment_request_summary: PaymentRequestSummary = field(
+        metadata={
+            "name": "PaymentRequestSummary",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 
@@ -1988,7 +2456,7 @@ class InvoiceBaseItemDetail:
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[str] = field(
+    off_catalog_flag: Optional[OffCatalogFlag] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
@@ -2111,7 +2579,7 @@ class InvoiceItemDetail:
             "type": "Element",
         },
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
@@ -2219,7 +2687,7 @@ class Subsidiary:
             "type": "Element",
         },
     )
-    mdfbusiness: Optional[str] = field(
+    mdfbusiness: Optional[Mdfbusiness] = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
@@ -2326,7 +2794,7 @@ class RemittanceAdviceDetail:
             "type": "Element",
         },
     )
-    general_note: Optional[str] = field(
+    general_note: Optional[GeneralNote] = field(
         default=None,
         metadata={
             "name": "GeneralNote",

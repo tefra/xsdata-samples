@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from .message_qualifier_structure import MessageQualifierStructure
+from .participant_ref_structure import ParticipantRefStructure
 from .response_structure import ResponseStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
@@ -15,7 +17,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    responder_ref: Optional[str] = field(
+    responder_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "ResponderRef",
@@ -23,7 +25,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_message_ref: Optional[str] = field(
+    request_message_ref: Optional[MessageQualifierStructure] = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -39,7 +41,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[str] = field(
+    delegator_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "DelegatorRef",

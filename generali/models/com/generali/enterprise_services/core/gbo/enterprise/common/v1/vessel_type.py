@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
 )
@@ -17,7 +20,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class VesselType(VehicleType):
-    passenger_capacity: Optional[int] = field(
+    passenger_capacity: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "PassengerCapacity",
@@ -33,7 +36,7 @@ class VesselType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    vehicle_capacity: Optional[int] = field(
+    vehicle_capacity: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "VehicleCapacity",

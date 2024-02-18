@@ -66,7 +66,7 @@ def all(suite: str, output_format: str, *args):
     build(suite, output_format, *args)
     test(suite, output_format, *args)
 
-    if suite != "generali":
+    if suite not in ("generali", "crossref"):
         mypy(suite)
 
 

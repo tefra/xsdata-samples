@@ -26,14 +26,19 @@ from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomerAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
+from ubl.models.common.ubl_common_basic_components_2_1 import EndTime
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
@@ -42,6 +47,8 @@ from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
 from ubl.models.common.ubl_common_basic_components_2_1 import SpecialTerms
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
@@ -66,12 +73,18 @@ obj = RequestForQuotation(
     id=Id(
         value='G867B'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='8D076867-AE6D-439F-8281-5AAFC7F4E3B1'
     ),
-    issue_date=XmlDate(2005, 6, 19),
-    issue_time=XmlTime(11, 32, 26, 0, 0),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 6, 19)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(11, 32, 26, 0, 0)
+    ),
     note=[
         Note(
             value='sample'
@@ -81,7 +94,9 @@ obj = RequestForQuotation(
         id=Id(
             value='2005-9A'
         ),
-        issue_date=XmlDate(2005, 11, 3)
+        issue_date=IssueDate(
+            value=XmlDate(2005, 11, 3)
+        )
     ),
     originator_customer_party=OriginatorCustomerParty(
         party=Party(
@@ -281,10 +296,18 @@ obj = RequestForQuotation(
                 )
             ),
             requested_delivery_period=RequestedDeliveryPeriod(
-                start_date=XmlDate(2005, 6, 29),
-                start_time=XmlTime(9, 30, 47, 0, 0),
-                end_date=XmlDate(2005, 6, 29),
-                end_time=XmlTime(9, 30, 47, 0, 0)
+                start_date=StartDate(
+                    value=XmlDate(2005, 6, 29)
+                ),
+                start_time=StartTime(
+                    value=XmlTime(9, 30, 47, 0, 0)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2005, 6, 29)
+                ),
+                end_time=EndTime(
+                    value=XmlTime(9, 30, 47, 0, 0)
+                )
             )
         ),
     ],
@@ -312,7 +335,9 @@ obj = RequestForQuotation(
                     id=Id(
                         value='GHJ76849'
                     ),
-                    issue_date=XmlDate(2002, 8, 13)
+                    issue_date=IssueDate(
+                        value=XmlDate(2002, 8, 13)
+                    )
                 ),
             ]
         ),

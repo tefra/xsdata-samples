@@ -20,7 +20,7 @@ from .cycle_storage_equipment_ref import CycleStorageEquipmentRef
 from .entrance_equipment_ref import EntranceEquipmentRef
 from .equipment_ref import EquipmentRef
 from .escalator_equipment_ref import EscalatorEquipmentRef
-from .fare_class_enumeration import FareClassEnumeration
+from .fare_class import FareClass
 from .general_sign_ref import GeneralSignRef
 from .group_of_operators_ref import GroupOfOperatorsRef
 from .group_ticket_ref import GroupTicketRef
@@ -192,7 +192,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: Optional[FareClassEnumeration] = field(
+    fare_class: Optional[FareClass] = field(
         default=None,
         metadata={
             "name": "FareClass",

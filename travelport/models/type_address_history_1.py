@@ -1,5 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
+from travelport.models.address_line_1 import AddressLine1
 from travelport.models.type_contact_purpose_1 import TypeContactPurpose1
 from travelport.models.type_key_tagged_element_1 import TypeKeyTaggedElement1
 
@@ -46,15 +47,13 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
     class Meta:
         name = "typeAddressHistory"
 
-    address_line: list[str] = field(
+    address_line: list[AddressLine1] = field(
         default_factory=list,
         metadata={
             "name": "AddressLine",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
             "max_occurs": 3,
-            "min_length": 1,
-            "max_length": 128,
         },
     )
     city: None | str = field(

@@ -19,18 +19,23 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import SellersItemIde
 from ubl.models.common.ubl_common_aggregate_components_2_1 import SenderParty
 from ubl.models.common.ubl_common_aggregate_components_2_1 import StandardItemIdentification
 from ubl.models.common.ubl_common_aggregate_components_2_1 import TaxScheme
+from ubl.models.common.ubl_common_basic_components_2_1 import BasedOnConsensusIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
 from ubl.models.common.ubl_common_basic_components_2_1 import ForecastPurposeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ForecastTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
@@ -38,6 +43,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
 from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
@@ -59,24 +65,36 @@ obj = Forecast(
     id=Id(
         value='OF758494'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4'
     ),
-    issue_date=XmlDate(2010, 1, 1),
-    issue_time=XmlTime(12, 0, 1, 0),
+    issue_date=IssueDate(
+        value=XmlDate(2010, 1, 1)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(12, 0, 1, 0)
+    ),
     note=[
         Note(
             value='sample'
         ),
     ],
-    based_on_consensus_indicator=True,
+    based_on_consensus_indicator=BasedOnConsensusIndicator(
+        value=True
+    ),
     forecast_purpose_code=ForecastPurposeCode(
         value='ORDER_FORECAST'
     ),
     forecast_period=ForecastPeriod(
-        start_date=XmlDate(2010, 2, 1),
-        end_date=XmlDate(2010, 5, 26)
+        start_date=StartDate(
+            value=XmlDate(2010, 2, 1)
+        ),
+        end_date=EndDate(
+            value=XmlDate(2010, 5, 26)
+        )
     ),
     sender_party=SenderParty(
         party_identification=[
@@ -279,8 +297,12 @@ obj = Forecast(
                 value='TOTAL'
             ),
             forecast_period=ForecastPeriod(
-                start_date=XmlDate(2010, 2, 1),
-                end_date=XmlDate(2010, 5, 26)
+                start_date=StartDate(
+                    value=XmlDate(2010, 2, 1)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2010, 5, 26)
+                )
             ),
             sales_item=SalesItem(
                 quantity=Quantity(

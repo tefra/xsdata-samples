@@ -1,13 +1,14 @@
 from decimal import Decimal
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.arrival_structure import ArrivalStructure
 from netex.models.assistance_facility_enumeration import AssistanceFacilityEnumeration
+from netex.models.assistance_facility_list import AssistanceFacilityList
 from netex.models.block_ref import BlockRef
-from netex.models.call import Call
+from netex.models.call_1 import Call1
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -31,24 +32,30 @@ from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.entities_in_version_rel_structure import CompositeFrame
 from netex.models.entities_in_version_rel_structure import FramesRelStructure
 from netex.models.fare_class_enumeration import FareClassEnumeration
+from netex.models.fare_classes import FareClasses
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
 from netex.models.journey_pattern_view import JourneyPatternView
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.locale import Locale
 from netex.models.location_structure_2 import LocationStructure2
 from netex.models.luggage_carriage_enumeration import LuggageCarriageEnumeration
+from netex.models.luggage_carriage_facility_list import LuggageCarriageFacilityList
 from netex.models.mobility_facility_enumeration import MobilityFacilityEnumeration
+from netex.models.mobility_facility_list import MobilityFacilityList
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.nuisance_facility_enumeration import NuisanceFacilityEnumeration
+from netex.models.nuisance_facility_list import NuisanceFacilityList
 from netex.models.operator import Operator
 from netex.models.operator_ref import OperatorRef
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_information_facility_enumeration import PassengerInformationFacilityEnumeration
+from netex.models.passenger_information_facility_list import PassengerInformationFacilityList
 from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from netex.models.property_of_day import PropertyOfDay
@@ -69,10 +76,11 @@ from netex.models.service_facility_sets_in_frame_rel_structure import ServiceFac
 from netex.models.service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
 from netex.models.service_frame import ServiceFrame
 from netex.models.service_frame_ref import ServiceFrameRef
-from netex.models.service_journey import ServiceJourney
+from netex.models.service_journey_1 import ServiceJourney1
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.stop_type_enumeration import StopTypeEnumeration
 from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from netex.models.ticketing_service_facility_list import TicketingServiceFacilityList
 from netex.models.time_demand_type_ref_structure import TimeDemandTypeRefStructure
 from netex.models.timetable_frame import TimetableFrame
 from netex.models.timetable_frame_ref import TimetableFrameRef
@@ -91,10 +99,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -159,7 +171,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_24',
                                         version='any',
                                         name=MultilingualString(
@@ -373,7 +385,7 @@ obj = PublicationDelivery(
                             ],
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='acs:sj_24o_01',
                                         version='any',
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
@@ -417,7 +429,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='acs:sj_24o_01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -432,7 +444,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='acs:sj_24o_01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -451,7 +463,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='acs:sj_24o_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -477,7 +489,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='acs:sj_24o_02',
                                         version='any',
                                         departure_time=XmlTime(15, 20, 0, 0, 0),
@@ -518,7 +530,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='acs:sj_24o_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -544,7 +556,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='acs:sj_24o_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -566,7 +578,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='acs:sj_24o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -603,32 +615,46 @@ obj = PublicationDelivery(
                                             value='EXTERNAL',
                                             ref='xyz:4567'
                                         ),
-                                        assistance_facility_list=[
-                                            AssistanceFacilityEnumeration.BOARDING_ASSISTANCE,
-                                            AssistanceFacilityEnumeration.CONDUCTOR,
-                                            AssistanceFacilityEnumeration.WHEELCHAIR_ASSISTANCE,
-                                        ],
-                                        fare_classes=[
-                                            FareClassEnumeration.STANDARD_CLASS,
-                                        ],
-                                        mobility_facility_list=[
-                                            MobilityFacilityEnumeration.STEP_FREE_ACCESS,
-                                            MobilityFacilityEnumeration.SUITABLE_FOR_WHEELCHAIRS,
-                                        ],
-                                        nuisance_facility_list=[
-                                            NuisanceFacilityEnumeration.NO_SMOKING,
-                                        ],
-                                        passenger_information_facility_list=[
-                                            PassengerInformationFacilityEnumeration.NEXT_STOP_INDICATOR,
-                                            PassengerInformationFacilityEnumeration.REAL_TIME_CONNECTIONS,
-                                            PassengerInformationFacilityEnumeration.STOP_ANNOUNCEMENTS,
-                                        ],
-                                        ticketing_service_facility_list=[
-                                            TicketingServiceFacilityEnumeration.PURCHASE,
-                                        ],
-                                        luggage_carriage_facility_list=[
-                                            LuggageCarriageEnumeration.NO_BAGGAGE_STORAGE,
-                                        ]
+                                        assistance_facility_list=AssistanceFacilityList(
+                                            value=[
+                                                AssistanceFacilityEnumeration.BOARDING_ASSISTANCE,
+                                                AssistanceFacilityEnumeration.CONDUCTOR,
+                                                AssistanceFacilityEnumeration.WHEELCHAIR_ASSISTANCE,
+                                            ]
+                                        ),
+                                        fare_classes=FareClasses(
+                                            value=[
+                                                FareClassEnumeration.STANDARD_CLASS,
+                                            ]
+                                        ),
+                                        mobility_facility_list=MobilityFacilityList(
+                                            value=[
+                                                MobilityFacilityEnumeration.STEP_FREE_ACCESS,
+                                                MobilityFacilityEnumeration.SUITABLE_FOR_WHEELCHAIRS,
+                                            ]
+                                        ),
+                                        nuisance_facility_list=NuisanceFacilityList(
+                                            value=[
+                                                NuisanceFacilityEnumeration.NO_SMOKING,
+                                            ]
+                                        ),
+                                        passenger_information_facility_list=PassengerInformationFacilityList(
+                                            value=[
+                                                PassengerInformationFacilityEnumeration.NEXT_STOP_INDICATOR,
+                                                PassengerInformationFacilityEnumeration.REAL_TIME_CONNECTIONS,
+                                                PassengerInformationFacilityEnumeration.STOP_ANNOUNCEMENTS,
+                                            ]
+                                        ),
+                                        ticketing_service_facility_list=TicketingServiceFacilityList(
+                                            value=[
+                                                TicketingServiceFacilityEnumeration.PURCHASE,
+                                            ]
+                                        ),
+                                        luggage_carriage_facility_list=LuggageCarriageFacilityList(
+                                            value=[
+                                                LuggageCarriageEnumeration.NO_BAGGAGE_STORAGE,
+                                            ]
+                                        )
                                     ),
                                 ]
                             )
@@ -647,7 +673,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType(
+                                    DayType1(
                                         id='acs:DT_01-MF-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -670,7 +696,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='acs:DT_02-AA-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -689,7 +715,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='acs:DT_03-WE-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -709,7 +735,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='acs:DT_04-AA-NH',
                                         version='any',
                                         name=MultilingualString(

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .parking_area import ParkingArea
+from .parking_area_1 import ParkingArea1
 from .parking_area_ref import ParkingAreaRef
 from .taxi_parking_area import TaxiParkingArea
 from .taxi_parking_area_ref import TaxiParkingAreaRef
@@ -27,7 +27,7 @@ class ParkingAreasRelStructure(ContainmentAggregationStructure):
             VehiclePoolingParkingArea,
             VehicleSharingParkingArea,
             TaxiParkingArea,
-            ParkingArea,
+            ParkingArea1,
         ]
     ] = field(
         default_factory=list,
@@ -71,7 +71,7 @@ class ParkingAreasRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ParkingArea",
-                    "type": ParkingArea,
+                    "type": ParkingArea1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -13,12 +13,12 @@ from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.branding import Branding
 from netex.models.branding_ref import BrandingRef
-from netex.models.cell_versioned_child_structure import Cell
+from netex.models.cell_versioned_child_structure import Cell1
 from netex.models.cell_versioned_child_structure import CellsRelStructure
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
-from netex.models.cell_versioned_child_structure import FareTable
+from netex.models.cell_versioned_child_structure import FareTable1
 from netex.models.cell_versioned_child_structure import FareTablesRelStructure
-from netex.models.cell_versioned_child_structure import PriceGroup
+from netex.models.cell_versioned_child_structure import PriceGroup1
 from netex.models.cell_versioned_child_structure import PriceGroupsRelStructure
 from netex.models.charging_moment import ChargingMoment
 from netex.models.charging_moment_ref import ChargingMomentRef
@@ -106,7 +106,7 @@ from netex.models.language_usage_structure import LanguageUsageStructure
 from netex.models.language_use_enumeration import LanguageUseEnumeration
 from netex.models.limiting_rule import LimitingRule
 from netex.models.limiting_rule_ref import LimitingRuleRef
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.line_ref import LineRef
 from netex.models.line_type_enumeration import LineTypeEnumeration
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
@@ -122,9 +122,10 @@ from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
 from netex.models.organisation_version_structure import OrganisationVersionStructure
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.per_basis_enumeration import PerBasisEnumeration
-from netex.models.point_on_section import PointOnSection
+from netex.models.point_on_section_1 import PointOnSection1
 from netex.models.point_refs_rel_structure import PointRefsRelStructure
 from netex.models.points_on_section_rel_structure import PointsOnSectionRelStructure
 from netex.models.preassigned_fare_product import PreassignedFareProduct
@@ -141,6 +142,7 @@ from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStruc
 from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.purpose_of_grouping import PurposeOfGrouping
+from netex.models.rail_submode import RailSubmode
 from netex.models.rail_submode_enumeration import RailSubmodeEnumeration
 from netex.models.resource_frame import ResourceFrame
 from netex.models.responsibility_role_assignment import ResponsibilityRoleAssignment
@@ -232,7 +234,9 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2018, 4, 1, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     description=MultilingualString(
         value='Example of Cross border tariffs from multiple operators De'
     ),
@@ -413,7 +417,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     points_on_section=PointsOnSectionRelStructure(
                                                         point_on_section=[
-                                                            PointOnSection(
+                                                            PointOnSection1(
                                                                 id='tlx:Rybniste-to-Liberec',
                                                                 version='01',
                                                                 order=1,
@@ -423,7 +427,7 @@ obj = PublicationDelivery(
                                                                     ref='uic:56719'
                                                                 )
                                                             ),
-                                                            PointOnSection(
+                                                            PointOnSection1(
                                                                 id='tlx:Rybniste-to-Liberec',
                                                                 version='01',
                                                                 order=2,
@@ -433,7 +437,7 @@ obj = PublicationDelivery(
                                                                     ref='uic:96045'
                                                                 )
                                                             ),
-                                                            PointOnSection(
+                                                            PointOnSection1(
                                                                 id='tlx:Rybniste-to-Liberec',
                                                                 version='01',
                                                                 order=5,
@@ -443,7 +447,7 @@ obj = PublicationDelivery(
                                                                     ref='uic:6113'
                                                                 )
                                                             ),
-                                                            PointOnSection(
+                                                            PointOnSection1(
                                                                 id='tlx:Rybniste-to-Liberec',
                                                                 version='01',
                                                                 order=6,
@@ -464,7 +468,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     points_on_section=PointsOnSectionRelStructure(
                                                         point_on_section=[
-                                                            PointOnSection(
+                                                            PointOnSection1(
                                                                 id='tlx:Seifhennersdorf-to-Liberec',
                                                                 version='01',
                                                                 order=1,
@@ -474,7 +478,7 @@ obj = PublicationDelivery(
                                                                     ref='uic:6121'
                                                                 )
                                                             ),
-                                                            PointOnSection(
+                                                            PointOnSection1(
                                                                 id='tlx:Seifhennersdorf-to-Liberec',
                                                                 version='01',
                                                                 order=2,
@@ -484,7 +488,7 @@ obj = PublicationDelivery(
                                                                     ref='uic:96045'
                                                                 )
                                                             ),
-                                                            PointOnSection(
+                                                            PointOnSection1(
                                                                 id='tlx:Seifhennersdorf-to-Liberec',
                                                                 version='01',
                                                                 order=5,
@@ -494,7 +498,7 @@ obj = PublicationDelivery(
                                                                     ref='uic:6113'
                                                                 )
                                                             ),
-                                                            PointOnSection(
+                                                            PointOnSection1(
                                                                 id='tlx:Seifhennersdorf-to-Liberec',
                                                                 version='01',
                                                                 order=6,
@@ -563,7 +567,9 @@ obj = PublicationDelivery(
                                                             ],
                                                             transport_submode=[
                                                                 TransportSubmode(
-                                                                    choice=RailSubmodeEnumeration.LONG_DISTANCE
+                                                                    choice=RailSubmode(
+                                                                        value=RailSubmodeEnumeration.LONG_DISTANCE
+                                                                    )
                                                                 ),
                                                             ],
                                                             fare_section_ref=[
@@ -963,7 +969,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='tlx:Trilex@Tariff@Tagesticket',
                                                     validity_conditions_or_valid_between=[
                                                         ValidBetween(
@@ -990,7 +996,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tlx:Trilex@Tariff@Tagesticket@group@1',
                                                                 version='01',
                                                                 choice=UsageParameterPrice(
@@ -1013,7 +1019,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tlx:Trilex@Tariff@Tagesticket@group@2',
                                                                 version='01',
                                                                 choice=UsageParameterPrice(
@@ -1048,7 +1054,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tlx:Trilex@Tariff@Tagesticket@group@3',
                                                                 version='01',
                                                                 choice=UsageParameterPrice(
@@ -1083,7 +1089,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tlx:Trilex@Tariff@Tagesticket@group@4',
                                                                 version='01',
                                                                 choice=UsageParameterPrice(
@@ -1118,7 +1124,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tlx:Trilex@Tariff@Tagesticket@group@5',
                                                                 version='01',
                                                                 choice=UsageParameterPrice(
@@ -1201,7 +1207,9 @@ obj = PublicationDelivery(
                                                             ],
                                                             transport_submode=[
                                                                 TransportSubmode(
-                                                                    choice=RailSubmodeEnumeration.HIGH_SPEED_RAIL
+                                                                    choice=RailSubmode(
+                                                                        value=RailSubmodeEnumeration.HIGH_SPEED_RAIL
+                                                                    )
                                                                 ),
                                                             ],
                                                             fare_section_ref=[
@@ -1401,7 +1409,7 @@ obj = PublicationDelivery(
                                         ),
                                         price_groups=PriceGroupsRelStructure(
                                             price_group_ref_or_price_group=[
-                                                PriceGroup(
+                                                PriceGroup1(
                                                     id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial',
                                                     validity_conditions_or_valid_between=[
                                                         ValidBetween(
@@ -1812,7 +1820,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='tlx:Trilex@Tariff@Katzensprungticket',
                                                     validity_conditions_or_valid_between=[
                                                         ValidBetween(
@@ -1834,7 +1842,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Bischofswerda',
                                                                 version='01',
                                                                 choice=SalesOfferPackagePrice(
@@ -1852,7 +1860,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tlx:Trilex@Pass@Katzensprungticket@Dresden-to-Bautzen',
                                                                 version='01',
                                                                 choice=SalesOfferPackagePrice(
@@ -1870,7 +1878,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Wilthen',
                                                                 version='01',
                                                                 choice=SalesOfferPackagePrice(
@@ -2131,7 +2139,7 @@ obj = PublicationDelivery(
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='tlx:Trilex@Tariff@L7',
                                                     validity_conditions_or_valid_between=[
                                                         ValidBetween(
@@ -2153,7 +2161,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable(
+                                                            FareTable1(
                                                                 id='tlx:Trilex@Tariff@L7@adult',
                                                                 version='01',
                                                                 name=MultilingualString(
@@ -2169,7 +2177,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 includes=FareTablesRelStructure(
                                                                     fare_table_ref_or_fare_table=[
-                                                                        FareTable(
+                                                                        FareTable1(
                                                                             id='tlx:Trilex@Tariff@L7@adult@Seifhennersdorf',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -2177,7 +2185,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Tariff@L7@adult@Seifhennersdorf-to-Liberec',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2195,7 +2203,7 @@ obj = PublicationDelivery(
                                                                                         ],
                                                                                         order=1
                                                                                     ),
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Pass@L7@adult@Seifhennersdorf-to-Zittau',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2213,7 +2221,7 @@ obj = PublicationDelivery(
                                                                                         ],
                                                                                         order=2
                                                                                     ),
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Pass@L7@adult@Seifhennersdorf-to-Varnsdorf',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2234,7 +2242,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             )
                                                                         ),
-                                                                        FareTable(
+                                                                        FareTable1(
                                                                             id='tlx:Trilex@Tariff@L7@adult@Rybniste',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -2242,7 +2250,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Tariff@L7@adult@Rybniste-to-Liberec',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2260,7 +2268,7 @@ obj = PublicationDelivery(
                                                                                         ],
                                                                                         order=1
                                                                                     ),
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Pass@L7@adult@Rybniste-to-Zittau',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2278,7 +2286,7 @@ obj = PublicationDelivery(
                                                                                         ],
                                                                                         order=2
                                                                                     ),
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Pass@L7@adult@Rybniste-to-Varnsdorf',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2299,7 +2307,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             )
                                                                         ),
-                                                                        FareTable(
+                                                                        FareTable1(
                                                                             id='tlx:Trilex@Tariff@L7@adult@Varnsdorf',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -2307,7 +2315,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Tariff@L7@adult@Varnsdorf-to-Liberec',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2325,7 +2333,7 @@ obj = PublicationDelivery(
                                                                                         ],
                                                                                         order=1
                                                                                     ),
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Pass@L7@adult@Varnsdorf-to-Zittau',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2346,7 +2354,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             )
                                                                         ),
-                                                                        FareTable(
+                                                                        FareTable1(
                                                                             id='tlx:Trilex@Tariff@L7@adult@Zittau',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -2354,7 +2362,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Tariff@L7@adult@Zittau-to-Liberec',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2378,7 +2386,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable(
+                                                            FareTable1(
                                                                 id='tlx:Trilex@Tariff@L7@child',
                                                                 version='01',
                                                                 name=MultilingualString(
@@ -2394,7 +2402,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 includes=FareTablesRelStructure(
                                                                     fare_table_ref_or_fare_table=[
-                                                                        FareTable(
+                                                                        FareTable1(
                                                                             id='tlx:Trilex@Tariff@L7@child@Seifhennersdorf',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -2402,7 +2410,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Tariff@L7@child@Seifhennersdorf-to-Liberec',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2420,7 +2428,7 @@ obj = PublicationDelivery(
                                                                                         ],
                                                                                         order=1
                                                                                     ),
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Pass@L7@child@Seifhennersdorf-to-Zittau',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2438,7 +2446,7 @@ obj = PublicationDelivery(
                                                                                         ],
                                                                                         order=2
                                                                                     ),
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Pass@L7@child@Seifhennersdorf-to-Varnsdorf',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2459,7 +2467,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             )
                                                                         ),
-                                                                        FareTable(
+                                                                        FareTable1(
                                                                             id='tlx:Trilex@Tariff@L7@child@Rybniste',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -2467,7 +2475,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Tariff@L7@child@Rybniste-to-Liberec',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2485,7 +2493,7 @@ obj = PublicationDelivery(
                                                                                         ],
                                                                                         order=1
                                                                                     ),
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Pass@L7@child@Rybniste-to-Zittau',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2503,7 +2511,7 @@ obj = PublicationDelivery(
                                                                                         ],
                                                                                         order=2
                                                                                     ),
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Pass@L7@child@Rybniste-to-Varnsdorf',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2524,7 +2532,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             )
                                                                         ),
-                                                                        FareTable(
+                                                                        FareTable1(
                                                                             id='tlx:Trilex@Tariff@L7@child@Varnsdorf',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -2532,7 +2540,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Tariff@L7@child@Varnsdorf-to-Liberec',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2550,7 +2558,7 @@ obj = PublicationDelivery(
                                                                                         ],
                                                                                         order=1
                                                                                     ),
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Pass@L7@child@Varnsdorf-to-Zittau',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -2571,7 +2579,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             )
                                                                         ),
-                                                                        FareTable(
+                                                                        FareTable1(
                                                                             id='tlx:Trilex@Tariff@L7@child@Zittau',
                                                                             version='01',
                                                                             name=MultilingualString(
@@ -2579,7 +2587,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
-                                                                                    Cell(
+                                                                                    Cell1(
                                                                                         id='tlx:Trilex@Tariff@L7@child@Zittau-to-Liberec',
                                                                                         version='01',
                                                                                         choice=DistanceMatrixElementPrice(
@@ -4232,7 +4240,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='zvo:L7',
                                         version='01',
                                         name=MultilingualString(
@@ -6996,7 +7004,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='db:RE1',
                                         version='01',
                                         name=MultilingualString(
@@ -7006,7 +7014,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         line_type=LineTypeEnumeration.EXPRESS
                                     ),
-                                    Line(
+                                    Line1(
                                         id='db:RB60',
                                         version='01',
                                         name=MultilingualString(
@@ -7016,7 +7024,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         line_type=LineTypeEnumeration.LOCAL
                                     ),
-                                    Line(
+                                    Line1(
                                         id='db:RE2',
                                         version='01',
                                         name=MultilingualString(
@@ -7026,7 +7034,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         line_type=LineTypeEnumeration.EXPRESS
                                     ),
-                                    Line(
+                                    Line1(
                                         id='db:RB61',
                                         version='01',
                                         name=MultilingualString(
@@ -7036,7 +7044,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         line_type=LineTypeEnumeration.LOCAL
                                     ),
-                                    Line(
+                                    Line1(
                                         id='db:TL70',
                                         version='01',
                                         name=MultilingualString(

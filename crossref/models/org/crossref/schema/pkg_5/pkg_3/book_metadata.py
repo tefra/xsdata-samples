@@ -30,6 +30,9 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import (
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark import Crossmark
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.edition_number import (
+    EditionNumber,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.isbn import Isbn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.noisbn import Noisbn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_date import (
@@ -75,12 +78,10 @@ class BookMetadata:
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    edition_number: Optional[str] = field(
+    edition_number: Optional[EditionNumber] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 15,
         },
     )
     publication_date: List[PublicationDate] = field(

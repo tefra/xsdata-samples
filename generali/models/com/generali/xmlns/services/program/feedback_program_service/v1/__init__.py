@@ -1,3 +1,6 @@
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.consumer_type import (
+    ConsumerType,
+)
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.error_element_type import (
     ErrorElementType,
 )
@@ -96,6 +99,7 @@ from generali.models.com.generali.xmlns.services.program.feedback_program_servic
 )
 
 __all__ = [
+    "ConsumerType",
     "ErrorElementType",
     "ErrorElementTypeLevel",
     "ErrorElementTypeType",

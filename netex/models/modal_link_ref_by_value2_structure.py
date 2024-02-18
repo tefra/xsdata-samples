@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from .all_modes_enumeration import AllModesEnumeration
 from .point_ref_structure import PointRefStructure
 from .type_of_link_ref import TypeOfLinkRef
+from .vehicle_mode import VehicleMode
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -36,7 +36,7 @@ class ModalLinkRefByValue2Structure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_mode: Optional[AllModesEnumeration] = field(
+    vehicle_mode: Optional[VehicleMode] = field(
         default=None,
         metadata={
             "name": "VehicleMode",

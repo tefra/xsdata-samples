@@ -4,7 +4,7 @@ from .capping_rule_price import CappingRulePrice
 from .capping_rule_price_ref import CappingRulePriceRef
 from .cell_versioned_child_structure import (
     ParkingPrice,
-    PriceGroup,
+    PriceGroup1,
 )
 from .controllable_element_price import ControllableElementPrice
 from .controllable_element_price_ref import ControllableElementPriceRef
@@ -91,7 +91,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
             GeographicalIntervalPrice,
             GeographicalUnitPrice,
             SeriesConstraintPrice,
-            PriceGroup,
+            PriceGroup1,
         ]
     ] = field(
         default_factory=list,
@@ -280,7 +280,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "PriceGroup",
-                    "type": PriceGroup,
+                    "type": PriceGroup1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

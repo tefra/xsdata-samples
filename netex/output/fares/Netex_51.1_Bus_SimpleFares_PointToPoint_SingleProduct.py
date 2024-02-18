@@ -6,7 +6,7 @@ from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
-from netex.models.cell_versioned_child_structure import PriceGroup
+from netex.models.cell_versioned_child_structure import PriceGroup1
 from netex.models.cell_versioned_child_structure import PriceGroupsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -33,7 +33,7 @@ from netex.models.frequency_of_use import FrequencyOfUse
 from netex.models.frequency_of_use_type_enumeration import FrequencyOfUseTypeEnumeration
 from netex.models.generic_parameter_assignment_version_structure import GenericParameterAssignment
 from netex.models.interchanging import Interchanging
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
@@ -43,6 +43,7 @@ from netex.models.network_frame_topic_structure import NetworkFrameTopicStructur
 from netex.models.operator import Operator
 from netex.models.operator_ref import OperatorRef
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.price_group_ref import PriceGroupRef
 from netex.models.private_code_structure import PrivateCodeStructure
@@ -90,10 +91,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -179,7 +184,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='mybus:Line_1',
                                         version='any',
                                         name=MultilingualString(
@@ -582,7 +587,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup(
+                                    PriceGroup1(
                                         id='myfares:Line_1',
                                         version='1.0',
                                         members=FarePricesRelStructure(

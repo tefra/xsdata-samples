@@ -4,7 +4,7 @@ from typing import List, Optional
 from xsdata.models.datatype import XmlPeriod
 from .companion_profiles_rel_structure import CompanionProfilesRelStructure
 from .discount_basis_enumeration import DiscountBasisEnumeration
-from .gender_limitation_enumeration import GenderLimitationEnumeration
+from .gender_limitation import GenderLimitation
 from .proof_of_identity_enumeration import ProofOfIdentityEnumeration
 from .residential_qualifications_rel_structure import (
     ResidentialQualificationsRelStructure,
@@ -102,7 +102,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gender_limitation: Optional[GenderLimitationEnumeration] = field(
+    gender_limitation: Optional[GenderLimitation] = field(
         default=None,
         metadata={
             "name": "GenderLimitation",

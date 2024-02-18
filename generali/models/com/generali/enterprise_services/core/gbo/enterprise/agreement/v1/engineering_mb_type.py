@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
 )
 
 __NAMESPACE__ = (
@@ -44,7 +46,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_mbmachinery: Optional[Decimal] = field(
+    rate_mbmachinery: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "RateMBMachinery",
@@ -60,7 +62,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_all_risks_machinery: Optional[Decimal] = field(
+    rate_all_risks_machinery: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "RateAllRisksMachinery",
@@ -68,7 +70,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_mbbi: Optional[Decimal] = field(
+    rate_mbbi: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "RateMBBI",
@@ -76,7 +78,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_all_risks_bi: Optional[Decimal] = field(
+    rate_all_risks_bi: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "RateAllRisksBI",
@@ -84,7 +86,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mflother: Optional[Decimal] = field(
+    mflother: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "MFLOther",

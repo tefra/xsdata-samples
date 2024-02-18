@@ -6,7 +6,7 @@ from netex.models.activation_means_enumeration import ActivationMeansEnumeration
 from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
 from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
@@ -16,8 +16,9 @@ from netex.models.battery_equipment import BatteryEquipment
 from netex.models.branding import Branding
 from netex.models.branding_ref import BrandingRef
 from netex.models.car_service_facility_enumeration import CarServiceFacilityEnumeration
+from netex.models.car_service_facility_list import CarServiceFacilityList
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
-from netex.models.cell_versioned_child_structure import FareTable
+from netex.models.cell_versioned_child_structure import FareTable1
 from netex.models.cell_versioned_child_structure import FareTablesRelStructure
 from netex.models.charging_equipment_profile import ChargingEquipmentProfile
 from netex.models.charging_equipment_profile_ref import ChargingEquipmentProfileRef
@@ -122,6 +123,7 @@ from netex.models.gender_enumeration import GenderEnumeration
 from netex.models.generic_parameter_assignment_version_structure import GenericParameterAssignment
 from netex.models.generic_parameter_assignment_version_structure import GenericParameterAssignmentsRelStructure
 from netex.models.hire_facility_enumeration import HireFacilityEnumeration
+from netex.models.hire_facility_list import HireFacilityList
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
 from netex.models.info_link import InfoLink
 from netex.models.info_links_rel_structure import InfoLinksRelStructure
@@ -183,6 +185,7 @@ from netex.models.parking_user_enumeration import ParkingUserEnumeration
 from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
 from netex.models.parking_visibility_enumeration import ParkingVisibilityEnumeration
 from netex.models.parkings_in_frame_rel_structure import ParkingsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_capacity_structure import PassengerCapacityStructure
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.place_equipments_rel_structure import PlaceEquipmentsRelStructure
@@ -198,7 +201,7 @@ from netex.models.price_rule_step_result_structure import PriceRuleStepResultStr
 from netex.models.price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
 from netex.models.pricing_parameter_set import PricingParameterSet
-from netex.models.pricing_rule import PricingRule
+from netex.models.pricing_rule_1 import PricingRule1
 from netex.models.pricing_rule_ref import PricingRuleRef
 from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
 from netex.models.private_code_structure import PrivateCodeStructure
@@ -233,6 +236,7 @@ from netex.models.sales_transaction_frame import SalesTransactionFrame
 from netex.models.sales_transaction_ref import SalesTransactionRef
 from netex.models.sales_transaction_refs_rel_structure import SalesTransactionRefsRelStructure
 from netex.models.same_user_enumeration import SameUserEnumeration
+from netex.models.self_drive_submode import SelfDriveSubmode
 from netex.models.self_drive_submode_enumeration import SelfDriveSubmodeEnumeration
 from netex.models.service_access_code import ServiceAccessCode
 from netex.models.service_access_code_ref import ServiceAccessCodeRef
@@ -250,6 +254,7 @@ from netex.models.site_frame import SiteFrame
 from netex.models.site_frame_ref import SiteFrameRef
 from netex.models.specific_parameter_assignment_version_structure import SpecificParameterAssignment
 from netex.models.specific_parameter_assignment_version_structure import SpecificParameterAssignmentsRelStructure
+from netex.models.staffing import Staffing
 from netex.models.staffing_enumeration import StaffingEnumeration
 from netex.models.stakeholder_role_type_enumeration import StakeholderRoleTypeEnumeration
 from netex.models.submode import Submode
@@ -257,15 +262,17 @@ from netex.models.submodes_rel_structure import SubmodesRelStructure
 from netex.models.tariff import Tariff
 from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
 from netex.models.tariff_ref import TariffRef
-from netex.models.tariff_zone import TariffZone
-from netex.models.tariff_zone_ref import TariffZoneRef
+from netex.models.tariff_zone_1 import TariffZone1
+from netex.models.tariff_zone_ref_1 import TariffZoneRef1
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.tariffs_in_frame_rel_structure import TariffsInFrameRelStructure
 from netex.models.telephone_contact_structure import TelephoneContactStructure
 from netex.models.ticket_type_enumeration import TicketTypeEnumeration
 from netex.models.ticketing_equipment import TicketingEquipment
 from netex.models.ticketing_facility_enumeration import TicketingFacilityEnumeration
+from netex.models.ticketing_facility_list import TicketingFacilityList
 from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from netex.models.ticketing_service_facility_list import TicketingServiceFacilityList
 from netex.models.time_interval import TimeInterval
 from netex.models.time_interval_price import TimeIntervalPrice
 from netex.models.time_interval_price_ref import TimeIntervalPriceRef
@@ -350,10 +357,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2020, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2020, 12, 17, 9, 30, 46, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         description=MultilingualString(
             value='Request for Metrobike 1  tariff'
         ),
@@ -620,7 +631,9 @@ obj = PublicationDelivery(
                                             postal_region='Metroland'
                                         ),
                                         primary_mode=AllModesEnumeration.SELF_DRIVE,
-                                        choice=SelfDriveSubmodeEnumeration.HIRE_CYCLE,
+                                        choice=SelfDriveSubmode(
+                                            value=SelfDriveSubmodeEnumeration.HIRE_CYCLE
+                                        ),
                                         mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=VehicleSharingRef(
                                             version='any',
                                             ref='cycle_share'
@@ -670,7 +683,9 @@ obj = PublicationDelivery(
                                                     id='cycle_share',
                                                     version='any',
                                                     transport_mode=AllModesEnumeration.SELF_DRIVE,
-                                                    choice=SelfDriveSubmodeEnumeration.HIRE_CYCLE
+                                                    choice=SelfDriveSubmode(
+                                                        value=SelfDriveSubmodeEnumeration.HIRE_CYCLE
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -937,16 +952,24 @@ obj = PublicationDelivery(
                                                 SiteFacilitySet(
                                                     id='bike_station_alpha',
                                                     version='any',
-                                                    car_service_facility_list=[
-                                                        CarServiceFacilityEnumeration.VALET_PARKING,
-                                                    ],
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                    ],
-                                                    hire_facility_list=[
-                                                        HireFacilityEnumeration.CYCLE_HIRE,
-                                                    ],
-                                                    staffing=StaffingEnumeration.PART_TIME
+                                                    car_service_facility_list=CarServiceFacilityList(
+                                                        value=[
+                                                            CarServiceFacilityEnumeration.VALET_PARKING,
+                                                        ]
+                                                    ),
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                        ]
+                                                    ),
+                                                    hire_facility_list=HireFacilityList(
+                                                        value=[
+                                                            HireFacilityEnumeration.CYCLE_HIRE,
+                                                        ]
+                                                    ),
+                                                    staffing=Staffing(
+                                                        value=StaffingEnumeration.PART_TIME
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -1005,9 +1028,11 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 ticket_machines=True,
                                                                 number_of_machines=2,
-                                                                ticketing_facility_list=[
-                                                                    TicketingFacilityEnumeration.TICKET_MACHINES,
-                                                                ],
+                                                                ticketing_facility_list=TicketingFacilityList(
+                                                                    value=[
+                                                                        TicketingFacilityEnumeration.TICKET_MACHINES,
+                                                                    ]
+                                                                ),
                                                                 payment_methods=[
                                                                     PaymentMethodEnumeration.DEBIT_CARD,
                                                                     PaymentMethodEnumeration.CREDIT_CARD,
@@ -1147,13 +1172,19 @@ obj = PublicationDelivery(
                                                 SiteFacilitySet(
                                                     id='bike_station_beta',
                                                     version='any',
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                    ],
-                                                    hire_facility_list=[
-                                                        HireFacilityEnumeration.CYCLE_HIRE,
-                                                    ],
-                                                    staffing=StaffingEnumeration.UNMANNED
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                        ]
+                                                    ),
+                                                    hire_facility_list=HireFacilityList(
+                                                        value=[
+                                                            HireFacilityEnumeration.CYCLE_HIRE,
+                                                        ]
+                                                    ),
+                                                    staffing=Staffing(
+                                                        value=StaffingEnumeration.UNMANNED
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -1223,9 +1254,11 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 ticket_machines=True,
                                                                 number_of_machines=1,
-                                                                ticketing_facility_list=[
-                                                                    TicketingFacilityEnumeration.TICKET_MACHINES,
-                                                                ],
+                                                                ticketing_facility_list=TicketingFacilityList(
+                                                                    value=[
+                                                                        TicketingFacilityEnumeration.TICKET_MACHINES,
+                                                                    ]
+                                                                ),
                                                                 payment_methods=[
                                                                     PaymentMethodEnumeration.DEBIT_CARD,
                                                                     PaymentMethodEnumeration.CREDIT_CARD,
@@ -1330,10 +1363,14 @@ obj = PublicationDelivery(
                                                 SiteFacilitySet(
                                                     id='bike_station_omega',
                                                     version='any',
-                                                    hire_facility_list=[
-                                                        HireFacilityEnumeration.CYCLE_HIRE,
-                                                    ],
-                                                    staffing=StaffingEnumeration.UNMANNED
+                                                    hire_facility_list=HireFacilityList(
+                                                        value=[
+                                                            HireFacilityEnumeration.CYCLE_HIRE,
+                                                        ]
+                                                    ),
+                                                    staffing=Staffing(
+                                                        value=StaffingEnumeration.UNMANNED
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -1365,7 +1402,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone(
+                                    TariffZone1(
                                         id='all_metropolis',
                                         version='any',
                                         name=MultilingualString(
@@ -1388,7 +1425,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType(
+                                        DayType1(
                                             id='working_day',
                                             version='any',
                                             name=MultilingualString(
@@ -2209,7 +2246,7 @@ obj = PublicationDelivery(
                                                         validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='all_metropolis'
                                                                 ),
@@ -2774,9 +2811,11 @@ obj = PublicationDelivery(
                                                         ref='ticket_machine'
                                                     ),
                                                     distribution_channel_type=DistributionChannelTypeEnumeration.AT_STOP,
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                    ],
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                        ]
+                                                    ),
                                                     payment_methods=[
                                                         PaymentMethodEnumeration.DEBIT_CARD,
                                                         PaymentMethodEnumeration.CREDIT_CARD,
@@ -2870,10 +2909,12 @@ obj = PublicationDelivery(
                                                         ref='mobile_application'
                                                     ),
                                                     distribution_channel_type=DistributionChannelTypeEnumeration.MOBILE_DEVICE,
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                        TicketingServiceFacilityEnumeration.REFUND,
-                                                    ],
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                            TicketingServiceFacilityEnumeration.REFUND,
+                                                        ]
+                                                    ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
                                                         version='any',
                                                         ref='mobile_device'
@@ -2988,7 +3029,7 @@ obj = PublicationDelivery(
                                                         validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='all_metropolis'
                                                                 ),
@@ -3245,10 +3286,12 @@ obj = PublicationDelivery(
                                                         ref='mobile_application'
                                                     ),
                                                     distribution_channel_type=DistributionChannelTypeEnumeration.MOBILE_DEVICE,
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                        TicketingServiceFacilityEnumeration.REFUND,
-                                                    ],
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                            TicketingServiceFacilityEnumeration.REFUND,
+                                                        ]
+                                                    ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
                                                         version='any',
                                                         ref='mobile_device'
@@ -3298,14 +3341,14 @@ obj = PublicationDelivery(
                                 version='any',
                                 pricing_rules=PricingRulesRelStructure(
                                     pricing_rule=[
-                                        PricingRule(
+                                        PricingRule1(
                                             id='cumulative_total',
                                             version='any',
                                             name=MultilingualString(
                                                 value='Excess charge is sum of additional '
                                             )
                                         ),
-                                        PricingRule(
+                                        PricingRule1(
                                             id='per_hour',
                                             version='any',
                                             name=MultilingualString(
@@ -3317,7 +3360,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable(
+                                    FareTable1(
                                         id='metrobike',
                                         version='any',
                                         name=MultilingualString(
@@ -3336,7 +3379,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         specifics=FareTableSpecificsStructure(
-                                            tariff_zone_ref=TariffZoneRef(
+                                            tariff_zone_ref=TariffZoneRef1(
                                                 version='any',
                                                 ref='all_metropolis'
                                             ),
@@ -3347,7 +3390,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='metrobike@single_session',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3375,7 +3418,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable(
+                                                            FareTable1(
                                                                 id='metrobike@single_session@rental',
                                                                 version='any',
                                                                 prices=FarePricesRelStructure(
@@ -3459,7 +3502,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable(
+                                                            FareTable1(
                                                                 id='metrobike@hire_penalty',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -3505,7 +3548,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='metrobike@day_pass',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3529,7 +3572,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable(
+                                                            FareTable1(
                                                                 id='metrobike@day_pass@rental',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -4297,7 +4340,7 @@ obj = PublicationDelivery(
                                                                                     ),
                                                                                 ],
                                                                                 tariff_zone_ref=[
-                                                                                    TariffZoneRef(
+                                                                                    TariffZoneRef1(
                                                                                         version='any',
                                                                                         ref='all_metropolis'
                                                                                     ),
@@ -4530,7 +4573,7 @@ obj = PublicationDelivery(
                                                                                     ),
                                                                                 ],
                                                                                 tariff_zone_ref=[
-                                                                                    TariffZoneRef(
+                                                                                    TariffZoneRef1(
                                                                                         version='any',
                                                                                         ref='all_metropolis'
                                                                                     ),

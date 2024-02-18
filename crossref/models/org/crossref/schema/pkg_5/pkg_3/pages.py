@@ -1,5 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.first_page import (
+    FirstPage,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.last_page import LastPage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.other_pages import (
+    OtherPages,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -14,28 +21,22 @@ class Pages:
         name = "pages"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    first_page: Optional[str] = field(
+    first_page: Optional[FirstPage] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 1,
-            "max_length": 32,
         },
     )
-    last_page: Optional[str] = field(
+    last_page: Optional[LastPage] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 32,
         },
     )
-    other_pages: Optional[str] = field(
+    other_pages: Optional[OtherPages] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 100,
         },
     )

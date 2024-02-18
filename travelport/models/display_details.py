@@ -1,5 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
+from travelport.models.display_contents import DisplayContents
 from travelport.models.display_detail import DisplayDetail
 
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
@@ -43,7 +44,7 @@ class DisplayDetails:
             "max_occurs": 999,
         },
     )
-    display_contents: None | str = field(
+    display_contents: None | DisplayContents = field(
         default=None,
         metadata={
             "name": "DisplayContents",

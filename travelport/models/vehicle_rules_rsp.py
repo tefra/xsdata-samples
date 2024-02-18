@@ -2,6 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_search_rsp_1 import BaseSearchRsp1
 from travelport.models.marketing_information_1 import MarketingInformation1
+from travelport.models.operation_time import OperationTime
 from travelport.models.policy import Policy
 from travelport.models.type_deposit_guarantee import TypeDepositGuarantee
 from travelport.models.type_rental_period import TypeRentalPeriod
@@ -57,7 +58,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
             "required": True,
         },
     )
-    operation_time: list[str] = field(
+    operation_time: list[OperationTime] = field(
         default_factory=list,
         metadata={
             "name": "OperationTime",

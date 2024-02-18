@@ -1,8 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.connection import Connection
+from travelport.models.in_flight_services import InFlightServices
+from travelport.models.meals import Meals
 from travelport.models.type_element_status_1 import TypeElementStatus1
-from travelport.models.type_meal_service import TypeMealService
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -68,7 +69,7 @@ class FlightDetails:
             "type": "Element",
         },
     )
-    meals: list[TypeMealService] = field(
+    meals: list[Meals] = field(
         default_factory=list,
         metadata={
             "name": "Meals",
@@ -76,7 +77,7 @@ class FlightDetails:
             "max_occurs": 999,
         },
     )
-    in_flight_services: list[str] = field(
+    in_flight_services: list[InFlightServices] = field(
         default_factory=list,
         metadata={
             "name": "InFlightServices",

@@ -39,17 +39,22 @@ from ubl.models.common.ubl_common_basic_components_2_1 import Amount
 from ubl.models.common.ubl_common_basic_components_2_1 import BaseQuantity
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
+from ubl.models.common.ubl_common_basic_components_2_1 import ChargeIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CurrencyCode
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomerAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
+from ubl.models.common.ubl_common_basic_components_2_1 import EndTime
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import LineExtensionAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import MultiplierFactorNumeric
@@ -63,8 +68,11 @@ from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
 from ubl.models.common.ubl_common_basic_components_2_1 import SpecialTerms
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import TaxEvidenceIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxExclusiveAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxableAmount
@@ -91,19 +99,27 @@ obj = Quotation(
     id=Id(
         value='QIY7655'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='4D07786B-DA6D-439F-82D1-6FFFC7F4E3B1'
     ),
-    issue_date=XmlDate(2005, 6, 20),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 6, 20)
+    ),
     note=[
         Note(
             value='sample'
         ),
     ],
     validity_period=ValidityPeriod(
-        start_date=XmlDate(2005, 6, 20),
-        end_date=XmlDate(2005, 7, 20)
+        start_date=StartDate(
+            value=XmlDate(2005, 6, 20)
+        ),
+        end_date=EndDate(
+            value=XmlDate(2005, 7, 20)
+        )
     ),
     request_for_quotation_document_reference=RequestForQuotationDocumentReference(
         id=Id(
@@ -112,7 +128,9 @@ obj = Quotation(
         uuid=Uuid(
             value='8D076867-AE6D-439F-8281-5AAFC7F4E3B1'
         ),
-        issue_date=XmlDate(2005, 6, 19)
+        issue_date=IssueDate(
+            value=XmlDate(2005, 6, 19)
+        )
     ),
     seller_supplier_party=SellerSupplierParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
@@ -312,10 +330,18 @@ obj = Quotation(
                 )
             ),
             requested_delivery_period=RequestedDeliveryPeriod(
-                start_date=XmlDate(2005, 6, 29),
-                start_time=XmlTime(9, 30, 47, 0, 0),
-                end_date=XmlDate(2005, 6, 29),
-                end_time=XmlTime(9, 30, 47, 0, 0)
+                start_date=StartDate(
+                    value=XmlDate(2005, 6, 29)
+                ),
+                start_time=StartTime(
+                    value=XmlTime(9, 30, 47, 0, 0)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2005, 6, 29)
+                ),
+                end_time=EndTime(
+                    value=XmlTime(9, 30, 47, 0, 0)
+                )
             )
         ),
     ],
@@ -439,7 +465,9 @@ obj = Quotation(
     ),
     allowance_charge=[
         AllowanceCharge(
-            charge_indicator=False,
+            charge_indicator=ChargeIndicator(
+                value=False
+            ),
             allowance_charge_reason_code=AllowanceChargeReasonCode(
                 value='17'
             ),
@@ -466,7 +494,9 @@ obj = Quotation(
                 value=Decimal('17.50'),
                 currency_id='GBP'
             ),
-            tax_evidence_indicator=False,
+            tax_evidence_indicator=TaxEvidenceIndicator(
+                value=False
+            ),
             tax_subtotal=[
                 TaxSubtotal(
                     taxable_amount=TaxableAmount(

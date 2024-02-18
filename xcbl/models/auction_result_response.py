@@ -1,8 +1,54 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xcbl.models.sourcing_result_response import Purpose
+from xcbl.models.sourcing_result_response import (
+    GeneralNote,
+    Purpose,
+)
 from xcbl.models.trading_partner_response import Reference
 from xcbl.models.trading_partner_user_information import Language
+
+
+@dataclass(kw_only=True)
+class AuctionResultResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AuctionResultResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AuctionResultResponseId:
+    class Meta:
+        name = "AuctionResultResponseID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AuctionResultResponseIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 @dataclass(kw_only=True)
@@ -47,14 +93,14 @@ class AuctionResultResponseHeader:
             "required": True,
         }
     )
-    auction_result_response_issue_date: str = field(
+    auction_result_response_issue_date: AuctionResultResponseIssueDate = field(
         metadata={
             "name": "AuctionResultResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    auction_result_response_id: str = field(
+    auction_result_response_id: AuctionResultResponseId = field(
         metadata={
             "name": "AuctionResultResponseID",
             "type": "Element",
@@ -75,14 +121,16 @@ class AuctionResultResponseHeader:
             "type": "Element",
         },
     )
-    auction_result_response_coded: str = field(
+    auction_result_response_coded: AuctionResultResponseCoded = field(
         metadata={
             "name": "AuctionResultResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    auction_result_response_coded_other: Optional[str] = field(
+    auction_result_response_coded_other: Optional[
+        AuctionResultResponseCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "AuctionResultResponseCodedOther",
@@ -96,7 +144,7 @@ class AuctionResultResponseHeader:
             "required": True,
         }
     )
-    general_note: Optional[str] = field(
+    general_note: Optional[GeneralNote] = field(
         default=None,
         metadata={
             "name": "GeneralNote",

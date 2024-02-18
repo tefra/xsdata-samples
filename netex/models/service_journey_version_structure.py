@@ -8,7 +8,7 @@ from .compound_train_ref import CompoundTrainRef
 from .course_of_journeys_ref import CourseOfJourneysRef
 from .day_type_refs_rel_structure import DayTypeRefsRelStructure
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
-from .direction_type_enumeration import DirectionTypeEnumeration
+from .direction_type import DirectionType
 from .dynamic_advertisement_enumeration import DynamicAdvertisementEnumeration
 from .flexible_line_ref import FlexibleLineRef
 from .flexible_line_view import FlexibleLineView
@@ -325,7 +325,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    direction_type: Optional[DirectionTypeEnumeration] = field(
+    direction_type: Optional[DirectionType] = field(
         default=None,
         metadata={
             "name": "DirectionType",

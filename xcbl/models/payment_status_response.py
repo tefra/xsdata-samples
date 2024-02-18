@@ -8,6 +8,8 @@ from xcbl.models.request_for_quotation import (
     AccountDetail,
     CardInfo,
     FinancialInstitution,
+    PaymentSystemCoded,
+    PaymentSystemCodedOther,
 )
 from xcbl.models.sourcing_result import (
     ListOfDateCoded,
@@ -17,6 +19,7 @@ from xcbl.models.sourcing_result import (
     NameValuePair,
     RateOfExchangeDetail,
 )
+from xcbl.models.sourcing_result_response import GeneralNote
 from xcbl.models.trading_partner_response import Reference
 from xcbl.models.trading_partner_user_information import (
     Identifier,
@@ -25,12 +28,127 @@ from xcbl.models.trading_partner_user_information import (
 
 
 @dataclass(kw_only=True)
-class PaymentStatusRequestSummary:
-    total_number_payment_requests: Optional[str] = field(
-        default=None,
+class ConfirmationId:
+    class Meta:
+        name = "ConfirmationID"
+
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumberPaymentRequests",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FxvalueDate:
+    class Meta:
+        name = "FXValueDate"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PayBeforeDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentDueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentExceptionCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentExceptionCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentExceptionNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentStatusResponseIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RequestedPaymentDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SequenceNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SettlementDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalNumberPaymentRequests:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -165,6 +283,19 @@ class PaymentStatusRequestId:
 
 
 @dataclass(kw_only=True)
+class PaymentStatusRequestSummary:
+    total_number_payment_requests: Optional[
+        TotalNumberPaymentRequests
+    ] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberPaymentRequests",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class PaymentStatusResponseId:
     class Meta:
         name = "PaymentStatusResponseID"
@@ -172,17 +303,6 @@ class PaymentStatusResponseId:
     reference: Reference = field(
         metadata={
             "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PaymentStatusResponseSummary:
-    payment_status_request_summary: PaymentStatusRequestSummary = field(
-        metadata={
-            "name": "PaymentStatusRequestSummary",
             "type": "Element",
             "required": True,
         }
@@ -224,21 +344,21 @@ class OriginatingFinancialInstitution:
 
 @dataclass(kw_only=True)
 class PaymentDates:
-    payment_due_date: Optional[str] = field(
+    payment_due_date: Optional[PaymentDueDate] = field(
         default=None,
         metadata={
             "name": "PaymentDueDate",
             "type": "Element",
         },
     )
-    requested_payment_date: Optional[str] = field(
+    requested_payment_date: Optional[RequestedPaymentDate] = field(
         default=None,
         metadata={
             "name": "RequestedPaymentDate",
             "type": "Element",
         },
     )
-    pay_before_date: Optional[str] = field(
+    pay_before_date: Optional[PayBeforeDate] = field(
         default=None,
         metadata={
             "name": "PayBeforeDate",
@@ -256,21 +376,23 @@ class PaymentDates:
 
 @dataclass(kw_only=True)
 class PaymentException:
-    payment_exception_coded: str = field(
+    payment_exception_coded: PaymentExceptionCoded = field(
         metadata={
             "name": "PaymentExceptionCoded",
             "type": "Element",
             "required": True,
         }
     )
-    payment_exception_coded_other: Optional[str] = field(
+    payment_exception_coded_other: Optional[
+        PaymentExceptionCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "PaymentExceptionCodedOther",
             "type": "Element",
         },
     )
-    payment_exception_note: Optional[str] = field(
+    payment_exception_note: Optional[PaymentExceptionNote] = field(
         default=None,
         metadata={
             "name": "PaymentExceptionNote",
@@ -302,7 +424,7 @@ class PaymentStatusResponseHeader:
             "required": True,
         }
     )
-    payment_status_response_issue_date: str = field(
+    payment_status_response_issue_date: PaymentStatusResponseIssueDate = field(
         metadata={
             "name": "PaymentStatusResponseIssueDate",
             "type": "Element",
@@ -323,12 +445,23 @@ class PaymentStatusResponseHeader:
             "required": True,
         }
     )
-    general_note: Optional[str] = field(
+    general_note: Optional[GeneralNote] = field(
         default=None,
         metadata={
             "name": "GeneralNote",
             "type": "Element",
         },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentStatusResponseSummary:
+    payment_status_request_summary: PaymentStatusRequestSummary = field(
+        metadata={
+            "name": "PaymentStatusRequestSummary",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 
@@ -375,14 +508,14 @@ class PaymentStatusResponseDetail:
             "required": True,
         }
     )
-    confirmation_id: str = field(
+    confirmation_id: ConfirmationId = field(
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
             "required": True,
         }
     )
-    sequence_number: Optional[str] = field(
+    sequence_number: Optional[SequenceNumber] = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -396,14 +529,14 @@ class PaymentStatusResponseDetail:
             "type": "Element",
         },
     )
-    settlement_date: Optional[str] = field(
+    settlement_date: Optional[SettlementDate] = field(
         default=None,
         metadata={
             "name": "SettlementDate",
             "type": "Element",
         },
     )
-    fxvalue_date: Optional[str] = field(
+    fxvalue_date: Optional[FxvalueDate] = field(
         default=None,
         metadata={
             "name": "FXValueDate",
@@ -477,14 +610,14 @@ class PaymentStatusResponseDetail:
             "type": "Element",
         },
     )
-    payment_system_coded: Optional[str] = field(
+    payment_system_coded: Optional[PaymentSystemCoded] = field(
         default=None,
         metadata={
             "name": "PaymentSystemCoded",
             "type": "Element",
         },
     )
-    payment_system_coded_other: Optional[str] = field(
+    payment_system_coded_other: Optional[PaymentSystemCodedOther] = field(
         default=None,
         metadata={
             "name": "PaymentSystemCodedOther",

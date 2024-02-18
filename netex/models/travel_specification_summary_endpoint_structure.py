@@ -11,7 +11,7 @@ from .scheduled_stop_point_view import ScheduledStopPointView
 from .service_site_ref import ServiceSiteRef
 from .site_ref import SiteRef
 from .stop_place_ref import StopPlaceRef
-from .tariff_zone_ref import TariffZoneRef
+from .tariff_zone_ref_1 import TariffZoneRef1
 from .taxi_rank_ref import TaxiRankRef
 from .taxi_stand_ref import TaxiStandRef
 from .topographic_place_view import TopographicPlaceView
@@ -144,7 +144,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zone_ref: List[TariffZoneRef] = field(
+    tariff_zone_ref: List[TariffZoneRef1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",

@@ -28,6 +28,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomerAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
@@ -36,9 +37,13 @@ from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import DespatchAdviceTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import DocumentStatusCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
+from ubl.models.common.ubl_common_basic_components_2_1 import EndTime
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
+from ubl.models.common.ubl_common_basic_components_2_1 import ExpiryDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import LineId
 from ubl.models.common.ubl_common_basic_components_2_1 import LineStatusCode
@@ -50,6 +55,8 @@ from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
 from ubl.models.common.ubl_common_basic_components_2_1 import SalesOrderId
 from ubl.models.common.ubl_common_basic_components_2_1 import SalesOrderLineId
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import SupplierAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
@@ -75,11 +82,15 @@ obj = DespatchAdvice(
     id=Id(
         value='565899'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='88C7280E-8F10-419F-9949-8EFFFA2842B8'
     ),
-    issue_date=XmlDate(2005, 6, 20),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 6, 20)
+    ),
     document_status_code=DocumentStatusCode(
         value='NoStatus'
     ),
@@ -102,7 +113,9 @@ obj = DespatchAdvice(
             uuid=Uuid(
                 value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
             ),
-            issue_date=XmlDate(2005, 6, 20)
+            issue_date=IssueDate(
+                value=XmlDate(2005, 6, 20)
+            )
         ),
     ],
     despatch_supplier_party=DespatchSupplierParty(
@@ -319,10 +332,18 @@ obj = DespatchAdvice(
                 )
             ),
             requested_delivery_period=RequestedDeliveryPeriod(
-                start_date=XmlDate(2005, 6, 20),
-                start_time=XmlTime(10, 30, 47, 0, 0),
-                end_date=XmlDate(2005, 6, 21),
-                end_time=XmlTime(10, 30, 47, 0, 0)
+                start_date=StartDate(
+                    value=XmlDate(2005, 6, 20)
+                ),
+                start_time=StartTime(
+                    value=XmlTime(10, 30, 47, 0, 0)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2005, 6, 21)
+                ),
+                end_time=EndTime(
+                    value=XmlTime(10, 30, 47, 0, 0)
+                )
             )
         )
     ),
@@ -370,7 +391,9 @@ obj = DespatchAdvice(
                         uuid=Uuid(
                             value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
                         ),
-                        issue_date=XmlDate(2005, 6, 20)
+                        issue_date=IssueDate(
+                            value=XmlDate(2005, 6, 20)
+                        )
                     )
                 ),
             ],
@@ -399,7 +422,9 @@ obj = DespatchAdvice(
                             lot_number_id=LotNumberId(
                                 value='546378239'
                             ),
-                            expiry_date=XmlDate(2010, 1, 1)
+                            expiry_date=ExpiryDate(
+                                value=XmlDate(2010, 1, 1)
+                            )
                         )
                     ),
                 ]

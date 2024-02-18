@@ -55,12 +55,17 @@ from ubl.models.common.ubl_common_basic_components_2_1 import DocumentStatusCode
 from ubl.models.common.ubl_common_basic_components_2_1 import DocumentType
 from ubl.models.common.ubl_common_basic_components_2_1 import DocumentTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
+from ubl.models.common.ubl_common_basic_components_2_1 import EndTime
 from ubl.models.common.ubl_common_basic_components_2_1 import EndpointId
 from ubl.models.common.ubl_common_basic_components_2_1 import FullnessIndicationCode
 from ubl.models.common.ubl_common_basic_components_2_1 import GrossVolumeMeasure
 from ubl.models.common.ubl_common_basic_components_2_1 import GrossWeightMeasure
+from ubl.models.common.ubl_common_basic_components_2_1 import HazardousRiskIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import JourneyId
 from ubl.models.common.ubl_common_basic_components_2_1 import LoadingLengthMeasure
 from ubl.models.common.ubl_common_basic_components_2_1 import LocationTypeCode
@@ -72,10 +77,15 @@ from ubl.models.common.ubl_common_basic_components_2_1 import NotificationTypeCo
 from ubl.models.common.ubl_common_basic_components_2_1 import PackagingTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import PostEventNotificationDurationMeasure
 from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
+from ubl.models.common.ubl_common_basic_components_2_1 import PowerIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
+from ubl.models.common.ubl_common_basic_components_2_1 import RefrigeratedIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationNationality
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationNationalityId
+from ubl.models.common.ubl_common_basic_components_2_1 import ReturnabilityIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import ShippingMarks
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import Telephone
 from ubl.models.common.ubl_common_basic_components_2_1 import TotalGoodsItemQuantity
@@ -106,8 +116,12 @@ obj = TransportExecutionPlan(
     version_id=VersionId(
         value='1'
     ),
-    issue_date=XmlDate(2011, 9, 13),
-    issue_time=XmlTime(10, 0, 30, 0, 60),
+    issue_date=IssueDate(
+        value=XmlDate(2011, 9, 13)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(10, 0, 30, 0, 60)
+    ),
     document_status_code=DocumentStatusCode(
         value='Confirmed'
     ),
@@ -243,7 +257,9 @@ obj = TransportExecutionPlan(
                 id=Id(
                     value='TC101'
                 ),
-                issue_date=XmlDate(2010, 1, 1),
+                issue_date=IssueDate(
+                    value=XmlDate(2010, 1, 1)
+                ),
                 document_type_code=DocumentTypeCode(
                     value='315'
                 ),
@@ -260,8 +276,12 @@ obj = TransportExecutionPlan(
     ),
     transport_user_response_required_period=[
         TransportUserResponseRequiredPeriod(
-            end_date=XmlDate(2011, 9, 13),
-            end_time=XmlTime(12, 0, 10, 0, 60)
+            end_date=EndDate(
+                value=XmlDate(2011, 9, 13)
+            ),
+            end_time=EndTime(
+                value=XmlTime(12, 0, 10, 0, 60)
+            )
         ),
     ],
     main_transportation_service=MainTransportationService(
@@ -275,8 +295,12 @@ obj = TransportExecutionPlan(
         ]
     ),
     service_end_time_period=ServiceEndTimePeriod(
-        end_date=XmlDate(2011, 10, 6),
-        end_time=XmlTime(16, 0, 10, 0, 60)
+        end_date=EndDate(
+            value=XmlDate(2011, 10, 6)
+        ),
+        end_time=EndTime(
+            value=XmlTime(16, 0, 10, 0, 60)
+        )
     ),
     from_location=FromLocation(
         location_type_code=LocationTypeCode(
@@ -451,7 +475,9 @@ obj = TransportExecutionPlan(
                 value=Decimal('12'),
                 unit_code='MTR'
             ),
-            hazardous_risk_indicator=False,
+            hazardous_risk_indicator=HazardousRiskIndicator(
+                value=False
+            ),
             total_transport_handling_unit_quantity=TotalTransportHandlingUnitQuantity(
                 value=Decimal('2')
             ),
@@ -493,10 +519,18 @@ obj = TransportExecutionPlan(
                 ),
                 period=[
                     Period(
-                        start_date=XmlDate(2011, 10, 3),
-                        start_time=XmlTime(9, 30, 10, 0, 60),
-                        end_date=XmlDate(2011, 10, 3),
-                        end_time=XmlTime(12, 30, 10, 0, 60)
+                        start_date=StartDate(
+                            value=XmlDate(2011, 10, 3)
+                        ),
+                        start_time=StartTime(
+                            value=XmlTime(9, 30, 10, 0, 60)
+                        ),
+                        end_date=EndDate(
+                            value=XmlDate(2011, 10, 3)
+                        ),
+                        end_time=EndTime(
+                            value=XmlTime(12, 30, 10, 0, 60)
+                        )
                     ),
                 ]
             ),
@@ -521,10 +555,18 @@ obj = TransportExecutionPlan(
                 ),
                 period=[
                     Period(
-                        start_date=XmlDate(2011, 10, 6),
-                        start_time=XmlTime(12, 30, 10, 0, 60),
-                        end_date=XmlDate(2011, 10, 6),
-                        end_time=XmlTime(15, 30, 10, 0, 60)
+                        start_date=StartDate(
+                            value=XmlDate(2011, 10, 6)
+                        ),
+                        start_time=StartTime(
+                            value=XmlTime(12, 30, 10, 0, 60)
+                        ),
+                        end_date=EndDate(
+                            value=XmlDate(2011, 10, 6)
+                        ),
+                        end_time=EndTime(
+                            value=XmlTime(15, 30, 10, 0, 60)
+                        )
                     ),
                 ]
             ),
@@ -631,10 +673,18 @@ obj = TransportExecutionPlan(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 3),
-                                start_time=XmlTime(9, 30, 10, 0, 60),
-                                end_date=XmlDate(2011, 10, 3),
-                                end_time=XmlTime(12, 30, 10, 0, 60)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 3)
+                                ),
+                                start_time=StartTime(
+                                    value=XmlTime(9, 30, 10, 0, 60)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 3)
+                                ),
+                                end_time=EndTime(
+                                    value=XmlTime(12, 30, 10, 0, 60)
+                                )
                             ),
                         ]
                     ),
@@ -659,10 +709,18 @@ obj = TransportExecutionPlan(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 6),
-                                start_time=XmlTime(12, 30, 10, 0, 60),
-                                end_date=XmlDate(2011, 10, 6),
-                                end_time=XmlTime(15, 30, 10, 0, 60)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 6)
+                                ),
+                                start_time=StartTime(
+                                    value=XmlTime(12, 30, 10, 0, 60)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 6)
+                                ),
+                                end_time=EndTime(
+                                    value=XmlTime(15, 30, 10, 0, 60)
+                                )
                             ),
                         ]
                     )
@@ -732,10 +790,18 @@ obj = TransportExecutionPlan(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 9, 20),
-                                start_time=XmlTime(9, 30, 10, 0, 60),
-                                end_date=XmlDate(2011, 9, 20),
-                                end_time=XmlTime(12, 30, 10, 0, 60)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 9, 20)
+                                ),
+                                start_time=StartTime(
+                                    value=XmlTime(9, 30, 10, 0, 60)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 9, 20)
+                                ),
+                                end_time=EndTime(
+                                    value=XmlTime(12, 30, 10, 0, 60)
+                                )
                             ),
                         ]
                     ),
@@ -749,10 +815,18 @@ obj = TransportExecutionPlan(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 1),
-                                start_time=XmlTime(9, 30, 10, 0, 60),
-                                end_date=XmlDate(2011, 10, 1),
-                                end_time=XmlTime(12, 30, 10, 0, 60)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 1)
+                                ),
+                                start_time=StartTime(
+                                    value=XmlTime(9, 30, 10, 0, 60)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 1)
+                                ),
+                                end_time=EndTime(
+                                    value=XmlTime(12, 30, 10, 0, 60)
+                                )
                             ),
                         ]
                     )
@@ -766,7 +840,9 @@ obj = TransportExecutionPlan(
                     transport_handling_unit_type_code=TransportHandlingUnitTypeCode(
                         value='4'
                     ),
-                    hazardous_risk_indicator=False,
+                    hazardous_risk_indicator=HazardousRiskIndicator(
+                        value=False
+                    ),
                     total_goods_item_quantity=TotalGoodsItemQuantity(
                         value=Decimal('500')
                     ),
@@ -789,8 +865,12 @@ obj = TransportExecutionPlan(
                             fullness_indication_code=FullnessIndicationCode(
                                 value='1'
                             ),
-                            returnability_indicator=True,
-                            refrigerated_indicator=False,
+                            returnability_indicator=ReturnabilityIndicator(
+                                value=True
+                            ),
+                            refrigerated_indicator=RefrigeratedIndicator(
+                                value=False
+                            ),
                             description=[
                                 Description(
                                     value='SomeDescription'
@@ -804,7 +884,9 @@ obj = TransportExecutionPlan(
                                 value=Decimal('39'),
                                 unit_code='MTQ'
                             ),
-                            power_indicator=False,
+                            power_indicator=PowerIndicator(
+                                value=False
+                            ),
                             measurement_dimension=[
                                 MeasurementDimension(
                                     attribute_id=AttributeId(
@@ -872,7 +954,9 @@ obj = TransportExecutionPlan(
                     transport_handling_unit_type_code=TransportHandlingUnitTypeCode(
                         value='4'
                     ),
-                    hazardous_risk_indicator=False,
+                    hazardous_risk_indicator=HazardousRiskIndicator(
+                        value=False
+                    ),
                     total_goods_item_quantity=TotalGoodsItemQuantity(
                         value=Decimal('500')
                     ),
@@ -895,8 +979,12 @@ obj = TransportExecutionPlan(
                             fullness_indication_code=FullnessIndicationCode(
                                 value='1'
                             ),
-                            returnability_indicator=True,
-                            refrigerated_indicator=False,
+                            returnability_indicator=ReturnabilityIndicator(
+                                value=True
+                            ),
+                            refrigerated_indicator=RefrigeratedIndicator(
+                                value=False
+                            ),
                             description=[
                                 Description(
                                     value='SomeDescription'
@@ -910,7 +998,9 @@ obj = TransportExecutionPlan(
                                 value=Decimal('39'),
                                 unit_code='MTQ'
                             ),
-                            power_indicator=False,
+                            power_indicator=PowerIndicator(
+                                value=False
+                            ),
                             measurement_dimension=[
                                 MeasurementDimension(
                                     attribute_id=AttributeId(

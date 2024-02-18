@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi import Doi
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.item_country import (
     ItemCountry,
 )
@@ -24,13 +25,10 @@ class Item:
         name = "item"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    doi: Optional[str] = field(
+    doi: Optional[Doi] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 6,
-            "max_length": 2048,
-            "pattern": r"10\.[0-9]{4,9}/.{1,200}",
         },
     )
     resource: Optional[Resource] = field(

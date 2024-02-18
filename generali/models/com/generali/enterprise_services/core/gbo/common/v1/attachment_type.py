@@ -3,6 +3,9 @@ from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.binary_object_type import (
     BinaryObjectType,
 )
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.uritype import (
+    Uritype,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.attachment_type_size_measure import (
     AttachmentTypeSizeMeasure,
 )
@@ -48,7 +51,7 @@ class AttachmentType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    reference_uri: Optional[str] = field(
+    reference_uri: Optional[Uritype] = field(
         default=None,
         metadata={
             "name": "ReferenceURI",

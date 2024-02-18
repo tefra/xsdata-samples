@@ -15,11 +15,12 @@ from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleMo
 from netex.models.alternative_name import AlternativeName
 from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
 from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
+from netex.models.audible_signals_available import AudibleSignalsAvailable
 from netex.models.availability_condition_ref import AvailabilityConditionRef
 from netex.models.check_constraint import CheckConstraint
 from netex.models.check_constraint_delay import CheckConstraintDelay
@@ -58,6 +59,7 @@ from netex.models.equipment_position import EquipmentPosition
 from netex.models.equipment_positions_rel_structure import EquipmentPositionsRelStructure
 from netex.models.equipment_ref import EquipmentRef
 from netex.models.equipments_rel_structure import EquipmentsRelStructure
+from netex.models.escalator_free_access import EscalatorFreeAccess
 from netex.models.gated_enumeration import GatedEnumeration
 from netex.models.general_sign import GeneralSign
 from netex.models.gradient_enumeration import GradientEnumeration
@@ -67,6 +69,7 @@ from netex.models.level import Level
 from netex.models.level_ref import LevelRef
 from netex.models.level_ref_structure import LevelRefStructure
 from netex.models.levels_rel_structure import LevelsRelStructure
+from netex.models.lift_free_access import LiftFreeAccess
 from netex.models.lighting_enumeration import LightingEnumeration
 from netex.models.limitation_status_enumeration import LimitationStatusEnumeration
 from netex.models.location_structure_2 import LocationStructure2
@@ -82,6 +85,7 @@ from netex.models.operator import Operator
 from netex.models.operator_ref_structure import OperatorRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_stop_assignment import PassengerStopAssignment
 from netex.models.path_direction_enumeration import PathDirectionEnumeration
 from netex.models.path_heading_enumeration import PathHeadingEnumeration
@@ -99,7 +103,7 @@ from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStruc
 from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay import Quay
+from netex.models.quay_1 import Quay1
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_ref_structure import QuayRefStructure
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
@@ -124,8 +128,9 @@ from netex.models.site_entrances_rel_structure import SiteEntrancesRelStructure
 from netex.models.site_frame import SiteFrame
 from netex.models.site_path_link import SitePathLink
 from netex.models.site_path_links_rel_structure import SitePathLinksRelStructure
+from netex.models.step_free_access import StepFreeAccess
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place import StopPlace
+from netex.models.stop_place_1 import StopPlace1
 from netex.models.stop_place_entrance import StopPlaceEntrance
 from netex.models.stop_place_entrance_ref_structure import StopPlaceEntranceRefStructure
 from netex.models.stop_place_ref import StopPlaceRef
@@ -133,6 +138,7 @@ from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRel
 from netex.models.stop_type_enumeration import StopTypeEnumeration
 from netex.models.ticketing_equipment import TicketingEquipment
 from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from netex.models.ticketing_service_facility_list import TicketingServiceFacilityList
 from netex.models.topographic_place import TopographicPlace
 from netex.models.topographic_place_descriptor_versioned_child_structure import TopographicPlaceDescriptorVersionedChildStructure
 from netex.models.topographic_place_ref import TopographicPlaceRef
@@ -146,6 +152,8 @@ from netex.models.transfers_in_frame_rel_structure import TransfersInFrameRelStr
 from netex.models.transition_enumeration import TransitionEnumeration
 from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
+from netex.models.visual_signs_available import VisualSignsAvailable
+from netex.models.wheelchair_access import WheelchairAccess
 from netex.models.zone_ref_structure import ZoneRefStructure
 from xsdata.models.datatype import XmlDate
 from xsdata.models.datatype import XmlDateTime
@@ -155,10 +163,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -240,7 +252,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType(
+                                    DayType1(
                                         id='zbt:DT001Open_MF',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -272,7 +284,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='zbt:DT002Open_Sat',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -300,7 +312,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='zbt:DT003Open_Sun',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -325,7 +337,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='zbt:DT004Open_MFS',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -358,7 +370,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='zbt:DT005Open_Sun',
                                         version='any',
                                         properties=PropertiesOfDayRelStructure(
@@ -503,7 +515,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace(
+                                    StopPlace1(
                                         id='ztb:bh0023',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         modification=ModificationEnumeration.REVISE,
@@ -539,12 +551,24 @@ obj = PublicationDelivery(
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE,
-                                                    audible_signals_available=LimitationStatusEnumeration.FALSE,
-                                                    visual_signs_available=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    audible_signals_available=AudibleSignalsAvailable(
+
+                                                    ),
+                                                    visual_signs_available=VisualSignsAvailable(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -826,7 +850,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='ztb:bh0023@Rail@Q1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='01',
@@ -929,7 +953,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='ztb:bh0023@Rail@Q2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='01',
@@ -1031,12 +1055,24 @@ obj = PublicationDelivery(
                                                             accessibility_limitation=AccessibilityLimitation(
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                                 version='01',
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE,
-                                                                audible_signals_available=LimitationStatusEnumeration.FALSE,
-                                                                visual_signs_available=LimitationStatusEnumeration.FALSE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                audible_signals_available=AudibleSignalsAvailable(
+
+                                                                ),
+                                                                visual_signs_available=VisualSignsAvailable(
+                                                                    value=LimitationStatusEnumeration.FALSE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1059,10 +1095,12 @@ obj = PublicationDelivery(
                                                                                 AllModesEnumeration.RAIL,
                                                                             ],
                                                                             ticket_machines=True,
-                                                                            ticketing_service_facility_list=[
-                                                                                TicketingServiceFacilityEnumeration.CARD_TOP_UP,
-                                                                                TicketingServiceFacilityEnumeration.PURCHASE,
-                                                                            ],
+                                                                            ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                                                value=[
+                                                                                    TicketingServiceFacilityEnumeration.CARD_TOP_UP,
+                                                                                    TicketingServiceFacilityEnumeration.PURCHASE,
+                                                                                ]
+                                                                            ),
                                                                             payment_methods=[
                                                                                 PaymentMethodEnumeration.CASH,
                                                                                 PaymentMethodEnumeration.CREDIT_CARD,
@@ -1109,10 +1147,18 @@ obj = PublicationDelivery(
                                                             accessibility_limitation=AccessibilityLimitation(
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                                 version='01',
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1146,12 +1192,24 @@ obj = PublicationDelivery(
                                                             accessibility_limitation=AccessibilityLimitation(
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                                 version='01',
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE,
-                                                                audible_signals_available=LimitationStatusEnumeration.UNKNOWN,
-                                                                visual_signs_available=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                audible_signals_available=AudibleSignalsAvailable(
+                                                                    value=LimitationStatusEnumeration.UNKNOWN
+                                                                ),
+                                                                visual_signs_available=VisualSignsAvailable(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1233,10 +1291,18 @@ obj = PublicationDelivery(
                                                                 id='ztb:bh0023@lnk_A1-E2+Bus-Q1',
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                                 version='01',
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1302,10 +1368,18 @@ obj = PublicationDelivery(
                                                                 id='ztb:bh0023@lnk_A1-E1+A1-E2',
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                                 version='01',
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1389,10 +1463,18 @@ obj = PublicationDelivery(
                                                                 id='ztb:bh0023@lnk_A1-E2+Rail@Q1-E2tr',
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                                 version='01',
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1476,10 +1558,18 @@ obj = PublicationDelivery(
                                                                 id='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E2tr',
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                                 version='01',
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1864,12 +1954,24 @@ obj = PublicationDelivery(
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
                                                                 id='ztb:bh0023@lnk_Rail@Q1+Rail@Q2',
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                                escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                                lift_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                                audible_signals_available=LimitationStatusEnumeration.FALSE,
-                                                                visual_signs_available=LimitationStatusEnumeration.UNKNOWN
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+
+                                                                ),
+                                                                audible_signals_available=AudibleSignalsAvailable(
+
+                                                                ),
+                                                                visual_signs_available=VisualSignsAvailable(
+
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1925,12 +2027,24 @@ obj = PublicationDelivery(
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
                                                                 id='ztb:bh0023@lnk_Rail@Q2+Rail@Q1',
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                                escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                                lift_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                                audible_signals_available=LimitationStatusEnumeration.FALSE,
-                                                                visual_signs_available=LimitationStatusEnumeration.UNKNOWN
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+
+                                                                ),
+                                                                audible_signals_available=AudibleSignalsAvailable(
+
+                                                                ),
+                                                                visual_signs_available=VisualSignsAvailable(
+
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1975,7 +2089,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='ztb:bh0024',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='01',
@@ -2019,7 +2133,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='ztb:bh0024_Rail@Q1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='01',

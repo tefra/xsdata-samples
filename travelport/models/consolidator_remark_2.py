@@ -1,5 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
+from travelport.models.pseudo_city_code_3 import PseudoCityCode3
 from travelport.models.type_element_status_3 import TypeElementStatus3
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
@@ -37,15 +38,13 @@ class ConsolidatorRemark2:
         name = "ConsolidatorRemark"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    pseudo_city_code: list[str] = field(
+    pseudo_city_code: list[PseudoCityCode3] = field(
         default_factory=list,
         metadata={
             "name": "PseudoCityCode",
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 5,
-            "min_length": 2,
-            "max_length": 10,
         },
     )
     key: None | str = field(

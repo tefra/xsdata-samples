@@ -1,38 +1,32 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .accessibility_info_facility_enumeration import (
-    AccessibilityInfoFacilityEnumeration,
-)
-from .accessibility_tool_enumeration import AccessibilityToolEnumeration
+from .accessibility_info_facility_list import AccessibilityInfoFacilityList
+from .accessibility_tool_list import AccessibilityToolList
 from .alternative_texts_rel_structure import DataManagedObjectStructure
-from .assistance_facility_enumeration import AssistanceFacilityEnumeration
-from .car_service_facility_enumeration import CarServiceFacilityEnumeration
-from .catering_facility_enumeration import CateringFacilityEnumeration
-from .family_facility_enumeration import FamilyFacilityEnumeration
-from .fare_class_enumeration import FareClassEnumeration
-from .gender_limitation_enumeration import GenderLimitationEnumeration
-from .meal_facility_enumeration import MealFacilityEnumeration
-from .medical_facility_enumeration import MedicalFacilityEnumeration
-from .mobility_facility_enumeration import MobilityFacilityEnumeration
+from .assistance_facility_list import AssistanceFacilityList
+from .car_service_facility_list import CarServiceFacilityList
+from .catering_facility_list import CateringFacilityList
+from .family_facility_list import FamilyFacilityList
+from .fare_classes import FareClasses
+from .gender_limitation import GenderLimitation
+from .meal_facility_list import MealFacilityList
+from .medical_facility_list import MedicalFacilityList
+from .mobility_facility_list import MobilityFacilityList
 from .multilingual_string import MultilingualString
-from .nuisance_facility_enumeration import NuisanceFacilityEnumeration
+from .nuisance_facility_list import NuisanceFacilityList
 from .organisation_ref_structure import OrganisationRefStructure
-from .passenger_comms_facility_enumeration import (
-    PassengerCommsFacilityEnumeration,
-)
+from .passenger_comms_facility_list import PassengerCommsFacilityList
 from .passenger_information_equipment_enumeration import (
     PassengerInformationEquipmentEnumeration,
 )
-from .passenger_information_facility_enumeration import (
-    PassengerInformationFacilityEnumeration,
+from .passenger_information_facility_list import (
+    PassengerInformationFacilityList,
 )
-from .retail_facility_enumeration import RetailFacilityEnumeration
-from .safety_facility_enumeration import SafetyFacilityEnumeration
-from .sanitary_facility_enumeration import SanitaryFacilityEnumeration
-from .ticketing_facility_enumeration import TicketingFacilityEnumeration
-from .ticketing_service_facility_enumeration import (
-    TicketingServiceFacilityEnumeration,
-)
+from .retail_facility_list import RetailFacilityList
+from .safety_facility_list import SafetyFacilityList
+from .sanitary_facility_list import SanitaryFacilityList
+from .ticketing_facility_list import TicketingFacilityList
+from .ticketing_service_facility_list import TicketingServiceFacilityList
 from .type_of_facility_ref import TypeOfFacilityRef
 from .types_of_equipment_rel_structure import TypesOfEquipmentRelStructure
 
@@ -76,72 +70,65 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_info_facility_list: List[
-        AccessibilityInfoFacilityEnumeration
+    accessibility_info_facility_list: Optional[
+        AccessibilityInfoFacilityList
     ] = field(
-        default_factory=list,
+        default=None,
         metadata={
             "name": "AccessibilityInfoFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    assistance_facility_list: List[AssistanceFacilityEnumeration] = field(
-        default_factory=list,
+    assistance_facility_list: Optional[AssistanceFacilityList] = field(
+        default=None,
         metadata={
             "name": "AssistanceFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    accessibility_tool_list: List[AccessibilityToolEnumeration] = field(
-        default_factory=list,
+    accessibility_tool_list: Optional[AccessibilityToolList] = field(
+        default=None,
         metadata={
             "name": "AccessibilityToolList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    car_service_facility_list: List[CarServiceFacilityEnumeration] = field(
-        default_factory=list,
+    car_service_facility_list: Optional[CarServiceFacilityList] = field(
+        default=None,
         metadata={
             "name": "CarServiceFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    catering_facility_list: List[CateringFacilityEnumeration] = field(
-        default_factory=list,
+    catering_facility_list: Optional[CateringFacilityList] = field(
+        default=None,
         metadata={
             "name": "CateringFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    family_facility_list: List[FamilyFacilityEnumeration] = field(
-        default_factory=list,
+    family_facility_list: Optional[FamilyFacilityList] = field(
+        default=None,
         metadata={
             "name": "FamilyFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    fare_classes: List[FareClassEnumeration] = field(
-        default_factory=list,
+    fare_classes: Optional[FareClasses] = field(
+        default=None,
         metadata={
             "name": "FareClasses",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    gender_limitation: Optional[GenderLimitationEnumeration] = field(
+    gender_limitation: Optional[GenderLimitation] = field(
         default=None,
         metadata={
             "name": "GenderLimitation",
@@ -149,51 +136,46 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    meal_facility_list: List[MealFacilityEnumeration] = field(
-        default_factory=list,
+    meal_facility_list: Optional[MealFacilityList] = field(
+        default=None,
         metadata={
             "name": "MealFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    medical_facility_list: List[MedicalFacilityEnumeration] = field(
-        default_factory=list,
+    medical_facility_list: Optional[MedicalFacilityList] = field(
+        default=None,
         metadata={
             "name": "MedicalFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    mobility_facility_list: List[MobilityFacilityEnumeration] = field(
-        default_factory=list,
+    mobility_facility_list: Optional[MobilityFacilityList] = field(
+        default=None,
         metadata={
             "name": "MobilityFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    nuisance_facility_list: List[NuisanceFacilityEnumeration] = field(
-        default_factory=list,
+    nuisance_facility_list: Optional[NuisanceFacilityList] = field(
+        default=None,
         metadata={
             "name": "NuisanceFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    passenger_comms_facility_list: List[
-        PassengerCommsFacilityEnumeration
+    passenger_comms_facility_list: Optional[
+        PassengerCommsFacilityList
     ] = field(
-        default_factory=list,
+        default=None,
         metadata={
             "name": "PassengerCommsFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
     passenger_information_equipment_list: List[
@@ -207,61 +189,55 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    passenger_information_facility_list: List[
-        PassengerInformationFacilityEnumeration
+    passenger_information_facility_list: Optional[
+        PassengerInformationFacilityList
     ] = field(
-        default_factory=list,
+        default=None,
         metadata={
             "name": "PassengerInformationFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    retail_facility_list: List[RetailFacilityEnumeration] = field(
-        default_factory=list,
+    retail_facility_list: Optional[RetailFacilityList] = field(
+        default=None,
         metadata={
             "name": "RetailFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    safety_facility_list: List[SafetyFacilityEnumeration] = field(
-        default_factory=list,
+    safety_facility_list: Optional[SafetyFacilityList] = field(
+        default=None,
         metadata={
             "name": "SafetyFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    sanitary_facility_list: List[SanitaryFacilityEnumeration] = field(
-        default_factory=list,
+    sanitary_facility_list: Optional[SanitaryFacilityList] = field(
+        default=None,
         metadata={
             "name": "SanitaryFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    ticketing_facility_list: List[TicketingFacilityEnumeration] = field(
-        default_factory=list,
+    ticketing_facility_list: Optional[TicketingFacilityList] = field(
+        default=None,
         metadata={
             "name": "TicketingFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    ticketing_service_facility_list: List[
-        TicketingServiceFacilityEnumeration
+    ticketing_service_facility_list: Optional[
+        TicketingServiceFacilityList
     ] = field(
-        default_factory=list,
+        default=None,
         metadata={
             "name": "TicketingServiceFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )

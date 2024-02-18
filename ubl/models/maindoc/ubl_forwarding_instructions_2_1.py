@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
-from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     CarrierParty,
     ConsignorParty,
@@ -11,18 +10,22 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     Signature,
 )
 from ubl.models.common.ubl_common_basic_components_2_1 import (
+    AdValoremIndicator,
     CarrierAssignedId,
     CustomizationId,
     DeclaredCarriageValueAmount,
     Description,
     DocumentStatusCode,
     Id,
+    IssueDate,
+    IssueTime,
     Name,
     Note,
     OtherInstruction,
     ProfileExecutionId,
     ProfileId,
     ShippingOrderId,
+    ToOrderIndicator,
     UblversionId,
     Uuid,
 )
@@ -100,7 +103,7 @@ class ForwardingInstructionsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[XmlDate] = field(
+    issue_date: Optional[IssueDate] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -108,7 +111,7 @@ class ForwardingInstructionsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[XmlTime] = field(
+    issue_time: Optional[IssueTime] = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -156,7 +159,7 @@ class ForwardingInstructionsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    to_order_indicator: Optional[bool] = field(
+    to_order_indicator: Optional[ToOrderIndicator] = field(
         default=None,
         metadata={
             "name": "ToOrderIndicator",
@@ -164,7 +167,7 @@ class ForwardingInstructionsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    ad_valorem_indicator: Optional[bool] = field(
+    ad_valorem_indicator: Optional[AdValoremIndicator] = field(
         default=None,
         metadata={
             "name": "AdValoremIndicator",

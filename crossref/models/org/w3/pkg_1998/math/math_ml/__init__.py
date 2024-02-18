@@ -21,6 +21,18 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.arcsinh import Arcsinh
 from crossref.models.org.w3.pkg_1998.math.math_ml.arctan import Arctan
 from crossref.models.org.w3.pkg_1998.math.math_ml.arctanh import Arctanh
 from crossref.models.org.w3.pkg_1998.math.math_ml.arg import Arg
+from crossref.models.org.w3.pkg_1998.math.math_ml.binary_linalg_class import (
+    BinaryLinalgType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.binary_logical_class import (
+    BinaryLogicalType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.binary_reln_class import (
+    BinaryRelnType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.binary_set_class import (
+    BinarySetType,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.card import Card
 from crossref.models.org.w3.pkg_1998.math.math_ml.cartesianproduct import (
     Cartesianproduct,
@@ -88,6 +100,12 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.condition import (
     Uplimit,
 )
 from crossref.models.org.w3.pkg_1998.math.math_ml.conjugate import Conjugate
+from crossref.models.org.w3.pkg_1998.math.math_ml.constant_arith_class import (
+    ConstantArithType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.constant_set_class import (
+    ConstantSetType,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.cos import Cos
 from crossref.models.org.w3.pkg_1998.math.math_ml.cosh import Cosh
 from crossref.models.org.w3.pkg_1998.math.math_ml.cot import Cot
@@ -99,10 +117,16 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.curl import Curl
 from crossref.models.org.w3.pkg_1998.math.math_ml.declare_occurrence import (
     DeclareOccurrence,
 )
+from crossref.models.org.w3.pkg_1998.math.math_ml.deprecated_cont_exp import (
+    DeprecatedContExp,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.determinant import (
     Determinant,
 )
 from crossref.models.org.w3.pkg_1998.math.math_ml.diff import Diff
+from crossref.models.org.w3.pkg_1998.math.math_ml.differential_operator_class import (
+    DifferentialOperatorType,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.divergence import Divergence
 from crossref.models.org.w3.pkg_1998.math.math_ml.divide import Divide
 from crossref.models.org.w3.pkg_1998.math.math_ml.domain import Domain
@@ -123,6 +147,9 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.forall import Forall
 from crossref.models.org.w3.pkg_1998.math.math_ml.gcd import Gcd
 from crossref.models.org.w3.pkg_1998.math.math_ml.geq import Geq
 from crossref.models.org.w3.pkg_1998.math.math_ml.grad import Grad
+from crossref.models.org.w3.pkg_1998.math.math_ml.group_alignment import (
+    GroupAlignment,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.gt import Gt
 from crossref.models.org.w3.pkg_1998.math.math_ml.ident import Ident
 from crossref.models.org.w3.pkg_1998.math.math_ml.image import Image
@@ -131,16 +158,24 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.imaginaryi import Imaginaryi
 from crossref.models.org.w3.pkg_1998.math.math_ml.implies import Implies
 from crossref.models.org.w3.pkg_1998.math.math_ml.in_mod import In
 from crossref.models.org.w3.pkg_1998.math.math_ml.infinity import Infinity
+from crossref.models.org.w3.pkg_1998.math.math_ml.int_class import IntType
 from crossref.models.org.w3.pkg_1998.math.math_ml.int_mod import Int
 from crossref.models.org.w3.pkg_1998.math.math_ml.integers import Integers
 from crossref.models.org.w3.pkg_1998.math.math_ml.intersect import Intersect
 from crossref.models.org.w3.pkg_1998.math.math_ml.interval import Interval
+from crossref.models.org.w3.pkg_1998.math.math_ml.interval_class import (
+    IntervalType,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.inverse import Inverse
+from crossref.models.org.w3.pkg_1998.math.math_ml.lambda_class import (
+    LambdaType,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.lambda_mod import Lambda
 from crossref.models.org.w3.pkg_1998.math.math_ml.laplacian import Laplacian
 from crossref.models.org.w3.pkg_1998.math.math_ml.lcm import Lcm
 from crossref.models.org.w3.pkg_1998.math.math_ml.leq import Leq
 from crossref.models.org.w3.pkg_1998.math.math_ml.limit import Limit
+from crossref.models.org.w3.pkg_1998.math.math_ml.limit_class import LimitType
 from crossref.models.org.w3.pkg_1998.math.math_ml.linestyle import Linestyle
 from crossref.models.org.w3.pkg_1998.math.math_ml.list_order import ListOrder
 from crossref.models.org.w3.pkg_1998.math.math_ml.ln import Ln
@@ -148,6 +183,9 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.log import Log
 from crossref.models.org.w3.pkg_1998.math.math_ml.lt import Lt
 from crossref.models.org.w3.pkg_1998.math.math_ml.maction_value import (
     MactionValue,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.malign_expression import (
+    MalignExpression,
 )
 from crossref.models.org.w3.pkg_1998.math.math_ml.maligngroup import (
     Maligngroup,
@@ -608,6 +646,39 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.munderover_align import (
 from crossref.models.org.w3.pkg_1998.math.math_ml.munderover_value import (
     MunderoverValue,
 )
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_arith_class import (
+    NaryArithType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_constructor_class import (
+    NaryConstructorType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_functional_class import (
+    NaryFunctionalType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_linalg_class import (
+    NaryLinalgType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_logical_class import (
+    NaryLogicalType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_minmax_class import (
+    NaryMinmaxType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_reln_class import (
+    NaryRelnType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_set_class import (
+    NarySetType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_set_reln_class import (
+    NarySetRelnType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_setlist_constructor_class import (
+    NarySetlistConstructorType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.nary_stats_class import (
+    NaryStatsType,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.naturalnumbers import (
     Naturalnumbers,
 )
@@ -628,12 +699,24 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.outerproduct import (
 from crossref.models.org.w3.pkg_1998.math.math_ml.partialdiff import (
     Partialdiff,
 )
+from crossref.models.org.w3.pkg_1998.math.math_ml.partialdiff_class import (
+    PartialdiffType,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.pi import Pi
 from crossref.models.org.w3.pkg_1998.math.math_ml.plus import Plus
 from crossref.models.org.w3.pkg_1998.math.math_ml.power import Power
+from crossref.models.org.w3.pkg_1998.math.math_ml.presentation_expression import (
+    PresentationExpression,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.primes import Primes
 from crossref.models.org.w3.pkg_1998.math.math_ml.product import Product
+from crossref.models.org.w3.pkg_1998.math.math_ml.product_class import (
+    ProductType,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.prsubset import Prsubset
+from crossref.models.org.w3.pkg_1998.math.math_ml.quantifier_class import (
+    QuantifierType,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.quotient import Quotient
 from crossref.models.org.w3.pkg_1998.math.math_ml.rationals import Rationals
 from crossref.models.org.w3.pkg_1998.math.math_ml.real import Real
@@ -654,12 +737,46 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.sin import Sin
 from crossref.models.org.w3.pkg_1998.math.math_ml.sinh import Sinh
 from crossref.models.org.w3.pkg_1998.math.math_ml.subset import Subset
 from crossref.models.org.w3.pkg_1998.math.math_ml.sum import Sum
+from crossref.models.org.w3.pkg_1998.math.math_ml.sum_class import SumType
+from crossref.models.org.w3.pkg_1998.math.math_ml.table_cell_expression import (
+    TableCellExpression,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.table_cell_expression_rowalign import (
+    TableCellExpressionRowalign,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.table_cell_expression_value import (
+    TableCellExpressionValue,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.table_row_expression import (
+    TableRowExpression,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.tan import Tan
 from crossref.models.org.w3.pkg_1998.math.math_ml.tanh import Tanh
 from crossref.models.org.w3.pkg_1998.math.math_ml.tendsto import Tendsto
 from crossref.models.org.w3.pkg_1998.math.math_ml.times import Times
+from crossref.models.org.w3.pkg_1998.math.math_ml.token_expression import (
+    TokenExpression,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.transpose import Transpose
 from crossref.models.org.w3.pkg_1998.math.math_ml.true import TrueType
+from crossref.models.org.w3.pkg_1998.math.math_ml.unary_elementary_class import (
+    UnaryElementaryType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.unary_functional_class import (
+    UnaryFunctionalType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.unary_linalg_class import (
+    UnaryLinalgType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.unary_logical_class import (
+    UnaryLogicalType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.unary_set_class import (
+    UnarySetType,
+)
+from crossref.models.org.w3.pkg_1998.math.math_ml.unary_veccalc_class import (
+    UnaryVeccalcType,
+)
 from crossref.models.org.w3.pkg_1998.math.math_ml.union import UnionType
 from crossref.models.org.w3.pkg_1998.math.math_ml.variance import Variance
 from crossref.models.org.w3.pkg_1998.math.math_ml.vector import Vector
@@ -691,6 +808,10 @@ __all__ = [
     "Arctan",
     "Arctanh",
     "Arg",
+    "BinaryLinalgType",
+    "BinaryLogicalType",
+    "BinaryRelnType",
+    "BinarySetType",
     "Card",
     "Cartesianproduct",
     "Cbytes",
@@ -752,6 +873,8 @@ __all__ = [
     "Set",
     "Uplimit",
     "Conjugate",
+    "ConstantArithType",
+    "ConstantSetType",
     "Cos",
     "Cosh",
     "Cot",
@@ -761,8 +884,10 @@ __all__ = [
     "Csch",
     "Curl",
     "DeclareOccurrence",
+    "DeprecatedContExp",
     "Determinant",
     "Diff",
+    "DifferentialOperatorType",
     "Divergence",
     "Divide",
     "Domain",
@@ -781,6 +906,7 @@ __all__ = [
     "Gcd",
     "Geq",
     "Grad",
+    "GroupAlignment",
     "Gt",
     "Ident",
     "Image",
@@ -789,22 +915,27 @@ __all__ = [
     "Implies",
     "In",
     "Infinity",
+    "IntType",
     "Int",
     "Integers",
     "Intersect",
     "Interval",
+    "IntervalType",
     "Inverse",
+    "LambdaType",
     "Lambda",
     "Laplacian",
     "Lcm",
     "Leq",
     "Limit",
+    "LimitType",
     "Linestyle",
     "ListOrder",
     "Ln",
     "Log",
     "Lt",
     "MactionValue",
+    "MalignExpression",
     "Maligngroup",
     "MaligngroupGroupalign",
     "MaligngroupValue",
@@ -1000,6 +1131,17 @@ __all__ = [
     "MunderoverAccentunder",
     "MunderoverAlign",
     "MunderoverValue",
+    "NaryArithType",
+    "NaryConstructorType",
+    "NaryFunctionalType",
+    "NaryLinalgType",
+    "NaryLogicalType",
+    "NaryMinmaxType",
+    "NaryRelnType",
+    "NarySetType",
+    "NarySetRelnType",
+    "NarySetlistConstructorType",
+    "NaryStatsType",
     "Naturalnumbers",
     "Neq",
     "NoneType",
@@ -1012,12 +1154,16 @@ __all__ = [
     "Or",
     "Outerproduct",
     "Partialdiff",
+    "PartialdiffType",
     "Pi",
     "Plus",
     "Power",
+    "PresentationExpression",
     "Primes",
     "Product",
+    "ProductType",
     "Prsubset",
+    "QuantifierType",
     "Quotient",
     "Rationals",
     "Real",
@@ -1036,12 +1182,24 @@ __all__ = [
     "Sinh",
     "Subset",
     "Sum",
+    "SumType",
+    "TableCellExpression",
+    "TableCellExpressionRowalign",
+    "TableCellExpressionValue",
+    "TableRowExpression",
     "Tan",
     "Tanh",
     "Tendsto",
     "Times",
+    "TokenExpression",
     "Transpose",
     "TrueType",
+    "UnaryElementaryType",
+    "UnaryFunctionalType",
+    "UnaryLinalgType",
+    "UnaryLogicalType",
+    "UnarySetType",
+    "UnaryVeccalcType",
     "UnionType",
     "Variance",
     "Vector",

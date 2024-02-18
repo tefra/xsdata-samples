@@ -4,6 +4,7 @@ from netex.models.access_rights_in_product_rel_structure import AccessRightsInPr
 from netex.models.address_ref import AddressRef
 from netex.models.addressable_place_ref import AddressablePlaceRef
 from netex.models.addresses_in_frame_rel_structure import AddressesInFrameRelStructure
+from netex.models.air_submode import AirSubmode
 from netex.models.air_submode_enumeration import AirSubmodeEnumeration
 from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
@@ -19,8 +20,9 @@ from netex.models.cancelling import Cancelling
 from netex.models.car_model_profile import CarModelProfile
 from netex.models.car_model_profile_ref import CarModelProfileRef
 from netex.models.catering_facility_enumeration import CateringFacilityEnumeration
+from netex.models.catering_facility_list import CateringFacilityList
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
-from netex.models.cell_versioned_child_structure import FareTable
+from netex.models.cell_versioned_child_structure import FareTable1
 from netex.models.charging_moment_enumeration import ChargingMomentEnumeration
 from netex.models.chauffeured_vehicle_service import ChauffeuredVehicleService
 from netex.models.chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
@@ -97,6 +99,7 @@ from netex.models.multilingual_string import MultilingualString
 from netex.models.network_filter_by_value_structure import NetworkFilterByValueStructure
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.nuisance_facility_enumeration import NuisanceFacilityEnumeration
+from netex.models.nuisance_facility_list import NuisanceFacilityList
 from netex.models.object_filter_by_value_structure import ObjectFilterByValueStructure
 from netex.models.offered_travel_specification import OfferedTravelSpecification
 from netex.models.online_service import OnlineService
@@ -115,14 +118,16 @@ from netex.models.organisation_type_enumeration import OrganisationTypeEnumerati
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
 from netex.models.parking import Parking
 from netex.models.parking_areas_rel_structure import ParkingAreasRelStructure
-from netex.models.parking_bay import ParkingBay
+from netex.models.parking_bay_1 import ParkingBay1
 from netex.models.parking_bay_ref import ParkingBayRef
 from netex.models.parking_bays_rel_structure import ParkingBaysRelStructure
 from netex.models.parking_type_enumeration import ParkingTypeEnumeration
 from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
 from netex.models.parkings_in_frame_rel_structure import ParkingsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_capacity_structure import PassengerCapacityStructure
 from netex.models.passenger_comms_facility_enumeration import PassengerCommsFacilityEnumeration
+from netex.models.passenger_comms_facility_list import PassengerCommsFacilityList
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.point_in_single_journey_path_ref import PointInSingleJourneyPathRef
 from netex.models.point_of_interest import PointOfInterest
@@ -139,10 +144,11 @@ from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
 from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
-from netex.models.quay import Quay
+from netex.models.quay_1 import Quay1
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
+from netex.models.rail_submode import RailSubmode
 from netex.models.rail_submode_enumeration import RailSubmodeEnumeration
 from netex.models.resource_frame import ResourceFrame
 from netex.models.resource_frame_ref import ResourceFrameRef
@@ -180,7 +186,7 @@ from netex.models.site_type_enumeration import SiteTypeEnumeration
 from netex.models.specific_parameter_assignment_version_structure import SpecificParameterAssignment
 from netex.models.specific_parameter_assignment_version_structure import SpecificParameterAssignmentsRelStructure
 from netex.models.stakeholder_role_type_enumeration import StakeholderRoleTypeEnumeration
-from netex.models.stop_place import StopPlace
+from netex.models.stop_place_1 import StopPlace1
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_type_enumeration import StopTypeEnumeration
 from netex.models.submode import Submode
@@ -195,8 +201,10 @@ from netex.models.taxi_parking_area import TaxiParkingArea
 from netex.models.taxi_rank import TaxiRank
 from netex.models.taxi_stand import TaxiStand
 from netex.models.taxi_stands_rel_structure import TaxiStandsRelStructure
+from netex.models.taxi_submode import TaxiSubmode
 from netex.models.taxi_submode_enumeration import TaxiSubmodeEnumeration
 from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from netex.models.ticketing_service_facility_list import TicketingServiceFacilityList
 from netex.models.time_interval import TimeInterval
 from netex.models.time_interval_price import TimeIntervalPrice
 from netex.models.time_interval_ref import TimeIntervalRef
@@ -284,10 +292,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2020, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2020, 12, 17, 9, 30, 46, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         description=MultilingualString(
             value='Request for hme james tariff'
         ),
@@ -529,7 +541,9 @@ obj = PublicationDelivery(
                                             postal_region='Metroland'
                                         ),
                                         primary_mode=AllModesEnumeration.TAXI,
-                                        choice=TaxiSubmodeEnumeration.CHARTER_TAXI,
+                                        choice=TaxiSubmode(
+                                            value=TaxiSubmodeEnumeration.CHARTER_TAXI
+                                        ),
                                         mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=VehiclePoolingRef(
                                             version='any',
                                             ref='chauffeured_car'
@@ -582,7 +596,9 @@ obj = PublicationDelivery(
                                                     id='chauffeured_car',
                                                     version='any',
                                                     transport_mode=AllModesEnumeration.TAXI,
-                                                    choice=TaxiSubmodeEnumeration.CHARTER_TAXI
+                                                    choice=TaxiSubmode(
+                                                        value=TaxiSubmodeEnumeration.CHARTER_TAXI
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -600,19 +616,25 @@ obj = PublicationDelivery(
                                                     id='scheduled_flights@international',
                                                     version='any',
                                                     transport_mode=AllModesEnumeration.AIR,
-                                                    choice=AirSubmodeEnumeration.INTERNATIONAL_FLIGHT
+                                                    choice=AirSubmode(
+                                                        value=AirSubmodeEnumeration.INTERNATIONAL_FLIGHT
+                                                    )
                                                 ),
                                                 Submode(
                                                     id='scheduled_flights@charter',
                                                     version='any',
                                                     transport_mode=AllModesEnumeration.AIR,
-                                                    choice=AirSubmodeEnumeration.INTERNATIONAL_CHARTER_FLIGHT
+                                                    choice=AirSubmode(
+                                                        value=AirSubmodeEnumeration.INTERNATIONAL_CHARTER_FLIGHT
+                                                    )
                                                 ),
                                                 Submode(
                                                     id='scheduled_flights@domestic',
                                                     version='any',
                                                     transport_mode=AllModesEnumeration.AIR,
-                                                    choice=AirSubmodeEnumeration.DOMESTIC_FLIGHT
+                                                    choice=AirSubmode(
+                                                        value=AirSubmodeEnumeration.DOMESTIC_FLIGHT
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -630,19 +652,25 @@ obj = PublicationDelivery(
                                                     id='scheduled_trains@tgv',
                                                     version='any',
                                                     transport_mode=AllModesEnumeration.RAIL,
-                                                    choice=RailSubmodeEnumeration.HIGH_SPEED_RAIL
+                                                    choice=RailSubmode(
+                                                        value=RailSubmodeEnumeration.HIGH_SPEED_RAIL
+                                                    )
                                                 ),
                                                 Submode(
                                                     id='scheduled_trains@regional',
                                                     version='any',
                                                     transport_mode=AllModesEnumeration.RAIL,
-                                                    choice=RailSubmodeEnumeration.REGIONAL_RAIL
+                                                    choice=RailSubmode(
+                                                        value=RailSubmodeEnumeration.REGIONAL_RAIL
+                                                    )
                                                 ),
                                                 Submode(
                                                     id='scheduled_trains@suburban',
                                                     version='any',
                                                     transport_mode=AllModesEnumeration.RAIL,
-                                                    choice=RailSubmodeEnumeration.SUBURBAN_RAILWAY
+                                                    choice=RailSubmode(
+                                                        value=RailSubmodeEnumeration.SUBURBAN_RAILWAY
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -655,23 +683,29 @@ obj = PublicationDelivery(
                                     ServiceFacilitySet(
                                         id='no_smoking',
                                         version='any',
-                                        nuisance_facility_list=[
-                                            NuisanceFacilityEnumeration.NO_SMOKING,
-                                        ]
+                                        nuisance_facility_list=NuisanceFacilityList(
+                                            value=[
+                                                NuisanceFacilityEnumeration.NO_SMOKING,
+                                            ]
+                                        )
                                     ),
                                     ServiceFacilitySet(
                                         id='smoking',
                                         version='any',
-                                        nuisance_facility_list=[
-                                            NuisanceFacilityEnumeration.SMOKING,
-                                        ]
+                                        nuisance_facility_list=NuisanceFacilityList(
+                                            value=[
+                                                NuisanceFacilityEnumeration.SMOKING,
+                                            ]
+                                        )
                                     ),
                                     ServiceFacilitySet(
                                         id='wifi',
                                         version='any',
-                                        passenger_comms_facility_list=[
-                                            PassengerCommsFacilityEnumeration.FREE_WIFI,
-                                        ]
+                                        passenger_comms_facility_list=PassengerCommsFacilityList(
+                                            value=[
+                                                PassengerCommsFacilityEnumeration.FREE_WIFI,
+                                            ]
+                                        )
                                     ),
                                 ]
                             ),
@@ -702,13 +736,17 @@ obj = PublicationDelivery(
                                                 ServiceFacilitySet(
                                                     id='stretch_limo',
                                                     version='any',
-                                                    catering_facility_list=[
-                                                        CateringFacilityEnumeration.BAR,
-                                                    ],
-                                                    passenger_comms_facility_list=[
-                                                        PassengerCommsFacilityEnumeration.VIDEO_ENTERTAINMENT,
-                                                        PassengerCommsFacilityEnumeration.PUBLIC_WIFI,
-                                                    ]
+                                                    catering_facility_list=CateringFacilityList(
+                                                        value=[
+                                                            CateringFacilityEnumeration.BAR,
+                                                        ]
+                                                    ),
+                                                    passenger_comms_facility_list=PassengerCommsFacilityList(
+                                                        value=[
+                                                            PassengerCommsFacilityEnumeration.VIDEO_ENTERTAINMENT,
+                                                            PassengerCommsFacilityEnumeration.PUBLIC_WIFI,
+                                                        ]
+                                                    )
                                                 ),
                                             ]
                                         )
@@ -883,7 +921,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace(
+                                    StopPlace1(
                                         id='alphaville_aeroport',
                                         version='any',
                                         name=MultilingualString(
@@ -928,7 +966,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='alphaville_aeroport@taxi_set_down',
                                                     version='any',
                                                     name=MultilingualString(
@@ -939,7 +977,7 @@ obj = PublicationDelivery(
                                                     boarding_use=False,
                                                     alighting_use=True
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='alphaville_aeroport@taxi_pick_up',
                                                     version='any',
                                                     name=MultilingualString(
@@ -953,7 +991,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='alphaville_gare',
                                         version='any',
                                         name=MultilingualString(
@@ -979,7 +1017,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='alphaville_gare@platform_1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -989,7 +1027,7 @@ obj = PublicationDelivery(
                                                     boarding_use=True,
                                                     alighting_use=True
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='alphaville_gare@platform_2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1002,7 +1040,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='alphaville_gare@taxi',
                                         version='any',
                                         name=MultilingualString(
@@ -1024,7 +1062,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.TAXI,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='alphaville_gare@taxi_set_down',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1034,7 +1072,7 @@ obj = PublicationDelivery(
                                                     boarding_use=False,
                                                     alighting_use=True
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='alphaville_gare@taxi_pick_up',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1137,7 +1175,7 @@ obj = PublicationDelivery(
                                                     total_capacity=20,
                                                     bays=ParkingBaysRelStructure(
                                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay=[
-                                                            ParkingBay(
+                                                            ParkingBay1(
                                                                 id='alphaville_airport_taxi_parking@A1@chauff_1',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -1147,7 +1185,7 @@ obj = PublicationDelivery(
                                                                     value='Chauffeur 1'
                                                                 )
                                                             ),
-                                                            ParkingBay(
+                                                            ParkingBay1(
                                                                 id='alphaville_airport_taxi_parking@A1@chauff_2',
                                                                 version='any',
                                                                 name=MultilingualString(
@@ -2022,11 +2060,13 @@ obj = PublicationDelivery(
                                                         ref='online'
                                                     ),
                                                     distribution_channel_type=DistributionChannelTypeEnumeration.ONLINE,
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.RESERVATIONS,
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                        TicketingServiceFacilityEnumeration.REFUND,
-                                                    ],
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.RESERVATIONS,
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                            TicketingServiceFacilityEnumeration.REFUND,
+                                                        ]
+                                                    ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
                                                         version='any',
                                                         ref='email'
@@ -2041,11 +2081,13 @@ obj = PublicationDelivery(
                                                         ref='call_centre'
                                                     ),
                                                     distribution_channel_type=DistributionChannelTypeEnumeration.TELEPHONE,
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.RESERVATIONS,
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                        TicketingServiceFacilityEnumeration.REFUND,
-                                                    ],
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.RESERVATIONS,
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                            TicketingServiceFacilityEnumeration.REFUND,
+                                                        ]
+                                                    ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
                                                         version='any',
                                                         ref='email'
@@ -2092,7 +2134,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable(
+                                    FareTable1(
                                         id='home_james@prepriced_trip',
                                         version='any',
                                         name=MultilingualString(
@@ -2494,11 +2536,13 @@ obj = PublicationDelivery(
                                                         ref='online'
                                                     ),
                                                     distribution_channel_type=DistributionChannelTypeEnumeration.ONLINE,
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.RESERVATIONS,
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                        TicketingServiceFacilityEnumeration.REFUND,
-                                                    ],
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.RESERVATIONS,
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                            TicketingServiceFacilityEnumeration.REFUND,
+                                                        ]
+                                                    ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
                                                         version='any',
                                                         ref='email'
@@ -2513,11 +2557,13 @@ obj = PublicationDelivery(
                                                         ref='call_centre'
                                                     ),
                                                     distribution_channel_type=DistributionChannelTypeEnumeration.TELEPHONE,
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.RESERVATIONS,
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                        TicketingServiceFacilityEnumeration.REFUND,
-                                                    ],
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.RESERVATIONS,
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                            TicketingServiceFacilityEnumeration.REFUND,
+                                                        ]
+                                                    ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
                                                         version='any',
                                                         ref='email'
@@ -2564,7 +2610,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable(
+                                    FareTable1(
                                         id='home_james@charter',
                                         version='any',
                                         name=MultilingualString(
@@ -2709,7 +2755,9 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.TAXI,
                                         transport_submode=TransportSubmode(
-                                            choice=TaxiSubmodeEnumeration.CHARTER_TAXI
+                                            choice=TaxiSubmode(
+                                                value=TaxiSubmodeEnumeration.CHARTER_TAXI
+                                            )
                                         ),
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=ChauffeuredVehicleServiceRef(
                                             version='any',

@@ -1,4 +1,4 @@
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -9,6 +9,7 @@ from netex.models.day_type_assignments_rel_structure import DayTypeAssignmentsRe
 from netex.models.day_type_ref import DayTypeRef
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.service_calendar import ServiceCalendar
@@ -22,10 +23,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -75,11 +80,11 @@ obj = PublicationDelivery(
                     to_date=XmlDate(2008, 6, 14),
                     day_types=DayTypesRelStructure(
                         day_type_ref_or_day_type=[
-                            DayType(
+                            DayType1(
                                 id='noptis:9086002000100001',
                                 version='any'
                             ),
-                            DayType(
+                            DayType1(
                                 id='noptis:9086002000100002',
                                 version='any'
                             ),

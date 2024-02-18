@@ -1,6 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.email_1 import Email1
+from travelport.models.simple_name_1 import SimpleName1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,7 +20,7 @@ class TypeEmailAddress:
             "required": True,
         },
     )
-    simple_name: None | str = field(
+    simple_name: None | SimpleName1 = field(
         default=None,
         metadata={
             "name": "SimpleName",

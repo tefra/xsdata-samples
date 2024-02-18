@@ -14,6 +14,7 @@ from travelport.models.guarantee_1 import Guarantee1
 from travelport.models.payment_information import PaymentInformation
 from travelport.models.phone_number_1 import PhoneNumber1
 from travelport.models.reservation_name_1 import ReservationName1
+from travelport.models.sell_message_1 import SellMessage1
 from travelport.models.special_equipment_1 import SpecialEquipment1
 from travelport.models.third_party_information_1 import ThirdPartyInformation1
 from travelport.models.vehicle import Vehicle
@@ -197,7 +198,7 @@ class VehicleReservation(BaseReservation1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    sell_message: list[str] = field(
+    sell_message: list[SellMessage1] = field(
         default_factory=list,
         metadata={
             "name": "SellMessage",

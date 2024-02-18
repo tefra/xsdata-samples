@@ -7,6 +7,7 @@ from ubl.models.common.ubl_xad_esv132_2_1 import UnsignedSignaturePropertiesType
 from ubl.models.common.ubl_xad_esv132_2_1 import XadEstimeStampType
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import CanonicalizationMethod
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import DigestMethod
+from ubl.models.common.ubl_xmldsig_core_schema_2_1 import DigestValue
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import KeyInfo
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import KeyValue
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import Object
@@ -37,7 +38,9 @@ obj = Signature(
                     algorithm='http://www.w3.org/2000/09/xmldsig#sha1',
                     content=[]
                 ),
-                digest_value=b'\xa8\xcf\xfe\x1a\xc88\xfcO\xf4\xa7w\xc4\xf4\xb4\xd9\x03\xa5\xed\x91\xdb',
+                digest_value=DigestValue(
+                    value=b'\xa8\xcf\xfe\x1a\xc88\xfcO\xf4\xa7w\xc4\xf4\xb4\xd9\x03\xa5\xed\x91\xdb'
+                ),
                 uri='UBL-Invoice-2.0-Detached.xml'
             ),
             Reference(
@@ -45,7 +48,9 @@ obj = Signature(
                     algorithm='http://www.w3.org/2000/09/xmldsig#sha1',
                     content=[]
                 ),
-                digest_value=b'\x9a8\x91\xeb[K\xd9\xd5w\x1c\xcb\xac\xdc`F\xfd\xa1#n\xde',
+                digest_value=DigestValue(
+                    value=b'\x9a8\x91\xeb[K\xd9\xd5w\x1c\xcb\xac\xdc`F\xfd\xa1#n\xde'
+                ),
                 uri='#xades-test-s'
             ),
         ]

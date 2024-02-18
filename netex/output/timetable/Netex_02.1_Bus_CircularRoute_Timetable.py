@@ -1,7 +1,7 @@
 from decimal import Decimal
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityRuleParameter
@@ -9,7 +9,7 @@ from netex.models.arrival_structure import ArrivalStructure
 from netex.models.block import Block
 from netex.models.block_ref import BlockRef
 from netex.models.blocks_in_frame_rel_structure import BlocksInFrameRelStructure
-from netex.models.call import Call
+from netex.models.call_1 import Call1
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -29,6 +29,7 @@ from netex.models.departure_structure import DepartureStructure
 from netex.models.destination_display import DestinationDisplay
 from netex.models.destination_display_ref import DestinationDisplayRef
 from netex.models.destination_displays_in_frame_rel_structure import DestinationDisplaysInFrameRelStructure
+from netex.models.direction_type import DirectionType
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.entities_in_version_rel_structure import CompositeFrame
 from netex.models.entities_in_version_rel_structure import FramesRelStructure
@@ -52,13 +53,14 @@ from netex.models.journey_refs_rel_structure import JourneyRefsRelStructure
 from netex.models.journey_run_time import JourneyRunTime
 from netex.models.journey_run_times_rel_structure import JourneyRunTimesRelStructure
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.line_derived_view_structure import LineDerivedViewStructure
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.point_ref_structure import PointRefStructure
 from netex.models.points_in_journey_pattern_rel_structure import PointsInJourneyPatternRelStructure
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
@@ -74,7 +76,7 @@ from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledS
 from netex.models.service_calendar import ServiceCalendar
 from netex.models.service_calendar_frame import ServiceCalendarFrame
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey import ServiceJourney
+from netex.models.service_journey_1 import ServiceJourney1
 from netex.models.service_journey_interchange import ServiceJourneyInterchange
 from netex.models.service_journey_interchange_ref import ServiceJourneyInterchangeRef
 from netex.models.service_journey_interchange_view import ServiceJourneyInterchangeView
@@ -136,10 +138,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -221,7 +227,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_42',
                                         version='any',
                                         name=MultilingualString(
@@ -1026,7 +1032,9 @@ obj = PublicationDelivery(
                                             value='EXTERNAL',
                                             ref='mybus:RT_42c@E+A'
                                         ),
-                                        direction_type=DirectionTypeEnumeration.OUTBOUND,
+                                        direction_type=DirectionType(
+
+                                        ),
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
@@ -1128,7 +1136,9 @@ obj = PublicationDelivery(
                                             value='EXTERNAL',
                                             ref='mybus:RT_42a@E+A'
                                         ),
-                                        direction_type=DirectionTypeEnumeration.OUTBOUND,
+                                        direction_type=DirectionType(
+
+                                        ),
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
@@ -1568,7 +1578,7 @@ obj = PublicationDelivery(
                             ],
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_42c@A+E@01',
                                         version='any',
                                         departure_time=XmlTime(14, 0, 0, 0, 0),
@@ -1674,7 +1684,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@01@Alpha1',
                                                     version='any',
                                                     visit_number=1,
@@ -1691,7 +1701,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@01@Bravo1',
                                                     version='any',
                                                     visit_number=1,
@@ -1708,7 +1718,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@01@Charley1',
                                                     version='any',
                                                     visit_number=1,
@@ -1726,7 +1736,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=3
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@01@Delta1',
                                                     version='any',
                                                     visit_number=1,
@@ -1743,7 +1753,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@01@Echo1',
                                                     version='any',
                                                     visit_number=1,
@@ -1761,7 +1771,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=5
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@01@Alpha2',
                                                     version='any',
                                                     visit_number=2,
@@ -1824,7 +1834,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_42c@A+E@02',
                                         version='any',
                                         departure_time=XmlTime(15, 15, 0, 0, 0),
@@ -1934,7 +1944,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@02@Alpha1',
                                                     version='any',
                                                     visit_number=1,
@@ -1994,7 +2004,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@02@Bravo1',
                                                     version='any',
                                                     visit_number=1,
@@ -2011,7 +2021,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@02@Charley1',
                                                     version='any',
                                                     visit_number=1,
@@ -2029,7 +2039,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=3
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@02@Delta1',
                                                     version='any',
                                                     visit_number=1,
@@ -2046,7 +2056,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@02@Echo1',
                                                     version='any',
                                                     visit_number=1,
@@ -2063,7 +2073,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=5
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42c@A+E@02@Alpha2',
                                                     version='any',
                                                     visit_number=2,
@@ -2086,7 +2096,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_42a@E+A@03',
                                         version='any',
                                         departure_time=XmlTime(14, 30, 0, 0, 0),
@@ -2196,7 +2206,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@E+A@03@Echo1',
                                                     version='any',
                                                     visit_number=1,
@@ -2217,7 +2227,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@E+A@03@Delta1',
                                                     version='any',
                                                     visit_number=1,
@@ -2234,7 +2244,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@E+A@03@Charley1',
                                                     version='any',
                                                     visit_number=1,
@@ -2252,7 +2262,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=3
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@E+A@03@Bravo1',
                                                     version='any',
                                                     visit_number=1,
@@ -2269,7 +2279,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@03_E+A@Echo1',
                                                     version='any',
                                                     visit_number=1,
@@ -2287,7 +2297,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=5
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@03_E+A@Alpha2',
                                                     version='any',
                                                     visit_number=2,
@@ -2349,7 +2359,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_42a@E+A@04',
                                         version='any',
                                         departure_time=XmlTime(15, 45, 0, 0, 0),
@@ -2459,7 +2469,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@E+A@04_Echo1',
                                                     version='any',
                                                     visit_number=1,
@@ -2519,7 +2529,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@E+A@04_Delta1',
                                                     version='any',
                                                     visit_number=1,
@@ -2536,7 +2546,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@E+A@04_Charley1',
                                                     version='any',
                                                     visit_number=1,
@@ -2554,7 +2564,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=3
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@E+A@04_Bravo1',
                                                     version='any',
                                                     visit_number=1,
@@ -2571,7 +2581,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@E+A@04_Alpha1',
                                                     version='any',
                                                     visit_number=2,
@@ -2589,7 +2599,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=5
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_42a@E+A@04_Echo2',
                                                     version='any',
                                                     visit_number=2,
@@ -2635,7 +2645,9 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        direction_type=DirectionTypeEnumeration.CLOCKWISE,
+                                        direction_type=DirectionType(
+                                            value=DirectionTypeEnumeration.CLOCKWISE
+                                        ),
                                         members=GroupOfServicesMembersRelStructure(
                                             group_of_services_member=[
                                                 GroupOfServicesMemberStructure(
@@ -2678,7 +2690,9 @@ obj = PublicationDelivery(
                                                 ),
                                             ]
                                         ),
-                                        direction_type=DirectionTypeEnumeration.ANTICLOCKWISE,
+                                        direction_type=DirectionType(
+                                            value=DirectionTypeEnumeration.ANTICLOCKWISE
+                                        ),
                                         members=GroupOfServicesMembersRelStructure(
                                             group_of_services_member=[
                                                 GroupOfServicesMemberStructure(
@@ -2910,7 +2924,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_01-MF-NH',
                                         version='any',
                                         name=MultilingualString(

@@ -24,12 +24,17 @@ from ubl.models.common.ubl_common_basic_components_2_1 import AddressFormatCode
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomerAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
+from ubl.models.common.ubl_common_basic_components_2_1 import EndTime
 from ubl.models.common.ubl_common_basic_components_2_1 import EndpointId
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
@@ -39,7 +44,10 @@ from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
 from ubl.models.common.ubl_common_basic_components_2_1 import SpecialTerms
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
+from ubl.models.common.ubl_common_basic_components_2_1 import SubmissionDueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import UblversionId
 from ubl.models.common.ubl_common_basic_components_2_1 import Uuid
 from ubl.models.maindoc.ubl_request_for_quotation_2_1 import RequestForQuotation
@@ -62,13 +70,21 @@ obj = RequestForQuotation(
     id=Id(
         value='G867B'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='93T5G3G5-HYA3-7267-BVG3-GS46SW44WG53'
     ),
-    issue_date=XmlDate(2008, 4, 19),
-    issue_time=XmlTime(11, 32, 26, 0, 0),
-    submission_due_date=XmlDate(2008, 4, 24),
+    issue_date=IssueDate(
+        value=XmlDate(2008, 4, 19)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(11, 32, 26, 0, 0)
+    ),
+    submission_due_date=SubmissionDueDate(
+        value=XmlDate(2008, 4, 24)
+    ),
     note=[
         Note(
             value='Bestilling af computere'
@@ -281,10 +297,18 @@ obj = RequestForQuotation(
                 )
             ),
             requested_delivery_period=RequestedDeliveryPeriod(
-                start_date=XmlDate(2008, 5, 6),
-                start_time=XmlTime(9, 30, 47, 0, 0),
-                end_date=XmlDate(2008, 5, 10),
-                end_time=XmlTime(9, 30, 47, 0, 0)
+                start_date=StartDate(
+                    value=XmlDate(2008, 5, 6)
+                ),
+                start_time=StartTime(
+                    value=XmlTime(9, 30, 47, 0, 0)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2008, 5, 10)
+                ),
+                end_time=EndTime(
+                    value=XmlTime(9, 30, 47, 0, 0)
+                )
             )
         ),
     ],
@@ -304,7 +328,9 @@ obj = RequestForQuotation(
                     id=Id(
                         value='SKI123456'
                     ),
-                    issue_date=XmlDate(2006, 1, 1)
+                    issue_date=IssueDate(
+                        value=XmlDate(2006, 1, 1)
+                    )
                 ),
             ]
         ),

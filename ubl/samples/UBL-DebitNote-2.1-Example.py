@@ -39,6 +39,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import Amount
 from ubl.models.common.ubl_common_basic_components_2_1 import BaseAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import BaseQuantity
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
+from ubl.models.common.ubl_common_basic_components_2_1 import ChargeIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import ChargeTotalAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
@@ -51,11 +52,13 @@ from ubl.models.common.ubl_common_basic_components_2_1 import DocumentCurrencyCo
 from ubl.models.common.ubl_common_basic_components_2_1 import DocumentType
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
 from ubl.models.common.ubl_common_basic_components_2_1 import EmbeddedDocumentBinaryObject
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import EndpointId
 from ubl.models.common.ubl_common_basic_components_2_1 import FamilyName
 from ubl.models.common.ubl_common_basic_components_2_1 import FirstName
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import ItemClassificationCode
 from ubl.models.common.ubl_common_basic_components_2_1 import JobTitle
 from ubl.models.common.ubl_common_basic_components_2_1 import LineExtensionAmount
@@ -71,12 +74,14 @@ from ubl.models.common.ubl_common_basic_components_2_1 import Postbox
 from ubl.models.common.ubl_common_basic_components_2_1 import PrepaidAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import PriceAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxExclusiveAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxExemptionReason
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxExemptionReasonCode
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxInclusiveAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import TaxPointDate
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxableAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
 from ubl.models.common.ubl_common_basic_components_2_1 import Telephone
@@ -94,14 +99,18 @@ obj = DebitNote(
     id=Id(
         value='TOSL108'
     ),
-    issue_date=XmlDate(2009, 12, 15),
+    issue_date=IssueDate(
+        value=XmlDate(2009, 12, 15)
+    ),
     note=[
         Note(
             value='Ordered in our booth at the convention.',
             language_id='en'
         ),
     ],
-    tax_point_date=XmlDate(2009, 11, 30),
+    tax_point_date=TaxPointDate(
+        value=XmlDate(2009, 11, 30)
+    ),
     document_currency_code=DocumentCurrencyCode(
         value='EUR',
         list_id='ISO 4217 Alpha',
@@ -112,8 +121,12 @@ obj = DebitNote(
     ),
     invoice_period=[
         InvoicePeriod(
-            start_date=XmlDate(2009, 11, 1),
-            end_date=XmlDate(2009, 11, 30)
+            start_date=StartDate(
+                value=XmlDate(2009, 11, 1)
+            ),
+            end_date=EndDate(
+                value=XmlDate(2009, 11, 30)
+            )
         ),
     ],
     order_reference=OrderReference(
@@ -665,7 +678,9 @@ obj = DebitNote(
                 ),
                 allowance_charge=[
                     AllowanceCharge(
-                        charge_indicator=False,
+                        charge_indicator=ChargeIndicator(
+                            value=False
+                        ),
                         allowance_charge_reason=[
                             AllowanceChargeReason(
                                 value='Contract'
@@ -857,7 +872,9 @@ obj = DebitNote(
                 ),
                 allowance_charge=[
                     AllowanceCharge(
-                        charge_indicator=False,
+                        charge_indicator=ChargeIndicator(
+                            value=False
+                        ),
                         allowance_charge_reason=[
                             AllowanceChargeReason(
                                 value='Contract'

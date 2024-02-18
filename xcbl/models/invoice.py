@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.order_response import TaxAccountingCurrency
+from xcbl.models.order_response import (
+    NumberOfLines,
+    TaxAccountingCurrency,
+)
 from xcbl.models.quote import TaxReference
 from xcbl.models.remittance_advice import (
     InvoiceDates,
@@ -10,12 +13,14 @@ from xcbl.models.remittance_advice import (
     InvoiceType,
     ListOfRateOfExchangeDetail,
     PaymentCurrency,
+    SummaryNote,
     TotalTaxAmount,
 )
 from xcbl.models.request_for_quotation import (
     CardInfo,
     Fiaccount,
     PaymentInstructions,
+    PaymentMeanCoded,
 )
 from xcbl.models.shipping_schedule import ListOfPackageDetail
 from xcbl.models.shipping_schedule_response import (
@@ -56,90 +61,242 @@ from xcbl.models.trading_partner_user_information import (
 
 
 @dataclass(kw_only=True)
+class AllowOrChargeIndicatorCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AllowOrChargeIndicatorCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AllowOrChargeTreatmentCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AllowOrChargeTreatmentCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceHeaderNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceMediumCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceMediumCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoicePaymentStatusCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoicePaymentStatusCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoicePurposeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoicePurposeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class NotaFiscalType:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OtherPaymentInfo:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentCodedMeanOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentRecordOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentReferenceNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RequirementDetails:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RequirementTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RequirementTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TaxPointDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class AllowOrChargeTreatment:
-    allow_or_charge_treatment_coded: Optional[str] = field(
+    allow_or_charge_treatment_coded: Optional[
+        AllowOrChargeTreatmentCoded
+    ] = field(
         default=None,
         metadata={
             "name": "AllowOrChargeTreatmentCoded",
             "type": "Element",
         },
     )
-    allow_or_charge_treatment_coded_other: Optional[str] = field(
+    allow_or_charge_treatment_coded_other: Optional[
+        AllowOrChargeTreatmentCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "AllowOrChargeTreatmentCodedOther",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class InvoiceMedium:
-    invoice_medium_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "InvoiceMediumCoded",
-            "type": "Element",
-        },
-    )
-    invoice_medium_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "InvoiceMediumCodedOther",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class InvoicePaymentStatus:
-    invoice_payment_status_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "InvoicePaymentStatusCoded",
-            "type": "Element",
-        },
-    )
-    invoice_payment_status_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "InvoicePaymentStatusCodedOther",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class InvoicePurpose:
-    invoice_purpose_coded: str = field(
-        metadata={
-            "name": "InvoicePurposeCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    invoice_purpose_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "InvoicePurposeCodedOther",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class PaymentMean:
-    payment_mean_coded: str = field(
-        metadata={
-            "name": "PaymentMeanCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    payment_coded_mean_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PaymentCodedMeanOther",
             "type": "Element",
         },
     )
@@ -259,6 +416,24 @@ class InvoiceLanguage:
 
 
 @dataclass(kw_only=True)
+class InvoiceMedium:
+    invoice_medium_coded: Optional[InvoiceMediumCoded] = field(
+        default=None,
+        metadata={
+            "name": "InvoiceMediumCoded",
+            "type": "Element",
+        },
+    )
+    invoice_medium_coded_other: Optional[InvoiceMediumCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "InvoiceMediumCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class InvoicePaymentInstructions:
     payment_instructions: PaymentInstructions = field(
         metadata={
@@ -266,6 +441,44 @@ class InvoicePaymentInstructions:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class InvoicePaymentStatus:
+    invoice_payment_status_coded: Optional[InvoicePaymentStatusCoded] = field(
+        default=None,
+        metadata={
+            "name": "InvoicePaymentStatusCoded",
+            "type": "Element",
+        },
+    )
+    invoice_payment_status_coded_other: Optional[
+        InvoicePaymentStatusCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "InvoicePaymentStatusCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoicePurpose:
+    invoice_purpose_coded: InvoicePurposeCoded = field(
+        metadata={
+            "name": "InvoicePurposeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    invoice_purpose_coded_other: Optional[InvoicePurposeCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "InvoicePurposeCodedOther",
+            "type": "Element",
+        },
     )
 
 
@@ -322,6 +535,24 @@ class NetValue:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentMean:
+    payment_mean_coded: PaymentMeanCoded = field(
+        metadata={
+            "name": "PaymentMeanCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    payment_coded_mean_other: Optional[PaymentCodedMeanOther] = field(
+        default=None,
+        metadata={
+            "name": "PaymentCodedMeanOther",
+            "type": "Element",
+        },
     )
 
 
@@ -490,7 +721,7 @@ class Fitransfer:
             "required": True,
         }
     )
-    payment_record_other: Optional[str] = field(
+    payment_record_other: Optional[PaymentRecordOther] = field(
         default=None,
         metadata={
             "name": "PaymentRecordOther",
@@ -741,14 +972,14 @@ class PaymentAmount:
 
 @dataclass(kw_only=True)
 class SpecificRequirement:
-    requirement_type_coded: str = field(
+    requirement_type_coded: RequirementTypeCoded = field(
         metadata={
             "name": "RequirementTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    requirement_type_coded_other: Optional[str] = field(
+    requirement_type_coded_other: Optional[RequirementTypeCodedOther] = field(
         default=None,
         metadata={
             "name": "RequirementTypeCodedOther",
@@ -762,7 +993,7 @@ class SpecificRequirement:
             "type": "Element",
         },
     )
-    requirement_details: Optional[str] = field(
+    requirement_details: Optional[RequirementDetails] = field(
         default=None,
         metadata={
             "name": "RequirementDetails",
@@ -773,14 +1004,16 @@ class SpecificRequirement:
 
 @dataclass(kw_only=True)
 class TotalAllowOrCharge:
-    allow_or_charge_indicator_coded: str = field(
+    allow_or_charge_indicator_coded: AllowOrChargeIndicatorCoded = field(
         metadata={
             "name": "AllowOrChargeIndicatorCoded",
             "type": "Element",
             "required": True,
         }
     )
-    allow_or_charge_indicator_coded_other: Optional[str] = field(
+    allow_or_charge_indicator_coded_other: Optional[
+        AllowOrChargeIndicatorCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "AllowOrChargeIndicatorCodedOther",
@@ -861,7 +1094,7 @@ class ActualPayment:
             "required": True,
         }
     )
-    payment_date: str = field(
+    payment_date: PaymentDate = field(
         metadata={
             "name": "PaymentDate",
             "type": "Element",
@@ -882,7 +1115,7 @@ class ActualPayment:
             "type": "Element",
         },
     )
-    other_payment_info: List[str] = field(
+    other_payment_info: List[OtherPaymentInfo] = field(
         default_factory=list,
         metadata={
             "name": "OtherPaymentInfo",
@@ -935,7 +1168,7 @@ class ListOfCountryRequirement:
 
 @dataclass(kw_only=True)
 class InvoiceSummary:
-    number_of_lines: Optional[str] = field(
+    number_of_lines: Optional[NumberOfLines] = field(
         default=None,
         metadata={
             "name": "NumberOfLines",
@@ -977,7 +1210,7 @@ class InvoiceSummary:
             "type": "Element",
         },
     )
-    summary_note: Optional[str] = field(
+    summary_note: Optional[SummaryNote] = field(
         default=None,
         metadata={
             "name": "SummaryNote",
@@ -999,14 +1232,14 @@ class OtherCountryRequirments:
 
 @dataclass(kw_only=True)
 class CountrySpecificRequirements:
-    nota_fiscal_type: Optional[str] = field(
+    nota_fiscal_type: Optional[NotaFiscalType] = field(
         default=None,
         metadata={
             "name": "NotaFiscalType",
             "type": "Element",
         },
     )
-    payment_reference_number: Optional[str] = field(
+    payment_reference_number: Optional[PaymentReferenceNumber] = field(
         default=None,
         metadata={
             "name": "PaymentReferenceNumber",
@@ -1031,14 +1264,14 @@ class InvoiceHeader:
             "required": True,
         }
     )
-    invoice_issue_date: str = field(
+    invoice_issue_date: InvoiceIssueDate = field(
         metadata={
             "name": "InvoiceIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    tax_point_date: Optional[str] = field(
+    tax_point_date: Optional[TaxPointDate] = field(
         default=None,
         metadata={
             "name": "TaxPointDate",
@@ -1177,7 +1410,7 @@ class InvoiceHeader:
             "type": "Element",
         },
     )
-    invoice_header_note: Optional[str] = field(
+    invoice_header_note: Optional[InvoiceHeaderNote] = field(
         default=None,
         metadata={
             "name": "InvoiceHeaderNote",

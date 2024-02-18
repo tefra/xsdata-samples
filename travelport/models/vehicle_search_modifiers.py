@@ -5,6 +5,7 @@ from travelport.models.driver_info import DriverInfo
 from travelport.models.loyalty_card_1 import LoyaltyCard1
 from travelport.models.policy import Policy
 from travelport.models.rate_modifiers import RateModifiers
+from travelport.models.reference_point_1 import ReferencePoint1
 from travelport.models.special_equipment_1 import SpecialEquipment1
 from travelport.models.type_rate_category import TypeRateCategory
 from travelport.models.type_rate_host_indicator import TypeRateHostIndicator
@@ -12,8 +13,8 @@ from travelport.models.type_rate_time_period import TypeRateTimePeriod
 from travelport.models.type_vehicle_search_distance import (
     TypeVehicleSearchDistance,
 )
-from travelport.models.type_vehicle_types import TypeVehicleTypes
 from travelport.models.vehicle_modifier import VehicleModifier
+from travelport.models.vehicle_type import VehicleType
 from travelport.models.vendor import Vendor
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
@@ -94,7 +95,7 @@ class VehicleSearchModifiers:
             "max_occurs": 999,
         },
     )
-    vehicle_type: list[TypeVehicleTypes] = field(
+    vehicle_type: list[VehicleType] = field(
         default_factory=list,
         metadata={
             "name": "VehicleType",
@@ -126,13 +127,12 @@ class VehicleSearchModifiers:
             "max_occurs": 999,
         },
     )
-    reference_point: None | str = field(
+    reference_point: None | ReferencePoint1 = field(
         default=None,
         metadata={
             "name": "ReferencePoint",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "max_length": 30,
         },
     )
     booking_source: None | BookingSource1 = field(

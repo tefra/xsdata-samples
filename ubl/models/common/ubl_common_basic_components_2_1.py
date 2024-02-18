@@ -3,7 +3,9 @@ from ubl.models.common.ubl_unqualified_data_types_2_1 import (
     AmountType as UblUnqualifiedDataTypes21AmountType,
     BinaryObjectType,
     CodeType,
+    DateType as UblUnqualifiedDataTypes21DateType,
     IdentifierType,
+    IndicatorType,
     MeasureType as UblUnqualifiedDataTypes21MeasureType,
     NameType as UblUnqualifiedDataTypes21NameType,
     NumericType,
@@ -11,11 +13,17 @@ from ubl.models.common.ubl_unqualified_data_types_2_1 import (
     QuantityType as UblUnqualifiedDataTypes21QuantityType,
     RateType as UblUnqualifiedDataTypes21RateType,
     TextType as UblUnqualifiedDataTypes21TextType,
+    TimeType,
 )
 
 __NAMESPACE__ = (
     "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 )
+
+
+@dataclass(frozen=True)
+class AcceptedIndicatorType(IndicatorType):
+    pass
 
 
 @dataclass(frozen=True)
@@ -65,9 +73,44 @@ class ActivityTypeType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class ActualDeliveryDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class ActualDeliveryTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
+class ActualDespatchDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class ActualDespatchTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
+class ActualPickupDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class ActualPickupTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class ActualTemperatureReductionQuantityType(
     UblUnqualifiedDataTypes21QuantityType
 ):
+    pass
+
+
+@dataclass(frozen=True)
+class AdValoremIndicatorType(IndicatorType):
     pass
 
 
@@ -175,12 +218,27 @@ class AmountType(UblUnqualifiedDataTypes21AmountType):
 
 
 @dataclass(frozen=True)
+class AnimalFoodApprovedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
+class AnimalFoodIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class AnnualAverageAmountType(UblUnqualifiedDataTypes21AmountType):
     pass
 
 
 @dataclass(frozen=True)
 class ApplicationStatusCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class ApprovalDateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -196,9 +254,19 @@ class AttributeIdtype(IdentifierType):
 
 
 @dataclass(frozen=True)
+class AuctionConstraintIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class AuctionUritype(IdentifierType):
     class Meta:
         name = "AuctionURIType"
+
+
+@dataclass(frozen=True)
+class AvailabilityDateType(UblUnqualifiedDataTypes21DateType):
+    pass
 
 
 @dataclass(frozen=True)
@@ -213,6 +281,16 @@ class AverageAmountType(UblUnqualifiedDataTypes21AmountType):
 
 @dataclass(frozen=True)
 class AverageSubsequentContractAmountType(UblUnqualifiedDataTypes21AmountType):
+    pass
+
+
+@dataclass(frozen=True)
+class AwardDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class AwardTimeType(TimeType):
     pass
 
 
@@ -238,6 +316,11 @@ class AwardingMethodTypeCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class BackOrderAllowedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class BackorderQuantityType(UblUnqualifiedDataTypes21QuantityType):
     pass
 
@@ -249,6 +332,11 @@ class BackorderReasonType(UblUnqualifiedDataTypes21TextType):
 
 @dataclass(frozen=True)
 class BalanceAmountType(UblUnqualifiedDataTypes21AmountType):
+    pass
+
+
+@dataclass(frozen=True)
+class BalanceBroughtForwardIndicatorType(IndicatorType):
     pass
 
 
@@ -274,12 +362,32 @@ class BaseUnitMeasureType(UblUnqualifiedDataTypes21MeasureType):
 
 
 @dataclass(frozen=True)
+class BasedOnConsensusIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class BasicConsumedQuantityType(UblUnqualifiedDataTypes21QuantityType):
     pass
 
 
 @dataclass(frozen=True)
 class BatchQuantityType(UblUnqualifiedDataTypes21QuantityType):
+    pass
+
+
+@dataclass(frozen=True)
+class BestBeforeDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class BindingOnBuyerIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
+class BirthDateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -316,6 +424,11 @@ class BuildingNameType(UblUnqualifiedDataTypes21NameType):
 
 @dataclass(frozen=True)
 class BuildingNumberType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class BulkCargoIndicatorType(IndicatorType):
     pass
 
 
@@ -385,12 +498,27 @@ class CallBaseAmountType(UblUnqualifiedDataTypes21AmountType):
 
 
 @dataclass(frozen=True)
+class CallDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
 class CallExtensionAmountType(UblUnqualifiedDataTypes21AmountType):
     pass
 
 
 @dataclass(frozen=True)
+class CallTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class CancellationNoteType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class CandidateReductionConstraintIndicatorType(IndicatorType):
     pass
 
 
@@ -436,6 +564,11 @@ class CarrierServiceInstructionsType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class CatalogueIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class CategoryNameType(UblUnqualifiedDataTypes21NameType):
     pass
 
@@ -472,6 +605,11 @@ class CharacterSetCodeType(CodeType):
 
 @dataclass(frozen=True)
 class CharacteristicsType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class ChargeIndicatorType(IndicatorType):
     pass
 
 
@@ -568,6 +706,21 @@ class ComparisonDataSourceCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class ComparisonForecastIssueDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class ComparisonForecastIssueTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
+class CompletionIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class ConditionCodeType(CodeType):
     pass
 
@@ -602,6 +755,11 @@ class ConsignmentQuantityType(UblUnqualifiedDataTypes21QuantityType):
 class ConsignorAssignedIdtype(IdentifierType):
     class Meta:
         name = "ConsignorAssignedIDType"
+
+
+@dataclass(frozen=True)
+class ConsolidatableIndicatorType(IndicatorType):
+    pass
 
 
 @dataclass(frozen=True)
@@ -672,6 +830,11 @@ class ConsumptionWaterQuantityType(UblUnqualifiedDataTypes21QuantityType):
 
 
 @dataclass(frozen=True)
+class ContainerizedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class ContentType(UblUnqualifiedDataTypes21TextType):
     pass
 
@@ -720,6 +883,11 @@ class ContractingSystemCodeType(CodeType):
 
 @dataclass(frozen=True)
 class CoordinateSystemCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class CopyIndicatorType(IndicatorType):
     pass
 
 
@@ -823,6 +991,11 @@ class CustomsClearanceServiceInstructionsType(
 
 
 @dataclass(frozen=True)
+class CustomsImportClassifiedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class CustomsStatusCodeType(CodeType):
     pass
 
@@ -838,12 +1011,22 @@ class DamageRemarksType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class DangerousGoodsApprovedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class DataSendingCapabilityType(UblUnqualifiedDataTypes21TextType):
     pass
 
 
 @dataclass(frozen=True)
 class DataSourceCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class DateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -996,6 +1179,11 @@ class DocumentationFeeAmountType(UblUnqualifiedDataTypes21AmountType):
 
 
 @dataclass(frozen=True)
+class DueDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
 class DurationMeasureType(UblUnqualifiedDataTypes21MeasureType):
     pass
 
@@ -1011,9 +1199,29 @@ class DutyType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class EarliestPickupDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class EarliestPickupTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class EconomicOperatorRegistryUritype(IdentifierType):
     class Meta:
         name = "EconomicOperatorRegistryURIType"
+
+
+@dataclass(frozen=True)
+class EffectiveDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class EffectiveTimeType(TimeType):
+    pass
 
 
 @dataclass(frozen=True)
@@ -1047,6 +1255,16 @@ class EncodingCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class EndDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class EndTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class EndpointIdtype(IdentifierType):
     class Meta:
         name = "EndpointIDType"
@@ -1064,6 +1282,26 @@ class EstimatedAmountType(UblUnqualifiedDataTypes21AmountType):
 
 @dataclass(frozen=True)
 class EstimatedConsumedQuantityType(UblUnqualifiedDataTypes21QuantityType):
+    pass
+
+
+@dataclass(frozen=True)
+class EstimatedDeliveryDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class EstimatedDeliveryTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
+class EstimatedDespatchDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class EstimatedDespatchTimeType(TimeType):
     pass
 
 
@@ -1141,6 +1379,16 @@ class ExpenseCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class ExpiryDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class ExpiryTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class ExpressionCodeType(CodeType):
     pass
 
@@ -1202,7 +1450,17 @@ class FirstNameType(UblUnqualifiedDataTypes21NameType):
 
 
 @dataclass(frozen=True)
+class FirstShipmentAvailibilityDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
 class FloorType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class FollowupContractIndicatorType(IndicatorType):
     pass
 
 
@@ -1223,6 +1481,11 @@ class FormatCodeType(CodeType):
 
 @dataclass(frozen=True)
 class ForwarderServiceInstructionsType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class FreeOfChargeIndicatorType(IndicatorType):
     pass
 
 
@@ -1248,12 +1511,22 @@ class FrequencyType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class FrozenDocumentIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class FrozenPeriodDaysNumericType(NumericType):
     pass
 
 
 @dataclass(frozen=True)
 class FullnessIndicationCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class FullyPaidSharesIndicatorType(IndicatorType):
     pass
 
 
@@ -1278,6 +1551,16 @@ class GenderCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class GeneralCargoIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
+class GovernmentAgreementConstraintIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class GrossTonnageMeasureType(UblUnqualifiedDataTypes21MeasureType):
     pass
 
@@ -1294,6 +1577,16 @@ class GrossWeightMeasureType(UblUnqualifiedDataTypes21MeasureType):
 
 @dataclass(frozen=True)
 class GuaranteeTypeCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class GuaranteedDespatchDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class GuaranteedDespatchTimeType(TimeType):
     pass
 
 
@@ -1334,6 +1627,11 @@ class HazardousRegulationCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class HazardousRiskIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class HeatingTypeCodeType(CodeType):
     pass
 
@@ -1350,6 +1648,16 @@ class HigherTenderAmountType(UblUnqualifiedDataTypes21AmountType):
 
 @dataclass(frozen=True)
 class HolderNameType(UblUnqualifiedDataTypes21NameType):
+    pass
+
+
+@dataclass(frozen=True)
+class HumanFoodApprovedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
+class HumanFoodIndicatorType(IndicatorType):
     pass
 
 
@@ -1387,6 +1695,11 @@ class ImportanceCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class IndicationIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class IndustryClassificationCodeType(CodeType):
     pass
 
@@ -1414,6 +1727,11 @@ class InhouseMailType(UblUnqualifiedDataTypes21TextType):
 
 @dataclass(frozen=True)
 class InspectionMethodCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class InstallmentDueDateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -1464,9 +1782,19 @@ class InvoicingPartyReferenceType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class IssueDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
 class IssueNumberIdtype(IdentifierType):
     class Meta:
         name = "IssueNumberIDType"
+
+
+@dataclass(frozen=True)
+class IssueTimeType(TimeType):
+    pass
 
 
 @dataclass(frozen=True)
@@ -1477,6 +1805,11 @@ class IssuerIdtype(IdentifierType):
 
 @dataclass(frozen=True)
 class ItemClassificationCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class ItemUpdateRequestIndicatorType(IndicatorType):
     pass
 
 
@@ -1513,7 +1846,32 @@ class LanguageIdtype(IdentifierType):
 
 
 @dataclass(frozen=True)
+class LastRevisionDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class LastRevisionTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
+class LatestDeliveryDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class LatestDeliveryTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class LatestMeterQuantityType(UblUnqualifiedDataTypes21QuantityType):
+    pass
+
+
+@dataclass(frozen=True)
+class LatestMeterReadingDateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -1524,6 +1882,26 @@ class LatestMeterReadingMethodCodeType(CodeType):
 
 @dataclass(frozen=True)
 class LatestMeterReadingMethodType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class LatestPickupDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class LatestPickupTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
+class LatestProposalAcceptanceDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class LatestSecurityClearanceDateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -1549,6 +1927,11 @@ class LeadTimeMeasureType(UblUnqualifiedDataTypes21MeasureType):
 
 @dataclass(frozen=True)
 class LegalReferenceType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class LegalStatusIndicatorType(IndicatorType):
     pass
 
 
@@ -1606,6 +1989,11 @@ class LineType(UblUnqualifiedDataTypes21TextType):
 
 @dataclass(frozen=True)
 class ListValueType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class LivestockIndicatorType(IndicatorType):
     pass
 
 
@@ -1705,7 +2093,27 @@ class MandateTypeCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class ManufactureDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class ManufactureTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
+class MarkAttentionIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class MarkAttentionType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class MarkCareIndicatorType(IndicatorType):
     pass
 
 
@@ -1993,6 +2401,16 @@ class NetworkIdtype(IdentifierType):
 
 
 @dataclass(frozen=True)
+class NominationDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class NominationTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class NormalTemperatureReductionQuantityType(
     UblUnqualifiedDataTypes21QuantityType
 ):
@@ -2006,6 +2424,21 @@ class NoteType(UblUnqualifiedDataTypes21TextType):
 
 @dataclass(frozen=True)
 class NotificationTypeCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class OccurrenceDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class OccurrenceTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
+class OnCarriageIndicatorType(IndicatorType):
     pass
 
 
@@ -2037,6 +2470,11 @@ class OperatingYearsQuantityType(UblUnqualifiedDataTypes21QuantityType):
 
 
 @dataclass(frozen=True)
+class OptionalLineItemIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class OptionsDescriptionType(UblUnqualifiedDataTypes21TextType):
     pass
 
@@ -2058,6 +2496,11 @@ class OrderResponseCodeType(CodeType):
 
 @dataclass(frozen=True)
 class OrderTypeCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class OrderableIndicatorType(IndicatorType):
     pass
 
 
@@ -2086,6 +2529,11 @@ class OriginalContractingSystemIdtype(IdentifierType):
 class OriginalJobIdtype(IdentifierType):
     class Meta:
         name = "OriginalJobIDType"
+
+
+@dataclass(frozen=True)
+class OtherConditionsIndicatorType(IndicatorType):
+    pass
 
 
 @dataclass(frozen=True)
@@ -2159,6 +2607,16 @@ class PaidAmountType(UblUnqualifiedDataTypes21AmountType):
 
 
 @dataclass(frozen=True)
+class PaidDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class PaidTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class ParentDocumentIdtype(IdentifierType):
     class Meta:
         name = "ParentDocumentIDType"
@@ -2188,6 +2646,11 @@ class PartPresentationCodeType(CodeType):
 
 @dataclass(frozen=True)
 class PartecipationPercentType(UblUnqualifiedDataTypes21PercentType):
+    pass
+
+
+@dataclass(frozen=True)
+class PartialDeliveryIndicatorType(IndicatorType):
     pass
 
 
@@ -2263,6 +2726,11 @@ class PaymentCurrencyCodeType(CodeType):
 
 @dataclass(frozen=True)
 class PaymentDescriptionType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class PaymentDueDateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -2371,6 +2839,11 @@ class PlacardNotationType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class PlannedDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
 class PlotIdentificationType(UblUnqualifiedDataTypes21TextType):
     pass
 
@@ -2398,6 +2871,16 @@ class PostboxType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class PowerIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
+class PreCarriageIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class PreEventNotificationDurationMeasureType(
     UblUnqualifiedDataTypes21MeasureType
 ):
@@ -2411,6 +2894,11 @@ class PreferenceCriterionCodeType(CodeType):
 
 @dataclass(frozen=True)
 class PrepaidAmountType(UblUnqualifiedDataTypes21AmountType):
+    pass
+
+
+@dataclass(frozen=True)
+class PrepaidIndicatorType(IndicatorType):
     pass
 
 
@@ -2433,6 +2921,11 @@ class PreviousJobIdtype(IdentifierType):
 
 @dataclass(frozen=True)
 class PreviousMeterQuantityType(UblUnqualifiedDataTypes21QuantityType):
+    pass
+
+
+@dataclass(frozen=True)
+class PreviousMeterReadingDateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -2488,6 +2981,11 @@ class PricingCurrencyCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class PricingUpdateRequestIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class PrimaryAccountNumberIdtype(IdentifierType):
     class Meta:
         name = "PrimaryAccountNumberIDType"
@@ -2510,6 +3008,11 @@ class PrivacyCodeType(CodeType):
 
 @dataclass(frozen=True)
 class PrizeDescriptionType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class PrizeIndicatorType(IndicatorType):
     pass
 
 
@@ -2582,6 +3085,11 @@ class ProviderTypeCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class PublishAwardIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class PurposeCodeType(CodeType):
     pass
 
@@ -2634,6 +3142,11 @@ class ReceiptAdviceTypeCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class ReceivedDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
 class ReceivedElectronicTenderQuantityType(
     UblUnqualifiedDataTypes21QuantityType
 ):
@@ -2656,6 +3169,11 @@ class ReceivedTenderQuantityType(UblUnqualifiedDataTypes21QuantityType):
 
 
 @dataclass(frozen=True)
+class ReferenceDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
 class ReferenceEventCodeType(CodeType):
     pass
 
@@ -2664,6 +3182,11 @@ class ReferenceEventCodeType(CodeType):
 class ReferenceIdtype(IdentifierType):
     class Meta:
         name = "ReferenceIDType"
+
+
+@dataclass(frozen=True)
+class ReferenceTimeType(TimeType):
+    pass
 
 
 @dataclass(frozen=True)
@@ -2678,7 +3201,37 @@ class ReferencedConsignmentIdtype(IdentifierType):
 
 
 @dataclass(frozen=True)
+class RefrigeratedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
+class RefrigerationOnIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class RegionType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class RegisteredDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class RegisteredTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
+class RegistrationDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class RegistrationExpirationDateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -2772,7 +3325,32 @@ class RequestForQuotationLineIdtype(IdentifierType):
 
 
 @dataclass(frozen=True)
+class RequestedDeliveryDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class RequestedDespatchDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class RequestedDespatchTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class RequestedInvoiceCurrencyCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class RequestedPublicationDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class RequiredCurriculaIndicatorType(IndicatorType):
     pass
 
 
@@ -2780,6 +3358,16 @@ class RequestedInvoiceCurrencyCodeType(CodeType):
 class RequiredCustomsIdtype(IdentifierType):
     class Meta:
         name = "RequiredCustomsIDType"
+
+
+@dataclass(frozen=True)
+class RequiredDeliveryDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class RequiredDeliveryTimeType(TimeType):
+    pass
 
 
 @dataclass(frozen=True)
@@ -2808,6 +3396,16 @@ class ResolutionCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class ResolutionDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class ResolutionTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class ResolutionType(UblUnqualifiedDataTypes21TextType):
     pass
 
@@ -2818,12 +3416,32 @@ class ResponseCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class ResponseDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class ResponseTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class RetailEventNameType(UblUnqualifiedDataTypes21NameType):
     pass
 
 
 @dataclass(frozen=True)
 class RetailEventStatusCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class ReturnabilityIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
+class ReturnableMaterialIndicatorType(IndicatorType):
     pass
 
 
@@ -2839,7 +3457,17 @@ class RevisedForecastLineIdtype(IdentifierType):
 
 
 @dataclass(frozen=True)
+class RevisionDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
 class RevisionStatusCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class RevisionTimeType(TimeType):
     pass
 
 
@@ -3029,6 +3657,11 @@ class SizeTypeCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class SoleProprietorshipIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class SourceCurrencyBaseRateType(UblUnqualifiedDataTypes21RateType):
     pass
 
@@ -3039,12 +3672,27 @@ class SourceCurrencyCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class SourceForecastIssueDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class SourceForecastIssueTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class SourceValueMeasureType(UblUnqualifiedDataTypes21MeasureType):
     pass
 
 
 @dataclass(frozen=True)
 class SpecialInstructionsType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class SpecialSecurityIndicatorType(IndicatorType):
     pass
 
 
@@ -3075,7 +3723,27 @@ class SpecificationTypeCodeType(CodeType):
 
 
 @dataclass(frozen=True)
+class SplitConsignmentIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
+class StartDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class StartTimeType(TimeType):
+    pass
+
+
+@dataclass(frozen=True)
 class StatementTypeCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class StatusAvailableIndicatorType(IndicatorType):
     pass
 
 
@@ -3101,6 +3769,16 @@ class StreetNameType(UblUnqualifiedDataTypes21NameType):
 
 @dataclass(frozen=True)
 class SubcontractingConditionsCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class SubmissionDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
+class SubmissionDueDateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -3218,6 +3896,11 @@ class TaxEnergyOnAccountAmountType(UblUnqualifiedDataTypes21AmountType):
 
 
 @dataclass(frozen=True)
+class TaxEvidenceIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class TaxExclusiveAmountType(UblUnqualifiedDataTypes21AmountType):
     pass
 
@@ -3233,12 +3916,22 @@ class TaxExemptionReasonType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class TaxIncludedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class TaxInclusiveAmountType(UblUnqualifiedDataTypes21AmountType):
     pass
 
 
 @dataclass(frozen=True)
 class TaxLevelCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class TaxPointDateType(UblUnqualifiedDataTypes21DateType):
     pass
 
 
@@ -3344,6 +4037,11 @@ class TextType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class ThirdPartyPayerIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class ThresholdAmountType(UblUnqualifiedDataTypes21AmountType):
     pass
 
@@ -3400,6 +4098,11 @@ class TimingComplaintType(UblUnqualifiedDataTypes21TextType):
 
 @dataclass(frozen=True)
 class TitleType(UblUnqualifiedDataTypes21TextType):
+    pass
+
+
+@dataclass(frozen=True)
+class ToOrderIndicatorType(IndicatorType):
     pass
 
 
@@ -3647,6 +4350,11 @@ class Uuidtype(IdentifierType):
 
 
 @dataclass(frozen=True)
+class UnknownPriceIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(frozen=True)
 class UpperOrangeHazardPlacardIdtype(IdentifierType):
     class Meta:
         name = "UpperOrangeHazardPlacardIDType"
@@ -3678,7 +4386,17 @@ class ValidateToolVersionType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class ValidationDateType(UblUnqualifiedDataTypes21DateType):
+    pass
+
+
+@dataclass(frozen=True)
 class ValidationResultCodeType(CodeType):
+    pass
+
+
+@dataclass(frozen=True)
+class ValidationTimeType(TimeType):
     pass
 
 
@@ -3686,6 +4404,11 @@ class ValidationResultCodeType(CodeType):
 class ValidatorIdtype(IdentifierType):
     class Meta:
         name = "ValidatorIDType"
+
+
+@dataclass(frozen=True)
+class ValidityStartDateType(UblUnqualifiedDataTypes21DateType):
+    pass
 
 
 @dataclass(frozen=True)
@@ -3715,6 +4438,11 @@ class ValueType(UblUnqualifiedDataTypes21TextType):
 
 @dataclass(frozen=True)
 class VarianceQuantityType(UblUnqualifiedDataTypes21QuantityType):
+    pass
+
+
+@dataclass(frozen=True)
+class VariantConstraintIndicatorType(IndicatorType):
     pass
 
 
@@ -3789,6 +4517,12 @@ class XpathType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
+class AcceptedIndicator(AcceptedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class AcceptedVariantsDescription(AcceptedVariantsDescriptionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -3844,9 +4578,51 @@ class ActivityTypeCode(ActivityTypeCodeType):
 
 
 @dataclass(frozen=True)
+class ActualDeliveryDate(ActualDeliveryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ActualDeliveryTime(ActualDeliveryTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ActualDespatchDate(ActualDespatchDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ActualDespatchTime(ActualDespatchTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ActualPickupDate(ActualPickupDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ActualPickupTime(ActualPickupTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class ActualTemperatureReductionQuantity(
     ActualTemperatureReductionQuantityType
 ):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class AdValoremIndicator(AdValoremIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -3975,6 +4751,18 @@ class AmountRate(AmountRateType):
 
 
 @dataclass(frozen=True)
+class AnimalFoodApprovedIndicator(AnimalFoodApprovedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class AnimalFoodIndicator(AnimalFoodIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class AnnualAverageAmount(AnnualAverageAmountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -3982,6 +4770,12 @@ class AnnualAverageAmount(AnnualAverageAmountType):
 
 @dataclass(frozen=True)
 class ApplicationStatusCode(ApplicationStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ApprovalDate(ApprovalDateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4000,9 +4794,21 @@ class AttributeId(AttributeIdtype):
 
 
 @dataclass(frozen=True)
+class AuctionConstraintIndicator(AuctionConstraintIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class AuctionUri(AuctionUritype):
     class Meta:
         name = "AuctionURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class AvailabilityDate(AvailabilityDateType):
+    class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
 
@@ -4020,6 +4826,18 @@ class AverageAmount(AverageAmountType):
 
 @dataclass(frozen=True)
 class AverageSubsequentContractAmount(AverageSubsequentContractAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class AwardDate(AwardDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class AwardTime(AwardTimeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4050,6 +4868,12 @@ class AwardingMethodTypeCode(AwardingMethodTypeCodeType):
 
 
 @dataclass(frozen=True)
+class BackOrderAllowedIndicator(BackOrderAllowedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class BackorderQuantity(BackorderQuantityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -4063,6 +4887,12 @@ class BackorderReason(BackorderReasonType):
 
 @dataclass(frozen=True)
 class BalanceAmount(BalanceAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class BalanceBroughtForwardIndicator(BalanceBroughtForwardIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4093,6 +4923,12 @@ class BaseUnitMeasure(BaseUnitMeasureType):
 
 
 @dataclass(frozen=True)
+class BasedOnConsensusIndicator(BasedOnConsensusIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class BasicConsumedQuantity(BasicConsumedQuantityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -4100,6 +4936,24 @@ class BasicConsumedQuantity(BasicConsumedQuantityType):
 
 @dataclass(frozen=True)
 class BatchQuantity(BatchQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class BestBeforeDate(BestBeforeDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class BindingOnBuyerIndicator(BindingOnBuyerIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class BirthDate(BirthDateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4143,6 +4997,12 @@ class BuildingName(BuildingNameType):
 
 @dataclass(frozen=True)
 class BuildingNumber(BuildingNumberType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class BulkCargoIndicator(BulkCargoIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4225,13 +5085,33 @@ class CallBaseAmount(CallBaseAmountType):
 
 
 @dataclass(frozen=True)
+class CallDate(CallDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class CallExtensionAmount(CallExtensionAmountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
 
 @dataclass(frozen=True)
+class CallTime(CallTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class CancellationNote(CancellationNoteType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class CandidateReductionConstraintIndicator(
+    CandidateReductionConstraintIndicatorType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4286,6 +5166,12 @@ class CarrierServiceInstructions(CarrierServiceInstructionsType):
 
 
 @dataclass(frozen=True)
+class CatalogueIndicator(CatalogueIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class CategoryName(CategoryNameType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -4329,6 +5215,12 @@ class CharacterSetCode(CharacterSetCodeType):
 
 @dataclass(frozen=True)
 class Characteristics(CharacteristicsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ChargeIndicator(ChargeIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4444,6 +5336,24 @@ class ComparisonDataSourceCode(ComparisonDataSourceCodeType):
 
 
 @dataclass(frozen=True)
+class ComparisonForecastIssueDate(ComparisonForecastIssueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ComparisonForecastIssueTime(ComparisonForecastIssueTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class CompletionIndicator(CompletionIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class Condition(ConditionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -4484,6 +5394,12 @@ class ConsignmentQuantity(ConsignmentQuantityType):
 class ConsignorAssignedId(ConsignorAssignedIdtype):
     class Meta:
         name = "ConsignorAssignedID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ConsolidatableIndicator(ConsolidatableIndicatorType):
+    class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
 
@@ -4568,6 +5484,12 @@ class ConsumptionWaterQuantity(ConsumptionWaterQuantityType):
 
 
 @dataclass(frozen=True)
+class ContainerizedIndicator(ContainerizedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class Content(ContentType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -4625,6 +5547,12 @@ class ContractingSystemCode(ContractingSystemCodeType):
 
 @dataclass(frozen=True)
 class CoordinateSystemCode(CoordinateSystemCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class CopyIndicator(CopyIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4748,6 +5676,12 @@ class CustomsClearanceServiceInstructions(
 
 
 @dataclass(frozen=True)
+class CustomsImportClassifiedIndicator(CustomsImportClassifiedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class CustomsStatusCode(CustomsStatusCodeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -4766,6 +5700,12 @@ class DamageRemarks(DamageRemarksType):
 
 
 @dataclass(frozen=True)
+class DangerousGoodsApprovedIndicator(DangerousGoodsApprovedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class DataSendingCapability(DataSendingCapabilityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -4773,6 +5713,12 @@ class DataSendingCapability(DataSendingCapabilityType):
 
 @dataclass(frozen=True)
 class DataSourceCode(DataSourceCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class Date(DateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4955,6 +5901,12 @@ class DocumentationFeeAmount(DocumentationFeeAmountType):
 
 
 @dataclass(frozen=True)
+class DueDate(DueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class DurationMeasure(DurationMeasureType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -4973,9 +5925,33 @@ class DutyCode(DutyCodeType):
 
 
 @dataclass(frozen=True)
+class EarliestPickupDate(EarliestPickupDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class EarliestPickupTime(EarliestPickupTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class EconomicOperatorRegistryUri(EconomicOperatorRegistryUritype):
     class Meta:
         name = "EconomicOperatorRegistryURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class EffectiveDate(EffectiveDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class EffectiveTime(EffectiveTimeType):
+    class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
 
@@ -5016,6 +5992,18 @@ class EncodingCode(EncodingCodeType):
 
 
 @dataclass(frozen=True)
+class EndDate(EndDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class EndTime(EndTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class EndpointId(EndpointIdtype):
     class Meta:
         name = "EndpointID"
@@ -5036,6 +6024,30 @@ class EstimatedAmount(EstimatedAmountType):
 
 @dataclass(frozen=True)
 class EstimatedConsumedQuantity(EstimatedConsumedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class EstimatedDeliveryDate(EstimatedDeliveryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class EstimatedDeliveryTime(EstimatedDeliveryTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class EstimatedDespatchDate(EstimatedDespatchDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class EstimatedDespatchTime(EstimatedDespatchTimeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5126,6 +6138,18 @@ class ExpenseCode(ExpenseCodeType):
 
 
 @dataclass(frozen=True)
+class ExpiryDate(ExpiryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ExpiryTime(ExpiryTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class Expression(ExpressionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -5199,7 +6223,19 @@ class FirstName(FirstNameType):
 
 
 @dataclass(frozen=True)
+class FirstShipmentAvailibilityDate(FirstShipmentAvailibilityDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class Floor(FloorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class FollowupContractIndicator(FollowupContractIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5224,6 +6260,12 @@ class FormatCode(FormatCodeType):
 
 @dataclass(frozen=True)
 class ForwarderServiceInstructions(ForwarderServiceInstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class FreeOfChargeIndicator(FreeOfChargeIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5254,6 +6296,12 @@ class Frequency(FrequencyType):
 
 
 @dataclass(frozen=True)
+class FrozenDocumentIndicator(FrozenDocumentIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class FrozenPeriodDaysNumeric(FrozenPeriodDaysNumericType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -5261,6 +6309,12 @@ class FrozenPeriodDaysNumeric(FrozenPeriodDaysNumericType):
 
 @dataclass(frozen=True)
 class FullnessIndicationCode(FullnessIndicationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class FullyPaidSharesIndicator(FullyPaidSharesIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5290,6 +6344,20 @@ class GenderCode(GenderCodeType):
 
 
 @dataclass(frozen=True)
+class GeneralCargoIndicator(GeneralCargoIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class GovernmentAgreementConstraintIndicator(
+    GovernmentAgreementConstraintIndicatorType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class GrossTonnageMeasure(GrossTonnageMeasureType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -5309,6 +6377,18 @@ class GrossWeightMeasure(GrossWeightMeasureType):
 
 @dataclass(frozen=True)
 class GuaranteeTypeCode(GuaranteeTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class GuaranteedDespatchDate(GuaranteedDespatchDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class GuaranteedDespatchTime(GuaranteedDespatchTimeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5357,6 +6437,12 @@ class HazardousRegulationCode(HazardousRegulationCodeType):
 
 
 @dataclass(frozen=True)
+class HazardousRiskIndicator(HazardousRiskIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class HeatingType(HeatingTypeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -5376,6 +6462,18 @@ class HigherTenderAmount(HigherTenderAmountType):
 
 @dataclass(frozen=True)
 class HolderName(HolderNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class HumanFoodApprovedIndicator(HumanFoodApprovedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class HumanFoodIndicator(HumanFoodIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5420,6 +6518,12 @@ class ImportanceCode(ImportanceCodeType):
 
 
 @dataclass(frozen=True)
+class IndicationIndicator(IndicationIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class IndustryClassificationCode(IndustryClassificationCodeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -5452,6 +6556,12 @@ class InhouseMail(InhouseMailType):
 
 @dataclass(frozen=True)
 class InspectionMethodCode(InspectionMethodCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class InstallmentDueDate(InstallmentDueDateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5512,9 +6622,21 @@ class InvoicingPartyReference(InvoicingPartyReferenceType):
 
 
 @dataclass(frozen=True)
+class IssueDate(IssueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class IssueNumberId(IssueNumberIdtype):
     class Meta:
         name = "IssueNumberID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class IssueTime(IssueTimeType):
+    class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
 
@@ -5527,6 +6649,12 @@ class IssuerId(IssuerIdtype):
 
 @dataclass(frozen=True)
 class ItemClassificationCode(ItemClassificationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ItemUpdateRequestIndicator(ItemUpdateRequestIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5570,7 +6698,37 @@ class LanguageId(LanguageIdtype):
 
 
 @dataclass(frozen=True)
+class LastRevisionDate(LastRevisionDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class LastRevisionTime(LastRevisionTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class LatestDeliveryDate(LatestDeliveryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class LatestDeliveryTime(LatestDeliveryTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class LatestMeterQuantity(LatestMeterQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class LatestMeterReadingDate(LatestMeterReadingDateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5583,6 +6741,30 @@ class LatestMeterReadingMethod(LatestMeterReadingMethodType):
 
 @dataclass(frozen=True)
 class LatestMeterReadingMethodCode(LatestMeterReadingMethodCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class LatestPickupDate(LatestPickupDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class LatestPickupTime(LatestPickupTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class LatestProposalAcceptanceDate(LatestProposalAcceptanceDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class LatestSecurityClearanceDate(LatestSecurityClearanceDateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5613,6 +6795,12 @@ class LeadTimeMeasure(LeadTimeMeasureType):
 
 @dataclass(frozen=True)
 class LegalReference(LegalReferenceType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class LegalStatusIndicator(LegalStatusIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5681,6 +6869,12 @@ class LineStatusCode(LineStatusCodeType):
 
 @dataclass(frozen=True)
 class ListValue(ListValueType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class LivestockIndicator(LivestockIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -5799,13 +6993,37 @@ class MandateTypeCode(MandateTypeCodeType):
 
 
 @dataclass(frozen=True)
+class ManufactureDate(ManufactureDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ManufactureTime(ManufactureTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class MarkAttention(MarkAttentionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
 
 @dataclass(frozen=True)
+class MarkAttentionIndicator(MarkAttentionIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class MarkCare(MarkCareType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class MarkCareIndicator(MarkCareIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6144,6 +7362,18 @@ class NetworkId(NetworkIdtype):
 
 
 @dataclass(frozen=True)
+class NominationDate(NominationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class NominationTime(NominationTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class NormalTemperatureReductionQuantity(
     NormalTemperatureReductionQuantityType
 ):
@@ -6159,6 +7389,24 @@ class Note(NoteType):
 
 @dataclass(frozen=True)
 class NotificationTypeCode(NotificationTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class OccurrenceDate(OccurrenceDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class OccurrenceTime(OccurrenceTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class OnCarriageIndicator(OnCarriageIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6196,6 +7444,12 @@ class OperatingYearsQuantity(OperatingYearsQuantityType):
 
 
 @dataclass(frozen=True)
+class OptionalLineItemIndicator(OptionalLineItemIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class OptionsDescription(OptionsDescriptionType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -6221,6 +7475,12 @@ class OrderResponseCode(OrderResponseCodeType):
 
 @dataclass(frozen=True)
 class OrderTypeCode(OrderTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class OrderableIndicator(OrderableIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6254,6 +7514,12 @@ class OriginalContractingSystemId(OriginalContractingSystemIdtype):
 class OriginalJobId(OriginalJobIdtype):
     class Meta:
         name = "OriginalJobID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class OtherConditionsIndicator(OtherConditionsIndicatorType):
+    class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
 
@@ -6342,6 +7608,18 @@ class PaidAmount(PaidAmountType):
 
 
 @dataclass(frozen=True)
+class PaidDate(PaidDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class PaidTime(PaidTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class ParentDocumentId(ParentDocumentIdtype):
     class Meta:
         name = "ParentDocumentID"
@@ -6376,6 +7654,12 @@ class PartPresentationCode(PartPresentationCodeType):
 
 @dataclass(frozen=True)
 class PartecipationPercent(PartecipationPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class PartialDeliveryIndicator(PartialDeliveryIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6466,6 +7750,12 @@ class PaymentCurrencyCode(PaymentCurrencyCodeType):
 
 @dataclass(frozen=True)
 class PaymentDescription(PaymentDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class PaymentDueDate(PaymentDueDateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6595,6 +7885,12 @@ class PlacardNotation(PlacardNotationType):
 
 
 @dataclass(frozen=True)
+class PlannedDate(PlannedDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class PlotIdentification(PlotIdentificationType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -6627,6 +7923,18 @@ class Postbox(PostboxType):
 
 
 @dataclass(frozen=True)
+class PowerIndicator(PowerIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class PreCarriageIndicator(PreCarriageIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class PreEventNotificationDurationMeasure(
     PreEventNotificationDurationMeasureType
 ):
@@ -6642,6 +7950,12 @@ class PreferenceCriterionCode(PreferenceCriterionCodeType):
 
 @dataclass(frozen=True)
 class PrepaidAmount(PrepaidAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class PrepaidIndicator(PrepaidIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6668,6 +7982,12 @@ class PreviousJobId(PreviousJobIdtype):
 
 @dataclass(frozen=True)
 class PreviousMeterQuantity(PreviousMeterQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class PreviousMeterReadingDate(PreviousMeterReadingDateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6734,6 +8054,12 @@ class PricingCurrencyCode(PricingCurrencyCodeType):
 
 
 @dataclass(frozen=True)
+class PricingUpdateRequestIndicator(PricingUpdateRequestIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class PrimaryAccountNumberId(PrimaryAccountNumberIdtype):
     class Meta:
         name = "PrimaryAccountNumberID"
@@ -6760,6 +8086,12 @@ class PrivacyCode(PrivacyCodeType):
 
 @dataclass(frozen=True)
 class PrizeDescription(PrizeDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class PrizeIndicator(PrizeIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6846,6 +8178,12 @@ class ProviderTypeCode(ProviderTypeCodeType):
 
 
 @dataclass(frozen=True)
+class PublishAwardIndicator(PublishAwardIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class Purpose(PurposeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -6908,6 +8246,12 @@ class ReceiptAdviceTypeCode(ReceiptAdviceTypeCodeType):
 
 
 @dataclass(frozen=True)
+class ReceivedDate(ReceivedDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class ReceivedElectronicTenderQuantity(ReceivedElectronicTenderQuantityType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -6938,6 +8282,12 @@ class Reference(ReferenceType):
 
 
 @dataclass(frozen=True)
+class ReferenceDate(ReferenceDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class ReferenceEventCode(ReferenceEventCodeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -6951,6 +8301,12 @@ class ReferenceId(ReferenceIdtype):
 
 
 @dataclass(frozen=True)
+class ReferenceTime(ReferenceTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class ReferencedConsignmentId(ReferencedConsignmentIdtype):
     class Meta:
         name = "ReferencedConsignmentID"
@@ -6958,7 +8314,43 @@ class ReferencedConsignmentId(ReferencedConsignmentIdtype):
 
 
 @dataclass(frozen=True)
+class RefrigeratedIndicator(RefrigeratedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RefrigerationOnIndicator(RefrigerationOnIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class Region(RegionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RegisteredDate(RegisteredDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RegisteredTime(RegisteredTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RegistrationDate(RegistrationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RegistrationExpirationDate(RegistrationExpirationDateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7070,7 +8462,37 @@ class RequestForQuotationLineId(RequestForQuotationLineIdtype):
 
 
 @dataclass(frozen=True)
+class RequestedDeliveryDate(RequestedDeliveryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RequestedDespatchDate(RequestedDespatchDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RequestedDespatchTime(RequestedDespatchTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class RequestedInvoiceCurrencyCode(RequestedInvoiceCurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RequestedPublicationDate(RequestedPublicationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RequiredCurriculaIndicator(RequiredCurriculaIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7079,6 +8501,18 @@ class RequestedInvoiceCurrencyCode(RequestedInvoiceCurrencyCodeType):
 class RequiredCustomsId(RequiredCustomsIdtype):
     class Meta:
         name = "RequiredCustomsID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RequiredDeliveryDate(RequiredDeliveryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RequiredDeliveryTime(RequiredDeliveryTimeType):
+    class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
 
@@ -7119,7 +8553,31 @@ class ResolutionCode(ResolutionCodeType):
 
 
 @dataclass(frozen=True)
+class ResolutionDate(ResolutionDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ResolutionTime(ResolutionTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class ResponseCode(ResponseCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ResponseDate(ResponseDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ResponseTime(ResponseTimeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7132,6 +8590,18 @@ class RetailEventName(RetailEventNameType):
 
 @dataclass(frozen=True)
 class RetailEventStatusCode(RetailEventStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ReturnabilityIndicator(ReturnabilityIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ReturnableMaterialIndicator(ReturnableMaterialIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7150,7 +8620,19 @@ class RevisedForecastLineId(RevisedForecastLineIdtype):
 
 
 @dataclass(frozen=True)
+class RevisionDate(RevisionDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class RevisionStatusCode(RevisionStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class RevisionTime(RevisionTimeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7376,6 +8858,12 @@ class SizeTypeCode(SizeTypeCodeType):
 
 
 @dataclass(frozen=True)
+class SoleProprietorshipIndicator(SoleProprietorshipIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class SourceCurrencyBaseRate(SourceCurrencyBaseRateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7388,6 +8876,18 @@ class SourceCurrencyCode(SourceCurrencyCodeType):
 
 
 @dataclass(frozen=True)
+class SourceForecastIssueDate(SourceForecastIssueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class SourceForecastIssueTime(SourceForecastIssueTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class SourceValueMeasure(SourceValueMeasureType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7395,6 +8895,12 @@ class SourceValueMeasure(SourceValueMeasureType):
 
 @dataclass(frozen=True)
 class SpecialInstructions(SpecialInstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class SpecialSecurityIndicator(SpecialSecurityIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7431,7 +8937,31 @@ class SpecificationTypeCode(SpecificationTypeCodeType):
 
 
 @dataclass(frozen=True)
+class SplitConsignmentIndicator(SplitConsignmentIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class StartDate(StartDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class StartTime(StartTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class StatementTypeCode(StatementTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class StatusAvailableIndicator(StatusAvailableIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7462,6 +8992,18 @@ class StreetName(StreetNameType):
 
 @dataclass(frozen=True)
 class SubcontractingConditionsCode(SubcontractingConditionsCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class SubmissionDate(SubmissionDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class SubmissionDueDate(SubmissionDueDateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7602,6 +9144,12 @@ class TaxEnergyOnAccountAmount(TaxEnergyOnAccountAmountType):
 
 
 @dataclass(frozen=True)
+class TaxEvidenceIndicator(TaxEvidenceIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class TaxExclusiveAmount(TaxExclusiveAmountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7620,6 +9168,12 @@ class TaxExemptionReasonCode(TaxExemptionReasonCodeType):
 
 
 @dataclass(frozen=True)
+class TaxIncludedIndicator(TaxIncludedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class TaxInclusiveAmount(TaxInclusiveAmountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7627,6 +9181,12 @@ class TaxInclusiveAmount(TaxInclusiveAmountType):
 
 @dataclass(frozen=True)
 class TaxLevelCode(TaxLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class TaxPointDate(TaxPointDateType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7755,6 +9315,12 @@ class Text(TextType):
 
 
 @dataclass(frozen=True)
+class ThirdPartyPayerIndicator(ThirdPartyPayerIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class ThresholdAmount(ThresholdAmountType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
@@ -7822,6 +9388,12 @@ class TimingComplaintCode(TimingComplaintCodeType):
 
 @dataclass(frozen=True)
 class Title(TitleType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ToOrderIndicator(ToOrderIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -8116,6 +9688,12 @@ class Uuid(Uuidtype):
 
 
 @dataclass(frozen=True)
+class UnknownPriceIndicator(UnknownPriceIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class UpperOrangeHazardPlacardId(UpperOrangeHazardPlacardIdtype):
     class Meta:
         name = "UpperOrangeHazardPlacardID"
@@ -8153,7 +9731,19 @@ class ValidateToolVersion(ValidateToolVersionType):
 
 
 @dataclass(frozen=True)
+class ValidationDate(ValidationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
 class ValidationResultCode(ValidationResultCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ValidationTime(ValidationTimeType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -8162,6 +9752,12 @@ class ValidationResultCode(ValidationResultCodeType):
 class ValidatorId(ValidatorIdtype):
     class Meta:
         name = "ValidatorID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class ValidityStartDate(ValidityStartDateType):
+    class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
 
@@ -8197,6 +9793,12 @@ class ValueQuantity(ValueQuantityType):
 
 @dataclass(frozen=True)
 class VarianceQuantity(VarianceQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(frozen=True)
+class VariantConstraintIndicator(VariantConstraintIndicatorType):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 

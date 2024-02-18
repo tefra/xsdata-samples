@@ -1,6 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime, XmlDuration
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.duration_type import (
+    DurationType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -21,7 +26,7 @@ class TimePeriodType:
         date of the time period.</description>
     """
 
-    from_date_time: Optional[XmlDateTime] = field(
+    from_date_time: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "FromDateTime",
@@ -29,7 +34,7 @@ class TimePeriodType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    to_date_time: Optional[XmlDateTime] = field(
+    to_date_time: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "ToDateTime",
@@ -37,7 +42,7 @@ class TimePeriodType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    duration: Optional[XmlDuration] = field(
+    duration: Optional[DurationType] = field(
         default=None,
         metadata={
             "name": "Duration",

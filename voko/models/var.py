@@ -5,6 +5,7 @@ from voko.models.mll import (
     Ekz,
     Klr,
 )
+from voko.models.ofc import Ofc
 from voko.models.rad import Rad
 from voko.models.rim import Rim
 from voko.models.tld import Tld
@@ -66,7 +67,7 @@ class Kap:
                 },
                 {
                     "name": "ofc",
-                    "type": str,
+                    "type": Ofc,
                 },
                 {
                     "name": "fnt",

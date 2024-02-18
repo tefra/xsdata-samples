@@ -11,6 +11,7 @@ from travelport.models.enett_van_2 import EnettVan2
 from travelport.models.misc_form_of_payment_3 import MiscFormOfPayment3
 from travelport.models.payment_advice_3 import PaymentAdvice3
 from travelport.models.requisition_3 import Requisition3
+from travelport.models.ticket_number_3 import TicketNumber3
 from travelport.models.type_element_status_3 import TypeElementStatus3
 from travelport.models.type_form_of_payment_pnrreference_2 import (
     TypeFormOfPaymentPnrreference2,
@@ -124,13 +125,11 @@ class FormOfPayment3:
             "type": "Element",
         },
     )
-    ticket_number: None | str = field(
+    ticket_number: None | TicketNumber3 = field(
         default=None,
         metadata={
             "name": "TicketNumber",
             "type": "Element",
-            "min_length": 1,
-            "max_length": 13,
         },
     )
     check: None | Check3 = field(

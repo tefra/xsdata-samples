@@ -1,12 +1,16 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import List, Optional
-from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.amount_or_quantity_type import (
     AmountOrQuantityType,
@@ -120,7 +124,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    effective_date: Optional[XmlDateTime] = field(
+    effective_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
@@ -128,7 +132,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    end_date: Optional[XmlDateTime] = field(
+    end_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -136,7 +140,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    retroactive_date: Optional[XmlDateTime] = field(
+    retroactive_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "RetroactiveDate",
@@ -144,7 +148,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    term_date: Optional[XmlDateTime] = field(
+    term_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "TermDate",
@@ -198,7 +202,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    calculation_factor: Optional[Decimal] = field(
+    calculation_factor: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "CalculationFactor",

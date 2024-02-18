@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from voko.models.g import G
+from voko.models.k import K
 from voko.models.sub import Sub
 from voko.models.sup import Sup
 
@@ -32,11 +34,11 @@ class Frm:
                 },
                 {
                     "name": "g",
-                    "type": str,
+                    "type": G,
                 },
                 {
                     "name": "k",
-                    "type": str,
+                    "type": K,
                 },
             ),
         },

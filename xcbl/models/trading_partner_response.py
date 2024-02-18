@@ -7,15 +7,160 @@ from xcbl.models.trading_partner_user_information import (
 
 
 @dataclass(kw_only=True)
+class AlternateId:
+    class Meta:
+        name = "AlternateID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class MessageType:
+    class Meta:
+        name = "MessageClass"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class MessageDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class MessageNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class MessageTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class MessageTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PrimaryReturnCodeDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PrimaryReturnCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RedirectUrl:
+    class Meta:
+        name = "RedirectURL"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RefDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RefNum:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ReturnedIdentificationUrn:
+    class Meta:
+        name = "ReturnedIdentificationURN"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ServiceId:
+    class Meta:
+        name = "ServiceID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class Reference:
-    ref_num: str = field(
+    ref_num: RefNum = field(
         metadata={
             "name": "RefNum",
             "type": "Element",
             "required": True,
         }
     )
-    ref_date: Optional[str] = field(
+    ref_date: Optional[RefDate] = field(
         default=None,
         metadata={
             "name": "RefDate",
@@ -26,40 +171,54 @@ class Reference:
 
 @dataclass(kw_only=True)
 class SecondaryMessageInformation:
-    message_type_coded: str = field(
+    message_type_coded: MessageTypeCoded = field(
         metadata={
             "name": "MessageTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    message_type_coded_other: Optional[str] = field(
+    message_type_coded_other: Optional[MessageTypeCodedOther] = field(
         default=None,
         metadata={
             "name": "MessageTypeCodedOther",
             "type": "Element",
         },
     )
-    message_class: Optional[str] = field(
+    message_class: Optional[MessageType] = field(
         default=None,
         metadata={
             "name": "MessageClass",
             "type": "Element",
         },
     )
-    message_number: Optional[str] = field(
+    message_number: Optional[MessageNumber] = field(
         default=None,
         metadata={
             "name": "MessageNumber",
             "type": "Element",
         },
     )
-    message_description: Optional[str] = field(
+    message_description: Optional[MessageDescription] = field(
         default=None,
         metadata={
             "name": "MessageDescription",
             "type": "Element",
         },
+    )
+
+
+@dataclass(kw_only=True)
+class TradingPartnerPrimaryId:
+    class Meta:
+        name = "TradingPartnerPrimaryID"
+
+    primary_id: PrimaryId = field(
+        metadata={
+            "name": "PrimaryID",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 
@@ -87,45 +246,6 @@ class MessageResponseIdentifier:
 
 
 @dataclass(kw_only=True)
-class TradingPartnerPrimaryId:
-    class Meta:
-        name = "TradingPartnerPrimaryID"
-
-    primary_id: PrimaryId = field(
-        metadata={
-            "name": "PrimaryID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class PrimaryMessageInformation:
-    message_response_identifier: MessageResponseIdentifier = field(
-        metadata={
-            "name": "MessageResponseIdentifier",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    primary_return_coded: str = field(
-        metadata={
-            "name": "PrimaryReturnCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    primary_return_code_description: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PrimaryReturnCodeDescription",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class ReturnedIdentification:
     trading_partner_primary_id: Optional[TradingPartnerPrimaryId] = field(
         default=None,
@@ -134,7 +254,7 @@ class ReturnedIdentification:
             "type": "Element",
         },
     )
-    alternate_id: Optional[str] = field(
+    alternate_id: Optional[AlternateId] = field(
         default=None,
         metadata={
             "name": "AlternateID",
@@ -148,7 +268,7 @@ class ReturnedIdentification:
             "type": "Element",
         },
     )
-    returned_identification_urn: Optional[str] = field(
+    returned_identification_urn: Optional[ReturnedIdentificationUrn] = field(
         default=None,
         metadata={
             "name": "ReturnedIdentificationURN",
@@ -165,6 +285,33 @@ class ListOfReturnedIdentification:
             "name": "ReturnedIdentification",
             "type": "Element",
             "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PrimaryMessageInformation:
+    message_response_identifier: MessageResponseIdentifier = field(
+        metadata={
+            "name": "MessageResponseIdentifier",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    primary_return_coded: PrimaryReturnCoded = field(
+        metadata={
+            "name": "PrimaryReturnCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    primary_return_code_description: Optional[
+        PrimaryReturnCodeDescription
+    ] = field(
+        default=None,
+        metadata={
+            "name": "PrimaryReturnCodeDescription",
+            "type": "Element",
         },
     )
 
@@ -207,14 +354,14 @@ class TradingPartnerResponseInfo:
             "type": "Element",
         },
     )
-    redirect_url: Optional[str] = field(
+    redirect_url: Optional[RedirectUrl] = field(
         default=None,
         metadata={
             "name": "RedirectURL",
             "type": "Element",
         },
     )
-    service_id: Optional[str] = field(
+    service_id: Optional[ServiceId] = field(
         default=None,
         metadata={
             "name": "ServiceID",

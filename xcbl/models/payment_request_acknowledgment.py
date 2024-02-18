@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xcbl.models.payment_status_response import (
+    ConfirmationId,
     CreditAmount,
     DebitAmount,
     ListOfPaymentException,
@@ -9,6 +10,7 @@ from xcbl.models.payment_status_response import (
     SettlementAmount,
 )
 from xcbl.models.remittance_advice import (
+    CertificateAuthority,
     EncryptedInfo,
     ListOfRateOfExchangeDetail,
     PaymentParty,
@@ -18,8 +20,106 @@ from xcbl.models.request_for_quotation import (
     AccountDetail,
     FinancialInstitution,
 )
+from xcbl.models.shipping_schedule_response import Sequence
+from xcbl.models.sourcing_result_response import GeneralNote
 from xcbl.models.trading_partner_response import Reference
 from xcbl.models.trading_partner_user_information import Language
+
+
+@dataclass(kw_only=True)
+class ExcpetionNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Finote:
+    class Meta:
+        name = "FINote"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentRequestAcknCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentRequestAcknCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentRequestAcknId:
+    class Meta:
+        name = "PaymentRequestAcknID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentRequestAcknIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentRequestNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentSequenceNo:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SuccessfulReceptIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 @dataclass(kw_only=True)
@@ -41,14 +141,14 @@ class FiaccountData:
             "required": True,
         }
     )
-    sequence: Optional[str] = field(
+    sequence: Optional[Sequence] = field(
         default=None,
         metadata={
             "name": "Sequence",
             "type": "Element",
         },
     )
-    finote: Optional[str] = field(
+    finote: Optional[Finote] = field(
         default=None,
         metadata={
             "name": "FINote",
@@ -113,28 +213,30 @@ class ListOfFiaccount:
 
 @dataclass(kw_only=True)
 class PaymentRequestAcknHeader:
-    payment_request_ackn_coded: str = field(
+    payment_request_ackn_coded: PaymentRequestAcknCoded = field(
         metadata={
             "name": "PaymentRequestAcknCoded",
             "type": "Element",
             "required": True,
         }
     )
-    payment_request_ackn_coded_other: Optional[str] = field(
+    payment_request_ackn_coded_other: Optional[
+        PaymentRequestAcknCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "PaymentRequestAcknCodedOther",
             "type": "Element",
         },
     )
-    payment_request_ackn_issue_date: str = field(
+    payment_request_ackn_issue_date: PaymentRequestAcknIssueDate = field(
         metadata={
             "name": "PaymentRequestAcknIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    payment_request_ackn_id: str = field(
+    payment_request_ackn_id: PaymentRequestAcknId = field(
         metadata={
             "name": "PaymentRequestAcknID",
             "type": "Element",
@@ -148,21 +250,21 @@ class PaymentRequestAcknHeader:
             "type": "Element",
         },
     )
-    certificate_authority: Optional[str] = field(
+    certificate_authority: Optional[CertificateAuthority] = field(
         default=None,
         metadata={
             "name": "CertificateAuthority",
             "type": "Element",
         },
     )
-    successful_recept_indicator: str = field(
+    successful_recept_indicator: SuccessfulReceptIndicator = field(
         metadata={
             "name": "SuccessfulReceptIndicator",
             "type": "Element",
             "required": True,
         }
     )
-    general_note: Optional[str] = field(
+    general_note: Optional[GeneralNote] = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -218,7 +320,7 @@ class FinancialInstitutionDetail:
 
 @dataclass(kw_only=True)
 class PaymentRequestAcknDetail:
-    confirmation_id: str = field(
+    confirmation_id: ConfirmationId = field(
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
@@ -232,7 +334,7 @@ class PaymentRequestAcknDetail:
             "required": True,
         }
     )
-    payment_sequence_no: Optional[str] = field(
+    payment_sequence_no: Optional[PaymentSequenceNo] = field(
         default=None,
         metadata={
             "name": "PaymentSequenceNo",
@@ -283,14 +385,14 @@ class PaymentRequestAcknDetail:
             "type": "Element",
         },
     )
-    excpetion_note: Optional[str] = field(
+    excpetion_note: Optional[ExcpetionNote] = field(
         default=None,
         metadata={
             "name": "ExcpetionNote",
             "type": "Element",
         },
     )
-    payment_request_note: Optional[str] = field(
+    payment_request_note: Optional[PaymentRequestNote] = field(
         default=None,
         metadata={
             "name": "PaymentRequestNote",

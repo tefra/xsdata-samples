@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.address_type import (
     AddressType,
@@ -68,7 +70,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    date_open: Optional[XmlDateTime] = field(
+    date_open: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "DateOpen",
@@ -77,7 +79,7 @@ class ClaimType:
             "required": True,
         },
     )
-    date_last_transaction: Optional[XmlDateTime] = field(
+    date_last_transaction: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "DateLastTransaction",
@@ -86,7 +88,7 @@ class ClaimType:
             "required": True,
         },
     )
-    date_of_loss: Optional[XmlDateTime] = field(
+    date_of_loss: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "DateOfLoss",
@@ -94,7 +96,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    date_reported: Optional[XmlDateTime] = field(
+    date_reported: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "DateReported",
@@ -102,7 +104,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    date_last_updated: Optional[XmlDateTime] = field(
+    date_last_updated: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "DateLastUpdated",

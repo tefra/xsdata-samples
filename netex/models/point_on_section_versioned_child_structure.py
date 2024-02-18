@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from .activation_link_ref import ActivationLinkRef
-from .activation_point import ActivationPoint
+from .activation_point_1 import ActivationPoint1
 from .activation_point_ref import ActivationPointRef
 from .beacon_point import BeaconPoint
 from .beacon_point_ref import BeaconPointRef
@@ -13,7 +13,7 @@ from .garage_point import GaragePoint
 from .garage_point_ref import GaragePointRef
 from .line_link_ref import LineLinkRef
 from .onward_vehicle_meeting_link_ref import OnwardVehicleMeetingLinkRef
-from .parking_point import ParkingPoint
+from .parking_point_1 import ParkingPoint1
 from .parking_point_ref import ParkingPointRef
 from .path_junction import PathJunction
 from .path_link_ref import PathLinkRef
@@ -25,7 +25,7 @@ from .point_ref import PointRef
 from .railway_junction import RailwayJunction
 from .railway_link_ref import RailwayLinkRef
 from .railway_point_ref import RailwayPointRef
-from .relief_point import ReliefPoint
+from .relief_point_1 import ReliefPoint1
 from .relief_point_ref import ReliefPointRef
 from .road_junction import RoadJunction
 from .road_link_ref import RoadLinkRef
@@ -37,7 +37,7 @@ from .scheduled_stop_point import ScheduledStopPoint
 from .scheduled_stop_point_ref import ScheduledStopPointRef
 from .service_link_ref import ServiceLinkRef
 from .timing_link_ref import TimingLinkRef
-from .timing_point import TimingPoint
+from .timing_point_1 import TimingPoint1
 from .timing_point_ref import TimingPointRef
 from .traffic_control_point import TrafficControlPoint
 from .traffic_control_point_ref import TrafficControlPointRef
@@ -82,16 +82,16 @@ class PointOnSectionVersionedChildStructure(
             ScheduledStopPoint,
             PathJunction,
             RoutePoint,
-            ParkingPoint,
+            ParkingPoint1,
             GaragePoint,
-            ReliefPoint,
-            TimingPoint,
+            ReliefPoint1,
+            TimingPoint1,
             WireJunction,
             RoadJunction,
             RailwayJunction,
             TrafficControlPoint,
             BeaconPoint,
-            ActivationPoint,
+            ActivationPoint1,
             Point2,
         ]
     ] = field(
@@ -211,7 +211,7 @@ class PointOnSectionVersionedChildStructure(
                 },
                 {
                     "name": "ParkingPoint",
-                    "type": ParkingPoint,
+                    "type": ParkingPoint1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -221,12 +221,12 @@ class PointOnSectionVersionedChildStructure(
                 },
                 {
                     "name": "ReliefPoint",
-                    "type": ReliefPoint,
+                    "type": ReliefPoint1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "TimingPoint",
-                    "type": TimingPoint,
+                    "type": TimingPoint1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -256,7 +256,7 @@ class PointOnSectionVersionedChildStructure(
                 },
                 {
                     "name": "ActivationPoint",
-                    "type": ActivationPoint,
+                    "type": ActivationPoint1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

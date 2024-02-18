@@ -5,6 +5,8 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import TransportExecu
 from ubl.models.common.ubl_common_aggregate_components_2_1 import TransportHandlingUnit
 from ubl.models.common.ubl_common_basic_components_2_1 import ConditionCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StatusReason
 from ubl.models.common.ubl_common_basic_components_2_1 import StatusReasonCode
 from ubl.models.common.ubl_common_basic_components_2_1 import TransportExecutionStatusCode
@@ -22,8 +24,12 @@ obj = TransportationStatus(
     id=Id(
         value='TS_1'
     ),
-    issue_date=XmlDate(2011, 10, 6),
-    issue_time=XmlTime(9, 29, 30, 0, 60),
+    issue_date=IssueDate(
+        value=XmlDate(2011, 10, 6)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(9, 29, 30, 0, 60)
+    ),
     transportation_status_type_code=TransportationStatusTypeCode(
         value='All deviations'
     ),

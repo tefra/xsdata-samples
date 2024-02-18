@@ -1,5 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_name import (
+    PublisherName,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_place import (
+    PublisherPlace,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -14,20 +20,16 @@ class Publisher:
         name = "publisher"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    publisher_name: Optional[str] = field(
+    publisher_name: Optional[PublisherName] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 1,
-            "max_length": 255,
         },
     )
-    publisher_place: Optional[str] = field(
+    publisher_place: Optional[PublisherPlace] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 2,
-            "max_length": 255,
         },
     )

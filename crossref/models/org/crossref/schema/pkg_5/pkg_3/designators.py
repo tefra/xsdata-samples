@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_adopted_from import (
+    StdAdoptedFrom,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_alt_as_published import (
     StdAltAsPublished,
 )
@@ -9,8 +12,14 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_as_published import (
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_family_designator import (
     StdFamilyDesignator,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_revision_of import (
+    StdRevisionOf,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_set_designator import (
     StdSetDesignator,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_supersedes import (
+    StdSupersedes,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_undated_designator import (
     StdUndatedDesignator,
@@ -59,27 +68,21 @@ class Designators:
             "type": "Element",
         },
     )
-    std_supersedes: List[str] = field(
+    std_supersedes: List[StdSupersedes] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_length": 2,
-            "max_length": 150,
         },
     )
-    std_adopted_from: List[str] = field(
+    std_adopted_from: List[StdAdoptedFrom] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_length": 2,
-            "max_length": 150,
         },
     )
-    std_revision_of: List[str] = field(
+    std_revision_of: List[StdRevisionOf] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_length": 2,
-            "max_length": 150,
         },
     )

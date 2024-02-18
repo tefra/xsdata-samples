@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.code_description_type import (
     CodeDescriptionType,
 )
@@ -30,7 +32,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ExtensionType:
-    effective_date: Optional[XmlDateTime] = field(
+    effective_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
@@ -38,7 +40,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    end_date: Optional[XmlDateTime] = field(
+    end_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -46,7 +48,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    retroactive_date: Optional[XmlDateTime] = field(
+    retroactive_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "RetroactiveDate",
@@ -54,7 +56,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    term_date: Optional[XmlDateTime] = field(
+    term_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "TermDate",

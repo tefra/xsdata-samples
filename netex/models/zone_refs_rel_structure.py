@@ -8,7 +8,7 @@ from .mobility_service_constraint_zone_ref import (
 )
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .stop_area_ref import StopAreaRef
-from .tariff_zone_ref import TariffZoneRef
+from .tariff_zone_ref_1 import TariffZoneRef1
 from .transport_administrative_zone_ref import TransportAdministrativeZoneRef
 from .zone_ref import ZoneRef
 
@@ -28,7 +28,7 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
             AccessZoneRef,
             AdministrativeZoneRef,
             FareZoneRef,
-            TariffZoneRef,
+            TariffZoneRef1,
             ZoneRef,
         ]
     ] = field(
@@ -68,7 +68,7 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
                 },
                 {
                     "name": "TariffZoneRef",
-                    "type": TariffZoneRef,
+                    "type": TariffZoneRef1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .stop_place import StopPlace
+from .stop_place_1 import StopPlace1
 from .stop_place_ref import StopPlaceRef
 from .taxi_rank_ref import TaxiRankRef
 
@@ -14,7 +14,7 @@ class StopPlacesRelStructure(ContainmentAggregationStructure):
         name = "stopPlaces_RelStructure"
 
     taxi_rank_ref_or_stop_place_ref_or_stop_place: Optional[
-        Union[TaxiRankRef, StopPlaceRef, StopPlace]
+        Union[TaxiRankRef, StopPlaceRef, StopPlace1]
     ] = field(
         default=None,
         metadata={
@@ -32,7 +32,7 @@ class StopPlacesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "StopPlace",
-                    "type": StopPlace,
+                    "type": StopPlace1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

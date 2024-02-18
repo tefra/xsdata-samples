@@ -2,10 +2,16 @@
   "host": [
     {
       "admin-email": [
-        "registry-service-admin@example.com",
-        "registry-service-admin@example.com"
+        {
+          "value": "registry-service-admin@example.com"
+        },
+        {
+          "value": "registry-service-admin@example.com"
+        }
       ],
-      "admin-notes": "Registry's EWP Host",
+      "admin-notes": {
+        "value": "Registry's EWP Host"
+      },
       "apis-implemented": {
         "other_element": [
           {
@@ -54,9 +60,13 @@
     },
     {
       "admin-email": [
-        "admin-or-developer@example.com"
+        {
+          "value": "admin-or-developer@example.com"
+        }
       ],
-      "admin-notes": "It's not a real manifest. Just an example.",
+      "admin-notes": {
+        "value": "It's not a real manifest. Just an example."
+      },
       "apis-implemented": {
         "other_element": [
           {

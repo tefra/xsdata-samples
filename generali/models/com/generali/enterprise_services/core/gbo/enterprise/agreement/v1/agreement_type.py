@@ -1,14 +1,19 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
 )
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
     Idtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
@@ -96,7 +101,7 @@ class AgreementType(BaseGbotype):
         for local data tab.
     """
 
-    expiry_date: Optional[XmlDateTime] = field(
+    expiry_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "ExpiryDate",
@@ -105,7 +110,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    inception_date: Optional[XmlDateTime] = field(
+    inception_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "InceptionDate",
@@ -122,7 +127,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    issue_date: Optional[XmlDateTime] = field(
+    issue_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -138,7 +143,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    last_renewal_date: Optional[XmlDateTime] = field(
+    last_renewal_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "LastRenewalDate",
@@ -171,7 +176,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    status_date: Optional[XmlDateTime] = field(
+    status_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "StatusDate",
@@ -195,7 +200,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    total_layers: Optional[int] = field(
+    total_layers: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "TotalLayers",

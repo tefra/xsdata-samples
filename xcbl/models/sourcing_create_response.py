@@ -8,27 +8,65 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
-class SourcingCreateSummary:
-    total_number_of_sourcing_items: Optional[str] = field(
-        default=None,
+class EstimatedTotalValue:
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumberOfSourcingItems",
-            "type": "Element",
-        },
-    )
-    total_number_of_participants: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TotalNumberOfParticipants",
-            "type": "Element",
-        },
-    )
-    estimated_total_value: str = field(
-        metadata={
-            "name": "EstimatedTotalValue",
-            "type": "Element",
             "required": True,
-        }
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ItemNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ParentItemIdentifier:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateResponseId:
+    class Meta:
+        name = "SourcingCreateResponseID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateResponseIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateResponseNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
     )
 
 
@@ -40,6 +78,102 @@ class SourcingItemComponentResponse:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingItemId:
+    class Meta:
+        name = "SourcingItemID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingItemName:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingItemResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingItemResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalNumberOfParticipants:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalNumberOfSourcingItems:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TrackingIdnumber:
+    class Meta:
+        name = "TrackingIDNumber"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
     )
 
 
@@ -69,10 +203,26 @@ class SourcingCreateResponsePurpose:
 
 
 @dataclass(kw_only=True)
-class SourcingCreateResponseSummary:
-    sourcing_create_summary: SourcingCreateSummary = field(
+class SourcingCreateSummary:
+    total_number_of_sourcing_items: Optional[
+        TotalNumberOfSourcingItems
+    ] = field(
+        default=None,
         metadata={
-            "name": "SourcingCreateSummary",
+            "name": "TotalNumberOfSourcingItems",
+            "type": "Element",
+        },
+    )
+    total_number_of_participants: Optional[TotalNumberOfParticipants] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberOfParticipants",
+            "type": "Element",
+        },
+    )
+    estimated_total_value: EstimatedTotalValue = field(
+        metadata={
+            "name": "EstimatedTotalValue",
             "type": "Element",
             "required": True,
         }
@@ -81,42 +231,44 @@ class SourcingCreateResponseSummary:
 
 @dataclass(kw_only=True)
 class SourcingCreateResponseDetail:
-    sourcing_item_id: str = field(
+    sourcing_item_id: SourcingItemId = field(
         metadata={
             "name": "SourcingItemID",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_item_name: str = field(
+    sourcing_item_name: SourcingItemName = field(
         metadata={
             "name": "SourcingItemName",
             "type": "Element",
             "required": True,
         }
     )
-    item_number: str = field(
+    item_number: ItemNumber = field(
         metadata={
             "name": "ItemNumber",
             "type": "Element",
             "required": True,
         }
     )
-    parent_item_identifier: Optional[str] = field(
+    parent_item_identifier: Optional[ParentItemIdentifier] = field(
         default=None,
         metadata={
             "name": "ParentItemIdentifier",
             "type": "Element",
         },
     )
-    sourcing_item_response_coded: str = field(
+    sourcing_item_response_coded: SourcingItemResponseCoded = field(
         metadata={
             "name": "SourcingItemResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_item_response_coded_other: Optional[str] = field(
+    sourcing_item_response_coded_other: Optional[
+        SourcingItemResponseCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "SourcingItemResponseCodedOther",
@@ -143,14 +295,16 @@ class SourcingCreateResponseHeader:
             "required": True,
         }
     )
-    sourcing_create_response_issue_date: str = field(
-        metadata={
-            "name": "SourcingCreateResponseIssueDate",
-            "type": "Element",
-            "required": True,
-        }
+    sourcing_create_response_issue_date: SourcingCreateResponseIssueDate = (
+        field(
+            metadata={
+                "name": "SourcingCreateResponseIssueDate",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )
-    sourcing_create_response_id: str = field(
+    sourcing_create_response_id: SourcingCreateResponseId = field(
         metadata={
             "name": "SourcingCreateResponseID",
             "type": "Element",
@@ -164,21 +318,23 @@ class SourcingCreateResponseHeader:
             "required": True,
         }
     )
-    tracking_idnumber: str = field(
+    tracking_idnumber: TrackingIdnumber = field(
         metadata={
             "name": "TrackingIDNumber",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_response_coded: str = field(
+    sourcing_response_coded: SourcingResponseCoded = field(
         metadata={
             "name": "SourcingResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_response_coded_other: Optional[str] = field(
+    sourcing_response_coded_other: Optional[
+        SourcingResponseCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "SourcingResponseCodedOther",
@@ -192,12 +348,25 @@ class SourcingCreateResponseHeader:
             "required": True,
         }
     )
-    sourcing_create_response_note: Optional[str] = field(
+    sourcing_create_response_note: Optional[
+        SourcingCreateResponseNote
+    ] = field(
         default=None,
         metadata={
             "name": "SourcingCreateResponseNote",
             "type": "Element",
         },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateResponseSummary:
+    sourcing_create_summary: SourcingCreateSummary = field(
+        metadata={
+            "name": "SourcingCreateSummary",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 

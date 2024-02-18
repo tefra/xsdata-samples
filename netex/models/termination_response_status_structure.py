@@ -1,8 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from xsdata.models.datatype import XmlDateTime
 from .capability_not_supported_error import CapabilityNotSupportedError
+from .error_description_structure import ErrorDescriptionStructure
+from .message_qualifier_structure import MessageQualifierStructure
 from .other_error import OtherError
+from .participant_ref_structure import ParticipantRefStructure
+from .response_timestamp import ResponseTimestamp
+from .status import Status
+from .subscription_filter_ref_structure import SubscriptionFilterRefStructure
+from .subscription_qualifier_structure import SubscriptionQualifierStructure
 from .unknown_subscriber_error import UnknownSubscriberError
 from .unknown_subscription_error import UnknownSubscriptionError
 
@@ -11,7 +17,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class TerminationResponseStatusStructure:
-    response_timestamp: Optional[XmlDateTime] = field(
+    response_timestamp: Optional[ResponseTimestamp] = field(
         default=None,
         metadata={
             "name": "ResponseTimestamp",
@@ -19,7 +25,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_message_ref: Optional[str] = field(
+    request_message_ref: Optional[MessageQualifierStructure] = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -27,7 +33,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscriber_ref: Optional[str] = field(
+    subscriber_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "SubscriberRef",
@@ -35,7 +41,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_filter_ref: Optional[str] = field(
+    subscription_filter_ref: Optional[SubscriptionFilterRefStructure] = field(
         default=None,
         metadata={
             "name": "SubscriptionFilterRef",
@@ -43,7 +49,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_ref: Optional[str] = field(
+    subscription_ref: Optional[SubscriptionQualifierStructure] = field(
         default=None,
         metadata={
             "name": "SubscriptionRef",
@@ -51,8 +57,8 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: bool = field(
-        default=True,
+    status: Optional[Status] = field(
+        default=None,
         metadata={
             "name": "Status",
             "type": "Element",
@@ -108,7 +114,7 @@ class TerminationResponseStatusStructure:
                 ),
             },
         )
-        description: Optional[str] = field(
+        description: Optional[ErrorDescriptionStructure] = field(
             default=None,
             metadata={
                 "name": "Description",

@@ -1,22 +1,29 @@
 from netex.models.accommodation import Accommodation
 from netex.models.accommodation_access_enumeration import AccommodationAccessEnumeration
+from netex.models.accommodation_access_list import AccommodationAccessList
+from netex.models.accommodation_facility import AccommodationFacility
 from netex.models.accommodation_facility_enumeration import AccommodationFacilityEnumeration
+from netex.models.accommodation_facility_list import AccommodationFacilityList
 from netex.models.accommodations_rel_structure import AccommodationsRelStructure
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.arrival_structure import ArrivalStructure
 from netex.models.assistance_facility_enumeration import AssistanceFacilityEnumeration
+from netex.models.assistance_facility_list import AssistanceFacilityList
+from netex.models.berth_facility import BerthFacility
 from netex.models.berth_facility_enumeration import BerthFacilityEnumeration
 from netex.models.block_parts_rel_structure import BlockPartsRelStructure
 from netex.models.block_ref import BlockRef
 from netex.models.blocks_in_frame_rel_structure import BlocksInFrameRelStructure
+from netex.models.boarding_permission import BoardingPermission
 from netex.models.boarding_permission_enumeration import BoardingPermissionEnumeration
-from netex.models.call import Call
+from netex.models.call_1 import Call1
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.catering_facility_enumeration import CateringFacilityEnumeration
+from netex.models.catering_facility_list import CateringFacilityList
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
@@ -26,7 +33,9 @@ from netex.models.compound_train_ref import CompoundTrainRef
 from netex.models.connecting_journey_view import ConnectingJourneyView
 from netex.models.connection import Connection
 from netex.models.connection_ref_structure import ConnectionRefStructure
+from netex.models.couchette_facility import CouchetteFacility
 from netex.models.couchette_facility_enumeration import CouchetteFacilityEnumeration
+from netex.models.couchette_facility_list import CouchetteFacilityList
 from netex.models.coupled_journey import CoupledJourney
 from netex.models.coupled_journeys_in_frame_rel_structure import CoupledJourneysInFrameRelStructure
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
@@ -40,7 +49,9 @@ from netex.models.destination_displays_in_frame_rel_structure import Destination
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.entities_in_version_rel_structure import CompositeFrame
 from netex.models.entities_in_version_rel_structure import FramesRelStructure
+from netex.models.fare_class import FareClass
 from netex.models.fare_class_enumeration import FareClassEnumeration
+from netex.models.fare_classes import FareClasses
 from netex.models.holiday_type_enumeration import HolidayTypeEnumeration
 from netex.models.journey_meeting import JourneyMeeting
 from netex.models.journey_meeting_ref import JourneyMeetingRef
@@ -58,19 +69,25 @@ from netex.models.journey_parts_rel_structure import JourneyPartsRelStructure
 from netex.models.journey_pattern_view import JourneyPatternView
 from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatternsInFrameRelStructure
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.line_derived_view_structure import LineDerivedViewStructure
 from netex.models.line_view import LineView
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.luggage_carriage_enumeration import LuggageCarriageEnumeration
+from netex.models.luggage_carriage_facility_list import LuggageCarriageFacilityList
 from netex.models.mobility_facility_enumeration import MobilityFacilityEnumeration
+from netex.models.mobility_facility_list import MobilityFacilityList
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.nuisance_facility_enumeration import NuisanceFacilityEnumeration
+from netex.models.nuisance_facility_list import NuisanceFacilityList
 from netex.models.onboard_stay import OnboardStay
 from netex.models.onboard_stays_rel_structure import OnboardStaysRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_comms_facility_enumeration import PassengerCommsFacilityEnumeration
+from netex.models.passenger_comms_facility_list import PassengerCommsFacilityList
 from netex.models.passenger_information_facility_enumeration import PassengerInformationFacilityEnumeration
+from netex.models.passenger_information_facility_list import PassengerInformationFacilityList
 from netex.models.point_ref_structure import PointRefStructure
 from netex.models.points_in_journey_pattern_rel_structure import PointsInJourneyPatternRelStructure
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
@@ -78,15 +95,16 @@ from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purpose_of_journey_partition_ref import PurposeOfJourneyPartitionRef
-from netex.models.quay import Quay
+from netex.models.quay_1 import Quay1
 from netex.models.quay_assignment_view import QuayAssignmentView
 from netex.models.quay_ref_structure import QuayRefStructure
 from netex.models.quays_rel_structure import QuaysRelStructure
 from netex.models.reason_for_meeting_enumeration import ReasonForMeetingEnumeration
-from netex.models.route import Route
+from netex.models.route_1 import Route1
 from netex.models.route_ref import RouteRef
 from netex.models.routes_in_frame_rel_structure import RoutesInFrameRelStructure
 from netex.models.sanitary_facility_enumeration import SanitaryFacilityEnumeration
+from netex.models.sanitary_facility_list import SanitaryFacilityList
 from netex.models.scheduled_stop_point import ScheduledStopPoint
 from netex.models.scheduled_stop_point_ref import ScheduledStopPointRef
 from netex.models.scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
@@ -98,16 +116,17 @@ from netex.models.service_facility_set_ref import ServiceFacilitySetRef
 from netex.models.service_facility_sets_in_frame_rel_structure import ServiceFacilitySetsInFrameRelStructure
 from netex.models.service_facility_sets_rel_structure import ServiceFacilitySetsRelStructure
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey import ServiceJourney
+from netex.models.service_journey_1 import ServiceJourney1
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.service_journey_ref_structure import ServiceJourneyRefStructure
 from netex.models.site_frame import SiteFrame
-from netex.models.stop_place import StopPlace
+from netex.models.stop_place_1 import StopPlace1
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
 from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from netex.models.ticketing_service_facility_list import TicketingServiceFacilityList
 from netex.models.timetable_frame import TimetableFrame
 from netex.models.timetable_frame_ref import TimetableFrameRef
 from netex.models.train import Train
@@ -144,10 +163,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -239,7 +262,7 @@ obj = PublicationDelivery(
                             ],
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='bbd:sj_447',
                                         version='any',
                                         description=MultilingualString(
@@ -401,7 +424,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_447_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -460,7 +483,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_447_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -534,7 +557,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_447_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -616,7 +639,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_447_004',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -655,7 +678,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='bbd:sj_40447',
                                         version='any',
                                         description=MultilingualString(
@@ -773,7 +796,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_40447_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -825,7 +848,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_40447_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -906,7 +929,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_40447_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -945,7 +968,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='bbd:sj_457',
                                         version='any',
                                         description=MultilingualString(
@@ -1108,7 +1131,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_457_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1160,7 +1183,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_457_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1241,7 +1264,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_457_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1360,7 +1383,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_457_004',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1442,7 +1465,7 @@ obj = PublicationDelivery(
                                             train_size_type=TrainSizeEnumeration.LONG
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='bbd:sj_60457',
                                         version='any',
                                         description=MultilingualString(
@@ -1523,7 +1546,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_60457_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1596,7 +1619,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='bbd:sj_60457_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1669,12 +1692,16 @@ obj = PublicationDelivery(
                                                     description=MultilingualString(
                                                         value='Second  class facilities only'
                                                     ),
-                                                    catering_facility_list=[
-                                                        CateringFacilityEnumeration.BUFFET,
-                                                    ],
-                                                    fare_classes=[
-                                                        FareClassEnumeration.SECOND_CLASS,
-                                                    ]
+                                                    catering_facility_list=CateringFacilityList(
+                                                        value=[
+                                                            CateringFacilityEnumeration.BUFFET,
+                                                        ]
+                                                    ),
+                                                    fare_classes=FareClasses(
+                                                        value=[
+                                                            FareClassEnumeration.SECOND_CLASS,
+                                                        ]
+                                                    )
                                                 ),
                                             ]
                                         )
@@ -1916,62 +1943,88 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='General facilities'
                                         ),
-                                        assistance_facility_list=[
-                                            AssistanceFacilityEnumeration.BOARDING_ASSISTANCE,
-                                            AssistanceFacilityEnumeration.CONDUCTOR,
-                                            AssistanceFacilityEnumeration.WHEELCHAIR_ASSISTANCE,
-                                        ],
-                                        catering_facility_list=[
-                                            CateringFacilityEnumeration.BUFFET,
-                                        ],
-                                        fare_classes=[
-                                            FareClassEnumeration.FIRST_CLASS,
-                                            FareClassEnumeration.STANDARD_CLASS,
-                                        ],
-                                        mobility_facility_list=[
-                                            MobilityFacilityEnumeration.STEP_FREE_ACCESS,
-                                            MobilityFacilityEnumeration.SUITABLE_FOR_WHEELCHAIRS,
-                                        ],
-                                        nuisance_facility_list=[
-                                            NuisanceFacilityEnumeration.MOBILE_PHONE_FREE_ZONE,
-                                            NuisanceFacilityEnumeration.NO_SMOKING,
-                                        ],
-                                        passenger_comms_facility_list=[
-                                            PassengerCommsFacilityEnumeration.PUBLIC_WIFI,
-                                        ],
-                                        passenger_information_facility_list=[
-                                            PassengerInformationFacilityEnumeration.NEXT_STOP_INDICATOR,
-                                            PassengerInformationFacilityEnumeration.PASSENGER_INFORMATION_DISPLAY,
-                                            PassengerInformationFacilityEnumeration.REAL_TIME_CONNECTIONS,
-                                            PassengerInformationFacilityEnumeration.STOP_ANNOUNCEMENTS,
-                                        ],
-                                        sanitary_facility_list=[
-                                            SanitaryFacilityEnumeration.TOILET,
-                                            SanitaryFacilityEnumeration.WHEELCHAIR_ACCESS_TOILET,
-                                        ],
-                                        ticketing_service_facility_list=[
-                                            TicketingServiceFacilityEnumeration.PURCHASE,
-                                        ],
-                                        accommodation_access_list=[
-                                            AccommodationAccessEnumeration.RESERVATION,
-                                        ],
-                                        accommodation_facility_list=[
-                                            AccommodationFacilityEnumeration.COUCHETTE,
-                                            AccommodationFacilityEnumeration.SEATING,
-                                            AccommodationFacilityEnumeration.SLEEPER,
-                                        ],
-                                        couchette_facility_list=[
-                                            CouchetteFacilityEnumeration.C2,
-                                            CouchetteFacilityEnumeration.C4,
-                                            CouchetteFacilityEnumeration.C6,
-                                            CouchetteFacilityEnumeration.T2,
-                                        ],
-                                        luggage_carriage_facility_list=[
-                                            LuggageCarriageEnumeration.BAGGAGE_STORAGE,
-                                            LuggageCarriageEnumeration.BAGGAGE_VAN,
-                                            LuggageCarriageEnumeration.CYCLES_ALLOWED_WITH_RESERVATION,
-                                            LuggageCarriageEnumeration.LUGGAGE_RACKS,
-                                        ]
+                                        assistance_facility_list=AssistanceFacilityList(
+                                            value=[
+                                                AssistanceFacilityEnumeration.BOARDING_ASSISTANCE,
+                                                AssistanceFacilityEnumeration.CONDUCTOR,
+                                                AssistanceFacilityEnumeration.WHEELCHAIR_ASSISTANCE,
+                                            ]
+                                        ),
+                                        catering_facility_list=CateringFacilityList(
+                                            value=[
+                                                CateringFacilityEnumeration.BUFFET,
+                                            ]
+                                        ),
+                                        fare_classes=FareClasses(
+                                            value=[
+                                                FareClassEnumeration.FIRST_CLASS,
+                                                FareClassEnumeration.STANDARD_CLASS,
+                                            ]
+                                        ),
+                                        mobility_facility_list=MobilityFacilityList(
+                                            value=[
+                                                MobilityFacilityEnumeration.STEP_FREE_ACCESS,
+                                                MobilityFacilityEnumeration.SUITABLE_FOR_WHEELCHAIRS,
+                                            ]
+                                        ),
+                                        nuisance_facility_list=NuisanceFacilityList(
+                                            value=[
+                                                NuisanceFacilityEnumeration.MOBILE_PHONE_FREE_ZONE,
+                                                NuisanceFacilityEnumeration.NO_SMOKING,
+                                            ]
+                                        ),
+                                        passenger_comms_facility_list=PassengerCommsFacilityList(
+                                            value=[
+                                                PassengerCommsFacilityEnumeration.PUBLIC_WIFI,
+                                            ]
+                                        ),
+                                        passenger_information_facility_list=PassengerInformationFacilityList(
+                                            value=[
+                                                PassengerInformationFacilityEnumeration.NEXT_STOP_INDICATOR,
+                                                PassengerInformationFacilityEnumeration.PASSENGER_INFORMATION_DISPLAY,
+                                                PassengerInformationFacilityEnumeration.REAL_TIME_CONNECTIONS,
+                                                PassengerInformationFacilityEnumeration.STOP_ANNOUNCEMENTS,
+                                            ]
+                                        ),
+                                        sanitary_facility_list=SanitaryFacilityList(
+                                            value=[
+                                                SanitaryFacilityEnumeration.TOILET,
+                                                SanitaryFacilityEnumeration.WHEELCHAIR_ACCESS_TOILET,
+                                            ]
+                                        ),
+                                        ticketing_service_facility_list=TicketingServiceFacilityList(
+                                            value=[
+                                                TicketingServiceFacilityEnumeration.PURCHASE,
+                                            ]
+                                        ),
+                                        accommodation_access_list=AccommodationAccessList(
+                                            value=[
+                                                AccommodationAccessEnumeration.RESERVATION,
+                                            ]
+                                        ),
+                                        accommodation_facility_list=AccommodationFacilityList(
+                                            value=[
+                                                AccommodationFacilityEnumeration.COUCHETTE,
+                                                AccommodationFacilityEnumeration.SEATING,
+                                                AccommodationFacilityEnumeration.SLEEPER,
+                                            ]
+                                        ),
+                                        couchette_facility_list=CouchetteFacilityList(
+                                            value=[
+                                                CouchetteFacilityEnumeration.C2,
+                                                CouchetteFacilityEnumeration.C4,
+                                                CouchetteFacilityEnumeration.C6,
+                                                CouchetteFacilityEnumeration.T2,
+                                            ]
+                                        ),
+                                        luggage_carriage_facility_list=LuggageCarriageFacilityList(
+                                            value=[
+                                                LuggageCarriageEnumeration.BAGGAGE_STORAGE,
+                                                LuggageCarriageEnumeration.BAGGAGE_VAN,
+                                                LuggageCarriageEnumeration.CYCLES_ALLOWED_WITH_RESERVATION,
+                                                LuggageCarriageEnumeration.LUGGAGE_RACKS,
+                                            ]
+                                        )
                                     ),
                                     ServiceFacilitySet(
                                         id='bbd:svcfc_first',
@@ -1979,61 +2032,97 @@ obj = PublicationDelivery(
                                         description=MultilingualString(
                                             value='First class facilities'
                                         ),
-                                        catering_facility_list=[
-                                            CateringFacilityEnumeration.BREAKFAST_IN_CAR,
-                                        ],
-                                        fare_classes=[
-                                            FareClassEnumeration.FIRST_CLASS,
-                                        ],
-                                        passenger_comms_facility_list=[
-                                            PassengerCommsFacilityEnumeration.POWER_SUPPLY_SOCKETS,
-                                            PassengerCommsFacilityEnumeration.PUBLIC_WIFI,
-                                        ],
-                                        accommodation_access_list=[
-                                            AccommodationAccessEnumeration.RESERVATION,
-                                        ],
-                                        accommodation_facility_list=[
-                                            AccommodationFacilityEnumeration.SLEEPER,
-                                        ],
+                                        catering_facility_list=CateringFacilityList(
+                                            value=[
+                                                CateringFacilityEnumeration.BREAKFAST_IN_CAR,
+                                            ]
+                                        ),
+                                        fare_classes=FareClasses(
+                                            value=[
+                                                FareClassEnumeration.FIRST_CLASS,
+                                            ]
+                                        ),
+                                        passenger_comms_facility_list=PassengerCommsFacilityList(
+                                            value=[
+                                                PassengerCommsFacilityEnumeration.POWER_SUPPLY_SOCKETS,
+                                                PassengerCommsFacilityEnumeration.PUBLIC_WIFI,
+                                            ]
+                                        ),
+                                        accommodation_access_list=AccommodationAccessList(
+                                            value=[
+                                                AccommodationAccessEnumeration.RESERVATION,
+                                            ]
+                                        ),
+                                        accommodation_facility_list=AccommodationFacilityList(
+                                            value=[
+                                                AccommodationFacilityEnumeration.SLEEPER,
+                                            ]
+                                        ),
                                         accommodations=AccommodationsRelStructure(
                                             accommodation_ref_or_accommodation=[
                                                 Accommodation(
                                                     id='bbd:svcfc_firs@singleSleeper',
                                                     version='any',
-                                                    fare_class=FareClassEnumeration.FIRST_CLASS,
-                                                    accommodation_facility=AccommodationFacilityEnumeration.SINGLE_COUCHETTE,
-                                                    berth_facility=BerthFacilityEnumeration.LOWER,
+                                                    fare_class=FareClass(
+                                                        value=FareClassEnumeration.FIRST_CLASS
+                                                    ),
+                                                    accommodation_facility=AccommodationFacility(
+                                                        value=AccommodationFacilityEnumeration.SINGLE_COUCHETTE
+                                                    ),
+                                                    berth_facility=BerthFacility(
+                                                        value=BerthFacilityEnumeration.LOWER
+                                                    ),
                                                     shower_facility=SanitaryFacilityEnumeration.SHOWER,
                                                     toilet_facility=SanitaryFacilityEnumeration.TOILET,
-                                                    nuisance_facility_list=[
-                                                        NuisanceFacilityEnumeration.NO_SMOKING,
-                                                        NuisanceFacilityEnumeration.MOBILE_PHONE_FREE_ZONE,
-                                                    ],
-                                                    passenger_comms_facility_list=[
-                                                        PassengerCommsFacilityEnumeration.FREE_WIFI,
-                                                    ]
+                                                    nuisance_facility_list=NuisanceFacilityList(
+                                                        value=[
+                                                            NuisanceFacilityEnumeration.NO_SMOKING,
+                                                            NuisanceFacilityEnumeration.MOBILE_PHONE_FREE_ZONE,
+                                                        ]
+                                                    ),
+                                                    passenger_comms_facility_list=PassengerCommsFacilityList(
+                                                        value=[
+                                                            PassengerCommsFacilityEnumeration.FREE_WIFI,
+                                                        ]
+                                                    )
                                                 ),
                                                 Accommodation(
                                                     id='bbd:svcfc_firs@doubleSleeper',
                                                     version='any',
-                                                    fare_class=FareClassEnumeration.FIRST_CLASS,
-                                                    accommodation_facility=AccommodationFacilityEnumeration.DOUBLE_SLEEPER,
-                                                    couchette_facility=CouchetteFacilityEnumeration.C2,
+                                                    fare_class=FareClass(
+                                                        value=FareClassEnumeration.FIRST_CLASS
+                                                    ),
+                                                    accommodation_facility=AccommodationFacility(
+                                                        value=AccommodationFacilityEnumeration.DOUBLE_SLEEPER
+                                                    ),
+                                                    couchette_facility=CouchetteFacility(
+                                                        value=CouchetteFacilityEnumeration.C2
+                                                    ),
                                                     shower_facility=SanitaryFacilityEnumeration.SHOWER,
                                                     toilet_facility=SanitaryFacilityEnumeration.TOILET,
-                                                    passenger_comms_facility_list=[
-                                                        PassengerCommsFacilityEnumeration.FREE_WIFI,
-                                                    ]
+                                                    passenger_comms_facility_list=PassengerCommsFacilityList(
+                                                        value=[
+                                                            PassengerCommsFacilityEnumeration.FREE_WIFI,
+                                                        ]
+                                                    )
                                                 ),
                                                 Accommodation(
                                                     id='bbd:svcfc_firs@sleeper',
                                                     version='any',
-                                                    fare_class=FareClassEnumeration.SECOND_CLASS,
-                                                    accommodation_facility=AccommodationFacilityEnumeration.COUCHETTE,
-                                                    couchette_facility=CouchetteFacilityEnumeration.C4,
-                                                    passenger_comms_facility_list=[
-                                                        PassengerCommsFacilityEnumeration.FREE_WIFI,
-                                                    ]
+                                                    fare_class=FareClass(
+                                                        value=FareClassEnumeration.SECOND_CLASS
+                                                    ),
+                                                    accommodation_facility=AccommodationFacility(
+                                                        value=AccommodationFacilityEnumeration.COUCHETTE
+                                                    ),
+                                                    couchette_facility=CouchetteFacility(
+                                                        value=CouchetteFacilityEnumeration.C4
+                                                    ),
+                                                    passenger_comms_facility_list=PassengerCommsFacilityList(
+                                                        value=[
+                                                            PassengerCommsFacilityEnumeration.FREE_WIFI,
+                                                        ]
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -2042,15 +2131,23 @@ obj = PublicationDelivery(
                                                 OnboardStay(
                                                     id='bbd:svcfc_firs@earlyBoardingPossibleBeforeDeparture',
                                                     version='any',
-                                                    fare_class=FareClassEnumeration.FIRST_CLASS,
-                                                    boarding_permission=BoardingPermissionEnumeration.EARLY_BOARDING_POSSIBLE_BEFORE_DEPARTURE,
+                                                    fare_class=FareClass(
+                                                        value=FareClassEnumeration.FIRST_CLASS
+                                                    ),
+                                                    boarding_permission=BoardingPermission(
+                                                        value=BoardingPermissionEnumeration.EARLY_BOARDING_POSSIBLE_BEFORE_DEPARTURE
+                                                    ),
                                                     period=XmlDuration("PT1H")
                                                 ),
                                                 OnboardStay(
                                                     id='bbd:svcfc_firs@overnightStayOnboardAllowed',
                                                     version='any',
-                                                    fare_class=FareClassEnumeration.FIRST_CLASS,
-                                                    boarding_permission=BoardingPermissionEnumeration.OVERNIGHT_STAY_ONBOARD_ALLOWED,
+                                                    fare_class=FareClass(
+                                                        value=FareClassEnumeration.FIRST_CLASS
+                                                    ),
+                                                    boarding_permission=BoardingPermission(
+                                                        value=BoardingPermissionEnumeration.OVERNIGHT_STAY_ONBOARD_ALLOWED
+                                                    ),
                                                     period=XmlDuration("PT9H")
                                                 ),
                                             ]
@@ -2375,9 +2472,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.FIRST_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.FIRST_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=2
                                                 ),
@@ -2397,9 +2496,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.FIRST_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.FIRST_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=3
                                                 ),
@@ -2419,9 +2520,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.FIRST_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.FIRST_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=3
                                                 ),
@@ -2441,9 +2544,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.STANDARD_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.STANDARD_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=4
                                                 ),
@@ -2463,9 +2568,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.STANDARD_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.STANDARD_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=5
                                                 ),
@@ -2512,9 +2619,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.FIRST_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.FIRST_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=1
                                                 ),
@@ -2534,9 +2643,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.FIRST_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.FIRST_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=2
                                                 ),
@@ -2556,9 +2667,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.RESTAURANT_CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.STANDARD_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.STANDARD_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=3
                                                 ),
@@ -2578,9 +2691,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.STANDARD_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.STANDARD_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=4
                                                 ),
@@ -2600,9 +2715,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.STANDARD_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.STANDARD_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=5
                                                 ),
@@ -2622,9 +2739,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.STANDARD_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.STANDARD_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=6
                                                 ),
@@ -2644,9 +2763,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.STANDARD_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.STANDARD_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=7
                                                 ),
@@ -2666,9 +2787,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.STANDARD_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.STANDARD_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=8
                                                 ),
@@ -2730,9 +2853,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.SECOND_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.SECOND_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=1
                                                 ),
@@ -2752,9 +2877,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.SECOND_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.SECOND_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=2
                                                 ),
@@ -2774,9 +2901,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.FIRST_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.FIRST_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=3
                                                 ),
@@ -2796,9 +2925,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.RESTAURANT_CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.STANDARD_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.STANDARD_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=4
                                                 ),
@@ -2818,9 +2949,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.RESTAURANT_CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.STANDARD_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.STANDARD_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=5
                                                 ),
@@ -2882,9 +3015,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.SECOND_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.SECOND_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=2
                                                 ),
@@ -2904,9 +3039,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.SECOND_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.SECOND_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=3
                                                 ),
@@ -2926,9 +3063,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.SECOND_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.SECOND_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=4
                                                 ),
@@ -2948,9 +3087,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.SECOND_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.SECOND_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=5
                                                 ),
@@ -2970,9 +3111,11 @@ obj = PublicationDelivery(
 
                                                         ),
                                                         train_element_type=TrainElementTypeEnumeration.CARRIAGE,
-                                                        fare_classes=[
-                                                            FareClassEnumeration.SECOND_CLASS,
-                                                        ]
+                                                        fare_classes=FareClasses(
+                                                            value=[
+                                                                FareClassEnumeration.SECOND_CLASS,
+                                                            ]
+                                                        )
                                                     ),
                                                     order=6
                                                 ),
@@ -3223,7 +3366,7 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route(
+                                    Route1(
                                         id='myrail:RT_447',
                                         version='any',
                                         name=MultilingualString(
@@ -3233,7 +3376,7 @@ obj = PublicationDelivery(
                                             value='Route 447'
                                         )
                                     ),
-                                    Route(
+                                    Route1(
                                         id='myrail:RT_40447',
                                         version='any',
                                         name=MultilingualString(
@@ -3243,7 +3386,7 @@ obj = PublicationDelivery(
                                             value='Route 40447'
                                         )
                                     ),
-                                    Route(
+                                    Route1(
                                         id='myrail:RT_457',
                                         version='any',
                                         name=MultilingualString(
@@ -3253,7 +3396,7 @@ obj = PublicationDelivery(
                                             value='Route 457'
                                         )
                                     ),
-                                    Route(
+                                    Route1(
                                         id='myrail:RT_60457',
                                         version='any',
                                         name=MultilingualString(
@@ -3267,7 +3410,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='myrail:LN_nl_amsterdam-cz_prague',
                                         version='any',
                                         name=MultilingualString(
@@ -3278,7 +3421,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                     ),
-                                    Line(
+                                    Line1(
                                         id='myrail:LN_nl_amsterdam-pl_warsaw',
                                         version='any',
                                         name=MultilingualString(
@@ -3289,7 +3432,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                     ),
-                                    Line(
+                                    Line1(
                                         id='myrail:LN_nl_amsterdam-dk_copenhagen',
                                         version='any',
                                         name=MultilingualString(
@@ -3632,7 +3775,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace(
+                                    StopPlace1(
                                         id='uic:nl_amsterdam',
                                         version='any',
                                         name=MultilingualString(
@@ -3640,7 +3783,7 @@ obj = PublicationDelivery(
                                         ),
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='uic:nl_amsterdam_1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3650,7 +3793,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='uic:de_berlin',
                                         version='any',
                                         name=MultilingualString(
@@ -3659,21 +3802,21 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='uic:de_berlin_1',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Platform 1'
                                                     )
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='uic:de_berlin_2',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Platform 2'
                                                     )
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='uic:de_berlin_3',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3683,7 +3826,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='uic:dk_copenhagen',
                                         version='any',
                                         name=MultilingualString(
@@ -3692,7 +3835,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='uic:dk_copenhagen_1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3702,7 +3845,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='uic:de_hannover',
                                         version='any',
                                         name=MultilingualString(
@@ -3711,7 +3854,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='uic:de_hannover_5',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3721,7 +3864,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='uic:cz_prague',
                                         version='any',
                                         name=MultilingualString(
@@ -3730,14 +3873,14 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='uic:cz_prague_1',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Platform 1'
                                                     )
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='uic:cz_prague_2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3747,7 +3890,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='uic:pl_warsaw',
                                         version='any',
                                         name=MultilingualString(
@@ -3756,14 +3899,14 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='uic:pl_warsaw_7',
                                                     version='any',
                                                     name=MultilingualString(
                                                         value='Platform 1'
                                                     )
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='uic:pl_warsaw_8',
                                                     version='any',
                                                     name=MultilingualString(
@@ -3790,7 +3933,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType(
+                                    DayType1(
                                         id='bbd:DT_01-MF-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -3813,7 +3956,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='bbd:DT_03-WE-NH',
                                         version='any',
                                         name=MultilingualString(

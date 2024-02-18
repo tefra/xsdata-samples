@@ -25,16 +25,20 @@ from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CollaborationPriorityCode
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
 from ubl.models.common.ubl_common_basic_components_2_1 import ComparedValueMeasure
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import DataSourceCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import ExceptionStatusCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
 from ubl.models.common.ubl_common_basic_components_2_1 import ForecastPurposeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ForecastTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
@@ -43,6 +47,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
 from ubl.models.common.ubl_common_basic_components_2_1 import ResolutionCode
 from ubl.models.common.ubl_common_basic_components_2_1 import SourceValueMeasure
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
@@ -65,20 +70,30 @@ obj = ExceptionNotification(
     id=Id(
         value='EN758494'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4'
     ),
-    issue_date=XmlDate(2010, 4, 26),
-    issue_time=XmlTime(12, 0, 1, 0),
+    issue_date=IssueDate(
+        value=XmlDate(2010, 4, 26)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(12, 0, 1, 0)
+    ),
     note=[
         Note(
             value='sample'
         ),
     ],
     exception_observation_period=ExceptionObservationPeriod(
-        start_date=XmlDate(2010, 3, 26),
-        end_date=XmlDate(2010, 4, 26)
+        start_date=StartDate(
+            value=XmlDate(2010, 3, 26)
+        ),
+        end_date=EndDate(
+            value=XmlDate(2010, 4, 26)
+        )
     ),
     sender_party=SenderParty(
         party_identification=[
@@ -299,8 +314,12 @@ obj = ExceptionNotification(
                 unit_code='KGM'
             ),
             exception_observation_period=ExceptionObservationPeriod(
-                start_date=XmlDate(2010, 3, 26),
-                end_date=XmlDate(2010, 4, 10)
+                start_date=StartDate(
+                    value=XmlDate(2010, 3, 26)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2010, 4, 10)
+                )
             ),
             forecast_exception=ForecastException(
                 forecast_purpose_code=ForecastPurposeCode(
@@ -309,8 +328,12 @@ obj = ExceptionNotification(
                 forecast_type_code=ForecastTypeCode(
                     value='TOTAL'
                 ),
-                issue_date=XmlDate(2010, 4, 17),
-                issue_time=XmlTime(10, 0, 0, 0),
+                issue_date=IssueDate(
+                    value=XmlDate(2010, 4, 17)
+                ),
+                issue_time=IssueTime(
+                    value=XmlTime(10, 0, 0, 0)
+                ),
                 data_source_code=DataSourceCode(
                     value='BUYER'
                 )

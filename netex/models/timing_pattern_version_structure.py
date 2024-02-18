@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .direction_type_enumeration import DirectionTypeEnumeration
+from .direction_type import DirectionType
 from .route_ref_structure import RouteRefStructure
 from .section_in_sequence_versioned_child_structure import (
     LinkSequenceVersionStructure,
@@ -29,7 +29,7 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_type: Optional[DirectionTypeEnumeration] = field(
+    direction_type: Optional[DirectionType] = field(
         default=None,
         metadata={
             "name": "DirectionType",

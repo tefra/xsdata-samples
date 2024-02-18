@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .data_object_delivery import DataObjectDelivery
+from .error_description_structure import ErrorDescriptionStructure
 from .other_error import OtherError
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
@@ -73,7 +74,7 @@ class ServiceDeliveryBodyStructure:
                 ),
             },
         )
-        description: Optional[str] = field(
+        description: Optional[ErrorDescriptionStructure] = field(
             default=None,
             metadata={
                 "name": "Description",

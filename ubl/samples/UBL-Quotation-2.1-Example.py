@@ -27,12 +27,17 @@ from ubl.models.common.ubl_common_basic_components_2_1 import BaseQuantity
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomerAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
+from ubl.models.common.ubl_common_basic_components_2_1 import EndTime
 from ubl.models.common.ubl_common_basic_components_2_1 import EndpointId
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import LineExtensionAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
@@ -44,6 +49,8 @@ from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
 from ubl.models.common.ubl_common_basic_components_2_1 import SpecialTerms
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxExclusiveAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxInclusiveAmount
@@ -70,12 +77,18 @@ obj = Quotation(
     id=Id(
         value='QIY7655'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='4D07786B-DA6D-439F-82D1-6FFFC7F4E3B1'
     ),
-    issue_date=XmlDate(2008, 5, 1),
-    issue_time=XmlTime(11, 32, 26, 0, 0),
+    issue_date=IssueDate(
+        value=XmlDate(2008, 5, 1)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(11, 32, 26, 0, 0)
+    ),
     note=[
         Note(
             value='Bestilling af computere',
@@ -83,8 +96,12 @@ obj = Quotation(
         ),
     ],
     validity_period=ValidityPeriod(
-        start_date=XmlDate(2008, 5, 1),
-        end_date=XmlDate(2008, 5, 6)
+        start_date=StartDate(
+            value=XmlDate(2008, 5, 1)
+        ),
+        end_date=EndDate(
+            value=XmlDate(2008, 5, 6)
+        )
     ),
     request_for_quotation_document_reference=RequestForQuotationDocumentReference(
         id=Id(
@@ -93,7 +110,9 @@ obj = Quotation(
         uuid=Uuid(
             value='93T5G3G5-HYA3-7267-BVG3-GS46SW44WG53'
         ),
-        issue_date=XmlDate(2008, 4, 19)
+        issue_date=IssueDate(
+            value=XmlDate(2008, 4, 19)
+        )
     ),
     seller_supplier_party=SellerSupplierParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
@@ -299,10 +318,18 @@ obj = Quotation(
                 )
             ),
             requested_delivery_period=RequestedDeliveryPeriod(
-                start_date=XmlDate(2008, 5, 6),
-                start_time=XmlTime(9, 30, 47, 0, 0),
-                end_date=XmlDate(2008, 5, 10),
-                end_time=XmlTime(9, 30, 47, 0, 0)
+                start_date=StartDate(
+                    value=XmlDate(2008, 5, 6)
+                ),
+                start_time=StartTime(
+                    value=XmlTime(9, 30, 47, 0, 0)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2008, 5, 10)
+                ),
+                end_time=EndTime(
+                    value=XmlTime(9, 30, 47, 0, 0)
+                )
             )
         ),
     ],

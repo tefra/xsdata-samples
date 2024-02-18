@@ -40,7 +40,7 @@ from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_rule_price_ref import CappingRulePriceRef
 from .capping_rule_ref import CappingRuleRef
 from .car_model_profile_ref import CarModelProfileRef
-from .cell_ref import CellRef
+from .cell_ref_1 import CellRef1
 from .charging_equipment_profile_ref import ChargingEquipmentProfileRef
 from .charging_moment_ref import ChargingMomentRef
 from .charging_policy_ref import ChargingPolicyRef
@@ -281,7 +281,7 @@ from .path_junction_ref import PathJunctionRef
 from .path_link_ref import PathLinkRef
 from .penalty_policy_ref import PenaltyPolicyRef
 from .personal_mode_of_operation_ref import PersonalModeOfOperationRef
-from .place_ref import PlaceRef
+from .place_ref_1 import PlaceRef1
 from .point_of_interest_classification_ref import (
     PointOfInterestClassificationRef,
 )
@@ -413,7 +413,7 @@ from .suspending_ref import SuspendingRef
 from .target_passing_time_ref import TargetPassingTimeRef
 from .tariff_object_ref import TariffObjectRef
 from .tariff_ref import TariffRef
-from .tariff_zone_ref import TariffZoneRef
+from .tariff_zone_ref_1 import TariffZoneRef1
 from .taxi_parking_area_ref import TaxiParkingAreaRef
 from .taxi_rank_ref import TaxiRankRef
 from .taxi_stand_ref import TaxiStandRef
@@ -626,7 +626,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             ControllableElementInSequenceRef,
             FareStructureElementInSequenceRef,
             AccessRightInProductRef,
-            CellRef,
+            CellRef1,
             CustomerPurchasePackagePriceRef,
             ParkingPriceRef,
             TimeIntervalPriceRef,
@@ -998,14 +998,14 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             SectionRef,
             LogRef,
             GroupOfTimebandsRef,
-            PlaceRef,
+            PlaceRef1,
             MobilityServiceConstraintZoneRef,
             StopAreaRef,
             TransportAdministrativeZoneRef,
             AccessZoneRef,
             AdministrativeZoneRef,
             FareZoneRef,
-            TariffZoneRef,
+            TariffZoneRef1,
             ZoneRef,
             LayerRef,
             NetworkRef,
@@ -1310,7 +1310,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef,
+                    "type": CellRef1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3170,7 +3170,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
                 },
                 {
                     "name": "PlaceRef",
-                    "type": PlaceRef,
+                    "type": PlaceRef1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -3205,7 +3205,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
                 },
                 {
                     "name": "TariffZoneRef",
-                    "type": TariffZoneRef,
+                    "type": TariffZoneRef1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

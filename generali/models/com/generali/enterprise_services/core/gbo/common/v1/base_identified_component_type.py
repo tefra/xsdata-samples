@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
     Idtype,
@@ -113,7 +115,7 @@ class BaseIdentifiedComponentType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    creation_date: Optional[XmlDateTime] = field(
+    creation_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "CreationDate",
@@ -129,7 +131,7 @@ class BaseIdentifiedComponentType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    date_last_update: Optional[XmlDateTime] = field(
+    date_last_update: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "DateLastUpdate",

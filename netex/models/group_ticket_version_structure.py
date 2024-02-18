@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .companion_profiles_rel_structure import CompanionProfilesRelStructure
-from .group_booking_enumeration import GroupBookingEnumeration
+from .group_booking_facility import GroupBookingFacility
 from .group_check_in_enumeration import GroupCheckInEnumeration
 from .group_size_changes_enumeration import GroupSizeChangesEnumeration
 from .group_ticketing_enumeration import GroupTicketingEnumeration
@@ -121,7 +121,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_booking_facility: Optional[GroupBookingEnumeration] = field(
+    group_booking_facility: Optional[GroupBookingFacility] = field(
         default=None,
         metadata={
             "name": "GroupBookingFacility",

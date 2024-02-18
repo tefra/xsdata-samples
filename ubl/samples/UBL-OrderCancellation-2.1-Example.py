@@ -8,6 +8,8 @@ from ubl.models.common.ubl_common_basic_components_2_1 import CancellationNote
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import EndpointId
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import UblversionId
@@ -31,8 +33,12 @@ obj = OrderCancellation(
     id=Id(
         value='7'
     ),
-    issue_date=XmlDate(2010, 1, 21),
-    issue_time=XmlTime(12, 30, 0, 0),
+    issue_date=IssueDate(
+        value=XmlDate(2010, 1, 21)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(12, 30, 0, 0)
+    ),
     cancellation_note=[
         CancellationNote(
             value='With reference to phone call'

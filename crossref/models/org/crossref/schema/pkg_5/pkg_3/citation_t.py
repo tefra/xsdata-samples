@@ -1,12 +1,44 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.article_title import (
+    ArticleTitle,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.author import Author
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.c_year import CYear
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.component_number import (
+    ComponentNumber,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi import Doi
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.edition_number import (
+    EditionNumber,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.elocation_id import (
+    ElocationId,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.first_page import (
+    FirstPage,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.isbn import Isbn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.issn import Issn
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.issue import Issue
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.journal_title import (
+    JournalTitle,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.series_title import (
+    SeriesTitle,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.standards_body import (
     StandardsBody,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_designator import (
+    StdDesignator,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.unstructured_citation import (
     UnstructuredCitation,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.volume import Volume
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.volume_title import (
+    VolumeTitle,
 )
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
@@ -24,55 +56,49 @@ class CitationT:
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    journal_title: Optional[str] = field(
+    journal_title: Optional[JournalTitle] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    author: Optional[str] = field(
+    author: Optional[Author] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    volume: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.crossref.org/schema/5.3.1",
-            "min_length": 1,
-            "max_length": 32,
-        },
-    )
-    issue: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.crossref.org/schema/5.3.1",
-            "min_length": 1,
-            "max_length": 32,
-        },
-    )
-    first_page: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.crossref.org/schema/5.3.1",
-            "min_length": 1,
-            "max_length": 32,
-        },
-    )
-    elocation_id: Optional[str] = field(
+    volume: Optional[Volume] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    c_year: Optional[str] = field(
+    issue: Optional[Issue] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.crossref.org/schema/5.3.1",
+        },
+    )
+    first_page: Optional[FirstPage] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.crossref.org/schema/5.3.1",
+        },
+    )
+    elocation_id: Optional[ElocationId] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.crossref.org/schema/5.3.1",
+        },
+    )
+    c_year: Optional[CYear] = field(
         default=None,
         metadata={
             "name": "cYear",
@@ -80,14 +106,11 @@ class CitationT:
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    doi: Optional[str] = field(
+    doi: Optional[Doi] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
-            "min_length": 6,
-            "max_length": 2048,
-            "pattern": r"10\.[0-9]{4,9}/.{1,200}",
         },
     )
     isbn: Optional[Isbn] = field(
@@ -97,52 +120,46 @@ class CitationT:
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    series_title: Optional[str] = field(
+    series_title: Optional[SeriesTitle] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    volume_title: Optional[str] = field(
+    volume_title: Optional[VolumeTitle] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    edition_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.crossref.org/schema/5.3.1",
-            "min_length": 1,
-            "max_length": 15,
-        },
-    )
-    component_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.crossref.org/schema/5.3.1",
-            "min_length": 1,
-            "max_length": 50,
-        },
-    )
-    article_title: Optional[str] = field(
+    edition_number: Optional[EditionNumber] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    std_designator: Optional[str] = field(
+    component_number: Optional[ComponentNumber] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
-            "min_length": 2,
-            "max_length": 150,
+        },
+    )
+    article_title: Optional[ArticleTitle] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.crossref.org/schema/5.3.1",
+        },
+    )
+    std_designator: Optional[StdDesignator] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
     standards_body: Optional[StandardsBody] = field(

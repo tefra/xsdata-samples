@@ -1,8 +1,13 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
     Idtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.percent_type import (
+    PercentType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.insurer_role_type import (
     InsurerRoleType,
@@ -35,7 +40,7 @@ class CedantInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    sequence_number: Optional[Decimal] = field(
+    sequence_number: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -43,7 +48,7 @@ class CedantInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    ceded_risk_share: Optional[Decimal] = field(
+    ceded_risk_share: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "CededRiskShare",
@@ -51,7 +56,7 @@ class CedantInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    retained_risk_share: Optional[Decimal] = field(
+    retained_risk_share: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "RetainedRiskShare",

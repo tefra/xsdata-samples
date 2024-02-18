@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Union
 from .alternative_texts_rel_structure import (
-    DayType,
+    DayType1,
     FareDayType,
     OrganisationDayType,
 )
@@ -15,7 +15,7 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypesInFrame_RelStructure"
 
-    day_type: List[Union[FareDayType, OrganisationDayType, DayType]] = field(
+    day_type: List[Union[FareDayType, OrganisationDayType, DayType1]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -32,7 +32,7 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "DayType",
-                    "type": DayType,
+                    "type": DayType1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

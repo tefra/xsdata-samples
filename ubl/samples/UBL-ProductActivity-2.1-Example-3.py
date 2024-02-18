@@ -15,17 +15,20 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import SenderParty
 from ubl.models.common.ubl_common_aggregate_components_2_1 import SupplyChainActivityDataLine
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import Department
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
 from ubl.models.common.ubl_common_basic_components_2_1 import Floor
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
 from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
 from ubl.models.common.ubl_common_basic_components_2_1 import Room
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import SupplyChainActivityTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
@@ -42,15 +45,21 @@ obj = ProductActivity(
     id=Id(
         value='ID0113'
     ),
-    copy_indicator=False,
-    issue_date=XmlDate(2010, 4, 8),
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
+    issue_date=IssueDate(
+        value=XmlDate(2010, 4, 8)
+    ),
     note=[
         Note(
             value="Report about sales of goods in Beta Shop's shops located in Bologna."
         ),
     ],
     activity_period=ActivityPeriod(
-        start_date=XmlDate(2010, 4, 7)
+        start_date=StartDate(
+            value=XmlDate(2010, 4, 7)
+        )
     ),
     sender_party=SenderParty(
         party_name=[

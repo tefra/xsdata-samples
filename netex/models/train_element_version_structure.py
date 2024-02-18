@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .equipments_rel_structure import EquipmentsRelStructure
-from .fare_class_enumeration import FareClassEnumeration
+from .fare_classes import FareClasses
 from .multilingual_string import MultilingualString
 from .passenger_capacities_rel_structure import PassengerCapacitiesRelStructure
 from .passenger_capacity_structure import PassengerCapacityStructure
@@ -45,13 +45,12 @@ class TrainElementVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_classes: List[FareClassEnumeration] = field(
-        default_factory=list,
+    fare_classes: Optional[FareClasses] = field(
+        default=None,
         metadata={
             "name": "FareClasses",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
     passenger_capacity: Optional[PassengerCapacityStructure] = field(

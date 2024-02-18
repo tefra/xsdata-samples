@@ -2,6 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.customer_receipt_info import CustomerReceiptInfo
 from travelport.models.emdcommission import Emdcommission
+from travelport.models.emdendorsement import Emdendorsement
 from travelport.models.form_of_payment_1 import FormOfPayment1
 from travelport.models.form_of_payment_ref_1 import FormOfPaymentRef1
 
@@ -56,13 +57,11 @@ class IssuanceModifiers:
             "type": "Element",
         },
     )
-    emdendorsement: None | str = field(
+    emdendorsement: None | Emdendorsement = field(
         default=None,
         metadata={
             "name": "EMDEndorsement",
             "type": "Element",
-            "min_length": 1,
-            "max_length": 255,
         },
     )
     emdcommission: None | Emdcommission = field(

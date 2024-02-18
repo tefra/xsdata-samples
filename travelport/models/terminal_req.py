@@ -2,6 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_4 import BaseReq4
 from travelport.models.host_token_3 import HostToken3
+from travelport.models.terminal_command import TerminalCommand
 
 __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"
 
@@ -31,7 +32,7 @@ class TerminalReq(BaseReq4):
             "required": True,
         },
     )
-    terminal_command: None | str = field(
+    terminal_command: None | TerminalCommand = field(
         default=None,
         metadata={
             "name": "TerminalCommand",

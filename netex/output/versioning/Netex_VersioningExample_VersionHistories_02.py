@@ -1,5 +1,5 @@
 from decimal import Decimal
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
@@ -17,6 +17,7 @@ from netex.models.multilingual_string import MultilingualString
 from netex.models.network_filter_by_value_structure import NetworkFilterByValueStructure
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.object_filter_by_value_structure import ObjectFilterByValueStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.private_code import PrivateCode
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from netex.models.property_of_day import PropertyOfDay
@@ -39,10 +40,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -407,7 +412,7 @@ obj = PublicationDelivery(
                 version='any',
                 day_types=DayTypesInFrameRelStructure(
                     day_type=[
-                        DayType(
+                        DayType1(
                             id='mybus:DT001_MF',
                             created=XmlDateTime(2010, 5, 18, 10, 30, 47, 0, 0),
                             version='001',

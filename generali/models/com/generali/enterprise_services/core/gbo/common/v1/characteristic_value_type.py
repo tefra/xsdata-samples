@@ -1,18 +1,37 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
-from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
 )
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_type import (
+    DateType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.duration_type import (
+    DurationType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.indicator_type import (
+    IndicatorType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.percent_type import (
+    PercentType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.quantity_type import (
     QuantityType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.time_type import (
+    TimeType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import (
     BaseComponentType,
@@ -59,7 +78,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    numeric: Optional[Decimal] = field(
+    numeric: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "Numeric",
@@ -67,7 +86,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    percent: Optional[Decimal] = field(
+    percent: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "Percent",
@@ -75,7 +94,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    indicator: Optional[bool] = field(
+    indicator: Optional[IndicatorType] = field(
         default=None,
         metadata={
             "name": "Indicator",
@@ -83,7 +102,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    duration: Optional[XmlDuration] = field(
+    duration: Optional[DurationType] = field(
         default=None,
         metadata={
             "name": "Duration",
@@ -91,7 +110,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    time: Optional[XmlTime] = field(
+    time: Optional[TimeType] = field(
         default=None,
         metadata={
             "name": "Time",
@@ -99,7 +118,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    date: Optional[XmlDate] = field(
+    date: Optional[DateType] = field(
         default=None,
         metadata={
             "name": "Date",
@@ -107,7 +126,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    date_time: Optional[XmlDateTime] = field(
+    date_time: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "DateTime",

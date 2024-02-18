@@ -5,6 +5,7 @@ from netex.models.codespaces_rel_structure import CodespacesRelStructure
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.location_structure_2 import LocationStructure2
 from netex.models.multilingual_string import MultilingualString
+from netex.models.participant_ref import ParticipantRef
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.scheduled_stop_point import ScheduledStopPoint
 from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledStopPointsInFrameRelStructure
@@ -16,7 +17,9 @@ from xsdata.models.datatype import XmlDateTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     data_objects=DataObjectsRelStructure(
         choice=[
             ServiceFrame(

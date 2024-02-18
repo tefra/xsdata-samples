@@ -1,9 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
 from .access_space_ref import AccessSpaceRef
-from .accessibility_info_facility_enumeration import (
-    AccessibilityInfoFacilityEnumeration,
-)
+from .accessibility_info_facility_list import AccessibilityInfoFacilityList
 from .boarding_position_ref import BoardingPositionRef
 from .entrance_ref import EntranceRef
 from .logical_display_ref import LogicalDisplayRef
@@ -21,8 +19,8 @@ from .passenger_equipment_version_structure import (
 from .passenger_information_equipment_enumeration import (
     PassengerInformationEquipmentEnumeration,
 )
-from .passenger_information_facility_enumeration import (
-    PassengerInformationFacilityEnumeration,
+from .passenger_information_facility_list import (
+    PassengerInformationFacilityList,
 )
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from .point_of_interest_space_ref import PointOfInterestSpaceRef
@@ -273,25 +271,23 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_information_facility_list: List[
-        PassengerInformationFacilityEnumeration
+    passenger_information_facility_list: Optional[
+        PassengerInformationFacilityList
     ] = field(
-        default_factory=list,
+        default=None,
         metadata={
             "name": "PassengerInformationFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    accessibility_info_facility_list: List[
-        AccessibilityInfoFacilityEnumeration
+    accessibility_info_facility_list: Optional[
+        AccessibilityInfoFacilityList
     ] = field(
-        default_factory=list,
+        default=None,
         metadata={
             "name": "AccessibilityInfoFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )

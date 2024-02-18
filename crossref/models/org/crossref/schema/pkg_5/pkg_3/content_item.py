@@ -25,6 +25,9 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.citation_list import (
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.component_list import (
     ComponentList,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.component_number import (
+    ComponentNumber,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.content_item_component_type import (
     ContentItemComponentType,
 )
@@ -88,12 +91,10 @@ class ContentItem:
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    component_number: Optional[str] = field(
+    component_number: Optional[ComponentNumber] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 50,
         },
     )
     publication_date: List[PublicationDate] = field(

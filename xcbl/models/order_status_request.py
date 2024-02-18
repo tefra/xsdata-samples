@@ -2,11 +2,17 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from xcbl.models.order_status_result import (
     BuyerReferenceNumber,
+    OrderDate,
+    OrderStatusIssueDate,
     OtherReference,
     SellerReferenceNumber,
     VarianceQty,
 )
-from xcbl.models.price_check_result import LineItemAttachment
+from xcbl.models.price_check_result import (
+    GeneralLineItemNote,
+    LineItemAttachment,
+    TotalNumberOfLineItem,
+)
 from xcbl.models.shipping_schedule import AccountCode
 from xcbl.models.sourcing_result import (
     CatalogReference,
@@ -23,6 +29,7 @@ from xcbl.models.sourcing_result import (
     ListOfItemReferences,
     ListOfQuantityCoded,
     MaxBackOrderQuantity,
+    OffCatalogFlag,
     OrderParty,
     ParentItemNumber,
     TotalQuantity,
@@ -37,12 +44,11 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
-class OrderStatusRequestSummary:
-    total_number_of_line_item: Optional[str] = field(
-        default=None,
+class OrderStatusRequestNote:
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumberOfLineItem",
-            "type": "Element",
+            "required": True,
         },
     )
 
@@ -106,6 +112,17 @@ class OrderStatusRequestId:
 
 
 @dataclass(kw_only=True)
+class OrderStatusRequestSummary:
+    total_number_of_line_item: Optional[TotalNumberOfLineItem] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberOfLineItem",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class OrderStatusItem:
     line_item_num: LineItemNum = field(
         metadata={
@@ -163,7 +180,7 @@ class OrderStatusItem:
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[str] = field(
+    off_catalog_flag: Optional[OffCatalogFlag] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
@@ -258,7 +275,7 @@ class OrderStatusRequestHeader:
             "required": True,
         }
     )
-    order_status_issue_date: str = field(
+    order_status_issue_date: OrderStatusIssueDate = field(
         metadata={
             "name": "OrderStatusIssueDate",
             "type": "Element",
@@ -279,7 +296,7 @@ class OrderStatusRequestHeader:
             "type": "Element",
         },
     )
-    order_status_request_note: Optional[str] = field(
+    order_status_request_note: Optional[OrderStatusRequestNote] = field(
         default=None,
         metadata={
             "name": "OrderStatusRequestNote",
@@ -339,7 +356,7 @@ class OrderStatusReference:
             "type": "Element",
         },
     )
-    order_date: str = field(
+    order_date: OrderDate = field(
         metadata={
             "name": "OrderDate",
             "type": "Element",
@@ -364,7 +381,7 @@ class OrderStatusDetailRequest:
             "required": True,
         }
     )
-    general_line_item_note: Optional[str] = field(
+    general_line_item_note: Optional[GeneralLineItemNote] = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",

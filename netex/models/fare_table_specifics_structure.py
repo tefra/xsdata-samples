@@ -20,7 +20,7 @@ from .entrance_equipment_ref import EntranceEquipmentRef
 from .equipment_ref import EquipmentRef
 from .escalator_equipment_ref import EscalatorEquipmentRef
 from .facility_set_ref import FacilitySetRef
-from .fare_class_enumeration import FareClassEnumeration
+from .fare_class import FareClass
 from .fare_section_ref import FareSectionRef
 from .flexible_line_ref import FlexibleLineRef
 from .general_sign_ref import GeneralSignRef
@@ -75,7 +75,7 @@ from .site_facility_set_ref import SiteFacilitySetRef
 from .site_ref import SiteRef
 from .staircase_equipment_ref import StaircaseEquipmentRef
 from .stop_place_ref import StopPlaceRef
-from .tariff_zone_ref import TariffZoneRef
+from .tariff_zone_ref_1 import TariffZoneRef1
 from .taxi_rank_ref import TaxiRankRef
 from .taxi_service_ref import TaxiServiceRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
@@ -238,7 +238,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zone_ref: Optional[TariffZoneRef] = field(
+    tariff_zone_ref: Optional[TariffZoneRef1] = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",
@@ -270,7 +270,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: Optional[FareClassEnumeration] = field(
+    fare_class: Optional[FareClass] = field(
         default=None,
         metadata={
             "name": "FareClass",

@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .all_modes_enumeration import AllModesEnumeration
 from .assistance_availability_enumeration import (
     AssistanceAvailabilityEnumeration,
 )
@@ -15,6 +14,7 @@ from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .operator_ref import OperatorRef
 from .personal_mode_of_operation_ref import PersonalModeOfOperationRef
 from .scheduled_mode_of_operation_ref import ScheduledModeOfOperationRef
+from .vehicle_mode import VehicleMode
 from .vehicle_pooling_ref import VehiclePoolingRef
 from .vehicle_rental_ref import VehicleRentalRef
 from .vehicle_sharing_ref import VehicleSharingRef
@@ -62,7 +62,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_mode: Optional[AllModesEnumeration] = field(
+    vehicle_mode: Optional[VehicleMode] = field(
         default=None,
         metadata={
             "name": "VehicleMode",

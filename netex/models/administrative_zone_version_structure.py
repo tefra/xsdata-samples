@@ -132,8 +132,9 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
 
 
 @dataclass
-class AdministrativeZone(AdministrativeZoneVersionStructure):
+class AdministrativeZone1(AdministrativeZoneVersionStructure):
     class Meta:
+        name = "AdministrativeZone"
         namespace = "http://www.netex.org.uk/netex"
 
 
@@ -170,7 +171,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
         Union[
             AdministrativeZoneRef,
             TransportAdministrativeZone,
-            AdministrativeZone,
+            AdministrativeZone1,
         ]
     ] = field(
         default_factory=list,
@@ -189,7 +190,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "AdministrativeZone",
-                    "type": AdministrativeZone,
+                    "type": AdministrativeZone1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

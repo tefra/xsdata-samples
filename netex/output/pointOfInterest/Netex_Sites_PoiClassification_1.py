@@ -3,6 +3,7 @@ from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
 from netex.models.multilingual_string import MultilingualString
+from netex.models.participant_ref import ParticipantRef
 from netex.models.point_of_interest_classification import PointOfInterestClassification
 from netex.models.point_of_interest_classification_hierarchies_in_frame_rel_structure import PointOfInterestClassificationHierarchiesInFrameRelStructure
 from netex.models.point_of_interest_classification_hierarchy import PointOfInterestClassificationHierarchy
@@ -21,10 +22,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002'
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        )
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(

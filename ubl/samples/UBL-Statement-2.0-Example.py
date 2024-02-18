@@ -23,10 +23,12 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import StatementPerio
 from ubl.models.common.ubl_common_aggregate_components_2_1 import TaxScheme
 from ubl.models.common.ubl_common_basic_components_2_1 import AccountTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import BalanceAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import BalanceBroughtForwardIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CreditLineAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import CurrencyCode
@@ -36,16 +38,20 @@ from ubl.models.common.ubl_common_basic_components_2_1 import DebitLineAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import DocumentCurrencyCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
+from ubl.models.common.ubl_common_basic_components_2_1 import PaymentDueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import PaymentMeansCode
 from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
 from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import SupplierAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
@@ -73,11 +79,15 @@ obj = Statement(
     id=Id(
         value='JUL2005-07758990'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='normalizedString'
     ),
-    issue_date=XmlDate(2005, 8, 2),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 8, 2)
+    ),
     note=[
         Note(
             value='please present invoice if this credit amount cannot be taken against a forthcoming payment'
@@ -99,8 +109,12 @@ obj = Statement(
         currency_id='GBP'
     ),
     statement_period=StatementPeriod(
-        start_date=XmlDate(2005, 7, 1),
-        end_date=XmlDate(2005, 7, 31),
+        start_date=StartDate(
+            value=XmlDate(2005, 7, 1)
+        ),
+        end_date=EndDate(
+            value=XmlDate(2005, 7, 31)
+        ),
         description=[
             Description(
                 value='July'
@@ -359,7 +373,9 @@ obj = Statement(
             payment_means_code=PaymentMeansCode(
                 value='20'
             ),
-            payment_due_date=XmlDate(2005, 7, 21),
+            payment_due_date=PaymentDueDate(
+                value=XmlDate(2005, 7, 21)
+            ),
             payee_financial_account=PayeeFinancialAccount(
                 id=Id(
                     value='12345678'
@@ -480,7 +496,9 @@ obj = Statement(
                     value='String'
                 ),
             ],
-            balance_brought_forward_indicator=False,
+            balance_brought_forward_indicator=BalanceBroughtForwardIndicator(
+                value=False
+            ),
             debit_line_amount=DebitLineAmount(
                 value=Decimal('0.00'),
                 currency_id='GBP'
@@ -582,7 +600,9 @@ obj = Statement(
                         uuid=Uuid(
                             value='349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4'
                         ),
-                        issue_date=XmlDate(2005, 6, 25)
+                        issue_date=IssueDate(
+                            value=XmlDate(2005, 6, 25)
+                        )
                     )
                 ),
             ]

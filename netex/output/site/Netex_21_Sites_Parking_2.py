@@ -8,15 +8,18 @@ from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_limitation import AccessibilityLimitation
 from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
 from netex.models.accessibility_tool_enumeration import AccessibilityToolEnumeration
+from netex.models.accessibility_tool_list import AccessibilityToolList
 from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
 from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
+from netex.models.audible_signals_available import AudibleSignalsAvailable
 from netex.models.availability_condition_ref import AvailabilityConditionRef
 from netex.models.car_service_facility_enumeration import CarServiceFacilityEnumeration
+from netex.models.car_service_facility_list import CarServiceFacilityList
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
 from netex.models.cell_versioned_child_structure import ParkingChargeBand
 from netex.models.cell_versioned_child_structure import ParkingPrice
@@ -52,6 +55,7 @@ from netex.models.equipment_places_rel_structure import EquipmentPlacesRelStruct
 from netex.models.equipment_position import EquipmentPosition
 from netex.models.equipment_positions_rel_structure import EquipmentPositionsRelStructure
 from netex.models.equipment_ref import EquipmentRef
+from netex.models.escalator_free_access import EscalatorFreeAccess
 from netex.models.exterior import Exterior
 from netex.models.fare_frame import FareFrame
 from netex.models.gated_enumeration import GatedEnumeration
@@ -62,15 +66,16 @@ from netex.models.interior import Interior
 from netex.models.level import Level
 from netex.models.level_ref import LevelRef
 from netex.models.levels_rel_structure import LevelsRelStructure
+from netex.models.lift_free_access import LiftFreeAccess
 from netex.models.lighting_enumeration import LightingEnumeration
 from netex.models.limitation_status_enumeration import LimitationStatusEnumeration
 from netex.models.linear_ring import LinearRing
 from netex.models.location_structure_2 import LocationStructure2
 from netex.models.multilingual_string import MultilingualString
 from netex.models.parking import Parking
-from netex.models.parking_area import ParkingArea
+from netex.models.parking_area_1 import ParkingArea1
 from netex.models.parking_areas_rel_structure import ParkingAreasRelStructure
-from netex.models.parking_bay import ParkingBay
+from netex.models.parking_bay_1 import ParkingBay1
 from netex.models.parking_bays_rel_structure import ParkingBaysRelStructure
 from netex.models.parking_capacities_rel_structure import ParkingCapacitiesRelStructure
 from netex.models.parking_capacity import ParkingCapacity
@@ -97,6 +102,7 @@ from netex.models.parking_type_enumeration import ParkingTypeEnumeration
 from netex.models.parking_user_enumeration import ParkingUserEnumeration
 from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
 from netex.models.parkings_in_frame_rel_structure import ParkingsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.payment_by_mobile_structure import PaymentByMobileStructure
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.place_equipments_rel_structure import PlaceEquipmentsRelStructure
@@ -116,6 +122,7 @@ from netex.models.resource_frame import ResourceFrame
 from netex.models.road_address import RoadAddress
 from netex.models.road_number_range_structure import RoadNumberRangeStructure
 from netex.models.sanitary_facility_enumeration import SanitaryFacilityEnumeration
+from netex.models.sanitary_facility_list import SanitaryFacilityList
 from netex.models.simple_point_version_structure import SimplePointVersionStructure
 from netex.models.site_entrances_rel_structure import SiteEntrancesRelStructure
 from netex.models.site_facility_set import SiteFacilitySet
@@ -123,6 +130,7 @@ from netex.models.site_facility_sets_rel_structure import SiteFacilitySetsRelStr
 from netex.models.site_frame import SiteFrame
 from netex.models.site_ref_structure import SiteRefStructure
 from netex.models.site_type_enumeration import SiteTypeEnumeration
+from netex.models.step_free_access import StepFreeAccess
 from netex.models.tax_category_enumeration import TaxCategoryEnumeration
 from netex.models.ticketing_equipment import TicketingEquipment
 from netex.models.time_of_day_enumeration import TimeOfDayEnumeration
@@ -138,6 +146,8 @@ from netex.models.types_of_value_structure import TypesOfValueStructure
 from netex.models.validity_trigger_ref import ValidityTriggerRef
 from netex.models.value_set import ValueSet
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
+from netex.models.visual_signs_available import VisualSignsAvailable
+from netex.models.wheelchair_access import WheelchairAccess
 from netex.models.zone_ref_structure import ZoneRefStructure
 from xsdata.models.datatype import XmlDateTime
 from xsdata.models.datatype import XmlDuration
@@ -146,10 +156,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002'
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        )
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
@@ -164,7 +178,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType(
+                                        DayType1(
                                             id='mypark:EveryDay',
                                             version='any',
                                             name=MultilingualString(
@@ -203,7 +217,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType(
+                                        DayType1(
                                             id='mypark:24_Hours_every_day',
                                             version='any',
                                             name=MultilingualString(
@@ -409,12 +423,24 @@ obj = PublicationDelivery(
                                 mobility_impaired_access=LimitationStatusEnumeration.PARTIAL,
                                 limitations=AccessibilityLimitationsRelStructure(
                                     accessibility_limitation=AccessibilityLimitation(
-                                        wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                        step_free_access=LimitationStatusEnumeration.TRUE,
-                                        escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                        lift_free_access=LimitationStatusEnumeration.TRUE,
-                                        audible_signals_available=LimitationStatusEnumeration.FALSE,
-                                        visual_signs_available=LimitationStatusEnumeration.FALSE
+                                        wheelchair_access=WheelchairAccess(
+                                            value=LimitationStatusEnumeration.TRUE
+                                        ),
+                                        step_free_access=StepFreeAccess(
+                                            value=LimitationStatusEnumeration.TRUE
+                                        ),
+                                        escalator_free_access=EscalatorFreeAccess(
+                                            value=LimitationStatusEnumeration.TRUE
+                                        ),
+                                        lift_free_access=LiftFreeAccess(
+                                            value=LimitationStatusEnumeration.TRUE
+                                        ),
+                                        audible_signals_available=AudibleSignalsAvailable(
+
+                                        ),
+                                        visual_signs_available=VisualSignsAvailable(
+                                            value=LimitationStatusEnumeration.FALSE
+                                        )
                                     )
                                 )
                             ),
@@ -437,17 +463,23 @@ obj = PublicationDelivery(
                                     SiteFacilitySet(
                                         id='mypark:PP01',
                                         version='any',
-                                        accessibility_tool_list=[
-                                            AccessibilityToolEnumeration.BUGGY,
-                                            AccessibilityToolEnumeration.WHEELCHAIR,
-                                        ],
-                                        car_service_facility_list=[
-                                            CarServiceFacilityEnumeration.CAR_WASH,
-                                        ],
-                                        sanitary_facility_list=[
-                                            SanitaryFacilityEnumeration.TOILET,
-                                            SanitaryFacilityEnumeration.WHEELCHAIR_ACCESS_TOILET,
-                                        ]
+                                        accessibility_tool_list=AccessibilityToolList(
+                                            value=[
+                                                AccessibilityToolEnumeration.BUGGY,
+                                                AccessibilityToolEnumeration.WHEELCHAIR,
+                                            ]
+                                        ),
+                                        car_service_facility_list=CarServiceFacilityList(
+                                            value=[
+                                                CarServiceFacilityEnumeration.CAR_WASH,
+                                            ]
+                                        ),
+                                        sanitary_facility_list=SanitaryFacilityList(
+                                            value=[
+                                                SanitaryFacilityEnumeration.TOILET,
+                                                SanitaryFacilityEnumeration.WHEELCHAIR_ACCESS_TOILET,
+                                            ]
+                                        )
                                     ),
                                 ]
                             ),
@@ -1076,7 +1108,7 @@ obj = PublicationDelivery(
                             ),
                             parking_areas=ParkingAreasRelStructure(
                                 parking_area_ref_or_parking_area=[
-                                    ParkingArea(
+                                    ParkingArea1(
                                         id='mypark:PP01@A01',
                                         version='any',
                                         name=MultilingualString(
@@ -1156,7 +1188,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ParkingArea(
+                                    ParkingArea1(
                                         id='mypark:PP01@A02',
                                         version='any',
                                         name=MultilingualString(
@@ -1222,7 +1254,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ParkingArea(
+                                    ParkingArea1(
                                         id='mypark:PP01@A03',
                                         version='any',
                                         name=MultilingualString(
@@ -1341,7 +1373,7 @@ obj = PublicationDelivery(
                                             ),
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
-                                                    DayType(
+                                                    DayType1(
                                                         id='mypark:WorkingDay',
                                                         version='any',
                                                         name=MultilingualString(
@@ -1564,7 +1596,7 @@ obj = PublicationDelivery(
                             ),
                             parking_areas=ParkingAreasRelStructure(
                                 parking_area_ref_or_parking_area=[
-                                    ParkingArea(
+                                    ParkingArea1(
                                         id='mypark:PS22@01',
                                         version='any',
                                         name=MultilingualString(
@@ -1677,7 +1709,7 @@ obj = PublicationDelivery(
                             ),
                             parking_areas=ParkingAreasRelStructure(
                                 parking_area_ref_or_parking_area=[
-                                    ParkingArea(
+                                    ParkingArea1(
                                         id='mypark:PB44@A01',
                                         version='any',
                                         name=MultilingualString(
@@ -1723,7 +1755,7 @@ obj = PublicationDelivery(
                                         ),
                                         bays=ParkingBaysRelStructure(
                                             parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay=[
-                                                ParkingBay(
+                                                ParkingBay1(
                                                     id='mypark:PB44@A01@B001',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1859,7 +1891,7 @@ obj = PublicationDelivery(
                                                     width=Decimal('4'),
                                                     recharging_available=False
                                                 ),
-                                                ParkingBay(
+                                                ParkingBay1(
                                                     id='mypark:PB44@A01@B002',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1995,7 +2027,7 @@ obj = PublicationDelivery(
                                                     width=Decimal('4'),
                                                     recharging_available=False
                                                 ),
-                                                ParkingBay(
+                                                ParkingBay1(
                                                     id='mypark:PB44@A01@B003',
                                                     version='any',
                                                     name=MultilingualString(
@@ -2150,7 +2182,7 @@ obj = PublicationDelivery(
                                             ),
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
-                                                    DayType(
+                                                    DayType1(
                                                         id='mypark:PNR01',
                                                         version='any',
                                                         properties=PropertiesOfDayRelStructure(

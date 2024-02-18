@@ -4,7 +4,7 @@ from .fare_demand_factor import FareDemandFactor
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_quota_factor import FareQuotaFactor
 from .fare_quota_factor_ref import FareQuotaFactorRef
-from .quality_structure_factor import QualityStructureFactor
+from .quality_structure_factor_1 import QualityStructureFactor1
 from .quality_structure_factor_ref import QualityStructureFactorRef
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
@@ -27,7 +27,7 @@ class QualityStructureFactorsRelStructure(
             QualityStructureFactorRef,
             FareQuotaFactor,
             FareDemandFactor,
-            QualityStructureFactor,
+            QualityStructureFactor1,
         ]
     ] = field(
         default_factory=list,
@@ -61,7 +61,7 @@ class QualityStructureFactorsRelStructure(
                 },
                 {
                     "name": "QualityStructureFactor",
-                    "type": QualityStructureFactor,
+                    "type": QualityStructureFactor1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

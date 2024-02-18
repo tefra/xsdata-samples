@@ -1,6 +1,11 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
 )
@@ -15,7 +20,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class TrainType(VehicleType):
-    number_of_carriages: Optional[int] = field(
+    number_of_carriages: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "NumberOfCarriages",
@@ -31,7 +36,7 @@ class TrainType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    seated_capacity: Optional[Decimal] = field(
+    seated_capacity: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "SeatedCapacity",
@@ -39,7 +44,7 @@ class TrainType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    standing_capacity: Optional[int] = field(
+    standing_capacity: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "StandingCapacity",
@@ -47,7 +52,7 @@ class TrainType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    total_capacity: Optional[int] = field(
+    total_capacity: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "TotalCapacity",

@@ -1,6 +1,7 @@
 from decimal import Decimal
 from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_info_facility_enumeration import AccessibilityInfoFacilityEnumeration
+from netex.models.accessibility_info_facility_list import AccessibilityInfoFacilityList
 from netex.models.accessibility_limitation import AccessibilityLimitation
 from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
@@ -21,13 +22,14 @@ from netex.models.multilingual_string import MultilingualString
 from netex.models.network_filter_by_value_structure import NetworkFilterByValueStructure
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.object_filter_by_value_structure import ObjectFilterByValueStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_information_equipment import PassengerInformationEquipment
 from netex.models.passenger_stop_assignment import PassengerStopAssignment
 from netex.models.place_equipments_rel_structure import PlaceEquipmentsRelStructure
 from netex.models.pos import Pos
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay import Quay
+from netex.models.quay_1 import Quay1
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -39,8 +41,9 @@ from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledS
 from netex.models.service_frame import ServiceFrame
 from netex.models.simple_point_version_structure import SimplePointVersionStructure
 from netex.models.site_frame import SiteFrame
+from netex.models.step_free_access import StepFreeAccess
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place import StopPlace
+from netex.models.stop_place_1 import StopPlace1
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_type_enumeration import StopTypeEnumeration
@@ -50,16 +53,21 @@ from netex.models.topographic_place_ref import TopographicPlaceRef
 from netex.models.topographic_place_view import TopographicPlaceView
 from netex.models.topographic_places_in_frame_rel_structure import TopographicPlacesInFrameRelStructure
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
+from netex.models.wheelchair_access import WheelchairAccess
 from xsdata.models.datatype import XmlDateTime
 from xsdata.models.datatype import XmlDuration
 
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         description=MultilingualString(
             value='Filter used to reest these contnets Get all STOP PLACEs, STOP ASSIGNMENTs and reponsib ilitySets  for Network TNET1 in topgraphic area    :TP_0032A.\n\t\t\t\tAlso get details for \n\t\t\t\t'
         ),
@@ -197,7 +205,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace(
+                                    StopPlace1(
                                         id='mybus:SP_0751A',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='01',
@@ -227,8 +235,12 @@ obj = PublicationDelivery(
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -242,7 +254,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP_0751A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='01',
@@ -284,10 +296,12 @@ obj = PublicationDelivery(
                                                             PassengerInformationEquipment(
                                                                 id='mybus:Rad_SP001A_01',
                                                                 version='any',
-                                                                accessibility_info_facility_list=[
-                                                                    AccessibilityInfoFacilityEnumeration.AUDIO_FOR_HEARING_IMPAIRED,
-                                                                    AccessibilityInfoFacilityEnumeration.VISUAL_DISPLAYS,
-                                                                ]
+                                                                accessibility_info_facility_list=AccessibilityInfoFacilityList(
+                                                                    value=[
+                                                                        AccessibilityInfoFacilityEnumeration.AUDIO_FOR_HEARING_IMPAIRED,
+                                                                        AccessibilityInfoFacilityEnumeration.VISUAL_DISPLAYS,
+                                                                    ]
+                                                                )
                                                             ),
                                                         ]
                                                     ),
@@ -301,7 +315,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP_0751A_2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='01',
@@ -343,10 +357,12 @@ obj = PublicationDelivery(
                                                             PassengerInformationEquipment(
                                                                 id='mybus:Q_SP_0751A_2',
                                                                 version='any',
-                                                                accessibility_info_facility_list=[
-                                                                    AccessibilityInfoFacilityEnumeration.AUDIO_FOR_HEARING_IMPAIRED,
-                                                                    AccessibilityInfoFacilityEnumeration.VISUAL_DISPLAYS,
-                                                                ]
+                                                                accessibility_info_facility_list=AccessibilityInfoFacilityList(
+                                                                    value=[
+                                                                        AccessibilityInfoFacilityEnumeration.AUDIO_FOR_HEARING_IMPAIRED,
+                                                                        AccessibilityInfoFacilityEnumeration.VISUAL_DISPLAYS,
+                                                                    ]
+                                                                )
                                                             ),
                                                         ]
                                                     ),

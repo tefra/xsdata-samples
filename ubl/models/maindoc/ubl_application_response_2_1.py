@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
-from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     DocumentResponse,
     ReceiverParty,
@@ -10,9 +9,13 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import (
 from ubl.models.common.ubl_common_basic_components_2_1 import (
     CustomizationId,
     Id,
+    IssueDate,
+    IssueTime,
     Note,
     ProfileExecutionId,
     ProfileId,
+    ResponseDate,
+    ResponseTime,
     UblversionId,
     Uuid,
     VersionId,
@@ -83,7 +86,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[XmlDate] = field(
+    issue_date: Optional[IssueDate] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -92,7 +95,7 @@ class ApplicationResponseType:
             "required": True,
         },
     )
-    issue_time: Optional[XmlTime] = field(
+    issue_time: Optional[IssueTime] = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -100,7 +103,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    response_date: Optional[XmlDate] = field(
+    response_date: Optional[ResponseDate] = field(
         default=None,
         metadata={
             "name": "ResponseDate",
@@ -108,7 +111,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    response_time: Optional[XmlTime] = field(
+    response_time: Optional[ResponseTime] = field(
         default=None,
         metadata={
             "name": "ResponseTime",

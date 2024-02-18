@@ -4711,6 +4711,12 @@ from travelport.models.type_form_of_payment_type_2 import (
     TypeFormOfPaymentType2,
 )
 from travelport.models.type_form_of_refund import TypeFormOfRefund
+from travelport.models.type_free_form_text_1 import TypeFreeFormText1
+from travelport.models.type_free_form_text_2 import TypeFreeFormText2
+from travelport.models.type_free_form_text_3 import TypeFreeFormText3
+from travelport.models.type_free_form_text_4 import TypeFreeFormText4
+from travelport.models.type_free_form_text_5 import TypeFreeFormText5
+from travelport.models.type_free_form_text_6 import TypeFreeFormText6
 from travelport.models.type_fuel import TypeFuel
 from travelport.models.type_fulfillment_idtype_1 import TypeFulfillmentIdtype1
 from travelport.models.type_fulfillment_idtype_2 import TypeFulfillmentIdtype2
@@ -9173,6 +9179,12 @@ __all__ = [
     "TypeFormOfPaymentType1",
     "TypeFormOfPaymentType2",
     "TypeFormOfRefund",
+    "TypeFreeFormText1",
+    "TypeFreeFormText2",
+    "TypeFreeFormText3",
+    "TypeFreeFormText4",
+    "TypeFreeFormText5",
+    "TypeFreeFormText6",
     "TypeFuel",
     "TypeFulfillmentIdtype1",
     "TypeFulfillmentIdtype2",

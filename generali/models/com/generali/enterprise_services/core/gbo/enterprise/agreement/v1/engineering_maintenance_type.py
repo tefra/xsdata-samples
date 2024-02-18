@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.engineering_maintenance_type_years import (
     EngineeringMaintenanceTypeYears,
 )
@@ -12,7 +14,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class EngineeringMaintenanceType:
-    inception_date: Optional[XmlDateTime] = field(
+    inception_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "InceptionDate",
@@ -21,7 +23,7 @@ class EngineeringMaintenanceType:
             "required": True,
         },
     )
-    expiry_date: Optional[XmlDateTime] = field(
+    expiry_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "ExpiryDate",

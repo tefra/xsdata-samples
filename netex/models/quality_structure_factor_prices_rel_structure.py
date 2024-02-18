@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
-from .cell_ref import CellRef
+from .cell_ref_1 import CellRef1
 from .quality_structure_factor_price_ref import QualityStructureFactorPriceRef
 from .quality_structure_factor_price_versioned_child_structure import (
     QualityStructureFactorPriceVersionedChildStructure,
@@ -23,7 +23,7 @@ class QualityStructureFactorPricesRelStructure(
         Union[
             QualityStructureFactorPriceRef,
             QualityStructureFactorPriceVersionedChildStructure,
-            CellRef,
+            CellRef1,
         ]
     ] = field(
         default_factory=list,
@@ -42,7 +42,7 @@ class QualityStructureFactorPricesRelStructure(
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef,
+                    "type": CellRef1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

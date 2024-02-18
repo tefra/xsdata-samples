@@ -4,9 +4,16 @@ from xcbl.models.availability_to_promise_response import (
     AvailabilityShipToParty,
 )
 from xcbl.models.price_check_request import RequestListOfAttachment
-from xcbl.models.price_check_result import LineItemAttachment
+from xcbl.models.price_check_result import (
+    BuyerIdreferenceDate,
+    GeneralLineItemNote,
+    LineItemAttachment,
+    SupplierIdreferenceDate,
+    TotalNumberOfLineItem,
+)
 from xcbl.models.remittance_advice import SupplierParty
 from xcbl.models.shipping_schedule import AccountCode
+from xcbl.models.sourcing_create import DeliveryDate
 from xcbl.models.sourcing_result import (
     BuyerParty,
     CatalogReference,
@@ -22,6 +29,7 @@ from xcbl.models.sourcing_result import (
     ListOfItemReferences,
     ListOfQuantityCoded,
     MaxBackOrderQuantity,
+    OffCatalogFlag,
     ParentItemNumber,
     TotalQuantity,
     Transport,
@@ -35,12 +43,21 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
-class AvailabilityCheckRequestSummary:
-    total_number_of_line_item: Optional[str] = field(
-        default=None,
+class AvailabilityCheckRequestIssueDate:
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumberOfLineItem",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AvailabilityCheckRequestNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -67,6 +84,17 @@ class AvailabilityCheckRequestLanguage:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class AvailabilityCheckRequestSummary:
+    total_number_of_line_item: Optional[TotalNumberOfLineItem] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberOfLineItem",
+            "type": "Element",
+        },
     )
 
 
@@ -139,7 +167,7 @@ class AvailabilityCheckRequestBaseItemDetail:
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[str] = field(
+    off_catalog_flag: Optional[OffCatalogFlag] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
@@ -209,7 +237,7 @@ class AvailabilityCheckRequestBaseItemDetail:
             "type": "Element",
         },
     )
-    delivery_date: Optional[str] = field(
+    delivery_date: Optional[DeliveryDate] = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
@@ -237,7 +265,7 @@ class AvailabilityCheckRequestHeader:
             "required": True,
         }
     )
-    availability_check_request_issue_date: str = field(
+    availability_check_request_issue_date: AvailabilityCheckRequestIssueDate = field(
         metadata={
             "name": "AvailabilityCheckRequestIssueDate",
             "type": "Element",
@@ -251,7 +279,7 @@ class AvailabilityCheckRequestHeader:
             "required": True,
         }
     )
-    supplier_idreference_date: Optional[str] = field(
+    supplier_idreference_date: Optional[SupplierIdreferenceDate] = field(
         default=None,
         metadata={
             "name": "SupplierIDReferenceDate",
@@ -265,7 +293,7 @@ class AvailabilityCheckRequestHeader:
             "required": True,
         }
     )
-    buyer_idreference_date: Optional[str] = field(
+    buyer_idreference_date: Optional[BuyerIdreferenceDate] = field(
         default=None,
         metadata={
             "name": "BuyerIDReferenceDate",
@@ -295,7 +323,9 @@ class AvailabilityCheckRequestHeader:
             "type": "Element",
         },
     )
-    availability_check_request_note: Optional[str] = field(
+    availability_check_request_note: Optional[
+        AvailabilityCheckRequestNote
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestNote",
@@ -320,7 +350,7 @@ class AvailabilityCheckRequestItemDetail:
             "required": True,
         }
     )
-    general_line_item_note: Optional[str] = field(
+    general_line_item_note: Optional[GeneralLineItemNote] = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",

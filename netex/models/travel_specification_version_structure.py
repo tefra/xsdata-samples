@@ -3,7 +3,7 @@ from decimal import Decimal
 from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime
 from .capping_rule_price_ref import CappingRulePriceRef
-from .cell_ref import CellRef
+from .cell_ref_1 import CellRef1
 from .controllable_element_price_ref import ControllableElementPriceRef
 from .customer_purchase_package_price_ref import (
     CustomerPurchasePackagePriceRef,
@@ -135,7 +135,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             CappingRulePriceRef,
             FareProductPriceRef,
             FarePriceRef,
-            CellRef,
+            CellRef1,
         ]
     ] = field(
         default=None,
@@ -234,7 +234,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef,
+                    "type": CellRef1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -3,7 +3,9 @@ from typing import List, Optional
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.collection import (
     Collection,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi import Doi
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.resource import Resource
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.timestamp import Timestamp
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -18,17 +20,14 @@ class DoiData:
         name = "doi_data"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    doi: Optional[str] = field(
+    doi: Optional[Doi] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 6,
-            "max_length": 2048,
-            "pattern": r"10\.[0-9]{4,9}/.{1,200}",
         },
     )
-    timestamp: Optional[int] = field(
+    timestamp: Optional[Timestamp] = field(
         default=None,
         metadata={
             "type": "Element",

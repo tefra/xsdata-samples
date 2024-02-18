@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
     BaseIdentifiedComponentType,
 )
@@ -23,7 +25,7 @@ class PricingAmountType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    actual_commission: Optional[Decimal] = field(
+    actual_commission: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "ActualCommission",
@@ -31,7 +33,7 @@ class PricingAmountType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    generali_gwp_share: Optional[Decimal] = field(
+    generali_gwp_share: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "GeneraliGwpShare",

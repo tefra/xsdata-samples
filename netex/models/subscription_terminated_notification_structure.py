@@ -1,14 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from .error_description_structure import ErrorDescriptionStructure
 from .extensions_1 import Extensions1
+from .participant_ref_structure import ParticipantRefStructure
 from .producer_response_structure import ProducerResponseStructure
+from .subscription_filter_ref_structure import SubscriptionFilterRefStructure
+from .subscription_qualifier_structure import SubscriptionQualifierStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
 class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
-    subscriber_ref: List[str] = field(
+    subscriber_ref: List[ParticipantRefStructure] = field(
         default_factory=list,
         metadata={
             "name": "SubscriberRef",
@@ -16,7 +20,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_filter_ref: List[str] = field(
+    subscription_filter_ref: List[SubscriptionFilterRefStructure] = field(
         default_factory=list,
         metadata={
             "name": "SubscriptionFilterRef",
@@ -24,7 +28,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_ref: List[str] = field(
+    subscription_ref: List[SubscriptionQualifierStructure] = field(
         default_factory=list,
         metadata={
             "name": "SubscriptionRef",
@@ -33,7 +37,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "min_occurs": 1,
         },
     )
-    description: Optional[str] = field(
+    description: Optional[ErrorDescriptionStructure] = field(
         default=None,
         metadata={
             "name": "Description",

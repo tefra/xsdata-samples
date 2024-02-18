@@ -14,6 +14,7 @@ from netex.models.entities_in_version_rel_structure import GeneralFrameMembersRe
 from netex.models.general_frame_member import GeneralFrameMember
 from netex.models.modification_enumeration import ModificationEnumeration
 from netex.models.multilingual_string import MultilingualString
+from netex.models.participant_ref import ParticipantRef
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.relative_operator_enumeration import RelativeOperatorEnumeration
@@ -38,10 +39,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002'
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        )
     ),
     publication_refresh_interval=XmlDuration("P1Y2M3DT10H30M0S"),
     data_objects=DataObjectsRelStructure(

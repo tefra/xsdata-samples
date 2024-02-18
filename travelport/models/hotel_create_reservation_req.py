@@ -11,8 +11,10 @@ from travelport.models.guarantee_1 import Guarantee1
 from travelport.models.guest_information import GuestInformation
 from travelport.models.host_token_1 import HostToken1
 from travelport.models.hotel_bedding import HotelBedding
+from travelport.models.hotel_commission import HotelCommission
 from travelport.models.hotel_property import HotelProperty
 from travelport.models.hotel_rate_detail import HotelRateDetail
+from travelport.models.hotel_special_request import HotelSpecialRequest
 from travelport.models.hotel_stay import HotelStay
 from travelport.models.phone_number_1 import PhoneNumber1
 from travelport.models.point_of_sale_1 import PointOfSale1
@@ -139,13 +141,12 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    hotel_special_request: None | str = field(
+    hotel_special_request: None | HotelSpecialRequest = field(
         default=None,
         metadata={
             "name": "HotelSpecialRequest",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            "max_length": 250,
         },
     )
     point_of_sale: None | PointOfSale1 = field(
@@ -231,7 +232,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "max_occurs": 9999,
         },
     )
-    hotel_commission: None | str = field(
+    hotel_commission: None | HotelCommission = field(
         default=None,
         metadata={
             "name": "HotelCommission",

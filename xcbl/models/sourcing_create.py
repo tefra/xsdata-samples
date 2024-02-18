@@ -1,6 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.sourcing_create_response import SourcingCreateSummary
+from xcbl.models.sourcing_create_response import (
+    ItemNumber,
+    ParentItemIdentifier,
+    SourcingCreateSummary,
+    SourcingItemId,
+    SourcingItemName,
+)
 from xcbl.models.sourcing_result import (
     DeliveryDetail,
     InitiatingParty,
@@ -10,11 +16,14 @@ from xcbl.models.sourcing_result import (
     PartNumbers,
     Quantity,
     RateOfExchangeDetail,
+    RevisionNumber,
     UnitPrice,
+    Value,
 )
 from xcbl.models.sourcing_result_response import Purpose
 from xcbl.models.time_series_response import (
     ListOfIdentifier,
+    Mdfbusiness,
     NameAddress,
     OrderContact,
     OtherContacts,
@@ -32,19 +41,91 @@ from xcbl.models.trading_partner_user_information import (
 
 
 @dataclass(kw_only=True)
-class AggregationType:
-    aggregation_type_coded: str = field(
+class AggregationTypeCoded:
+    value: str = field(
+        default="",
         metadata={
-            "name": "AggregationTypeCoded",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    aggregation_type_coded_other: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class AggregationTypeCodedOther:
+    value: str = field(
+        default="",
         metadata={
-            "name": "AggregationTypeCodedOther",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AllOrNothing:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AlternativeBuyerContactName:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AlternativeContactEmail:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AlternativeContactFaxNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AlternativeContactMobile:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AlternativeContactPhoneNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AttributeCharacteristic:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -68,39 +149,351 @@ class AttributeName:
 
 
 @dataclass(kw_only=True)
-class Bundle:
-    bundle_name: str = field(
+class BundleName:
+    value: str = field(
+        default="",
         metadata={
-            "name": "BundleName",
-            "type": "Element",
             "required": True,
-        }
-    )
-    line_item_number: List[str] = field(
-        default_factory=list,
-        metadata={
-            "name": "LineItemNumber",
-            "type": "Element",
-            "min_occurs": 1,
         },
     )
 
 
 @dataclass(kw_only=True)
-class DropDownMenuValue:
+class BuyerContactName:
     value: str = field(
+        default="",
         metadata={
-            "name": "Value",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    credit: str = field(
+
+
+@dataclass(kw_only=True)
+class CommunityId:
+    class Meta:
+        name = "CommunityID"
+
+    value: str = field(
+        default="",
         metadata={
-            "name": "Credit",
-            "type": "Element",
             "required": True,
-        }
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ComponentSourcingIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactEmail:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactFaxNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactMobile:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactPhoneNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Credit:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class DecisionDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class DeliveryDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FormulaName:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class GroupIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class KeyValString:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Keyword:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LineItemNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Operator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PartialQuoteIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PreferredUom:
+    class Meta:
+        name = "PreferredUOM"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ProjectName:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class QuoteWinRuleCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class QuoteWinRuleCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RequiredToRespond:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RequisitionNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingAttributeDataTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingAttributeDataTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingAttributeDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingAttributeFieldSize:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingAttributeName:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingAttributeType:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateGeneralNotes:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateId:
+    class Meta:
+        name = "SourcingCreateID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingCreateName:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
     )
 
 
@@ -116,113 +509,118 @@ class SourcingItemComponent:
 
 
 @dataclass(kw_only=True)
-class VisibilityOfBuyer:
-    buyer_contact_name: Optional[str] = field(
-        default=None,
+class SourcingItemDescription:
+    value: str = field(
+        default="",
         metadata={
-            "name": "BuyerContactName",
-            "type": "Element",
-        },
-    )
-    contact_phone_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ContactPhoneNumber",
-            "type": "Element",
-        },
-    )
-    contact_mobile: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ContactMobile",
-            "type": "Element",
-        },
-    )
-    contact_fax_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ContactFaxNumber",
-            "type": "Element",
-        },
-    )
-    contact_email: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ContactEmail",
-            "type": "Element",
-        },
-    )
-    alternative_buyer_contact_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AlternativeBuyerContactName",
-            "type": "Element",
-        },
-    )
-    alternative_contact_phone_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AlternativeContactPhoneNumber",
-            "type": "Element",
-        },
-    )
-    alternative_contact_mobile: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AlternativeContactMobile",
-            "type": "Element",
-        },
-    )
-    alternative_contact_fax_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AlternativeContactFaxNumber",
-            "type": "Element",
-        },
-    )
-    alternative_contact_email: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AlternativeContactEmail",
-            "type": "Element",
+            "required": True,
         },
     )
 
 
 @dataclass(kw_only=True)
-class VisibilityRules:
-    visibility_indicator: Optional[str] = field(
-        default=None,
+class SourcingStatus:
+    value: str = field(
+        default="",
         metadata={
-            "name": "VisibilityIndicator",
-            "type": "Element",
+            "required": True,
         },
     )
-    visibility_of_comments: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class SourcingType:
+    value: str = field(
+        default="",
         metadata={
-            "name": "VisibilityOfComments",
-            "type": "Element",
+            "required": True,
         },
     )
-    visibility_of_amounts: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class SupplierView:
+    value: str = field(
+        default="",
         metadata={
-            "name": "VisibilityOfAmounts",
-            "type": "Element",
+            "required": True,
         },
     )
-    visibility_of_quantities: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class VisibilityIndicator:
+    value: str = field(
+        default="",
         metadata={
-            "name": "VisibilityOfQuantities",
-            "type": "Element",
+            "required": True,
         },
     )
-    visibility_of_participants: Optional[str] = field(
+
+
+@dataclass(kw_only=True)
+class VisibilityOfAmounts:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class VisibilityOfComments:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class VisibilityOfParticipants:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class VisibilityOfQuantities:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Weighting:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AggregationType:
+    aggregation_type_coded: AggregationTypeCoded = field(
+        metadata={
+            "name": "AggregationTypeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    aggregation_type_coded_other: Optional[AggregationTypeCodedOther] = field(
         default=None,
         metadata={
-            "name": "VisibilityOfParticipants",
+            "name": "AggregationTypeCodedOther",
             "type": "Element",
         },
     )
@@ -240,6 +638,43 @@ class BaseCurrency:
 
 
 @dataclass(kw_only=True)
+class Bundle:
+    bundle_name: BundleName = field(
+        metadata={
+            "name": "BundleName",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    line_item_number: List[LineItemNumber] = field(
+        default_factory=list,
+        metadata={
+            "name": "LineItemNumber",
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class DropDownMenuValue:
+    value: Value = field(
+        metadata={
+            "name": "Value",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    credit: Credit = field(
+        metadata={
+            "name": "Credit",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class FormulaAttribute:
     attribute_name: Optional[AttributeName] = field(
         default=None,
@@ -248,7 +683,7 @@ class FormulaAttribute:
             "type": "Element",
         },
     )
-    value: Optional[str] = field(
+    value: Optional[Value] = field(
         default=None,
         metadata={
             "name": "Value",
@@ -259,7 +694,7 @@ class FormulaAttribute:
 
 @dataclass(kw_only=True)
 class KeyVal:
-    key_val_string: str = field(
+    key_val_string: KeyValString = field(
         metadata={
             "name": "KeyValString",
             "type": "Element",
@@ -273,36 +708,12 @@ class KeyVal:
             "required": True,
         }
     )
-    keyword: str = field(
+    keyword: Keyword = field(
         metadata={
             "name": "Keyword",
             "type": "Element",
             "required": True,
         }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfBundle:
-    bundle: List[Bundle] = field(
-        default_factory=list,
-        metadata={
-            "name": "Bundle",
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfDropDownMenuValue:
-    drop_down_menu_value: List[DropDownMenuValue] = field(
-        default_factory=list,
-        metadata={
-            "name": "DropDownMenuValue",
-            "type": "Element",
-            "min_occurs": 1,
-        },
     )
 
 
@@ -332,14 +743,14 @@ class ListOfSourcingItemComponent:
 
 @dataclass(kw_only=True)
 class Project:
-    project_name: str = field(
+    project_name: ProjectName = field(
         metadata={
             "name": "ProjectName",
             "type": "Element",
             "required": True,
         }
     )
-    revision_number: Optional[str] = field(
+    revision_number: Optional[RevisionNumber] = field(
         default=None,
         metadata={
             "name": "RevisionNumber",
@@ -422,46 +833,119 @@ class SourcingValidityDates:
 
 
 @dataclass(kw_only=True)
-class SourcingVisibilityRules:
-    visibility_indicator: Optional[str] = field(
+class VisibilityOfBuyer:
+    buyer_contact_name: Optional[BuyerContactName] = field(
+        default=None,
+        metadata={
+            "name": "BuyerContactName",
+            "type": "Element",
+        },
+    )
+    contact_phone_number: Optional[ContactPhoneNumber] = field(
+        default=None,
+        metadata={
+            "name": "ContactPhoneNumber",
+            "type": "Element",
+        },
+    )
+    contact_mobile: Optional[ContactMobile] = field(
+        default=None,
+        metadata={
+            "name": "ContactMobile",
+            "type": "Element",
+        },
+    )
+    contact_fax_number: Optional[ContactFaxNumber] = field(
+        default=None,
+        metadata={
+            "name": "ContactFaxNumber",
+            "type": "Element",
+        },
+    )
+    contact_email: Optional[ContactEmail] = field(
+        default=None,
+        metadata={
+            "name": "ContactEmail",
+            "type": "Element",
+        },
+    )
+    alternative_buyer_contact_name: Optional[
+        AlternativeBuyerContactName
+    ] = field(
+        default=None,
+        metadata={
+            "name": "AlternativeBuyerContactName",
+            "type": "Element",
+        },
+    )
+    alternative_contact_phone_number: Optional[
+        AlternativeContactPhoneNumber
+    ] = field(
+        default=None,
+        metadata={
+            "name": "AlternativeContactPhoneNumber",
+            "type": "Element",
+        },
+    )
+    alternative_contact_mobile: Optional[AlternativeContactMobile] = field(
+        default=None,
+        metadata={
+            "name": "AlternativeContactMobile",
+            "type": "Element",
+        },
+    )
+    alternative_contact_fax_number: Optional[
+        AlternativeContactFaxNumber
+    ] = field(
+        default=None,
+        metadata={
+            "name": "AlternativeContactFaxNumber",
+            "type": "Element",
+        },
+    )
+    alternative_contact_email: Optional[AlternativeContactEmail] = field(
+        default=None,
+        metadata={
+            "name": "AlternativeContactEmail",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class VisibilityRules:
+    visibility_indicator: Optional[VisibilityIndicator] = field(
         default=None,
         metadata={
             "name": "VisibilityIndicator",
             "type": "Element",
         },
     )
-    visibility_of_comments: Optional[str] = field(
+    visibility_of_comments: Optional[VisibilityOfComments] = field(
         default=None,
         metadata={
             "name": "VisibilityOfComments",
             "type": "Element",
         },
     )
-    visibility_of_amounts: Optional[str] = field(
+    visibility_of_amounts: Optional[VisibilityOfAmounts] = field(
         default=None,
         metadata={
             "name": "VisibilityOfAmounts",
             "type": "Element",
         },
     )
-    visibility_of_quantities: Optional[str] = field(
+    visibility_of_quantities: Optional[VisibilityOfQuantities] = field(
         default=None,
         metadata={
             "name": "VisibilityOfQuantities",
             "type": "Element",
         },
     )
-    visibility_of_participants: Optional[str] = field(
+    visibility_of_participants: Optional[VisibilityOfParticipants] = field(
         default=None,
         metadata={
             "name": "VisibilityOfParticipants",
-            "type": "Element",
-        },
-    )
-    visibility_of_buyer: Optional[VisibilityOfBuyer] = field(
-        default=None,
-        metadata={
-            "name": "VisibilityOfBuyer",
             "type": "Element",
         },
     )
@@ -469,7 +953,7 @@ class SourcingVisibilityRules:
 
 @dataclass(kw_only=True)
 class AdditionalAttribute:
-    operator: str = field(
+    operator: Operator = field(
         metadata={
             "name": "Operator",
             "type": "Element",
@@ -482,6 +966,30 @@ class AdditionalAttribute:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfBundle:
+    bundle: List[Bundle] = field(
+        default_factory=list,
+        metadata={
+            "name": "Bundle",
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfDropDownMenuValue:
+    drop_down_menu_value: List[DropDownMenuValue] = field(
+        default_factory=list,
+        metadata={
+            "name": "DropDownMenuValue",
+            "type": "Element",
+            "min_occurs": 1,
+        },
     )
 
 
@@ -509,113 +1017,46 @@ class ListToInform:
 
 
 @dataclass(kw_only=True)
-class SourcingAttribute:
-    sourcing_attribute_name: str = field(
-        metadata={
-            "name": "SourcingAttributeName",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    sourcing_attribute_description: Optional[str] = field(
+class SourcingVisibilityRules:
+    visibility_indicator: Optional[VisibilityIndicator] = field(
         default=None,
         metadata={
-            "name": "SourcingAttributeDescription",
+            "name": "VisibilityIndicator",
             "type": "Element",
         },
     )
-    sourcing_attribute_data_type_coded: str = field(
-        metadata={
-            "name": "SourcingAttributeDataTypeCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    sourcing_attribute_data_type_coded_other: Optional[str] = field(
+    visibility_of_comments: Optional[VisibilityOfComments] = field(
         default=None,
         metadata={
-            "name": "SourcingAttributeDataTypeCodedOther",
+            "name": "VisibilityOfComments",
             "type": "Element",
         },
     )
-    list_of_drop_down_menu_value: Optional[ListOfDropDownMenuValue] = field(
+    visibility_of_amounts: Optional[VisibilityOfAmounts] = field(
         default=None,
         metadata={
-            "name": "ListOfDropDownMenuValue",
+            "name": "VisibilityOfAmounts",
             "type": "Element",
         },
     )
-    sourcing_attribute_type: Optional[str] = field(
+    visibility_of_quantities: Optional[VisibilityOfQuantities] = field(
         default=None,
         metadata={
-            "name": "SourcingAttributeType",
+            "name": "VisibilityOfQuantities",
             "type": "Element",
         },
     )
-    required_to_respond: str = field(
-        metadata={
-            "name": "RequiredToRespond",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    supplier_view: Optional[str] = field(
+    visibility_of_participants: Optional[VisibilityOfParticipants] = field(
         default=None,
         metadata={
-            "name": "SupplierView",
+            "name": "VisibilityOfParticipants",
             "type": "Element",
         },
     )
-    weighting: Optional[str] = field(
+    visibility_of_buyer: Optional[VisibilityOfBuyer] = field(
         default=None,
         metadata={
-            "name": "Weighting",
-            "type": "Element",
-        },
-    )
-    preferred_uom: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PreferredUOM",
-            "type": "Element",
-        },
-    )
-    attribute_characteristic: str = field(
-        metadata={
-            "name": "AttributeCharacteristic",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    sourcing_attribute_field_size: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SourcingAttributeFieldSize",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class SourcingRulesProfile:
-    quote_win_rule_coded: str = field(
-        metadata={
-            "name": "QuoteWinRuleCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    quote_win_rule_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "QuoteWinRuleCodedOther",
-            "type": "Element",
-        },
-    )
-    sourcing_visibility_rules: Optional[SourcingVisibilityRules] = field(
-        default=None,
-        metadata={
-            "name": "SourcingVisibilityRules",
+            "name": "VisibilityOfBuyer",
             "type": "Element",
         },
     )
@@ -641,7 +1082,7 @@ class ValidQuoteCurrency:
 
 @dataclass(kw_only=True)
 class Formula:
-    formula_name: str = field(
+    formula_name: FormulaName = field(
         metadata={
             "name": "FormulaName",
             "type": "Element",
@@ -684,6 +1125,100 @@ class ListOfValidQuoteCurrency:
 
 
 @dataclass(kw_only=True)
+class SourcingAttribute:
+    sourcing_attribute_name: SourcingAttributeName = field(
+        metadata={
+            "name": "SourcingAttributeName",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    sourcing_attribute_description: Optional[
+        SourcingAttributeDescription
+    ] = field(
+        default=None,
+        metadata={
+            "name": "SourcingAttributeDescription",
+            "type": "Element",
+        },
+    )
+    sourcing_attribute_data_type_coded: SourcingAttributeDataTypeCoded = field(
+        metadata={
+            "name": "SourcingAttributeDataTypeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    sourcing_attribute_data_type_coded_other: Optional[
+        SourcingAttributeDataTypeCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "SourcingAttributeDataTypeCodedOther",
+            "type": "Element",
+        },
+    )
+    list_of_drop_down_menu_value: Optional[ListOfDropDownMenuValue] = field(
+        default=None,
+        metadata={
+            "name": "ListOfDropDownMenuValue",
+            "type": "Element",
+        },
+    )
+    sourcing_attribute_type: Optional[SourcingAttributeType] = field(
+        default=None,
+        metadata={
+            "name": "SourcingAttributeType",
+            "type": "Element",
+        },
+    )
+    required_to_respond: RequiredToRespond = field(
+        metadata={
+            "name": "RequiredToRespond",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    supplier_view: Optional[SupplierView] = field(
+        default=None,
+        metadata={
+            "name": "SupplierView",
+            "type": "Element",
+        },
+    )
+    weighting: Optional[Weighting] = field(
+        default=None,
+        metadata={
+            "name": "Weighting",
+            "type": "Element",
+        },
+    )
+    preferred_uom: Optional[PreferredUom] = field(
+        default=None,
+        metadata={
+            "name": "PreferredUOM",
+            "type": "Element",
+        },
+    )
+    attribute_characteristic: AttributeCharacteristic = field(
+        metadata={
+            "name": "AttributeCharacteristic",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    sourcing_attribute_field_size: Optional[
+        SourcingAttributeFieldSize
+    ] = field(
+        default=None,
+        metadata={
+            "name": "SourcingAttributeFieldSize",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class SourcingPartners:
     party_id: PartyId = field(
         metadata={
@@ -699,7 +1234,7 @@ class SourcingPartners:
             "type": "Element",
         },
     )
-    mdfbusiness: Optional[str] = field(
+    mdfbusiness: Optional[Mdfbusiness] = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
@@ -748,7 +1283,7 @@ class SourcingPartners:
             "type": "Element",
         },
     )
-    group_indicator: str = field(
+    group_indicator: GroupIndicator = field(
         metadata={
             "name": "GroupIndicator",
             "type": "Element",
@@ -765,48 +1300,26 @@ class SourcingPartners:
 
 
 @dataclass(kw_only=True)
-class SourcingSpecifications:
-    sourcing_create_name: Optional[str] = field(
+class SourcingRulesProfile:
+    quote_win_rule_coded: QuoteWinRuleCoded = field(
+        metadata={
+            "name": "QuoteWinRuleCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    quote_win_rule_coded_other: Optional[QuoteWinRuleCodedOther] = field(
         default=None,
         metadata={
-            "name": "SourcingCreateName",
+            "name": "QuoteWinRuleCodedOther",
             "type": "Element",
         },
     )
-    sourcing_type: Optional[str] = field(
+    sourcing_visibility_rules: Optional[SourcingVisibilityRules] = field(
         default=None,
         metadata={
-            "name": "SourcingType",
+            "name": "SourcingVisibilityRules",
             "type": "Element",
-        },
-    )
-    sourcing_status: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SourcingStatus",
-            "type": "Element",
-        },
-    )
-    partial_quote_indicator: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PartialQuoteIndicator",
-            "type": "Element",
-        },
-    )
-    all_or_nothing: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "AllOrNothing",
-            "type": "Element",
-        },
-    )
-    sourcing_attribute: List[SourcingAttribute] = field(
-        default_factory=list,
-        metadata={
-            "name": "SourcingAttribute",
-            "type": "Element",
-            "min_occurs": 1,
         },
     )
 
@@ -843,42 +1356,42 @@ class SourcingCurrency:
 
 @dataclass(kw_only=True)
 class SourcingItem:
-    sourcing_item_id: str = field(
+    sourcing_item_id: SourcingItemId = field(
         metadata={
             "name": "SourcingItemID",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_item_name: str = field(
+    sourcing_item_name: SourcingItemName = field(
         metadata={
             "name": "SourcingItemName",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_item_description: Optional[str] = field(
+    sourcing_item_description: Optional[SourcingItemDescription] = field(
         default=None,
         metadata={
             "name": "SourcingItemDescription",
             "type": "Element",
         },
     )
-    item_number: Optional[str] = field(
+    item_number: Optional[ItemNumber] = field(
         default=None,
         metadata={
             "name": "ItemNumber",
             "type": "Element",
         },
     )
-    parent_item_identifier: Optional[str] = field(
+    parent_item_identifier: Optional[ParentItemIdentifier] = field(
         default=None,
         metadata={
             "name": "ParentItemIdentifier",
             "type": "Element",
         },
     )
-    bundle_name: Optional[str] = field(
+    bundle_name: Optional[BundleName] = field(
         default=None,
         metadata={
             "name": "BundleName",
@@ -906,7 +1419,7 @@ class SourcingItem:
             "type": "Element",
         },
     )
-    delivery_date: Optional[str] = field(
+    delivery_date: Optional[DeliveryDate] = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
@@ -920,7 +1433,7 @@ class SourcingItem:
             "type": "Element",
         },
     )
-    partial_quote_indicator: Optional[str] = field(
+    partial_quote_indicator: Optional[PartialQuoteIndicator] = field(
         default=None,
         metadata={
             "name": "PartialQuoteIndicator",
@@ -932,6 +1445,53 @@ class SourcingItem:
         metadata={
             "name": "PartNumbers",
             "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourcingSpecifications:
+    sourcing_create_name: Optional[SourcingCreateName] = field(
+        default=None,
+        metadata={
+            "name": "SourcingCreateName",
+            "type": "Element",
+        },
+    )
+    sourcing_type: Optional[SourcingType] = field(
+        default=None,
+        metadata={
+            "name": "SourcingType",
+            "type": "Element",
+        },
+    )
+    sourcing_status: Optional[SourcingStatus] = field(
+        default=None,
+        metadata={
+            "name": "SourcingStatus",
+            "type": "Element",
+        },
+    )
+    partial_quote_indicator: Optional[PartialQuoteIndicator] = field(
+        default=None,
+        metadata={
+            "name": "PartialQuoteIndicator",
+            "type": "Element",
+        },
+    )
+    all_or_nothing: Optional[AllOrNothing] = field(
+        default=None,
+        metadata={
+            "name": "AllOrNothing",
+            "type": "Element",
+        },
+    )
+    sourcing_attribute: List[SourcingAttribute] = field(
+        default_factory=list,
+        metadata={
+            "name": "SourcingAttribute",
+            "type": "Element",
+            "min_occurs": 1,
         },
     )
 
@@ -959,7 +1519,7 @@ class SourcingCreateDetail:
             "type": "Element",
         },
     )
-    component_sourcing_indicator: str = field(
+    component_sourcing_indicator: ComponentSourcingIndicator = field(
         metadata={
             "name": "ComponentSourcingIndicator",
             "type": "Element",
@@ -986,7 +1546,7 @@ class SourcingParticipants:
             "required": True,
         }
     )
-    community_id: Optional[str] = field(
+    community_id: Optional[CommunityId] = field(
         default=None,
         metadata={
             "name": "CommunityID",
@@ -1030,14 +1590,14 @@ class SourcingCreateHeader:
             "required": True,
         }
     )
-    sourcing_create_issue_date: str = field(
+    sourcing_create_issue_date: SourcingCreateIssueDate = field(
         metadata={
             "name": "SourcingCreateIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    sourcing_create_id: str = field(
+    sourcing_create_id: SourcingCreateId = field(
         metadata={
             "name": "SourcingCreateID",
             "type": "Element",
@@ -1051,7 +1611,7 @@ class SourcingCreateHeader:
             "type": "Element",
         },
     )
-    requisition_number: Optional[str] = field(
+    requisition_number: Optional[RequisitionNumber] = field(
         default=None,
         metadata={
             "name": "RequisitionNumber",
@@ -1065,7 +1625,7 @@ class SourcingCreateHeader:
             "required": True,
         }
     )
-    decision_date: Optional[str] = field(
+    decision_date: Optional[DecisionDate] = field(
         default=None,
         metadata={
             "name": "DecisionDate",
@@ -1114,7 +1674,9 @@ class SourcingCreateHeader:
             "required": True,
         }
     )
-    sourcing_create_general_notes: Optional[str] = field(
+    sourcing_create_general_notes: Optional[
+        SourcingCreateGeneralNotes
+    ] = field(
         default=None,
         metadata={
             "name": "SourcingCreateGeneralNotes",

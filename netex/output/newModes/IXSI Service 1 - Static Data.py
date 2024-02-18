@@ -24,7 +24,7 @@ from netex.models.operator_ref import OperatorRef
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
 from netex.models.parking import Parking
-from netex.models.parking_area import ParkingArea
+from netex.models.parking_area_1 import ParkingArea1
 from netex.models.parking_areas_rel_structure import ParkingAreasRelStructure
 from netex.models.parking_layout_enumeration import ParkingLayoutEnumeration
 from netex.models.parking_properties import ParkingProperties
@@ -32,6 +32,7 @@ from netex.models.parking_reservation_enumeration import ParkingReservationEnume
 from netex.models.parking_type_enumeration import ParkingTypeEnumeration
 from netex.models.parking_user_enumeration import ParkingUserEnumeration
 from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
+from netex.models.participant_ref import ParticipantRef
 from netex.models.propulsion_type_enumeration import PropulsionTypeEnumeration
 from netex.models.public_use_enumeration import PublicUseEnumeration
 from netex.models.publication_delivery import PublicationDelivery
@@ -61,7 +62,9 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2019, 6, 12, 9, 30, 47, 0, 0),
-    participant_ref='AURIGE001',
+    participant_ref=ParticipantRef(
+        value='AURIGE001'
+    ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
@@ -101,7 +104,7 @@ obj = PublicationDelivery(
                                         parking_reservation=ParkingReservationEnumeration.NO_RESERVATIONS,
                                         parking_areas=ParkingAreasRelStructure(
                                             parking_area_ref_or_parking_area=[
-                                                ParkingArea(
+                                                ParkingArea1(
                                                     id='GE:ParkingArea:633-1:Stadtmobil',
                                                     version='any',
                                                     public_use=PublicUseEnumeration.AUTHORISED_PUBLIC_ONLY,

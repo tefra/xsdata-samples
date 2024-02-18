@@ -6,6 +6,7 @@ from xcbl.models.sourcing_result import (
     DeliveryDetail,
     InitiatingParty,
     LineItemAttachments,
+    LineItemNote,
     ListOfAttachment,
     ListOfNameValueSet,
     ListOfReferenceCoded,
@@ -14,6 +15,7 @@ from xcbl.models.sourcing_result import (
     OrderParty,
     PricingDetail,
     RoundTripInformation,
+    TotalNumParticipants,
 )
 from xcbl.models.sourcing_result_response import Purpose
 from xcbl.models.time_series_response import (
@@ -26,26 +28,97 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
-class AuctionResultSummary:
-    total_num_auction_results: Optional[str] = field(
-        default=None,
+class AuctionResultDetailNotes:
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumAuctionResults",
-            "type": "Element",
+            "required": True,
         },
     )
-    total_num_winning_bids: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class AuctionResultGeneralNote:
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumWinningBids",
-            "type": "Element",
+            "required": True,
         },
     )
-    total_num_participants: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class AuctionResultIssueDate:
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumParticipants",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ForwardAuctionIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class MvbvariableName:
+    class Meta:
+        name = "MVBVariableName"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class MvbvariableValue:
+    class Meta:
+        name = "MVBVariableValue"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalNumAuctionResults:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalNumWinningBids:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class WinningBidIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -134,6 +207,31 @@ class AuctionResultPurpose:
 
 
 @dataclass(kw_only=True)
+class AuctionResultSummary:
+    total_num_auction_results: Optional[TotalNumAuctionResults] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumAuctionResults",
+            "type": "Element",
+        },
+    )
+    total_num_winning_bids: Optional[TotalNumWinningBids] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumWinningBids",
+            "type": "Element",
+        },
+    )
+    total_num_participants: Optional[TotalNumParticipants] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumParticipants",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class ListOfAuctionResultDetailAttachment:
     list_of_attachment: ListOfAttachment = field(
         metadata={
@@ -171,7 +269,7 @@ class AuctionResultHeader:
             "required": True,
         }
     )
-    auction_result_issue_date: str = field(
+    auction_result_issue_date: AuctionResultIssueDate = field(
         metadata={
             "name": "AuctionResultIssueDate",
             "type": "Element",
@@ -192,7 +290,7 @@ class AuctionResultHeader:
             "required": True,
         }
     )
-    forward_auction_indicator: str = field(
+    forward_auction_indicator: ForwardAuctionIndicator = field(
         metadata={
             "name": "ForwardAuctionIndicator",
             "type": "Element",
@@ -229,7 +327,7 @@ class AuctionResultHeader:
             "type": "Element",
         },
     )
-    auction_result_general_note: Optional[str] = field(
+    auction_result_general_note: Optional[AuctionResultGeneralNote] = field(
         default=None,
         metadata={
             "name": "AuctionResultGeneralNote",
@@ -257,14 +355,14 @@ class Mvbvariable:
     class Meta:
         name = "MVBVariable"
 
-    mvbvariable_name: str = field(
+    mvbvariable_name: MvbvariableName = field(
         metadata={
             "name": "MVBVariableName",
             "type": "Element",
             "required": True,
         }
     )
-    mvbvariable_value: Optional[str] = field(
+    mvbvariable_value: Optional[MvbvariableValue] = field(
         default=None,
         metadata={
             "name": "MVBVariableValue",
@@ -325,7 +423,7 @@ class AuctionResultItem:
             "type": "Element",
         },
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
@@ -383,7 +481,7 @@ class AuctionResultDetail:
             "required": True,
         }
     )
-    winning_bid_indicator: str = field(
+    winning_bid_indicator: WinningBidIndicator = field(
         metadata={
             "name": "WinningBidIndicator",
             "type": "Element",
@@ -418,7 +516,7 @@ class AuctionResultDetail:
             "required": True,
         }
     )
-    auction_result_detail_notes: Optional[str] = field(
+    auction_result_detail_notes: Optional[AuctionResultDetailNotes] = field(
         default=None,
         metadata={
             "name": "AuctionResultDetailNotes",

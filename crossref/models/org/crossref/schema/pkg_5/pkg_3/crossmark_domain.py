@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.domain import Domain
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.filter import Filter
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -23,17 +25,14 @@ class CrossmarkDomain:
         name = "crossmark_domain"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    domain: Optional[str] = field(
+    domain: Optional[Domain] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 4,
-            "max_length": 1024,
-            "pattern": r"[A-Za-z0-9_]+([-.][A-Za-z0-9_]+)*\.[A-Za-z0-9_]+([-.][A-Za-z0-9_]+)*",
         },
     )
-    filter: Optional[str] = field(
+    filter: Optional[Filter] = field(
         default=None,
         metadata={
             "type": "Element",

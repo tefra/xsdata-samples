@@ -26,6 +26,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import Amount
 from ubl.models.common.ubl_common_basic_components_2_1 import BaseAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
+from ubl.models.common.ubl_common_basic_components_2_1 import ChargeIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentityCode
@@ -39,9 +40,12 @@ from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
 from ubl.models.common.ubl_common_basic_components_2_1 import FreeOnBoardValueAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import GrossVolumeMeasure
 from ubl.models.common.ubl_common_basic_components_2_1 import GrossWeightMeasure
+from ubl.models.common.ubl_common_basic_components_2_1 import HazardousRiskIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
 from ubl.models.common.ubl_common_basic_components_2_1 import InsuranceValueAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import MultiplierFactorNumeric
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
@@ -87,8 +91,12 @@ obj = ForwardingInstructions(
     uuid=Uuid(
         value='6E09886B-DC6E-439F-82D1-7C83746352B1'
     ),
-    issue_date=XmlDate(2005, 6, 24),
-    issue_time=XmlTime(14, 20, 0, 0, 0),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 6, 24)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(14, 20, 0, 0, 0)
+    ),
     consignor_party=ConsignorParty(
         party_name=[
             PartyName(
@@ -242,7 +250,9 @@ obj = ForwardingInstructions(
                 tariff_code=TariffCode(
                     value='15219000'
                 ),
-                hazardous_risk_indicator=False,
+                hazardous_risk_indicator=HazardousRiskIndicator(
+                    value=False
+                ),
                 consignee_party=ConsigneeParty(
                     party_name=[
                         PartyName(
@@ -437,7 +447,9 @@ obj = ForwardingInstructions(
                 ),
                 freight_allowance_charge=[
                     FreightAllowanceCharge(
-                        charge_indicator=True,
+                        charge_indicator=ChargeIndicator(
+                            value=True
+                        ),
                         allowance_charge_reason=[
                             AllowanceChargeReason(
                                 value='Freight charges'
@@ -452,7 +464,9 @@ obj = ForwardingInstructions(
                         )
                     ),
                     FreightAllowanceCharge(
-                        charge_indicator=False,
+                        charge_indicator=ChargeIndicator(
+                            value=False
+                        ),
                         allowance_charge_reason_code=AllowanceChargeReasonCode(
                             value='79'
                         ),
@@ -492,7 +506,9 @@ obj = ForwardingInstructions(
                         value='Acme beeswax'
                     ),
                 ],
-                hazardous_risk_indicator=False,
+                hazardous_risk_indicator=HazardousRiskIndicator(
+                    value=False
+                ),
                 declared_customs_value_amount=DeclaredCustomsValueAmount(
                     value=Decimal('524.80'),
                     currency_id='GBP'

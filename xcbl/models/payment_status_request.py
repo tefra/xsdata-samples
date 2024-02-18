@@ -1,18 +1,31 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xcbl.models.payment_status_response import (
+    ConfirmationId,
     PaymentDates,
     PaymentRequestId,
     PaymentStatusRequestId,
     PaymentStatusRequestSummary,
+    SequenceNumber,
     SettlementAmount,
 )
 from xcbl.models.remittance_advice import PayerParty
 from xcbl.models.sourcing_result import ListOfReference
 from xcbl.models.trading_partner_user_information import (
+    GeneralNotes,
     Language,
     ValidityDates,
 )
+
+
+@dataclass(kw_only=True)
+class PaymentStatusRequestIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 @dataclass(kw_only=True)
@@ -46,7 +59,7 @@ class PaymentStatusRequestHeader:
             "required": True,
         }
     )
-    payment_status_request_issue_date: str = field(
+    payment_status_request_issue_date: PaymentStatusRequestIssueDate = field(
         metadata={
             "name": "PaymentStatusRequestIssueDate",
             "type": "Element",
@@ -67,7 +80,7 @@ class PaymentStatusRequestHeader:
             "required": True,
         }
     )
-    general_notes: Optional[str] = field(
+    general_notes: Optional[GeneralNotes] = field(
         default=None,
         metadata={
             "name": "GeneralNotes",
@@ -78,7 +91,7 @@ class PaymentStatusRequestHeader:
 
 @dataclass(kw_only=True)
 class PaymentStatusRequestDetail:
-    sequence_number: Optional[str] = field(
+    sequence_number: Optional[SequenceNumber] = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -92,7 +105,7 @@ class PaymentStatusRequestDetail:
             "type": "Element",
         },
     )
-    confirmation_id: Optional[str] = field(
+    confirmation_id: Optional[ConfirmationId] = field(
         default=None,
         metadata={
             "name": "ConfirmationID",

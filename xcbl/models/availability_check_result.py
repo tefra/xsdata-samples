@@ -5,18 +5,53 @@ from xcbl.models.availability_to_promise_response import (
 )
 from xcbl.models.order_response import AvailabilityErrorInfo
 from xcbl.models.price_check_result import (
+    BuyerIdreferenceDate,
     ErrorInfo,
+    GeneralLineItemNote,
     LineItemAttachment,
     QuotedItem,
     ResultListOfAttachment,
+    SupplierIdreferenceDate,
+    TotalNumberOfLineItem,
 )
 from xcbl.models.remittance_advice import SupplierParty
+from xcbl.models.sourcing_create import DeliveryDate
 from xcbl.models.sourcing_result import (
     BuyerParty,
     Quantity,
 )
 from xcbl.models.trading_partner_response import Reference
 from xcbl.models.trading_partner_user_information import Language
+
+
+@dataclass(kw_only=True)
+class AvailabilityCheckResultIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AvailabilityCheckResultNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AvailabilityItemErrors:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 @dataclass(kw_only=True)
@@ -75,12 +110,14 @@ class AvailabilityCheckResultHeader:
             "required": True,
         }
     )
-    availability_check_result_issue_date: str = field(
-        metadata={
-            "name": "AvailabilityCheckResultIssueDate",
-            "type": "Element",
-            "required": True,
-        }
+    availability_check_result_issue_date: AvailabilityCheckResultIssueDate = (
+        field(
+            metadata={
+                "name": "AvailabilityCheckResultIssueDate",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )
     supplier_party: SupplierParty = field(
         metadata={
@@ -89,7 +126,7 @@ class AvailabilityCheckResultHeader:
             "required": True,
         }
     )
-    supplier_idreference_date: Optional[str] = field(
+    supplier_idreference_date: Optional[SupplierIdreferenceDate] = field(
         default=None,
         metadata={
             "name": "SupplierIDReferenceDate",
@@ -103,7 +140,7 @@ class AvailabilityCheckResultHeader:
             "required": True,
         }
     )
-    buyer_idreference_date: Optional[str] = field(
+    buyer_idreference_date: Optional[BuyerIdreferenceDate] = field(
         default=None,
         metadata={
             "name": "BuyerIDReferenceDate",
@@ -126,7 +163,9 @@ class AvailabilityCheckResultHeader:
             "type": "Element",
         },
     )
-    availability_check_result_note: Optional[str] = field(
+    availability_check_result_note: Optional[
+        AvailabilityCheckResultNote
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultNote",
@@ -158,7 +197,7 @@ class AvailabilityCheckResultItemDetail:
             "required": True,
         }
     )
-    delivery_date: Optional[str] = field(
+    delivery_date: Optional[DeliveryDate] = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
@@ -172,7 +211,7 @@ class AvailabilityCheckResultItemDetail:
             "type": "Element",
         },
     )
-    general_line_item_note: Optional[str] = field(
+    general_line_item_note: Optional[GeneralLineItemNote] = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",
@@ -190,7 +229,7 @@ class AvailabilityCheckResultItemDetail:
 
 @dataclass(kw_only=True)
 class AvailabilityCheckResultSummary:
-    availability_item_errors: str = field(
+    availability_item_errors: AvailabilityItemErrors = field(
         metadata={
             "name": "AvailabilityItemErrors",
             "type": "Element",
@@ -204,7 +243,7 @@ class AvailabilityCheckResultSummary:
             "type": "Element",
         },
     )
-    total_number_of_line_item: Optional[str] = field(
+    total_number_of_line_item: Optional[TotalNumberOfLineItem] = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItem",

@@ -1,8 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
@@ -68,7 +73,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    long_term_start_date: Optional[XmlDateTime] = field(
+    long_term_start_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "LongTermStartDate",
@@ -76,7 +81,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    long_term_end_date: Optional[XmlDateTime] = field(
+    long_term_end_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "LongTermEndDate",
@@ -84,7 +89,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    on_risk_since: Optional[XmlDateTime] = field(
+    on_risk_since: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "OnRiskSince",
@@ -92,7 +97,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    renewal_date: Optional[XmlDateTime] = field(
+    renewal_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "RenewalDate",
@@ -118,7 +123,7 @@ class ProgramGbotype(AgreementType):
             "required": True,
         },
     )
-    cancellation_days_notice: Optional[int] = field(
+    cancellation_days_notice: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "CancellationDaysNotice",

@@ -23,7 +23,7 @@ from netex.models.entities_in_version_rel_structure import FramesRelStructure
 from netex.models.interchange_rule import InterchangeRule
 from netex.models.interchange_rule_parameter_structure import InterchangeRuleParameterStructure
 from netex.models.interchange_rules_in_frame_rel_structure import InterchangeRulesInFrameRelStructure
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.line_in_direction_ref import LineInDirectionRef
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
@@ -31,6 +31,7 @@ from netex.models.location_structure_2 import LocationStructure2
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.resource_frame import ResourceFrame
@@ -54,10 +55,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -218,7 +223,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_1',
                                         version='any',
                                         name=MultilingualString(
@@ -230,7 +235,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='1'
                                     ),
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_2',
                                         version='any',
                                         name=MultilingualString(
@@ -242,7 +247,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='2'
                                     ),
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_3',
                                         version='any',
                                         name=MultilingualString(
@@ -254,7 +259,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='3'
                                     ),
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_4',
                                         version='any',
                                         name=MultilingualString(
@@ -266,7 +271,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='5'
                                     ),
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_5',
                                         version='any',
                                         name=MultilingualString(
@@ -278,7 +283,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='5'
                                     ),
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_6',
                                         version='any',
                                         name=MultilingualString(

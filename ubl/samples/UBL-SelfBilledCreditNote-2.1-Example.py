@@ -40,6 +40,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import Amount
 from ubl.models.common.ubl_common_basic_components_2_1 import BaseAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import BaseQuantity
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
+from ubl.models.common.ubl_common_basic_components_2_1 import ChargeIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import ChargeTotalAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
@@ -52,11 +53,13 @@ from ubl.models.common.ubl_common_basic_components_2_1 import DocumentCurrencyCo
 from ubl.models.common.ubl_common_basic_components_2_1 import DocumentType
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
 from ubl.models.common.ubl_common_basic_components_2_1 import EmbeddedDocumentBinaryObject
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import EndpointId
 from ubl.models.common.ubl_common_basic_components_2_1 import FamilyName
 from ubl.models.common.ubl_common_basic_components_2_1 import FirstName
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import ItemClassificationCode
 from ubl.models.common.ubl_common_basic_components_2_1 import JobTitle
 from ubl.models.common.ubl_common_basic_components_2_1 import LineExtensionAmount
@@ -72,6 +75,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import Postbox
 from ubl.models.common.ubl_common_basic_components_2_1 import PrepaidAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import PriceAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxExclusiveAmount
@@ -95,7 +99,9 @@ obj = SelfBilledCreditNote(
     id=Id(
         value='TOSL108'
     ),
-    issue_date=XmlDate(2009, 12, 15),
+    issue_date=IssueDate(
+        value=XmlDate(2009, 12, 15)
+    ),
     note=[
         Note(
             value='Ordered in our booth at the convention.',
@@ -112,8 +118,12 @@ obj = SelfBilledCreditNote(
     ),
     invoice_period=[
         InvoicePeriod(
-            start_date=XmlDate(2009, 11, 1),
-            end_date=XmlDate(2009, 11, 30)
+            start_date=StartDate(
+                value=XmlDate(2009, 11, 1)
+            ),
+            end_date=EndDate(
+                value=XmlDate(2009, 11, 30)
+            )
         ),
     ],
     order_reference=OrderReference(
@@ -451,7 +461,9 @@ obj = SelfBilledCreditNote(
     ),
     allowance_charge=[
         AllowanceCharge(
-            charge_indicator=True,
+            charge_indicator=ChargeIndicator(
+                value=True
+            ),
             allowance_charge_reason=[
                 AllowanceChargeReason(
                     value='Packing cost'
@@ -463,7 +475,9 @@ obj = SelfBilledCreditNote(
             )
         ),
         AllowanceCharge(
-            charge_indicator=False,
+            charge_indicator=ChargeIndicator(
+                value=False
+            ),
             allowance_charge_reason=[
                 AllowanceChargeReason(
                     value='Promotion discount'
@@ -718,7 +732,9 @@ obj = SelfBilledCreditNote(
                 ),
                 allowance_charge=[
                     AllowanceCharge(
-                        charge_indicator=False,
+                        charge_indicator=ChargeIndicator(
+                            value=False
+                        ),
                         allowance_charge_reason=[
                             AllowanceChargeReason(
                                 value='Contract'
@@ -910,7 +926,9 @@ obj = SelfBilledCreditNote(
                 ),
                 allowance_charge=[
                     AllowanceCharge(
-                        charge_indicator=False,
+                        charge_indicator=ChargeIndicator(
+                            value=False
+                        ),
                         allowance_charge_reason=[
                             AllowanceChargeReason(
                                 value='Contract'

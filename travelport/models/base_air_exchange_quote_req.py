@@ -11,6 +11,7 @@ from travelport.models.original_itinerary_details import (
 )
 from travelport.models.pcc import Pcc
 from travelport.models.repricing_modifiers import RepricingModifiers
+from travelport.models.ticket_number_1 import TicketNumber1
 from travelport.models.type_fare_rule_type import TypeFareRuleType
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
@@ -42,15 +43,13 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
         Provider: ACH.
     """
 
-    ticket_number: list[str] = field(
+    ticket_number: list[TicketNumber1] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-            "min_length": 1,
-            "max_length": 13,
         },
     )
     provider_reservation_info: None | BaseAirExchangeQuoteReq.ProviderReservationInfo = field(

@@ -19,16 +19,21 @@ from ubl.models.common.ubl_common_basic_components_2_1 import AccountingCostCode
 from ubl.models.common.ubl_common_basic_components_2_1 import BaseQuantity
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import EndpointId
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import LineExtensionAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import LineStatusCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
+from ubl.models.common.ubl_common_basic_components_2_1 import PartialDeliveryIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import PriceAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
 from ubl.models.common.ubl_common_basic_components_2_1 import SequenceNumberId
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import TotalTaxAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import UblversionId
 from ubl.models.common.ubl_common_basic_components_2_1 import Value
@@ -52,8 +57,12 @@ obj = OrderChange(
     id=Id(
         value='7'
     ),
-    issue_date=XmlDate(2010, 1, 21),
-    issue_time=XmlTime(12, 30, 0, 0),
+    issue_date=IssueDate(
+        value=XmlDate(2010, 1, 21)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(12, 30, 0, 0)
+    ),
     sequence_number_id=SequenceNumberId(
         value='1'
     ),
@@ -148,15 +157,21 @@ obj = OrderChange(
                     value=Decimal('20'),
                     currency_id='SEK'
                 ),
-                partial_delivery_indicator=False,
+                partial_delivery_indicator=PartialDeliveryIndicator(
+                    value=False
+                ),
                 accounting_cost_code=AccountingCostCode(
                     value='ProjectID123'
                 ),
                 delivery=[
                     Delivery(
                         requested_delivery_period=RequestedDeliveryPeriod(
-                            start_date=XmlDate(2010, 2, 10),
-                            end_date=XmlDate(2010, 2, 25)
+                            start_date=StartDate(
+                                value=XmlDate(2010, 2, 10)
+                            ),
+                            end_date=EndDate(
+                                value=XmlDate(2010, 2, 25)
+                            )
                         )
                     ),
                 ],

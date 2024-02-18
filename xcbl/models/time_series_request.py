@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xcbl.models.time_series_response import (
+    CharacteristicCombinationId,
     KeyFigureInformation,
     ListOfCharacteristicCombinations,
     TimeSeriesHeader,
@@ -10,22 +11,56 @@ from xcbl.models.time_series_response import (
 
 
 @dataclass(kw_only=True)
+class KeyFigureNotes:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class KeyFigurePurposeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class KeyFigurePurposeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class KeyFigureData:
-    key_figure_purpose_coded: Optional[str] = field(
+    key_figure_purpose_coded: Optional[KeyFigurePurposeCoded] = field(
         default=None,
         metadata={
             "name": "KeyFigurePurposeCoded",
             "type": "Element",
         },
     )
-    key_figure_purpose_coded_other: Optional[str] = field(
+    key_figure_purpose_coded_other: Optional[
+        KeyFigurePurposeCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "KeyFigurePurposeCodedOther",
             "type": "Element",
         },
     )
-    characteristic_combination_id: Optional[str] = field(
+    characteristic_combination_id: Optional[
+        CharacteristicCombinationId
+    ] = field(
         default=None,
         metadata={
             "name": "CharacteristicCombinationID",
@@ -46,7 +81,7 @@ class KeyFigureData:
             "required": True,
         }
     )
-    key_figure_notes: Optional[str] = field(
+    key_figure_notes: Optional[KeyFigureNotes] = field(
         default=None,
         metadata={
             "name": "KeyFigureNotes",

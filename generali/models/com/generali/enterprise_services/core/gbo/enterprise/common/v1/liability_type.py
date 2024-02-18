@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.code_description_type import (
     CodeDescriptionType,
@@ -26,7 +28,7 @@ class LiabilityType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    share_capital: Optional[Decimal] = field(
+    share_capital: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "ShareCapital",

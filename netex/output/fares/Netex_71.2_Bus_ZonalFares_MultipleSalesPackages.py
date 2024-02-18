@@ -3,9 +3,9 @@ from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.availability_condition_ref import AvailabilityConditionRef
-from netex.models.cell_versioned_child_structure import Cell
+from netex.models.cell_versioned_child_structure import Cell1
 from netex.models.cell_versioned_child_structure import CellsRelStructure
-from netex.models.cell_versioned_child_structure import FareTable
+from netex.models.cell_versioned_child_structure import FareTable1
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
@@ -50,6 +50,7 @@ from netex.models.network_frame_topic_structure import NetworkFrameTopicStructur
 from netex.models.operator import Operator
 from netex.models.operator_ref import OperatorRef
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.preassigned_fare_product import PreassignedFareProduct
 from netex.models.pricing_parameter_set import PricingParameterSet
@@ -57,7 +58,7 @@ from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purchase_window import PurchaseWindow
-from netex.models.quality_structure_factor import QualityStructureFactor
+from netex.models.quality_structure_factor_1 import QualityStructureFactor1
 from netex.models.quality_structure_factor_ref import QualityStructureFactorRef
 from netex.models.quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
 from netex.models.resource_frame import ResourceFrame
@@ -69,7 +70,7 @@ from netex.models.sales_offer_packages_in_frame_rel_structure import SalesOfferP
 from netex.models.service_frame import ServiceFrame
 from netex.models.service_frame_ref import ServiceFrameRef
 from netex.models.tariff import Tariff
-from netex.models.tariff_zone_ref import TariffZoneRef
+from netex.models.tariff_zone_ref_1 import TariffZoneRef1
 from netex.models.tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.tariffs_in_frame_rel_structure import TariffsInFrameRelStructure
@@ -105,10 +106,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -190,11 +195,11 @@ obj = PublicationDelivery(
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
-                                        TariffZoneRef(
+                                        TariffZoneRef1(
                                             version='any',
                                             ref='cdla:Midlands_Area'
                                         ),
-                                        TariffZoneRef(
+                                        TariffZoneRef1(
                                             version='any',
                                             ref='cdla:North_East_Area'
                                         ),
@@ -211,47 +216,47 @@ obj = PublicationDelivery(
                                         ),
                                         contains=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Burton_And_Swadlincote'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Cannock'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Coalville'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Derby'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Leicester_City_Plus'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Midlands'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Shrewsbury'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Stafford'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Sutton_And_Birmingham'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Tamworth'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Telford'
                                                 ),
@@ -387,47 +392,47 @@ obj = PublicationDelivery(
                                         ),
                                         contains=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:North_East_Area'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:North_East'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Ashington_Triple'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Bishop_Auckland'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Blyth_Triple'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Blyth_plus_Ashington_Triple'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Blyth_plus_Morpeth_Triple'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Blyth_plus_TandW_Triple'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Brandon'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:County_Durham'
                                                 ),
-                                                TariffZoneRef(
+                                                TariffZoneRef1(
                                                     version='any',
                                                     ref='cdla:Cramlington'
                                                 ),
@@ -636,95 +641,95 @@ obj = PublicationDelivery(
                                                         validity_parameter_grouping_type=LogicalOperationEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Midlands_Area'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Burton_And_Swadlincote'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Cannock'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Coalville'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Derby'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Leicester_City_Plus'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Midlands'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Shrewsbury'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Stafford'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Sutton_And_Birmingham'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Tamworth'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Telford'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:North_East_Area'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:North_East'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Ashington_Triple'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Bishop_Auckland'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Blyth_Triple'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Blyth_plus_Ashington_Triple'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Blyth_plus_Morpeth_Triple'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Blyth_plus_TandW_Triple'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Brandon'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:County_Durham'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Cramlington'
                                                                 ),
@@ -1445,7 +1450,7 @@ obj = PublicationDelivery(
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
                                             quality_structure_factor_ref_or_quality_structure_factor=[
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@funded@80',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1453,7 +1458,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     factor='80'
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@funded@115',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1461,7 +1466,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     factor='115'
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@funded@135',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1469,14 +1474,14 @@ obj = PublicationDelivery(
                                                     ),
                                                     factor='135'
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@unfunded',
                                                     version='1.0',
                                                     name=MultilingualString(
                                                         value='Unfunded'
                                                     )
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@promo@103.5',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1484,7 +1489,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     factor='103.5'
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@promo@198',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1492,7 +1497,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     factor='198'
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@promo@225',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1500,7 +1505,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     factor='225'
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@promo@288',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1508,7 +1513,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     factor='288'
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@promo@360',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1516,7 +1521,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     factor='360'
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@promo@648',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1524,7 +1529,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     factor='576'
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='cdla:Time_interval@student@promo@576',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1570,95 +1575,95 @@ obj = PublicationDelivery(
                                                         validity_parameter_grouping_type=LogicalOperationEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Midlands_Area'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Burton_And_Swadlincote'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Cannock'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Coalville'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Derby'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Leicester_City_Plus'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Midlands'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Shrewsbury'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Stafford'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Sutton_And_Birmingham'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Tamworth'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Telford'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:North_East_Area'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:North_East'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Ashington_Triple'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Bishop_Auckland'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Blyth_Triple'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Blyth_plus_Ashington_Triple'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Blyth_plus_Morpeth_Triple'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Blyth_plus_TandW_Triple'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Brandon'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:County_Durham'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Cramlington'
                                                                 ),
@@ -1704,35 +1709,35 @@ obj = PublicationDelivery(
                                                         validity_parameter_grouping_type=LogicalOperationEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Leicester_City_Plus'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Midlands'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Stafford'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Sutton_And_Birmingham'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Tamworth'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:Telford'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:North_East'
                                                                 ),
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='cdla:County_Durham'
                                                                 ),
@@ -2204,7 +2209,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable(
+                                    FareTable1(
                                         id='cdla:PriceGroup:zonal@Midlands',
                                         version='any',
                                         name=MultilingualString(
@@ -2212,7 +2217,7 @@ obj = PublicationDelivery(
                                         ),
                                         cells=CellsRelStructure(
                                             choice=[
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Midlands@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2235,13 +2240,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Midlands'
                                                     ),
                                                     order=1
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Midlands@family@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2264,13 +2269,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:1day'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Midlands'
                                                     ),
                                                     order=2
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Midlands@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2293,13 +2298,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Midlands'
                                                     ),
                                                     order=3
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Midlands@adult@4weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2322,13 +2327,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Midlands'
                                                     ),
                                                     order=4
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Midlands@adult@annual',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2351,13 +2356,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Midlands'
                                                     ),
                                                     order=5
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Midlands@student@term_autumn',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2386,13 +2391,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Midlands'
                                                     ),
                                                     order=6
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Midlands@student@term_spring',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2421,13 +2426,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Midlands'
                                                     ),
                                                     order=7
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Midlands@student@term_summer',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2456,13 +2461,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Midlands'
                                                     ),
                                                     order=8
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Midlands@student@academic_year',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2491,13 +2496,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@360'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Midlands'
                                                     ),
                                                     order=9
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Burton_And_Swadlincote@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2520,13 +2525,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Burton_And_Swadlincote'
                                                     ),
                                                     order=1
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Burton_And_Swadlincote@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2549,13 +2554,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Burton_And_Swadlincote'
                                                     ),
                                                     order=2
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Burton_And_Swadlincote@adult@4weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2578,13 +2583,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Burton_And_Swadlincote'
                                                     ),
                                                     order=3
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Burton_And_Swadlincote@adult@annual',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2607,13 +2612,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Burton_And_Swadlincote'
                                                     ),
                                                     order=4
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Cannock@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2636,13 +2641,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Cannock'
                                                     ),
                                                     order=1
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Cannock@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2665,13 +2670,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Cannock'
                                                     ),
                                                     order=2
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Cannock@adult@4weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2694,13 +2699,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Cannock'
                                                     ),
                                                     order=3
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Cannock@adult@annual',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2723,13 +2728,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Cannock'
                                                     ),
                                                     order=4
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Leicester_City_Plus@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2752,13 +2757,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=1
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Leicester_City_Plus@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2781,13 +2786,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=2
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Leicester_City_Plus@adult@4weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2810,13 +2815,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=3
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Leicester_City_Plus@adult@annual',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2839,13 +2844,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=4
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Leicester_City_Plus@student@academic_year',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2874,13 +2879,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@288'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=5
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Leicester_City_Plus@student@academic_year@Promo',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2914,13 +2919,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@288'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=6
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Stafford@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2943,13 +2948,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Stafford'
                                                     ),
                                                     order=1
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Stafford@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -2972,13 +2977,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Stafford'
                                                     ),
                                                     order=2
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Stafford@adult@4weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3001,13 +3006,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Stafford'
                                                     ),
                                                     order=3
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Stafford@adult@annual',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3030,13 +3035,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Stafford'
                                                     ),
                                                     order=4
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Stafford@student@term_autumn',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3065,13 +3070,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Stafford'
                                                     ),
                                                     order=5
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Stafford@student@term_spring',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3100,13 +3105,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Stafford'
                                                     ),
                                                     order=6
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Stafford@student@term_summer',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3135,7 +3140,7 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Stafford'
                                                     ),
@@ -3144,7 +3149,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    FareTable(
+                                    FareTable1(
                                         id='cdla:PriceGroup:zonal@North_East',
                                         version='any',
                                         name=MultilingualString(
@@ -3152,7 +3157,7 @@ obj = PublicationDelivery(
                                         ),
                                         cells=CellsRelStructure(
                                             choice=[
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East_Area@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3175,13 +3180,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East_Area'
                                                     ),
                                                     order=1
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East_Area@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3204,13 +3209,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East_Area'
                                                     ),
                                                     order=2
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3233,13 +3238,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=1
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@family@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3262,13 +3267,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:1day'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=2
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3291,13 +3296,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=3
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@adult@4weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3320,13 +3325,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=4
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@adult@annual',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3349,13 +3354,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=5
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@student@15Week@unfunded',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3391,13 +3396,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@unfunded'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=6
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@student@15Week@funded_80',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3429,13 +3434,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@funded@80'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=7
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@student@15Week@funded_115',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3467,13 +3472,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@funded@115'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=8
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@student@15Week@funded_135',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3505,13 +3510,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@funded@135'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=9
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@student@15Week@NCupgrade',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3539,13 +3544,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@unfunded'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=10
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:North_East@student@academic_year',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3574,13 +3579,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@648'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:North_East'
                                                     ),
                                                     order=11
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Ashington_Triple@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3603,13 +3608,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Ashington_Triple'
                                                     ),
                                                     order=1
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Ashington_Triple@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3632,13 +3637,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Ashington_Triple'
                                                     ),
                                                     order=2
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Bishop_Auckland@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3661,13 +3666,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Bishop_Auckland'
                                                     ),
                                                     order=1
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Bishop_Auckland@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3690,13 +3695,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Bishop_Auckland'
                                                     ),
                                                     order=2
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Bishop_Auckland@adult@4weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3719,13 +3724,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Bishop_Auckland'
                                                     ),
                                                     order=3
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Bishop_Auckland@adult@annual',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3748,13 +3753,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Bishop_Auckland'
                                                     ),
                                                     order=4
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Blyth_Triple@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3777,13 +3782,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Blyth_Triple'
                                                     ),
                                                     order=5
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Blyth_Triple@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3806,13 +3811,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Blyth_Triple'
                                                     ),
                                                     order=6
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Blyth_plus_Ashington_Triple@adult@day',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3835,13 +3840,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Blyth_plus_Ashington_Triple'
                                                     ),
                                                     order=7
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:Blyth_plus_Ashington_Triple@adult@weekly',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3864,13 +3869,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:adult'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:Blyth_plus_Ashington_Triple'
                                                     ),
                                                     order=8
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:County_Durham@student@15Week@unfunded',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3902,13 +3907,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@unfunded'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:County_Durham'
                                                     ),
                                                     order=1
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:County_Durham@student@15Week@funded_80',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3940,13 +3945,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@funded@80'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:County_Durham'
                                                     ),
                                                     order=2
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:County_Durham@student@15Week@funded_115',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -3978,13 +3983,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@funded@115'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:County_Durham'
                                                     ),
                                                     order=3
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:County_Durham@student@15Week@funded_135',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -4016,13 +4021,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@funded@135'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:County_Durham'
                                                     ),
                                                     order=4
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:County_Durham@student@15Week@NCupgrade',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -4050,13 +4055,13 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@unfunded'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:County_Durham'
                                                     ),
                                                     order=5
                                                 ),
-                                                Cell(
+                                                Cell1(
                                                     id='cdla:County_Durham@student@academic_year',
                                                     version='any',
                                                     choice=FarePriceVersionedChildStructure(
@@ -4085,7 +4090,7 @@ obj = PublicationDelivery(
                                                             ref='cdla:Time_interval@student@promo@576'
                                                         ),
                                                     ],
-                                                    tariff_zone_ref=TariffZoneRef(
+                                                    tariff_zone_ref=TariffZoneRef1(
                                                         version='any',
                                                         ref='cdla:County_Durham'
                                                     ),

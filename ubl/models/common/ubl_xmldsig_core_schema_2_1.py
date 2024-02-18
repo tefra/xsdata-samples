@@ -116,6 +116,46 @@ class DigestMethodType:
 
 
 @dataclass(frozen=True)
+class DigestValue:
+    class Meta:
+        namespace = "http://www.w3.org/2000/09/xmldsig#"
+
+    value: Optional[bytes] = field(
+        default=None,
+        metadata={
+            "required": True,
+            "format": "base64",
+        },
+    )
+
+
+@dataclass(frozen=True)
+class KeyName:
+    class Meta:
+        namespace = "http://www.w3.org/2000/09/xmldsig#"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(frozen=True)
+class MgmtData:
+    class Meta:
+        namespace = "http://www.w3.org/2000/09/xmldsig#"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(frozen=True)
 class ObjectType:
     id: Optional[str] = field(
         default=None,
@@ -586,14 +626,13 @@ class ReferenceType:
             "required": True,
         },
     )
-    digest_value: Optional[bytes] = field(
+    digest_value: Optional[DigestValue] = field(
         default=None,
         metadata={
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-            "format": "base64",
         },
     )
     id: Optional[str] = field(
@@ -675,7 +714,7 @@ class KeyInfoType:
             "choices": (
                 {
                     "name": "KeyName",
-                    "type": str,
+                    "type": KeyName,
                     "namespace": "http://www.w3.org/2000/09/xmldsig#",
                 },
                 {
@@ -705,7 +744,7 @@ class KeyInfoType:
                 },
                 {
                     "name": "MgmtData",
-                    "type": str,
+                    "type": MgmtData,
                     "namespace": "http://www.w3.org/2000/09/xmldsig#",
                 },
             ),

@@ -2,9 +2,11 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from xcbl.models.order_confirmation_response import (
     ListOfAccountAssignment,
+    OrderConfirmationItemNum,
     OrderConfirmationType,
 )
 from xcbl.models.remittance_advice import PurchaseOrderReference
+from xcbl.models.shipping_schedule_response import SellerOrderNumber
 from xcbl.models.sourcing_result import (
     BuyerParty,
     CatalogReference,
@@ -17,6 +19,7 @@ from xcbl.models.sourcing_result import (
     ListOfStructuredNote,
     SellerParty,
     ShipToParty,
+    SystemId,
 )
 from xcbl.models.time_series_response import ListOfPartyCoded
 from xcbl.models.trading_partner_organization_information import Currency
@@ -24,19 +27,94 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
-class OrderConfirmationAction:
-    order_confirmation_action_coded: str = field(
+class ContractItemId:
+    class Meta:
+        name = "ContractItemID"
+
+    value: str = field(
+        default="",
         metadata={
-            "name": "OrderConfirmationActionCoded",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    order_confirmation_action_coded_other: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class DeliveryComplete:
+    value: str = field(
+        default="",
         metadata={
-            "name": "OrderConfirmationActionCodedOther",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderConfirmationActionCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderConfirmationActionCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderConfirmationDetailShortDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderConfirmationHeaderNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderConfirmationHeaderShortDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderConfirmationIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SellerOrderConfirmationNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -50,17 +128,37 @@ class ContractAndSystemReference:
             "required": True,
         }
     )
-    contract_item_id: str = field(
+    contract_item_id: ContractItemId = field(
         metadata={
             "name": "ContractItemID",
             "type": "Element",
             "required": True,
         }
     )
-    system_id: Optional[str] = field(
+    system_id: Optional[SystemId] = field(
         default=None,
         metadata={
             "name": "SystemID",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderConfirmationAction:
+    order_confirmation_action_coded: OrderConfirmationActionCoded = field(
+        metadata={
+            "name": "OrderConfirmationActionCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    order_confirmation_action_coded_other: Optional[
+        OrderConfirmationActionCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "OrderConfirmationActionCodedOther",
             "type": "Element",
         },
     )
@@ -141,21 +239,21 @@ class OrderConfirmationDetailReferences:
 
 @dataclass(kw_only=True)
 class OrderConfirmationHeader:
-    seller_order_confirmation_number: str = field(
+    seller_order_confirmation_number: SellerOrderConfirmationNumber = field(
         metadata={
             "name": "SellerOrderConfirmationNumber",
             "type": "Element",
             "required": True,
         }
     )
-    seller_order_number: str = field(
+    seller_order_number: SellerOrderNumber = field(
         metadata={
             "name": "SellerOrderNumber",
             "type": "Element",
             "required": True,
         }
     )
-    order_confirmation_issue_date: str = field(
+    order_confirmation_issue_date: OrderConfirmationIssueDate = field(
         metadata={
             "name": "OrderConfirmationIssueDate",
             "type": "Element",
@@ -197,14 +295,18 @@ class OrderConfirmationHeader:
             "type": "Element",
         },
     )
-    order_confirmation_header_short_description: Optional[str] = field(
+    order_confirmation_header_short_description: Optional[
+        OrderConfirmationHeaderShortDescription
+    ] = field(
         default=None,
         metadata={
             "name": "OrderConfirmationHeaderShortDescription",
             "type": "Element",
         },
     )
-    order_confirmation_header_note: Optional[str] = field(
+    order_confirmation_header_note: Optional[
+        OrderConfirmationHeaderNote
+    ] = field(
         default=None,
         metadata={
             "name": "OrderConfirmationHeaderNote",
@@ -236,7 +338,7 @@ class OrderConfirmationHeader:
 
 @dataclass(kw_only=True)
 class OrderConfirmationItemDetail:
-    order_confirmation_item_num: str = field(
+    order_confirmation_item_num: OrderConfirmationItemNum = field(
         metadata={
             "name": "OrderConfirmationItemNum",
             "type": "Element",
@@ -250,7 +352,9 @@ class OrderConfirmationItemDetail:
             "type": "Element",
         },
     )
-    order_confirmation_detail_short_description: Optional[str] = field(
+    order_confirmation_detail_short_description: Optional[
+        OrderConfirmationDetailShortDescription
+    ] = field(
         default=None,
         metadata={
             "name": "OrderConfirmationDetailShortDescription",
@@ -266,7 +370,7 @@ class OrderConfirmationItemDetail:
             }
         )
     )
-    delivery_complete: Optional[str] = field(
+    delivery_complete: Optional[DeliveryComplete] = field(
         default=None,
         metadata={
             "name": "DeliveryComplete",

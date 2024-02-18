@@ -26,6 +26,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import (
     Contributors,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark import Crossmark
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.degree import Degree
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.dissertation_language import (
     DissertationLanguage,
 )
@@ -107,13 +108,11 @@ class Dissertation:
             "max_occurs": 6,
         },
     )
-    degree: List[str] = field(
+    degree: List[Degree] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 10,
-            "min_length": 2,
-            "max_length": 255,
         },
     )
     isbn: List[Isbn] = field(

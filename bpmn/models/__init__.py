@@ -73,6 +73,7 @@ from .flow_element import FlowElement
 from .flow_node import FlowNode
 from .font import Font
 from .formal_expression import FormalExpression
+from .gateway import Gateway
 from .global_business_rule_task import GlobalBusinessRuleTask
 from .global_choreography_task import GlobalChoreographyTask
 from .global_conversation import GlobalConversation
@@ -388,6 +389,7 @@ __all__ = [
     "FlowNode",
     "Font",
     "FormalExpression",
+    "Gateway",
     "GlobalBusinessRuleTask",
     "GlobalChoreographyTask",
     "GlobalConversation",

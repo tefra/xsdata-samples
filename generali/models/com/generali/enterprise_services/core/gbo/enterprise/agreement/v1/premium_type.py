@@ -1,12 +1,19 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
-from xsdata.models.datatype import XmlDate
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
 )
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_type import (
+    DateType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
     Idtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.percent_type import (
+    PercentType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
@@ -42,7 +49,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    days_of_credit: Optional[int] = field(
+    days_of_credit: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "DaysOfCredit",
@@ -90,7 +97,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    number_of_installments: Optional[int] = field(
+    number_of_installments: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "NumberOfInstallments",
@@ -123,7 +130,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    settlement_due_date: Optional[XmlDate] = field(
+    settlement_due_date: Optional[DateType] = field(
         default=None,
         metadata={
             "name": "SettlementDueDate",
@@ -179,7 +186,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    share_percentage: Optional[Decimal] = field(
+    share_percentage: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "SharePercentage",
@@ -187,7 +194,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    number_of_ptlayers: Optional[int] = field(
+    number_of_ptlayers: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "NumberOfPTLayers",

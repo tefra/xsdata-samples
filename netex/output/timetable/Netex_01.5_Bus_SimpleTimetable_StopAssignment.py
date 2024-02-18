@@ -1,11 +1,11 @@
 from decimal import Decimal
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.arrival_structure import ArrivalStructure
-from netex.models.call import Call
+from netex.models.call_1 import Call1
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -28,6 +28,7 @@ from netex.models.destination_display_ref import DestinationDisplayRef
 from netex.models.destination_displays_in_frame_rel_structure import DestinationDisplaysInFrameRelStructure
 from netex.models.direction import Direction
 from netex.models.direction_ref import DirectionRef
+from netex.models.direction_type import DirectionType
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelStructure
 from netex.models.entities_in_version_rel_structure import CompositeFrame
@@ -39,7 +40,7 @@ from netex.models.journey_pattern_run_times_rel_structure import JourneyPatternR
 from netex.models.journey_pattern_view import JourneyPatternView
 from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatternsInFrameRelStructure
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.line_ref import LineRef
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
@@ -51,6 +52,7 @@ from netex.models.notice_assignment_view import NoticeAssignmentView
 from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from netex.models.notice_ref import NoticeRef
 from netex.models.notices_in_frame_rel_structure import NoticesInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_stop_assignment import PassengerStopAssignment
 from netex.models.passenger_stop_assignment_ref import PassengerStopAssignmentRef
 from netex.models.points_in_journey_pattern_rel_structure import PointsInJourneyPatternRelStructure
@@ -60,7 +62,7 @@ from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStruc
 from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay import Quay
+from netex.models.quay_1 import Quay1
 from netex.models.quay_assignment_view import QuayAssignmentView
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_ref_structure import QuayRefStructure
@@ -68,7 +70,7 @@ from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
 from netex.models.responsibility_set_ref_structure import ResponsibilitySetRefStructure
 from netex.models.road_address import RoadAddress
-from netex.models.route import Route
+from netex.models.route_1 import Route1
 from netex.models.route_ref import RouteRef
 from netex.models.routes_in_frame_rel_structure import RoutesInFrameRelStructure
 from netex.models.scheduled_stop_point import ScheduledStopPoint
@@ -78,7 +80,7 @@ from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledS
 from netex.models.service_calendar import ServiceCalendar
 from netex.models.service_calendar_frame import ServiceCalendarFrame
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey import ServiceJourney
+from netex.models.service_journey_1 import ServiceJourney1
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.service_link import ServiceLink
@@ -92,7 +94,7 @@ from netex.models.service_patterns_in_frame_rel_structure import ServicePatterns
 from netex.models.simple_point_version_structure import SimplePointVersionStructure
 from netex.models.site_frame import SiteFrame
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place import StopPlace
+from netex.models.stop_place_1 import StopPlace1
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
@@ -116,10 +118,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -206,13 +212,15 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route(
+                                    Route1(
                                         id='mybus:RT_24o',
                                         version='any',
                                         name=MultilingualString(
                                             value='Line 24 Alpha to Charley Green'
                                         ),
-                                        direction_type=DirectionTypeEnumeration.OUTBOUND,
+                                        direction_type=DirectionType(
+
+                                        ),
                                         direction_ref=DirectionRef(
                                             version='any',
                                             ref='mybus:DR_Westbound'
@@ -222,7 +230,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_24',
                                         version='any',
                                         name=MultilingualString(
@@ -639,7 +647,7 @@ obj = PublicationDelivery(
                             ],
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_24o_01',
                                         version='any',
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
@@ -676,7 +684,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -710,7 +718,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -761,7 +769,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -791,7 +799,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_24o_02',
                                         version='any',
                                         departure_time=XmlTime(15, 20, 0, 0, 0),
@@ -828,7 +836,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -848,7 +856,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -889,7 +897,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -954,7 +962,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace(
+                                    StopPlace1(
                                         id='mybus:SP57001A',
                                         version='any',
                                         name=MultilingualString(
@@ -978,7 +986,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP57001A_4',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -1007,7 +1015,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='mybus:SP57002B',
                                         version='any',
                                         name=MultilingualString(
@@ -1037,7 +1045,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP57002B_1a',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1062,7 +1070,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP57002B_1b',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1087,7 +1095,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP57002B_2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -1116,7 +1124,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='mybus:SP57003C',
                                         version='any',
                                         name=MultilingualString(
@@ -1147,7 +1155,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP57003C_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -1173,7 +1181,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.NE,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP57003C_2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -1202,7 +1210,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='mybus:SP57004D',
                                         version='any',
                                         name=MultilingualString(
@@ -1233,7 +1241,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP57004D_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -1274,7 +1282,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_01-MF-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -1297,7 +1305,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_02-AA-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -1316,7 +1324,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_03-WE-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -1336,7 +1344,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_04-AA-NH',
                                         version='any',
                                         name=MultilingualString(

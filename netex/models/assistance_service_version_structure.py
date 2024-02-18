@@ -4,7 +4,7 @@ from .accessibility_tool_enumeration import AccessibilityToolEnumeration
 from .assistance_availability_enumeration import (
     AssistanceAvailabilityEnumeration,
 )
-from .assistance_facility_enumeration import AssistanceFacilityEnumeration
+from .assistance_facility_list import AssistanceFacilityList
 from .emergency_service_enumeration import EmergencyServiceEnumeration
 from .local_service_version_structure import LocalServiceVersionStructure
 from .safety_facility_enumeration import SafetyFacilityEnumeration
@@ -18,13 +18,12 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "AssistanceService_VersionStructure"
 
-    assistance_facility_list: List[AssistanceFacilityEnumeration] = field(
-        default_factory=list,
+    assistance_facility_list: Optional[AssistanceFacilityList] = field(
+        default=None,
         metadata={
             "name": "AssistanceFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
     assistance_availability: Optional[

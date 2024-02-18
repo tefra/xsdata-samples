@@ -1,6 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.location_address_1 import LocationAddress1
+from travelport.models.operation_time import OperationTime
 from travelport.models.phone_number_1 import PhoneNumber1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
@@ -44,7 +45,7 @@ class LocationInfo:
             "max_occurs": 5,
         },
     )
-    operation_time: list[str] = field(
+    operation_time: list[OperationTime] = field(
         default_factory=list,
         metadata={
             "name": "OperationTime",

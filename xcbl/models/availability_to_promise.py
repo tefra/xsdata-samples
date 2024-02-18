@@ -8,7 +8,10 @@ from xcbl.models.availability_to_promise_response import (
     AvailabilityToPromisePurpose,
     RespondingParty,
 )
-from xcbl.models.shipping_schedule_response import TransportRouting
+from xcbl.models.shipping_schedule_response import (
+    TotalNumberOfLineItems,
+    TransportRouting,
+)
 from xcbl.models.sourcing_result import (
     BaseItemDetail,
     DeliveryDetail,
@@ -17,16 +20,16 @@ from xcbl.models.sourcing_result import (
     ListOfReferenceCoded,
     Transport,
 )
+from xcbl.models.sourcing_result_response import GeneralNote
 from xcbl.models.trading_partner_response import Reference
 
 
 @dataclass(kw_only=True)
-class AvailabilityToPromiseSummary:
-    total_number_of_line_items: Optional[str] = field(
-        default=None,
+class AvailabilityIssueDate:
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumberOfLineItems",
-            "type": "Element",
+            "required": True,
         },
     )
 
@@ -101,6 +104,17 @@ class AvailabilityToPromiseListOfAttachment:
 
 
 @dataclass(kw_only=True)
+class AvailabilityToPromiseSummary:
+    total_number_of_line_items: Optional[TotalNumberOfLineItems] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberOfLineItems",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class AvailabilityToPromiseTransportDetail:
     transport: Transport = field(
         metadata={
@@ -120,7 +134,7 @@ class AvailabilityToPromiseHeader:
             "required": True,
         }
     )
-    availability_issue_date: str = field(
+    availability_issue_date: AvailabilityIssueDate = field(
         metadata={
             "name": "AvailabilityIssueDate",
             "type": "Element",
@@ -192,7 +206,7 @@ class AvailabilityToPromiseHeader:
             "type": "Element",
         },
     )
-    general_note: Optional[str] = field(
+    general_note: Optional[GeneralNote] = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -246,7 +260,7 @@ class AvailabilityToPromiseItemDetail:
             "type": "Element",
         },
     )
-    general_note: Optional[str] = field(
+    general_note: Optional[GeneralNote] = field(
         default=None,
         metadata={
             "name": "GeneralNote",

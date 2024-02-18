@@ -32,14 +32,18 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import TaxScheme
 from ubl.models.common.ubl_common_aggregate_components_2_1 import TaxSubtotal
 from ubl.models.common.ubl_common_aggregate_components_2_1 import TaxTotal
 from ubl.models.common.ubl_common_basic_components_2_1 import AccountTypeCode
+from ubl.models.common.ubl_common_basic_components_2_1 import ActualDeliveryDate
+from ubl.models.common.ubl_common_basic_components_2_1 import ActualDeliveryTime
 from ubl.models.common.ubl_common_basic_components_2_1 import AllowanceChargeReasonCode
 from ubl.models.common.ubl_common_basic_components_2_1 import AllowanceTotalAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import Amount
 from ubl.models.common.ubl_common_basic_components_2_1 import BaseQuantity
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
+from ubl.models.common.ubl_common_basic_components_2_1 import ChargeIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CurrencyCode
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomerAssignedAccountId
@@ -47,10 +51,12 @@ from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
+from ubl.models.common.ubl_common_basic_components_2_1 import ExpiryDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
 from ubl.models.common.ubl_common_basic_components_2_1 import InvoiceTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import InvoicedQuantity
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import LineExtensionAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import LineId
@@ -60,6 +66,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import MultiplierFactorNu
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
 from ubl.models.common.ubl_common_basic_components_2_1 import PayableAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import PaymentDueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import PaymentMeansCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Percent
 from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
@@ -71,7 +78,9 @@ from ubl.models.common.ubl_common_basic_components_2_1 import SalesOrderLineId
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import SupplierAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import TaxEvidenceIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxExclusiveAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import TaxPointDate
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxableAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
@@ -96,11 +105,15 @@ obj = Invoice(
     id=Id(
         value='A00095678'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='849FBBCE-E081-40B4-906C-94C5FF9D1AC3'
     ),
-    issue_date=XmlDate(2005, 6, 21),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 6, 21)
+    ),
     invoice_type_code=InvoiceTypeCode(
         value='SalesInvoice'
     ),
@@ -109,7 +122,9 @@ obj = Invoice(
             value='sample'
         ),
     ],
-    tax_point_date=XmlDate(2005, 6, 21),
+    tax_point_date=TaxPointDate(
+        value=XmlDate(2005, 6, 21)
+    ),
     order_reference=OrderReference(
         id=Id(
             value='AEG012345'
@@ -120,7 +135,9 @@ obj = Invoice(
         uuid=Uuid(
             value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
         ),
-        issue_date=XmlDate(2005, 6, 20)
+        issue_date=IssueDate(
+            value=XmlDate(2005, 6, 20)
+        )
     ),
     accounting_supplier_party=AccountingSupplierParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
@@ -293,8 +310,12 @@ obj = Invoice(
     ),
     delivery=[
         Delivery(
-            actual_delivery_date=XmlDate(2005, 6, 20),
-            actual_delivery_time=XmlTime(11, 30, 0, 0, 0),
+            actual_delivery_date=ActualDeliveryDate(
+                value=XmlDate(2005, 6, 20)
+            ),
+            actual_delivery_time=ActualDeliveryTime(
+                value=XmlTime(11, 30, 0, 0, 0)
+            ),
             delivery_address=DeliveryAddress(
                 street_name=StreetName(
                     value='Avon Way'
@@ -334,7 +355,9 @@ obj = Invoice(
             payment_means_code=PaymentMeansCode(
                 value='20'
             ),
-            payment_due_date=XmlDate(2005, 7, 21),
+            payment_due_date=PaymentDueDate(
+                value=XmlDate(2005, 7, 21)
+            ),
             payee_financial_account=PayeeFinancialAccount(
                 id=Id(
                     value='12345678'
@@ -447,7 +470,9 @@ obj = Invoice(
     ],
     allowance_charge=[
         AllowanceCharge(
-            charge_indicator=False,
+            charge_indicator=ChargeIndicator(
+                value=False
+            ),
             allowance_charge_reason_code=AllowanceChargeReasonCode(
                 value='17'
             ),
@@ -466,7 +491,9 @@ obj = Invoice(
                 value=Decimal('17.50'),
                 currency_id='GBP'
             ),
-            tax_evidence_indicator=True,
+            tax_evidence_indicator=TaxEvidenceIndicator(
+                value=True
+            ),
             tax_subtotal=[
                 TaxSubtotal(
                     taxable_amount=TaxableAmount(
@@ -546,7 +573,9 @@ obj = Invoice(
                         uuid=Uuid(
                             value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
                         ),
-                        issue_date=XmlDate(2005, 6, 20)
+                        issue_date=IssueDate(
+                            value=XmlDate(2005, 6, 20)
+                        )
                     )
                 ),
             ],
@@ -556,7 +585,9 @@ obj = Invoice(
                         value=Decimal('17.50'),
                         currency_id='GBP'
                     ),
-                    tax_evidence_indicator=True,
+                    tax_evidence_indicator=TaxEvidenceIndicator(
+                        value=True
+                    ),
                     tax_subtotal=[
                         TaxSubtotal(
                             taxable_amount=TaxableAmount(
@@ -612,7 +643,9 @@ obj = Invoice(
                             lot_number_id=LotNumberId(
                                 value='546378239'
                             ),
-                            expiry_date=XmlDate(2010, 1, 1)
+                            expiry_date=ExpiryDate(
+                                value=XmlDate(2010, 1, 1)
+                            )
                         )
                     ),
                 ]

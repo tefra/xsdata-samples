@@ -2,8 +2,17 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
 from xcbl.models.sourcing_create import AttributeName
-from xcbl.models.sourcing_result import CountryOfOrigin
-from xcbl.models.time_series_response import Party
+from xcbl.models.sourcing_result import (
+    AttachmentPurpose,
+    CatalogId,
+    CategoryId,
+    CountryOfOrigin,
+)
+from xcbl.models.time_series_response import (
+    Party,
+    Uomcoded,
+    UomcodedOther,
+)
 from xcbl.models.trading_partner_organization_information import Currency
 from xcbl.models.trading_partner_user_information import Identifier
 
@@ -13,6 +22,55 @@ class ActionValue(Enum):
     UPDATE = "Update"
     DELETE = "Delete"
     REPLACE = "Replace"
+
+
+@dataclass(kw_only=True)
+class Amount:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AttachmentMimetype:
+    class Meta:
+        name = "AttachmentMIMEType"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AttachmentUrl:
+    class Meta:
+        name = "AttachmentURL"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AttributeId:
+    class Meta:
+        name = "AttributeID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 class AttributeTypeScalarType(Enum):
@@ -43,6 +101,16 @@ class AttributeValue:
 
 
 @dataclass(kw_only=True)
+class BaseProductNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class Buyer:
     partner_ref: Optional[str] = field(
         default=None,
@@ -64,10 +132,95 @@ class CatalogAudienceCatalogAudienceCoded(Enum):
     PUBLIC = "Public"
 
 
+@dataclass(kw_only=True)
+class CatalogContractId:
+    class Meta:
+        name = "CatalogContractID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CatalogContractItemId:
+    class Meta:
+        name = "CatalogContractItemID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
 class CatalogContractType(Enum):
     OTHER = "Other"
     BUYER = "Buyer"
     SUPPLIER = "Supplier"
+
+
+@dataclass(kw_only=True)
+class CatalogDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CatalogIdref:
+    class Meta:
+        name = "CatalogIDRef"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CatalogLogoUrl:
+    class Meta:
+        name = "CatalogLogoURL"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CatalogPrettyName:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CatalogProviderIdref:
+    class Meta:
+        name = "CatalogProviderIDRef"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 class CatalogSchemaType(Enum):
@@ -77,20 +230,25 @@ class CatalogSchemaType(Enum):
 
 
 @dataclass(kw_only=True)
-class CatalogSystem:
-    system_address: str = field(
+class CatalogVersion:
+    value: str = field(
+        default="",
         metadata={
-            "name": "SystemAddress",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    system_type: str = field(
+
+
+@dataclass(kw_only=True)
+class CategoryIdref:
+    class Meta:
+        name = "CategoryIDRef"
+
+    value: str = field(
+        default="",
         metadata={
-            "name": "SystemType",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
 
 
@@ -113,6 +271,19 @@ class CategoryName:
 
 
 @dataclass(kw_only=True)
+class ComparableUomconversionFactor:
+    class Meta:
+        name = "ComparableUOMConversionFactor"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class DefaultLanguage:
     lang: str = field(
         default="en",
@@ -125,33 +296,34 @@ class DefaultLanguage:
 
 
 @dataclass(kw_only=True)
-class ExternalItemRef:
-    catalog_provider_idref: Optional[str] = field(
-        default=None,
+class EnumeratedValue:
+    value: str = field(
+        default="",
         metadata={
-            "name": "CatalogProviderIDRef",
-            "type": "Element",
+            "required": True,
         },
     )
-    catalog_idref: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class ExtensionToSchemasUrn:
+    class Meta:
+        name = "ExtensionToSchemasURN"
+
+    value: str = field(
+        default="",
         metadata={
-            "name": "CatalogIDRef",
-            "type": "Element",
+            "required": True,
         },
     )
-    product_idref: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class ExternalCategory:
+    value: str = field(
+        default="",
         metadata={
-            "name": "ProductIDRef",
-            "type": "Element",
-        },
-    )
-    item_guid: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ItemGUID",
-            "type": "Element",
+            "required": True,
         },
     )
 
@@ -182,6 +354,29 @@ class IsRequired:
 
 
 @dataclass(kw_only=True)
+class ItemGuid:
+    class Meta:
+        name = "ItemGUID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LeadTime:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class LongDescription:
     lang: str = field(
         default="en",
@@ -198,6 +393,26 @@ class LongDescription:
             "type": "Attribute",
         },
     )
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LotSize:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ManuPartNumber:
     value: str = field(
         default="",
         metadata={
@@ -224,31 +439,41 @@ class Manufacturer:
 
 
 @dataclass(kw_only=True)
-class ParentCategoryRefList:
-    category_idref: List[str] = field(
-        default_factory=list,
+class MinOrder:
+    value: str = field(
+        default="",
         metadata={
-            "name": "CategoryIDRef",
-            "type": "Element",
-            "min_occurs": 1,
+            "required": True,
         },
     )
 
 
 @dataclass(kw_only=True)
-class PartnerRelationship:
-    partner_relationship_coded: str = field(
+class MinimumQuantity:
+    value: str = field(
+        default="",
         metadata={
-            "name": "PartnerRelationshipCoded",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    partner_relationship_coded_other: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class PartnerRelationshipCoded:
+    value: str = field(
+        default="",
         metadata={
-            "name": "PartnerRelationshipCodedOther",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PartnerRelationshipCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -259,6 +484,78 @@ class PartnerRelationship1(Enum):
     BUYER = "Buyer"
     INFO_PROVIDER = "InfoProvider"
     MANUFACTURER = "Manufacturer"
+
+
+@dataclass(kw_only=True)
+class PriceBasisQuant:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PriceCatalogId:
+    class Meta:
+        name = "PriceCatalogID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PriceCatalogIdref:
+    class Meta:
+        name = "PriceCatalogIDRef"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PriceType:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ProductIdextension:
+    class Meta:
+        name = "ProductIDExtension"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ProductIdref:
+    class Meta:
+        name = "ProductIDRef"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 class ProductIdstandardAgency(Enum):
@@ -306,13 +603,54 @@ class RelatedProductTargetType(Enum):
 
 
 @dataclass(kw_only=True)
-class SchemaCategoryRefList:
-    category_idref: List[str] = field(
-        default_factory=list,
+class SchemaName:
+    value: str = field(
+        default="",
         metadata={
-            "name": "CategoryIDRef",
-            "type": "Element",
-            "min_occurs": 1,
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SchemaSource:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SchemaStandard:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SchemaUrn:
+    class Meta:
+        name = "SchemaURN"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SchemaVersion:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -336,22 +674,54 @@ class ShortDescription:
 
 
 @dataclass(kw_only=True)
-class Uom:
+class SupplierAccountId:
     class Meta:
-        name = "UOM"
+        name = "SupplierAccountID"
 
-    uomcoded: str = field(
+    value: str = field(
+        default="",
         metadata={
-            "name": "UOMCoded",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    uomcoded_other: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class SystemAddress:
+    value: str = field(
+        default="",
         metadata={
-            "name": "UOMCodedOther",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SystemType:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ValidFrom:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ValidUntil:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -359,6 +729,29 @@ class Uom:
 @dataclass(kw_only=True)
 class ValidateAttributes:
     pass
+
+
+@dataclass(kw_only=True)
+class VendorIdref:
+    class Meta:
+        name = "VendorIDRef"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class VendorPartNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 @dataclass(kw_only=True)
@@ -390,23 +783,12 @@ class AttributeType:
             "type": "Attribute",
         },
     )
-    enumerated_value: List[str] = field(
+    enumerated_value: List[EnumeratedValue] = field(
         default_factory=list,
         metadata={
             "name": "EnumeratedValue",
             "type": "Element",
         },
-    )
-
-
-@dataclass(kw_only=True)
-class AttributeUnit:
-    uom: Uom = field(
-        metadata={
-            "name": "UOM",
-            "type": "Element",
-            "required": True,
-        }
     )
 
 
@@ -443,14 +825,14 @@ class CatalogContract:
             "required": True,
         },
     )
-    catalog_contract_id: str = field(
+    catalog_contract_id: CatalogContractId = field(
         metadata={
             "name": "CatalogContractID",
             "type": "Element",
             "required": True,
         }
     )
-    catalog_contract_item_id: str = field(
+    catalog_contract_item_id: CatalogContractItemId = field(
         metadata={
             "name": "CatalogContractItemID",
             "type": "Element",
@@ -460,38 +842,17 @@ class CatalogContract:
 
 
 @dataclass(kw_only=True)
-class CatalogProvider:
-    provider_id: Optional[str] = field(
-        default=None,
+class CatalogSystem:
+    system_address: SystemAddress = field(
         metadata={
-            "name": "ProviderID",
-            "type": "Attribute",
-        },
-    )
-    party: Optional[Party] = field(
-        default=None,
-        metadata={
-            "name": "Party",
+            "name": "SystemAddress",
             "type": "Element",
-        },
+            "required": True,
+        }
     )
-    catalog_system: Optional[CatalogSystem] = field(
-        default=None,
+    system_type: SystemType = field(
         metadata={
-            "name": "CatalogSystem",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ComparableUom:
-    class Meta:
-        name = "ComparableUOM"
-
-    uom: Uom = field(
-        metadata={
-            "name": "UOM",
+            "name": "SystemType",
             "type": "Element",
             "required": True,
         }
@@ -510,50 +871,86 @@ class DefaultCurrency:
 
 
 @dataclass(kw_only=True)
-class DefaultUom:
-    class Meta:
-        name = "DefaultUOM"
-
-    uom: Uom = field(
+class ExternalItemRef:
+    catalog_provider_idref: Optional[CatalogProviderIdref] = field(
+        default=None,
         metadata={
-            "name": "UOM",
+            "name": "CatalogProviderIDRef",
             "type": "Element",
-            "required": True,
-        }
+        },
+    )
+    catalog_idref: Optional[CatalogIdref] = field(
+        default=None,
+        metadata={
+            "name": "CatalogIDRef",
+            "type": "Element",
+        },
+    )
+    product_idref: Optional[ProductIdref] = field(
+        default=None,
+        metadata={
+            "name": "ProductIDRef",
+            "type": "Element",
+        },
+    )
+    item_guid: Optional[ItemGuid] = field(
+        default=None,
+        metadata={
+            "name": "ItemGUID",
+            "type": "Element",
+        },
     )
 
 
 @dataclass(kw_only=True)
-class LeadTimeUom:
-    class Meta:
-        name = "LeadTimeUOM"
-
-    uom: Uom = field(
+class ParentCategoryRefList:
+    category_idref: List[CategoryIdref] = field(
+        default_factory=list,
         metadata={
-            "name": "UOM",
+            "name": "CategoryIDRef",
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PartnerRelationship:
+    partner_relationship_coded: PartnerRelationshipCoded = field(
+        metadata={
+            "name": "PartnerRelationshipCoded",
             "type": "Element",
             "required": True,
         }
+    )
+    partner_relationship_coded_other: Optional[
+        PartnerRelationshipCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "PartnerRelationshipCodedOther",
+            "type": "Element",
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ProductAttachment:
-    attachment_url: str = field(
+    attachment_url: AttachmentUrl = field(
         metadata={
             "name": "AttachmentURL",
             "type": "Element",
             "required": True,
         }
     )
-    attachment_purpose: Optional[str] = field(
+    attachment_purpose: Optional[AttachmentPurpose] = field(
         default=None,
         metadata={
             "name": "AttachmentPurpose",
             "type": "Element",
         },
     )
-    attachment_mimetype: Optional[str] = field(
+    attachment_mimetype: Optional[AttachmentMimetype] = field(
         default=None,
         metadata={
             "name": "AttachmentMIMEType",
@@ -619,80 +1016,6 @@ class ProductIdstandard:
 
 
 @dataclass(kw_only=True)
-class ProductPrice:
-    amount: str = field(
-        metadata={
-            "name": "Amount",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    price_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PriceType",
-            "type": "Element",
-        },
-    )
-    currency: Optional[Currency] = field(
-        default=None,
-        metadata={
-            "name": "Currency",
-            "type": "Element",
-        },
-    )
-    uom: Optional[Uom] = field(
-        default=None,
-        metadata={
-            "name": "UOM",
-            "type": "Element",
-        },
-    )
-    minimum_quantity: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "MinimumQuantity",
-            "type": "Element",
-        },
-    )
-    short_description: Optional[ShortDescription] = field(
-        default=None,
-        metadata={
-            "name": "ShortDescription",
-            "type": "Element",
-        },
-    )
-    valid_from: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ValidFrom",
-            "type": "Element",
-        },
-    )
-    valid_until: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ValidUntil",
-            "type": "Element",
-        },
-    )
-    buyer: Optional[Buyer] = field(
-        default=None,
-        metadata={
-            "name": "Buyer",
-            "type": "Element",
-        },
-    )
-    price_basis_quant: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PriceBasisQuant",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class RelatedProduct:
     target_type: RelatedProductTargetType = field(
         default=RelatedProductTargetType.COMPONENT,
@@ -711,66 +1034,113 @@ class RelatedProduct:
 
 
 @dataclass(kw_only=True)
-class CategoryAttribute:
-    attribute_id: str = field(
-        metadata={
-            "name": "AttributeID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    attribute_name: List[AttributeName] = field(
+class SchemaCategoryRefList:
+    category_idref: List[CategoryIdref] = field(
         default_factory=list,
         metadata={
-            "name": "AttributeName",
+            "name": "CategoryIDRef",
             "type": "Element",
+            "min_occurs": 1,
         },
     )
-    attribute_type: AttributeType = field(
+
+
+@dataclass(kw_only=True)
+class Uom:
+    class Meta:
+        name = "UOM"
+
+    uomcoded: Uomcoded = field(
         metadata={
-            "name": "AttributeType",
+            "name": "UOMCoded",
             "type": "Element",
             "required": True,
         }
     )
-    default_uom: Optional[DefaultUom] = field(
+    uomcoded_other: Optional[UomcodedOther] = field(
         default=None,
         metadata={
-            "name": "DefaultUOM",
-            "type": "Element",
-        },
-    )
-    is_required: Optional[IsRequired] = field(
-        default=None,
-        metadata={
-            "name": "IsRequired",
+            "name": "UOMCodedOther",
             "type": "Element",
         },
     )
 
 
 @dataclass(kw_only=True)
-class ObjectAttribute:
-    attribute_id: str = field(
+class AttributeUnit:
+    uom: Uom = field(
         metadata={
-            "name": "AttributeID",
+            "name": "UOM",
             "type": "Element",
             "required": True,
         }
     )
-    attribute_unit: Optional[AttributeUnit] = field(
+
+
+@dataclass(kw_only=True)
+class CatalogProvider:
+    provider_id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "AttributeUnit",
+            "name": "ProviderID",
+            "type": "Attribute",
+        },
+    )
+    party: Optional[Party] = field(
+        default=None,
+        metadata={
+            "name": "Party",
             "type": "Element",
         },
     )
-    attribute_value: List[AttributeValue] = field(
-        default_factory=list,
+    catalog_system: Optional[CatalogSystem] = field(
+        default=None,
         metadata={
-            "name": "AttributeValue",
+            "name": "CatalogSystem",
             "type": "Element",
         },
+    )
+
+
+@dataclass(kw_only=True)
+class ComparableUom:
+    class Meta:
+        name = "ComparableUOM"
+
+    uom: Uom = field(
+        metadata={
+            "name": "UOM",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class DefaultUom:
+    class Meta:
+        name = "DefaultUOM"
+
+    uom: Uom = field(
+        metadata={
+            "name": "UOM",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class LeadTimeUom:
+    class Meta:
+        name = "LeadTimeUOM"
+
+    uom: Uom = field(
+        metadata={
+            "name": "UOM",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 
@@ -823,21 +1193,21 @@ class PriceCatalog:
             "type": "Element",
         },
     )
-    price_catalog_id: str = field(
+    price_catalog_id: PriceCatalogId = field(
         metadata={
             "name": "PriceCatalogID",
             "type": "Element",
             "required": True,
         }
     )
-    valid_from: Optional[str] = field(
+    valid_from: Optional[ValidFrom] = field(
         default=None,
         metadata={
             "name": "ValidFrom",
             "type": "Element",
         },
     )
-    valid_until: Optional[str] = field(
+    valid_until: Optional[ValidUntil] = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -847,85 +1217,74 @@ class PriceCatalog:
 
 
 @dataclass(kw_only=True)
-class Pricing:
-    product_idref: str = field(
+class ProductPrice:
+    amount: Amount = field(
         metadata={
-            "name": "ProductIDRef",
+            "name": "Amount",
             "type": "Element",
             "required": True,
         }
     )
-    price_catalog_idref: str = field(
-        metadata={
-            "name": "PriceCatalogIDRef",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    product_price: List[ProductPrice] = field(
-        default_factory=list,
-        metadata={
-            "name": "ProductPrice",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ProductVendorData:
-    partner_ref: str = field(
-        metadata={
-            "name": "PartnerRef",
-            "type": "Attribute",
-            "required": True,
-        }
-    )
-    vendor_idref: Optional[str] = field(
+    price_type: Optional[PriceType] = field(
         default=None,
         metadata={
-            "name": "VendorIDRef",
+            "name": "PriceType",
             "type": "Element",
         },
     )
-    vendor_part_number: Optional[str] = field(
+    currency: Optional[Currency] = field(
         default=None,
         metadata={
-            "name": "VendorPartNumber",
+            "name": "Currency",
             "type": "Element",
         },
     )
-    lead_time: Optional[str] = field(
+    uom: Optional[Uom] = field(
         default=None,
         metadata={
-            "name": "LeadTime",
+            "name": "UOM",
             "type": "Element",
         },
     )
-    lead_time_uom: Optional[LeadTimeUom] = field(
+    minimum_quantity: Optional[MinimumQuantity] = field(
         default=None,
         metadata={
-            "name": "LeadTimeUOM",
+            "name": "MinimumQuantity",
             "type": "Element",
         },
     )
-    catalog_contract: Optional[CatalogContract] = field(
+    short_description: Optional[ShortDescription] = field(
         default=None,
         metadata={
-            "name": "CatalogContract",
+            "name": "ShortDescription",
             "type": "Element",
         },
     )
-    min_order: Optional[str] = field(
+    valid_from: Optional[ValidFrom] = field(
         default=None,
         metadata={
-            "name": "MinOrder",
+            "name": "ValidFrom",
             "type": "Element",
         },
     )
-    product_price: List[ProductPrice] = field(
-        default_factory=list,
+    valid_until: Optional[ValidUntil] = field(
+        default=None,
         metadata={
-            "name": "ProductPrice",
+            "name": "ValidUntil",
+            "type": "Element",
+        },
+    )
+    buyer: Optional[Buyer] = field(
+        default=None,
+        metadata={
+            "name": "Buyer",
+            "type": "Element",
+        },
+    )
+    price_basis_quant: Optional[PriceBasisQuant] = field(
+        default=None,
+        metadata={
+            "name": "PriceBasisQuant",
             "type": "Element",
         },
     )
@@ -940,7 +1299,7 @@ class SupplierAccount:
             "type": "Element",
         },
     )
-    supplier_account_id: Optional[str] = field(
+    supplier_account_id: Optional[SupplierAccountId] = field(
         default=None,
         metadata={
             "name": "SupplierAccountID",
@@ -961,10 +1320,49 @@ class SupplierAccount:
             "type": "Element",
         },
     )
-    price_catalog_idref: List[str] = field(
+    price_catalog_idref: List[PriceCatalogIdref] = field(
         default_factory=list,
         metadata={
             "name": "PriceCatalogIDRef",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CategoryAttribute:
+    attribute_id: AttributeId = field(
+        metadata={
+            "name": "AttributeID",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    attribute_name: List[AttributeName] = field(
+        default_factory=list,
+        metadata={
+            "name": "AttributeName",
+            "type": "Element",
+        },
+    )
+    attribute_type: AttributeType = field(
+        metadata={
+            "name": "AttributeType",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    default_uom: Optional[DefaultUom] = field(
+        default=None,
+        metadata={
+            "name": "DefaultUOM",
+            "type": "Element",
+        },
+    )
+    is_required: Optional[IsRequired] = field(
+        default=None,
+        metadata={
+            "name": "IsRequired",
             "type": "Element",
         },
     )
@@ -983,6 +1381,56 @@ class ListOfPartners:
 
 
 @dataclass(kw_only=True)
+class ObjectAttribute:
+    attribute_id: AttributeId = field(
+        metadata={
+            "name": "AttributeID",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    attribute_unit: Optional[AttributeUnit] = field(
+        default=None,
+        metadata={
+            "name": "AttributeUnit",
+            "type": "Element",
+        },
+    )
+    attribute_value: List[AttributeValue] = field(
+        default_factory=list,
+        metadata={
+            "name": "AttributeValue",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Pricing:
+    product_idref: ProductIdref = field(
+        metadata={
+            "name": "ProductIDRef",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    price_catalog_idref: PriceCatalogIdref = field(
+        metadata={
+            "name": "PriceCatalogIDRef",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    product_price: List[ProductPrice] = field(
+        default_factory=list,
+        metadata={
+            "name": "ProductPrice",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class PricingInformation:
     price_catalog: List[PriceCatalog] = field(
         default_factory=list,
@@ -990,6 +1438,222 @@ class PricingInformation:
             "name": "PriceCatalog",
             "type": "Element",
             "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ProductVendorData:
+    partner_ref: str = field(
+        metadata={
+            "name": "PartnerRef",
+            "type": "Attribute",
+            "required": True,
+        }
+    )
+    vendor_idref: Optional[VendorIdref] = field(
+        default=None,
+        metadata={
+            "name": "VendorIDRef",
+            "type": "Element",
+        },
+    )
+    vendor_part_number: Optional[VendorPartNumber] = field(
+        default=None,
+        metadata={
+            "name": "VendorPartNumber",
+            "type": "Element",
+        },
+    )
+    lead_time: Optional[LeadTime] = field(
+        default=None,
+        metadata={
+            "name": "LeadTime",
+            "type": "Element",
+        },
+    )
+    lead_time_uom: Optional[LeadTimeUom] = field(
+        default=None,
+        metadata={
+            "name": "LeadTimeUOM",
+            "type": "Element",
+        },
+    )
+    catalog_contract: Optional[CatalogContract] = field(
+        default=None,
+        metadata={
+            "name": "CatalogContract",
+            "type": "Element",
+        },
+    )
+    min_order: Optional[MinOrder] = field(
+        default=None,
+        metadata={
+            "name": "MinOrder",
+            "type": "Element",
+        },
+    )
+    product_price: List[ProductPrice] = field(
+        default_factory=list,
+        metadata={
+            "name": "ProductPrice",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SupplierAccountInformation:
+    supplier_account: List[SupplierAccount] = field(
+        default_factory=list,
+        metadata={
+            "name": "SupplierAccount",
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CatalogHeader:
+    catalog_id: CatalogId = field(
+        metadata={
+            "name": "CatalogID",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    catalog_date: Optional[CatalogDate] = field(
+        default=None,
+        metadata={
+            "name": "CatalogDate",
+            "type": "Element",
+        },
+    )
+    catalog_provider: CatalogProvider = field(
+        metadata={
+            "name": "CatalogProvider",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    catalog_pretty_name: Optional[CatalogPrettyName] = field(
+        default=None,
+        metadata={
+            "name": "CatalogPrettyName",
+            "type": "Element",
+        },
+    )
+    catalog_logo_url: Optional[CatalogLogoUrl] = field(
+        default=None,
+        metadata={
+            "name": "CatalogLogoURL",
+            "type": "Element",
+        },
+    )
+    list_of_partners: Optional[ListOfPartners] = field(
+        default=None,
+        metadata={
+            "name": "ListOfPartners",
+            "type": "Element",
+        },
+    )
+    catalog_audience: Optional[CatalogAudience] = field(
+        default=None,
+        metadata={
+            "name": "CatalogAudience",
+            "type": "Element",
+        },
+    )
+    pricing_information: Optional[PricingInformation] = field(
+        default=None,
+        metadata={
+            "name": "PricingInformation",
+            "type": "Element",
+        },
+    )
+    supplier_account_information: Optional[SupplierAccountInformation] = field(
+        default=None,
+        metadata={
+            "name": "SupplierAccountInformation",
+            "type": "Element",
+        },
+    )
+    valid_from: Optional[ValidFrom] = field(
+        default=None,
+        metadata={
+            "name": "ValidFrom",
+            "type": "Element",
+        },
+    )
+    valid_until: Optional[ValidUntil] = field(
+        default=None,
+        metadata={
+            "name": "ValidUntil",
+            "type": "Element",
+        },
+    )
+    catalog_version: Optional[CatalogVersion] = field(
+        default=None,
+        metadata={
+            "name": "CatalogVersion",
+            "type": "Element",
+        },
+    )
+    default_language: Optional[DefaultLanguage] = field(
+        default=None,
+        metadata={
+            "name": "DefaultLanguage",
+            "type": "Element",
+        },
+    )
+    default_currency: Optional[DefaultCurrency] = field(
+        default=None,
+        metadata={
+            "name": "DefaultCurrency",
+            "type": "Element",
+        },
+    )
+    is_replacement: Optional[IsReplacement] = field(
+        default=None,
+        metadata={
+            "name": "IsReplacement",
+            "type": "Element",
+        },
+    )
+    is_price_update: Optional[IsPriceUpdate] = field(
+        default=None,
+        metadata={
+            "name": "IsPriceUpdate",
+            "type": "Element",
+        },
+    )
+    is_multi_vendor: Optional[IsMultiVendor] = field(
+        default=None,
+        metadata={
+            "name": "IsMultiVendor",
+            "type": "Element",
+        },
+    )
+    short_description: List[ShortDescription] = field(
+        default_factory=list,
+        metadata={
+            "name": "ShortDescription",
+            "type": "Element",
+        },
+    )
+    long_description: List[LongDescription] = field(
+        default_factory=list,
+        metadata={
+            "name": "LongDescription",
+            "type": "Element",
+        },
+    )
+    object_attribute: List[ObjectAttribute] = field(
+        default_factory=list,
+        metadata={
+            "name": "ObjectAttribute",
+            "type": "Element",
         },
     )
 
@@ -1026,7 +1690,7 @@ class Product:
             "required": True,
         }
     )
-    base_product_number: Optional[str] = field(
+    base_product_number: Optional[BaseProductNumber] = field(
         default=None,
         metadata={
             "name": "BaseProductNumber",
@@ -1040,7 +1704,7 @@ class Product:
             "type": "Element",
         },
     )
-    product_idextension: Optional[str] = field(
+    product_idextension: Optional[ProductIdextension] = field(
         default=None,
         metadata={
             "name": "ProductIDExtension",
@@ -1082,7 +1746,9 @@ class Product:
             "type": "Element",
         },
     )
-    comparable_uomconversion_factor: Optional[str] = field(
+    comparable_uomconversion_factor: Optional[
+        ComparableUomconversionFactor
+    ] = field(
         default=None,
         metadata={
             "name": "ComparableUOMConversionFactor",
@@ -1096,14 +1762,14 @@ class Product:
             "type": "Element",
         },
     )
-    manu_part_number: Optional[str] = field(
+    manu_part_number: Optional[ManuPartNumber] = field(
         default=None,
         metadata={
             "name": "ManuPartNumber",
             "type": "Element",
         },
     )
-    lead_time: Optional[str] = field(
+    lead_time: Optional[LeadTime] = field(
         default=None,
         metadata={
             "name": "LeadTime",
@@ -1117,14 +1783,14 @@ class Product:
             "type": "Element",
         },
     )
-    valid_from: Optional[str] = field(
+    valid_from: Optional[ValidFrom] = field(
         default=None,
         metadata={
             "name": "ValidFrom",
             "type": "Element",
         },
     )
-    valid_until: Optional[str] = field(
+    valid_until: Optional[ValidUntil] = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -1138,21 +1804,21 @@ class Product:
             "type": "Element",
         },
     )
-    min_order: Optional[str] = field(
+    min_order: Optional[MinOrder] = field(
         default=None,
         metadata={
             "name": "MinOrder",
             "type": "Element",
         },
     )
-    lot_size: Optional[str] = field(
+    lot_size: Optional[LotSize] = field(
         default=None,
         metadata={
             "name": "LotSize",
             "type": "Element",
         },
     )
-    external_category: List[str] = field(
+    external_category: List[ExternalCategory] = field(
         default_factory=list,
         metadata={
             "name": "ExternalCategory",
@@ -1234,7 +1900,7 @@ class SchemaCategory:
             "tokens": True,
         },
     )
-    category_id: str = field(
+    category_id: CategoryId = field(
         metadata={
             "name": "CategoryID",
             "type": "Element",
@@ -1279,18 +1945,6 @@ class SchemaCategory:
 
 
 @dataclass(kw_only=True)
-class SupplierAccountInformation:
-    supplier_account: List[SupplierAccount] = field(
-        default_factory=list,
-        metadata={
-            "name": "SupplierAccount",
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class CatalogData:
     product: List[Product] = field(
         default_factory=list,
@@ -1309,150 +1963,6 @@ class CatalogData:
 
 
 @dataclass(kw_only=True)
-class CatalogHeader:
-    catalog_id: str = field(
-        metadata={
-            "name": "CatalogID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    catalog_date: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CatalogDate",
-            "type": "Element",
-        },
-    )
-    catalog_provider: CatalogProvider = field(
-        metadata={
-            "name": "CatalogProvider",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    catalog_pretty_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CatalogPrettyName",
-            "type": "Element",
-        },
-    )
-    catalog_logo_url: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CatalogLogoURL",
-            "type": "Element",
-        },
-    )
-    list_of_partners: Optional[ListOfPartners] = field(
-        default=None,
-        metadata={
-            "name": "ListOfPartners",
-            "type": "Element",
-        },
-    )
-    catalog_audience: Optional[CatalogAudience] = field(
-        default=None,
-        metadata={
-            "name": "CatalogAudience",
-            "type": "Element",
-        },
-    )
-    pricing_information: Optional[PricingInformation] = field(
-        default=None,
-        metadata={
-            "name": "PricingInformation",
-            "type": "Element",
-        },
-    )
-    supplier_account_information: Optional[SupplierAccountInformation] = field(
-        default=None,
-        metadata={
-            "name": "SupplierAccountInformation",
-            "type": "Element",
-        },
-    )
-    valid_from: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ValidFrom",
-            "type": "Element",
-        },
-    )
-    valid_until: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ValidUntil",
-            "type": "Element",
-        },
-    )
-    catalog_version: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CatalogVersion",
-            "type": "Element",
-        },
-    )
-    default_language: Optional[DefaultLanguage] = field(
-        default=None,
-        metadata={
-            "name": "DefaultLanguage",
-            "type": "Element",
-        },
-    )
-    default_currency: Optional[DefaultCurrency] = field(
-        default=None,
-        metadata={
-            "name": "DefaultCurrency",
-            "type": "Element",
-        },
-    )
-    is_replacement: Optional[IsReplacement] = field(
-        default=None,
-        metadata={
-            "name": "IsReplacement",
-            "type": "Element",
-        },
-    )
-    is_price_update: Optional[IsPriceUpdate] = field(
-        default=None,
-        metadata={
-            "name": "IsPriceUpdate",
-            "type": "Element",
-        },
-    )
-    is_multi_vendor: Optional[IsMultiVendor] = field(
-        default=None,
-        metadata={
-            "name": "IsMultiVendor",
-            "type": "Element",
-        },
-    )
-    short_description: List[ShortDescription] = field(
-        default_factory=list,
-        metadata={
-            "name": "ShortDescription",
-            "type": "Element",
-        },
-    )
-    long_description: List[LongDescription] = field(
-        default_factory=list,
-        metadata={
-            "name": "LongDescription",
-            "type": "Element",
-        },
-    )
-    object_attribute: List[ObjectAttribute] = field(
-        default_factory=list,
-        metadata={
-            "name": "ObjectAttribute",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class CatalogSchema:
     type_value: CatalogSchemaType = field(
         default=CatalogSchemaType.SUPPLIER,
@@ -1462,21 +1972,21 @@ class CatalogSchema:
             "required": True,
         },
     )
-    schema_name: str = field(
+    schema_name: SchemaName = field(
         metadata={
             "name": "SchemaName",
             "type": "Element",
             "required": True,
         }
     )
-    schema_version: Optional[str] = field(
+    schema_version: Optional[SchemaVersion] = field(
         default=None,
         metadata={
             "name": "SchemaVersion",
             "type": "Element",
         },
     )
-    schema_standard: Optional[str] = field(
+    schema_standard: Optional[SchemaStandard] = field(
         default=None,
         metadata={
             "name": "SchemaStandard",
@@ -1504,21 +2014,21 @@ class CatalogSchema:
             "type": "Element",
         },
     )
-    schema_source: Optional[str] = field(
+    schema_source: Optional[SchemaSource] = field(
         default=None,
         metadata={
             "name": "SchemaSource",
             "type": "Element",
         },
     )
-    schema_urn: Optional[str] = field(
+    schema_urn: Optional[SchemaUrn] = field(
         default=None,
         metadata={
             "name": "SchemaURN",
             "type": "Element",
         },
     )
-    extension_to_schemas_urn: Optional[str] = field(
+    extension_to_schemas_urn: Optional[ExtensionToSchemasUrn] = field(
         default=None,
         metadata={
             "name": "ExtensionToSchemasURN",

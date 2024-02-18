@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
 )
@@ -63,7 +65,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    issue_date: Optional[XmlDateTime] = field(
+    issue_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "IssueDate",

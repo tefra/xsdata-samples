@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from .message_ref_structure import MessageRefStructure
+from .participant_ref_structure import ParticipantRefStructure
 from .response_structure import ResponseStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
@@ -7,7 +9,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ConsumerResponseEndpointStructure(ResponseStructure):
-    consumer_ref: Optional[str] = field(
+    consumer_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "ConsumerRef",
@@ -15,7 +17,7 @@ class ConsumerResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_message_ref: Optional[str] = field(
+    request_message_ref: Optional[MessageRefStructure] = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -31,7 +33,7 @@ class ConsumerResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[str] = field(
+    delegator_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "DelegatorRef",

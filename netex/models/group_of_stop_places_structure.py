@@ -1,25 +1,25 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .air_submode_enumeration import AirSubmodeEnumeration
+from .air_submode import AirSubmode
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
 )
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
-from .bus_submode_enumeration import BusSubmodeEnumeration
-from .coach_submode_enumeration import CoachSubmodeEnumeration
-from .funicular_submode_enumeration import FunicularSubmodeEnumeration
+from .bus_submode import BusSubmode
+from .coach_submode import CoachSubmode
+from .funicular_submode import FunicularSubmode
 from .group_of_entities_version_structure import (
     GroupOfEntitiesVersionStructure,
 )
-from .metro_submode_enumeration import MetroSubmodeEnumeration
+from .metro_submode import MetroSubmode
 from .polygon import Polygon
-from .rail_submode_enumeration import RailSubmodeEnumeration
+from .rail_submode import RailSubmode
 from .simple_point_version_structure import SimplePointVersionStructure
-from .snow_and_ice_submode_enumeration import SnowAndIceSubmodeEnumeration
+from .snow_and_ice_submode import SnowAndIceSubmode
 from .stop_place_refs_rel_structure import StopPlaceRefsRelStructure
-from .telecabin_submode_enumeration import TelecabinSubmodeEnumeration
-from .tram_submode_enumeration import TramSubmodeEnumeration
-from .water_submode_enumeration import WaterSubmodeEnumeration
+from .telecabin_submode import TelecabinSubmode
+from .tram_submode import TramSubmode
+from .water_submode import WaterSubmode
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -75,16 +75,16 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
     )
     choice: Optional[
         Union[
-            AirSubmodeEnumeration,
-            BusSubmodeEnumeration,
-            CoachSubmodeEnumeration,
-            FunicularSubmodeEnumeration,
-            MetroSubmodeEnumeration,
-            TramSubmodeEnumeration,
-            TelecabinSubmodeEnumeration,
-            RailSubmodeEnumeration,
-            WaterSubmodeEnumeration,
-            SnowAndIceSubmodeEnumeration,
+            AirSubmode,
+            BusSubmode,
+            CoachSubmode,
+            FunicularSubmode,
+            MetroSubmode,
+            TramSubmode,
+            TelecabinSubmode,
+            RailSubmode,
+            WaterSubmode,
+            SnowAndIceSubmode,
         ]
     ] = field(
         default=None,
@@ -93,52 +93,52 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "choices": (
                 {
                     "name": "AirSubmode",
-                    "type": AirSubmodeEnumeration,
+                    "type": AirSubmode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "BusSubmode",
-                    "type": BusSubmodeEnumeration,
+                    "type": BusSubmode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "CoachSubmode",
-                    "type": CoachSubmodeEnumeration,
+                    "type": CoachSubmode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "FunicularSubmode",
-                    "type": FunicularSubmodeEnumeration,
+                    "type": FunicularSubmode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "MetroSubmode",
-                    "type": MetroSubmodeEnumeration,
+                    "type": MetroSubmode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "TramSubmode",
-                    "type": TramSubmodeEnumeration,
+                    "type": TramSubmode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "TelecabinSubmode",
-                    "type": TelecabinSubmodeEnumeration,
+                    "type": TelecabinSubmode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "RailSubmode",
-                    "type": RailSubmodeEnumeration,
+                    "type": RailSubmode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "WaterSubmode",
-                    "type": WaterSubmodeEnumeration,
+                    "type": WaterSubmode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "SnowAndIceSubmode",
-                    "type": SnowAndIceSubmodeEnumeration,
+                    "type": SnowAndIceSubmode,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

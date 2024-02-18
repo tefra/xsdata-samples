@@ -27,7 +27,7 @@ from netex.models.display_assignments_rel_structure import DisplayAssignmentsRel
 from netex.models.entities_in_version_rel_structure import CompositeFrame
 from netex.models.entities_in_version_rel_structure import FramesRelStructure
 from netex.models.journey_patterns_in_frame_rel_structure import JourneyPatternsInFrameRelStructure
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
 from netex.models.logical_display import LogicalDisplay
@@ -36,6 +36,7 @@ from netex.models.logical_displays_in_frame_rel_structure import LogicalDisplays
 from netex.models.modification_enumeration import ModificationEnumeration
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_information_equipment import PassengerInformationEquipment
 from netex.models.passenger_information_equipments_in_frame_rel_structure import PassengerInformationEquipmentsInFrameRelStructure
 from netex.models.passenger_stop_assignment import PassengerStopAssignment
@@ -44,7 +45,7 @@ from netex.models.pos import Pos
 from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay import Quay
+from netex.models.quay_1 import Quay1
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -62,7 +63,7 @@ from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.simple_point_version_structure import SimplePointVersionStructure
 from netex.models.site_frame import SiteFrame
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place import StopPlace
+from netex.models.stop_place_1 import StopPlace1
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_point_in_journey_pattern import StopPointInJourneyPattern
@@ -75,6 +76,7 @@ from netex.models.type_of_passenger_information_equipment_ref import TypeOfPasse
 from netex.models.types_of_value_in_frame_rel_structure import TypesOfValueInFrameRelStructure
 from netex.models.types_of_value_structure import TypesOfValueStructure
 from netex.models.value_set import ValueSet
+from netex.models.vehicle_mode import VehicleMode
 from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
 from xsdata.models.datatype import XmlDateTime
@@ -83,10 +85,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -186,7 +192,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_24',
                                         version='any',
                                         name=MultilingualString(
@@ -198,7 +204,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                         public_code='24'
                                     ),
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_46',
                                         version='any',
                                         name=MultilingualString(
@@ -210,7 +216,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='46'
                                     ),
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_68',
                                         version='any',
                                         name=MultilingualString(
@@ -1077,7 +1083,9 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
-                                                    vehicle_mode=AllModesEnumeration.TRAM,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.TRAM
+                                                    ),
                                                     display_priority=1
                                                 ),
                                                 DisplayAssignment(
@@ -1091,7 +1099,9 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     ),
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.ARRIVALS
                                                 ),
                                                 DisplayAssignment(
@@ -1105,7 +1115,9 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='mybus:SSP_032'
                                                     ),
-                                                    vehicle_mode=AllModesEnumeration.RAIL,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.RAIL
+                                                    ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.ARRIVALS
                                                 ),
                                             ]
@@ -1180,7 +1192,9 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         ref='myrail:SSP_042'
                                                     ),
-                                                    vehicle_mode=AllModesEnumeration.RAIL,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.RAIL
+                                                    ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.ALL
                                                 ),
                                             ]
@@ -1346,7 +1360,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace(
+                                    StopPlace1(
                                         id='mybus:SP001A',
                                         version='any',
                                         name=MultilingualString(
@@ -1370,7 +1384,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_TRAM,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP001A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -1399,7 +1413,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='mybus:SP002B',
                                         version='any',
                                         name=MultilingualString(
@@ -1429,7 +1443,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.TRAM_STATION,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP002B_1',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1453,7 +1467,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.TRAM_PLATFORM
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP002B_2',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1478,7 +1492,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.N,
                                                     quay_type=QuayTypeEnumeration.TRAM_PLATFORM
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP002B_3',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1518,7 +1532,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='mybus:SP003C',
                                         version='any',
                                         name=MultilingualString(
@@ -1549,7 +1563,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_TRAM,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP003C_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -1575,7 +1589,7 @@ obj = PublicationDelivery(
                                                     compass_octant=CompassBearing8Enumeration.NE,
                                                     quay_type=QuayTypeEnumeration.TRAM_STOP
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SP003C_2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',

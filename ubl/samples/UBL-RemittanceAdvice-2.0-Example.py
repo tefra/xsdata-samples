@@ -26,6 +26,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CreditLineAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import CurrencyCode
@@ -33,16 +34,20 @@ from ubl.models.common.ubl_common_basic_components_2_1 import CustomerAssignedAc
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import DebitLineAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
+from ubl.models.common.ubl_common_basic_components_2_1 import PaymentDueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import PaymentMeansCode
 from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
 from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import SupplierAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
@@ -70,11 +75,15 @@ obj = RemittanceAdvice(
     id=Id(
         value='6577884'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='84E081CE-F9D1-94C5-40F9-94C5FF9D1AC3'
     ),
-    issue_date=XmlDate(2005, 6, 22),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 6, 22)
+    ),
     note=[
         Note(
             value='dummy as sample'
@@ -94,8 +103,12 @@ obj = RemittanceAdvice(
     ),
     invoice_period=[
         InvoicePeriod(
-            start_date=XmlDate(2005, 6, 1),
-            end_date=XmlDate(2005, 7, 1)
+            start_date=StartDate(
+                value=XmlDate(2005, 6, 1)
+            ),
+            end_date=EndDate(
+                value=XmlDate(2005, 7, 1)
+            )
         ),
     ],
     accounting_customer_party=AccountingCustomerParty(
@@ -349,7 +362,9 @@ obj = RemittanceAdvice(
         payment_means_code=PaymentMeansCode(
             value='20'
         ),
-        payment_due_date=XmlDate(2005, 7, 21),
+        payment_due_date=PaymentDueDate(
+            value=XmlDate(2005, 7, 21)
+        ),
         payee_financial_account=PayeeFinancialAccount(
             id=Id(
                 value='12345678'
@@ -561,7 +576,9 @@ obj = RemittanceAdvice(
                         uuid=Uuid(
                             value='849FBBCE-E081-40B4-906C-94C5FF9D1AC3'
                         ),
-                        issue_date=XmlDate(2005, 6, 21)
+                        issue_date=IssueDate(
+                            value=XmlDate(2005, 6, 21)
+                        )
                     )
                 ),
             ]

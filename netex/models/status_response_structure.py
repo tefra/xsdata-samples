@@ -1,17 +1,22 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
+from .message_qualifier_structure import MessageQualifierStructure
+from .participant_ref_structure import ParticipantRefStructure
 from .response_structure import ResponseStructure
 from .service_delivery_error_condition_structure import (
     ServiceDeliveryErrorConditionStructure,
 )
+from .status import Status
+from .subscription_filter_ref_structure import SubscriptionFilterRefStructure
+from .subscription_qualifier_structure import SubscriptionQualifierStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
 class StatusResponseStructure(ResponseStructure):
-    request_message_ref: Optional[str] = field(
+    request_message_ref: Optional[MessageQualifierStructure] = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -19,7 +24,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscriber_ref: Optional[str] = field(
+    subscriber_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "SubscriberRef",
@@ -27,7 +32,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_filter_ref: Optional[str] = field(
+    subscription_filter_ref: Optional[SubscriptionFilterRefStructure] = field(
         default=None,
         metadata={
             "name": "SubscriptionFilterRef",
@@ -35,7 +40,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_ref: Optional[str] = field(
+    subscription_ref: Optional[SubscriptionQualifierStructure] = field(
         default=None,
         metadata={
             "name": "SubscriptionRef",
@@ -43,7 +48,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: Optional[bool] = field(
+    status: Optional[Status] = field(
         default=None,
         metadata={
             "name": "Status",

@@ -1,5 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
+from travelport.models.passenger_receipt_override import (
+    PassengerReceiptOverride,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -24,13 +27,11 @@ class DocumentOptions:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    passenger_receipt_override: None | str = field(
+    passenger_receipt_override: None | PassengerReceiptOverride = field(
         default=None,
         metadata={
             "name": "PassengerReceiptOverride",
             "type": "Element",
-            "min_length": 1,
-            "white_space": "collapse",
         },
     )
     override_option: list[str] = field(

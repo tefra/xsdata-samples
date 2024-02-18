@@ -9,6 +9,7 @@ from travelport.models.direct_payment_2 import DirectPayment2
 from travelport.models.misc_form_of_payment_2 import MiscFormOfPayment2
 from travelport.models.payment_advice_2 import PaymentAdvice2
 from travelport.models.requisition_2 import Requisition2
+from travelport.models.ticket_number_2 import TicketNumber2
 from travelport.models.type_guarantee_information_2 import (
     TypeGuaranteeInformation2,
 )
@@ -80,14 +81,12 @@ class TypeFormOfPaymentType1(TypeKeyTaggedElement1):
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
         },
     )
-    ticket_number: None | str = field(
+    ticket_number: None | TicketNumber2 = field(
         default=None,
         metadata={
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
-            "min_length": 1,
-            "max_length": 13,
         },
     )
     check: None | Check2 = field(

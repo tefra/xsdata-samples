@@ -17,10 +17,14 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import Transportation
 from ubl.models.common.ubl_common_basic_components_2_1 import AttributeId
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import Measure
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import Telephone
 from ubl.models.common.ubl_common_basic_components_2_1 import TransportEquipmentTypeCode
@@ -38,8 +42,12 @@ obj = TransportServiceDescriptionRequest(
     id=Id(
         value='TSD_REQ_1'
     ),
-    issue_date=XmlDate(2011, 9, 12),
-    issue_time=XmlTime(11, 1, 10, 0, 60),
+    issue_date=IssueDate(
+        value=XmlDate(2011, 9, 12)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(11, 1, 10, 0, 60)
+    ),
     sender_party=SenderParty(
         party_identification=[
             PartyIdentification(
@@ -207,8 +215,12 @@ obj = TransportServiceDescriptionRequest(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 3),
-                                end_date=XmlDate(2011, 10, 3)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 3)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 3)
+                                )
                             ),
                         ]
                     ),
@@ -230,8 +242,12 @@ obj = TransportServiceDescriptionRequest(
                         ),
                         period=[
                             Period(
-                                start_date=XmlDate(2011, 10, 6),
-                                end_date=XmlDate(2011, 10, 6)
+                                start_date=StartDate(
+                                    value=XmlDate(2011, 10, 6)
+                                ),
+                                end_date=EndDate(
+                                    value=XmlDate(2011, 10, 6)
+                                )
                             ),
                         ]
                     )

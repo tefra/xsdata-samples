@@ -1,6 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.depositor import Depositor
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_batch_id import (
+    DoiBatchId,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.registrant import (
+    Registrant,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.timestamp import Timestamp
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -18,16 +25,14 @@ class Head:
         name = "head"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    doi_batch_id: Optional[str] = field(
+    doi_batch_id: Optional[DoiBatchId] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 4,
-            "max_length": 100,
         },
     )
-    timestamp: Optional[int] = field(
+    timestamp: Optional[Timestamp] = field(
         default=None,
         metadata={
             "type": "Element",
@@ -41,12 +46,10 @@ class Head:
             "required": True,
         },
     )
-    registrant: Optional[str] = field(
+    registrant: Optional[Registrant] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 1,
-            "max_length": 255,
         },
     )

@@ -1,6 +1,11 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
     BaseIdentifiedComponentType,
 )
@@ -55,7 +60,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    gross_tonnage: Optional[Decimal] = field(
+    gross_tonnage: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "GrossTonnage",
@@ -63,7 +68,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    dwt: Optional[Decimal] = field(
+    dwt: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "DWT",
@@ -71,7 +76,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    score: Optional[int] = field(
+    score: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "Score",

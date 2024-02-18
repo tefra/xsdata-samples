@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from .message_qualifier_structure import MessageQualifierStructure
+from .participant_ref_structure import ParticipantRefStructure
+from .request_timestamp import RequestTimestamp
+from .requestor_ref import RequestorRef
 from .service_request_context_structure import ServiceRequestContextStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
@@ -16,7 +19,7 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_timestamp: Optional[XmlDateTime] = field(
+    request_timestamp: Optional[RequestTimestamp] = field(
         default=None,
         metadata={
             "name": "RequestTimestamp",
@@ -49,7 +52,7 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    requestor_ref: Optional[str] = field(
+    requestor_ref: Optional[RequestorRef] = field(
         default=None,
         metadata={
             "name": "RequestorRef",
@@ -58,7 +61,7 @@ class ContextualisedRequestStructure:
             "required": True,
         },
     )
-    message_identifier: Optional[str] = field(
+    message_identifier: Optional[MessageQualifierStructure] = field(
         default=None,
         metadata={
             "name": "MessageIdentifier",
@@ -74,7 +77,7 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[str] = field(
+    delegator_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "DelegatorRef",

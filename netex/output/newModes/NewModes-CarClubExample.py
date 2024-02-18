@@ -6,7 +6,7 @@ from netex.models.activation_means_enumeration import ActivationMeansEnumeration
 from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.branding import Branding
@@ -14,7 +14,7 @@ from netex.models.branding_ref import BrandingRef
 from netex.models.car_model_profile import CarModelProfile
 from netex.models.car_model_profile_ref import CarModelProfileRef
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
-from netex.models.cell_versioned_child_structure import FareTable
+from netex.models.cell_versioned_child_structure import FareTable1
 from netex.models.cell_versioned_child_structure import FareTablesRelStructure
 from netex.models.charging_moment_enumeration import ChargingMomentEnumeration
 from netex.models.charging_policy import ChargingPolicy
@@ -163,6 +163,7 @@ from netex.models.parking_user_enumeration import ParkingUserEnumeration
 from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
 from netex.models.parking_visibility_enumeration import ParkingVisibilityEnumeration
 from netex.models.parkings_in_frame_rel_structure import ParkingsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_capacity_structure import PassengerCapacityStructure
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.pos import Pos
@@ -208,6 +209,7 @@ from netex.models.sales_transaction import SalesTransaction
 from netex.models.sales_transaction_frame import SalesTransactionFrame
 from netex.models.sales_transaction_ref import SalesTransactionRef
 from netex.models.same_user_enumeration import SameUserEnumeration
+from netex.models.self_drive_submode import SelfDriveSubmode
 from netex.models.self_drive_submode_enumeration import SelfDriveSubmodeEnumeration
 from netex.models.service_access_code import ServiceAccessCode
 from netex.models.service_access_code_ref import ServiceAccessCodeRef
@@ -229,12 +231,13 @@ from netex.models.submodes_rel_structure import SubmodesRelStructure
 from netex.models.tariff import Tariff
 from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
 from netex.models.tariff_ref import TariffRef
-from netex.models.tariff_zone import TariffZone
-from netex.models.tariff_zone_ref import TariffZoneRef
+from netex.models.tariff_zone_1 import TariffZone1
+from netex.models.tariff_zone_ref_1 import TariffZoneRef1
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.tariffs_in_frame_rel_structure import TariffsInFrameRelStructure
 from netex.models.telephone_contact_structure import TelephoneContactStructure
 from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from netex.models.ticketing_service_facility_list import TicketingServiceFacilityList
 from netex.models.time_interval import TimeInterval
 from netex.models.time_interval_price import TimeIntervalPrice
 from netex.models.time_interval_price_ref import TimeIntervalPriceRef
@@ -309,10 +312,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2021, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2021, 12, 17, 9, 30, 46, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         description=MultilingualString(
             value='Request for Carclub tariff'
         ),
@@ -560,7 +567,9 @@ obj = PublicationDelivery(
                                             postal_region='Metroland'
                                         ),
                                         primary_mode=AllModesEnumeration.SELF_DRIVE,
-                                        choice=SelfDriveSubmodeEnumeration.HIRE_CAR,
+                                        choice=SelfDriveSubmode(
+                                            value=SelfDriveSubmodeEnumeration.HIRE_CAR
+                                        ),
                                         mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=VehicleSharingRef(
                                             version='any',
                                             ref='car_club'
@@ -610,7 +619,9 @@ obj = PublicationDelivery(
                                                     id='car_club',
                                                     version='any',
                                                     transport_mode=AllModesEnumeration.SELF_DRIVE,
-                                                    choice=SelfDriveSubmodeEnumeration.HIRE_CAR
+                                                    choice=SelfDriveSubmode(
+                                                        value=SelfDriveSubmodeEnumeration.HIRE_CAR
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -928,7 +939,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone(
+                                    TariffZone1(
                                         id='AllMetropolis',
                                         version='any',
                                         name=MultilingualString(
@@ -951,7 +962,7 @@ obj = PublicationDelivery(
                                 version='any',
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
-                                        DayType(
+                                        DayType1(
                                             id='working_day',
                                             version='any',
                                             name=MultilingualString(
@@ -970,7 +981,7 @@ obj = PublicationDelivery(
                                                 ]
                                             )
                                         ),
-                                        DayType(
+                                        DayType1(
                                             id='non_working_day',
                                             version='any',
                                             name=MultilingualString(
@@ -1540,7 +1551,7 @@ obj = PublicationDelivery(
                                                         validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
-                                                                TariffZoneRef(
+                                                                TariffZoneRef1(
                                                                     version='any',
                                                                     ref='AllMetropolis'
                                                                 ),
@@ -2042,10 +2053,12 @@ obj = PublicationDelivery(
                                                         ref='mobile_application'
                                                     ),
                                                     distribution_channel_type=DistributionChannelTypeEnumeration.MOBILE_DEVICE,
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                        TicketingServiceFacilityEnumeration.REFUND,
-                                                    ],
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                            TicketingServiceFacilityEnumeration.REFUND,
+                                                        ]
+                                                    ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
                                                         version='any',
                                                         ref='mobile_device'
@@ -2109,7 +2122,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable(
+                                    FareTable1(
                                         id='my_car_club',
                                         version='any',
                                         name=MultilingualString(
@@ -2128,7 +2141,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         specifics=FareTableSpecificsStructure(
-                                            tariff_zone_ref=TariffZoneRef(
+                                            tariff_zone_ref=TariffZoneRef1(
                                                 version='any',
                                                 ref='AllMetropolis'
                                             ),
@@ -2139,7 +2152,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='my_car@single_session',
                                                     version='any',
                                                     name=MultilingualString(
@@ -2163,7 +2176,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         fare_table_ref_or_fare_table=[
-                                                            FareTable(
+                                                            FareTable1(
                                                                 id='my_car@single_session@rental',
                                                                 version='any',
                                                                 prices=FarePricesRelStructure(
@@ -2234,7 +2247,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 )
                                                             ),
-                                                            FareTable(
+                                                            FareTable1(
                                                                 id='my_car@hire_penalty',
                                                                 version='any',
                                                                 name=MultilingualString(

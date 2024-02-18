@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
+from voko.models.g import G
+from voko.models.k import K
 
 
 @dataclass(kw_only=True)
@@ -16,11 +18,11 @@ class Sup:
             "choices": (
                 {
                     "name": "g",
-                    "type": str,
+                    "type": G,
                 },
                 {
                     "name": "k",
-                    "type": str,
+                    "type": K,
                 },
             ),
         },

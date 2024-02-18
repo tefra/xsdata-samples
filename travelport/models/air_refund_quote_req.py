@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 from travelport.models.air_refund_modifiers import AirRefundModifiers
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.host_token_1 import HostToken1
+from travelport.models.ticket_number_1 import TicketNumber1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -33,15 +34,13 @@ class AirRefundQuoteReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    ticket_number: list[str] = field(
+    ticket_number: list[TicketNumber1] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-            "min_length": 1,
-            "max_length": 13,
         },
     )
     tcrnumber: list[str] = field(

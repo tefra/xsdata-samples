@@ -1,15 +1,19 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xcbl.models.payment_status_response import (
+    ConfirmationId,
     CreditAmount,
     DebitAmount,
+    FxvalueDate,
     ListOfOtherPaymentInfo,
     ListOfPaymentException,
     OriginatingFinancialInstitution,
     SendingParty,
+    SequenceNumber,
     SettlementAmount,
 )
 from xcbl.models.remittance_advice import (
+    CertificateAuthority,
     PayeeParty,
     PayerParty,
 )
@@ -21,65 +25,322 @@ from xcbl.models.sourcing_result import (
     ReferenceCurrency,
     TargetCurrency,
 )
+from xcbl.models.sourcing_result_response import GeneralNote
 from xcbl.models.trading_partner_response import Reference
 from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
+class Achindicator:
+    class Meta:
+        name = "ACHIndicator"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ComputationalMethodCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ComputationalMethodCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CurrencyDecimalPlaces:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CurrentDateTime:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FxquoteTypeCoded:
+    class Meta:
+        name = "FXQuoteTypeCoded"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FxquoteTypeCodedOther:
+    class Meta:
+        name = "FXQuoteTypeCodedOther"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Fxrate:
+    class Meta:
+        name = "FXRate"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FxrateResponseIssueDate:
+    class Meta:
+        name = "FXRateResponseIssueDate"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FxrateResponseNote:
+    class Meta:
+        name = "FXRateResponseNote"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FxtransactionTypeCoded:
+    class Meta:
+        name = "FXTransactionTypeCoded"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FxtransactionTypeCodedOther:
+    class Meta:
+        name = "FXTransactionTypeCodedOther"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FeeType:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FundsTransferIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class IndicativeIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class IndicativeRateRetrievedDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InverseFxrate:
+    class Meta:
+        name = "InverseFXRate"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class NumberOfFxrateRequest:
+    class Meta:
+        name = "NumberOfFXRateRequest"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OnsiteCheckIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OtherPaymentServiceNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class QuoteExpirationDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RemitCurrencyIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RemittanceDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RemoteCheckIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class CurrencyAvailabilityCheckList:
-    funds_transfer_indicator: Optional[str] = field(
+    funds_transfer_indicator: Optional[FundsTransferIndicator] = field(
         default=None,
         metadata={
             "name": "FundsTransferIndicator",
             "type": "Element",
         },
     )
-    remote_check_indicator: Optional[str] = field(
+    remote_check_indicator: Optional[RemoteCheckIndicator] = field(
         default=None,
         metadata={
             "name": "RemoteCheckIndicator",
             "type": "Element",
         },
     )
-    onsite_check_indicator: Optional[str] = field(
+    onsite_check_indicator: Optional[OnsiteCheckIndicator] = field(
         default=None,
         metadata={
             "name": "OnsiteCheckIndicator",
             "type": "Element",
         },
     )
-    achindicator: Optional[str] = field(
+    achindicator: Optional[Achindicator] = field(
         default=None,
         metadata={
             "name": "ACHIndicator",
             "type": "Element",
         },
     )
-    remit_currency_indicator: Optional[str] = field(
+    remit_currency_indicator: Optional[RemitCurrencyIndicator] = field(
         default=None,
         metadata={
             "name": "RemitCurrencyIndicator",
             "type": "Element",
         },
     )
-    other_payment_service_note: Optional[str] = field(
+    other_payment_service_note: Optional[OtherPaymentServiceNote] = field(
         default=None,
         metadata={
             "name": "OtherPaymentServiceNote",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class FxrateRequestSummary:
-    class Meta:
-        name = "FXRateRequestSummary"
-
-    number_of_fxrate_request: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "NumberOfFXRateRequest",
             "type": "Element",
         },
     )
@@ -118,21 +379,21 @@ class Fxdates:
     class Meta:
         name = "FXDates"
 
-    fxvalue_date: Optional[str] = field(
+    fxvalue_date: Optional[FxvalueDate] = field(
         default=None,
         metadata={
             "name": "FXValueDate",
             "type": "Element",
         },
     )
-    remittance_date: Optional[str] = field(
+    remittance_date: Optional[RemittanceDate] = field(
         default=None,
         metadata={
             "name": "RemittanceDate",
             "type": "Element",
         },
     )
-    quote_expiration_date: Optional[str] = field(
+    quote_expiration_date: Optional[QuoteExpirationDate] = field(
         default=None,
         metadata={
             "name": "QuoteExpirationDate",
@@ -193,6 +454,20 @@ class FxrateRequestId:
 
 
 @dataclass(kw_only=True)
+class FxrateRequestSummary:
+    class Meta:
+        name = "FXRateRequestSummary"
+
+    number_of_fxrate_request: Optional[NumberOfFxrateRequest] = field(
+        default=None,
+        metadata={
+            "name": "NumberOfFXRateRequest",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class FxrateResponseId:
     class Meta:
         name = "FXRateResponseID"
@@ -200,20 +475,6 @@ class FxrateResponseId:
     reference: Reference = field(
         metadata={
             "name": "Reference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class FxrateResponseSummary:
-    class Meta:
-        name = "FXRateResponseSummary"
-
-    fxrate_request_summary: FxrateRequestSummary = field(
-        metadata={
-            "name": "FXRateRequestSummary",
             "type": "Element",
             "required": True,
         }
@@ -242,40 +503,6 @@ class FeeValue:
             "type": "Element",
             "required": True,
         }
-    )
-
-
-@dataclass(kw_only=True)
-class IndicativeRateDetail:
-    currency_decimal_places: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CurrencyDecimalPlaces",
-            "type": "Element",
-        },
-    )
-    currency_availability_check_list: Optional[
-        CurrencyAvailabilityCheckList
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CurrencyAvailabilityCheckList",
-            "type": "Element",
-        },
-    )
-    indicative_rate_retrieved_date: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "IndicativeRateRetrievedDate",
-            "type": "Element",
-        },
-    )
-    current_date_time: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CurrentDateTime",
-            "type": "Element",
-        },
     )
 
 
@@ -316,7 +543,7 @@ class FxrateResponseHeader:
             "required": True,
         }
     )
-    fxrate_response_issue_date: str = field(
+    fxrate_response_issue_date: FxrateResponseIssueDate = field(
         metadata={
             "name": "FXRateResponseIssueDate",
             "type": "Element",
@@ -344,14 +571,14 @@ class FxrateResponseHeader:
             "type": "Element",
         },
     )
-    indicative_indicator: str = field(
+    indicative_indicator: IndicativeIndicator = field(
         metadata={
             "name": "IndicativeIndicator",
             "type": "Element",
             "required": True,
         }
     )
-    general_note: Optional[str] = field(
+    general_note: Optional[GeneralNote] = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -361,8 +588,22 @@ class FxrateResponseHeader:
 
 
 @dataclass(kw_only=True)
+class FxrateResponseSummary:
+    class Meta:
+        name = "FXRateResponseSummary"
+
+    fxrate_request_summary: FxrateRequestSummary = field(
+        metadata={
+            "name": "FXRateRequestSummary",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class Fee:
-    fee_type: Optional[str] = field(
+    fee_type: Optional[FeeType] = field(
         default=None,
         metadata={
             "name": "FeeType",
@@ -373,6 +614,42 @@ class Fee:
         default=None,
         metadata={
             "name": "FeeValue",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class IndicativeRateDetail:
+    currency_decimal_places: Optional[CurrencyDecimalPlaces] = field(
+        default=None,
+        metadata={
+            "name": "CurrencyDecimalPlaces",
+            "type": "Element",
+        },
+    )
+    currency_availability_check_list: Optional[
+        CurrencyAvailabilityCheckList
+    ] = field(
+        default=None,
+        metadata={
+            "name": "CurrencyAvailabilityCheckList",
+            "type": "Element",
+        },
+    )
+    indicative_rate_retrieved_date: Optional[
+        IndicativeRateRetrievedDate
+    ] = field(
+        default=None,
+        metadata={
+            "name": "IndicativeRateRetrievedDate",
+            "type": "Element",
+        },
+    )
+    current_date_time: Optional[CurrentDateTime] = field(
+        default=None,
+        metadata={
+            "name": "CurrentDateTime",
             "type": "Element",
         },
     )
@@ -399,7 +676,7 @@ class SpotRateDetail:
             "required": True,
         }
     )
-    confirmation_id: str = field(
+    confirmation_id: ConfirmationId = field(
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
@@ -441,28 +718,30 @@ class SpotRateDetail:
             "type": "Element",
         },
     )
-    fxtransaction_type_coded: Optional[str] = field(
+    fxtransaction_type_coded: Optional[FxtransactionTypeCoded] = field(
         default=None,
         metadata={
             "name": "FXTransactionTypeCoded",
             "type": "Element",
         },
     )
-    fxtransaction_type_coded_other: Optional[str] = field(
+    fxtransaction_type_coded_other: Optional[
+        FxtransactionTypeCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "FXTransactionTypeCodedOther",
             "type": "Element",
         },
     )
-    fxquote_type_coded: Optional[str] = field(
+    fxquote_type_coded: Optional[FxquoteTypeCoded] = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCoded",
             "type": "Element",
         },
     )
-    fxquote_type_coded_other: Optional[str] = field(
+    fxquote_type_coded_other: Optional[FxquoteTypeCodedOther] = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCodedOther",
@@ -483,7 +762,7 @@ class FxrateResponseDetail:
     class Meta:
         name = "FXRateResponseDetail"
 
-    sequence_number: Optional[str] = field(
+    sequence_number: Optional[SequenceNumber] = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -497,28 +776,30 @@ class FxrateResponseDetail:
             "required": True,
         }
     )
-    computational_method_coded: Optional[str] = field(
+    computational_method_coded: Optional[ComputationalMethodCoded] = field(
         default=None,
         metadata={
             "name": "ComputationalMethodCoded",
             "type": "Element",
         },
     )
-    computational_method_coded_other: Optional[str] = field(
+    computational_method_coded_other: Optional[
+        ComputationalMethodCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "ComputationalMethodCodedOther",
             "type": "Element",
         },
     )
-    fxrate: str = field(
+    fxrate: Fxrate = field(
         metadata={
             "name": "FXRate",
             "type": "Element",
             "required": True,
         }
     )
-    inverse_fxrate: Optional[str] = field(
+    inverse_fxrate: Optional[InverseFxrate] = field(
         default=None,
         metadata={
             "name": "InverseFXRate",
@@ -567,14 +848,14 @@ class FxrateResponseDetail:
             "type": "Element",
         },
     )
-    certificate_authority: Optional[str] = field(
+    certificate_authority: Optional[CertificateAuthority] = field(
         default=None,
         metadata={
             "name": "CertificateAuthority",
             "type": "Element",
         },
     )
-    fxrate_response_note: Optional[str] = field(
+    fxrate_response_note: Optional[FxrateResponseNote] = field(
         default=None,
         metadata={
             "name": "FXRateResponseNote",

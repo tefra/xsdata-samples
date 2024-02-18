@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.degrees import Degrees
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.given_name import (
+    GivenName,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.prefix import Prefix
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.string_name_language import (
     StringNameLanguage,
@@ -8,6 +11,8 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.string_name_language import
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.string_name_name_style import (
     StringNameNameStyle,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.suffix import Suffix
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.surname import Surname
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -58,11 +63,7 @@ class StringName:
                 },
                 {
                     "name": "given_name",
-                    "type": str,
-                    "min_length": 1,
-                    "max_length": 60,
-                    "white_space": "collapse",
-                    "pattern": r"[^\d\?]*[^\?\s]+[^\d]*",
+                    "type": GivenName,
                 },
                 {
                     "name": "prefix",
@@ -70,17 +71,11 @@ class StringName:
                 },
                 {
                     "name": "surname",
-                    "type": str,
-                    "min_length": 1,
-                    "max_length": 60,
-                    "white_space": "collapse",
-                    "pattern": r"[^\d\?]*[^\?\s]+[^\d]*",
+                    "type": Surname,
                 },
                 {
                     "name": "suffix",
-                    "type": str,
-                    "min_length": 1,
-                    "max_length": 10,
+                    "type": Suffix,
                 },
             ),
         },

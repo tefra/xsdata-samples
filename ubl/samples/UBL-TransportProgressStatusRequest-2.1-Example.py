@@ -12,6 +12,8 @@ from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import JourneyId
 from ubl.models.common.ubl_common_basic_components_2_1 import LocationTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
@@ -33,8 +35,12 @@ obj = TransportProgressStatusRequest(
     id=Id(
         value='TPS_1'
     ),
-    issue_date=XmlDate(2011, 10, 3),
-    issue_time=XmlTime(14, 30, 10, 0, 60),
+    issue_date=IssueDate(
+        value=XmlDate(2011, 10, 3)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(14, 30, 10, 0, 60)
+    ),
     sender_party=SenderParty(
         party_identification=[
             PartyIdentification(

@@ -1,12 +1,13 @@
 from decimal import Decimal
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
 from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.booking_access_enumeration import BookingAccessEnumeration
+from netex.models.bus_submode import BusSubmode
 from netex.models.bus_submode_enumeration import BusSubmodeEnumeration
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -34,6 +35,7 @@ from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
 from netex.models.location_structure_2 import LocationStructure2
 from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.polygon import Polygon
 from netex.models.pos import Pos
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
@@ -58,10 +60,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -394,7 +400,9 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         transport_submode=TransportSubmode(
-                                            choice=BusSubmodeEnumeration.DEMAND_AND_RESPONSE_BUS
+                                            choice=BusSubmode(
+                                                value=BusSubmodeEnumeration.DEMAND_AND_RESPONSE_BUS
+                                            )
                                         ),
                                         public_code='24',
                                         flexible_line_type=FlexibleLineTypeEnumeration.FLEXIBLE_AREAS_ONLY,
@@ -509,7 +517,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_01-MF-NotHoliday',
                                         version='any',
                                         name=MultilingualString(

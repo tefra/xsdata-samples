@@ -1,9 +1,11 @@
 from decimal import Decimal
 from netex.models.accessibility_assessment import AccessibilityAssessment
 from netex.models.accessibility_info_facility_enumeration import AccessibilityInfoFacilityEnumeration
+from netex.models.accessibility_info_facility_list import AccessibilityInfoFacilityList
 from netex.models.accessibility_limitation import AccessibilityLimitation
 from netex.models.accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
 from netex.models.accessibility_tool_enumeration import AccessibilityToolEnumeration
+from netex.models.accessibility_tool_list import AccessibilityToolList
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
@@ -35,15 +37,17 @@ from netex.models.operator import Operator
 from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_information_equipment import PassengerInformationEquipment
 from netex.models.passenger_information_facility_enumeration import PassengerInformationFacilityEnumeration
+from netex.models.passenger_information_facility_list import PassengerInformationFacilityList
 from netex.models.passenger_stop_assignment import PassengerStopAssignment
 from netex.models.place_equipments_rel_structure import PlaceEquipmentsRelStructure
 from netex.models.point_refs_rel_structure import PointRefsRelStructure
 from netex.models.private_code import PrivateCode
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.quay import Quay
+from netex.models.quay_1 import Quay1
 from netex.models.quay_ref import QuayRef
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
@@ -62,12 +66,13 @@ from netex.models.simple_point_version_structure import SimplePointVersionStruct
 from netex.models.site_facility_set import SiteFacilitySet
 from netex.models.site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
 from netex.models.site_frame import SiteFrame
+from netex.models.step_free_access import StepFreeAccess
 from netex.models.stop_assignments_in_frame_rel_structure import StopAssignmentsInFrameRelStructure
-from netex.models.stop_place import StopPlace
+from netex.models.stop_place_1 import StopPlace1
 from netex.models.stop_place_ref import StopPlaceRef
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_type_enumeration import StopTypeEnumeration
-from netex.models.tariff_zone import TariffZone
+from netex.models.tariff_zone_1 import TariffZone1
 from netex.models.tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
 from netex.models.topographic_place import TopographicPlace
 from netex.models.topographic_place_descriptor_versioned_child_structure import TopographicPlaceDescriptorVersionedChildStructure
@@ -75,16 +80,21 @@ from netex.models.topographic_place_ref import TopographicPlaceRef
 from netex.models.topographic_places_in_frame_rel_structure import TopographicPlacesInFrameRelStructure
 from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
+from netex.models.wheelchair_access import WheelchairAccess
 from xsdata.models.datatype import XmlDateTime
 from xsdata.models.datatype import XmlDuration
 
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         description=MultilingualString(
             value='Filter used to get  these contents: Get all STOP PLACEs, STOP ASSIGNMENTs and TOPOGRAPHIC PLACEfor Network TNET1 in specified  area    :TP_0032A.  Also return any  RESPONSIBILITY SETs  used.\n\t\t\t\tAlso get details for \n\t\t\t\t'
         ),
@@ -240,7 +250,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace(
+                                    StopPlace1(
                                         id='mybus:SSP_02456A',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         version='any',
@@ -277,8 +287,12 @@ obj = PublicationDelivery(
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -287,14 +301,18 @@ obj = PublicationDelivery(
                                                 SiteFacilitySet(
                                                     id='mybus:SSP_02456A',
                                                     version='any',
-                                                    accessibility_tool_list=[
-                                                        AccessibilityToolEnumeration.WALKINGSTICK,
-                                                        AccessibilityToolEnumeration.AUDIO_NAVIGATOR,
-                                                        AccessibilityToolEnumeration.PASSENGER_CART,
-                                                    ],
-                                                    passenger_information_facility_list=[
-                                                        PassengerInformationFacilityEnumeration.PASSENGER_INFORMATION_DISPLAY,
-                                                    ]
+                                                    accessibility_tool_list=AccessibilityToolList(
+                                                        value=[
+                                                            AccessibilityToolEnumeration.WALKINGSTICK,
+                                                            AccessibilityToolEnumeration.AUDIO_NAVIGATOR,
+                                                            AccessibilityToolEnumeration.PASSENGER_CART,
+                                                        ]
+                                                    ),
+                                                    passenger_information_facility_list=PassengerInformationFacilityList(
+                                                        value=[
+                                                            PassengerInformationFacilityEnumeration.PASSENGER_INFORMATION_DISPLAY,
+                                                        ]
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -319,7 +337,7 @@ obj = PublicationDelivery(
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='mybus:Q_SSP_02456A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
                                                     version='any',
@@ -361,9 +379,11 @@ obj = PublicationDelivery(
                                                             PassengerInformationEquipment(
                                                                 id='mybus:Q_SSP_02456A_1',
                                                                 version='any',
-                                                                accessibility_info_facility_list=[
-                                                                    AccessibilityInfoFacilityEnumeration.VISUAL_DISPLAYS,
-                                                                ]
+                                                                accessibility_info_facility_list=AccessibilityInfoFacilityList(
+                                                                    value=[
+                                                                        AccessibilityInfoFacilityEnumeration.VISUAL_DISPLAYS,
+                                                                    ]
+                                                                )
                                                             ),
                                                         ]
                                                     ),
@@ -415,7 +435,7 @@ obj = PublicationDelivery(
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 tariff_zone=[
-                                    TariffZone(
+                                    TariffZone1(
                                         id='frtop:TZ_0010',
                                         version='001',
                                         name=MultilingualString(

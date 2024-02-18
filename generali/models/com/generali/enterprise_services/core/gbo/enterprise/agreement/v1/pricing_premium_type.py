@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
 
 __NAMESPACE__ = (
     "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
@@ -9,7 +11,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PricingPremiumType:
-    gross: Optional[Decimal] = field(
+    gross: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "Gross",
@@ -17,7 +19,7 @@ class PricingPremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    actual: Optional[Decimal] = field(
+    actual: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "Actual",
@@ -25,7 +27,7 @@ class PricingPremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    minimum_acceptable: Optional[Decimal] = field(
+    minimum_acceptable: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "MinimumAcceptable",

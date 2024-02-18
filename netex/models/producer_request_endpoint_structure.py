@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .authenticated_request_structure import AuthenticatedRequestStructure
+from .message_qualifier_structure import MessageQualifierStructure
+from .participant_ref_structure import ParticipantRefStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
@@ -15,7 +17,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    producer_ref: Optional[str] = field(
+    producer_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "ProducerRef",
@@ -23,7 +25,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    message_identifier: Optional[str] = field(
+    message_identifier: Optional[MessageQualifierStructure] = field(
         default=None,
         metadata={
             "name": "MessageIdentifier",
@@ -39,7 +41,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[str] = field(
+    delegator_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "DelegatorRef",

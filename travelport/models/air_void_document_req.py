@@ -1,5 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
+from travelport.models.air_reservation_locator_code import (
+    AirReservationLocatorCode,
+)
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.void_document_info import VoidDocumentInfo
 
@@ -34,13 +37,11 @@ class AirVoidDocumentReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_reservation_locator_code: None | str = field(
+    air_reservation_locator_code: None | AirReservationLocatorCode = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
-            "min_length": 5,
-            "max_length": 8,
         },
     )
     void_document_info: list[VoidDocumentInfo] = field(

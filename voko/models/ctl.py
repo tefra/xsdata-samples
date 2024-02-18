@@ -1,7 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List
 from voko.models.em import Em
+from voko.models.esc import Esc
 from voko.models.frm import Frm
+from voko.models.nac import Nac
+from voko.models.nom import Nom
 from voko.models.tld import Tld
 from voko.models.ts import Ts
 
@@ -36,15 +39,15 @@ class Ctl:
                 },
                 {
                     "name": "nom",
-                    "type": str,
+                    "type": Nom,
                 },
                 {
                     "name": "nac",
-                    "type": str,
+                    "type": Nac,
                 },
                 {
                     "name": "esc",
-                    "type": str,
+                    "type": Esc,
                 },
             ),
         },

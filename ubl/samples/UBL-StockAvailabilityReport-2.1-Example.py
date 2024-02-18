@@ -12,19 +12,25 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import RetailerCustom
 from ubl.models.common.ubl_common_aggregate_components_2_1 import SellerSupplierParty
 from ubl.models.common.ubl_common_aggregate_components_2_1 import SellersItemIdentification
 from ubl.models.common.ubl_common_aggregate_components_2_1 import StockAvailabilityReportLine
+from ubl.models.common.ubl_common_basic_components_2_1 import AvailabilityDate
 from ubl.models.common.ubl_common_basic_components_2_1 import AvailabilityStatusCode
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Floor
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
 from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
 from ubl.models.common.ubl_common_basic_components_2_1 import Room
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
 from ubl.models.common.ubl_common_basic_components_2_1 import Telephone
@@ -41,17 +47,27 @@ obj = StockAvailabilityReport(
     id=Id(
         value='SA2009'
     ),
-    copy_indicator=False,
-    issue_date=XmlDate(2010, 4, 11),
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
+    issue_date=IssueDate(
+        value=XmlDate(2010, 4, 11)
+    ),
     note=[
         Note(
             value='Report about quantities of each item which are (or will be) available'
         ),
     ],
     inventory_period=InventoryPeriod(
-        start_date=XmlDate(2010, 4, 11),
-        start_time=XmlTime(8, 0, 0, 0),
-        end_date=XmlDate(2011, 4, 11)
+        start_date=StartDate(
+            value=XmlDate(2010, 4, 11)
+        ),
+        start_time=StartTime(
+            value=XmlTime(8, 0, 0, 0)
+        ),
+        end_date=EndDate(
+            value=XmlDate(2011, 4, 11)
+        )
     ),
     seller_supplier_party=SellerSupplierParty(
         party=Party(
@@ -207,7 +223,9 @@ obj = StockAvailabilityReport(
                 value=Decimal('50'),
                 unit_code='NAR'
             ),
-            availability_date=XmlDate(2010, 4, 20),
+            availability_date=AvailabilityDate(
+                value=XmlDate(2010, 4, 20)
+            ),
             availability_status_code=AvailabilityStatusCode(
                 value='1',
                 list_id='7011',
@@ -240,7 +258,9 @@ obj = StockAvailabilityReport(
                 value=Decimal('80'),
                 unit_code='NAR'
             ),
-            availability_date=XmlDate(2010, 4, 11),
+            availability_date=AvailabilityDate(
+                value=XmlDate(2010, 4, 11)
+            ),
             availability_status_code=AvailabilityStatusCode(
                 value='2',
                 list_id='7011',

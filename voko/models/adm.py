@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+from voko.models.aut import Aut
 
 
 @dataclass(kw_only=True)
@@ -16,7 +17,7 @@ class Adm:
             "choices": (
                 {
                     "name": "aut",
-                    "type": str,
+                    "type": Aut,
                 },
             ),
         },

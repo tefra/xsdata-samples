@@ -6,8 +6,8 @@ from generali.models.com.generali.xmlns.services.program.feedback_program_servic
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies import (
     LocalPolicies,
 )
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status_value import (
-    StatusValue,
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status import (
+    Status,
 )
 
 __NAMESPACE__ = (
@@ -26,7 +26,7 @@ class PolicyType:
             "required": True,
         },
     )
-    status: Optional[StatusValue] = field(
+    status: Optional[Status] = field(
         default=None,
         metadata={
             "name": "Status",

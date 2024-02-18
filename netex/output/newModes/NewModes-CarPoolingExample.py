@@ -21,7 +21,7 @@ from netex.models.car_model_profile_ref import CarModelProfileRef
 from netex.models.car_pooling_service import CarPoolingService
 from netex.models.car_pooling_service_ref import CarPoolingServiceRef
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
-from netex.models.cell_versioned_child_structure import FareTable
+from netex.models.cell_versioned_child_structure import FareTable1
 from netex.models.charging_moment_enumeration import ChargingMomentEnumeration
 from netex.models.child_seat_enumeration import ChildSeatEnumeration
 from netex.models.codespace import Codespace
@@ -141,6 +141,7 @@ from netex.models.multilingual_string import MultilingualString
 from netex.models.network_filter_by_value_structure import NetworkFilterByValueStructure
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.nuisance_facility_enumeration import NuisanceFacilityEnumeration
+from netex.models.nuisance_facility_list import NuisanceFacilityList
 from netex.models.object_filter_by_value_structure import ObjectFilterByValueStructure
 from netex.models.offered_travel_specification import OfferedTravelSpecification
 from netex.models.offered_travel_specification_ref import OfferedTravelSpecificationRef
@@ -175,6 +176,7 @@ from netex.models.parking_user_enumeration import ParkingUserEnumeration
 from netex.models.parking_vehicle_enumeration import ParkingVehicleEnumeration
 from netex.models.parking_visibility_enumeration import ParkingVisibilityEnumeration
 from netex.models.parkings_in_frame_rel_structure import ParkingsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.place_equipments_rel_structure import PlaceEquipmentsRelStructure
 from netex.models.point_in_single_journey_path_ref import PointInSingleJourneyPathRef
@@ -200,7 +202,7 @@ from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
 from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
-from netex.models.quay import Quay
+from netex.models.quay_1 import Quay1
 from netex.models.quay_type_enumeration import QuayTypeEnumeration
 from netex.models.quays_rel_structure import QuaysRelStructure
 from netex.models.refund_policy_enumeration import RefundPolicyEnumeration
@@ -229,6 +231,7 @@ from netex.models.sales_transaction_frame import SalesTransactionFrame
 from netex.models.sales_transaction_ref import SalesTransactionRef
 from netex.models.same_user_enumeration import SameUserEnumeration
 from netex.models.security_listings_rel_structure import SecurityListingsRelStructure
+from netex.models.self_drive_submode import SelfDriveSubmode
 from netex.models.self_drive_submode_enumeration import SelfDriveSubmodeEnumeration
 from netex.models.service_booking_arrangements_structure import ServiceBookingArrangementsStructure
 from netex.models.service_calendar_frame import ServiceCalendarFrame
@@ -255,7 +258,7 @@ from netex.models.site_type_enumeration import SiteTypeEnumeration
 from netex.models.specific_parameter_assignment_version_structure import SpecificParameterAssignment
 from netex.models.specific_parameter_assignment_version_structure import SpecificParameterAssignmentsRelStructure
 from netex.models.stakeholder_role_type_enumeration import StakeholderRoleTypeEnumeration
-from netex.models.stop_place import StopPlace
+from netex.models.stop_place_1 import StopPlace1
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_type_enumeration import StopTypeEnumeration
 from netex.models.submode import Submode
@@ -274,6 +277,7 @@ from netex.models.telephone_contact_structure import TelephoneContactStructure
 from netex.models.third_party_product import ThirdPartyProduct
 from netex.models.third_party_product_ref import ThirdPartyProductRef
 from netex.models.ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from netex.models.ticketing_service_facility_list import TicketingServiceFacilityList
 from netex.models.topographic_place import TopographicPlace
 from netex.models.topographic_place_descriptor_versioned_child_structure import TopographicPlaceDescriptorVersionedChildStructure
 from netex.models.topographic_place_ref import TopographicPlaceRef
@@ -365,10 +369,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2020, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2020, 12, 17, 9, 30, 46, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         description=MultilingualString(
             value='Request for ryde 1  tariff'
         ),
@@ -594,7 +602,9 @@ obj = PublicationDelivery(
                                             postal_region='Metroland'
                                         ),
                                         primary_mode=AllModesEnumeration.SELF_DRIVE,
-                                        choice=SelfDriveSubmodeEnumeration.OWN_CAR,
+                                        choice=SelfDriveSubmode(
+                                            value=SelfDriveSubmodeEnumeration.OWN_CAR
+                                        ),
                                         mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=VehiclePoolingRef(
                                             version='any',
                                             ref='ride_share'
@@ -647,7 +657,9 @@ obj = PublicationDelivery(
                                                     id='ride_share',
                                                     version='any',
                                                     transport_mode=AllModesEnumeration.SELF_DRIVE,
-                                                    choice=SelfDriveSubmodeEnumeration.OWN_CAR
+                                                    choice=SelfDriveSubmode(
+                                                        value=SelfDriveSubmodeEnumeration.OWN_CAR
+                                                    )
                                                 ),
                                             ]
                                         ),
@@ -660,30 +672,38 @@ obj = PublicationDelivery(
                                     ServiceFacilitySet(
                                         id='no_smoking',
                                         version='any',
-                                        nuisance_facility_list=[
-                                            NuisanceFacilityEnumeration.NO_SMOKING,
-                                        ]
+                                        nuisance_facility_list=NuisanceFacilityList(
+                                            value=[
+                                                NuisanceFacilityEnumeration.NO_SMOKING,
+                                            ]
+                                        )
                                     ),
                                     ServiceFacilitySet(
                                         id='smoking',
                                         version='any',
-                                        nuisance_facility_list=[
-                                            NuisanceFacilityEnumeration.SMOKING,
-                                        ]
+                                        nuisance_facility_list=NuisanceFacilityList(
+                                            value=[
+                                                NuisanceFacilityEnumeration.SMOKING,
+                                            ]
+                                        )
                                     ),
                                     ServiceFacilitySet(
                                         id='no_pets',
                                         version='any',
-                                        nuisance_facility_list=[
-                                            NuisanceFacilityEnumeration.NO_ANIMALS,
-                                        ]
+                                        nuisance_facility_list=NuisanceFacilityList(
+                                            value=[
+                                                NuisanceFacilityEnumeration.NO_ANIMALS,
+                                            ]
+                                        )
                                     ),
                                     ServiceFacilitySet(
                                         id='pets_allowed',
                                         version='any',
-                                        nuisance_facility_list=[
-                                            NuisanceFacilityEnumeration.ANIMALS_ALLOWED,
-                                        ]
+                                        nuisance_facility_list=NuisanceFacilityList(
+                                            value=[
+                                                NuisanceFacilityEnumeration.ANIMALS_ALLOWED,
+                                            ]
+                                        )
                                     ),
                                 ]
                             )
@@ -744,7 +764,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace(
+                                    StopPlace1(
                                         id='alphaville_gare@taxi',
                                         version='any',
                                         name=MultilingualString(
@@ -758,7 +778,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
-                                                Quay(
+                                                Quay1(
                                                     id='alphaville_gare@taxi_set_down',
                                                     version='any',
                                                     name=MultilingualString(
@@ -769,7 +789,7 @@ obj = PublicationDelivery(
                                                     boarding_use=False,
                                                     alighting_use=True
                                                 ),
-                                                Quay(
+                                                Quay1(
                                                     id='alphaville_gare@taxi_pick_up',
                                                     version='any',
                                                     name=MultilingualString(
@@ -1062,7 +1082,9 @@ obj = PublicationDelivery(
                                                         open_transport_mode_ref_or_transport_mode=[
                                                             TransportModeStructure(
                                                                 transport_mode=AllModesEnumeration.SELF_DRIVE,
-                                                                choice=SelfDriveSubmodeEnumeration.ALL_HIRE_VEHICLES
+                                                                choice=SelfDriveSubmode(
+                                                                    value=SelfDriveSubmodeEnumeration.ALL_HIRE_VEHICLES
+                                                                )
                                                             ),
                                                         ]
                                                     ),
@@ -1933,9 +1955,11 @@ obj = PublicationDelivery(
                                                         ref='online'
                                                     ),
                                                     distribution_channel_type=DistributionChannelTypeEnumeration.ONLINE,
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                    ],
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                        ]
+                                                    ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
                                                         version='any',
                                                         ref='mobile_device'
@@ -2023,10 +2047,12 @@ obj = PublicationDelivery(
                                                         ref='mobile_application'
                                                     ),
                                                     distribution_channel_type=DistributionChannelTypeEnumeration.MOBILE_DEVICE,
-                                                    ticketing_service_facility_list=[
-                                                        TicketingServiceFacilityEnumeration.PURCHASE,
-                                                        TicketingServiceFacilityEnumeration.REFUND,
-                                                    ],
+                                                    ticketing_service_facility_list=TicketingServiceFacilityList(
+                                                        value=[
+                                                            TicketingServiceFacilityEnumeration.PURCHASE,
+                                                            TicketingServiceFacilityEnumeration.REFUND,
+                                                        ]
+                                                    ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
                                                         version='any',
                                                         ref='mobile_device'
@@ -2093,7 +2119,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable(
+                                    FareTable1(
                                         id='ryde@single_trip',
                                         version='any',
                                         name=MultilingualString(
@@ -2323,7 +2349,9 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                         transport_submode=TransportSubmode(
-                                            choice=SelfDriveSubmodeEnumeration.OWN_CAR
+                                            choice=SelfDriveSubmode(
+                                                value=SelfDriveSubmodeEnumeration.OWN_CAR
+                                            )
                                         ),
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=CarPoolingServiceRef(
                                             version='any',

@@ -1,5 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_alt_script import (
+    StdAltScript,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_designator import (
+    StdDesignator,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_variant_form import (
+    StdVariantForm,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -9,31 +18,25 @@ class StdDesignatorT:
     class Meta:
         name = "std_designator_t"
 
-    std_designator: Optional[str] = field(
+    std_designator: Optional[StdDesignator] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
             "required": True,
-            "min_length": 2,
-            "max_length": 150,
         },
     )
-    std_alt_script: List[str] = field(
+    std_alt_script: List[StdAltScript] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
-            "min_length": 2,
-            "max_length": 150,
         },
     )
-    std_variant_form: List[str] = field(
+    std_variant_form: List[StdVariantForm] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
-            "min_length": 2,
-            "max_length": 150,
         },
     )

@@ -1,8 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDate
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_type import (
+    DateType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.indicator_type import (
+    IndicatorType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import (
     BaseComponentType,
@@ -54,7 +59,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    birth_date: Optional[XmlDate] = field(
+    birth_date: Optional[DateType] = field(
         default=None,
         metadata={
             "name": "BirthDate",
@@ -62,7 +67,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    death_date: Optional[XmlDate] = field(
+    death_date: Optional[DateType] = field(
         default=None,
         metadata={
             "name": "DeathDate",
@@ -70,7 +75,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    death_indicator: Optional[bool] = field(
+    death_indicator: Optional[IndicatorType] = field(
         default=None,
         metadata={
             "name": "DeathIndicator",

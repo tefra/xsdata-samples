@@ -25,7 +25,7 @@ from .price_rule_step_results_rel_structure import (
     PriceRuleStepResultsRelStructure,
 )
 from .price_unit_ref import PriceUnitRef
-from .pricing_rule import PricingRule
+from .pricing_rule_1 import PricingRule1
 from .pricing_rule_ref import PricingRuleRef
 from .pricing_service_ref import PricingServiceRef
 from .private_code import PrivateCode
@@ -269,7 +269,7 @@ class CellPriceStructure:
             LimitingRuleInContext,
             LimitingRule,
             DiscountingRule,
-            PricingRule,
+            PricingRule1,
         ]
     ] = field(
         default=None,
@@ -308,7 +308,7 @@ class CellPriceStructure:
                 },
                 {
                     "name": "PricingRule",
-                    "type": PricingRule,
+                    "type": PricingRule1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.given_name import (
+    GivenName,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.name_language import (
     NameLanguage,
 )
@@ -7,6 +10,8 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.name_name_style import (
     NameNameStyle,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.prefix import Prefix
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.suffix import Suffix
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.surname import Surname
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -17,27 +22,19 @@ class Name:
         name = "name"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    surname: Optional[str] = field(
+    surname: Optional[Surname] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 1,
-            "max_length": 60,
-            "white_space": "collapse",
-            "pattern": r"[^\d\?]*[^\?\s]+[^\d]*",
         },
     )
-    given_name: List[str] = field(
+    given_name: List[GivenName] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 2,
-            "min_length": 1,
-            "max_length": 60,
-            "white_space": "collapse",
-            "pattern": r"[^\d\?]*[^\?\s]+[^\d]*",
             "sequence": 1,
         },
     )
@@ -47,12 +44,10 @@ class Name:
             "type": "Element",
         },
     )
-    suffix: Optional[str] = field(
+    suffix: Optional[Suffix] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 10,
         },
     )
     content_type: Optional[object] = field(

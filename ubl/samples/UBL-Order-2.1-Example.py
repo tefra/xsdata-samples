@@ -46,6 +46,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import AllowanceTotalAmou
 from ubl.models.common.ubl_common_basic_components_2_1 import Amount
 from ubl.models.common.ubl_common_basic_components_2_1 import BaseQuantity
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
+from ubl.models.common.ubl_common_basic_components_2_1 import ChargeIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import ChargeTotalAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
@@ -58,16 +59,20 @@ from ubl.models.common.ubl_common_basic_components_2_1 import DocumentCurrencyCo
 from ubl.models.common.ubl_common_basic_components_2_1 import DocumentType
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
 from ubl.models.common.ubl_common_basic_components_2_1 import EmbeddedDocumentBinaryObject
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import EndpointId
 from ubl.models.common.ubl_common_basic_components_2_1 import FamilyName
 from ubl.models.common.ubl_common_basic_components_2_1 import FirstName
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import JobTitle
 from ubl.models.common.ubl_common_basic_components_2_1 import LineExtensionAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import MiddleName
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
+from ubl.models.common.ubl_common_basic_components_2_1 import PartialDeliveryIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import PayableAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
 from ubl.models.common.ubl_common_basic_components_2_1 import Postbox
@@ -76,6 +81,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
 from ubl.models.common.ubl_common_basic_components_2_1 import SpecialTerms
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
@@ -104,8 +110,12 @@ obj = Order(
     id=Id(
         value='34'
     ),
-    issue_date=XmlDate(2010, 1, 20),
-    issue_time=XmlTime(12, 30, 0, 0),
+    issue_date=IssueDate(
+        value=XmlDate(2010, 1, 20)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(12, 30, 0, 0)
+    ),
     note=[
         Note(
             value='Information text for the whole order'
@@ -119,7 +129,9 @@ obj = Order(
     ),
     validity_period=[
         ValidityPeriod(
-            end_date=XmlDate(2010, 1, 31)
+            end_date=EndDate(
+                value=XmlDate(2010, 1, 31)
+            )
         ),
     ],
     quotation_document_reference=QuotationDocumentReference(
@@ -536,8 +548,12 @@ obj = Order(
                 )
             ),
             requested_delivery_period=RequestedDeliveryPeriod(
-                start_date=XmlDate(2010, 2, 10),
-                end_date=XmlDate(2010, 2, 25)
+                start_date=StartDate(
+                    value=XmlDate(2010, 2, 10)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2010, 2, 25)
+                )
             ),
             delivery_party=DeliveryParty(
                 party_identification=[
@@ -594,7 +610,9 @@ obj = Order(
     ],
     allowance_charge=[
         AllowanceCharge(
-            charge_indicator=True,
+            charge_indicator=ChargeIndicator(
+                value=True
+            ),
             allowance_charge_reason=[
                 AllowanceChargeReason(
                     value='Transport documents'
@@ -606,7 +624,9 @@ obj = Order(
             )
         ),
         AllowanceCharge(
-            charge_indicator=False,
+            charge_indicator=ChargeIndicator(
+                value=False
+            ),
             allowance_charge_reason=[
                 AllowanceChargeReason(
                     value='Total order value discount'
@@ -667,15 +687,21 @@ obj = Order(
                     value=Decimal('10'),
                     currency_id='SEK'
                 ),
-                partial_delivery_indicator=False,
+                partial_delivery_indicator=PartialDeliveryIndicator(
+                    value=False
+                ),
                 accounting_cost_code=AccountingCostCode(
                     value='ProjectID123'
                 ),
                 delivery=[
                     Delivery(
                         requested_delivery_period=RequestedDeliveryPeriod(
-                            start_date=XmlDate(2010, 2, 10),
-                            end_date=XmlDate(2010, 2, 25)
+                            start_date=StartDate(
+                                value=XmlDate(2010, 2, 10)
+                            ),
+                            end_date=EndDate(
+                                value=XmlDate(2010, 2, 25)
+                            )
                         )
                     ),
                 ],
@@ -771,15 +797,21 @@ obj = Order(
                     value=Decimal('10'),
                     currency_id='SEK'
                 ),
-                partial_delivery_indicator=False,
+                partial_delivery_indicator=PartialDeliveryIndicator(
+                    value=False
+                ),
                 accounting_cost_code=AccountingCostCode(
                     value='ProjectID123'
                 ),
                 delivery=[
                     Delivery(
                         requested_delivery_period=RequestedDeliveryPeriod(
-                            start_date=XmlDate(2010, 2, 10),
-                            end_date=XmlDate(2010, 2, 25)
+                            start_date=StartDate(
+                                value=XmlDate(2010, 2, 10)
+                            ),
+                            end_date=EndDate(
+                                value=XmlDate(2010, 2, 25)
+                            )
                         )
                     ),
                 ],

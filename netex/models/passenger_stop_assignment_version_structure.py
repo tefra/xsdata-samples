@@ -2,10 +2,10 @@ from dataclasses import dataclass, field
 from typing import Optional, Union
 from .boarding_position import BoardingPosition
 from .boarding_position_ref import BoardingPositionRef
-from .quay import Quay
+from .quay_1 import Quay1
 from .quay_ref import QuayRef
 from .stop_assignment_version_structure import StopAssignmentVersionStructure
-from .stop_place import StopPlace
+from .stop_place_1 import StopPlace1
 from .stop_place_ref import StopPlaceRef
 from .taxi_rank_ref import TaxiRankRef
 from .taxi_stand_ref import TaxiStandRef
@@ -22,7 +22,7 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
         name = "PassengerStopAssignment_VersionStructure"
 
     taxi_rank_ref_or_stop_place_ref_or_stop_place: Optional[
-        Union[TaxiRankRef, StopPlaceRef, StopPlace]
+        Union[TaxiRankRef, StopPlaceRef, StopPlace1]
     ] = field(
         default=None,
         metadata={
@@ -40,14 +40,14 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
                 },
                 {
                     "name": "StopPlace",
-                    "type": StopPlace,
+                    "type": StopPlace1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
         },
     )
     taxi_stand_ref_or_quay_ref_or_quay: Optional[
-        Union[TaxiStandRef, QuayRef, Quay]
+        Union[TaxiStandRef, QuayRef, Quay1]
     ] = field(
         default=None,
         metadata={
@@ -65,7 +65,7 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
                 },
                 {
                     "name": "Quay",
-                    "type": Quay,
+                    "type": Quay1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

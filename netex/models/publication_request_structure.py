@@ -9,6 +9,7 @@ from .network_frame_subscription_policy_structure import (
     NetworkFrameSubscriptionPolicyStructure,
 )
 from .network_frame_topic_structure import NetworkFrameTopicStructure
+from .participant_ref import ParticipantRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -24,7 +25,7 @@ class PublicationRequestStructure:
             "required": True,
         },
     )
-    participant_ref: Optional[str] = field(
+    participant_ref: Optional[ParticipantRef] = field(
         default=None,
         metadata={
             "name": "ParticipantRef",

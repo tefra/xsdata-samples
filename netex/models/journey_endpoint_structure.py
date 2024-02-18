@@ -3,7 +3,7 @@ from typing import Optional, Union
 from .destination_display_ref import DestinationDisplayRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .multilingual_string import MultilingualString
-from .place_ref import PlaceRef
+from .place_ref_1 import PlaceRef1
 from .scheduled_stop_point_ref import ScheduledStopPointRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -47,7 +47,7 @@ class JourneyEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    place_ref: Optional[PlaceRef] = field(
+    place_ref: Optional[PlaceRef1] = field(
         default=None,
         metadata={
             "name": "PlaceRef",

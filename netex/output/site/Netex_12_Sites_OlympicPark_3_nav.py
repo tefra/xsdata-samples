@@ -1,7 +1,7 @@
 from decimal import Decimal
 from netex.models.access_feature_enumeration import AccessFeatureEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
 from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
@@ -35,6 +35,7 @@ from netex.models.location_structure_2 import LocationStructure2
 from netex.models.multilingual_string import MultilingualString
 from netex.models.navigation_path import NavigationPath
 from netex.models.navigation_paths_rel_structure import NavigationPathsRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.path_link_end_structure import PathLinkEndStructure
 from netex.models.point_of_interest import PointOfInterest
 from netex.models.point_of_interest_classification import PointOfInterestClassification
@@ -83,10 +84,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002'
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        )
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
@@ -155,7 +160,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType(
+                                    DayType1(
                                         id='oda:DT01_Very_Busy',
                                         version='any',
                                         name=MultilingualString(
@@ -185,7 +190,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='oda:DT02_Busy',
                                         version='any',
                                         name=MultilingualString(
@@ -215,7 +220,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='oda:DT03_Normal',
                                         version='any',
                                         name=MultilingualString(
@@ -245,7 +250,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='oda:DT04_QUIET',
                                         version='any',
                                         name=MultilingualString(

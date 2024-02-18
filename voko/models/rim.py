@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from voko.models.aut import Aut
 from voko.models.ctl import Ctl
 from voko.models.em import Em
+from voko.models.esc import Esc
 from voko.models.fnt import Fnt
 from voko.models.frm import Frm
 from voko.models.mis import Mis
@@ -11,6 +13,8 @@ from voko.models.mll import (
     Ref,
     Refgrp,
 )
+from voko.models.nac import Nac
+from voko.models.nom import Nom
 from voko.models.sncref import Sncref
 from voko.models.sub import Sub
 from voko.models.sup import Sup
@@ -56,7 +60,7 @@ class Rim:
                 },
                 {
                     "name": "aut",
-                    "type": str,
+                    "type": Aut,
                 },
                 {
                     "name": "fnt",
@@ -104,15 +108,15 @@ class Rim:
                 },
                 {
                     "name": "nom",
-                    "type": str,
+                    "type": Nom,
                 },
                 {
                     "name": "nac",
-                    "type": str,
+                    "type": Nac,
                 },
                 {
                     "name": "esc",
-                    "type": str,
+                    "type": Esc,
                 },
             ),
         },

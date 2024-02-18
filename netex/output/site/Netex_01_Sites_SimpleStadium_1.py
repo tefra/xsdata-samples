@@ -35,11 +35,13 @@ from netex.models.equipment_position import EquipmentPosition
 from netex.models.equipment_positions_rel_structure import EquipmentPositionsRelStructure
 from netex.models.equipment_ref import EquipmentRef
 from netex.models.equipments_rel_structure import EquipmentsRelStructure
+from netex.models.escalator_free_access import EscalatorFreeAccess
 from netex.models.gated_enumeration import GatedEnumeration
 from netex.models.level import Level
 from netex.models.level_ref import LevelRef
 from netex.models.level_ref_structure import LevelRefStructure
 from netex.models.levels_rel_structure import LevelsRelStructure
+from netex.models.lift_free_access import LiftFreeAccess
 from netex.models.lighting_enumeration import LightingEnumeration
 from netex.models.limitation_status_enumeration import LimitationStatusEnumeration
 from netex.models.local_services_rel_structure import LocalServicesRelStructure
@@ -49,6 +51,7 @@ from netex.models.multilingual_string import MultilingualString
 from netex.models.navigation_path import NavigationPath
 from netex.models.navigation_paths_rel_structure import NavigationPathsRelStructure
 from netex.models.navigation_type_enumeration import NavigationTypeEnumeration
+from netex.models.participant_ref import ParticipantRef
 from netex.models.path_direction_enumeration import PathDirectionEnumeration
 from netex.models.path_heading_enumeration import PathHeadingEnumeration
 from netex.models.path_junction import PathJunction
@@ -81,6 +84,7 @@ from netex.models.site_frame import SiteFrame
 from netex.models.site_path_link import SitePathLink
 from netex.models.site_path_link_ref_structure import SitePathLinkRefStructure
 from netex.models.site_path_links_rel_structure import SitePathLinksRelStructure
+from netex.models.step_free_access import StepFreeAccess
 from netex.models.stop_place_ref_structure import StopPlaceRefStructure
 from netex.models.suitabilities_rel_structure import SuitabilitiesRelStructure
 from netex.models.suitability import Suitability
@@ -96,6 +100,7 @@ from netex.models.transfer_duration_structure import TransferDurationStructure
 from netex.models.transition_enumeration import TransitionEnumeration
 from netex.models.type_of_equipment_ref import TypeOfEquipmentRef
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
+from netex.models.wheelchair_access import WheelchairAccess
 from netex.models.zone_ref_structure import ZoneRefStructure
 from xsdata.formats.dataclass.models.generics import DerivedElement
 from xsdata.models.datatype import XmlDateTime
@@ -104,10 +109,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002'
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        )
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
@@ -223,10 +232,18 @@ obj = PublicationDelivery(
                                 limitations=AccessibilityLimitationsRelStructure(
                                     accessibility_limitation=AccessibilityLimitation(
                                         id='tbd:POI_23',
-                                        wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                        step_free_access=LimitationStatusEnumeration.TRUE,
-                                        escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                        lift_free_access=LimitationStatusEnumeration.TRUE
+                                        wheelchair_access=WheelchairAccess(
+                                            value=LimitationStatusEnumeration.TRUE
+                                        ),
+                                        step_free_access=StepFreeAccess(
+                                            value=LimitationStatusEnumeration.TRUE
+                                        ),
+                                        escalator_free_access=EscalatorFreeAccess(
+                                            value=LimitationStatusEnumeration.TRUE
+                                        ),
+                                        lift_free_access=LiftFreeAccess(
+                                            value=LimitationStatusEnumeration.TRUE
+                                        )
                                     )
                                 )
                             ),
@@ -303,10 +320,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_A1-E1',
-                                                    wheelchair_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    step_free_access=LimitationStatusEnumeration.FALSE,
-                                                    escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.UNKNOWN
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.FALSE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             ),
                                             suitabilities=SuitabilitiesRelStructure(
@@ -459,10 +484,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_B1-E1',
-                                                    wheelchair_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    step_free_access=LimitationStatusEnumeration.FALSE,
-                                                    escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    lift_free_access=LimitationStatusEnumeration.FALSE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.UNKNOWN
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.FALSE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.FALSE
+                                                    )
                                                 )
                                             ),
                                             suitabilities=SuitabilitiesRelStructure(
@@ -634,10 +667,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_A1',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -679,10 +720,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_A2',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -724,9 +773,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_A3',
-                                                    step_free_access=LimitationStatusEnumeration.FALSE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.FALSE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -768,10 +826,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_B1',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -813,10 +879,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_A1-E1g_lim1',
-                                                    wheelchair_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    step_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.UNKNOWN
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -856,10 +930,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_B3',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -918,10 +1000,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_pl_A1-E1_to_A1-J1',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -982,10 +1072,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_pl_A1-J1_to_A2',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1046,10 +1144,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_pl_A1-J1_to_A3',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1109,10 +1215,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_pl_B1-E1_to_B1-J1',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1173,10 +1287,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_pl_B1-J1_to_B2',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1237,10 +1359,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_pl_B1-J1_to_B3',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1336,10 +1466,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_N1_A1-E1_to_A2',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1498,9 +1636,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_N2_A1-E1_to_A3',
-                                                    step_free_access=LimitationStatusEnumeration.FALSE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.FALSE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1667,10 +1814,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_N1_B1-E1_to_B2',
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1829,9 +1984,18 @@ obj = PublicationDelivery(
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
                                                     id='tbd:POI_23_N2_B1-E1_to_B3',
-                                                    step_free_access=LimitationStatusEnumeration.FALSE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.FALSE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),

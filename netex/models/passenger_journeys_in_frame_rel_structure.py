@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dated_service_journey import DatedServiceJourney
-from .service_journey import ServiceJourney
+from .service_journey_1 import ServiceJourney1
 from .special_service import SpecialService
 from .template_service_journey import TemplateServiceJourney
 
@@ -17,7 +17,7 @@ class PassengerJourneysInFrameRelStructure(ContainmentAggregationStructure):
     choice: List[
         Union[
             DatedServiceJourney,
-            ServiceJourney,
+            ServiceJourney1,
             SpecialService,
             TemplateServiceJourney,
         ]
@@ -33,7 +33,7 @@ class PassengerJourneysInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "ServiceJourney",
-                    "type": ServiceJourney,
+                    "type": ServiceJourney1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

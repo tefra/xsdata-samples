@@ -27,6 +27,9 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import (
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark import Crossmark
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.edition_number import (
+    EditionNumber,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.isbn import Isbn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.noisbn import Noisbn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_date import (
@@ -40,6 +43,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.set_metadata import (
     SetMetadata,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.volume import Volume
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -81,23 +85,19 @@ class BookSetMetadata:
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    volume: List[str] = field(
+    volume: List[Volume] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 2,
-            "min_length": 1,
-            "max_length": 32,
             "sequence": 1,
         },
     )
-    edition_number: Optional[str] = field(
+    edition_number: Optional[EditionNumber] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 15,
         },
     )
     publication_date: List[PublicationDate] = field(

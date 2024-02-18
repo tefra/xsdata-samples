@@ -1,11 +1,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.account_code_1 import AccountCode1
+from travelport.models.addl_booking_code_information import (
+    AddlBookingCodeInformation,
+)
 from travelport.models.air_fare_display_rule_key import AirFareDisplayRuleKey
 from travelport.models.booking_code import BookingCode
 from travelport.models.fare_display_rule import FareDisplayRule
+from travelport.models.fare_mileage_information import FareMileageInformation
 from travelport.models.fare_pricing import FarePricing
 from travelport.models.fare_restriction import FareRestriction
+from travelport.models.fare_routing_information import FareRoutingInformation
 from travelport.models.fare_rule_failure_info import FareRuleFailureInfo
 from travelport.models.price_change_type import PriceChangeType
 from travelport.models.type_atpcoglobal_indicator import (
@@ -95,14 +100,14 @@ class FareDisplay:
             "max_occurs": 99,
         },
     )
-    fare_routing_information: None | str = field(
+    fare_routing_information: None | FareRoutingInformation = field(
         default=None,
         metadata={
             "name": "FareRoutingInformation",
             "type": "Element",
         },
     )
-    fare_mileage_information: None | str = field(
+    fare_mileage_information: None | FareMileageInformation = field(
         default=None,
         metadata={
             "name": "FareMileageInformation",
@@ -133,13 +138,11 @@ class FareDisplay:
             "max_occurs": 999,
         },
     )
-    addl_booking_code_information: None | str = field(
+    addl_booking_code_information: None | AddlBookingCodeInformation = field(
         default=None,
         metadata={
             "name": "AddlBookingCodeInformation",
             "type": "Element",
-            "min_length": 1,
-            "white_space": "collapse",
         },
     )
     fare_rule_failure_info: None | FareRuleFailureInfo = field(

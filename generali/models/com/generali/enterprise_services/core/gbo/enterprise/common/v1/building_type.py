@@ -1,6 +1,11 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.quantity_type import (
     QuantityType,
 )
@@ -24,7 +29,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class BuildingType(SinglePointStructureType):
-    floor_area_m2: Optional[Decimal] = field(
+    floor_area_m2: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "FloorAreaM2",
@@ -32,7 +37,7 @@ class BuildingType(SinglePointStructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    floor_count: Optional[int] = field(
+    floor_count: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "FloorCount",
@@ -56,7 +61,7 @@ class BuildingType(SinglePointStructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    lift_count: Optional[int] = field(
+    lift_count: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "LiftCount",

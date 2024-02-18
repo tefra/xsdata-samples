@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from .response_timestamp import ResponseTimestamp
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
 class ResponseStructure:
-    response_timestamp: Optional[XmlDateTime] = field(
+    response_timestamp: Optional[ResponseTimestamp] = field(
         default=None,
         metadata={
             "name": "ResponseTimestamp",

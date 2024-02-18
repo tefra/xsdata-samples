@@ -10,6 +10,7 @@ from travelport.models.baggage_allowances import BaggageAllowances
 from travelport.models.booking_info import BookingInfo
 from travelport.models.booking_traveler_ref_1 import BookingTravelerRef1
 from travelport.models.commission_1 import Commission1
+from travelport.models.fare_calc import FareCalc
 from travelport.models.fare_info import FareInfo
 from travelport.models.fare_info_ref import FareInfoRef
 from travelport.models.fare_rules_filter import FareRulesFilter
@@ -228,7 +229,7 @@ class AirPricingInfo:
             "max_occurs": 999,
         },
     )
-    fare_calc: None | str = field(
+    fare_calc: None | FareCalc = field(
         default=None,
         metadata={
             "name": "FareCalc",

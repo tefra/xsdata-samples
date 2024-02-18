@@ -1,39 +1,51 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDateTime, XmlDuration
+from .message_qualifier_structure import MessageQualifierStructure
+from .participant_ref_structure import ParticipantRefStructure
 from .response_structure import ResponseStructure
 from .service_delivery_error_condition_structure import (
     ServiceDeliveryErrorConditionStructure,
 )
+from .status import Status
+from .subscription_filter_ref_structure import SubscriptionFilterRefStructure
+from .subscription_qualifier_structure import SubscriptionQualifierStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
 class AbstractServiceDeliveryStructure(ResponseStructure):
-    choice: List[str] = field(
+    choice: List[
+        Union[
+            MessageQualifierStructure,
+            ParticipantRefStructure,
+            SubscriptionFilterRefStructure,
+            SubscriptionQualifierStructure,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
             "choices": (
                 {
                     "name": "RequestMessageRef",
-                    "type": str,
+                    "type": MessageQualifierStructure,
                     "namespace": "http://www.siri.org.uk/siri",
                 },
                 {
                     "name": "SubscriberRef",
-                    "type": str,
+                    "type": ParticipantRefStructure,
                     "namespace": "http://www.siri.org.uk/siri",
                 },
                 {
                     "name": "SubscriptionFilterRef",
-                    "type": str,
+                    "type": SubscriptionFilterRefStructure,
                     "namespace": "http://www.siri.org.uk/siri",
                 },
                 {
                     "name": "SubscriptionRef",
-                    "type": str,
+                    "type": SubscriptionQualifierStructure,
                     "namespace": "http://www.siri.org.uk/siri",
                 },
             ),
@@ -48,7 +60,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[str] = field(
+    delegator_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "DelegatorRef",
@@ -56,7 +68,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: Optional[bool] = field(
+    status: Optional[Status] = field(
         default=None,
         metadata={
             "name": "Status",

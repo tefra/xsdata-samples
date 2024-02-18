@@ -1,12 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+from voko.models.baz import Baz
 from voko.models.ctl import Ctl
 from voko.models.em import Em
+from voko.models.esc import Esc
 from voko.models.fnt import Fnt
 from voko.models.frm import Frm
 from voko.models.klr_tip import KlrTip
 from voko.models.mis import Mis
 from voko.models.mll_tip import MllTip
+from voko.models.nac import Nac
+from voko.models.nom import Nom
+from voko.models.ofc import Ofc
 from voko.models.ref_tip import RefTip
 from voko.models.refgrp_tip import RefgrpTip
 from voko.models.sncref import Sncref
@@ -200,11 +205,11 @@ class Trd:
                 },
                 {
                     "name": "ofc",
-                    "type": str,
+                    "type": Ofc,
                 },
                 {
                     "name": "baz",
-                    "type": str,
+                    "type": Baz,
                 },
             ),
         },
@@ -326,15 +331,15 @@ class Ekz:
                 },
                 {
                     "name": "nom",
-                    "type": str,
+                    "type": Nom,
                 },
                 {
                     "name": "nac",
-                    "type": str,
+                    "type": Nac,
                 },
                 {
                     "name": "esc",
-                    "type": str,
+                    "type": Esc,
                 },
             ),
         },
@@ -421,15 +426,15 @@ class Klr:
                 },
                 {
                     "name": "nom",
-                    "type": str,
+                    "type": Nom,
                 },
                 {
                     "name": "nac",
-                    "type": str,
+                    "type": Nac,
                 },
                 {
                     "name": "esc",
-                    "type": str,
+                    "type": Esc,
                 },
             ),
         },

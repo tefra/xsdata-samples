@@ -1,7 +1,25 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.conference_acronym import (
+    ConferenceAcronym,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.conference_date import (
     ConferenceDate,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.conference_location import (
+    ConferenceLocation,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.conference_name import (
+    ConferenceName,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.conference_number import (
+    ConferenceNumber,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.conference_sponsor import (
+    ConferenceSponsor,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.conference_theme import (
+    ConferenceTheme,
 )
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
@@ -19,54 +37,42 @@ class EventMetadata:
         name = "event_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    conference_name: Optional[str] = field(
+    conference_name: Optional[ConferenceName] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 3,
-            "max_length": 512,
         },
     )
-    conference_theme: Optional[str] = field(
+    conference_theme: Optional[ConferenceTheme] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 255,
         },
     )
-    conference_acronym: Optional[str] = field(
+    conference_acronym: Optional[ConferenceAcronym] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 127,
         },
     )
-    conference_sponsor: List[str] = field(
+    conference_sponsor: List[ConferenceSponsor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 10,
-            "min_length": 1,
-            "max_length": 255,
         },
     )
-    conference_number: Optional[str] = field(
+    conference_number: Optional[ConferenceNumber] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 15,
         },
     )
-    conference_location: Optional[str] = field(
+    conference_location: Optional[ConferenceLocation] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 2,
-            "max_length": 255,
         },
     )
     conference_date: Optional[ConferenceDate] = field(

@@ -1,5 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi import Doi
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.full_title import (
+    FullTitle,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.isbn import Isbn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.issn import Issn
 
@@ -19,14 +23,12 @@ class Publication:
         name = "publication"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    full_title: List[str] = field(
+    full_title: List[FullTitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 10,
-            "min_length": 1,
-            "max_length": 255,
         },
     )
     issn: List[Issn] = field(
@@ -43,12 +45,9 @@ class Publication:
             "max_occurs": 2,
         },
     )
-    doi: Optional[str] = field(
+    doi: Optional[Doi] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 6,
-            "max_length": 2048,
-            "pattern": r"10\.[0-9]{4,9}/.{1,200}",
         },
     )

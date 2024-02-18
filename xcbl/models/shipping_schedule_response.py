@@ -4,16 +4,19 @@ from xcbl.models.sourcing_result import (
     BillToParty,
     BuyerParty,
     CarrierId,
+    CarrierName,
     CatalogReference,
     ConditionsOfSale,
     Contract,
     CountryOfDestination,
     CountryOfOrigin,
+    CustShippingContractNum,
     FinalRecipient,
     HazardousMaterials,
     ItemContractReferences,
     ItemIdentifiers,
     ItemPackagingReference,
+    LineItemNote,
     LineItemNum,
     LineItemType,
     ListOfAttachment,
@@ -24,14 +27,22 @@ from xcbl.models.sourcing_result import (
     ListOfStructuredNote,
     ListOfTransportEquipment,
     MaxBackOrderQuantity,
+    OffCatalogFlag,
     ParentItemNumber,
     Quantity,
+    QuantityQualifierCoded,
+    QuantityQualifierCodedOther,
     SellerParty,
+    ServiceLevelCoded,
+    ServiceLevelCodedOther,
     ShipFromParty,
     ShipToParty,
+    ShippingInstructions,
     TermsOfDelivery,
     TotalQuantity,
     TransitDirection,
+    TransportLegCoded,
+    TransportLegCodedOther,
     TransportMeans,
     TransportMode,
 )
@@ -52,134 +63,540 @@ from xcbl.models.trading_partner_user_information import (
 
 
 @dataclass(kw_only=True)
+class ActualArrivalDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ActualDepartureDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class BuyerOrderNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CommitmentLevelCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CommitmentLevelCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class DetailResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class DetailResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class EstimatedArrivalDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class EstimatedDepartureDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ForecastFrequencyCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ForecastFrequencyCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class IdassignedByCoded:
+    class Meta:
+        name = "IDAssignedByCoded"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class IdassignedByCodedOther:
+    class Meta:
+        name = "IDAssignedByCodedOther"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class IdassignedDate:
+    class Meta:
+        name = "IDAssignedDate"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Idnumber:
+    class Meta:
+        name = "IDNumber"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ItemReleaseStatusCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ItemReleaseStatusCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LocationId:
+    class Meta:
+        name = "LocationID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RecordKeepingYear:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ReleaseNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RequestedResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RequestedResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ResourceAuthorizationCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ResourceAuthorizationCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ResponseTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ResponseTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RouteId:
+    class Meta:
+        name = "RouteID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ScheduleId:
+    class Meta:
+        name = "ScheduleID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ScheduleIssuedDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ScheduleNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ScheduleResponseId:
+    class Meta:
+        name = "ScheduleResponseID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ScheduleResponseIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ScheduleTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ScheduleTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SellerOrderNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Sequence:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ServiceLevelReasonCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ServiceLevelReasonCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ServiceLevelResponsibilityCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ServiceLevelResponsibilityCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ShippingScheduleHeaderNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ShippingScheduleResponseHeaderNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalNumberOfLineItems:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TransportRequirementCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TransportRequirementCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TransportRouteId:
+    class Meta:
+        name = "TransportRouteID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class IdassignedBy:
     class Meta:
         name = "IDAssignedBy"
 
-    idassigned_by_coded: str = field(
+    idassigned_by_coded: IdassignedByCoded = field(
         metadata={
             "name": "IDAssignedByCoded",
             "type": "Element",
             "required": True,
         }
     )
-    idassigned_by_coded_other: Optional[str] = field(
+    idassigned_by_coded_other: Optional[IdassignedByCodedOther] = field(
         default=None,
         metadata={
             "name": "IDAssignedByCodedOther",
             "type": "Element",
         },
-    )
-
-
-@dataclass(kw_only=True)
-class OrderType:
-    order_type_coded: str = field(
-        metadata={
-            "name": "OrderTypeCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    order_type_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "OrderTypeCodedOther",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class RequestedResponse:
-    requested_response_coded: str = field(
-        metadata={
-            "name": "RequestedResponseCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    requested_response_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "RequestedResponseCodedOther",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ResponseType:
-    response_type_coded: str = field(
-        metadata={
-            "name": "ResponseTypeCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    response_type_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ResponseTypeCodedOther",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ServiceLevel:
-    service_level_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelCoded",
-            "type": "Element",
-        },
-    )
-    service_level_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelCodedOther",
-            "type": "Element",
-        },
-    )
-    service_level_reason_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelReasonCoded",
-            "type": "Element",
-        },
-    )
-    service_level_reason_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelReasonCodedOther",
-            "type": "Element",
-        },
-    )
-    service_level_responsibility_coded: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelResponsibilityCoded",
-            "type": "Element",
-        },
-    )
-    service_level_responsibility_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ServiceLevelResponsibilityCodedOther",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ShippingScheduleSummary:
-    total_number_of_line_items: str = field(
-        metadata={
-            "name": "TotalNumberOfLineItems",
-            "type": "Element",
-            "required": True,
-        }
     )
 
 
@@ -196,14 +613,16 @@ class ItemQuantities:
 
 @dataclass(kw_only=True)
 class ItemResourceAuthorization:
-    resource_authorization_coded: str = field(
+    resource_authorization_coded: ResourceAuthorizationCoded = field(
         metadata={
             "name": "ResourceAuthorizationCoded",
             "type": "Element",
             "required": True,
         }
     )
-    resource_authorization_coded_other: Optional[str] = field(
+    resource_authorization_coded_other: Optional[
+        ResourceAuthorizationCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "ResourceAuthorizationCodedOther",
@@ -254,28 +673,18 @@ class MaterialIssuerParty:
 
 
 @dataclass(kw_only=True)
-class MessageId:
-    class Meta:
-        name = "MessageID"
-
-    idnumber: str = field(
+class OrderType:
+    order_type_coded: OrderTypeCoded = field(
         metadata={
-            "name": "IDNumber",
+            "name": "OrderTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    idassigned_by: IdassignedBy = field(
-        metadata={
-            "name": "IDAssignedBy",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    idassigned_date: Optional[str] = field(
+    order_type_coded_other: Optional[OrderTypeCodedOther] = field(
         default=None,
         metadata={
-            "name": "IDAssignedDate",
+            "name": "OrderTypeCodedOther",
             "type": "Element",
         },
     )
@@ -289,6 +698,44 @@ class OtherSchedleReferences:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class RequestedResponse:
+    requested_response_coded: RequestedResponseCoded = field(
+        metadata={
+            "name": "RequestedResponseCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    requested_response_coded_other: Optional[
+        RequestedResponseCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "RequestedResponseCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ResponseType:
+    response_type_coded: ResponseTypeCoded = field(
+        metadata={
+            "name": "ResponseTypeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    response_type_coded_other: Optional[ResponseTypeCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "ResponseTypeCodedOther",
+            "type": "Element",
+        },
     )
 
 
@@ -337,10 +784,62 @@ class ScheduleReference:
 
 
 @dataclass(kw_only=True)
-class ShippingScheduleResponseSummary:
-    shipping_schedule_summary: ShippingScheduleSummary = field(
+class ServiceLevel:
+    service_level_coded: Optional[ServiceLevelCoded] = field(
+        default=None,
         metadata={
-            "name": "ShippingScheduleSummary",
+            "name": "ServiceLevelCoded",
+            "type": "Element",
+        },
+    )
+    service_level_coded_other: Optional[ServiceLevelCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "ServiceLevelCodedOther",
+            "type": "Element",
+        },
+    )
+    service_level_reason_coded: Optional[ServiceLevelReasonCoded] = field(
+        default=None,
+        metadata={
+            "name": "ServiceLevelReasonCoded",
+            "type": "Element",
+        },
+    )
+    service_level_reason_coded_other: Optional[
+        ServiceLevelReasonCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "ServiceLevelReasonCodedOther",
+            "type": "Element",
+        },
+    )
+    service_level_responsibility_coded: Optional[
+        ServiceLevelResponsibilityCoded
+    ] = field(
+        default=None,
+        metadata={
+            "name": "ServiceLevelResponsibilityCoded",
+            "type": "Element",
+        },
+    )
+    service_level_responsibility_coded_other: Optional[
+        ServiceLevelResponsibilityCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "ServiceLevelResponsibilityCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ShippingScheduleSummary:
+    total_number_of_line_items: TotalNumberOfLineItems = field(
+        metadata={
+            "name": "TotalNumberOfLineItems",
             "type": "Element",
             "required": True,
         }
@@ -356,42 +855,42 @@ class TransportLocation:
             "required": True,
         }
     )
-    location_id: str = field(
+    location_id: LocationId = field(
         metadata={
             "name": "LocationID",
             "type": "Element",
             "required": True,
         }
     )
-    sequence: Optional[str] = field(
+    sequence: Optional[Sequence] = field(
         default=None,
         metadata={
             "name": "Sequence",
             "type": "Element",
         },
     )
-    estimated_arrival_date: Optional[str] = field(
+    estimated_arrival_date: Optional[EstimatedArrivalDate] = field(
         default=None,
         metadata={
             "name": "EstimatedArrivalDate",
             "type": "Element",
         },
     )
-    actual_arrival_date: Optional[str] = field(
+    actual_arrival_date: Optional[ActualArrivalDate] = field(
         default=None,
         metadata={
             "name": "ActualArrivalDate",
             "type": "Element",
         },
     )
-    estimated_departure_date: Optional[str] = field(
+    estimated_departure_date: Optional[EstimatedDepartureDate] = field(
         default=None,
         metadata={
             "name": "EstimatedDepartureDate",
             "type": "Element",
         },
     )
-    actual_departure_date: Optional[str] = field(
+    actual_departure_date: Optional[ActualDepartureDate] = field(
         default=None,
         metadata={
             "name": "ActualDepartureDate",
@@ -456,16 +955,29 @@ class InterimTransportLocation:
 
 
 @dataclass(kw_only=True)
-class ListOfMessageId:
+class MessageId:
     class Meta:
-        name = "ListOfMessageID"
+        name = "MessageID"
 
-    message_id: List[MessageId] = field(
-        default_factory=list,
+    idnumber: Idnumber = field(
         metadata={
-            "name": "MessageID",
+            "name": "IDNumber",
             "type": "Element",
-            "min_occurs": 1,
+            "required": True,
+        }
+    )
+    idassigned_by: IdassignedBy = field(
+        metadata={
+            "name": "IDAssignedBy",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    idassigned_date: Optional[IdassignedDate] = field(
+        default=None,
+        metadata={
+            "name": "IDAssignedDate",
+            "type": "Element",
         },
     )
 
@@ -525,14 +1037,14 @@ class ScheduleParty:
 
 @dataclass(kw_only=True)
 class ShipScheduleDetail:
-    commitment_level_coded: str = field(
+    commitment_level_coded: CommitmentLevelCoded = field(
         metadata={
             "name": "CommitmentLevelCoded",
             "type": "Element",
             "required": True,
         }
     )
-    commitment_level_coded_other: Optional[str] = field(
+    commitment_level_coded_other: Optional[CommitmentLevelCodedOther] = field(
         default=None,
         metadata={
             "name": "CommitmentLevelCodedOther",
@@ -560,19 +1072,30 @@ class ShipScheduleDetail:
             "type": "Element",
         },
     )
-    schedule_note: Optional[str] = field(
+    schedule_note: Optional[ScheduleNote] = field(
         default=None,
         metadata={
             "name": "ScheduleNote",
             "type": "Element",
         },
     )
-    route_id: Optional[str] = field(
+    route_id: Optional[RouteId] = field(
         default=None,
         metadata={
             "name": "RouteID",
             "type": "Element",
         },
+    )
+
+
+@dataclass(kw_only=True)
+class ShippingScheduleResponseSummary:
+    shipping_schedule_summary: ShippingScheduleSummary = field(
+        metadata={
+            "name": "ShippingScheduleSummary",
+            "type": "Element",
+            "required": True,
+        }
     )
 
 
@@ -606,11 +1129,14 @@ class TransportQuantities:
 
 
 @dataclass(kw_only=True)
-class ListOfShipScheduleDetail:
-    ship_schedule_detail: List[ShipScheduleDetail] = field(
+class ListOfMessageId:
+    class Meta:
+        name = "ListOfMessageID"
+
+    message_id: List[MessageId] = field(
         default_factory=list,
         metadata={
-            "name": "ShipScheduleDetail",
+            "name": "MessageID",
             "type": "Element",
             "min_occurs": 1,
         },
@@ -618,26 +1144,13 @@ class ListOfShipScheduleDetail:
 
 
 @dataclass(kw_only=True)
-class OrderNumber:
-    buyer_order_number: str = field(
+class ListOfShipScheduleDetail:
+    ship_schedule_detail: List[ShipScheduleDetail] = field(
+        default_factory=list,
         metadata={
-            "name": "BuyerOrderNumber",
+            "name": "ShipScheduleDetail",
             "type": "Element",
-            "required": True,
-        }
-    )
-    seller_order_number: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SellerOrderNumber",
-            "type": "Element",
-        },
-    )
-    list_of_message_id: Optional[ListOfMessageId] = field(
-        default=None,
-        metadata={
-            "name": "ListOfMessageID",
-            "type": "Element",
+            "min_occurs": 1,
         },
     )
 
@@ -693,25 +1206,25 @@ class LocationShipSchedule:
 
 
 @dataclass(kw_only=True)
-class ScheduleOrderReference:
-    order_number: OrderNumber = field(
+class OrderNumber:
+    buyer_order_number: BuyerOrderNumber = field(
         metadata={
-            "name": "OrderNumber",
+            "name": "BuyerOrderNumber",
             "type": "Element",
             "required": True,
         }
     )
-    order_issue_date: Optional[str] = field(
+    seller_order_number: Optional[SellerOrderNumber] = field(
         default=None,
         metadata={
-            "name": "OrderIssueDate",
+            "name": "SellerOrderNumber",
             "type": "Element",
         },
     )
-    order_type: Optional[OrderType] = field(
+    list_of_message_id: Optional[ListOfMessageId] = field(
         default=None,
         metadata={
-            "name": "OrderType",
+            "name": "ListOfMessageID",
             "type": "Element",
         },
     )
@@ -719,7 +1232,7 @@ class ScheduleOrderReference:
 
 @dataclass(kw_only=True)
 class TransportRouting:
-    transport_route_id: str = field(
+    transport_route_id: TransportRouteId = field(
         metadata={
             "name": "TransportRouteID",
             "type": "Element",
@@ -754,21 +1267,23 @@ class TransportRouting:
             "type": "Element",
         },
     )
-    transport_requirement_coded: Optional[str] = field(
+    transport_requirement_coded: Optional[TransportRequirementCoded] = field(
         default=None,
         metadata={
             "name": "TransportRequirementCoded",
             "type": "Element",
         },
     )
-    transport_requirement_coded_other: Optional[str] = field(
+    transport_requirement_coded_other: Optional[
+        TransportRequirementCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "TransportRequirementCodedOther",
             "type": "Element",
         },
     )
-    carrier_name: Optional[str] = field(
+    carrier_name: Optional[CarrierName] = field(
         default=None,
         metadata={
             "name": "CarrierName",
@@ -789,7 +1304,7 @@ class TransportRouting:
             "type": "Element",
         },
     )
-    cust_shipping_contract_num: Optional[str] = field(
+    cust_shipping_contract_num: Optional[CustShippingContractNum] = field(
         default=None,
         metadata={
             "name": "CustShippingContractNum",
@@ -803,21 +1318,21 @@ class TransportRouting:
             "type": "Element",
         },
     )
-    shipping_instructions: Optional[str] = field(
+    shipping_instructions: Optional[ShippingInstructions] = field(
         default=None,
         metadata={
             "name": "ShippingInstructions",
             "type": "Element",
         },
     )
-    transport_leg_coded: Optional[str] = field(
+    transport_leg_coded: Optional[TransportLegCoded] = field(
         default=None,
         metadata={
             "name": "TransportLegCoded",
             "type": "Element",
         },
     )
-    transport_leg_coded_other: Optional[str] = field(
+    transport_leg_coded_other: Optional[TransportLegCodedOther] = field(
         default=None,
         metadata={
             "name": "TransportLegCodedOther",
@@ -872,6 +1387,31 @@ class ListOfTransportRouting:
 
 
 @dataclass(kw_only=True)
+class ScheduleOrderReference:
+    order_number: OrderNumber = field(
+        metadata={
+            "name": "OrderNumber",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    order_issue_date: Optional[OrderIssueDate] = field(
+        default=None,
+        metadata={
+            "name": "OrderIssueDate",
+            "type": "Element",
+        },
+    )
+    order_type: Optional[OrderType] = field(
+        default=None,
+        metadata={
+            "name": "OrderType",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class ScheduleReferences:
     contract_references: Optional[ContractReferences] = field(
         default=None,
@@ -916,14 +1456,14 @@ class ItemScheduleReference:
 
 @dataclass(kw_only=True)
 class ShippingScheduleHeader:
-    schedule_id: str = field(
+    schedule_id: ScheduleId = field(
         metadata={
             "name": "ScheduleID",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_issued_date: str = field(
+    schedule_issued_date: ScheduleIssuedDate = field(
         metadata={
             "name": "ScheduleIssuedDate",
             "type": "Element",
@@ -937,7 +1477,7 @@ class ShippingScheduleHeader:
             "type": "Element",
         },
     )
-    release_number: Optional[str] = field(
+    release_number: Optional[ReleaseNumber] = field(
         default=None,
         metadata={
             "name": "ReleaseNumber",
@@ -958,28 +1498,30 @@ class ShippingScheduleHeader:
             "type": "Element",
         },
     )
-    schedule_type_coded: str = field(
+    schedule_type_coded: ScheduleTypeCoded = field(
         metadata={
             "name": "ScheduleTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_type_coded_other: Optional[str] = field(
+    schedule_type_coded_other: Optional[ScheduleTypeCodedOther] = field(
         default=None,
         metadata={
             "name": "ScheduleTypeCodedOther",
             "type": "Element",
         },
     )
-    quantity_qualifier_coded: str = field(
+    quantity_qualifier_coded: QuantityQualifierCoded = field(
         metadata={
             "name": "QuantityQualifierCoded",
             "type": "Element",
             "required": True,
         }
     )
-    quantity_qualifier_coded_other: Optional[str] = field(
+    quantity_qualifier_coded_other: Optional[
+        QuantityQualifierCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "QuantityQualifierCodedOther",
@@ -1021,7 +1563,9 @@ class ShippingScheduleHeader:
             "required": True,
         }
     )
-    shipping_schedule_header_note: Optional[str] = field(
+    shipping_schedule_header_note: Optional[
+        ShippingScheduleHeaderNote
+    ] = field(
         default=None,
         metadata={
             "name": "ShippingScheduleHeaderNote",
@@ -1102,7 +1646,7 @@ class BaseShippingDetail:
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[str] = field(
+    off_catalog_flag: Optional[OffCatalogFlag] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
@@ -1172,7 +1716,7 @@ class BaseShippingDetail:
             "type": "Element",
         },
     )
-    record_keeping_year: Optional[str] = field(
+    record_keeping_year: Optional[RecordKeepingYear] = field(
         default=None,
         metadata={
             "name": "RecordKeepingYear",
@@ -1186,14 +1730,16 @@ class BaseShippingDetail:
             "type": "Element",
         },
     )
-    forecast_frequency_coded: str = field(
+    forecast_frequency_coded: ForecastFrequencyCoded = field(
         metadata={
             "name": "ForecastFrequencyCoded",
             "type": "Element",
             "required": True,
         }
     )
-    forecast_frequency_coded_other: Optional[str] = field(
+    forecast_frequency_coded_other: Optional[
+        ForecastFrequencyCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "ForecastFrequencyCodedOther",
@@ -1207,14 +1753,16 @@ class BaseShippingDetail:
             "type": "Element",
         },
     )
-    item_release_status_coded: Optional[str] = field(
+    item_release_status_coded: Optional[ItemReleaseStatusCoded] = field(
         default=None,
         metadata={
             "name": "ItemReleaseStatusCoded",
             "type": "Element",
         },
     )
-    item_release_status_coded_other: Optional[str] = field(
+    item_release_status_coded_other: Optional[
+        ItemReleaseStatusCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "ItemReleaseStatusCodedOther",
@@ -1268,7 +1816,7 @@ class LocationShippingItemDetail:
             "required": True,
         }
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
@@ -1300,7 +1848,7 @@ class MaterialGroupedShippingDetail:
             "required": True,
         }
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
@@ -1318,14 +1866,14 @@ class MaterialGroupedShippingDetail:
 
 @dataclass(kw_only=True)
 class ShippingScheduleResponseHeader:
-    schedule_response_id: str = field(
+    schedule_response_id: ScheduleResponseId = field(
         metadata={
             "name": "ScheduleResponseID",
             "type": "Element",
             "required": True,
         }
     )
-    schedule_response_issue_date: str = field(
+    schedule_response_issue_date: ScheduleResponseIssueDate = field(
         metadata={
             "name": "ScheduleResponseIssueDate",
             "type": "Element",
@@ -1399,7 +1947,9 @@ class ShippingScheduleResponseHeader:
             "type": "Element",
         },
     )
-    shipping_schedule_response_header_note: Optional[str] = field(
+    shipping_schedule_response_header_note: Optional[
+        ShippingScheduleResponseHeaderNote
+    ] = field(
         default=None,
         metadata={
             "name": "ShippingScheduleResponseHeaderNote",
@@ -1485,14 +2035,14 @@ class LocationGroupedShippingDetail:
 
 @dataclass(kw_only=True)
 class MaterialGroupedShippingResponse:
-    detail_response_coded: str = field(
+    detail_response_coded: DetailResponseCoded = field(
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    detail_response_coded_other: Optional[str] = field(
+    detail_response_coded_other: Optional[DetailResponseCodedOther] = field(
         default=None,
         metadata={
             "name": "DetailResponseCodedOther",
@@ -1517,7 +2067,7 @@ class MaterialGroupedShippingResponse:
             "type": "Element",
         },
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
@@ -1578,14 +2128,14 @@ class OriginalLocationGroupedShippingDetail:
 
 @dataclass(kw_only=True)
 class LocationGroupedShippingResponse:
-    detail_response_coded: str = field(
+    detail_response_coded: DetailResponseCoded = field(
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    detail_response_coded_other: Optional[str] = field(
+    detail_response_coded_other: Optional[DetailResponseCodedOther] = field(
         default=None,
         metadata={
             "name": "DetailResponseCodedOther",
@@ -1610,7 +2160,7 @@ class LocationGroupedShippingResponse:
             "type": "Element",
         },
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",

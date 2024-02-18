@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 from travelport.models.provider_reservation_info_ref_2 import (
     ProviderReservationInfoRef2,
 )
+from travelport.models.state_2 import State2
 from travelport.models.type_element_status_2 import TypeElementStatus2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
@@ -68,7 +69,7 @@ class TypeStructuredAddress2:
             "max_length": 50,
         },
     )
-    state: None | str = field(
+    state: None | State2 = field(
         default=None,
         metadata={
             "name": "State",

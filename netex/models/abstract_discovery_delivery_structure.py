@@ -5,13 +5,14 @@ from .response_structure import ResponseStructure
 from .service_delivery_error_condition_structure import (
     ServiceDeliveryErrorConditionStructure,
 )
+from .status import Status
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
 class AbstractDiscoveryDeliveryStructure(ResponseStructure):
-    status: Optional[bool] = field(
+    status: Optional[Status] = field(
         default=None,
         metadata={
             "name": "Status",

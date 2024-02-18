@@ -1,6 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.name_1 import Name1
+from travelport.models.ticket_number_1 import TicketNumber1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,14 +26,12 @@ class RefundFailureInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    ticket_number: None | str = field(
+    ticket_number: None | TicketNumber1 = field(
         default=None,
         metadata={
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "min_length": 1,
-            "max_length": 13,
         },
     )
     name: None | Name1 = field(

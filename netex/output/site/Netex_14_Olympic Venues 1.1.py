@@ -25,6 +25,7 @@ from netex.models.multilingual_string import MultilingualString
 from netex.models.name_type_enumeration import NameTypeEnumeration
 from netex.models.navigation_path import NavigationPath
 from netex.models.navigation_paths_in_frame_rel_structure import NavigationPathsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.path_link_end_structure import PathLinkEndStructure
 from netex.models.place_ref_structure import PlaceRefStructure
 from netex.models.point_of_interest import PointOfInterest
@@ -50,7 +51,9 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
-    participant_ref='ODAtransport_TDM',
+    participant_ref=ParticipantRef(
+        value='ODAtransport_TDM'
+    ),
     description=MultilingualString(
         value='Olympic Venue Definitions'
     ),

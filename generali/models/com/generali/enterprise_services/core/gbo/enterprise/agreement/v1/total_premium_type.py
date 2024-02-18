@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.instalment_plans_type import (
     InstalmentPlansType,
@@ -21,7 +23,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class TotalPremiumType:
-    warranty_applies_after_days: Optional[Decimal] = field(
+    warranty_applies_after_days: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "WarrantyAppliesAfterDays",

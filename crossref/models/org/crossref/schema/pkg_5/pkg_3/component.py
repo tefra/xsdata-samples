@@ -13,6 +13,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import (
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.description import (
     Description,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi import Doi
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.format import Format
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_date import (
@@ -79,13 +80,10 @@ class Component:
             "type": "Element",
         },
     )
-    doi: Optional[str] = field(
+    doi: Optional[Doi] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 6,
-            "max_length": 2048,
-            "pattern": r"10\.[0-9]{4,9}/.{1,200}",
         },
     )
     parent_relation: Optional[ComponentParentRelation] = field(

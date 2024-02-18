@@ -13,9 +13,9 @@ from netex.models.baggage_type_enumeration import BaggageTypeEnumeration
 from netex.models.baggage_use_type_enumeration import BaggageUseTypeEnumeration
 from netex.models.branding import Branding
 from netex.models.branding_ref import BrandingRef
-from netex.models.cell_versioned_child_structure import Cell
+from netex.models.cell_versioned_child_structure import Cell1
 from netex.models.cell_versioned_child_structure import CellsRelStructure
-from netex.models.cell_versioned_child_structure import FareTable
+from netex.models.cell_versioned_child_structure import FareTable1
 from netex.models.cell_versioned_child_structure import FareTablesRelStructure
 from netex.models.charging_moment import ChargingMoment
 from netex.models.charging_moment_enumeration import ChargingMomentEnumeration
@@ -143,7 +143,7 @@ from netex.models.language_usage_structure import LanguageUsageStructure
 from netex.models.language_use_enumeration import LanguageUseEnumeration
 from netex.models.limiting_rule import LimitingRule
 from netex.models.limiting_rule_ref import LimitingRuleRef
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.line_ref import LineRef
 from netex.models.line_refs_rel_structure import LineRefsRelStructure
 from netex.models.line_type_enumeration import LineTypeEnumeration
@@ -159,7 +159,7 @@ from netex.models.multilingual_string import MultilingualString
 from netex.models.network import Network
 from netex.models.network_ref import NetworkRef
 from netex.models.notice import Notice
-from netex.models.notice_assignment import NoticeAssignment
+from netex.models.notice_assignment_1 import NoticeAssignment1
 from netex.models.notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from netex.models.object_refs_rel_structure import ObjectRefsRelStructure
 from netex.models.offered_travel_specification import OfferedTravelSpecification
@@ -170,6 +170,7 @@ from netex.models.organisation_ref_structure import OrganisationRefStructure
 from netex.models.organisation_type_enumeration import OrganisationTypeEnumeration
 from netex.models.organisation_version_structure import OrganisationVersionStructure
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passenger_seat_ref import PassengerSeatRef
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.penalty_policy import PenaltyPolicy
@@ -187,7 +188,7 @@ from netex.models.price_unit_ref import PriceUnitRef
 from netex.models.price_units_rel_structure import PriceUnitsRelStructure
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
 from netex.models.pricing_parameter_set import PricingParameterSet
-from netex.models.pricing_rule import PricingRule
+from netex.models.pricing_rule_1 import PricingRule1
 from netex.models.pricing_rule_ref import PricingRuleRef
 from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
 from netex.models.private_code import PrivateCode
@@ -200,7 +201,7 @@ from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
 from netex.models.purchase_window import PurchaseWindow
 from netex.models.purchase_window_ref import PurchaseWindowRef
 from netex.models.purpose_of_grouping import PurposeOfGrouping
-from netex.models.quality_structure_factor import QualityStructureFactor
+from netex.models.quality_structure_factor_1 import QualityStructureFactor1
 from netex.models.quality_structure_factor_ref import QualityStructureFactorRef
 from netex.models.quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
 from netex.models.refunding import Refunding
@@ -346,7 +347,9 @@ from xsdata.models.datatype import XmlPeriod
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2018, 4, 1, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     description=MultilingualString(
         value='Distance based fare - Romania '
     ),
@@ -433,14 +436,14 @@ obj = PublicationDelivery(
                                 ),
                                 pricing_rules=PricingRulesRelStructure(
                                     pricing_rule=[
-                                        PricingRule(
+                                        PricingRule1(
                                             id='tfc:TFC@Common@rate@route',
                                             version='any',
                                             name=MultilingualString(
                                                 value='Distance based pricing'
                                             )
                                         ),
-                                        PricingRule(
+                                        PricingRule1(
                                             id='tfc:TFC@Tariff@General@geographic_intervals@distance',
                                             version='any',
                                             name=MultilingualString(
@@ -4458,7 +4461,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable(
+                                    FareTable1(
                                         id='tfc:Single@preboard@R',
                                         version='01',
                                         name=MultilingualString(
@@ -4620,7 +4623,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     notice_assignments=NoticeAssignmentsRelStructure(
                                                         sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
-                                                            NoticeAssignment(
+                                                            NoticeAssignment1(
                                                                 id='tfc:Single@preboard@R@001+005',
                                                                 version='01',
                                                                 order=1,
@@ -4941,7 +4944,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Single@preboard@R@C1@full',
                                                     version='01',
                                                     name=MultilingualString(
@@ -4993,7 +4996,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@001+005',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5007,7 +5010,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@006+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5033,7 +5036,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5059,7 +5062,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5085,7 +5088,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5111,7 +5114,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5137,7 +5140,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5163,7 +5166,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5189,7 +5192,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5215,7 +5218,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5241,7 +5244,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5267,7 +5270,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5293,7 +5296,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5319,7 +5322,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5345,7 +5348,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5371,7 +5374,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5397,7 +5400,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5422,7 +5425,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5448,7 +5451,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=18
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@full@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5477,7 +5480,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Single@preboard@R@C1@fac',
                                                     version='01',
                                                     name=MultilingualString(
@@ -5534,7 +5537,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@001+005',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5548,7 +5551,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@006+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5586,7 +5589,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5624,7 +5627,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5662,7 +5665,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5700,7 +5703,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5738,7 +5741,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5776,7 +5779,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5814,7 +5817,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5852,7 +5855,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5890,7 +5893,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5928,7 +5931,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -5966,7 +5969,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6004,7 +6007,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6042,7 +6045,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6080,7 +6083,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6118,7 +6121,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6156,7 +6159,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6194,7 +6197,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=18
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C1@fac@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6235,7 +6238,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Single@preboard@R@C2@full',
                                                     version='01',
                                                     name=MultilingualString(
@@ -6272,7 +6275,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@001+005',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6298,7 +6301,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@006+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6324,7 +6327,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6350,7 +6353,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6376,7 +6379,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6402,7 +6405,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6428,7 +6431,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6454,7 +6457,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6480,7 +6483,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6506,7 +6509,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6532,7 +6535,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6558,7 +6561,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6584,7 +6587,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6610,7 +6613,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6636,7 +6639,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6662,7 +6665,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6688,7 +6691,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6713,7 +6716,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6739,7 +6742,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=18
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@full@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6768,7 +6771,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Single@preboard@R@C2@fac',
                                                     version='01',
                                                     name=MultilingualString(
@@ -6843,7 +6846,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@001+005',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6857,7 +6860,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@006+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6895,7 +6898,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6933,7 +6936,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -6971,7 +6974,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7009,7 +7012,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7047,7 +7050,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7085,7 +7088,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7123,7 +7126,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7161,7 +7164,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7199,7 +7202,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7237,7 +7240,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7275,7 +7278,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7313,7 +7316,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7351,7 +7354,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7389,7 +7392,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7427,7 +7430,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7465,7 +7468,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7503,7 +7506,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=18
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@R@C2@fac@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -7547,7 +7550,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    FareTable(
+                                    FareTable1(
                                         id='tfc:Single@preboard@IR',
                                         version='01',
                                         name=MultilingualString(
@@ -7789,7 +7792,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Single@preboard@IR_C1@full',
                                                     version='01',
                                                     name=MultilingualString(
@@ -7826,7 +7829,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7835,7 +7838,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7844,7 +7847,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7853,7 +7856,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7862,7 +7865,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7871,7 +7874,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7880,7 +7883,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7889,7 +7892,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7898,7 +7901,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7907,7 +7910,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7916,7 +7919,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7925,7 +7928,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7934,7 +7937,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7943,7 +7946,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7952,7 +7955,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7961,7 +7964,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7970,7 +7973,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7979,7 +7982,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@full@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -7991,7 +7994,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Single@preboard@IR_C1@fac',
                                                     version='01',
                                                     name=MultilingualString(
@@ -8048,7 +8051,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8057,7 +8060,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8066,7 +8069,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8075,7 +8078,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8084,7 +8087,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8093,7 +8096,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8102,7 +8105,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8111,7 +8114,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8120,7 +8123,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8129,7 +8132,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8138,7 +8141,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8147,7 +8150,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8156,7 +8159,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8165,7 +8168,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8174,7 +8177,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8183,7 +8186,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8192,7 +8195,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8201,7 +8204,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C1@fac@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8213,7 +8216,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Single@preboard@IR_C2@full',
                                                     version='01',
                                                     name=MultilingualString(
@@ -8250,7 +8253,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8259,7 +8262,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8268,7 +8271,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8277,7 +8280,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8286,7 +8289,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8295,7 +8298,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8304,7 +8307,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8313,7 +8316,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8322,7 +8325,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8331,7 +8334,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8340,7 +8343,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8349,7 +8352,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8358,7 +8361,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8367,7 +8370,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8376,7 +8379,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8385,7 +8388,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8394,7 +8397,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8403,7 +8406,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@full@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8415,7 +8418,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Single@preboard@IR_C2@fac',
                                                     version='01',
                                                     name=MultilingualString(
@@ -8473,7 +8476,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8482,7 +8485,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8491,7 +8494,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8500,7 +8503,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8509,7 +8512,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8518,7 +8521,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8527,7 +8530,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8536,7 +8539,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8545,7 +8548,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8554,7 +8557,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8563,7 +8566,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8572,7 +8575,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8581,7 +8584,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8590,7 +8593,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8599,7 +8602,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8608,7 +8611,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8617,7 +8620,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8626,7 +8629,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@preboard@IR_C2@fac@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPriceRef(
@@ -8641,7 +8644,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    FareTable(
+                                    FareTable1(
                                         id='tfc:Single@onboard',
                                         version='01',
                                         name=MultilingualString(
@@ -8870,7 +8873,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Single@onboard@C1@full',
                                                     version='01',
                                                     name=MultilingualString(
@@ -8913,7 +8916,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -8939,7 +8942,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -8965,7 +8968,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -8991,7 +8994,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9017,7 +9020,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9043,7 +9046,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9069,7 +9072,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9095,7 +9098,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9121,7 +9124,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9147,7 +9150,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9173,7 +9176,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9199,7 +9202,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9225,7 +9228,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9251,7 +9254,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9277,7 +9280,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9303,7 +9306,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9328,7 +9331,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9354,7 +9357,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C1@full_301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9383,7 +9386,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Single@onboard@C2@full',
                                                     version='01',
                                                     name=MultilingualString(
@@ -9420,7 +9423,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9446,7 +9449,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9472,7 +9475,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9498,7 +9501,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9524,7 +9527,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9550,7 +9553,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9576,7 +9579,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9602,7 +9605,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9628,7 +9631,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9654,7 +9657,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9680,7 +9683,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9706,7 +9709,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9732,7 +9735,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9758,7 +9761,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9784,7 +9787,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9810,7 +9813,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9835,7 +9838,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9861,7 +9864,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Single@onboard@C2@full_301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -9893,7 +9896,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    FareTable(
+                                    FareTable1(
                                         id='tfc:Return@preboard@IR',
                                         version='01',
                                         name=MultilingualString(
@@ -10136,7 +10139,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Return@preboard@IR@C1@full',
                                                     version='01',
                                                     name=MultilingualString(
@@ -10173,7 +10176,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10199,7 +10202,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10225,7 +10228,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10251,7 +10254,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10277,7 +10280,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10303,7 +10306,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10329,7 +10332,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10355,7 +10358,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10381,7 +10384,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10407,7 +10410,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10433,7 +10436,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10459,7 +10462,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10485,7 +10488,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10511,7 +10514,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10537,7 +10540,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10563,7 +10566,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10588,7 +10591,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10614,7 +10617,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@full@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10643,7 +10646,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Return@preboard@IR@C1@fac',
                                                     version='01',
                                                     name=MultilingualString(
@@ -10701,7 +10704,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10739,7 +10742,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10777,7 +10780,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10815,7 +10818,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10853,7 +10856,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10891,7 +10894,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10929,7 +10932,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -10967,7 +10970,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11005,7 +11008,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11043,7 +11046,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11081,7 +11084,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11119,7 +11122,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11157,7 +11160,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11195,7 +11198,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11233,7 +11236,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11271,7 +11274,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11309,7 +11312,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11347,7 +11350,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C1@fac@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11388,7 +11391,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Return@preboard@IR@C2@full',
                                                     version='01',
                                                     name=MultilingualString(
@@ -11425,7 +11428,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11451,7 +11454,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11477,7 +11480,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11503,7 +11506,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11529,7 +11532,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11555,7 +11558,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11581,7 +11584,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11607,7 +11610,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11633,7 +11636,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11659,7 +11662,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11685,7 +11688,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11711,7 +11714,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11737,7 +11740,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11763,7 +11766,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11789,7 +11792,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11815,7 +11818,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11840,7 +11843,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11866,7 +11869,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@full@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11895,7 +11898,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Return@preboard@IR@C2@fac',
                                                     version='01',
                                                     name=MultilingualString(
@@ -11953,7 +11956,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -11991,7 +11994,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12029,7 +12032,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12067,7 +12070,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12105,7 +12108,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12143,7 +12146,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12181,7 +12184,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12219,7 +12222,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12257,7 +12260,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12295,7 +12298,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12333,7 +12336,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12371,7 +12374,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12409,7 +12412,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12447,7 +12450,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12485,7 +12488,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12523,7 +12526,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12561,7 +12564,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -12599,7 +12602,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=17
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Return@preboard@IR@C2@fac@301+350',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13126,7 +13129,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable(
+                                    FareTable1(
                                         id='tfc:Pass@Season@adult@1M',
                                         version='01',
                                         name=MultilingualString(
@@ -13322,7 +13325,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Pass@Season@adult@1M@C2@Regio-R',
                                                     version='01',
                                                     name=MultilingualString(
@@ -13354,7 +13357,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13368,7 +13371,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13382,7 +13385,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13396,7 +13399,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13410,7 +13413,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13424,7 +13427,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13438,7 +13441,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13452,7 +13455,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13466,7 +13469,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13480,7 +13483,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13494,7 +13497,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13508,7 +13511,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13522,7 +13525,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13536,7 +13539,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13550,7 +13553,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13564,7 +13567,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13578,7 +13581,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Regio-R@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13595,7 +13598,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Pass@Season@adult@1M@C2@Interregio-IR',
                                                     version='01',
                                                     name=MultilingualString(
@@ -13627,7 +13630,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13641,7 +13644,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13655,7 +13658,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13669,7 +13672,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13683,7 +13686,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13697,7 +13700,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13711,7 +13714,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13725,7 +13728,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13739,7 +13742,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13753,7 +13756,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13767,7 +13770,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13781,7 +13784,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13795,7 +13798,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13809,7 +13812,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13823,7 +13826,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13837,7 +13840,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13851,7 +13854,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1M@C2@Interregio-IR@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -13871,7 +13874,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    FareTable(
+                                    FareTable1(
                                         id='tfc:Pass@Season@student@1M',
                                         version='01',
                                         name=MultilingualString(
@@ -14067,7 +14070,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Pass@Season@student@1M@C2@Regio-R',
                                                     version='01',
                                                     name=MultilingualString(
@@ -14099,7 +14102,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14113,7 +14116,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14127,7 +14130,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14141,7 +14144,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14155,7 +14158,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14169,7 +14172,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14183,7 +14186,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14197,7 +14200,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14211,7 +14214,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14225,7 +14228,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14239,7 +14242,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14253,7 +14256,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14267,7 +14270,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14281,7 +14284,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14295,7 +14298,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14309,7 +14312,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14323,7 +14326,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Regio-R@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14340,7 +14343,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Pass@Season@student@1M@C2@Interregio-IR',
                                                     version='01',
                                                     name=MultilingualString(
@@ -14372,7 +14375,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14386,7 +14389,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14400,7 +14403,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14414,7 +14417,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14428,7 +14431,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14442,7 +14445,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14456,7 +14459,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14470,7 +14473,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14484,7 +14487,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14498,7 +14501,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14512,7 +14515,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14526,7 +14529,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14540,7 +14543,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14554,7 +14557,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14568,7 +14571,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14582,7 +14585,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14596,7 +14599,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=16
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@student@1M@C2@Interregio-IR@251+300',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14616,7 +14619,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    FareTable(
+                                    FareTable1(
                                         id='tfc:Pass@Season@adult@1W',
                                         version='01',
                                         name=MultilingualString(
@@ -14804,7 +14807,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Pass@Season@adult@1W@C2@Regio-R',
                                                     version='01',
                                                     name=MultilingualString(
@@ -14836,7 +14839,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14850,7 +14853,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14864,7 +14867,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14878,7 +14881,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14892,7 +14895,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14906,7 +14909,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14920,7 +14923,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14934,7 +14937,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14948,7 +14951,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14962,7 +14965,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14976,7 +14979,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -14990,7 +14993,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15004,7 +15007,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15018,7 +15021,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15032,7 +15035,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15046,7 +15049,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Regio-R@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15063,7 +15066,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='tfc:Pass@Season@adult@1W@C2@Interregio-IR',
                                                     version='01',
                                                     name=MultilingualString(
@@ -15095,7 +15098,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@001+010',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15109,7 +15112,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@011+020',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15123,7 +15126,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@021+030',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15137,7 +15140,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@031+040',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15151,7 +15154,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@041+050',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15165,7 +15168,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@051+060',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15179,7 +15182,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@061+070',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15193,7 +15196,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@071+080',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15207,7 +15210,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@081+090',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15221,7 +15224,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@091+100',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15235,7 +15238,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@101+120',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15249,7 +15252,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@121+140',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15263,7 +15266,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@141+160',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15277,7 +15280,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=13
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@161+180',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15291,7 +15294,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=14
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@181+200',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15305,7 +15308,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=15
                                                             ),
-                                                            Cell(
+                                                            Cell1(
                                                                 id='tfc:Pass@Season@adult@1W@C2@Interregio-IR@201+250',
                                                                 version='01',
                                                                 choice=GeographicalIntervalPrice(
@@ -15411,7 +15414,7 @@ obj = PublicationDelivery(
                                         ),
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
                                             quality_structure_factor_ref_or_quality_structure_factor=[
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='tfc:TFC@Tariff@Discount@Statutory_Right+Travel@multi_trip@6',
                                                     version='1',
                                                     name=MultilingualString(
@@ -15420,7 +15423,7 @@ obj = PublicationDelivery(
                                                     factor='access',
                                                     value='6'
                                                 ),
-                                                QualityStructureFactor(
+                                                QualityStructureFactor1(
                                                     id='tfc:TFC@Tariff@Discount@Statutory_Right+Travel@multi_trip@12',
                                                     version='1',
                                                     factor='access',
@@ -15886,7 +15889,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Bucharest+Buzau',
                                         alternative_texts=AlternativeTextsRelStructure(
                                             alternative_text=[
@@ -15913,7 +15916,7 @@ obj = PublicationDelivery(
                                             colour_name='Mauve'
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Cluj_Napoca+Oradea',
                                         version='01',
                                         name=MultilingualString(
@@ -15927,7 +15930,7 @@ obj = PublicationDelivery(
                                             colour_name='Green'
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Titan_South_hm+Oltenita',
                                         alternative_texts=AlternativeTextsRelStructure(
                                             alternative_text=[
@@ -15952,7 +15955,7 @@ obj = PublicationDelivery(
                                             colour_name='Green'
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Buzau+Nehoiasu',
                                         version='01',
                                         name=MultilingualString(
@@ -15964,7 +15967,7 @@ obj = PublicationDelivery(
                                             colour_name='Light Blue'
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Galati+Barlad',
                                         version='01',
                                         name=MultilingualString(
@@ -15976,7 +15979,7 @@ obj = PublicationDelivery(
                                             colour_name='Pale Green'
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Ploiesti_South+Slanic',
                                         alternative_texts=AlternativeTextsRelStructure(
                                             alternative_text=[
@@ -16001,7 +16004,7 @@ obj = PublicationDelivery(
                                             colour_name='Dark Brown'
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Bucharest_North+Galati',
                                         alternative_texts=AlternativeTextsRelStructure(
                                             alternative_text=[
@@ -16026,7 +16029,7 @@ obj = PublicationDelivery(
                                             colour_name='Scarlet'
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Ploiesti_South+Maneciu',
                                         alternative_texts=AlternativeTextsRelStructure(
                                             alternative_text=[
@@ -16048,7 +16051,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Bucharest_North+Titu+Targoviste',
                                         alternative_texts=AlternativeTextsRelStructure(
                                             alternative_text=[
@@ -16072,7 +16075,7 @@ obj = PublicationDelivery(
                                             colour_name='Scarlet'
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Ploiesti_South+Targoviste',
                                         alternative_texts=AlternativeTextsRelStructure(
                                             alternative_text=[
@@ -16097,7 +16100,7 @@ obj = PublicationDelivery(
                                             colour_name='Brown'
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Târgovişte+Pietroşiţa',
                                         version='01',
                                         name=MultilingualString(
@@ -16109,7 +16112,7 @@ obj = PublicationDelivery(
                                             colour_name='Mauve'
                                         )
                                     ),
-                                    Line(
+                                    Line1(
                                         id='tfc:TFC@Lines@Roşiori+Costeşti',
                                         alternative_texts=AlternativeTextsRelStructure(
                                             alternative_text=[

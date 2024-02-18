@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
-from .cell_ref import CellRef
+from .cell_ref_1 import CellRef1
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
 )
@@ -21,7 +21,7 @@ class TimeIntervalPricesRelStructure(StrictContainmentAggregationStructure):
         Union[
             TimeIntervalPriceRef,
             TimeIntervalPriceVersionedChildStructure,
-            CellRef,
+            CellRef1,
         ]
     ] = field(
         default_factory=list,
@@ -40,7 +40,7 @@ class TimeIntervalPricesRelStructure(StrictContainmentAggregationStructure):
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef,
+                    "type": CellRef1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

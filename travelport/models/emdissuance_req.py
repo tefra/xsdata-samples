@@ -6,6 +6,7 @@ from travelport.models.provider_reservation_detail_1 import (
     ProviderReservationDetail1,
 )
 from travelport.models.selection_modifiers import SelectionModifiers
+from travelport.models.ticket_number_1 import TicketNumber1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -52,14 +53,12 @@ class EmdissuanceReq(BaseReq1):
             "required": True,
         },
     )
-    ticket_number: None | str = field(
+    ticket_number: None | TicketNumber1 = field(
         default=None,
         metadata={
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "min_length": 1,
-            "max_length": 13,
         },
     )
     issuance_modifiers: None | IssuanceModifiers = field(

@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from xcbl.models.trading_partner_organization_information import (
+    TradingPartnerDisplayName,
     TradingPartnerIdentifications,
 )
 
@@ -14,7 +15,7 @@ class TradingPartnerOrganizationDeletion:
             "required": True,
         }
     )
-    trading_partner_display_name: str = field(
+    trading_partner_display_name: TradingPartnerDisplayName = field(
         metadata={
             "name": "TradingPartnerDisplayName",
             "type": "Element",

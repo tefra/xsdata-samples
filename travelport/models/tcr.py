@@ -2,6 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.agency_info_1 import AgencyInfo1
 from travelport.models.air_pricing_info import AirPricingInfo
+from travelport.models.air_reservation_locator_code import (
+    AirReservationLocatorCode,
+)
 from travelport.models.booking_traveler_1 import BookingTraveler1
 from travelport.models.form_of_payment_1 import FormOfPayment1
 from travelport.models.passenger_ticket_number import PassengerTicketNumber
@@ -125,13 +128,11 @@ class Tcr:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    air_reservation_locator_code: None | str = field(
+    air_reservation_locator_code: None | AirReservationLocatorCode = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
-            "min_length": 5,
-            "max_length": 8,
         },
     )
     supplier_locator: list[SupplierLocator1] = field(

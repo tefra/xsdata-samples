@@ -1,7 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .alternative_texts_rel_structure import VersionedChildStructure
-from .limitation_status_enumeration import LimitationStatusEnumeration
+from .audible_signals_available import AudibleSignalsAvailable
+from .escalator_free_access import EscalatorFreeAccess
+from .lift_free_access import LiftFreeAccess
+from .step_free_access import StepFreeAccess
+from .visual_signs_available import VisualSignsAvailable
+from .wheelchair_access import WheelchairAccess
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -11,8 +16,8 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AccessibilityLimitation_VersionedChildStructure"
 
-    wheelchair_access: LimitationStatusEnumeration = field(
-        default=LimitationStatusEnumeration.FALSE,
+    wheelchair_access: Optional[WheelchairAccess] = field(
+        default=None,
         metadata={
             "name": "WheelchairAccess",
             "type": "Element",
@@ -20,7 +25,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    step_free_access: Optional[LimitationStatusEnumeration] = field(
+    step_free_access: Optional[StepFreeAccess] = field(
         default=None,
         metadata={
             "name": "StepFreeAccess",
@@ -28,7 +33,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    escalator_free_access: Optional[LimitationStatusEnumeration] = field(
+    escalator_free_access: Optional[EscalatorFreeAccess] = field(
         default=None,
         metadata={
             "name": "EscalatorFreeAccess",
@@ -36,7 +41,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lift_free_access: Optional[LimitationStatusEnumeration] = field(
+    lift_free_access: Optional[LiftFreeAccess] = field(
         default=None,
         metadata={
             "name": "LiftFreeAccess",
@@ -44,7 +49,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audible_signals_available: Optional[LimitationStatusEnumeration] = field(
+    audible_signals_available: Optional[AudibleSignalsAvailable] = field(
         default=None,
         metadata={
             "name": "AudibleSignalsAvailable",
@@ -52,7 +57,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    visual_signs_available: Optional[LimitationStatusEnumeration] = field(
+    visual_signs_available: Optional[VisualSignsAvailable] = field(
         default=None,
         metadata={
             "name": "VisualSignsAvailable",

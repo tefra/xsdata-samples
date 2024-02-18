@@ -1,111 +1,360 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
+from xcbl.models.trading_partner_organization_information import (
+    ExternalAddressId,
+)
 from xcbl.models.trading_partner_response import Reference
 from xcbl.models.trading_partner_user_information import (
+    Building,
+    City,
     CorrespondenceLanguage,
     Country,
+    County,
+    Department,
+    District,
+    Floor,
+    GeneralNotes,
+    HouseNumber,
     Identifier,
+    InhouseMail,
     Language,
     Pobox,
+    PostalCode,
     Region,
+    RoomNumber,
+    Street,
+    StreetSupplement1,
+    StreetSupplement2,
     Timezone,
     ValidityDates,
 )
 
 
 @dataclass(kw_only=True)
-class ContactFunction:
-    contact_function_coded: str = field(
+class CharacteristicAttributeDescription:
+    value: str = field(
+        default="",
         metadata={
-            "name": "ContactFunctionCoded",
-            "type": "Element",
             "required": True,
-        }
-    )
-    contact_function_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ContactFunctionCodedOther",
-            "type": "Element",
         },
     )
 
 
 @dataclass(kw_only=True)
-class ContactNumber:
-    contact_number_value: str = field(
-        metadata={
-            "name": "ContactNumberValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    contact_number_type_coded: str = field(
-        metadata={
-            "name": "ContactNumberTypeCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    contact_number_type_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ContactNumberTypeCodedOther",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class Gpscooridinates:
+class CharacteristicAttributeId:
     class Meta:
-        name = "GPSCooridinates"
+        name = "CharacteristicAttributeID"
 
-    gpssystem: str = field(
+    value: str = field(
+        default="",
         metadata={
-            "name": "GPSSystem",
-            "type": "Element",
             "required": True,
-        }
-    )
-    latitude: str = field(
-        metadata={
-            "name": "Latitude",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    longitude: str = field(
-        metadata={
-            "name": "Longitude",
-            "type": "Element",
-            "required": True,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
-class KeyFigure:
-    key_figure_id: str = field(
+class CharacteristicAttributeNote:
+    value: str = field(
+        default="",
         metadata={
-            "name": "KeyFigureID",
-            "type": "Element",
             "required": True,
-        }
-    )
-    key_figure_name: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "KeyFigureName",
-            "type": "Element",
         },
     )
-    key_figure_description: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class CharacteristicCombinationId:
+    class Meta:
+        name = "CharacteristicCombinationID"
+
+    value: str = field(
+        default="",
         metadata={
-            "name": "KeyFigureDescription",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CharacteristicCombinationPurposeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CharacteristicCombinationPurposeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CharacteristicCombinationResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CharacteristicCombinationResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CharacteristicName:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactFunctionCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactFunctionCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactName:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactNumberTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactNumberTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ContactNumberValue:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class DimensionCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class DimensionCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Gpssystem:
+    class Meta:
+        name = "GPSSystem"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class KeyFigureDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class KeyFigureId:
+    class Meta:
+        name = "KeyFigureID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class KeyFigureName:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Latitude:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LocationAttributeDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LocationAttributeId:
+    class Meta:
+        name = "LocationAttributeID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LocationDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LocationNotes:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LocationQualifierCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LocationQualifierCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Longitude:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Mdfbusiness:
+    class Meta:
+        name = "MDFBusiness"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -506,6 +755,45 @@ class MinimumValueSignificanceCoded(Enum):
     OUT_OF_RANGE = "OutOfRange"
 
 
+@dataclass(kw_only=True)
+class Name11:
+    class Meta:
+        name = "Name1"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Name21:
+    class Meta:
+        name = "Name2"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Name31:
+    class Meta:
+        name = "Name3"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
 class NameAddressAddressTypeCoded(Enum):
     OTHER = "Other"
     ACCEPTANCE_LOCATION = "AcceptanceLocation"
@@ -738,65 +1026,276 @@ class OtherCharacteristicAttribute:
 
 
 @dataclass(kw_only=True)
-class SourceTargetId:
-    class Meta:
-        name = "SourceTargetID"
-
-    source_id: Optional[str] = field(
-        default=None,
+class PartyRoleCoded:
+    value: str = field(
+        default="",
         metadata={
-            "name": "SourceID",
-            "type": "Element",
-        },
-    )
-    target_id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TargetID",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class TimeSeriesSummary:
-    total_time_series_data: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TotalTimeSeriesData",
-            "type": "Element",
-        },
-    )
-    total_characteristic_combinations: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TotalCharacteristicCombinations",
-            "type": "Element",
-        },
-    )
-    total_key_figures: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TotalKeyFigures",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class UnitOfMeasurement:
-    uomcoded: str = field(
-        metadata={
-            "name": "UOMCoded",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    uomcoded_other: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class PartyRoleCodedOther:
+    value: str = field(
+        default="",
         metadata={
-            "name": "UOMCodedOther",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ProductAttributeDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ProductAttributeId:
+    class Meta:
+        name = "ProductAttributeID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ProductNotes:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SourceId:
+    class Meta:
+        name = "SourceID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TargetId:
+    class Meta:
+        name = "TargetID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesDataNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesDetailResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesDetailResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesHeaderResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesHeaderResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesKeyFigurePurposeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesKeyFigurePurposeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesKeyFigureResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesKeyFigureResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesPurposeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesPurposeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesResponseIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesValue:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalCharacteristicCombinations:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalKeyFigures:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalTimeSeriesData:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Uomcoded:
+    class Meta:
+        name = "UOMCoded"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class UomcodedOther:
+    class Meta:
+        name = "UOMCodedOther"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -809,6 +1308,24 @@ class CharacteristicAttributeName:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class ContactFunction:
+    contact_function_coded: ContactFunctionCoded = field(
+        metadata={
+            "name": "ContactFunctionCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    contact_function_coded_other: Optional[ContactFunctionCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "ContactFunctionCodedOther",
+            "type": "Element",
+        },
     )
 
 
@@ -827,13 +1344,81 @@ class ContactId:
 
 
 @dataclass(kw_only=True)
-class ListOfContactNumber:
-    contact_number: List[ContactNumber] = field(
-        default_factory=list,
+class ContactNumber:
+    contact_number_value: ContactNumberValue = field(
         metadata={
-            "name": "ContactNumber",
+            "name": "ContactNumberValue",
             "type": "Element",
-            "min_occurs": 1,
+            "required": True,
+        }
+    )
+    contact_number_type_coded: ContactNumberTypeCoded = field(
+        metadata={
+            "name": "ContactNumberTypeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    contact_number_type_coded_other: Optional[
+        ContactNumberTypeCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "ContactNumberTypeCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Gpscooridinates:
+    class Meta:
+        name = "GPSCooridinates"
+
+    gpssystem: Gpssystem = field(
+        metadata={
+            "name": "GPSSystem",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    latitude: Latitude = field(
+        metadata={
+            "name": "Latitude",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    longitude: Longitude = field(
+        metadata={
+            "name": "Longitude",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class KeyFigure:
+    key_figure_id: KeyFigureId = field(
+        metadata={
+            "name": "KeyFigureID",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    key_figure_name: Optional[KeyFigureName] = field(
+        default=None,
+        metadata={
+            "name": "KeyFigureName",
+            "type": "Element",
+        },
+    )
+    key_figure_description: Optional[KeyFigureDescription] = field(
+        default=None,
+        metadata={
+            "name": "KeyFigureDescription",
+            "type": "Element",
         },
     )
 
@@ -1006,28 +1591,28 @@ class NameAddress:
             "type": "Attribute",
         },
     )
-    external_address_id: Optional[str] = field(
+    external_address_id: Optional[ExternalAddressId] = field(
         default=None,
         metadata={
             "name": "ExternalAddressID",
             "type": "Element",
         },
     )
-    name1: str = field(
+    name1: Name11 = field(
         metadata={
             "name": "Name1",
             "type": "Element",
             "required": True,
         }
     )
-    name2: Optional[str] = field(
+    name2: Optional[Name21] = field(
         default=None,
         metadata={
             "name": "Name2",
             "type": "Element",
         },
     )
-    name3: Optional[str] = field(
+    name3: Optional[Name31] = field(
         default=None,
         metadata={
             "name": "Name3",
@@ -1048,84 +1633,84 @@ class NameAddress:
             "type": "Element",
         },
     )
-    street: Optional[str] = field(
+    street: Optional[Street] = field(
         default=None,
         metadata={
             "name": "Street",
             "type": "Element",
         },
     )
-    house_number: Optional[str] = field(
+    house_number: Optional[HouseNumber] = field(
         default=None,
         metadata={
             "name": "HouseNumber",
             "type": "Element",
         },
     )
-    street_supplement1: Optional[str] = field(
+    street_supplement1: Optional[StreetSupplement1] = field(
         default=None,
         metadata={
             "name": "StreetSupplement1",
             "type": "Element",
         },
     )
-    street_supplement2: Optional[str] = field(
+    street_supplement2: Optional[StreetSupplement2] = field(
         default=None,
         metadata={
             "name": "StreetSupplement2",
             "type": "Element",
         },
     )
-    building: Optional[str] = field(
+    building: Optional[Building] = field(
         default=None,
         metadata={
             "name": "Building",
             "type": "Element",
         },
     )
-    floor: Optional[str] = field(
+    floor: Optional[Floor] = field(
         default=None,
         metadata={
             "name": "Floor",
             "type": "Element",
         },
     )
-    room_number: Optional[str] = field(
+    room_number: Optional[RoomNumber] = field(
         default=None,
         metadata={
             "name": "RoomNumber",
             "type": "Element",
         },
     )
-    inhouse_mail: Optional[str] = field(
+    inhouse_mail: Optional[InhouseMail] = field(
         default=None,
         metadata={
             "name": "InhouseMail",
             "type": "Element",
         },
     )
-    department: Optional[str] = field(
+    department: Optional[Department] = field(
         default=None,
         metadata={
             "name": "Department",
             "type": "Element",
         },
     )
-    postal_code: Optional[str] = field(
+    postal_code: Optional[PostalCode] = field(
         default=None,
         metadata={
             "name": "PostalCode",
             "type": "Element",
         },
     )
-    city: Optional[str] = field(
+    city: Optional[City] = field(
         default=None,
         metadata={
             "name": "City",
             "type": "Element",
         },
     )
-    county: Optional[str] = field(
+    county: Optional[County] = field(
         default=None,
         metadata={
             "name": "County",
@@ -1139,7 +1724,7 @@ class NameAddress:
             "type": "Element",
         },
     )
-    district: Optional[str] = field(
+    district: Optional[District] = field(
         default=None,
         metadata={
             "name": "District",
@@ -1188,24 +1773,23 @@ class ProductAttributeName:
 
 
 @dataclass(kw_only=True)
-class SourceKeyFigure:
-    key_figure: KeyFigure = field(
+class SourceTargetId:
+    class Meta:
+        name = "SourceTargetID"
+
+    source_id: Optional[SourceId] = field(
+        default=None,
         metadata={
-            "name": "KeyFigure",
+            "name": "SourceID",
             "type": "Element",
-            "required": True,
-        }
+        },
     )
-
-
-@dataclass(kw_only=True)
-class TargetKeyFigure:
-    key_figure: KeyFigure = field(
+    target_id: Optional[TargetId] = field(
+        default=None,
         metadata={
-            "name": "KeyFigure",
+            "name": "TargetID",
             "type": "Element",
-            "required": True,
-        }
+        },
     )
 
 
@@ -1235,28 +1819,6 @@ class TimeSeriesId:
 
 
 @dataclass(kw_only=True)
-class TimeSeriesPlanningData:
-    source_target_id: SourceTargetId = field(
-        metadata={
-            "name": "SourceTargetID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TimeSeriesPlanningStep:
-    source_target_id: SourceTargetId = field(
-        metadata={
-            "name": "SourceTargetID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class TimeSeriesReference:
     reference: Reference = field(
         metadata={
@@ -1275,6 +1837,179 @@ class TimeSeriesResponseId:
     reference: Reference = field(
         metadata={
             "name": "Reference",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesSummary:
+    total_time_series_data: Optional[TotalTimeSeriesData] = field(
+        default=None,
+        metadata={
+            "name": "TotalTimeSeriesData",
+            "type": "Element",
+        },
+    )
+    total_characteristic_combinations: Optional[
+        TotalCharacteristicCombinations
+    ] = field(
+        default=None,
+        metadata={
+            "name": "TotalCharacteristicCombinations",
+            "type": "Element",
+        },
+    )
+    total_key_figures: Optional[TotalKeyFigures] = field(
+        default=None,
+        metadata={
+            "name": "TotalKeyFigures",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesTimePeriod:
+    validity_dates: ValidityDates = field(
+        metadata={
+            "name": "ValidityDates",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class UnitOfMeasurement:
+    uomcoded: Uomcoded = field(
+        metadata={
+            "name": "UOMCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    uomcoded_other: Optional[UomcodedOther] = field(
+        default=None,
+        metadata={
+            "name": "UOMCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfContactNumber:
+    contact_number: List[ContactNumber] = field(
+        default_factory=list,
+        metadata={
+            "name": "ContactNumber",
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LocationIdentifier:
+    loc_id: LocId = field(
+        metadata={
+            "name": "LocID",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    location_description: Optional[LocationDescription] = field(
+        default=None,
+        metadata={
+            "name": "LocationDescription",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class MeasurementRange:
+    minimum_value: MinimumValue = field(
+        metadata={
+            "name": "MinimumValue",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    maximum_value: MaximumValue = field(
+        metadata={
+            "name": "MaximumValue",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class SourceKeyFigure:
+    key_figure: KeyFigure = field(
+        metadata={
+            "name": "KeyFigure",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TargetKeyFigure:
+    key_figure: KeyFigure = field(
+        metadata={
+            "name": "KeyFigure",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesData:
+    time_series_bucket: TimeSeriesBucket = field(
+        metadata={
+            "name": "TimeSeriesBucket",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_value: TimeSeriesValue = field(
+        metadata={
+            "name": "TimeSeriesValue",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_data_note: Optional[TimeSeriesDataNote] = field(
+        default=None,
+        metadata={
+            "name": "TimeSeriesDataNote",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesPlanningData:
+    source_target_id: SourceTargetId = field(
+        metadata={
+            "name": "SourceTargetID",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesPlanningStep:
+    source_target_id: SourceTargetId = field(
+        metadata={
+            "name": "SourceTargetID",
             "type": "Element",
             "required": True,
         }
@@ -1315,17 +2050,6 @@ class TimeSeriesSystemType:
 
 
 @dataclass(kw_only=True)
-class TimeSeriesTimePeriod:
-    validity_dates: ValidityDates = field(
-        metadata={
-            "name": "ValidityDates",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class Contact:
     contact_id: Optional[ContactId] = field(
         default=None,
@@ -1334,7 +2058,7 @@ class Contact:
             "type": "Element",
         },
     )
-    contact_name: str = field(
+    contact_name: ContactName = field(
         metadata={
             "name": "ContactName",
             "type": "Element",
@@ -1348,7 +2072,7 @@ class Contact:
             "type": "Element",
         },
     )
-    contact_description: Optional[str] = field(
+    contact_description: Optional[ContactDescription] = field(
         default=None,
         metadata={
             "name": "ContactDescription",
@@ -1383,88 +2107,17 @@ class KeyFigureInformation:
 
 
 @dataclass(kw_only=True)
-class LocationIdentifier:
-    loc_id: LocId = field(
-        metadata={
-            "name": "LocID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    location_description: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "LocationDescription",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class MeasurementRange:
-    minimum_value: MinimumValue = field(
-        metadata={
-            "name": "MinimumValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    maximum_value: MaximumValue = field(
-        metadata={
-            "name": "MaximumValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class TimeSeriesData:
-    time_series_bucket: TimeSeriesBucket = field(
-        metadata={
-            "name": "TimeSeriesBucket",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_value: str = field(
-        metadata={
-            "name": "TimeSeriesValue",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_data_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TimeSeriesDataNote",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfContact:
-    contact: List[Contact] = field(
-        default_factory=list,
-        metadata={
-            "name": "Contact",
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class Location:
-    location_qualifier_coded: Optional[str] = field(
+    location_qualifier_coded: Optional[LocationQualifierCoded] = field(
         default=None,
         metadata={
             "name": "LocationQualifierCoded",
             "type": "Element",
         },
     )
-    location_qualifier_coded_other: Optional[str] = field(
+    location_qualifier_coded_other: Optional[
+        LocationQualifierCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "LocationQualifierCodedOther",
@@ -1478,7 +2131,7 @@ class Location:
             "type": "Element",
         },
     )
-    external_address_id: Optional[str] = field(
+    external_address_id: Optional[ExternalAddressId] = field(
         default=None,
         metadata={
             "name": "ExternalAddressID",
@@ -1527,6 +2180,43 @@ class Measurement:
 
 
 @dataclass(kw_only=True)
+class Dimension:
+    measurement: Measurement = field(
+        metadata={
+            "name": "Measurement",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    dimension_coded: DimensionCoded = field(
+        metadata={
+            "name": "DimensionCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    dimension_coded_other: Optional[DimensionCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "DimensionCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfContact:
+    contact: List[Contact] = field(
+        default_factory=list,
+        metadata={
+            "name": "Contact",
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class OrderContact:
     contact: Contact = field(
         metadata={
@@ -1561,35 +2251,43 @@ class ShippingContact:
 
 @dataclass(kw_only=True)
 class TimeSeriesKeyFigureData:
-    time_series_key_figure_purpose_coded: Optional[str] = field(
+    time_series_key_figure_purpose_coded: Optional[
+        TimeSeriesKeyFigurePurposeCoded
+    ] = field(
         default=None,
         metadata={
             "name": "TimeSeriesKeyFigurePurposeCoded",
             "type": "Element",
         },
     )
-    time_series_key_figure_purpose_coded_other: Optional[str] = field(
+    time_series_key_figure_purpose_coded_other: Optional[
+        TimeSeriesKeyFigurePurposeCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "TimeSeriesKeyFigurePurposeCodedOther",
             "type": "Element",
         },
     )
-    time_series_key_figure_response_coded: Optional[str] = field(
+    time_series_key_figure_response_coded: Optional[
+        TimeSeriesKeyFigureResponseCoded
+    ] = field(
         default=None,
         metadata={
             "name": "TimeSeriesKeyFigureResponseCoded",
             "type": "Element",
         },
     )
-    time_series_key_figure_response_coded_other: Optional[str] = field(
+    time_series_key_figure_response_coded_other: Optional[
+        TimeSeriesKeyFigureResponseCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "TimeSeriesKeyFigureResponseCodedOther",
             "type": "Element",
         },
     )
-    characteristic_combination_id: str = field(
+    characteristic_combination_id: CharacteristicCombinationId = field(
         metadata={
             "name": "CharacteristicCombinationID",
             "type": "Element",
@@ -1621,26 +2319,13 @@ class TimeSeriesKeyFigureData:
 
 
 @dataclass(kw_only=True)
-class Dimension:
-    measurement: Measurement = field(
+class ListOfDimension:
+    dimension: List[Dimension] = field(
+        default_factory=list,
         metadata={
-            "name": "Measurement",
+            "name": "Dimension",
             "type": "Element",
-            "required": True,
-        }
-    )
-    dimension_coded: str = field(
-        metadata={
-            "name": "DimensionCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    dimension_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "DimensionCodedOther",
-            "type": "Element",
+            "min_occurs": 1,
         },
     )
 
@@ -1669,6 +2354,63 @@ class OtherContacts:
 
 
 @dataclass(kw_only=True)
+class CharacteristicAttribute:
+    characteristic_name: CharacteristicName = field(
+        metadata={
+            "name": "CharacteristicName",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    characteristic_attribute_id: CharacteristicAttributeId = field(
+        metadata={
+            "name": "CharacteristicAttributeID",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    characteristic_attribute_name: List[CharacteristicAttributeName] = field(
+        default_factory=list,
+        metadata={
+            "name": "CharacteristicAttributeName",
+            "type": "Element",
+        },
+    )
+    characteristic_attribute_description: Optional[
+        CharacteristicAttributeDescription
+    ] = field(
+        default=None,
+        metadata={
+            "name": "CharacteristicAttributeDescription",
+            "type": "Element",
+        },
+    )
+    list_of_dimension: Optional[ListOfDimension] = field(
+        default=None,
+        metadata={
+            "name": "ListOfDimension",
+            "type": "Element",
+        },
+    )
+    characteristic_attribute_note: Optional[
+        CharacteristicAttributeNote
+    ] = field(
+        default=None,
+        metadata={
+            "name": "CharacteristicAttributeNote",
+            "type": "Element",
+        },
+    )
+    other_characteristic_attribute: List[OtherCharacteristicAttribute] = field(
+        default_factory=list,
+        metadata={
+            "name": "OtherCharacteristicAttribute",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class ListOfChangedTimeSeriesKeyFigureData:
     list_of_time_series_key_figure_data: ListOfTimeSeriesKeyFigureData = field(
         metadata={
@@ -1676,18 +2418,6 @@ class ListOfChangedTimeSeriesKeyFigureData:
             "type": "Element",
             "required": True,
         }
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfDimension:
-    dimension: List[Dimension] = field(
-        default_factory=list,
-        metadata={
-            "name": "Dimension",
-            "type": "Element",
-            "min_occurs": 1,
-        },
     )
 
 
@@ -1707,7 +2437,7 @@ class Party:
             "type": "Element",
         },
     )
-    mdfbusiness: Optional[str] = field(
+    mdfbusiness: Optional[Mdfbusiness] = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
@@ -1774,7 +2504,7 @@ class PartyCoded:
             "type": "Element",
         },
     )
-    mdfbusiness: Optional[str] = field(
+    mdfbusiness: Optional[Mdfbusiness] = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
@@ -1823,70 +2553,17 @@ class PartyCoded:
             "type": "Element",
         },
     )
-    party_role_coded: str = field(
+    party_role_coded: PartyRoleCoded = field(
         metadata={
             "name": "PartyRoleCoded",
             "type": "Element",
             "required": True,
         }
     )
-    party_role_coded_other: Optional[str] = field(
+    party_role_coded_other: Optional[PartyRoleCodedOther] = field(
         default=None,
         metadata={
             "name": "PartyRoleCodedOther",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class CharacteristicAttribute:
-    characteristic_name: str = field(
-        metadata={
-            "name": "CharacteristicName",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    characteristic_attribute_id: str = field(
-        metadata={
-            "name": "CharacteristicAttributeID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    characteristic_attribute_name: List[CharacteristicAttributeName] = field(
-        default_factory=list,
-        metadata={
-            "name": "CharacteristicAttributeName",
-            "type": "Element",
-        },
-    )
-    characteristic_attribute_description: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CharacteristicAttributeDescription",
-            "type": "Element",
-        },
-    )
-    list_of_dimension: Optional[ListOfDimension] = field(
-        default=None,
-        metadata={
-            "name": "ListOfDimension",
-            "type": "Element",
-        },
-    )
-    characteristic_attribute_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "CharacteristicAttributeNote",
-            "type": "Element",
-        },
-    )
-    other_characteristic_attribute: List[OtherCharacteristicAttribute] = field(
-        default_factory=list,
-        metadata={
-            "name": "OtherCharacteristicAttribute",
             "type": "Element",
         },
     )
@@ -1901,28 +2578,6 @@ class ListOfPartyCoded:
             "type": "Element",
             "min_occurs": 1,
         },
-    )
-
-
-@dataclass(kw_only=True)
-class ReceiverParty:
-    party: Party = field(
-        metadata={
-            "name": "Party",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class SourceParty:
-    party: Party = field(
-        metadata={
-            "name": "Party",
-            "type": "Element",
-            "required": True,
-        }
     )
 
 
@@ -1949,10 +2604,32 @@ class OtherProductAttribute:
 
 
 @dataclass(kw_only=True)
+class ReceiverParty:
+    party: Party = field(
+        metadata={
+            "name": "Party",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class SourceCharacteristicsOther:
     characteristic_attribute: CharacteristicAttribute = field(
         metadata={
             "name": "CharacteristicAttribute",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class SourceParty:
+    party: Party = field(
+        metadata={
+            "name": "Party",
             "type": "Element",
             "required": True,
         }
@@ -1971,33 +2648,8 @@ class TargetCharacteristicsOther:
 
 
 @dataclass(kw_only=True)
-class TimeSeriesParty:
-    source_party: Optional[SourceParty] = field(
-        default=None,
-        metadata={
-            "name": "SourceParty",
-            "type": "Element",
-        },
-    )
-    receiver_party: Optional[ReceiverParty] = field(
-        default=None,
-        metadata={
-            "name": "ReceiverParty",
-            "type": "Element",
-        },
-    )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
-        default=None,
-        metadata={
-            "name": "ListOfPartyCoded",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class BaseCharacteristicLocation:
-    location_attribute_id: str = field(
+    location_attribute_id: LocationAttributeId = field(
         metadata={
             "name": "LocationAttributeID",
             "type": "Element",
@@ -2011,7 +2663,9 @@ class BaseCharacteristicLocation:
             "type": "Element",
         },
     )
-    location_attribute_description: Optional[str] = field(
+    location_attribute_description: Optional[
+        LocationAttributeDescription
+    ] = field(
         default=None,
         metadata={
             "name": "LocationAttributeDescription",
@@ -2025,7 +2679,7 @@ class BaseCharacteristicLocation:
             "type": "Element",
         },
     )
-    location_notes: Optional[str] = field(
+    location_notes: Optional[LocationNotes] = field(
         default=None,
         metadata={
             "name": "LocationNotes",
@@ -2043,7 +2697,7 @@ class BaseCharacteristicLocation:
 
 @dataclass(kw_only=True)
 class BaseCharacteristicProduct:
-    product_attribute_id: str = field(
+    product_attribute_id: ProductAttributeId = field(
         metadata={
             "name": "ProductAttributeID",
             "type": "Element",
@@ -2057,7 +2711,9 @@ class BaseCharacteristicProduct:
             "type": "Element",
         },
     )
-    product_attribute_description: Optional[str] = field(
+    product_attribute_description: Optional[
+        ProductAttributeDescription
+    ] = field(
         default=None,
         metadata={
             "name": "ProductAttributeDescription",
@@ -2071,7 +2727,7 @@ class BaseCharacteristicProduct:
             "type": "Element",
         },
     )
-    product_notes: Optional[str] = field(
+    product_notes: Optional[ProductNotes] = field(
         default=None,
         metadata={
             "name": "ProductNotes",
@@ -2106,112 +2762,27 @@ class CharacteristicOther:
 
 
 @dataclass(kw_only=True)
-class TimeSeriesHeader:
-    time_series_issue_date: str = field(
-        metadata={
-            "name": "TimeSeriesIssueDate",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_id: TimeSeriesId = field(
-        metadata={
-            "name": "TimeSeriesID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_purpose_coded: str = field(
-        metadata={
-            "name": "TimeSeriesPurposeCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_purpose_coded_other: Optional[str] = field(
+class TimeSeriesParty:
+    source_party: Optional[SourceParty] = field(
         default=None,
         metadata={
-            "name": "TimeSeriesPurposeCodedOther",
+            "name": "SourceParty",
             "type": "Element",
         },
     )
-    time_series_time_period: Optional[TimeSeriesTimePeriod] = field(
+    receiver_party: Optional[ReceiverParty] = field(
         default=None,
         metadata={
-            "name": "TimeSeriesTimePeriod",
+            "name": "ReceiverParty",
             "type": "Element",
         },
     )
-    time_series_system_type: Optional[TimeSeriesSystemType] = field(
+    list_of_party_coded: Optional[ListOfPartyCoded] = field(
         default=None,
         metadata={
-            "name": "TimeSeriesSystemType",
+            "name": "ListOfPartyCoded",
             "type": "Element",
         },
-    )
-    time_series_planning_data: TimeSeriesPlanningData = field(
-        metadata={
-            "name": "TimeSeriesPlanningData",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_selection: Optional[TimeSeriesSelection] = field(
-        default=None,
-        metadata={
-            "name": "TimeSeriesSelection",
-            "type": "Element",
-        },
-    )
-    time_series_planning_step: Optional[TimeSeriesPlanningStep] = field(
-        default=None,
-        metadata={
-            "name": "TimeSeriesPlanningStep",
-            "type": "Element",
-        },
-    )
-    time_series_party: TimeSeriesParty = field(
-        metadata={
-            "name": "TimeSeriesParty",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    language: Language = field(
-        metadata={
-            "name": "Language",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    general_notes: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "GeneralNotes",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class TimeSeriesResponseParty:
-    time_series_party: TimeSeriesParty = field(
-        metadata={
-            "name": "TimeSeriesParty",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class ChangedTimeSeriesHeader:
-    time_series_header: TimeSeriesHeader = field(
-        metadata={
-            "name": "TimeSeriesHeader",
-            "type": "Element",
-            "required": True,
-        }
     )
 
 
@@ -2282,6 +2853,118 @@ class TargetProductGroup:
 
 
 @dataclass(kw_only=True)
+class TimeSeriesHeader:
+    time_series_issue_date: TimeSeriesIssueDate = field(
+        metadata={
+            "name": "TimeSeriesIssueDate",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_id: TimeSeriesId = field(
+        metadata={
+            "name": "TimeSeriesID",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_purpose_coded: TimeSeriesPurposeCoded = field(
+        metadata={
+            "name": "TimeSeriesPurposeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_purpose_coded_other: Optional[
+        TimeSeriesPurposeCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "TimeSeriesPurposeCodedOther",
+            "type": "Element",
+        },
+    )
+    time_series_time_period: Optional[TimeSeriesTimePeriod] = field(
+        default=None,
+        metadata={
+            "name": "TimeSeriesTimePeriod",
+            "type": "Element",
+        },
+    )
+    time_series_system_type: Optional[TimeSeriesSystemType] = field(
+        default=None,
+        metadata={
+            "name": "TimeSeriesSystemType",
+            "type": "Element",
+        },
+    )
+    time_series_planning_data: TimeSeriesPlanningData = field(
+        metadata={
+            "name": "TimeSeriesPlanningData",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_selection: Optional[TimeSeriesSelection] = field(
+        default=None,
+        metadata={
+            "name": "TimeSeriesSelection",
+            "type": "Element",
+        },
+    )
+    time_series_planning_step: Optional[TimeSeriesPlanningStep] = field(
+        default=None,
+        metadata={
+            "name": "TimeSeriesPlanningStep",
+            "type": "Element",
+        },
+    )
+    time_series_party: TimeSeriesParty = field(
+        metadata={
+            "name": "TimeSeriesParty",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    language: Language = field(
+        metadata={
+            "name": "Language",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    general_notes: Optional[GeneralNotes] = field(
+        default=None,
+        metadata={
+            "name": "GeneralNotes",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TimeSeriesResponseParty:
+    time_series_party: TimeSeriesParty = field(
+        metadata={
+            "name": "TimeSeriesParty",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class ChangedTimeSeriesHeader:
+    time_series_header: TimeSeriesHeader = field(
+        metadata={
+            "name": "TimeSeriesHeader",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class CharacteristicLocation:
     source_location: Optional[SourceLocation] = field(
         default=None,
@@ -2336,110 +3019,44 @@ class CharacteristicProductGroup:
 
 
 @dataclass(kw_only=True)
-class TimeSeriesResponseHeader:
-    time_series_response_issue_date: str = field(
-        metadata={
-            "name": "TimeSeriesResponseIssueDate",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_response_id: TimeSeriesResponseId = field(
-        metadata={
-            "name": "TimeSeriesResponseID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_reference: TimeSeriesReference = field(
-        metadata={
-            "name": "TimeSeriesReference",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_planning_data: Optional[TimeSeriesPlanningData] = field(
-        default=None,
-        metadata={
-            "name": "TimeSeriesPlanningData",
-            "type": "Element",
-        },
-    )
-    time_series_response_party: TimeSeriesResponseParty = field(
-        metadata={
-            "name": "TimeSeriesResponseParty",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_header_response_coded: str = field(
-        metadata={
-            "name": "TimeSeriesHeaderResponseCoded",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    time_series_header_response_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TimeSeriesHeaderResponseCodedOther",
-            "type": "Element",
-        },
-    )
-    changed_time_series_header: Optional[ChangedTimeSeriesHeader] = field(
-        default=None,
-        metadata={
-            "name": "ChangedTimeSeriesHeader",
-            "type": "Element",
-        },
-    )
-    language: Language = field(
-        metadata={
-            "name": "Language",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    general_notes: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "GeneralNotes",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class CharacteristicCombination:
-    characteristic_combination_purpose_coded: Optional[str] = field(
+    characteristic_combination_purpose_coded: Optional[
+        CharacteristicCombinationPurposeCoded
+    ] = field(
         default=None,
         metadata={
             "name": "CharacteristicCombinationPurposeCoded",
             "type": "Element",
         },
     )
-    characteristic_combination_purpose_coded_other: Optional[str] = field(
+    characteristic_combination_purpose_coded_other: Optional[
+        CharacteristicCombinationPurposeCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "CharacteristicCombinationPurposeCodedOther",
             "type": "Element",
         },
     )
-    characteristic_combination_response_coded: Optional[str] = field(
+    characteristic_combination_response_coded: Optional[
+        CharacteristicCombinationResponseCoded
+    ] = field(
         default=None,
         metadata={
             "name": "CharacteristicCombinationResponseCoded",
             "type": "Element",
         },
     )
-    characteristic_combination_response_coded_other: Optional[str] = field(
+    characteristic_combination_response_coded_other: Optional[
+        CharacteristicCombinationResponseCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "CharacteristicCombinationResponseCodedOther",
             "type": "Element",
         },
     )
-    characteristic_combination_id: str = field(
+    characteristic_combination_id: CharacteristicCombinationId = field(
         metadata={
             "name": "CharacteristicCombinationID",
             "type": "Element",
@@ -2477,6 +3094,82 @@ class CharacteristicCombination:
 
 
 @dataclass(kw_only=True)
+class TimeSeriesResponseHeader:
+    time_series_response_issue_date: TimeSeriesResponseIssueDate = field(
+        metadata={
+            "name": "TimeSeriesResponseIssueDate",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_response_id: TimeSeriesResponseId = field(
+        metadata={
+            "name": "TimeSeriesResponseID",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_reference: TimeSeriesReference = field(
+        metadata={
+            "name": "TimeSeriesReference",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_planning_data: Optional[TimeSeriesPlanningData] = field(
+        default=None,
+        metadata={
+            "name": "TimeSeriesPlanningData",
+            "type": "Element",
+        },
+    )
+    time_series_response_party: TimeSeriesResponseParty = field(
+        metadata={
+            "name": "TimeSeriesResponseParty",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_header_response_coded: TimeSeriesHeaderResponseCoded = field(
+        metadata={
+            "name": "TimeSeriesHeaderResponseCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    time_series_header_response_coded_other: Optional[
+        TimeSeriesHeaderResponseCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "TimeSeriesHeaderResponseCodedOther",
+            "type": "Element",
+        },
+    )
+    changed_time_series_header: Optional[ChangedTimeSeriesHeader] = field(
+        default=None,
+        metadata={
+            "name": "ChangedTimeSeriesHeader",
+            "type": "Element",
+        },
+    )
+    language: Language = field(
+        metadata={
+            "name": "Language",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    general_notes: Optional[GeneralNotes] = field(
+        default=None,
+        metadata={
+            "name": "GeneralNotes",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class ListOfCharacteristicCombinations:
     characteristic_combination: List[CharacteristicCombination] = field(
         default_factory=list,
@@ -2503,14 +3196,14 @@ class ListOfChangedCharacteristicCombinations:
 
 @dataclass(kw_only=True)
 class TimeSeriesResponseDetail:
-    time_series_detail_response_coded: str = field(
+    time_series_detail_response_coded: TimeSeriesDetailResponseCoded = field(
         metadata={
             "name": "TimeSeriesDetailResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    time_series_detail_response_coded_other: str = field(
+    time_series_detail_response_coded_other: TimeSeriesDetailResponseCodedOther = field(
         metadata={
             "name": "TimeSeriesDetailResponseCodedOther",
             "type": "Element",

@@ -6,6 +6,7 @@ from travelport.models.carrier_1 import Carrier1
 from travelport.models.mco_create_date import McoCreateDate
 from travelport.models.mco_search_modifiers import McoSearchModifiers
 from travelport.models.name_1 import Name1
+from travelport.models.ticket_number_1 import TicketNumber1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
@@ -57,14 +58,12 @@ class McoSearchReq(BaseReq1):
             "max_occurs": 10,
         },
     )
-    ticket_number: None | str = field(
+    ticket_number: None | TicketNumber1 = field(
         default=None,
         metadata={
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "min_length": 1,
-            "max_length": 13,
         },
     )
     mco_create_date: None | McoCreateDate = field(

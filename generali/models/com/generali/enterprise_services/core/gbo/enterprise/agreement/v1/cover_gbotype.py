@@ -1,9 +1,19 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
     Idtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.percent_type import (
+    PercentType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
@@ -120,7 +130,7 @@ class CoverGbotype(AgreementType):
             "required": True,
         },
     )
-    layer: Optional[int] = field(
+    layer: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "Layer",
@@ -128,7 +138,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    share: Optional[Decimal] = field(
+    share: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "Share",
@@ -303,7 +313,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    exchange_rate: Optional[Decimal] = field(
+    exchange_rate: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "ExchangeRate",
@@ -319,7 +329,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    instruct_date: Optional[XmlDateTime] = field(
+    instruct_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "InstructDate",
@@ -327,7 +337,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    date_sent_to_broker: Optional[XmlDateTime] = field(
+    date_sent_to_broker: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "DateSentToBroker",
@@ -335,7 +345,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    date_policy_issued: Optional[XmlDateTime] = field(
+    date_policy_issued: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "DatePolicyIssued",
@@ -343,7 +353,7 @@ class CoverGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    payment_date: Optional[XmlDateTime] = field(
+    payment_date: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "PaymentDate",

@@ -1,5 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
+from travelport.models.operated_by_3 import OperatedBy3
 from travelport.models.provider_reservation_info_ref_4 import (
     ProviderReservationInfoRef4,
 )
@@ -26,15 +27,13 @@ class TypeProviderReservationSpecificInfo3:
     class Meta:
         name = "typeProviderReservationSpecificInfo"
 
-    operated_by: list[str] = field(
+    operated_by: list[OperatedBy3] = field(
         default_factory=list,
         metadata={
             "name": "OperatedBy",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-            "min_length": 1,
-            "white_space": "collapse",
         },
     )
     provider_reservation_info_ref: None | ProviderReservationInfoRef4 = field(

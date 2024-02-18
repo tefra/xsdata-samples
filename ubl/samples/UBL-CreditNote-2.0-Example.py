@@ -28,6 +28,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CreditedQuantity
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomerAssignedAccountId
@@ -35,8 +36,10 @@ from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
+from ubl.models.common.ubl_common_basic_components_2_1 import ExpiryDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import LineExtensionAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import LotNumberId
@@ -51,7 +54,9 @@ from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import SupplierAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import TaxEvidenceIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxExclusiveAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import TaxPointDate
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxableAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
@@ -75,12 +80,18 @@ obj = CreditNote(
     id=Id(
         value='CN758494'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4'
     ),
-    issue_date=XmlDate(2005, 6, 25),
-    tax_point_date=XmlDate(2005, 6, 21),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 6, 25)
+    ),
+    tax_point_date=TaxPointDate(
+        value=XmlDate(2005, 6, 21)
+    ),
     note=[
         Note(
             value='sample'
@@ -261,7 +272,9 @@ obj = CreditNote(
                 value=Decimal('17.50'),
                 currency_id='GBP'
             ),
-            tax_evidence_indicator=True,
+            tax_evidence_indicator=TaxEvidenceIndicator(
+                value=True
+            ),
             tax_subtotal=[
                 TaxSubtotal(
                     taxable_amount=TaxableAmount(
@@ -321,7 +334,9 @@ obj = CreditNote(
                 value=Decimal('100.00'),
                 currency_id='GBP'
             ),
-            tax_point_date=XmlDate(2005, 6, 21),
+            tax_point_date=TaxPointDate(
+                value=XmlDate(2005, 6, 21)
+            ),
             discrepancy_response=[
                 DiscrepancyResponse(
                     reference_id=ReferenceId(
@@ -343,7 +358,9 @@ obj = CreditNote(
                         uuid=Uuid(
                             value='849FBBCE-E081-40B4-906C-94C5FF9D1AC3'
                         ),
-                        issue_date=XmlDate(2005, 6, 21)
+                        issue_date=IssueDate(
+                            value=XmlDate(2005, 6, 21)
+                        )
                     )
                 ),
             ],
@@ -353,7 +370,9 @@ obj = CreditNote(
                         value=Decimal('17.50'),
                         currency_id='GBP'
                     ),
-                    tax_evidence_indicator=True,
+                    tax_evidence_indicator=TaxEvidenceIndicator(
+                        value=True
+                    ),
                     tax_subtotal=[
                         TaxSubtotal(
                             taxable_amount=TaxableAmount(
@@ -406,7 +425,9 @@ obj = CreditNote(
                             lot_number_id=LotNumberId(
                                 value='546378239'
                             ),
-                            expiry_date=XmlDate(2010, 1, 1)
+                            expiry_date=ExpiryDate(
+                                value=XmlDate(2010, 1, 1)
+                            )
                         )
                     ),
                 ]

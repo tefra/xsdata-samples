@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
-from .cell_ref import CellRef
+from .cell_ref_1 import CellRef1
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
 )
@@ -13,7 +13,7 @@ class CellRefsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cellRefs_RelStructure"
 
-    cell_ref: List[CellRef] = field(
+    cell_ref: List[CellRef1] = field(
         default_factory=list,
         metadata={
             "name": "CellRef",

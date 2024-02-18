@@ -9,6 +9,7 @@ from travelport.models.misc_form_of_payment_history_2 import (
     MiscFormOfPaymentHistory2,
 )
 from travelport.models.requisition_5 import Requisition5
+from travelport.models.ticket_number_history_2 import TicketNumberHistory2
 from travelport.models.type_credit_card_type_history_2 import (
     TypeCreditCardTypeHistory2,
 )
@@ -84,14 +85,12 @@ class TypeFormOfPaymentHistory2(TypeKeyElement2):
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
         },
     )
-    ticket_number_history: None | str = field(
+    ticket_number_history: None | TicketNumberHistory2 = field(
         default=None,
         metadata={
             "name": "TicketNumberHistory",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            "min_length": 0,
-            "max_length": 13,
         },
     )
     check: None | Check5 = field(

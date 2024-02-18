@@ -20,6 +20,9 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import (
     Contributors,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.group_title import (
+    GroupTitle,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.institution import (
     Institution,
 )
@@ -53,12 +56,10 @@ class PostedContent:
         name = "posted_content"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    group_title: Optional[str] = field(
+    group_title: Optional[GroupTitle] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 1024,
         },
     )
     contributors: Optional[Contributors] = field(

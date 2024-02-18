@@ -5,6 +5,7 @@ from xsdata.models.datatype import XmlDateTime
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import (
     CanonicalizationMethod,
     DigestMethod,
+    DigestValue,
     Signature,
     Transforms,
     X509IssuerSerialType,
@@ -340,14 +341,13 @@ class DigestAlgAndValueType:
             "required": True,
         },
     )
-    digest_value: Optional[bytes] = field(
+    digest_value: Optional[DigestValue] = field(
         default=None,
         metadata={
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-            "format": "base64",
         },
     )
 
@@ -495,14 +495,13 @@ class ReferenceInfoType:
             "required": True,
         },
     )
-    digest_value: Optional[bytes] = field(
+    digest_value: Optional[DigestValue] = field(
         default=None,
         metadata={
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-            "format": "base64",
         },
     )
     id: Optional[str] = field(

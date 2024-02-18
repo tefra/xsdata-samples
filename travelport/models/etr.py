@@ -2,11 +2,15 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.agency_info_1 import AgencyInfo1
 from travelport.models.air_pricing_info import AirPricingInfo
+from travelport.models.air_reservation_locator_code import (
+    AirReservationLocatorCode,
+)
 from travelport.models.audit_data import AuditData
 from travelport.models.baggage_allowances import BaggageAllowances
 from travelport.models.booking_traveler_1 import BookingTraveler1
 from travelport.models.commission_1 import Commission1
 from travelport.models.credit_card_auth_1 import CreditCardAuth1
+from travelport.models.fare_calc import FareCalc
 from travelport.models.form_of_payment_1 import FormOfPayment1
 from travelport.models.payment_1 import Payment1
 from travelport.models.restriction_1 import Restriction1
@@ -106,13 +110,11 @@ class Etr:
         name = "ETR"
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_reservation_locator_code: None | str = field(
+    air_reservation_locator_code: None | AirReservationLocatorCode = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
-            "min_length": 5,
-            "max_length": 8,
         },
     )
     agency_info: None | AgencyInfo1 = field(
@@ -168,7 +170,7 @@ class Etr:
             "max_occurs": 999,
         },
     )
-    fare_calc: None | str = field(
+    fare_calc: None | FareCalc = field(
         default=None,
         metadata={
             "name": "FareCalc",

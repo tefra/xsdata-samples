@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
-from .cell_ref import CellRef
+from .cell_ref_1 import CellRef1
 from .fulfilment_method_price_ref import FulfilmentMethodPriceRef
 from .fulfilment_method_price_versioned_child_structure import (
     FulfilmentMethodPriceVersionedChildStructure,
@@ -23,7 +23,7 @@ class FulfilmentMethodPricesRelStructure(
         Union[
             FulfilmentMethodPriceRef,
             FulfilmentMethodPriceVersionedChildStructure,
-            CellRef,
+            CellRef1,
         ]
     ] = field(
         default_factory=list,
@@ -42,7 +42,7 @@ class FulfilmentMethodPricesRelStructure(
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef,
+                    "type": CellRef1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

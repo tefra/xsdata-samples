@@ -1,15 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime, XmlDuration
+from .error_description_structure import ErrorDescriptionStructure
 from .other_error import OtherError
 from .service_not_available_error import ServiceNotAvailableError
+from .status import Status
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
 class CheckStatusResponseBodyStructure:
-    status: Optional[bool] = field(
+    status: Optional[Status] = field(
         default=None,
         metadata={
             "name": "Status",
@@ -82,7 +84,7 @@ class CheckStatusResponseBodyStructure:
                 ),
             },
         )
-        description: Optional[str] = field(
+        description: Optional[ErrorDescriptionStructure] = field(
             default=None,
             metadata={
                 "name": "Description",

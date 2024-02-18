@@ -5,7 +5,10 @@ from xcbl.models.request_for_quotation import (
     RequestQuoteReference,
 )
 from xcbl.models.shipping_schedule import ListOfPackageDetail
-from xcbl.models.shipping_schedule_response import TransportRouting
+from xcbl.models.shipping_schedule_response import (
+    TotalNumberOfLineItems,
+    TransportRouting,
+)
 from xcbl.models.sourcing_create import QuoteCurrency
 from xcbl.models.sourcing_result import (
     CatalogReference,
@@ -25,11 +28,26 @@ from xcbl.models.sourcing_result import (
     ListOfQuantityCoded,
     ListOfStructuredNote,
     MaxBackOrderQuantity,
+    OffCatalogFlag,
     OrderParty,
     ParentItemNumber,
     PricingDetail,
+    ReasonTaxExemptCoded,
+    ReasonTaxExemptCodedOther,
+    TaxAmount,
+    TaxAmountInTaxAccountingCurrency,
+    TaxCategoryCoded,
+    TaxCategoryCodedOther,
+    TaxFunctionQualifierCoded,
+    TaxFunctionQualifierCodedOther,
     TaxLocation,
+    TaxPaymentMethodCoded,
+    TaxPaymentMethodCodedOther,
+    TaxPercent,
+    TaxTypeCoded,
     TaxTypeCodedOther,
+    TaxableAmount,
+    TaxableAmountInTaxAccountingCurrency,
     TermsOfDelivery,
     TotalQuantity,
 )
@@ -39,34 +57,68 @@ from xcbl.models.time_series_response import (
     ListOfPartyCoded,
 )
 from xcbl.models.trading_partner_response import Reference
-from xcbl.models.trading_partner_user_information import Language
+from xcbl.models.trading_partner_user_information import (
+    GeneralNotes,
+    Language,
+)
 
 
 @dataclass(kw_only=True)
-class QuoteSummary:
-    total_number_of_line_items: Optional[str] = field(
-        default=None,
+class QuoteIssueDate:
+    value: str = field(
+        default="",
         metadata={
-            "name": "TotalNumberOfLineItems",
-            "type": "Element",
+            "required": True,
         },
     )
 
 
 @dataclass(kw_only=True)
-class QuoteType:
-    quote_type_coded: str = field(
+class QuoteTypeCoded:
+    value: str = field(
+        default="",
         metadata={
-            "name": "QuoteTypeCoded",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    quote_type_coded_other: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class QuoteTypeCodedOther:
+    value: str = field(
+        default="",
         metadata={
-            "name": "QuoteTypeCodedOther",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ReferenceReleaseNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TaxTreatmentCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TaxTreatmentCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -163,17 +215,6 @@ class QuoteItemReferences:
 
 
 @dataclass(kw_only=True)
-class QuoteItemType:
-    quote_type: QuoteType = field(
-        metadata={
-            "name": "QuoteType",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class QuoteLanguage:
     language: Language = field(
         metadata={
@@ -218,6 +259,17 @@ class QuotePricingDetail:
 
 
 @dataclass(kw_only=True)
+class QuoteSummary:
+    total_number_of_line_items: Optional[TotalNumberOfLineItems] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberOfLineItems",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class QuoteTermsOfDelivery:
     terms_of_delivery: TermsOfDelivery = field(
         metadata={
@@ -251,50 +303,70 @@ class QuoteTransport:
 
 
 @dataclass(kw_only=True)
+class QuoteType:
+    quote_type_coded: QuoteTypeCoded = field(
+        metadata={
+            "name": "QuoteTypeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    quote_type_coded_other: Optional[QuoteTypeCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "QuoteTypeCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class TaxReference:
-    tax_function_qualifier_coded: str = field(
+    tax_function_qualifier_coded: TaxFunctionQualifierCoded = field(
         metadata={
             "name": "TaxFunctionQualifierCoded",
             "type": "Element",
             "required": True,
         }
     )
-    tax_function_qualifier_coded_other: Optional[str] = field(
+    tax_function_qualifier_coded_other: Optional[
+        TaxFunctionQualifierCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "TaxFunctionQualifierCodedOther",
             "type": "Element",
         },
     )
-    tax_category_coded: str = field(
+    tax_category_coded: TaxCategoryCoded = field(
         metadata={
             "name": "TaxCategoryCoded",
             "type": "Element",
             "required": True,
         }
     )
-    tax_category_coded_other: Optional[str] = field(
+    tax_category_coded_other: Optional[TaxCategoryCodedOther] = field(
         default=None,
         metadata={
             "name": "TaxCategoryCodedOther",
             "type": "Element",
         },
     )
-    reason_tax_exempt_coded: Optional[str] = field(
+    reason_tax_exempt_coded: Optional[ReasonTaxExemptCoded] = field(
         default=None,
         metadata={
             "name": "ReasonTaxExemptCoded",
             "type": "Element",
         },
     )
-    reason_tax_exempt_coded_other: Optional[str] = field(
+    reason_tax_exempt_coded_other: Optional[ReasonTaxExemptCodedOther] = field(
         default=None,
         metadata={
             "name": "ReasonTaxExemptCodedOther",
             "type": "Element",
         },
     )
-    tax_type_coded: str = field(
+    tax_type_coded: TaxTypeCoded = field(
         metadata={
             "name": "TaxTypeCoded",
             "type": "Element",
@@ -308,49 +380,55 @@ class TaxReference:
             "type": "Element",
         },
     )
-    tax_percent: Optional[str] = field(
+    tax_percent: Optional[TaxPercent] = field(
         default=None,
         metadata={
             "name": "TaxPercent",
             "type": "Element",
         },
     )
-    tax_payment_method_coded: Optional[str] = field(
+    tax_payment_method_coded: Optional[TaxPaymentMethodCoded] = field(
         default=None,
         metadata={
             "name": "TaxPaymentMethodCoded",
             "type": "Element",
         },
     )
-    tax_payment_method_coded_other: Optional[str] = field(
+    tax_payment_method_coded_other: Optional[
+        TaxPaymentMethodCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "TaxPaymentMethodCodedOther",
             "type": "Element",
         },
     )
-    taxable_amount: Optional[str] = field(
+    taxable_amount: Optional[TaxableAmount] = field(
         default=None,
         metadata={
             "name": "TaxableAmount",
             "type": "Element",
         },
     )
-    taxable_amount_in_tax_accounting_currency: Optional[str] = field(
+    taxable_amount_in_tax_accounting_currency: Optional[
+        TaxableAmountInTaxAccountingCurrency
+    ] = field(
         default=None,
         metadata={
             "name": "TaxableAmountInTaxAccountingCurrency",
             "type": "Element",
         },
     )
-    tax_amount: str = field(
+    tax_amount: TaxAmount = field(
         metadata={
             "name": "TaxAmount",
             "type": "Element",
             "required": True,
         }
     )
-    tax_amount_in_tax_accounting_currency: Optional[str] = field(
+    tax_amount_in_tax_accounting_currency: Optional[
+        TaxAmountInTaxAccountingCurrency
+    ] = field(
         default=None,
         metadata={
             "name": "TaxAmountInTaxAccountingCurrency",
@@ -364,14 +442,14 @@ class TaxReference:
             "type": "Element",
         },
     )
-    tax_treatment_coded: str = field(
+    tax_treatment_coded: TaxTreatmentCoded = field(
         metadata={
             "name": "TaxTreatmentCoded",
             "type": "Element",
             "required": True,
         }
     )
-    tax_treatment_coded_other: Optional[str] = field(
+    tax_treatment_coded_other: Optional[TaxTreatmentCodedOther] = field(
         default=None,
         metadata={
             "name": "TaxTreatmentCodedOther",
@@ -389,7 +467,7 @@ class QuotationRequestReference:
             "required": True,
         }
     )
-    reference_release_number: Optional[str] = field(
+    reference_release_number: Optional[ReferenceReleaseNumber] = field(
         default=None,
         metadata={
             "name": "ReferenceReleaseNumber",
@@ -456,7 +534,7 @@ class QuoteItemDetail:
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[str] = field(
+    off_catalog_flag: Optional[OffCatalogFlag] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
@@ -543,6 +621,17 @@ class QuoteItemDetail:
 
 
 @dataclass(kw_only=True)
+class QuoteItemType:
+    quote_type: QuoteType = field(
+        metadata={
+            "name": "QuoteType",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class QuoteTax:
     tax_reference: TaxReference = field(
         metadata={
@@ -601,7 +690,7 @@ class QuoteDetails:
 
 @dataclass(kw_only=True)
 class QuoteHeader:
-    quote_issue_date: str = field(
+    quote_issue_date: QuoteIssueDate = field(
         metadata={
             "name": "QuoteIssueDate",
             "type": "Element",
@@ -692,7 +781,7 @@ class QuoteHeader:
             "type": "Element",
         },
     )
-    general_notes: Optional[str] = field(
+    general_notes: Optional[GeneralNotes] = field(
         default=None,
         metadata={
             "name": "GeneralNotes",

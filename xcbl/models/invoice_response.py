@@ -19,6 +19,56 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
+class BuyerInvoiceNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceResponseCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceResponseCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceResponseHeaderNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InvoiceResponseIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class InvoiceReference:
     reference: Reference = field(
         metadata={
@@ -38,14 +88,14 @@ class InvoiceResponseDetail:
             "required": True,
         }
     )
-    invoice_response_coded: Optional[str] = field(
+    invoice_response_coded: Optional[InvoiceResponseCoded] = field(
         default=None,
         metadata={
             "name": "InvoiceResponseCoded",
             "type": "Element",
         },
     )
-    invoice_response_coded_other: Optional[str] = field(
+    invoice_response_coded_other: Optional[InvoiceResponseCodedOther] = field(
         default=None,
         metadata={
             "name": "InvoiceResponseCodedOther",
@@ -139,7 +189,7 @@ class ListOfInvoiceResponseDetail:
 
 @dataclass(kw_only=True)
 class InvoiceResponseHeader:
-    buyer_invoice_number: str = field(
+    buyer_invoice_number: BuyerInvoiceNumber = field(
         metadata={
             "name": "BuyerInvoiceNumber",
             "type": "Element",
@@ -153,7 +203,7 @@ class InvoiceResponseHeader:
             "required": True,
         }
     )
-    invoice_response_issue_date: Optional[str] = field(
+    invoice_response_issue_date: Optional[InvoiceResponseIssueDate] = field(
         default=None,
         metadata={
             "name": "InvoiceResponseIssueDate",
@@ -174,14 +224,14 @@ class InvoiceResponseHeader:
             "required": True,
         }
     )
-    invoice_response_coded: str = field(
+    invoice_response_coded: InvoiceResponseCoded = field(
         metadata={
             "name": "InvoiceResponseCoded",
             "type": "Element",
             "required": True,
         }
     )
-    invoice_response_coded_other: Optional[str] = field(
+    invoice_response_coded_other: Optional[InvoiceResponseCodedOther] = field(
         default=None,
         metadata={
             "name": "InvoiceResponseCodedOther",
@@ -195,7 +245,7 @@ class InvoiceResponseHeader:
             "required": True,
         }
     )
-    invoice_response_header_note: Optional[str] = field(
+    invoice_response_header_note: Optional[InvoiceResponseHeaderNote] = field(
         default=None,
         metadata={
             "name": "InvoiceResponseHeaderNote",

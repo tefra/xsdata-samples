@@ -14,17 +14,22 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import SellerSupplier
 from ubl.models.common.ubl_common_aggregate_components_2_1 import SellersItemIdentification
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import Department
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import DocumentCurrencyCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
 from ubl.models.common.ubl_common_basic_components_2_1 import InventoryValueAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
 from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
 from ubl.models.common.ubl_common_basic_components_2_1 import Telephone
@@ -41,8 +46,12 @@ obj = InventoryReport(
     id=Id(
         value='CC2679'
     ),
-    copy_indicator=False,
-    issue_date=XmlDate(2010, 4, 12),
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
+    issue_date=IssueDate(
+        value=XmlDate(2010, 4, 12)
+    ),
     note=[
         Note(
             value='Report about the quantities on stock.'
@@ -53,9 +62,15 @@ obj = InventoryReport(
         list_id='ISO 4217 Alpha'
     ),
     inventory_period=InventoryPeriod(
-        start_date=XmlDate(2010, 4, 11),
-        start_time=XmlTime(14, 0, 0, 0),
-        end_date=XmlDate(2010, 4, 11)
+        start_date=StartDate(
+            value=XmlDate(2010, 4, 11)
+        ),
+        start_time=StartTime(
+            value=XmlTime(14, 0, 0, 0)
+        ),
+        end_date=EndDate(
+            value=XmlDate(2010, 4, 11)
+        )
     ),
     retailer_customer_party=RetailerCustomerParty(
         party=Party(

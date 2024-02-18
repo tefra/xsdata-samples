@@ -3,6 +3,7 @@ from typing import List, Optional
 from xcbl.models.payment_request_acknowledgment import (
     FinancialInstitutionDetail,
     PaymentDocumentId,
+    PaymentSequenceNo,
 )
 from xcbl.models.payment_status_response import (
     OriginatingFinancialInstitution,
@@ -12,9 +13,12 @@ from xcbl.models.payment_status_response import (
     SettlementAmount,
 )
 from xcbl.models.remittance_advice import (
+    IsCredit,
     ListOfRateOfExchangeDetail,
     PayeeParty,
     PayerParty,
+    PaymentReasonCoded,
+    PaymentReasonCodedOther,
     PaymentRequestSummary,
     RemittanceAdviceDetail,
     SupplierParty,
@@ -23,7 +27,11 @@ from xcbl.models.request_for_quotation import (
     AccountDetail,
     CardInfo,
     FinancialInstitution,
+    PaymentMeanCoded,
+    PaymentMeanCodedOther,
     PaymentMeanReference,
+    PaymentSystemCoded,
+    PaymentSystemCodedOther,
 )
 from xcbl.models.sourcing_result import (
     Attachment,
@@ -36,6 +44,7 @@ from xcbl.models.sourcing_result_response import Purpose
 from xcbl.models.time_series_response import (
     ListOfIdentifier,
     ListOfPartyCoded,
+    Mdfbusiness,
     NameAddress,
     OrderContact,
     OtherContacts,
@@ -48,8 +57,182 @@ from xcbl.models.trading_partner_organization_information import Currency
 from xcbl.models.trading_partner_user_information import (
     CorrespondenceLanguage,
     Country,
+    GeneralNotes,
     Language,
 )
+
+
+@dataclass(kw_only=True)
+class AcceptFxmarketRate:
+    class Meta:
+        name = "AcceptFXMarketRate"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ChargeRegulationCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ChargeRegulationCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class IndustrySectorCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class IndustrySectorCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class InternationalPaymentIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class IntraCompanyPaymentIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LegalReportingDescription:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LegalReportingImportDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LegalReportingIndicator:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LegalReportingPaymentDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LegalReportingSupplementalCode:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentInstructionNotes:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentRequestIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentUrgencyCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentUrgencyCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class RepetitiveCode:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 @dataclass(kw_only=True)
@@ -90,7 +273,7 @@ class Company:
             "type": "Element",
         },
     )
-    mdfbusiness: Optional[str] = field(
+    mdfbusiness: Optional[Mdfbusiness] = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
@@ -139,14 +322,14 @@ class Company:
             "type": "Element",
         },
     )
-    industry_sector_coded: Optional[str] = field(
+    industry_sector_coded: Optional[IndustrySectorCoded] = field(
         default=None,
         metadata={
             "name": "IndustrySectorCoded",
             "type": "Element",
         },
     )
-    industry_sector_coded_other: Optional[str] = field(
+    industry_sector_coded_other: Optional[IndustrySectorCodedOther] = field(
         default=None,
         metadata={
             "name": "IndustrySectorCodedOther",
@@ -352,14 +535,16 @@ class SettlementCurrency:
 
 @dataclass(kw_only=True)
 class FinancialChargesAllocation:
-    charge_regulation_coded: str = field(
+    charge_regulation_coded: ChargeRegulationCoded = field(
         metadata={
             "name": "ChargeRegulationCoded",
             "type": "Element",
             "required": True,
         }
     )
-    charge_regulation_coded_other: Optional[str] = field(
+    charge_regulation_coded_other: Optional[
+        ChargeRegulationCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "ChargeRegulationCodedOther",
@@ -421,7 +606,7 @@ class PaymentRequestHeader:
             "required": True,
         }
     )
-    payment_request_issue_date: str = field(
+    payment_request_issue_date: PaymentRequestIssueDate = field(
         metadata={
             "name": "PaymentRequestIssueDate",
             "type": "Element",
@@ -449,7 +634,7 @@ class PaymentRequestHeader:
             "required": True,
         }
     )
-    general_notes: Optional[str] = field(
+    general_notes: Optional[GeneralNotes] = field(
         default=None,
         metadata={
             "name": "GeneralNotes",
@@ -467,14 +652,16 @@ class PaymentRequestHeader:
 
 @dataclass(kw_only=True)
 class LegalReportingInformation:
-    legal_reporting_indicator: str = field(
+    legal_reporting_indicator: LegalReportingIndicator = field(
         metadata={
             "name": "LegalReportingIndicator",
             "type": "Element",
             "required": True,
         }
     )
-    legal_reporting_supplemental_code: Optional[str] = field(
+    legal_reporting_supplemental_code: Optional[
+        LegalReportingSupplementalCode
+    ] = field(
         default=None,
         metadata={
             "name": "LegalReportingSupplementalCode",
@@ -522,21 +709,21 @@ class LegalReportingInformation:
             "type": "Element",
         },
     )
-    legal_reporting_import_date: Optional[str] = field(
+    legal_reporting_import_date: Optional[LegalReportingImportDate] = field(
         default=None,
         metadata={
             "name": "LegalReportingImportDate",
             "type": "Element",
         },
     )
-    legal_reporting_payment_date: Optional[str] = field(
+    legal_reporting_payment_date: Optional[LegalReportingPaymentDate] = field(
         default=None,
         metadata={
             "name": "LegalReportingPaymentDate",
             "type": "Element",
         },
     )
-    legal_reporting_description: Optional[str] = field(
+    legal_reporting_description: Optional[LegalReportingDescription] = field(
         default=None,
         metadata={
             "name": "LegalReportingDescription",
@@ -554,7 +741,7 @@ class PaymentRequestDetail:
             "required": True,
         }
     )
-    payment_sequence_no: Optional[str] = field(
+    payment_sequence_no: Optional[PaymentSequenceNo] = field(
         default=None,
         metadata={
             "name": "PaymentSequenceNo",
@@ -643,56 +830,60 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    payment_reason_coded: Optional[str] = field(
+    payment_reason_coded: Optional[PaymentReasonCoded] = field(
         default=None,
         metadata={
             "name": "PaymentReasonCoded",
             "type": "Element",
         },
     )
-    payment_reason_coded_other: Optional[str] = field(
+    payment_reason_coded_other: Optional[PaymentReasonCodedOther] = field(
         default=None,
         metadata={
             "name": "PaymentReasonCodedOther",
             "type": "Element",
         },
     )
-    payment_urgency_coded: Optional[str] = field(
+    payment_urgency_coded: Optional[PaymentUrgencyCoded] = field(
         default=None,
         metadata={
             "name": "PaymentUrgencyCoded",
             "type": "Element",
         },
     )
-    payment_urgency_coded_other: Optional[str] = field(
+    payment_urgency_coded_other: Optional[PaymentUrgencyCodedOther] = field(
         default=None,
         metadata={
             "name": "PaymentUrgencyCodedOther",
             "type": "Element",
         },
     )
-    international_payment_indicator: Optional[str] = field(
+    international_payment_indicator: Optional[
+        InternationalPaymentIndicator
+    ] = field(
         default=None,
         metadata={
             "name": "InternationalPaymentIndicator",
             "type": "Element",
         },
     )
-    intra_company_payment_indicator: Optional[str] = field(
+    intra_company_payment_indicator: Optional[
+        IntraCompanyPaymentIndicator
+    ] = field(
         default=None,
         metadata={
             "name": "IntraCompanyPaymentIndicator",
             "type": "Element",
         },
     )
-    payment_mean_coded: str = field(
+    payment_mean_coded: PaymentMeanCoded = field(
         metadata={
             "name": "PaymentMeanCoded",
             "type": "Element",
             "required": True,
         }
     )
-    payment_mean_coded_other: Optional[str] = field(
+    payment_mean_coded_other: Optional[PaymentMeanCodedOther] = field(
         default=None,
         metadata={
             "name": "PaymentMeanCodedOther",
@@ -706,14 +897,14 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    payment_system_coded: Optional[str] = field(
+    payment_system_coded: Optional[PaymentSystemCoded] = field(
         default=None,
         metadata={
             "name": "PaymentSystemCoded",
             "type": "Element",
         },
     )
-    payment_system_coded_other: Optional[str] = field(
+    payment_system_coded_other: Optional[PaymentSystemCodedOther] = field(
         default=None,
         metadata={
             "name": "PaymentSystemCodedOther",
@@ -727,7 +918,7 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    accept_fxmarket_rate: Optional[str] = field(
+    accept_fxmarket_rate: Optional[AcceptFxmarketRate] = field(
         default=None,
         metadata={
             "name": "AcceptFXMarketRate",
@@ -750,21 +941,21 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    payment_instruction_notes: Optional[str] = field(
+    payment_instruction_notes: Optional[PaymentInstructionNotes] = field(
         default=None,
         metadata={
             "name": "PaymentInstructionNotes",
             "type": "Element",
         },
     )
-    is_credit: Optional[str] = field(
+    is_credit: Optional[IsCredit] = field(
         default=None,
         metadata={
             "name": "IsCredit",
             "type": "Element",
         },
     )
-    repetitive_code: Optional[str] = field(
+    repetitive_code: Optional[RepetitiveCode] = field(
         default=None,
         metadata={
             "name": "RepetitiveCode",

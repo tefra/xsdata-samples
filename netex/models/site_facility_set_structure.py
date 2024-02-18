@@ -1,92 +1,79 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
-from .access_facility_enumeration import AccessFacilityEnumeration
-from .emergency_service_enumeration import EmergencyServiceEnumeration
+from typing import Optional
+from .access_facility_list import AccessFacilityList
+from .emergency_service_list import EmergencyServiceList
 from .facility_set_version_structure import FacilitySetVersionStructure
-from .hire_facility_enumeration import HireFacilityEnumeration
-from .luggage_locker_facility_enumeration import (
-    LuggageLockerFacilityEnumeration,
-)
-from .luggage_service_facility_enumeration import (
-    LuggageServiceFacilityEnumeration,
-)
-from .money_facility_enumeration import MoneyFacilityEnumeration
-from .parking_facility_enumeration import ParkingFacilityEnumeration
-from .staffing_enumeration import StaffingEnumeration
+from .hire_facility_list import HireFacilityList
+from .luggage_locker_facility_list import LuggageLockerFacilityList
+from .luggage_service_facility_list import LuggageServiceFacilityList
+from .money_facility_list import MoneyFacilityList
+from .parking_facility_list import ParkingFacilityList
+from .staffing import Staffing
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
 class SiteFacilitySetStructure(FacilitySetVersionStructure):
-    access_facility_list: List[AccessFacilityEnumeration] = field(
-        default_factory=list,
+    access_facility_list: Optional[AccessFacilityList] = field(
+        default=None,
         metadata={
             "name": "AccessFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    emergency_service_list: List[EmergencyServiceEnumeration] = field(
-        default_factory=list,
+    emergency_service_list: Optional[EmergencyServiceList] = field(
+        default=None,
         metadata={
             "name": "EmergencyServiceList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    hire_facility_list: List[HireFacilityEnumeration] = field(
-        default_factory=list,
+    hire_facility_list: Optional[HireFacilityList] = field(
+        default=None,
         metadata={
             "name": "HireFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    luggage_locker_facility_list: List[
-        LuggageLockerFacilityEnumeration
-    ] = field(
-        default_factory=list,
+    luggage_locker_facility_list: Optional[LuggageLockerFacilityList] = field(
+        default=None,
         metadata={
             "name": "LuggageLockerFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    luggage_service_facility_list: List[
-        LuggageServiceFacilityEnumeration
+    luggage_service_facility_list: Optional[
+        LuggageServiceFacilityList
     ] = field(
-        default_factory=list,
+        default=None,
         metadata={
             "name": "LuggageServiceFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    money_facility_list: List[MoneyFacilityEnumeration] = field(
-        default_factory=list,
+    money_facility_list: Optional[MoneyFacilityList] = field(
+        default=None,
         metadata={
             "name": "MoneyFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    parking_facility_list: List[ParkingFacilityEnumeration] = field(
-        default_factory=list,
+    parking_facility_list: Optional[ParkingFacilityList] = field(
+        default=None,
         metadata={
             "name": "ParkingFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    staffing: Optional[StaffingEnumeration] = field(
+    staffing: Optional[Staffing] = field(
         default=None,
         metadata={
             "name": "Staffing",

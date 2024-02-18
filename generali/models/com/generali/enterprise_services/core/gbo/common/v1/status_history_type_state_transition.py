@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.date_time_type import (
+    DateTimeType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
     Idtype,
@@ -56,7 +58,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    effective_date_time: Optional[XmlDateTime] = field(
+    effective_date_time: Optional[DateTimeType] = field(
         default=None,
         metadata={
             "name": "EffectiveDateTime",

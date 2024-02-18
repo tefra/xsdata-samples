@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Optional
 from .derived_view_structure import DerivedViewStructure
-from .fare_class_enumeration import FareClassEnumeration
+from .fare_classes import FareClasses
 from .multilingual_string import MultilingualString
 from .train_component_ref import TrainComponentRef
 from .train_element_ref import TrainElementRef
@@ -47,13 +47,12 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_classes: List[FareClassEnumeration] = field(
-        default_factory=list,
+    fare_classes: Optional[FareClasses] = field(
+        default=None,
         metadata={
             "name": "FareClasses",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
     train_element_type: Optional[TrainElementTypeEnumeration] = field(

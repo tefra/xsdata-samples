@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
 )
@@ -14,7 +17,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class LandType(ExpansiveStructureType):
-    land_area_m2: Optional[int] = field(
+    land_area_m2: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "LandAreaM2",

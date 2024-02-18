@@ -2,11 +2,11 @@ from decimal import Decimal
 from netex.models.all_modes_enumeration import AllModesEnumeration
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.arrival_structure import ArrivalStructure
-from netex.models.call import Call
+from netex.models.call_1 import Call1
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -29,6 +29,7 @@ from netex.models.destination_display_ref import DestinationDisplayRef
 from netex.models.destination_displays_in_frame_rel_structure import DestinationDisplaysInFrameRelStructure
 from netex.models.direction import Direction
 from netex.models.direction_ref import DirectionRef
+from netex.models.direction_type import DirectionType
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelStructure
 from netex.models.entities_in_version_rel_structure import CompositeFrame
@@ -44,7 +45,7 @@ from netex.models.journey_run_times_rel_structure import JourneyRunTimesRelStruc
 from netex.models.journey_wait_time import JourneyWaitTime
 from netex.models.journey_wait_times_rel_structure import JourneyWaitTimesRelStructure
 from netex.models.journeys_in_frame_rel_structure import JourneysInFrameRelStructure
-from netex.models.line import Line
+from netex.models.line_1 import Line1
 from netex.models.line_ref import LineRef
 from netex.models.line_view import LineView
 from netex.models.lines_in_frame_rel_structure import LinesInFrameRelStructure
@@ -55,13 +56,14 @@ from netex.models.network_frame_topic_structure import NetworkFrameTopicStructur
 from netex.models.notice import Notice
 from netex.models.notices_in_frame_rel_structure import NoticesInFrameRelStructure
 from netex.models.onward_timing_link_view import OnwardTimingLinkView
+from netex.models.participant_ref import ParticipantRef
 from netex.models.points_in_journey_pattern_rel_structure import PointsInJourneyPatternRelStructure
 from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
-from netex.models.route import Route
+from netex.models.route_1 import Route1
 from netex.models.route_ref import RouteRef
 from netex.models.route_ref_structure import RouteRefStructure
 from netex.models.routes_in_frame_rel_structure import RoutesInFrameRelStructure
@@ -72,7 +74,7 @@ from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledS
 from netex.models.service_calendar import ServiceCalendar
 from netex.models.service_calendar_frame import ServiceCalendarFrame
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey import ServiceJourney
+from netex.models.service_journey_1 import ServiceJourney1
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.service_link import ServiceLink
@@ -99,7 +101,7 @@ from netex.models.timing_link_ref_structure import TimingLinkRefStructure
 from netex.models.timing_links_in_frame_rel_structure import TimingLinksInFrameRelStructure
 from netex.models.timing_pattern import TimingPattern
 from netex.models.timing_patterns_in_frame_rel_structure import TimingPatternsInFrameRelStructure
-from netex.models.timing_point import TimingPoint
+from netex.models.timing_point_1 import TimingPoint1
 from netex.models.timing_point_in_journey_pattern import TimingPointInJourneyPattern
 from netex.models.timing_point_ref import TimingPointRef
 from netex.models.timing_point_ref_structure import TimingPointRefStructure
@@ -107,6 +109,7 @@ from netex.models.timing_point_status_enumeration import TimingPointStatusEnumer
 from netex.models.timing_points_in_frame_rel_structure import TimingPointsInFrameRelStructure
 from netex.models.timing_points_in_journey_pattern_rel_structure import TimingPointsInJourneyPatternRelStructure
 from netex.models.transfers_in_frame_rel_structure import TransfersInFrameRelStructure
+from netex.models.vehicle_mode import VehicleMode
 from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
 from xsdata.formats.dataclass.models.generics import DerivedElement
@@ -118,10 +121,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -202,25 +209,29 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route(
+                                    Route1(
                                         id='mybus:RT_24o',
                                         version='any',
                                         name=MultilingualString(
                                             value='Line 24 Alpha to Quebec'
                                         ),
-                                        direction_type=DirectionTypeEnumeration.OUTBOUND,
+                                        direction_type=DirectionType(
+
+                                        ),
                                         direction_ref=DirectionRef(
                                             version='any',
                                             ref='mybus:DR_Westbound'
                                         )
                                     ),
-                                    Route(
+                                    Route1(
                                         id='mybus:RT_46o',
                                         version='any',
                                         name=MultilingualString(
                                             value='Line 46  Bravo  to Quebec'
                                         ),
-                                        direction_type=DirectionTypeEnumeration.OUTBOUND,
+                                        direction_type=DirectionType(
+
+                                        ),
                                         direction_ref=DirectionRef(
                                             version='any',
                                             ref='mybus:DR_Westbound'
@@ -230,7 +241,7 @@ obj = PublicationDelivery(
                             ),
                             lines=LinesInFrameRelStructure(
                                 line=[
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_24',
                                         version='any',
                                         name=MultilingualString(
@@ -242,7 +253,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='24'
                                     ),
-                                    Line(
+                                    Line1(
                                         id='mybus:LN_46',
                                         version='any',
                                         name=MultilingualString(
@@ -423,7 +434,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.BUS
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.BUS
+                                        )
                                     ),
                                     ServiceLink(
                                         id='mybus:SL@SSP_002+SSP_077_bus',
@@ -439,7 +452,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_077'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.BUS
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.BUS
+                                        )
                                     ),
                                     ServiceLink(
                                         id='mybus:SL@SSP_077+SSP_021_bus',
@@ -455,7 +470,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_021'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.BUS
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.BUS
+                                        )
                                     ),
                                     ServiceLink(
                                         id='mybus:SL@SSP_021+SSP_022_bus',
@@ -471,7 +488,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_022'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.BUS
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.BUS
+                                        )
                                     ),
                                     ServiceLink(
                                         id='mybus:SL@SSP_001+SSP_002_tram',
@@ -487,7 +506,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.TRAM
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.TRAM
+                                        )
                                     ),
                                     ServiceLink(
                                         id='mybus:SL@SSP_002+SSP_077_tram',
@@ -503,7 +524,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_077'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.TRAM
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.TRAM
+                                        )
                                     ),
                                     ServiceLink(
                                         id='mybus:SL@SSP_077+SSP_021_tram',
@@ -519,7 +542,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_021'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.TRAM
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.TRAM
+                                        )
                                     ),
                                     ServiceLink(
                                         id='mybus:SL@SSP_021+SSP_022_tram',
@@ -535,7 +560,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_022'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.TRAM
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.TRAM
+                                        )
                                     ),
                                 ]
                             ),
@@ -869,7 +896,7 @@ obj = PublicationDelivery(
                             ),
                             timing_points=TimingPointsInFrameRelStructure(
                                 timing_point=[
-                                    TimingPoint(
+                                    TimingPoint1(
                                         id='mybus:SSP_001_t1',
                                         version='any',
                                         name=MultilingualString(
@@ -881,7 +908,7 @@ obj = PublicationDelivery(
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
-                                    TimingPoint(
+                                    TimingPoint1(
                                         id='mybus:SSP_001_t2',
                                         version='any',
                                         name=MultilingualString(
@@ -893,7 +920,7 @@ obj = PublicationDelivery(
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
-                                    TimingPoint(
+                                    TimingPoint1(
                                         id='mybus:SSP_002_t1',
                                         version='any',
                                         name=MultilingualString(
@@ -1028,7 +1055,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_022'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.BUS
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.BUS
+                                        )
                                     ),
                                     TimingLink(
                                         id='mybus:TL@SSP_021+SSP_022_bus',
@@ -1044,7 +1073,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_022'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.BUS
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.BUS
+                                        )
                                     ),
                                     TimingLink(
                                         id='mybus:TL@SSP_077+SSP_021_tram',
@@ -1060,7 +1091,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_022'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.TRAM
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.TRAM
+                                        )
                                     ),
                                     TimingLink(
                                         id='mybus:TL@SSP_021+SSP_022_tram',
@@ -1076,7 +1109,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:SSP_022'
                                         ),
-                                        vehicle_mode=AllModesEnumeration.TRAM
+                                        vehicle_mode=VehicleMode(
+                                            value=AllModesEnumeration.TRAM
+                                        )
                                     ),
                                 ]
                             ),
@@ -1092,7 +1127,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:RT_24o'
                                         ),
-                                        direction_type=DirectionTypeEnumeration.OUTBOUND,
+                                        direction_type=DirectionType(
+
+                                        ),
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
@@ -1212,7 +1249,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:RT_46o'
                                         ),
-                                        direction_type=DirectionTypeEnumeration.OUTBOUND,
+                                        direction_type=DirectionType(
+
+                                        ),
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
@@ -1577,7 +1616,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_OffPeak_SSP_002+SSP_002_t1_bus',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_002+SSP_002_t1'
@@ -1587,7 +1628,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_OffPeak_SSP_002+SSP_002_t1_tram',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.TRAM,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.TRAM
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_002+SSP_002_t1'
@@ -1597,7 +1640,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_OffPeak_SSP_002_t1+SSP_077_bus',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_002_t1+SSP_077'
@@ -1607,7 +1652,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_OffPeak_SSP_002_t1+SSP_077_tram',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.TRAM,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.TRAM
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_002_t1+SSP_077'
@@ -1617,7 +1664,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_OffPeak_SSP_077+SSP_021_bus',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_077+SSP_021_bus'
@@ -1627,7 +1676,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_OffPeak_SSP_077+SSP_021_tram',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.TRAM,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.TRAM
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_077+SSP_021_tram'
@@ -1637,7 +1688,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_OffPeak_SSP_021+SSP_022_bus',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_021+SSP_022_bus'
@@ -1647,7 +1700,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_OffPeak_SSP_021+SSP_022_tram',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.TRAM,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.TRAM
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_021+SSP_022_tram'
@@ -1664,7 +1719,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Wait at Stop Bravo OFF PEAK'
                                                     ),
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     choice=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
@@ -1712,7 +1769,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_Peak_SSP_002+SSP_002_t1_bus',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_002+SSP_002_t1'
@@ -1722,7 +1781,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_Peak_SSP_002+SSP_002_t1_tram',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.TRAM,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.TRAM
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_002+SSP_002_t1'
@@ -1732,7 +1793,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_Peak_SSP_002_t1+SSP_077_bus',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_002_t1+SSP_077'
@@ -1742,7 +1805,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_Peak_SSP_002_t1+SSP_077_tram',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.TRAM,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.TRAM
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_002_t1+SSP_077'
@@ -1752,7 +1817,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_Peak_SSP_077+SSP_021_bus',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_077+SSP_021_bus'
@@ -1762,7 +1829,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_Peak_SSP_077+SSP_021_tram',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.TRAM,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.TRAM
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_077+SSP_021_tram'
@@ -1772,7 +1841,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_Peak_SSP_021+SSP_022_bus',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_021+SSP_022_bus'
@@ -1782,7 +1853,9 @@ obj = PublicationDelivery(
                                                 JourneyRunTime(
                                                     id='mybus:tdtr_Peak_SSP_021+SSP_022_tram',
                                                     version='any',
-                                                    vehicle_mode=AllModesEnumeration.TRAM,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.TRAM
+                                                    ),
                                                     timing_link_ref=TimingLinkRef(
                                                         version='any',
                                                         ref='mybus:TL@SSP_021+SSP_022_tram'
@@ -1799,7 +1872,9 @@ obj = PublicationDelivery(
                                                     name=MultilingualString(
                                                         value='Wait at Stop Bravo PEAK'
                                                     ),
-                                                    vehicle_mode=AllModesEnumeration.BUS,
+                                                    vehicle_mode=VehicleMode(
+                                                        value=AllModesEnumeration.BUS
+                                                    ),
                                                     choice=ScheduledStopPointRef(
                                                         version='any',
                                                         ref='mybus:SSP_002'
@@ -1850,7 +1925,7 @@ obj = PublicationDelivery(
                             ],
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_24o_01',
                                         version='any',
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
@@ -1894,7 +1969,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1919,7 +1994,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1948,7 +2023,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1970,7 +2045,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_01_004',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1992,7 +2067,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2010,7 +2085,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_24o_02',
                                         version='any',
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
@@ -2054,7 +2129,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2079,7 +2154,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2108,7 +2183,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2130,7 +2205,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_02_004',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2152,7 +2227,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2170,7 +2245,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_46o_01',
                                         version='any',
                                         departure_time=XmlTime(14, 40, 0, 0, 0),
@@ -2214,7 +2289,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_46o_01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2236,7 +2311,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_46o_01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2258,7 +2333,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_46o_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2280,7 +2355,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_46o_01_004',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2298,7 +2373,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_46o_02',
                                         version='any',
                                         departure_time=XmlTime(18, 0, 0, 0, 0),
@@ -2342,7 +2417,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_46o_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2364,7 +2439,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_46o_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2386,7 +2461,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_46o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2408,7 +2483,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_46o_02_004',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -2467,7 +2542,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_01-MF-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -2490,7 +2565,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_02-AA-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -2509,7 +2584,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_03-WE-NH',
                                         version='any',
                                         name=MultilingualString(
@@ -2529,7 +2604,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_04-AA-NH',
                                         version='any',
                                         name=MultilingualString(

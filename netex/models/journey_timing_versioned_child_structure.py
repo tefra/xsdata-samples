@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
-from .all_modes_enumeration import AllModesEnumeration
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 from .operational_context_ref import OperationalContextRef
 from .time_demand_type_ref import TimeDemandTypeRef
 from .timeband_ref import TimebandRef
+from .vehicle_mode import VehicleMode
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -43,7 +43,7 @@ class JourneyTimingVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    vehicle_mode: Optional[AllModesEnumeration] = field(
+    vehicle_mode: Optional[VehicleMode] = field(
         default=None,
         metadata={
             "name": "VehicleMode",

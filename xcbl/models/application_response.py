@@ -5,28 +5,155 @@ from xcbl.models.sourcing_result import (
     LineItemNumberReference,
     ListOfNameValueSet,
     ListOfStructuredNote,
+    ScheduleLineId,
 )
 from xcbl.models.time_series_response import Party
 from xcbl.models.trading_partner_response import Reference
 
 
 @dataclass(kw_only=True)
+class ApplicationId:
+    class Meta:
+        name = "ApplicationID"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ApplicationIdextension:
+    class Meta:
+        name = "ApplicationIDExtension"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ApplicationInstance:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ApplicationResponseIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ApplicationResponseNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ApplicationResponseTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class BusinessDocumentTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class BusinessDocumentTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class DocumentStatusCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class DocumentStatusCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ErrorTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ErrorTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class ApplicationIdentification:
-    application_id: str = field(
+    application_id: ApplicationId = field(
         metadata={
             "name": "ApplicationID",
             "type": "Element",
             "required": True,
         }
     )
-    application_idextension: Optional[str] = field(
+    application_idextension: Optional[ApplicationIdextension] = field(
         default=None,
         metadata={
             "name": "ApplicationIDExtension",
             "type": "Element",
         },
     )
-    application_instance: Optional[str] = field(
+    application_instance: Optional[ApplicationInstance] = field(
         default=None,
         metadata={
             "name": "ApplicationInstance",
@@ -77,7 +204,7 @@ class ItemReference:
             "required": True,
         }
     )
-    schedule_line_id: Optional[str] = field(
+    schedule_line_id: Optional[ScheduleLineId] = field(
         default=None,
         metadata={
             "name": "ScheduleLineID",
@@ -87,37 +214,15 @@ class ItemReference:
 
 
 @dataclass(kw_only=True)
-class RespondingApplication:
-    application_identification: ApplicationIdentification = field(
-        metadata={
-            "name": "ApplicationIdentification",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
-class SendingApplication:
-    application_identification: ApplicationIdentification = field(
-        metadata={
-            "name": "ApplicationIdentification",
-            "type": "Element",
-            "required": True,
-        }
-    )
-
-
-@dataclass(kw_only=True)
 class ApplicationResponseDetail:
-    error_type_coded: str = field(
+    error_type_coded: ErrorTypeCoded = field(
         metadata={
             "name": "ErrorTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    error_type_coded_other: Optional[str] = field(
+    error_type_coded_other: Optional[ErrorTypeCodedOther] = field(
         default=None,
         metadata={
             "name": "ErrorTypeCodedOther",
@@ -155,15 +260,37 @@ class ApplicationResponseDetail:
 
 
 @dataclass(kw_only=True)
+class RespondingApplication:
+    application_identification: ApplicationIdentification = field(
+        metadata={
+            "name": "ApplicationIdentification",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class SendingApplication:
+    application_identification: ApplicationIdentification = field(
+        metadata={
+            "name": "ApplicationIdentification",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
 class ApplicationResponseHeader:
-    application_response_issue_date: str = field(
+    application_response_issue_date: ApplicationResponseIssueDate = field(
         metadata={
             "name": "ApplicationResponseIssueDate",
             "type": "Element",
             "required": True,
         }
     )
-    application_response_type_coded: str = field(
+    application_response_type_coded: ApplicationResponseTypeCoded = field(
         metadata={
             "name": "ApplicationResponseTypeCoded",
             "type": "Element",
@@ -198,14 +325,16 @@ class ApplicationResponseHeader:
             "type": "Element",
         },
     )
-    business_document_type_coded: str = field(
+    business_document_type_coded: BusinessDocumentTypeCoded = field(
         metadata={
             "name": "BusinessDocumentTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    business_document_type_coded_other: Optional[str] = field(
+    business_document_type_coded_other: Optional[
+        BusinessDocumentTypeCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "BusinessDocumentTypeCodedOther",
@@ -219,21 +348,21 @@ class ApplicationResponseHeader:
             "required": True,
         }
     )
-    document_status_coded: str = field(
+    document_status_coded: DocumentStatusCoded = field(
         metadata={
             "name": "DocumentStatusCoded",
             "type": "Element",
             "required": True,
         }
     )
-    document_status_coded_other: Optional[str] = field(
+    document_status_coded_other: Optional[DocumentStatusCodedOther] = field(
         default=None,
         metadata={
             "name": "DocumentStatusCodedOther",
             "type": "Element",
         },
     )
-    application_response_note: Optional[str] = field(
+    application_response_note: Optional[ApplicationResponseNote] = field(
         default=None,
         metadata={
             "name": "ApplicationResponseNote",

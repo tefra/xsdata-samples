@@ -2,6 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.air_base_req import AirBaseReq
 from travelport.models.air_pricing_solution import AirPricingSolution
+from travelport.models.air_reservation_locator_code import (
+    AirReservationLocatorCode,
+)
 from travelport.models.type_fare_rule_type import TypeFareRuleType
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
@@ -16,13 +19,11 @@ class AirRepriceReq(AirBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_reservation_locator_code: None | str = field(
+    air_reservation_locator_code: None | AirReservationLocatorCode = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
-            "min_length": 5,
-            "max_length": 8,
         },
     )
     air_pricing_solution: None | AirPricingSolution = field(

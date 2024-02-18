@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
     Idtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
 )
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
@@ -21,7 +23,7 @@ class GlobalPositionAddressType:
         (the geoid) that defines the nominal sea level.
     """
 
-    latitude: Optional[Decimal] = field(
+    latitude: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "Latitude",
@@ -30,7 +32,7 @@ class GlobalPositionAddressType:
             "required": True,
         },
     )
-    longitude: Optional[Decimal] = field(
+    longitude: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "Longitude",

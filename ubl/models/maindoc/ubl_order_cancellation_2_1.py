@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
-from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
     BuyerCustomerParty,
@@ -13,8 +12,11 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import (
 )
 from ubl.models.common.ubl_common_basic_components_2_1 import (
     CancellationNote,
+    CopyIndicator,
     CustomizationId,
     Id,
+    IssueDate,
+    IssueTime,
     Note,
     ProfileExecutionId,
     ProfileId,
@@ -79,7 +81,7 @@ class OrderCancellationType:
             "required": True,
         },
     )
-    copy_indicator: Optional[bool] = field(
+    copy_indicator: Optional[CopyIndicator] = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -95,7 +97,7 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[XmlDate] = field(
+    issue_date: Optional[IssueDate] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -104,7 +106,7 @@ class OrderCancellationType:
             "required": True,
         },
     )
-    issue_time: Optional[XmlTime] = field(
+    issue_time: Optional[IssueTime] = field(
         default=None,
         metadata={
             "name": "IssueTime",

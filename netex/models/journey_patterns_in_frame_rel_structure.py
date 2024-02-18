@@ -3,7 +3,7 @@ from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dead_run_journey_pattern import DeadRunJourneyPattern
 from .journey_pattern_view import JourneyPatternView
-from .section_in_sequence_versioned_child_structure import JourneyPattern
+from .section_in_sequence_versioned_child_structure import JourneyPattern1
 from .service_journey_pattern import ServiceJourneyPattern
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -18,7 +18,7 @@ class JourneyPatternsInFrameRelStructure(ContainmentAggregationStructure):
         Union[
             ServiceJourneyPattern,
             DeadRunJourneyPattern,
-            JourneyPattern,
+            JourneyPattern1,
             JourneyPatternView,
         ]
     ] = field(
@@ -38,7 +38,7 @@ class JourneyPatternsInFrameRelStructure(ContainmentAggregationStructure):
                 },
                 {
                     "name": "JourneyPattern",
-                    "type": JourneyPattern,
+                    "type": JourneyPattern1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

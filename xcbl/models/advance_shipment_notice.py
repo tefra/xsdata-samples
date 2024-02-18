@@ -5,8 +5,12 @@ from xcbl.models.goods_receipt import (
     ItemShipToParty,
     ListOfDestinationRef,
     OtherItemDates,
+    ShipByDate,
 )
-from xcbl.models.order_response import TransportPackagingTotals
+from xcbl.models.order_response import (
+    NumberOfLines,
+    TransportPackagingTotals,
+)
 from xcbl.models.price_check_result import LineItemAttachment
 from xcbl.models.remittance_advice import (
     Asnnumber,
@@ -14,10 +18,16 @@ from xcbl.models.remittance_advice import (
     Asnreferences,
     ExceptionQuantities,
     PurchaseOrderReference,
+    SummaryNote,
 )
 from xcbl.models.request_for_quotation import PaymentInstructions
 from xcbl.models.shipping_schedule import PackageDetail
-from xcbl.models.shipping_schedule_response import ListOfTransportRouting
+from xcbl.models.shipping_schedule_response import (
+    DetailResponseCoded,
+    DetailResponseCodedOther,
+    ListOfTransportRouting,
+)
+from xcbl.models.sourcing_create import DeliveryDate
 from xcbl.models.sourcing_result import (
     CatalogReference,
     ConditionsOfSale,
@@ -28,6 +38,7 @@ from xcbl.models.sourcing_result import (
     ItemContractReferences,
     ItemIdentifiers,
     ItemPackagingReference,
+    LineItemNote,
     LineItemNum,
     LineItemType,
     ListOfAllowOrCharge,
@@ -38,8 +49,10 @@ from xcbl.models.sourcing_result import (
     ListOfQuantityCoded,
     ListOfStructuredNote,
     MaxBackOrderQuantity,
+    OffCatalogFlag,
     OrderParty,
     ParentItemNumber,
+    RequestedDeliveryDate,
     TermsOfDelivery,
     TotalQuantity,
 )
@@ -52,64 +65,165 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
-class Asnpurpose:
+class AsnheaderNote:
     class Meta:
-        name = "ASNPurpose"
+        name = "ASNHeaderNote"
 
-    asnpurpose_coded: str = field(
+    value: str = field(
+        default="",
         metadata={
-            "name": "ASNPurposeCoded",
-            "type": "Element",
             "required": True,
-        }
-    )
-    asnpurpose_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ASNPurposeCodedOther",
-            "type": "Element",
         },
     )
 
 
 @dataclass(kw_only=True)
-class Asnstatus:
+class AsnissueDate:
     class Meta:
-        name = "ASNStatus"
+        name = "ASNIssueDate"
 
-    asnstatus_coded: str = field(
+    value: str = field(
+        default="",
         metadata={
-            "name": "ASNStatusCoded",
-            "type": "Element",
             "required": True,
-        }
-    )
-    asnstatus_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ASNStatusCodedOther",
-            "type": "Element",
         },
     )
 
 
 @dataclass(kw_only=True)
-class Asntype:
+class AsnpurposeCoded:
     class Meta:
-        name = "ASNType"
+        name = "ASNPurposeCoded"
 
-    asntype_coded: str = field(
+    value: str = field(
+        default="",
         metadata={
-            "name": "ASNTypeCoded",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    asntype_coded_other: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class AsnpurposeCodedOther:
+    class Meta:
+        name = "ASNPurposeCodedOther"
+
+    value: str = field(
+        default="",
         metadata={
-            "name": "ASNTypeCodedOther",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AsnstatusCoded:
+    class Meta:
+        name = "ASNStatusCoded"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AsnstatusCodedOther:
+    class Meta:
+        name = "ASNStatusCodedOther"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AsntypeCoded:
+    class Meta:
+        name = "ASNTypeCoded"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class AsntypeCodedOther:
+    class Meta:
+        name = "ASNTypeCodedOther"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class CollectionDateOfCargo:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class EarliestDeliveryDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LatestDeliveryDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ScheduleDeliveryDateAfter:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ScheduleDeliveryDateBefore:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ShippedDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -147,49 +261,51 @@ class Asndates:
     class Meta:
         name = "ASNDates"
 
-    delivery_date: Optional[str] = field(
+    delivery_date: Optional[DeliveryDate] = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
             "type": "Element",
         },
     )
-    shipped_date: Optional[str] = field(
+    shipped_date: Optional[ShippedDate] = field(
         default=None,
         metadata={
             "name": "ShippedDate",
             "type": "Element",
         },
     )
-    earliest_delivery_date: Optional[str] = field(
+    earliest_delivery_date: Optional[EarliestDeliveryDate] = field(
         default=None,
         metadata={
             "name": "EarliestDeliveryDate",
             "type": "Element",
         },
     )
-    latest_delivery_date: Optional[str] = field(
+    latest_delivery_date: Optional[LatestDeliveryDate] = field(
         default=None,
         metadata={
             "name": "LatestDeliveryDate",
             "type": "Element",
         },
     )
-    collection_date_of_cargo: Optional[str] = field(
+    collection_date_of_cargo: Optional[CollectionDateOfCargo] = field(
         default=None,
         metadata={
             "name": "CollectionDateOfCargo",
             "type": "Element",
         },
     )
-    schedule_delivery_date_after: Optional[str] = field(
+    schedule_delivery_date_after: Optional[ScheduleDeliveryDateAfter] = field(
         default=None,
         metadata={
             "name": "ScheduleDeliveryDateAfter",
             "type": "Element",
         },
     )
-    schedule_delivery_date_before: Optional[str] = field(
+    schedule_delivery_date_before: Optional[
+        ScheduleDeliveryDateBefore
+    ] = field(
         default=None,
         metadata={
             "name": "ScheduleDeliveryDateBefore",
@@ -304,11 +420,53 @@ class AsnpaymentInstructions:
 
 
 @dataclass(kw_only=True)
+class Asnpurpose:
+    class Meta:
+        name = "ASNPurpose"
+
+    asnpurpose_coded: AsnpurposeCoded = field(
+        metadata={
+            "name": "ASNPurposeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    asnpurpose_coded_other: Optional[AsnpurposeCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "ASNPurposeCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Asnstatus:
+    class Meta:
+        name = "ASNStatus"
+
+    asnstatus_coded: AsnstatusCoded = field(
+        metadata={
+            "name": "ASNStatusCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    asnstatus_coded_other: Optional[AsnstatusCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "ASNStatusCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class Asnsummary:
     class Meta:
         name = "ASNSummary"
 
-    number_of_lines: Optional[str] = field(
+    number_of_lines: Optional[NumberOfLines] = field(
         default=None,
         metadata={
             "name": "NumberOfLines",
@@ -322,7 +480,7 @@ class Asnsummary:
             "type": "Element",
         },
     )
-    summary_note: Optional[str] = field(
+    summary_note: Optional[SummaryNote] = field(
         default=None,
         metadata={
             "name": "SummaryNote",
@@ -342,6 +500,27 @@ class AsntermsOfDelivery:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class Asntype:
+    class Meta:
+        name = "ASNType"
+
+    asntype_coded: AsntypeCoded = field(
+        metadata={
+            "name": "ASNTypeCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    asntype_coded_other: Optional[AsntypeCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "ASNTypeCodedOther",
+            "type": "Element",
+        },
     )
 
 
@@ -428,7 +607,7 @@ class AsnbaseItemDetail:
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[str] = field(
+    off_catalog_flag: Optional[OffCatalogFlag] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
@@ -498,14 +677,14 @@ class AsnbaseItemDetail:
             "type": "Element",
         },
     )
-    detail_response_coded: Optional[str] = field(
+    detail_response_coded: Optional[DetailResponseCoded] = field(
         default=None,
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
         },
     )
-    detail_response_coded_other: Optional[str] = field(
+    detail_response_coded_other: Optional[DetailResponseCodedOther] = field(
         default=None,
         metadata={
             "name": "DetailResponseCodedOther",
@@ -547,14 +726,14 @@ class AsnbaseItemDetail:
             "type": "Element",
         },
     )
-    requested_delivery_date: Optional[str] = field(
+    requested_delivery_date: Optional[RequestedDeliveryDate] = field(
         default=None,
         metadata={
             "name": "RequestedDeliveryDate",
             "type": "Element",
         },
     )
-    ship_by_date: Optional[str] = field(
+    ship_by_date: Optional[ShipByDate] = field(
         default=None,
         metadata={
             "name": "ShipByDate",
@@ -596,7 +775,7 @@ class Asnheader:
             "required": True,
         }
     )
-    asnissue_date: str = field(
+    asnissue_date: AsnissueDate = field(
         metadata={
             "name": "ASNIssueDate",
             "type": "Element",
@@ -695,7 +874,7 @@ class Asnheader:
             "type": "Element",
         },
     )
-    asnheader_note: Optional[str] = field(
+    asnheader_note: Optional[AsnheaderNote] = field(
         default=None,
         metadata={
             "name": "ASNHeaderNote",
@@ -761,7 +940,7 @@ class AsnitemDetail:
             "type": "Element",
         },
     )
-    line_item_note: Optional[str] = field(
+    line_item_note: Optional[LineItemNote] = field(
         default=None,
         metadata={
             "name": "LineItemNote",

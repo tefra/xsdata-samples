@@ -16,12 +16,14 @@ from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CancellationNote
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomerAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
@@ -46,8 +48,12 @@ obj = FulfilmentCancellation(
     id=Id(
         value='00384'
     ),
-    copy_indicator=False,
-    issue_date=XmlDate(2005, 6, 22),
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 6, 22)
+    ),
     note=[
         Note(
             value='sample'
@@ -66,7 +72,9 @@ obj = FulfilmentCancellation(
             uuid=Uuid(
                 value='88C7280E-8F10-419F-9949-8EFFFA2842B8'
             ),
-            issue_date=XmlDate(2005, 6, 20)
+            issue_date=IssueDate(
+                value=XmlDate(2005, 6, 20)
+            )
         ),
     ],
     receipt_document_reference=[
@@ -77,7 +85,9 @@ obj = FulfilmentCancellation(
             uuid=Uuid(
                 value='89F82FA6-5331-491D-83BC-7B6CA7FD047C'
             ),
-            issue_date=XmlDate(2005, 6, 21)
+            issue_date=IssueDate(
+                value=XmlDate(2005, 6, 21)
+            )
         ),
     ],
     order_reference=[
@@ -91,7 +101,9 @@ obj = FulfilmentCancellation(
             uuid=Uuid(
                 value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
             ),
-            issue_date=XmlDate(2005, 6, 20)
+            issue_date=IssueDate(
+                value=XmlDate(2005, 6, 20)
+            )
         ),
     ],
     buyer_customer_party=BuyerCustomerParty(

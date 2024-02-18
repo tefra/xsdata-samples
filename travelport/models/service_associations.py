@@ -1,5 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
+from travelport.models.optional_service_ref import OptionalServiceRef
 from travelport.models.response_message_1 import ResponseMessage1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
@@ -46,7 +47,7 @@ class ServiceAssociations:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
             },
         )
-        optional_service_ref: None | str = field(
+        optional_service_ref: None | OptionalServiceRef = field(
             default=None,
             metadata={
                 "name": "OptionalServiceRef",

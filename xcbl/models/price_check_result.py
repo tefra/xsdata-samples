@@ -17,6 +17,7 @@ from xcbl.models.sourcing_result import (
     ListOfItemReferences,
     ListOfQuantityCoded,
     MaxBackOrderQuantity,
+    OffCatalogFlag,
     ParentItemNumber,
     Price,
     TotalQuantity,
@@ -33,31 +34,157 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
-class ListOfParameter:
-    parameter: List[str] = field(
-        default_factory=list,
+class BuyerIdreferenceDate:
+    class Meta:
+        name = "BuyerIDReferenceDate"
+
+    value: str = field(
+        default="",
         metadata={
-            "name": "Parameter",
-            "type": "Element",
-            "min_occurs": 1,
+            "required": True,
         },
     )
 
 
 @dataclass(kw_only=True)
-class Severity:
-    severity_coded: str = field(
+class CompletionText:
+    value: str = field(
+        default="",
         metadata={
-            "name": "SeverityCoded",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    severity_coded_other: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class GeneralLineItemNote:
+    value: str = field(
+        default="",
         metadata={
-            "name": "SeverityCodedOther",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LangString:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class MinRetrySecs:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class Parameter:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PriceCheckItemError:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PriceCheckResultIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PriceCheckResultNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class QuoteDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SeverityCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SeverityCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SupplierIdreferenceDate:
+    class Meta:
+        name = "SupplierIDReferenceDate"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SwVendorErrorRef:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class TotalNumberOfLineItem:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -75,7 +202,7 @@ class CheckResultTransport:
 
 @dataclass(kw_only=True)
 class LanguageString:
-    lang_string: str = field(
+    lang_string: LangString = field(
         metadata={
             "name": "LangString",
             "type": "Element",
@@ -99,6 +226,18 @@ class LineItemAttachment:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfParameter:
+    parameter: List[Parameter] = field(
+        default_factory=list,
+        metadata={
+            "name": "Parameter",
+            "type": "Element",
+            "min_occurs": 1,
+        },
     )
 
 
@@ -172,6 +311,24 @@ class ResultPrice:
 
 
 @dataclass(kw_only=True)
+class Severity:
+    severity_coded: SeverityCoded = field(
+        metadata={
+            "name": "SeverityCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    severity_coded_other: Optional[SeverityCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "SeverityCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class CheckResultBaseItemDetail:
     line_item_num: LineItemNum = field(
         metadata={
@@ -229,7 +386,7 @@ class CheckResultBaseItemDetail:
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[str] = field(
+    off_catalog_flag: Optional[OffCatalogFlag] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
@@ -329,7 +486,7 @@ class PriceCheckResultHeader:
             "required": True,
         }
     )
-    price_check_result_issue_date: str = field(
+    price_check_result_issue_date: PriceCheckResultIssueDate = field(
         metadata={
             "name": "PriceCheckResultIssueDate",
             "type": "Element",
@@ -343,7 +500,7 @@ class PriceCheckResultHeader:
             "required": True,
         }
     )
-    supplier_idreference_date: Optional[str] = field(
+    supplier_idreference_date: Optional[SupplierIdreferenceDate] = field(
         default=None,
         metadata={
             "name": "SupplierIDReferenceDate",
@@ -357,7 +514,7 @@ class PriceCheckResultHeader:
             "required": True,
         }
     )
-    buyer_idreference_date: Optional[str] = field(
+    buyer_idreference_date: Optional[BuyerIdreferenceDate] = field(
         default=None,
         metadata={
             "name": "BuyerIDReferenceDate",
@@ -378,7 +535,7 @@ class PriceCheckResultHeader:
             "type": "Element",
         },
     )
-    quote_date: Optional[str] = field(
+    quote_date: Optional[QuoteDate] = field(
         default=None,
         metadata={
             "name": "QuoteDate",
@@ -392,7 +549,7 @@ class PriceCheckResultHeader:
             "type": "Element",
         },
     )
-    price_check_result_note: Optional[str] = field(
+    price_check_result_note: Optional[PriceCheckResultNote] = field(
         default=None,
         metadata={
             "name": "PriceCheckResultNote",
@@ -410,7 +567,7 @@ class PriceCheckResultHeader:
 
 @dataclass(kw_only=True)
 class ErrorInfo:
-    completion_text: str = field(
+    completion_text: CompletionText = field(
         metadata={
             "name": "CompletionText",
             "type": "Element",
@@ -438,14 +595,14 @@ class ErrorInfo:
             "type": "Element",
         },
     )
-    min_retry_secs: Optional[str] = field(
+    min_retry_secs: Optional[MinRetrySecs] = field(
         default=None,
         metadata={
             "name": "MinRetrySecs",
             "type": "Element",
         },
     )
-    sw_vendor_error_ref: Optional[str] = field(
+    sw_vendor_error_ref: Optional[SwVendorErrorRef] = field(
         default=None,
         metadata={
             "name": "SwVendorErrorRef",
@@ -510,7 +667,7 @@ class PriceCheckResultItemDetail:
             "type": "Element",
         },
     )
-    general_line_item_note: Optional[str] = field(
+    general_line_item_note: Optional[GeneralLineItemNote] = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",
@@ -528,7 +685,7 @@ class PriceCheckResultItemDetail:
 
 @dataclass(kw_only=True)
 class PriceCheckResultSummary:
-    price_check_item_error: str = field(
+    price_check_item_error: PriceCheckItemError = field(
         metadata={
             "name": "PriceCheckItemError",
             "type": "Element",
@@ -544,7 +701,7 @@ class PriceCheckResultSummary:
             "type": "Element",
         },
     )
-    total_number_of_line_item: Optional[str] = field(
+    total_number_of_line_item: Optional[TotalNumberOfLineItem] = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItem",

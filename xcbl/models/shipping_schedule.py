@@ -13,10 +13,72 @@ from xcbl.models.sourcing_result import (
     ListOfDescription,
     ListOfReferenceCoded,
     PartNum,
+    ShippingInstructions,
+    TransportReference,
 )
 from xcbl.models.time_series_response import ListOfDimension
 from xcbl.models.trading_partner_response import Reference
 from xcbl.models.trading_partner_user_information import Identifier
+
+
+@dataclass(kw_only=True)
+class ContainerCounter:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class DocumentTitle:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class LoadOrderCounter:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class NumberOfPackages:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PackageCharacteristicCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PackageCharacteristicCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 class PackageDocDocumentTypeCoded(Enum):
@@ -764,76 +826,174 @@ class PackageDocDocumentTypeCoded(Enum):
 
 
 @dataclass(kw_only=True)
-class PackageIdentifier:
-    package_identifier_coded: str = field(
+class PackageId:
+    class Meta:
+        name = "PackageID"
+
+    value: str = field(
+        default="",
         metadata={
-            "name": "PackageIdentifierCoded",
-            "type": "Element",
             "required": True,
-        }
-    )
-    package_identifier_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PackageIdentifierCodedOther",
-            "type": "Element",
-        },
-    )
-    package_identifier_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PackageIdentifierValue",
-            "type": "Element",
         },
     )
 
 
 @dataclass(kw_only=True)
-class PackageMark:
-    package_mark_coded: str = field(
+class PackageIdentifierCoded:
+    value: str = field(
+        default="",
         metadata={
-            "name": "PackageMarkCoded",
-            "type": "Element",
             "required": True,
-        }
-    )
-    package_mark_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PackageMarkCodedOther",
-            "type": "Element",
-        },
-    )
-    package_mark_value: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "PackageMarkValue",
-            "type": "Element",
         },
     )
 
 
 @dataclass(kw_only=True)
-class SpecialHandling:
-    special_handling_coded: str = field(
+class PackageIdentifierCodedOther:
+    value: str = field(
+        default="",
         metadata={
-            "name": "SpecialHandlingCoded",
-            "type": "Element",
             "required": True,
-        }
-    )
-    special_handling_coded_other: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SpecialHandlingCodedOther",
-            "type": "Element",
         },
     )
-    special_handling_note: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class PackageIdentifierValue:
+    value: str = field(
+        default="",
         metadata={
-            "name": "SpecialHandlingNote",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PackageMarkCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PackageMarkCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PackageMarkValue:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PackageTypeCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PackageTypeCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentResponsibilityCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PaymentResponsibilityCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ReturnLoadCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ReturnLoadCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ReturnNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SpecialHandlingCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SpecialHandlingCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SpecialHandlingNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -889,30 +1049,6 @@ class ListOfMaterialGroupedShippingDetail:
 
 
 @dataclass(kw_only=True)
-class ListOfPackageIdentifier:
-    package_identifier: List[PackageIdentifier] = field(
-        default_factory=list,
-        metadata={
-            "name": "PackageIdentifier",
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class ListOfPackageMark:
-    package_mark: List[PackageMark] = field(
-        default_factory=list,
-        metadata={
-            "name": "PackageMark",
-            "type": "Element",
-            "min_occurs": 1,
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class OtherOrderReferences:
     list_of_reference_coded: ListOfReferenceCoded = field(
         metadata={
@@ -950,10 +1086,62 @@ class PackageDoc:
             "type": "Attribute",
         },
     )
-    document_title: Optional[str] = field(
+    document_title: Optional[DocumentTitle] = field(
         default=None,
         metadata={
             "name": "DocumentTitle",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PackageIdentifier:
+    package_identifier_coded: PackageIdentifierCoded = field(
+        metadata={
+            "name": "PackageIdentifierCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    package_identifier_coded_other: Optional[
+        PackageIdentifierCodedOther
+    ] = field(
+        default=None,
+        metadata={
+            "name": "PackageIdentifierCodedOther",
+            "type": "Element",
+        },
+    )
+    package_identifier_value: Optional[PackageIdentifierValue] = field(
+        default=None,
+        metadata={
+            "name": "PackageIdentifierValue",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class PackageMark:
+    package_mark_coded: PackageMarkCoded = field(
+        metadata={
+            "name": "PackageMarkCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    package_mark_coded_other: Optional[PackageMarkCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "PackageMarkCodedOther",
+            "type": "Element",
+        },
+    )
+    package_mark_value: Optional[PackageMarkValue] = field(
+        default=None,
+        metadata={
+            "name": "PackageMarkValue",
             "type": "Element",
         },
     )
@@ -993,6 +1181,31 @@ class ReturnableContainerPartNumber:
 
 
 @dataclass(kw_only=True)
+class SpecialHandling:
+    special_handling_coded: SpecialHandlingCoded = field(
+        metadata={
+            "name": "SpecialHandlingCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    special_handling_coded_other: Optional[SpecialHandlingCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "SpecialHandlingCodedOther",
+            "type": "Element",
+        },
+    )
+    special_handling_note: Optional[SpecialHandlingNote] = field(
+        default=None,
+        metadata={
+            "name": "SpecialHandlingNote",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class DocumentAttached:
     package_doc: PackageDoc = field(
         metadata={
@@ -1011,6 +1224,30 @@ class DocumentLoose:
             "type": "Element",
             "required": True,
         }
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfPackageIdentifier:
+    package_identifier: List[PackageIdentifier] = field(
+        default_factory=list,
+        metadata={
+            "name": "PackageIdentifier",
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ListOfPackageMark:
+    package_mark: List[PackageMark] = field(
+        default_factory=list,
+        metadata={
+            "name": "PackageMark",
+            "type": "Element",
+            "min_occurs": 1,
+        },
     )
 
 
@@ -1048,14 +1285,16 @@ class OrderReferences:
 
 @dataclass(kw_only=True)
 class PackageCharacteristic:
-    package_characteristic_coded: str = field(
+    package_characteristic_coded: PackageCharacteristicCoded = field(
         metadata={
             "name": "PackageCharacteristicCoded",
             "type": "Element",
             "required": True,
         }
     )
-    package_characteristic_coded_other: Optional[str] = field(
+    package_characteristic_coded_other: Optional[
+        PackageCharacteristicCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "PackageCharacteristicCodedOther",
@@ -1074,40 +1313,15 @@ class PackageCharacteristic:
 
 
 @dataclass(kw_only=True)
-class PackageDescription:
-    list_of_package_identifier: Optional[ListOfPackageIdentifier] = field(
-        default=None,
-        metadata={
-            "name": "ListOfPackageIdentifier",
-            "type": "Element",
-        },
-    )
-    container_counter: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "ContainerCounter",
-            "type": "Element",
-        },
-    )
-    load_order_counter: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "LoadOrderCounter",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
 class PackageType:
-    package_type_coded: str = field(
+    package_type_coded: PackageTypeCoded = field(
         metadata={
             "name": "PackageTypeCoded",
             "type": "Element",
             "required": True,
         }
     )
-    package_type_coded_other: Optional[str] = field(
+    package_type_coded_other: Optional[PackageTypeCodedOther] = field(
         default=None,
         metadata={
             "name": "PackageTypeCodedOther",
@@ -1134,35 +1348,37 @@ class ReturnableContainerInfo:
             "type": "Element",
         },
     )
-    payment_responsibility_coded: Optional[str] = field(
+    payment_responsibility_coded: Optional[PaymentResponsibilityCoded] = field(
         default=None,
         metadata={
             "name": "PaymentResponsibilityCoded",
             "type": "Element",
         },
     )
-    payment_responsibility_coded_other: Optional[str] = field(
+    payment_responsibility_coded_other: Optional[
+        PaymentResponsibilityCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "PaymentResponsibilityCodedOther",
             "type": "Element",
         },
     )
-    return_load_coded: Optional[str] = field(
+    return_load_coded: Optional[ReturnLoadCoded] = field(
         default=None,
         metadata={
             "name": "ReturnLoadCoded",
             "type": "Element",
         },
     )
-    return_load_coded_other: Optional[str] = field(
+    return_load_coded_other: Optional[ReturnLoadCodedOther] = field(
         default=None,
         metadata={
             "name": "ReturnLoadCodedOther",
             "type": "Element",
         },
     )
-    return_note: Optional[str] = field(
+    return_note: Optional[ReturnNote] = field(
         default=None,
         metadata={
             "name": "ReturnNote",
@@ -1220,13 +1436,26 @@ class ListOfPackageCharacteristic:
 
 
 @dataclass(kw_only=True)
-class ListOfPackageDescription:
-    package_description: List[PackageDescription] = field(
-        default_factory=list,
+class PackageDescription:
+    list_of_package_identifier: Optional[ListOfPackageIdentifier] = field(
+        default=None,
         metadata={
-            "name": "PackageDescription",
+            "name": "ListOfPackageIdentifier",
             "type": "Element",
-            "min_occurs": 1,
+        },
+    )
+    container_counter: Optional[ContainerCounter] = field(
+        default=None,
+        metadata={
+            "name": "ContainerCounter",
+            "type": "Element",
+        },
+    )
+    load_order_counter: Optional[LoadOrderCounter] = field(
+        default=None,
+        metadata={
+            "name": "LoadOrderCounter",
+            "type": "Element",
         },
     )
 
@@ -1261,8 +1490,20 @@ class ListOfItemReference:
 
 
 @dataclass(kw_only=True)
+class ListOfPackageDescription:
+    package_description: List[PackageDescription] = field(
+        default_factory=list,
+        metadata={
+            "name": "PackageDescription",
+            "type": "Element",
+            "min_occurs": 1,
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class Package:
-    package_id: str = field(
+    package_id: PackageId = field(
         metadata={
             "name": "PackageID",
             "type": "Element",
@@ -1306,7 +1547,7 @@ class Package:
             "type": "Element",
         },
     )
-    transport_reference: Optional[str] = field(
+    transport_reference: Optional[TransportReference] = field(
         default=None,
         metadata={
             "name": "TransportReference",
@@ -1334,7 +1575,7 @@ class Package:
             "type": "Element",
         },
     )
-    shipping_instructions: Optional[str] = field(
+    shipping_instructions: Optional[ShippingInstructions] = field(
         default=None,
         metadata={
             "name": "ShippingInstructions",
@@ -1378,7 +1619,7 @@ class PackageDetail:
             "required": True,
         }
     )
-    number_of_packages: str = field(
+    number_of_packages: NumberOfPackages = field(
         metadata={
             "name": "NumberOfPackages",
             "type": "Element",

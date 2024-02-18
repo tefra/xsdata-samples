@@ -1,8 +1,13 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.percent_type import (
+    PercentType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.coinsurer_involvement_type_enum import (
     CoinsurerInvolvementTypeEnum,
@@ -40,7 +45,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    sequence_number: Optional[Decimal] = field(
+    sequence_number: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -48,7 +53,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    coinsurance_percentage: Optional[Decimal] = field(
+    coinsurance_percentage: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "CoinsurancePercentage",
@@ -64,7 +69,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    commision_percentage: Optional[Decimal] = field(
+    commision_percentage: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "CommisionPercentage",
@@ -80,7 +85,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    retained_risk_share: Optional[Decimal] = field(
+    retained_risk_share: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "RetainedRiskShare",
@@ -88,7 +93,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    overrider_percentage: Optional[Decimal] = field(
+    overrider_percentage: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "OverriderPercentage",
@@ -96,7 +101,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    local_ceded_share: Optional[Decimal] = field(
+    local_ceded_share: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "LocalCededShare",

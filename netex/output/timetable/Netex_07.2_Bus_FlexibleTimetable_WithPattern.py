@@ -1,7 +1,7 @@
 from decimal import Decimal
 from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import TimebandVersionedChildStructure
 from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
@@ -11,8 +11,9 @@ from netex.models.authority_ref_structure import AuthorityRefStructure
 from netex.models.block_ref import BlockRef
 from netex.models.booking_access_enumeration import BookingAccessEnumeration
 from netex.models.booking_method_enumeration import BookingMethodEnumeration
+from netex.models.bus_submode import BusSubmode
 from netex.models.bus_submode_enumeration import BusSubmodeEnumeration
-from netex.models.call import Call
+from netex.models.call_1 import Call1
 from netex.models.calls_rel_structure import CallsRelStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -29,6 +30,7 @@ from netex.models.destination_display_ref import DestinationDisplayRef
 from netex.models.destination_displays_in_frame_rel_structure import DestinationDisplaysInFrameRelStructure
 from netex.models.direction import Direction
 from netex.models.direction_ref import DirectionRef
+from netex.models.direction_type import DirectionType
 from netex.models.direction_type_enumeration import DirectionTypeEnumeration
 from netex.models.directions_in_frame_rel_structure import DirectionsInFrameRelStructure
 from netex.models.entities_in_version_rel_structure import CompositeFrame
@@ -69,6 +71,7 @@ from netex.models.network_frame_topic_structure import NetworkFrameTopicStructur
 from netex.models.notice import Notice
 from netex.models.notices_in_frame_rel_structure import NoticesInFrameRelStructure
 from netex.models.onward_timing_link_view import OnwardTimingLinkView
+from netex.models.participant_ref import ParticipantRef
 from netex.models.point_on_route import PointOnRoute
 from netex.models.point_on_route_ref import PointOnRouteRef
 from netex.models.points_in_journey_pattern_rel_structure import PointsInJourneyPatternRelStructure
@@ -81,7 +84,7 @@ from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.resource_frame import ResourceFrame
-from netex.models.route import Route
+from netex.models.route_1 import Route1
 from netex.models.route_link import RouteLink
 from netex.models.route_link_ref import RouteLinkRef
 from netex.models.route_links_in_frame_rel_structure import RouteLinksInFrameRelStructure
@@ -99,7 +102,7 @@ from netex.models.scheduled_stop_points_in_frame_rel_structure import ScheduledS
 from netex.models.service_calendar import ServiceCalendar
 from netex.models.service_calendar_frame import ServiceCalendarFrame
 from netex.models.service_frame import ServiceFrame
-from netex.models.service_journey import ServiceJourney
+from netex.models.service_journey_1 import ServiceJourney1
 from netex.models.service_journey_pattern import ServiceJourneyPattern
 from netex.models.service_journey_pattern_ref import ServiceJourneyPatternRef
 from netex.models.service_link import ServiceLink
@@ -128,7 +131,7 @@ from netex.models.timing_link_ref_structure import TimingLinkRefStructure
 from netex.models.timing_links_in_frame_rel_structure import TimingLinksInFrameRelStructure
 from netex.models.timing_pattern import TimingPattern
 from netex.models.timing_patterns_in_frame_rel_structure import TimingPatternsInFrameRelStructure
-from netex.models.timing_point import TimingPoint
+from netex.models.timing_point_1 import TimingPoint1
 from netex.models.timing_point_in_journey_pattern import TimingPointInJourneyPattern
 from netex.models.timing_point_in_journey_pattern_ref import TimingPointInJourneyPatternRef
 from netex.models.timing_point_ref import TimingPointRef
@@ -157,10 +160,14 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -474,13 +481,15 @@ obj = PublicationDelivery(
                             ),
                             routes=RoutesInFrameRelStructure(
                                 route=[
-                                    Route(
+                                    Route1(
                                         id='mybus:RT_24o',
                                         version='any',
                                         name=MultilingualString(
                                             value='Line 24 Alpha to Charley   '
                                         ),
-                                        direction_type=DirectionTypeEnumeration.OUTBOUND,
+                                        direction_type=DirectionType(
+
+                                        ),
                                         direction_ref=DirectionRef(
                                             version='any',
                                             ref='mybus:DR_Westbound'
@@ -561,7 +570,9 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         transport_submode=TransportSubmode(
-                                            choice=BusSubmodeEnumeration.DEMAND_AND_RESPONSE_BUS
+                                            choice=BusSubmode(
+                                                value=BusSubmodeEnumeration.DEMAND_AND_RESPONSE_BUS
+                                            )
                                         ),
                                         public_code='24',
                                         flexible_line_type=FlexibleLineTypeEnumeration.MIXED_FLEXIBLE_AND_FIXED,
@@ -801,7 +812,7 @@ obj = PublicationDelivery(
                             ),
                             timing_points=TimingPointsInFrameRelStructure(
                                 timing_point=[
-                                    TimingPoint(
+                                    TimingPoint1(
                                         id='mybus:SSP_001_t1',
                                         version='any',
                                         name=MultilingualString(
@@ -813,7 +824,7 @@ obj = PublicationDelivery(
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
-                                    TimingPoint(
+                                    TimingPoint1(
                                         id='mybus:SSP_001_t2',
                                         version='any',
                                         name=MultilingualString(
@@ -825,7 +836,7 @@ obj = PublicationDelivery(
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
-                                    TimingPoint(
+                                    TimingPoint1(
                                         id='mybus:SSP_002_t3',
                                         version='any',
                                         name=MultilingualString(
@@ -945,7 +956,9 @@ obj = PublicationDelivery(
                                             version='any',
                                             ref='mybus:RT_24o'
                                         ),
-                                        direction_type=DirectionTypeEnumeration.OUTBOUND,
+                                        direction_type=DirectionType(
+
+                                        ),
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
@@ -1232,7 +1245,7 @@ obj = PublicationDelivery(
                             ),
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_24o@01',
                                         version='any',
                                         journey_accountings=JourneyAccountingsRelStructure(
@@ -1366,7 +1379,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o@01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1395,7 +1408,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o@01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1428,7 +1441,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o@01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1461,7 +1474,7 @@ obj = PublicationDelivery(
                                             minimum_booking_period=XmlDuration("PT2H")
                                         )
                                     ),
-                                    ServiceJourney(
+                                    ServiceJourney1(
                                         id='hde:sj_24o@02',
                                         version='any',
                                         departure_time=XmlTime(15, 20, 0, 0, 0),
@@ -1571,7 +1584,7 @@ obj = PublicationDelivery(
                                         ),
                                         calls=CallsRelStructure(
                                             call=[
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o@02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1611,7 +1624,7 @@ obj = PublicationDelivery(
                                                     change_of_destination_display=True,
                                                     order=1
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o@02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1641,7 +1654,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2
                                                 ),
-                                                Call(
+                                                Call1(
                                                     id='hde:sj_24o@02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
@@ -1702,7 +1715,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType(
+                                    DayType1(
                                         id='hde:DT_01-MF-NotHoliday',
                                         version='any',
                                         name=MultilingualString(

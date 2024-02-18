@@ -19,11 +19,17 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_locations import (
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.citation_list import (
     CitationList,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.contract_number import (
+    ContractNumber,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import (
     Contributors,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark import Crossmark
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.edition_number import (
+    EditionNumber,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.institution import (
     Institution,
 )
@@ -72,12 +78,10 @@ class ReportPaperMetadata:
             "required": True,
         },
     )
-    edition_number: Optional[str] = field(
+    edition_number: Optional[EditionNumber] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 15,
         },
     )
     abstract: List[Abstract] = field(
@@ -128,12 +132,10 @@ class ReportPaperMetadata:
             "type": "Element",
         },
     )
-    contract_number: Optional[str] = field(
+    contract_number: Optional[ContractNumber] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 2,
-            "max_length": 255,
         },
     )
     crossmark: Optional[Crossmark] = field(

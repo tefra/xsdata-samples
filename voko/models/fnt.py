@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
+from voko.models.aut import Aut
+from voko.models.bib import Bib
 from voko.models.lok import Lok
 from voko.models.url import Url
 from voko.models.vrk import Vrk
@@ -19,11 +21,11 @@ class Fnt:
             "choices": (
                 {
                     "name": "bib",
-                    "type": str,
+                    "type": Bib,
                 },
                 {
                     "name": "aut",
-                    "type": str,
+                    "type": Aut,
                 },
                 {
                     "name": "vrk",

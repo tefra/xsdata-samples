@@ -41,9 +41,7 @@ from .service_access_right_ref import ServiceAccessRightRef
 from .serviced_organisation_ref import ServicedOrganisationRef
 from .supplement_product_ref import SupplementProductRef
 from .third_party_product_ref import ThirdPartyProductRef
-from .ticketing_service_facility_enumeration import (
-    TicketingServiceFacilityEnumeration,
-)
+from .ticketing_service_facility_list import TicketingServiceFacilityList
 from .topographic_place_ref import TopographicPlaceRef
 from .travel_agent_ref import TravelAgentRef
 from .usage_discount_right_ref import UsageDiscountRightRef
@@ -386,15 +384,14 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketing_service_facility_list: List[
-        TicketingServiceFacilityEnumeration
+    ticketing_service_facility_list: Optional[
+        TicketingServiceFacilityList
     ] = field(
-        default_factory=list,
+        default=None,
         metadata={
             "name": "TicketingServiceFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
     payment_methods: List[PaymentMethodEnumeration] = field(

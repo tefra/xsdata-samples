@@ -7,6 +7,7 @@ from travelport.models.original_itinerary_details import (
 )
 from travelport.models.override_pcc_1 import OverridePcc1
 from travelport.models.repricing_modifiers import RepricingModifiers
+from travelport.models.ticket_number_1 import TicketNumber1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,15 +27,13 @@ class BaseAirExchangeMultiQuoteReq(BaseCoreReq1):
     override_pcc
     """
 
-    ticket_number: list[str] = field(
+    ticket_number: list[TicketNumber1] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-            "min_length": 1,
-            "max_length": 13,
         },
     )
     provider_reservation_info: None | BaseAirExchangeMultiQuoteReq.ProviderReservationInfo = field(

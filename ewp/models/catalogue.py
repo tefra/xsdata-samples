@@ -90,64 +90,24 @@ class Empty:
 
 
 @dataclass
-class ManifestApiEntryBase:
-    """A common base type for children of the `apis-implemented` element of the.
+class MultilineString:
+    """This is very similar to a regular xs:string, but whenever this type is used
+    it indicates that the content MAY contain basic whitespace formatting, such us
+    line breaks and double line breaks (for splitting paragraphs).
 
-    manifest file. We declare it here (as opposed to declaring in the Discovery
-    API's namespace) because it is shared between all the APIs - we want it to
-    stay backwards-compatible when new releases of the Discovery API are published.
-    IMPORTANT: Clients MUST NOT assume that all children of `apis-implemented` will
-    "inherit" these properties. It is true that most EWP-related APIs do, but
-    manifest files may contain references to *any* APIs.
-
-    :ivar admin_email: RECOMMENDED element. Address of a developer or
-        server administrator who may be contacted in case of problems
-        *with this particular API* (e.g. malformed responses, etc.).
-        Multiple `admin-email` elements may be provided.
-    :ivar admin_notes: Additional information provided by host
-        developers for the client developers. E.g. "We are currently not
-        delivering &lt;description&gt; elements because our model is
-        incompatible with the `1.1.3` schema. We will start to deliver
-        them once we upgrade to the `1.2.0` schema."
-    :ivar version: The API version number the host claims its
-        implementation of this API conforms to. Host implementers MUST
-        make sure that this number is kept in sync with their
-        implementations. E.g. If you have used the `1.1.3` release of
-        some API when you have implemented your endpoint, then you
-        SHOULD put `1.1.3` here. If you put `1.2.0` here later on, then
-        it means that you have just implemented some new `1.2.0`
-        features (and you want to let other clients know that you have
-        implemented them). Use `0.0.0` when you're implementing a draft
-        API, which has not been officially released yet and doesn't have
-        any version number yet.
+    The values still MUST be in plaintext though (no HTML is allowed).
+    Clients which process data of this type SHOULD respect line breaks
+    when they display the data to the end user (e.g. replace CRs and LFs
+    with &lt;br&gt;s when rendering to HTML).
     """
 
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    admin_email: List[str] = field(
-        default_factory=list,
+    value: str = field(
+        default="",
         metadata={
-            "name": "admin-email",
-            "type": "Element",
-            "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
-            "pattern": r"[^@]+@[^.]+\..+",
-        },
-    )
-    admin_notes: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "admin-notes",
-            "type": "Element",
-            "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
-        },
-    )
-    version: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
             "required": True,
-            "pattern": r"[0-9]+\.[0-9]+\.[0-9]+",
         },
     )
 
@@ -171,27 +131,6 @@ class AdminEmail:
         metadata={
             "required": True,
             "pattern": r"[^@]+@[^.]+\..+",
-        },
-    )
-
-
-@dataclass
-class AdminNotes:
-    """Additional information provided by administrators and/or developers.
-
-    This element was placed in the common-types namespace because it is
-    being used in multiple schemas throughout the EWP project (most
-    notably, various sections of the manifest file).
-    """
-
-    class Meta:
-        name = "admin-notes"
-        namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
         },
     )
 
@@ -262,14 +201,13 @@ class HttpwithOptionalLang:
 
 
 @dataclass
-class MultilineStringWithOptionalLang:
+class MultilineStringWithOptionalLang(MultilineString):
     """A multiline string (as defined in the MultilineString) with an optional (but
     RECOMMENDED) xml:lang attribute.
 
     It is used in places where a description of some entity can be
     provided in multiple languages.
 
-    :ivar value:
     :ivar lang: Also see comments on xml:lang attribute in
         StringWithOptionalLang type.
     """
@@ -277,12 +215,6 @@ class MultilineStringWithOptionalLang:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
@@ -328,6 +260,20 @@ class StringWithOptionalLang:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
+
+
+@dataclass
+class AdminNotes(MultilineString):
+    """Additional information provided by administrators and/or developers.
+
+    This element was placed in the common-types namespace because it is
+    being used in multiple schemas throughout the EWP project (most
+    notably, various sections of the manifest file).
+    """
+
+    class Meta:
+        name = "admin-notes"
+        namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
 
 @dataclass
@@ -389,6 +335,68 @@ class Hei:
 
 
 @dataclass
+class ManifestApiEntryBase:
+    """A common base type for children of the `apis-implemented` element of the.
+
+    manifest file. We declare it here (as opposed to declaring in the Discovery
+    API's namespace) because it is shared between all the APIs - we want it to
+    stay backwards-compatible when new releases of the Discovery API are published.
+    IMPORTANT: Clients MUST NOT assume that all children of `apis-implemented` will
+    "inherit" these properties. It is true that most EWP-related APIs do, but
+    manifest files may contain references to *any* APIs.
+
+    :ivar admin_email: RECOMMENDED element. Address of a developer or
+        server administrator who may be contacted in case of problems
+        *with this particular API* (e.g. malformed responses, etc.).
+        Multiple `admin-email` elements may be provided.
+    :ivar admin_notes: Additional information provided by host
+        developers for the client developers. E.g. "We are currently not
+        delivering &lt;description&gt; elements because our model is
+        incompatible with the `1.1.3` schema. We will start to deliver
+        them once we upgrade to the `1.2.0` schema."
+    :ivar version: The API version number the host claims its
+        implementation of this API conforms to. Host implementers MUST
+        make sure that this number is kept in sync with their
+        implementations. E.g. If you have used the `1.1.3` release of
+        some API when you have implemented your endpoint, then you
+        SHOULD put `1.1.3` here. If you put `1.2.0` here later on, then
+        it means that you have just implemented some new `1.2.0`
+        features (and you want to let other clients know that you have
+        implemented them). Use `0.0.0` when you're implementing a draft
+        API, which has not been officially released yet and doesn't have
+        any version number yet.
+    """
+
+    class Meta:
+        target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+
+    admin_email: List[AdminEmail] = field(
+        default_factory=list,
+        metadata={
+            "name": "admin-email",
+            "type": "Element",
+            "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
+        },
+    )
+    admin_notes: Optional[AdminNotes] = field(
+        default=None,
+        metadata={
+            "name": "admin-notes",
+            "type": "Element",
+            "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
+        },
+    )
+    version: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[0-9]+\.[0-9]+\.[0-9]+",
+        },
+    )
+
+
+@dataclass
 class ErrorResponse:
     """A generic envelope for all kinds of errors.
 
@@ -424,7 +432,7 @@ class ErrorResponse:
         name = "error-response"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    developer_message: Optional[str] = field(
+    developer_message: Optional[MultilineString] = field(
         default=None,
         metadata={
             "name": "developer-message",
@@ -546,16 +554,15 @@ class Host:
         name = "host"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
 
-    admin_email: List[str] = field(
+    admin_email: List[AdminEmail] = field(
         default_factory=list,
         metadata={
             "name": "admin-email",
             "type": "Element",
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
-            "pattern": r"[^@]+@[^.]+\..+",
         },
     )
-    admin_notes: Optional[str] = field(
+    admin_notes: Optional[AdminNotes] = field(
         default=None,
         metadata={
             "name": "admin-notes",
@@ -746,16 +753,15 @@ class Catalogue:
             name, but a different namespace and contents).
         """
 
-        admin_email: List[str] = field(
+        admin_email: List[AdminEmail] = field(
             default_factory=list,
             metadata={
                 "name": "admin-email",
                 "type": "Element",
                 "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
-                "pattern": r"[^@]+@[^.]+\..+",
             },
         )
-        admin_notes: Optional[str] = field(
+        admin_notes: Optional[AdminNotes] = field(
             default=None,
             metadata={
                 "name": "admin-notes",

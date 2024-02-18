@@ -10,6 +10,7 @@ from .endpoint_denied_access_error import EndpointDeniedAccessError
 from .endpoint_not_available_access_error import (
     EndpointNotAvailableAccessError,
 )
+from .error_description_structure import ErrorDescriptionStructure
 from .invalid_data_references_error import InvalidDataReferencesError
 from .no_info_for_topic_error import NoInfoForTopicError
 from .other_error import OtherError
@@ -126,7 +127,7 @@ class ServiceDeliveryErrorConditionStructure:
             ),
         },
     )
-    description: Optional[str] = field(
+    description: Optional[ErrorDescriptionStructure] = field(
         default=None,
         metadata={
             "name": "Description",

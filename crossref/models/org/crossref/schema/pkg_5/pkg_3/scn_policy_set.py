@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.scn_policy_ref import (
+    ScnPolicyRef,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -15,13 +18,10 @@ class ScnPolicySet:
         name = "scn_policy_set"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    scn_policy_ref: List[str] = field(
+    scn_policy_ref: List[ScnPolicyRef] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 2048,
-            "pattern": r"([hH][tT][tT][pP]|[hH][tT][tT][pP][sS]|[fF][tT][pP])://.*",
         },
     )
     start_date: Optional[XmlDate] = field(

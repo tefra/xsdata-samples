@@ -1,6 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.fare_validity import FareValidity
+from travelport.models.ful_fillment_type import FulFillmentType
 from travelport.models.host_token_1 import HostToken1
 from travelport.models.rail_fare_component import RailFareComponent
 from travelport.models.rail_fare_id import RailFareId
@@ -121,14 +122,12 @@ class RailFare:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
         },
     )
-    ful_fillment_type: list[str] = field(
+    ful_fillment_type: list[FulFillmentType] = field(
         default_factory=list,
         metadata={
             "name": "FulFillmentType",
             "type": "Element",
             "max_occurs": 999,
-            "min_length": 0,
-            "max_length": 255,
         },
     )
     rail_fare_component: list[RailFareComponent] = field(

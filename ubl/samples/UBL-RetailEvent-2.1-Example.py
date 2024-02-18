@@ -30,16 +30,21 @@ from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import DisplayTacticTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
 from ubl.models.common.ubl_common_basic_components_2_1 import ForecastPurposeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ForecastTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
+from ubl.models.common.ubl_common_basic_components_2_1 import LatestProposalAcceptanceDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import LineNumberNumeric
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
@@ -51,7 +56,9 @@ from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
 from ubl.models.common.ubl_common_basic_components_2_1 import RetailEventName
 from ubl.models.common.ubl_common_basic_components_2_1 import RetailEventStatusCode
 from ubl.models.common.ubl_common_basic_components_2_1 import SpecificationId
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
+from ubl.models.common.ubl_common_basic_components_2_1 import SubmissionDate
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Telefax
 from ubl.models.common.ubl_common_basic_components_2_1 import Telephone
@@ -75,12 +82,18 @@ obj = RetailEvent(
     id=Id(
         value='RE758494'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4'
     ),
-    issue_date=XmlDate(2009, 12, 1),
-    issue_time=XmlTime(12, 0, 1, 0),
+    issue_date=IssueDate(
+        value=XmlDate(2009, 12, 1)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(12, 0, 1, 0)
+    ),
     note=[
         Note(
             value='sample'
@@ -98,8 +111,12 @@ obj = RetailEvent(
         ),
     ],
     period=Period(
-        start_date=XmlDate(2010, 5, 12),
-        end_date=XmlDate(2010, 6, 12)
+        start_date=StartDate(
+            value=XmlDate(2010, 5, 12)
+        ),
+        end_date=EndDate(
+            value=XmlDate(2010, 6, 12)
+        )
     ),
     sender_party=SenderParty(
         party_identification=[
@@ -297,8 +314,12 @@ obj = RetailEvent(
         promotional_event_type_code=PromotionalEventTypeCode(
             value='STORE_OPENING'
         ),
-        submission_date=XmlDate(2009, 12, 1),
-        latest_proposal_acceptance_date=XmlDate(2010, 1, 6),
+        submission_date=SubmissionDate(
+            value=XmlDate(2009, 12, 1)
+        ),
+        latest_proposal_acceptance_date=LatestProposalAcceptanceDate(
+            value=XmlDate(2010, 1, 6)
+        ),
         promotional_specification=[
             PromotionalSpecification(
                 specification_id=SpecificationId(
@@ -332,8 +353,12 @@ obj = RetailEvent(
                                         value='PROMOTIONAL'
                                     ),
                                     period=Period(
-                                        start_date=XmlDate(2010, 5, 12),
-                                        end_date=XmlDate(2010, 6, 12)
+                                        start_date=StartDate(
+                                            value=XmlDate(2010, 5, 12)
+                                        ),
+                                        end_date=EndDate(
+                                            value=XmlDate(2010, 6, 12)
+                                        )
                                     )
                                 ),
                             ],
@@ -373,8 +398,12 @@ obj = RetailEvent(
                             )
                         ),
                         period=Period(
-                            start_date=XmlDate(2010, 4, 1),
-                            end_date=XmlDate(2010, 6, 12)
+                            start_date=StartDate(
+                                value=XmlDate(2010, 4, 1)
+                            ),
+                            end_date=EndDate(
+                                value=XmlDate(2010, 6, 12)
+                            )
                         )
                     ),
                 ]

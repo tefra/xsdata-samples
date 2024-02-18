@@ -1,6 +1,11 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.percent_type import (
+    PercentType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.insurance_flow_type_cedants import (
     InsuranceFlowTypeCedants,
 )
@@ -21,7 +26,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class InsuranceFlowType(OrganisationInvolvementType):
-    sequence_number: Optional[Decimal] = field(
+    sequence_number: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -30,7 +35,7 @@ class InsuranceFlowType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    risk_share: Optional[Decimal] = field(
+    risk_share: Optional[PercentType] = field(
         default=None,
         metadata={
             "name": "RiskShare",

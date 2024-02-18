@@ -29,7 +29,7 @@ from .discounting_rule_ref import DiscountingRuleRef
 from .distribution_channel_ref import DistributionChannelRef
 from .entrance_ref import EntranceRef
 from .facility_set_ref import FacilitySetRef
-from .fare_class_enumeration import FareClassEnumeration
+from .fare_class import FareClass
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .fare_section_ref import FareSectionRef
 from .fare_zone_ref import FareZoneRef
@@ -110,7 +110,7 @@ from .stop_place_entrance_ref import StopPlaceEntranceRef
 from .stop_place_ref import StopPlaceRef
 from .stop_place_space_ref import StopPlaceSpaceRef
 from .stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
-from .tariff_zone_ref import TariffZoneRef
+from .tariff_zone_ref_1 import TariffZoneRef1
 from .taxi_parking_area_ref import TaxiParkingAreaRef
 from .taxi_rank_ref import TaxiRankRef
 from .taxi_service_ref import TaxiServiceRef
@@ -405,7 +405,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    tariff_zone_ref: List[TariffZoneRef] = field(
+    tariff_zone_ref: List[TariffZoneRef1] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",
@@ -818,7 +818,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    fare_class: List[FareClassEnumeration] = field(
+    fare_class: List[FareClass] = field(
         default_factory=list,
         metadata={
             "name": "FareClass",

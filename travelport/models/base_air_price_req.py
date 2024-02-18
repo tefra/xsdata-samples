@@ -4,6 +4,9 @@ from xsdata.models.datatype import XmlDate
 from travelport.models.air_itinerary import AirItinerary
 from travelport.models.air_pricing_command import AirPricingCommand
 from travelport.models.air_pricing_modifiers import AirPricingModifiers
+from travelport.models.air_reservation_locator_code import (
+    AirReservationLocatorCode,
+)
 from travelport.models.base_core_req_1 import BaseCoreReq1
 from travelport.models.form_of_payment_1 import FormOfPayment1
 from travelport.models.optional_services import OptionalServices
@@ -121,14 +124,12 @@ class BaseAirPriceReq(BaseCoreReq1):
             "max_occurs": 16,
         },
     )
-    air_reservation_locator_code: None | str = field(
+    air_reservation_locator_code: None | AirReservationLocatorCode = field(
         default=None,
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "min_length": 5,
-            "max_length": 8,
         },
     )
     optional_services: None | OptionalServices = field(

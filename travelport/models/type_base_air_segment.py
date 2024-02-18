@@ -11,6 +11,7 @@ from travelport.models.flight_details import FlightDetails
 from travelport.models.flight_details_ref import FlightDetailsRef
 from travelport.models.rail_coach_details import RailCoachDetails
 from travelport.models.segment_1 import Segment1
+from travelport.models.sell_message_1 import SellMessage1
 from travelport.models.sponsored_flt_info import SponsoredFltInfo
 from travelport.models.type_eticketability import TypeEticketability
 
@@ -204,7 +205,7 @@ class TypeBaseAirSegment(Segment1):
             "namespace": "http://www.travelport.com/schema/air_v52_0",
         },
     )
-    sell_message: list[str] = field(
+    sell_message: list[SellMessage1] = field(
         default_factory=list,
         metadata={
             "name": "SellMessage",

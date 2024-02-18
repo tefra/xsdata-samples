@@ -1,27 +1,64 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xcbl.models.fxrate_response import (
+    ComputationalMethodCoded,
+    ComputationalMethodCodedOther,
+    FxquoteTypeCoded,
+    FxquoteTypeCodedOther,
     FxrateRequestId,
     FxrateRequestSummary,
+    IndicativeIndicator,
 )
 from xcbl.models.payment_status_response import (
     CreditAmount,
     DebitAmount,
     OriginatingFinancialInstitution,
+    SequenceNumber,
     SettlementAmount,
 )
 from xcbl.models.remittance_advice import (
     PayeeParty,
     PayerParty,
 )
-from xcbl.models.request_for_quotation import CardInfo
+from xcbl.models.request_for_quotation import (
+    CardInfo,
+    PaymentMeanCoded,
+    PaymentMeanCodedOther,
+)
 from xcbl.models.sourcing_result import (
     ListOfReference,
     ReferenceCurrency,
     TargetCurrency,
 )
+from xcbl.models.sourcing_result_response import GeneralNote
 from xcbl.models.trading_partner_response import Reference
 from xcbl.models.trading_partner_user_information import Language
+
+
+@dataclass(kw_only=True)
+class FxrateRequestIssueDate:
+    class Meta:
+        name = "FXRateRequestIssueDate"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class FxrateRequestNote:
+    class Meta:
+        name = "FXRateRequestNote"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 @dataclass(kw_only=True)
@@ -36,7 +73,7 @@ class FxrateRequestHeader:
             "required": True,
         }
     )
-    fxrate_request_issue_date: str = field(
+    fxrate_request_issue_date: FxrateRequestIssueDate = field(
         metadata={
             "name": "FXRateRequestIssueDate",
             "type": "Element",
@@ -50,14 +87,14 @@ class FxrateRequestHeader:
             "required": True,
         }
     )
-    payment_mean_coded: Optional[str] = field(
+    payment_mean_coded: Optional[PaymentMeanCoded] = field(
         default=None,
         metadata={
             "name": "PaymentMeanCoded",
             "type": "Element",
         },
     )
-    payment_mean_coded_other: Optional[str] = field(
+    payment_mean_coded_other: Optional[PaymentMeanCodedOther] = field(
         default=None,
         metadata={
             "name": "PaymentMeanCodedOther",
@@ -71,14 +108,14 @@ class FxrateRequestHeader:
             "type": "Element",
         },
     )
-    indicative_indicator: str = field(
+    indicative_indicator: IndicativeIndicator = field(
         metadata={
             "name": "IndicativeIndicator",
             "type": "Element",
             "required": True,
         }
     )
-    general_note: Optional[str] = field(
+    general_note: Optional[GeneralNote] = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -106,7 +143,7 @@ class FxrateRequestDetail:
     class Meta:
         name = "FXRateRequestDetail"
 
-    sequence_number: Optional[str] = field(
+    sequence_number: Optional[SequenceNumber] = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -171,28 +208,30 @@ class FxrateRequestDetail:
             "type": "Element",
         },
     )
-    computational_method_coded: Optional[str] = field(
+    computational_method_coded: Optional[ComputationalMethodCoded] = field(
         default=None,
         metadata={
             "name": "ComputationalMethodCoded",
             "type": "Element",
         },
     )
-    computational_method_coded_other: Optional[str] = field(
+    computational_method_coded_other: Optional[
+        ComputationalMethodCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "ComputationalMethodCodedOther",
             "type": "Element",
         },
     )
-    fxquote_type_coded: Optional[str] = field(
+    fxquote_type_coded: Optional[FxquoteTypeCoded] = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCoded",
             "type": "Element",
         },
     )
-    fxquote_type_coded_other: Optional[str] = field(
+    fxquote_type_coded_other: Optional[FxquoteTypeCodedOther] = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCodedOther",
@@ -220,7 +259,7 @@ class FxrateRequestDetail:
             "type": "Element",
         },
     )
-    fxrate_request_note: Optional[str] = field(
+    fxrate_request_note: Optional[FxrateRequestNote] = field(
         default=None,
         metadata={
             "name": "FXRateRequestNote",

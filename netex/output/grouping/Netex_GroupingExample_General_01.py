@@ -8,6 +8,7 @@ from netex.models.general_group_of_entities import GeneralGroupOfEntities
 from netex.models.group_of_entities_in_frame_rel_structure import GroupOfEntitiesInFrameRelStructure
 from netex.models.multilingual_string import MultilingualString
 from netex.models.object_refs_rel_structure import ObjectRefsRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purpose_of_grouping import PurposeOfGrouping
@@ -24,10 +25,14 @@ from xsdata.models.datatype import XmlDateTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002'
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        )
     ),
     description=MultilingualString(
         value='Example of simpleGrouping  '

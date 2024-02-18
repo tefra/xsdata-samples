@@ -10,6 +10,7 @@ from netex.models.entities_in_version_rel_structure import GeneralFrame
 from netex.models.entities_in_version_rel_structure import GeneralFrameMembersRelStructure
 from netex.models.general_frame_member import GeneralFrameMember
 from netex.models.multilingual_string import MultilingualString
+from netex.models.participant_ref import ParticipantRef
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.responsibility_set_ref_structure import ResponsibilitySetRefStructure
@@ -24,10 +25,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 8, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 8, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002'
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        )
     ),
     publication_refresh_interval=XmlDuration("P7D"),
     description=MultilingualString(

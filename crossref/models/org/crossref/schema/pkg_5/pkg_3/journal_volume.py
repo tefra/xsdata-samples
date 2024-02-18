@@ -7,6 +7,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_item import (
     PublisherItem,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.volume import Volume
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -24,13 +25,11 @@ class JournalVolume:
         name = "journal_volume"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    volume: Optional[str] = field(
+    volume: Optional[Volume] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 1,
-            "max_length": 32,
         },
     )
     publisher_item: Optional[PublisherItem] = field(

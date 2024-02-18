@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
-from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ContractorCustomerParty,
     DeletedCatalogueReference,
@@ -14,7 +13,11 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import (
 from ubl.models.common.ubl_common_basic_components_2_1 import (
     CustomizationId,
     Description,
+    EffectiveDate,
+    EffectiveTime,
     Id,
+    IssueDate,
+    IssueTime,
     Name,
     Note,
     ProfileExecutionId,
@@ -97,7 +100,7 @@ class CatalogueDeletionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[XmlDate] = field(
+    issue_date: Optional[IssueDate] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -106,7 +109,7 @@ class CatalogueDeletionType:
             "required": True,
         },
     )
-    issue_time: Optional[XmlTime] = field(
+    issue_time: Optional[IssueTime] = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -114,7 +117,7 @@ class CatalogueDeletionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    effective_date: Optional[XmlDate] = field(
+    effective_date: Optional[EffectiveDate] = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
@@ -122,7 +125,7 @@ class CatalogueDeletionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    effective_time: Optional[XmlTime] = field(
+    effective_time: Optional[EffectiveTime] = field(
         default=None,
         metadata={
             "name": "EffectiveTime",

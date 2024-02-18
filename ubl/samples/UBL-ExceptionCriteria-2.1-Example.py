@@ -26,17 +26,20 @@ from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CollaborationPriorityCode
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
 from ubl.models.common.ubl_common_basic_components_2_1 import ComparisonDataSourceCode
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import DataSourceCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
 from ubl.models.common.ubl_common_basic_components_2_1 import ExceptionStatusCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
 from ubl.models.common.ubl_common_basic_components_2_1 import ForecastPurposeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ForecastTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import Note
@@ -44,6 +47,7 @@ from ubl.models.common.ubl_common_basic_components_2_1 import PerformanceMetricT
 from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
 from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import SupplyChainActivityTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
@@ -71,19 +75,27 @@ obj = ExceptionCriteria(
     id=Id(
         value='EC758494'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4'
     ),
-    issue_date=XmlDate(2009, 12, 25),
+    issue_date=IssueDate(
+        value=XmlDate(2009, 12, 25)
+    ),
     note=[
         Note(
             value='sample'
         ),
     ],
     validity_period=ValidityPeriod(
-        start_date=XmlDate(2010, 3, 28),
-        end_date=XmlDate(2010, 8, 29)
+        start_date=StartDate(
+            value=XmlDate(2010, 3, 28)
+        ),
+        end_date=EndDate(
+            value=XmlDate(2010, 8, 29)
+        )
     ),
     sender_party=SenderParty(
         party_identification=[
@@ -299,8 +311,12 @@ obj = ExceptionCriteria(
                 value='SALES'
             ),
             effective_period=EffectivePeriod(
-                start_date=XmlDate(2010, 3, 28),
-                end_date=XmlDate(2010, 8, 29)
+                start_date=StartDate(
+                    value=XmlDate(2010, 3, 28)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2010, 8, 29)
+                )
             ),
             supply_item=[
                 SupplyItem(
@@ -351,8 +367,12 @@ obj = ExceptionCriteria(
                 value='SUPPLY'
             ),
             effective_period=EffectivePeriod(
-                start_date=XmlDate(2010, 3, 28),
-                end_date=XmlDate(2010, 5, 29)
+                start_date=StartDate(
+                    value=XmlDate(2010, 3, 28)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2010, 5, 29)
+                )
             ),
             supply_item=[
                 SupplyItem(
@@ -382,8 +402,12 @@ obj = ExceptionCriteria(
                 value='HIGH'
             ),
             effective_period=EffectivePeriod(
-                start_date=XmlDate(2010, 4, 28),
-                end_date=XmlDate(2010, 6, 29)
+                start_date=StartDate(
+                    value=XmlDate(2010, 4, 28)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2010, 6, 29)
+                )
             ),
             supply_item=[
                 SupplyItem(
@@ -430,8 +454,12 @@ obj = ExceptionCriteria(
                 value='HIGH'
             ),
             effective_period=EffectivePeriod(
-                start_date=XmlDate(2010, 4, 28),
-                end_date=XmlDate(2010, 6, 29)
+                start_date=StartDate(
+                    value=XmlDate(2010, 4, 28)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2010, 6, 29)
+                )
             ),
             supply_item=[
                 SupplyItem(

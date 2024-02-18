@@ -15,11 +15,12 @@ from netex.models.all_vehicle_modes_of_transport_enumeration import AllVehicleMo
 from netex.models.alternative_name import AlternativeName
 from netex.models.alternative_names_rel_structure import AlternativeNamesRelStructure
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import TimebandsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.assistance_service import AssistanceService
+from netex.models.audible_signals_available import AudibleSignalsAvailable
 from netex.models.availability_condition_ref import AvailabilityConditionRef
 from netex.models.check_constraint import CheckConstraint
 from netex.models.check_constraint_delay import CheckConstraintDelay
@@ -43,12 +44,14 @@ from netex.models.entities_in_version_rel_structure import CompositeFrame
 from netex.models.entities_in_version_rel_structure import FramesRelStructure
 from netex.models.entrance_enumeration import EntranceEnumeration
 from netex.models.entrance_ref_structure import EntranceRefStructure
+from netex.models.escalator_free_access import EscalatorFreeAccess
 from netex.models.explicit_equipments_rel_structure import ExplicitEquipmentsRelStructure
 from netex.models.gated_enumeration import GatedEnumeration
 from netex.models.iana_country_tld_enumeration import IanaCountryTldEnumeration
 from netex.models.level import Level
 from netex.models.level_ref import LevelRef
 from netex.models.levels_rel_structure import LevelsRelStructure
+from netex.models.lift_free_access import LiftFreeAccess
 from netex.models.lighting_enumeration import LightingEnumeration
 from netex.models.limitation_status_enumeration import LimitationStatusEnumeration
 from netex.models.local_services_rel_structure import LocalServicesRelStructure
@@ -62,6 +65,7 @@ from netex.models.navigation_paths_rel_structure import NavigationPathsRelStruct
 from netex.models.navigation_type_enumeration import NavigationTypeEnumeration
 from netex.models.network_filter_by_value_structure import NetworkFilterByValueStructure
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.passage_type_enumeration import PassageTypeEnumeration
 from netex.models.path_direction_enumeration import PathDirectionEnumeration
 from netex.models.path_heading_enumeration import PathHeadingEnumeration
@@ -100,7 +104,8 @@ from netex.models.site_frame import SiteFrame
 from netex.models.site_path_link import SitePathLink
 from netex.models.site_path_links_rel_structure import SitePathLinksRelStructure
 from netex.models.site_ref_structure import SiteRefStructure
-from netex.models.stop_place import StopPlace
+from netex.models.step_free_access import StepFreeAccess
+from netex.models.stop_place_1 import StopPlace1
 from netex.models.stop_place_ref_structure import StopPlaceRefStructure
 from netex.models.stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from netex.models.stop_type_enumeration import StopTypeEnumeration
@@ -126,6 +131,8 @@ from netex.models.types_of_value_structure import TypesOfValueStructure
 from netex.models.value_set import ValueSet
 from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
+from netex.models.visual_signs_available import VisualSignsAvailable
+from netex.models.wheelchair_access import WheelchairAccess
 from netex.models.zone_ref_structure import ZoneRefStructure
 from xsdata.models.datatype import XmlDate
 from xsdata.models.datatype import XmlDateTime
@@ -135,7 +142,9 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
         topics=PublicationRequestStructure.Topics(
@@ -240,7 +249,7 @@ obj = PublicationDelivery(
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 day_type=[
-                                    DayType(
+                                    DayType1(
                                         id='oda:DT01_Very_Busy',
                                         version='any',
                                         name=MultilingualString(
@@ -270,7 +279,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='oda:DT02_Busy',
                                         version='any',
                                         name=MultilingualString(
@@ -300,7 +309,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='oda:DT03_Normal',
                                         version='any',
                                         name=MultilingualString(
@@ -330,7 +339,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    DayType(
+                                    DayType1(
                                         id='oda:DT04_QUIET',
                                         version='any',
                                         name=MultilingualString(
@@ -869,7 +878,7 @@ obj = PublicationDelivery(
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
-                                    StopPlace(
+                                    StopPlace1(
                                         id='naptStop:910GSTRFD',
                                         data_source_ref_attribute='NaPTAN',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
@@ -910,12 +919,24 @@ obj = PublicationDelivery(
                                                     data_source_ref_attribute='XtraAccessibilityData',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                     changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE,
-                                                    audible_signals_available=LimitationStatusEnumeration.FALSE,
-                                                    visual_signs_available=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    audible_signals_available=AudibleSignalsAvailable(
+
+                                                    ),
+                                                    visual_signs_available=VisualSignsAvailable(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -980,10 +1001,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.FALSE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.FALSE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1031,10 +1060,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.FALSE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.FALSE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1054,7 +1091,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='naptStop:940GZZLUSTD',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         changed=XmlDateTime(2009, 2, 26, 15, 47, 0),
@@ -1090,12 +1127,24 @@ obj = PublicationDelivery(
                                                     data_source_ref_attribute='XtraAccessibilityData',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                     changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE,
-                                                    audible_signals_available=LimitationStatusEnumeration.FALSE,
-                                                    visual_signs_available=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    audible_signals_available=AudibleSignalsAvailable(
+
+                                                    ),
+                                                    visual_signs_available=VisualSignsAvailable(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1146,10 +1195,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.FALSE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.FALSE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1197,10 +1254,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.FALSE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.FALSE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1220,7 +1285,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='naptStop:940GZZCRSTD',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         changed=XmlDateTime(2009, 2, 26, 15, 47, 0),
@@ -1259,12 +1324,24 @@ obj = PublicationDelivery(
                                                     data_source_ref_attribute='XtraAccessibilityData',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                     changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE,
-                                                    audible_signals_available=LimitationStatusEnumeration.FALSE,
-                                                    visual_signs_available=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    audible_signals_available=AudibleSignalsAvailable(
+
+                                                    ),
+                                                    visual_signs_available=VisualSignsAvailable(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1312,10 +1389,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.FALSE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.FALSE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1363,10 +1448,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.FALSE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.FALSE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1386,7 +1479,7 @@ obj = PublicationDelivery(
                                             ]
                                         )
                                     ),
-                                    StopPlace(
+                                    StopPlace1(
                                         id='naptStop:940GZZLUWHM',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         changed=XmlDateTime(2009, 2, 26, 15, 47, 0),
@@ -1422,12 +1515,24 @@ obj = PublicationDelivery(
                                                     data_source_ref_attribute='XtraAccessibilityData',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                     changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE,
-                                                    audible_signals_available=LimitationStatusEnumeration.FALSE,
-                                                    visual_signs_available=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    audible_signals_available=AudibleSignalsAvailable(
+
+                                                    ),
+                                                    visual_signs_available=VisualSignsAvailable(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1487,10 +1592,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.FALSE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.FALSE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1538,10 +1651,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.FALSE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.FALSE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -1610,10 +1731,18 @@ obj = PublicationDelivery(
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                    step_free_access=LimitationStatusEnumeration.TRUE,
-                                                    escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                    lift_free_access=LimitationStatusEnumeration.TRUE
+                                                    wheelchair_access=WheelchairAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    step_free_access=StepFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    escalator_free_access=EscalatorFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    ),
+                                                    lift_free_access=LiftFreeAccess(
+                                                        value=LimitationStatusEnumeration.TRUE
+                                                    )
                                                 )
                                             )
                                         ),
@@ -1719,10 +1848,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.FALSE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -2132,10 +2269,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -2559,10 +2704,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -3004,10 +3157,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -3449,10 +3610,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -3894,10 +4063,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -4142,10 +4319,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6030,10 +6215,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6093,10 +6286,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6156,10 +6357,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6219,10 +6428,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6282,10 +6499,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6345,10 +6570,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6408,10 +6641,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6471,10 +6712,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6691,10 +6940,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6754,10 +7011,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6813,10 +7078,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6872,10 +7145,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6935,10 +7216,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -6998,10 +7287,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -7061,10 +7358,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -7124,10 +7429,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -7187,10 +7500,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -7250,10 +7571,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -7313,9 +7642,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.FALSE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                step_free_access=LimitationStatusEnumeration.FALSE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.FALSE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -7539,10 +7877,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -7602,10 +7948,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),
@@ -7661,10 +8015,18 @@ obj = PublicationDelivery(
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                wheelchair_access=LimitationStatusEnumeration.TRUE,
-                                                                step_free_access=LimitationStatusEnumeration.TRUE,
-                                                                escalator_free_access=LimitationStatusEnumeration.TRUE,
-                                                                lift_free_access=LimitationStatusEnumeration.TRUE
+                                                                wheelchair_access=WheelchairAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                step_free_access=StepFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                escalator_free_access=EscalatorFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                ),
+                                                                lift_free_access=LiftFreeAccess(
+                                                                    value=LimitationStatusEnumeration.TRUE
+                                                                )
                                                             )
                                                         )
                                                     ),

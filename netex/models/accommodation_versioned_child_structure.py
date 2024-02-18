@@ -1,19 +1,15 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
-from .accommodation_facility_enumeration import (
-    AccommodationFacilityEnumeration,
-)
+from typing import Optional
+from .accommodation_facility import AccommodationFacility
 from .alternative_texts_rel_structure import VersionedChildStructure
-from .berth_facility_enumeration import BerthFacilityEnumeration
+from .berth_facility import BerthFacility
 from .class_of_use_ref import ClassOfUseRef
-from .couchette_facility_enumeration import CouchetteFacilityEnumeration
-from .fare_class_enumeration import FareClassEnumeration
-from .gender_limitation_enumeration import GenderLimitationEnumeration
+from .couchette_facility import CouchetteFacility
+from .fare_class import FareClass
+from .gender_limitation import GenderLimitation
 from .multilingual_string import MultilingualString
-from .nuisance_facility_enumeration import NuisanceFacilityEnumeration
-from .passenger_comms_facility_enumeration import (
-    PassengerCommsFacilityEnumeration,
-)
+from .nuisance_facility_list import NuisanceFacilityList
+from .passenger_comms_facility_list import PassengerCommsFacilityList
 from .sanitary_facility_enumeration import SanitaryFacilityEnumeration
 from .service_facility_set_ref import ServiceFacilitySetRef
 
@@ -41,7 +37,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: Optional[FareClassEnumeration] = field(
+    fare_class: Optional[FareClass] = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -57,7 +53,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accommodation_facility: Optional[AccommodationFacilityEnumeration] = field(
+    accommodation_facility: Optional[AccommodationFacility] = field(
         default=None,
         metadata={
             "name": "AccommodationFacility",
@@ -65,7 +61,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    couchette_facility: Optional[CouchetteFacilityEnumeration] = field(
+    couchette_facility: Optional[CouchetteFacility] = field(
         default=None,
         metadata={
             "name": "CouchetteFacility",
@@ -81,7 +77,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    berth_facility: Optional[BerthFacilityEnumeration] = field(
+    berth_facility: Optional[BerthFacility] = field(
         default=None,
         metadata={
             "name": "BerthFacility",
@@ -105,7 +101,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gender_limitation: Optional[GenderLimitationEnumeration] = field(
+    gender_limitation: Optional[GenderLimitation] = field(
         default=None,
         metadata={
             "name": "GenderLimitation",
@@ -113,23 +109,21 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    nuisance_facility_list: List[NuisanceFacilityEnumeration] = field(
-        default_factory=list,
+    nuisance_facility_list: Optional[NuisanceFacilityList] = field(
+        default=None,
         metadata={
             "name": "NuisanceFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )
-    passenger_comms_facility_list: List[
-        PassengerCommsFacilityEnumeration
+    passenger_comms_facility_list: Optional[
+        PassengerCommsFacilityList
     ] = field(
-        default_factory=list,
+        default=None,
         metadata={
             "name": "PassengerCommsFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
         },
     )

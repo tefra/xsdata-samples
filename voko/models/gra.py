@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+from voko.models.vspec import Vspec
 
 
 @dataclass(kw_only=True)
@@ -16,7 +17,7 @@ class Gra:
             "choices": (
                 {
                     "name": "vspec",
-                    "type": str,
+                    "type": Vspec,
                 },
             ),
         },

@@ -9,6 +9,12 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.noisbn import Noisbn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_series_metadata_reference_distribution_opts import (
     ProceedingsSeriesMetadataReferenceDistributionOpts,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_subject import (
+    ProceedingsSubject,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.proceedings_title import (
+    ProceedingsTitle,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publication_date import (
     PublicationDate,
 )
@@ -19,6 +25,7 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_item import (
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.series_metadata import (
     SeriesMetadata,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.volume import Volume
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -41,33 +48,27 @@ class ProceedingsSeriesMetadata:
             "required": True,
         },
     )
-    proceedings_title: Optional[str] = field(
+    proceedings_title: Optional[ProceedingsTitle] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-            "min_length": 1,
-            "max_length": 511,
         },
     )
-    volume: List[str] = field(
+    volume: List[Volume] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 2,
-            "min_length": 1,
-            "max_length": 32,
             "sequence": 1,
         },
     )
-    proceedings_subject: List[str] = field(
+    proceedings_subject: List[ProceedingsSubject] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 2,
-            "min_length": 1,
-            "max_length": 255,
         },
     )
     publisher: List[Publisher] = field(

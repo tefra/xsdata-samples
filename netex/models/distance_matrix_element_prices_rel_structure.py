@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
-from .cell_ref import CellRef
+from .cell_ref_1 import CellRef1
 from .distance_matrix_element_price import DistanceMatrixElementPrice
 from .distance_matrix_element_price_ref import DistanceMatrixElementPriceRef
 from .strict_containment_aggregation_structure import (
@@ -19,7 +19,7 @@ class DistanceMatrixElementPricesRelStructure(
 
     distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref: List[
         Union[
-            DistanceMatrixElementPriceRef, DistanceMatrixElementPrice, CellRef
+            DistanceMatrixElementPriceRef, DistanceMatrixElementPrice, CellRef1
         ]
     ] = field(
         default_factory=list,
@@ -38,7 +38,7 @@ class DistanceMatrixElementPricesRelStructure(
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef,
+                    "type": CellRef1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

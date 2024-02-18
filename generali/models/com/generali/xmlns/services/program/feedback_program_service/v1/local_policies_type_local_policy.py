@@ -10,8 +10,8 @@ from generali.models.com.generali.xmlns.services.program.feedback_program_servic
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_risks import (
     LocalPoliciesTypeLocalPolicyRisks,
 )
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status_value import (
-    StatusValue,
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status import (
+    Status,
 )
 
 __NAMESPACE__ = (
@@ -75,7 +75,7 @@ class LocalPoliciesTypeLocalPolicy:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    status: Optional[StatusValue] = field(
+    status: Optional[Status] = field(
         default=None,
         metadata={
             "name": "Status",

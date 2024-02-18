@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
-from xsdata.models.datatype import XmlDate, XmlTime
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     CataloguePricingUpdateLine,
     ContractorCustomerParty,
@@ -18,11 +17,15 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
     CustomizationId,
     Description,
     Id,
+    IssueDate,
+    IssueTime,
     LineCountNumeric,
     Name,
     Note,
     ProfileExecutionId,
     ProfileId,
+    RevisionDate,
+    RevisionTime,
     UblversionId,
     Uuid,
     VersionId,
@@ -101,7 +104,7 @@ class CataloguePricingUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[XmlDate] = field(
+    issue_date: Optional[IssueDate] = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -110,7 +113,7 @@ class CataloguePricingUpdateType:
             "required": True,
         },
     )
-    issue_time: Optional[XmlTime] = field(
+    issue_time: Optional[IssueTime] = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -118,7 +121,7 @@ class CataloguePricingUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    revision_date: Optional[XmlDate] = field(
+    revision_date: Optional[RevisionDate] = field(
         default=None,
         metadata={
             "name": "RevisionDate",
@@ -126,7 +129,7 @@ class CataloguePricingUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    revision_time: Optional[XmlTime] = field(
+    revision_time: Optional[RevisionTime] = field(
         default=None,
         metadata={
             "name": "RevisionTime",

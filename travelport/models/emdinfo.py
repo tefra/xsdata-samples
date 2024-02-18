@@ -2,8 +2,10 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.electronic_misc_document import ElectronicMiscDocument
 from travelport.models.emdcommission import Emdcommission
+from travelport.models.emdendorsement import Emdendorsement
 from travelport.models.emdpricing_info import EmdpricingInfo
 from travelport.models.emdtraveler_info import EmdtravelerInfo
+from travelport.models.fare_calc import FareCalc
 from travelport.models.form_of_payment_1 import FormOfPayment1
 from travelport.models.payment_1 import Payment1
 from travelport.models.supplier_locator_1 import SupplierLocator1
@@ -113,17 +115,15 @@ class Emdinfo:
             "type": "Element",
         },
     )
-    emdendorsement: list[str] = field(
+    emdendorsement: list[Emdendorsement] = field(
         default_factory=list,
         metadata={
             "name": "EMDEndorsement",
             "type": "Element",
             "max_occurs": 999,
-            "min_length": 1,
-            "max_length": 255,
         },
     )
-    fare_calc: None | str = field(
+    fare_calc: None | FareCalc = field(
         default=None,
         metadata={
             "name": "FareCalc",

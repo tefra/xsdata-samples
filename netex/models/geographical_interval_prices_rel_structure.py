@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
-from .cell_ref import CellRef
+from .cell_ref_1 import CellRef1
 from .geographical_interval_price_ref import GeographicalIntervalPriceRef
 from .geographical_interval_price_versioned_child_structure import (
     GeographicalIntervalPriceVersionedChildStructure,
@@ -23,7 +23,7 @@ class GeographicalIntervalPricesRelStructure(
         Union[
             GeographicalIntervalPriceRef,
             GeographicalIntervalPriceVersionedChildStructure,
-            CellRef,
+            CellRef1,
         ]
     ] = field(
         default_factory=list,
@@ -42,7 +42,7 @@ class GeographicalIntervalPricesRelStructure(
                 },
                 {
                     "name": "CellRef",
-                    "type": CellRef,
+                    "type": CellRef1,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),

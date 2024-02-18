@@ -1,16 +1,19 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from .message_qualifier_structure import MessageQualifierStructure
+from .participant_ref_structure import ParticipantRefStructure
 from .response_structure import ResponseStructure
 from .service_delivery_error_condition_structure import (
     ServiceDeliveryErrorConditionStructure,
 )
+from .status import Status
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
 class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
-    request_message_ref: Optional[str] = field(
+    request_message_ref: Optional[MessageQualifierStructure] = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -26,7 +29,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[str] = field(
+    delegator_ref: Optional[ParticipantRefStructure] = field(
         default=None,
         metadata={
             "name": "DelegatorRef",
@@ -34,7 +37,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: Optional[bool] = field(
+    status: Optional[Status] = field(
         default=None,
         metadata={
             "name": "Status",

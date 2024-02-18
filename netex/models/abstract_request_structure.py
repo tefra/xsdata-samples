@@ -1,13 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDateTime
+from .request_timestamp import RequestTimestamp
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
 class AbstractRequestStructure:
-    request_timestamp: Optional[XmlDateTime] = field(
+    request_timestamp: Optional[RequestTimestamp] = field(
         default=None,
         metadata={
             "name": "RequestTimestamp",

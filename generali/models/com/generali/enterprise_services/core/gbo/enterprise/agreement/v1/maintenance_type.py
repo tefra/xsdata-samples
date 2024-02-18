@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.maintenance_type_enum import (
     MaintenanceTypeEnum,
 )
@@ -11,7 +14,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class MaintenanceType:
-    year: Optional[int] = field(
+    year: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "Year",

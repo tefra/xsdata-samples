@@ -2,15 +2,15 @@ from decimal import Decimal
 from netex.models.access_right_in_product import AccessRightInProduct
 from netex.models.access_rights_in_product_rel_structure import AccessRightsInProductRelStructure
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import ValidBetween
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.cell_versioned_child_structure import CellsRelStructure
 from netex.models.cell_versioned_child_structure import FarePricesRelStructure
-from netex.models.cell_versioned_child_structure import FareTable
+from netex.models.cell_versioned_child_structure import FareTable1
 from netex.models.cell_versioned_child_structure import FareTablesRelStructure
-from netex.models.cell_versioned_child_structure import PriceGroup
+from netex.models.cell_versioned_child_structure import PriceGroup1
 from netex.models.codespace import Codespace
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
 from netex.models.data_objects_rel_structure import DataObjectsRelStructure
@@ -41,6 +41,7 @@ from netex.models.operator import Operator
 from netex.models.operator_ref import OperatorRef
 from netex.models.organisations_in_frame_rel_structure import OrganisationsInFrameRelStructure
 from netex.models.partial_refund_basis_enumeration import PartialRefundBasisEnumeration
+from netex.models.participant_ref import ParticipantRef
 from netex.models.payment_method_enumeration import PaymentMethodEnumeration
 from netex.models.per_basis_enumeration import PerBasisEnumeration
 from netex.models.priceable_object_refs_rel_structure import PriceableObjectRefsRelStructure
@@ -120,10 +121,14 @@ from xsdata.models.datatype import XmlPeriod
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -317,7 +322,7 @@ obj = PublicationDelivery(
                                                                     usage_start_constraint_type=UsageStartConstraintTypeEnumeration.VARIABLE,
                                                                     start_only_on=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
-                                                                            DayType(
+                                                                            DayType1(
                                                                                 id='myfares:Time_interval@access_when',
                                                                                 version='1.0',
                                                                                 properties=PropertiesOfDayRelStructure(
@@ -898,7 +903,7 @@ obj = PublicationDelivery(
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
-                                    PriceGroup(
+                                    PriceGroup1(
                                         id='myfares:With_Railcard@discounts',
                                         version='1.0',
                                         name=MultilingualString(
@@ -973,7 +978,7 @@ obj = PublicationDelivery(
                             ),
                             fare_tables=FareTablesInFrameRelStructure(
                                 fare_table=[
-                                    FareTable(
+                                    FareTable1(
                                         id='myfares:Railcard@prices',
                                         version='1.0',
                                         name=MultilingualString(
@@ -997,7 +1002,7 @@ obj = PublicationDelivery(
                                         ),
                                         includes=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
-                                                FareTable(
+                                                FareTable1(
                                                     id='myfares:Railcard@prices@adult',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1048,7 +1053,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='myfares:Railcard@prices@child',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1099,7 +1104,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='myfares:Railcard@prices@student',
                                                     version='1.0',
                                                     name=MultilingualString(
@@ -1150,7 +1155,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     )
                                                 ),
-                                                FareTable(
+                                                FareTable1(
                                                     id='myfares:Railcard@prices@senior',
                                                     version='1.0',
                                                     name=MultilingualString(

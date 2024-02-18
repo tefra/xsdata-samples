@@ -2,8 +2,10 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from xcbl.models.price_check_result import (
     ErrorInfo,
+    GeneralLineItemNote,
     LineItemAttachment,
     ResultListOfAttachment,
+    TotalNumberOfLineItem,
 )
 from xcbl.models.shipping_schedule import AccountCode
 from xcbl.models.sourcing_result import (
@@ -22,6 +24,7 @@ from xcbl.models.sourcing_result import (
     ListOfReferenceCoded,
     ListOfStatusReason,
     MaxBackOrderQuantity,
+    OffCatalogFlag,
     OrderParty,
     ParentItemNumber,
     Quantity,
@@ -37,19 +40,91 @@ from xcbl.models.trading_partner_user_information import Language
 
 
 @dataclass(kw_only=True)
-class StatusEvent:
-    status_event_coded: str = field(
+class OrderDate:
+    value: str = field(
+        default="",
         metadata={
-            "name": "StatusEventCoded",
-            "type": "Element",
             "required": True,
-        }
+        },
     )
-    status_event_coded_other: Optional[str] = field(
-        default=None,
+
+
+@dataclass(kw_only=True)
+class OrderStatusCheckItemError:
+    value: str = field(
+        default="",
         metadata={
-            "name": "StatusEventCodedOther",
-            "type": "Element",
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderStatusDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderStatusIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderStatusResultNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class ShipDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class StatusEventCoded:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class StatusEventCodedOther:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class StatusNote:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
         },
     )
 
@@ -157,6 +232,108 @@ class SellerReferenceNumber:
 
 
 @dataclass(kw_only=True)
+class StatusEvent:
+    status_event_coded: StatusEventCoded = field(
+        metadata={
+            "name": "StatusEventCoded",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    status_event_coded_other: Optional[StatusEventCodedOther] = field(
+        default=None,
+        metadata={
+            "name": "StatusEventCodedOther",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class VarianceQty:
+    quantity: Quantity = field(
+        metadata={
+            "name": "Quantity",
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass(kw_only=True)
+class OrderStatusResultHeader:
+    order_status_id: OrderStatusId = field(
+        metadata={
+            "name": "OrderStatusID",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    order_status_issue_date: OrderStatusIssueDate = field(
+        metadata={
+            "name": "OrderStatusIssueDate",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    order_status_result_party: OrderStatusResultParty = field(
+        metadata={
+            "name": "OrderStatusResultParty",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    order_status_result_language: Optional[OrderStatusResultLanguage] = field(
+        default=None,
+        metadata={
+            "name": "OrderStatusResultLanguage",
+            "type": "Element",
+        },
+    )
+    order_status_result_note: Optional[OrderStatusResultNote] = field(
+        default=None,
+        metadata={
+            "name": "OrderStatusResultNote",
+            "type": "Element",
+        },
+    )
+    result_list_of_attachment: Optional[ResultListOfAttachment] = field(
+        default=None,
+        metadata={
+            "name": "ResultListOfAttachment",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderStatusResultSummary:
+    order_status_check_item_error: OrderStatusCheckItemError = field(
+        metadata={
+            "name": "OrderStatusCheckItemError",
+            "type": "Element",
+            "required": True,
+        }
+    )
+    order_status_summary_error_info: Optional[
+        OrderStatusSummaryErrorInfo
+    ] = field(
+        default=None,
+        metadata={
+            "name": "OrderStatusSummaryErrorInfo",
+            "type": "Element",
+        },
+    )
+    total_number_of_line_item: Optional[TotalNumberOfLineItem] = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberOfLineItem",
+            "type": "Element",
+        },
+    )
+
+
+@dataclass(kw_only=True)
 class ShipmentStatusEvent:
     status_event: StatusEvent = field(
         metadata={
@@ -172,7 +349,7 @@ class ShipmentStatusEvent:
             "type": "Element",
         },
     )
-    status_note: Optional[str] = field(
+    status_note: Optional[StatusNote] = field(
         default=None,
         metadata={
             "name": "StatusNote",
@@ -186,7 +363,7 @@ class ShipmentStatusEvent:
             "type": "Element",
         },
     )
-    ship_date: Optional[str] = field(
+    ship_date: Optional[ShipDate] = field(
         default=None,
         metadata={
             "name": "ShipDate",
@@ -211,7 +388,7 @@ class Status:
             "type": "Element",
         },
     )
-    status_note: Optional[str] = field(
+    status_note: Optional[StatusNote] = field(
         default=None,
         metadata={
             "name": "StatusNote",
@@ -224,17 +401,6 @@ class Status:
             "name": "ErrorInfo",
             "type": "Element",
         },
-    )
-
-
-@dataclass(kw_only=True)
-class VarianceQty:
-    quantity: Quantity = field(
-        metadata={
-            "name": "Quantity",
-            "type": "Element",
-            "required": True,
-        }
     )
 
 
@@ -257,79 +423,6 @@ class OrderStatus:
             "type": "Element",
             "required": True,
         }
-    )
-
-
-@dataclass(kw_only=True)
-class OrderStatusResultHeader:
-    order_status_id: OrderStatusId = field(
-        metadata={
-            "name": "OrderStatusID",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    order_status_issue_date: str = field(
-        metadata={
-            "name": "OrderStatusIssueDate",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    order_status_result_party: OrderStatusResultParty = field(
-        metadata={
-            "name": "OrderStatusResultParty",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    order_status_result_language: Optional[OrderStatusResultLanguage] = field(
-        default=None,
-        metadata={
-            "name": "OrderStatusResultLanguage",
-            "type": "Element",
-        },
-    )
-    order_status_result_note: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "OrderStatusResultNote",
-            "type": "Element",
-        },
-    )
-    result_list_of_attachment: Optional[ResultListOfAttachment] = field(
-        default=None,
-        metadata={
-            "name": "ResultListOfAttachment",
-            "type": "Element",
-        },
-    )
-
-
-@dataclass(kw_only=True)
-class OrderStatusResultSummary:
-    order_status_check_item_error: str = field(
-        metadata={
-            "name": "OrderStatusCheckItemError",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    order_status_summary_error_info: Optional[
-        OrderStatusSummaryErrorInfo
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OrderStatusSummaryErrorInfo",
-            "type": "Element",
-        },
-    )
-    total_number_of_line_item: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "TotalNumberOfLineItem",
-            "type": "Element",
-        },
     )
 
 
@@ -434,7 +527,7 @@ class OrderStatusResultItem:
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[str] = field(
+    off_catalog_flag: Optional[OffCatalogFlag] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
@@ -572,14 +665,14 @@ class OrderStatusResultReference:
             "type": "Element",
         },
     )
-    order_date: str = field(
+    order_date: OrderDate = field(
         metadata={
             "name": "OrderDate",
             "type": "Element",
             "required": True,
         }
     )
-    order_status_date: str = field(
+    order_status_date: OrderStatusDate = field(
         metadata={
             "name": "OrderStatusDate",
             "type": "Element",
@@ -627,7 +720,7 @@ class OrderStatusDetailResult:
             "required": True,
         }
     )
-    general_line_item_note: Optional[str] = field(
+    general_line_item_note: Optional[GeneralLineItemNote] = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",

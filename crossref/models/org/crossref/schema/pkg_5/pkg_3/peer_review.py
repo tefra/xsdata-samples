@@ -31,6 +31,9 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.peer_review_type import (
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.review_date import (
     ReviewDate,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.running_number import (
+    RunningNumber,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.scn_policies import (
     ScnPolicies,
 )
@@ -100,7 +103,7 @@ class PeerReview:
             "type": "Element",
         },
     )
-    running_number: Optional[str] = field(
+    running_number: Optional[RunningNumber] = field(
         default=None,
         metadata={
             "type": "Element",

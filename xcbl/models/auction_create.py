@@ -7,6 +7,7 @@ from xcbl.models.auction_create_response import (
     AuctionItem,
     AuctionItemDates,
     AuctionPricingDetail,
+    ComponentAuctionIndicator,
 )
 from xcbl.models.auction_result import ListOfMvbvariables
 from xcbl.models.sourcing_result import ListOfAttachment
@@ -79,7 +80,7 @@ class AuctionCreateDetail:
             "type": "Element",
         },
     )
-    component_auction_indicator: str = field(
+    component_auction_indicator: ComponentAuctionIndicator = field(
         metadata={
             "name": "ComponentAuctionIndicator",
             "type": "Element",

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .direction_ref_structure import DirectionRefStructure
-from .direction_type_enumeration import DirectionTypeEnumeration
+from .direction_type import DirectionType
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .type_of_value_version_structure import TypeOfValueVersionStructure
 
@@ -21,7 +21,7 @@ class DirectionValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_type: Optional[DirectionTypeEnumeration] = field(
+    direction_type: Optional[DirectionType] = field(
         default=None,
         metadata={
             "name": "DirectionType",

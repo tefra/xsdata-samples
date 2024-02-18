@@ -4,10 +4,14 @@ from xcbl.models.order_response import (
     ListOfTransport,
     OrderAllowancesOrCharges,
     OrderHeaderAttachments,
+    OrderHeaderNote,
     OrderHeaderPrice,
+    OrderInvoiceMediumTypeCoded,
+    OrderInvoiceMediumTypeCodedOther,
     OrderPaymentInstructions,
     OrderSummary,
     OrderTermsOfDelivery,
+    PartialShipmentAllowed,
     TaxAccountingCurrency,
 )
 from xcbl.models.quote import TaxReference
@@ -37,6 +41,36 @@ from xcbl.models.sourcing_result_response import Purpose
 from xcbl.models.time_series_response import ListOfPartyCoded
 from xcbl.models.trading_partner_organization_information import Currency
 from xcbl.models.trading_partner_user_information import Language
+
+
+@dataclass(kw_only=True)
+class BuyerOrderRequestNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class OrderRequestIssueDate:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(kw_only=True)
+class SellerOrderRequestNumber:
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
 
 
 @dataclass(kw_only=True)
@@ -86,14 +120,14 @@ class OrderRequestLanguage:
 
 @dataclass(kw_only=True)
 class OrderRequestNumber:
-    buyer_order_request_number: str = field(
+    buyer_order_request_number: BuyerOrderRequestNumber = field(
         metadata={
             "name": "BuyerOrderRequestNumber",
             "type": "Element",
             "required": True,
         }
     )
-    seller_order_request_number: Optional[str] = field(
+    seller_order_request_number: Optional[SellerOrderRequestNumber] = field(
         default=None,
         metadata={
             "name": "SellerOrderRequestNumber",
@@ -236,7 +270,7 @@ class OrderRequestHeader:
             "type": "Element",
         },
     )
-    order_request_issue_date: str = field(
+    order_request_issue_date: OrderRequestIssueDate = field(
         metadata={
             "name": "OrderRequestIssueDate",
             "type": "Element",
@@ -292,14 +326,18 @@ class OrderRequestHeader:
             "type": "Element",
         },
     )
-    order_invoice_medium_type_coded: Optional[str] = field(
+    order_invoice_medium_type_coded: Optional[
+        OrderInvoiceMediumTypeCoded
+    ] = field(
         default=None,
         metadata={
             "name": "OrderInvoiceMediumTypeCoded",
             "type": "Element",
         },
     )
-    order_invoice_medium_type_coded_other: Optional[str] = field(
+    order_invoice_medium_type_coded_other: Optional[
+        OrderInvoiceMediumTypeCodedOther
+    ] = field(
         default=None,
         metadata={
             "name": "OrderInvoiceMediumTypeCodedOther",
@@ -313,7 +351,7 @@ class OrderRequestHeader:
             "type": "Element",
         },
     )
-    partial_shipment_allowed: Optional[str] = field(
+    partial_shipment_allowed: Optional[PartialShipmentAllowed] = field(
         default=None,
         metadata={
             "name": "PartialShipmentAllowed",
@@ -369,7 +407,7 @@ class OrderRequestHeader:
             "type": "Element",
         },
     )
-    order_header_note: Optional[str] = field(
+    order_header_note: Optional[OrderHeaderNote] = field(
         default=None,
         metadata={
             "name": "OrderHeaderNote",

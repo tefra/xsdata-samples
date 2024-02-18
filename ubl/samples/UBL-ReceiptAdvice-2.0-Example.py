@@ -21,18 +21,25 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import RequestedDeliv
 from ubl.models.common.ubl_common_aggregate_components_2_1 import SellersItemIdentification
 from ubl.models.common.ubl_common_aggregate_components_2_1 import Shipment
 from ubl.models.common.ubl_common_aggregate_components_2_1 import TaxScheme
+from ubl.models.common.ubl_common_basic_components_2_1 import ActualDeliveryDate
+from ubl.models.common.ubl_common_basic_components_2_1 import ActualDeliveryTime
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import CompanyId
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomerAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import Description
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
+from ubl.models.common.ubl_common_basic_components_2_1 import EndTime
 from ubl.models.common.ubl_common_basic_components_2_1 import ExemptionReason
+from ubl.models.common.ubl_common_basic_components_2_1 import ExpiryDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import LotNumberId
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
@@ -44,6 +51,8 @@ from ubl.models.common.ubl_common_basic_components_2_1 import ReceivedQuantity
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationName
 from ubl.models.common.ubl_common_basic_components_2_1 import SalesOrderId
 from ubl.models.common.ubl_common_basic_components_2_1 import ShortQuantity
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import SupplierAssignedAccountId
 from ubl.models.common.ubl_common_basic_components_2_1 import TaxTypeCode
@@ -69,11 +78,15 @@ obj = ReceiptAdvice(
     id=Id(
         value='658398'
     ),
-    copy_indicator=False,
+    copy_indicator=CopyIndicator(
+        value=False
+    ),
     uuid=Uuid(
         value='89F82FA6-5331-491D-83BC-7B6CA7FD047C'
     ),
-    issue_date=XmlDate(2005, 6, 21),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 6, 21)
+    ),
     note=[
         Note(
             value='sample'
@@ -90,7 +103,9 @@ obj = ReceiptAdvice(
             uuid=Uuid(
                 value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
             ),
-            issue_date=XmlDate(2005, 6, 20)
+            issue_date=IssueDate(
+                value=XmlDate(2005, 6, 20)
+            )
         ),
     ],
     despatch_document_reference=[
@@ -101,7 +116,9 @@ obj = ReceiptAdvice(
             uuid=Uuid(
                 value='88C7280E-8F10-419F-9949-8EFFFA2842B8'
             ),
-            issue_date=XmlDate(2005, 6, 20)
+            issue_date=IssueDate(
+                value=XmlDate(2005, 6, 20)
+            )
         ),
     ],
     delivery_customer_party=DeliveryCustomerParty(
@@ -292,13 +309,25 @@ obj = ReceiptAdvice(
                 value=Decimal('90'),
                 unit_code='KGM'
             ),
-            actual_delivery_date=XmlDate(2005, 6, 20),
-            actual_delivery_time=XmlTime(11, 30, 0, 0, 0),
+            actual_delivery_date=ActualDeliveryDate(
+                value=XmlDate(2005, 6, 20)
+            ),
+            actual_delivery_time=ActualDeliveryTime(
+                value=XmlTime(11, 30, 0, 0, 0)
+            ),
             requested_delivery_period=RequestedDeliveryPeriod(
-                start_date=XmlDate(2005, 6, 20),
-                start_time=XmlTime(10, 30, 47, 0, 0),
-                end_date=XmlDate(2005, 6, 21),
-                end_time=XmlTime(10, 30, 47, 0, 0)
+                start_date=StartDate(
+                    value=XmlDate(2005, 6, 20)
+                ),
+                start_time=StartTime(
+                    value=XmlTime(10, 30, 47, 0, 0)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2005, 6, 21)
+                ),
+                end_time=EndTime(
+                    value=XmlTime(10, 30, 47, 0, 0)
+                )
             )
         )
     ),
@@ -346,7 +375,9 @@ obj = ReceiptAdvice(
                                 lot_number_id=LotNumberId(
                                     value='546378239'
                                 ),
-                                expiry_date=XmlDate(2010, 1, 1)
+                                expiry_date=ExpiryDate(
+                                    value=XmlDate(2010, 1, 1)
+                                )
                             )
                         ),
                     ]

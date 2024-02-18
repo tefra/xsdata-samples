@@ -16,14 +16,21 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import TransportProgr
 from ubl.models.common.ubl_common_aggregate_components_2_1 import TransportSchedule
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
+from ubl.models.common.ubl_common_basic_components_2_1 import EndTime
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import JourneyId
 from ubl.models.common.ubl_common_basic_components_2_1 import LocationTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import RegistrationNationalityId
 from ubl.models.common.ubl_common_basic_components_2_1 import ReliabilityPercent
 from ubl.models.common.ubl_common_basic_components_2_1 import SequenceNumeric
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
+from ubl.models.common.ubl_common_basic_components_2_1 import StatusAvailableIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import Telephone
 from ubl.models.common.ubl_common_basic_components_2_1 import TrainId
@@ -41,9 +48,15 @@ obj = TransportProgressStatus(
     id=Id(
         value='TPSR_1'
     ),
-    issue_date=XmlDate(2011, 10, 3),
-    issue_time=XmlTime(14, 30, 10, 0, 60),
-    status_available_indicator=True,
+    issue_date=IssueDate(
+        value=XmlDate(2011, 10, 3)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(14, 30, 10, 0, 60)
+    ),
+    status_available_indicator=StatusAvailableIndicator(
+        value=True
+    ),
     sender_party=SenderParty(
         party_identification=[
             PartyIdentification(
@@ -187,10 +200,18 @@ obj = TransportProgressStatus(
             estimated_arrival_transport_event=EstimatedArrivalTransportEvent(
                 period=[
                     Period(
-                        start_date=XmlDate(2011, 10, 3),
-                        start_time=XmlTime(18, 30, 10, 0, 60),
-                        end_date=XmlDate(2011, 10, 3),
-                        end_time=XmlTime(18, 35, 10, 0, 60)
+                        start_date=StartDate(
+                            value=XmlDate(2011, 10, 3)
+                        ),
+                        start_time=StartTime(
+                            value=XmlTime(18, 30, 10, 0, 60)
+                        ),
+                        end_date=EndDate(
+                            value=XmlDate(2011, 10, 3)
+                        ),
+                        end_time=EndTime(
+                            value=XmlTime(18, 35, 10, 0, 60)
+                        )
                     ),
                 ]
             )

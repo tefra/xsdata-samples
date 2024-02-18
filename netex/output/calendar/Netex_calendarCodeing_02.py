@@ -1,5 +1,5 @@
 from netex.models.alternative_texts_rel_structure import AvailabilityCondition
-from netex.models.alternative_texts_rel_structure import DayType
+from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import OperatingDay
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -15,6 +15,7 @@ from netex.models.multilingual_string import MultilingualString
 from netex.models.network_frame_topic_structure import NetworkFrameTopicStructure
 from netex.models.operating_day_ref import OperatingDayRef
 from netex.models.operating_days_in_frame_rel_structure import OperatingDaysInFrameRelStructure
+from netex.models.participant_ref import ParticipantRef
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from netex.models.property_of_day import PropertyOfDay
 from netex.models.publication_delivery import PublicationDelivery
@@ -30,10 +31,14 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref='SYS001',
+    participant_ref=ParticipantRef(
+        value='SYS001'
+    ),
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref='SYS002',
+        participant_ref=ParticipantRef(
+            value='SYS002'
+        ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
@@ -289,7 +294,7 @@ obj = PublicationDelivery(
                 ),
                 day_types=DayTypesInFrameRelStructure(
                     day_type=[
-                        DayType(
+                        DayType1(
                             id='hde:DayType:DT_01-MF-NH',
                             version='any',
                             name=MultilingualString(
@@ -312,7 +317,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType(
+                        DayType1(
                             id='hde:DayType:DT_02-AA-NH',
                             version='any',
                             name=MultilingualString(
@@ -331,7 +336,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType(
+                        DayType1(
                             id='hde:DayType:DT_03-WE-NH',
                             version='any',
                             name=MultilingualString(
@@ -351,7 +356,7 @@ obj = PublicationDelivery(
                                 ]
                             )
                         ),
-                        DayType(
+                        DayType1(
                             id='hde:DayType:DT_04-AA-NH',
                             version='any',
                             name=MultilingualString(

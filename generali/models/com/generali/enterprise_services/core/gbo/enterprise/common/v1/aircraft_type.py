@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
+    NumberType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
 )
@@ -17,7 +20,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class AircraftType(VehicleType):
-    crew_seat_count: Optional[int] = field(
+    crew_seat_count: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "CrewSeatCount",
@@ -25,7 +28,7 @@ class AircraftType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    pilot_seat_count: Optional[int] = field(
+    pilot_seat_count: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "PilotSeatCount",
@@ -41,7 +44,7 @@ class AircraftType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    seat_capacity: Optional[int] = field(
+    seat_capacity: Optional[NumberType] = field(
         default=None,
         metadata={
             "name": "SeatCapacity",

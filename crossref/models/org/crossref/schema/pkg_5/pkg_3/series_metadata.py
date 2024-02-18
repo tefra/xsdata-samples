@@ -10,6 +10,7 @@ from crossref.models.org.crossref.fundref.program import (
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_locations import (
     ArchiveLocations,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.coden import Coden
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.contributors import (
     Contributors,
 )
@@ -18,6 +19,9 @@ from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.issn import Issn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.publisher_item import (
     PublisherItem,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.series_number import (
+    SeriesNumber,
 )
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.titles import Titles
 
@@ -77,20 +81,16 @@ class SeriesMetadata:
             "max_occurs": 6,
         },
     )
-    coden: Optional[str] = field(
+    coden: Optional[Coden] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 6,
         },
     )
-    series_number: Optional[str] = field(
+    series_number: Optional[SeriesNumber] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 15,
         },
     )
     publisher_item: Optional[PublisherItem] = field(

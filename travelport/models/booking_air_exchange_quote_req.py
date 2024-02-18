@@ -6,6 +6,7 @@ from travelport.models.original_itinerary_details import (
     OriginalItineraryDetails,
 )
 from travelport.models.repricing_modifiers import RepricingModifiers
+from travelport.models.ticket_number_1 import TicketNumber1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -19,15 +20,13 @@ class BookingAirExchangeQuoteReq(BookingBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
-    ticket_number: list[str] = field(
+    ticket_number: list[TicketNumber1] = field(
         default_factory=list,
         metadata={
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-            "min_length": 1,
-            "max_length": 13,
         },
     )
     air_pricing_solution: list[AirPricingSolution] = field(

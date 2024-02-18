@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.accuracy_code_list import (
     AccuracyCodeList,
 )
@@ -11,13 +13,7 @@ __NAMESPACE__ = (
 
 
 @dataclass
-class NumberWithAccuracyType:
-    value: Optional[Decimal] = field(
-        default=None,
-        metadata={
-            "required": True,
-        },
-    )
+class NumberWithAccuracyType(NumericType):
     accuracy: Optional[AccuracyCodeList] = field(
         default=None,
         metadata={

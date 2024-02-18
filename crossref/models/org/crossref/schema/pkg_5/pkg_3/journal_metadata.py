@@ -1,9 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.abbrev_title import (
+    AbbrevTitle,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_locations import (
     ArchiveLocations,
 )
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.coden import Coden
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.doi_data import DoiData
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.full_title import (
+    FullTitle,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.issn import Issn
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.journal_metadata_language import (
     JournalMetadataLanguage,
@@ -25,23 +32,19 @@ class JournalMetadata:
         name = "journal_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    full_title: List[str] = field(
+    full_title: List[FullTitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 10,
-            "min_length": 1,
-            "max_length": 255,
         },
     )
-    abbrev_title: List[str] = field(
+    abbrev_title: List[AbbrevTitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 10,
-            "min_length": 1,
-            "max_length": 150,
         },
     )
     issn: List[Issn] = field(
@@ -51,12 +54,10 @@ class JournalMetadata:
             "max_occurs": 6,
         },
     )
-    coden: Optional[str] = field(
+    coden: Optional[Coden] = field(
         default=None,
         metadata={
             "type": "Element",
-            "min_length": 1,
-            "max_length": 6,
         },
     )
     archive_locations: Optional[ArchiveLocations] = field(

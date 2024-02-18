@@ -56,6 +56,9 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import TransportMeans
 from ubl.models.common.ubl_common_aggregate_components_2_1 import TransshipPortLocation
 from ubl.models.common.ubl_common_aggregate_components_2_1 import UnloadingPortLocation
 from ubl.models.common.ubl_common_aggregate_components_2_1 import ValidityPeriod
+from ubl.models.common.ubl_common_basic_components_2_1 import ActualDespatchDate
+from ubl.models.common.ubl_common_basic_components_2_1 import ActualDespatchTime
+from ubl.models.common.ubl_common_basic_components_2_1 import AdValoremIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import AircraftId
 from ubl.models.common.ubl_common_basic_components_2_1 import AllowanceChargeReason
 from ubl.models.common.ubl_common_basic_components_2_1 import AllowanceChargeReasonCode
@@ -65,13 +68,16 @@ from ubl.models.common.ubl_common_basic_components_2_1 import BuildingName
 from ubl.models.common.ubl_common_basic_components_2_1 import BuildingNumber
 from ubl.models.common.ubl_common_basic_components_2_1 import CalculationRate
 from ubl.models.common.ubl_common_basic_components_2_1 import CarrierAssignedId
+from ubl.models.common.ubl_common_basic_components_2_1 import ChargeIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CityName
 from ubl.models.common.ubl_common_basic_components_2_1 import ContractType
+from ubl.models.common.ubl_common_basic_components_2_1 import CopyIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentity
 from ubl.models.common.ubl_common_basic_components_2_1 import CountrySubentityCode
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomizationId
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomsStatusCode
 from ubl.models.common.ubl_common_basic_components_2_1 import CustomsTariffQuantity
+from ubl.models.common.ubl_common_basic_components_2_1 import Date
 from ubl.models.common.ubl_common_basic_components_2_1 import DeclaredCarriageValueAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import DeclaredCustomsValueAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import DeclaredStatisticsValueAmount
@@ -81,13 +87,22 @@ from ubl.models.common.ubl_common_basic_components_2_1 import DocumentType
 from ubl.models.common.ubl_common_basic_components_2_1 import DocumentTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import ElectronicMail
 from ubl.models.common.ubl_common_basic_components_2_1 import EmbeddedDocumentBinaryObject
+from ubl.models.common.ubl_common_basic_components_2_1 import EndDate
+from ubl.models.common.ubl_common_basic_components_2_1 import EndTime
+from ubl.models.common.ubl_common_basic_components_2_1 import ExpiryDate
+from ubl.models.common.ubl_common_basic_components_2_1 import ExpiryTime
 from ubl.models.common.ubl_common_basic_components_2_1 import FreeOnBoardValueAmount
 from ubl.models.common.ubl_common_basic_components_2_1 import GrossVolumeMeasure
 from ubl.models.common.ubl_common_basic_components_2_1 import GrossWeightMeasure
+from ubl.models.common.ubl_common_basic_components_2_1 import HazardousRiskIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_common_basic_components_2_1 import IdentificationCode
 from ubl.models.common.ubl_common_basic_components_2_1 import InsuranceValueAmount
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueDate
+from ubl.models.common.ubl_common_basic_components_2_1 import IssueTime
 from ubl.models.common.ubl_common_basic_components_2_1 import JourneyId
+from ubl.models.common.ubl_common_basic_components_2_1 import LatestDeliveryDate
+from ubl.models.common.ubl_common_basic_components_2_1 import LatestDeliveryTime
 from ubl.models.common.ubl_common_basic_components_2_1 import LicensePlateId
 from ubl.models.common.ubl_common_basic_components_2_1 import Line
 from ubl.models.common.ubl_common_basic_components_2_1 import MathematicOperatorCode
@@ -97,10 +112,12 @@ from ubl.models.common.ubl_common_basic_components_2_1 import Name
 from ubl.models.common.ubl_common_basic_components_2_1 import NetNetWeightMeasure
 from ubl.models.common.ubl_common_basic_components_2_1 import NetVolumeMeasure
 from ubl.models.common.ubl_common_basic_components_2_1 import NetWeightMeasure
+from ubl.models.common.ubl_common_basic_components_2_1 import OnCarriageIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import PackagingTypeCode
 from ubl.models.common.ubl_common_basic_components_2_1 import PaymentMeansId
 from ubl.models.common.ubl_common_basic_components_2_1 import PostalZone
 from ubl.models.common.ubl_common_basic_components_2_1 import Postbox
+from ubl.models.common.ubl_common_basic_components_2_1 import PreCarriageIndicator
 from ubl.models.common.ubl_common_basic_components_2_1 import PrintQualifier
 from ubl.models.common.ubl_common_basic_components_2_1 import ProfileId
 from ubl.models.common.ubl_common_basic_components_2_1 import Quantity
@@ -111,6 +128,8 @@ from ubl.models.common.ubl_common_basic_components_2_1 import ShippingOrderId
 from ubl.models.common.ubl_common_basic_components_2_1 import SourceCurrencyBaseRate
 from ubl.models.common.ubl_common_basic_components_2_1 import SourceCurrencyCode
 from ubl.models.common.ubl_common_basic_components_2_1 import SpecialInstructions
+from ubl.models.common.ubl_common_basic_components_2_1 import StartDate
+from ubl.models.common.ubl_common_basic_components_2_1 import StartTime
 from ubl.models.common.ubl_common_basic_components_2_1 import StreetName
 from ubl.models.common.ubl_common_basic_components_2_1 import TargetCurrencyBaseRate
 from ubl.models.common.ubl_common_basic_components_2_1 import TargetCurrencyCode
@@ -155,15 +174,21 @@ obj = Waybill(
     uuid=Uuid(
         value='74638995-D67E-002F-436-8G17366352B1'
     ),
-    issue_date=XmlDate(2005, 6, 25),
-    issue_time=XmlTime(9, 0, 0, 0, 0),
+    issue_date=IssueDate(
+        value=XmlDate(2005, 6, 25)
+    ),
+    issue_time=IssueTime(
+        value=XmlTime(9, 0, 0, 0, 0)
+    ),
     name=Name(
         value='Air Waybill'
     ),
     shipping_order_id=ShippingOrderId(
         value='KHN23-44044'
     ),
-    ad_valorem_indicator=False,
+    ad_valorem_indicator=AdValoremIndicator(
+        value=False
+    ),
     declared_carriage_value_amount=DeclaredCarriageValueAmount(
         value=Decimal('1500.00'),
         currency_id='USD'
@@ -343,7 +368,9 @@ obj = Waybill(
                 tariff_code=TariffCode(
                     value='15219000'
                 ),
-                hazardous_risk_indicator=False,
+                hazardous_risk_indicator=HazardousRiskIndicator(
+                    value=False
+                ),
                 consignee_party=ConsigneeParty(
                     party_name=[
                         PartyName(
@@ -523,26 +550,40 @@ obj = Waybill(
                     id=Id(
                         value='CONS-001'
                     ),
-                    issue_date=XmlDate(2005, 6, 24),
+                    issue_date=IssueDate(
+                        value=XmlDate(2005, 6, 24)
+                    ),
                     contract_type=ContractType(
                         value='Forwarding Instructions'
                     ),
                     validity_period=ValidityPeriod(
-                        start_date=XmlDate(2005, 6, 25),
-                        start_time=XmlTime(1, 0, 0, 0, 0),
-                        end_date=XmlDate(2005, 6, 30),
-                        end_time=XmlTime(18, 0, 0, 0, 0)
+                        start_date=StartDate(
+                            value=XmlDate(2005, 6, 25)
+                        ),
+                        start_time=StartTime(
+                            value=XmlTime(1, 0, 0, 0, 0)
+                        ),
+                        end_date=EndDate(
+                            value=XmlDate(2005, 6, 30)
+                        ),
+                        end_time=EndTime(
+                            value=XmlTime(18, 0, 0, 0, 0)
+                        )
                     ),
                     contract_document_reference=[
                         ContractDocumentReference(
                             id=Id(
                                 value='normalizedString'
                             ),
-                            copy_indicator=False,
+                            copy_indicator=CopyIndicator(
+                                value=False
+                            ),
                             uuid=Uuid(
                                 value='normalizedString'
                             ),
-                            issue_date=XmlDate(1967, 8, 13),
+                            issue_date=IssueDate(
+                                value=XmlDate(1967, 8, 13)
+                            ),
                             document_type_code=DocumentTypeCode(
                                 value='normalizedString'
                             ),
@@ -569,8 +610,12 @@ obj = Waybill(
                                     document_hash=DocumentHash(
                                         value='String'
                                     ),
-                                    expiry_date=XmlDate(1967, 8, 13),
-                                    expiry_time=XmlTime(14, 20, 0, 0, 0)
+                                    expiry_date=ExpiryDate(
+                                        value=XmlDate(1967, 8, 13)
+                                    ),
+                                    expiry_time=ExpiryTime(
+                                        value=XmlTime(14, 20, 0, 0, 0)
+                                    )
                                 )
                             )
                         ),
@@ -578,11 +623,15 @@ obj = Waybill(
                             id=Id(
                                 value='normalizedString'
                             ),
-                            copy_indicator=False,
+                            copy_indicator=CopyIndicator(
+                                value=False
+                            ),
                             uuid=Uuid(
                                 value='normalizedString'
                             ),
-                            issue_date=XmlDate(1967, 8, 13),
+                            issue_date=IssueDate(
+                                value=XmlDate(1967, 8, 13)
+                            ),
                             document_type_code=DocumentTypeCode(
                                 value='normalizedString'
                             ),
@@ -609,8 +658,12 @@ obj = Waybill(
                                     document_hash=DocumentHash(
                                         value='String'
                                     ),
-                                    expiry_date=XmlDate(1967, 8, 13),
-                                    expiry_time=XmlTime(14, 20, 0, 0, 0)
+                                    expiry_date=ExpiryDate(
+                                        value=XmlDate(1967, 8, 13)
+                                    ),
+                                    expiry_time=ExpiryTime(
+                                        value=XmlTime(14, 20, 0, 0, 0)
+                                    )
                                 )
                             )
                         ),
@@ -652,7 +705,9 @@ obj = Waybill(
                 ),
                 freight_allowance_charge=[
                     FreightAllowanceCharge(
-                        charge_indicator=True,
+                        charge_indicator=ChargeIndicator(
+                            value=True
+                        ),
                         allowance_charge_reason=[
                             AllowanceChargeReason(
                                 value='Freight charges'
@@ -667,7 +722,9 @@ obj = Waybill(
                         )
                     ),
                     FreightAllowanceCharge(
-                        charge_indicator=False,
+                        charge_indicator=ChargeIndicator(
+                            value=False
+                        ),
                         allowance_charge_reason_code=AllowanceChargeReasonCode(
                             value='79'
                         ),
@@ -707,7 +764,9 @@ obj = Waybill(
                         value='Acme beeswax'
                     ),
                 ],
-                hazardous_risk_indicator=False,
+                hazardous_risk_indicator=HazardousRiskIndicator(
+                    value=False
+                ),
                 declared_customs_value_amount=DeclaredCustomsValueAmount(
                     value=Decimal('524.80'),
                     currency_id='GBP'
@@ -805,13 +864,25 @@ obj = Waybill(
                 transport_means_type_code=TransportMeansTypeCode(
                     value='Truck'
                 ),
-                pre_carriage_indicator=True,
-                on_carriage_indicator=False,
+                pre_carriage_indicator=PreCarriageIndicator(
+                    value=True
+                ),
+                on_carriage_indicator=OnCarriageIndicator(
+                    value=False
+                ),
                 transit_period=TransitPeriod(
-                    start_date=XmlDate(2005, 6, 25),
-                    start_time=XmlTime(11, 35, 0, 0, 0),
-                    end_date=XmlDate(2005, 6, 25),
-                    end_time=XmlTime(16, 0, 0, 0, 0)
+                    start_date=StartDate(
+                        value=XmlDate(2005, 6, 25)
+                    ),
+                    start_time=StartTime(
+                        value=XmlTime(11, 35, 0, 0, 0)
+                    ),
+                    end_date=EndDate(
+                        value=XmlDate(2005, 6, 25)
+                    ),
+                    end_time=EndTime(
+                        value=XmlTime(16, 0, 0, 0, 0)
+                    )
                 ),
                 carrier_party=[
                     CarrierParty(
@@ -849,11 +920,19 @@ obj = Waybill(
                 transport_means_type_code=TransportMeansTypeCode(
                     value='Plane'
                 ),
-                pre_carriage_indicator=False,
-                on_carriage_indicator=False,
+                pre_carriage_indicator=PreCarriageIndicator(
+                    value=False
+                ),
+                on_carriage_indicator=OnCarriageIndicator(
+                    value=False
+                ),
                 transit_period=TransitPeriod(
-                    start_date=XmlDate(2005, 6, 25),
-                    start_time=XmlTime(23, 20, 0, 0, 0)
+                    start_date=StartDate(
+                        value=XmlDate(2005, 6, 25)
+                    ),
+                    start_time=StartTime(
+                        value=XmlTime(23, 20, 0, 0, 0)
+                    )
                 ),
                 carrier_party=[
                     CarrierParty(
@@ -929,8 +1008,12 @@ obj = Waybill(
             quantity=Quantity(
                 value=Decimal('1')
             ),
-            latest_delivery_date=XmlDate(2005, 6, 30),
-            latest_delivery_time=XmlTime(18, 0, 0, 0, 0),
+            latest_delivery_date=LatestDeliveryDate(
+                value=XmlDate(2005, 6, 30)
+            ),
+            latest_delivery_time=LatestDeliveryTime(
+                value=XmlTime(18, 0, 0, 0, 0)
+            ),
             tracking_id=TrackingId(
                 value='NKH7712289-03339-000128'
             ),
@@ -967,14 +1050,26 @@ obj = Waybill(
                 )
             ),
             requested_delivery_period=RequestedDeliveryPeriod(
-                start_date=XmlDate(2005, 6, 29),
-                start_time=XmlTime(1, 0, 0, 0, 0),
-                end_date=XmlDate(2005, 6, 30),
-                end_time=XmlTime(18, 0, 0, 0, 0)
+                start_date=StartDate(
+                    value=XmlDate(2005, 6, 29)
+                ),
+                start_time=StartTime(
+                    value=XmlTime(1, 0, 0, 0, 0)
+                ),
+                end_date=EndDate(
+                    value=XmlDate(2005, 6, 30)
+                ),
+                end_time=EndTime(
+                    value=XmlTime(18, 0, 0, 0, 0)
+                )
             ),
             estimated_delivery_period=EstimatedDeliveryPeriod(
-                start_date=XmlDate(2005, 6, 30),
-                start_time=XmlTime(1, 0, 0, 0, 0)
+                start_date=StartDate(
+                    value=XmlDate(2005, 6, 30)
+                ),
+                start_time=StartTime(
+                    value=XmlTime(1, 0, 0, 0, 0)
+                )
             ),
             delivery_party=DeliveryParty(
                 party_name=[
@@ -1000,8 +1095,12 @@ obj = Waybill(
                 )
             ),
             despatch=Despatch(
-                actual_despatch_date=XmlDate(2005, 6, 25),
-                actual_despatch_time=XmlTime(11, 35, 0, 0, 0),
+                actual_despatch_date=ActualDespatchDate(
+                    value=XmlDate(2005, 6, 25)
+                ),
+                actual_despatch_time=ActualDespatchTime(
+                    value=XmlTime(11, 35, 0, 0, 0)
+                ),
                 despatch_address=DespatchAddress(
                     street_name=StreetName(
                         value='Boston Road'
@@ -1065,7 +1164,9 @@ obj = Waybill(
                     list_id='TRED 8053',
                     list_agency_name='United Nations Economic Commission for Europe'
                 ),
-                hazardous_risk_indicator=False,
+                hazardous_risk_indicator=HazardousRiskIndicator(
+                    value=False
+                ),
                 total_goods_item_quantity=TotalGoodsItemQuantity(
                     value=Decimal('10')
                 ),
@@ -1145,7 +1246,9 @@ obj = Waybill(
         ),
         freight_allowance_charge=[
             FreightAllowanceCharge(
-                charge_indicator=True,
+                charge_indicator=ChargeIndicator(
+                    value=True
+                ),
                 allowance_charge_reason=[
                     AllowanceChargeReason(
                         value='Freight charges'
@@ -1160,7 +1263,9 @@ obj = Waybill(
                 )
             ),
             FreightAllowanceCharge(
-                charge_indicator=False,
+                charge_indicator=ChargeIndicator(
+                    value=False
+                ),
                 allowance_charge_reason_code=AllowanceChargeReasonCode(
                     value='79'
                 ),
@@ -1194,7 +1299,9 @@ obj = Waybill(
             uuid=Uuid(
                 value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
             ),
-            issue_date=XmlDate(2005, 6, 20),
+            issue_date=IssueDate(
+                value=XmlDate(2005, 6, 20)
+            ),
             document_type=DocumentType(
                 value='Order'
             )
@@ -1206,7 +1313,9 @@ obj = Waybill(
             uuid=Uuid(
                 value='6E09886B-DC6E-439F-82D1-7C83746352B1'
             ),
-            issue_date=XmlDate(2005, 6, 24),
+            issue_date=IssueDate(
+                value=XmlDate(2005, 6, 24)
+            ),
             document_type=DocumentType(
                 value='Forwarding Instructions'
             )
@@ -1232,7 +1341,9 @@ obj = Waybill(
             mathematic_operator_code=MathematicOperatorCode(
                 value='Multiply'
             ),
-            date=XmlDate(1967, 8, 13)
+            date=Date(
+                value=XmlDate(1967, 8, 13)
+            )
         ),
     ],
     document_distribution=[

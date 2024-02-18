@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from decimal import Decimal
 from typing import Optional
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.numeric_type import (
+    NumericType,
+)
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
     BaseIdentifiedComponentType,
 )
@@ -23,7 +25,7 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    attachment_point: Optional[Decimal] = field(
+    attachment_point: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "AttachmentPoint",
@@ -39,7 +41,7 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    poshare: Optional[Decimal] = field(
+    poshare: Optional[NumericType] = field(
         default=None,
         metadata={
             "name": "POShare",
