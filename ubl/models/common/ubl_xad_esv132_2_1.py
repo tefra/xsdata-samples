@@ -194,6 +194,20 @@ class ResponderIdtype:
 
 
 @dataclass(frozen=True)
+class Spuri:
+    class Meta:
+        name = "SPURI"
+        namespace = "http://uri.etsi.org/01903/v1.3.2#"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        },
+    )
+
+
+@dataclass(frozen=True)
 class SignatureProductionPlaceType:
     city: Optional[str] = field(
         default=None,
@@ -225,6 +239,19 @@ class SignatureProductionPlaceType:
             "name": "CountryName",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+        },
+    )
+
+
+@dataclass(frozen=True)
+class SigningTime:
+    class Meta:
+        namespace = "http://uri.etsi.org/01903/v1.3.2#"
+
+    value: Optional[XmlDateTime] = field(
+        default=None,
+        metadata={
+            "required": True,
         },
     )
 

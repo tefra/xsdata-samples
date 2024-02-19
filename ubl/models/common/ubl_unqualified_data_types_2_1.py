@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from xsdata.models.datatype import XmlDate, XmlTime
+from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
 from ubl.models.common.ccts_cct_schema_module_2_1 import (
     AmountType as CctsCctSchemaModule21AmountType,
     BinaryObjectType as CctsCctSchemaModule21BinaryObjectType,
@@ -15,6 +15,16 @@ from ubl.models.common.ccts_cct_schema_module_2_1 import (
 __NAMESPACE__ = (
     "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
 )
+
+
+@dataclass(frozen=True)
+class DateTimeType:
+    value: Optional[XmlDateTime] = field(
+        default=None,
+        metadata={
+            "required": True,
+        },
+    )
 
 
 @dataclass(frozen=True)

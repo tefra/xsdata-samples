@@ -47,12 +47,14 @@ class Group3:
         name = "Group"
         namespace = "http://www.travelport.com/schema/common_v33_0"
 
-    name: None | Group3.Name = field(
+    name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Element",
             "required": True,
+            "min_length": 1,
+            "white_space": "collapse",
         },
     )
     delivery_info: None | DeliveryInfo3 = field(
@@ -131,17 +133,6 @@ class Group3:
             "type": "Attribute",
         },
     )
-
-    @dataclass
-    class Name:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-                "min_length": 1,
-                "white_space": "collapse",
-            },
-        )
 
     @dataclass
     class Ssrref:
