@@ -50,6 +50,7 @@ from netex.models.pricing_rules_rel_structure import PricingRulesRelStructure
 from netex.models.proof_of_identity_enumeration import ProofOfIdentityEnumeration
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from netex.models.property_of_day import PropertyOfDay
+from netex.models.property_of_day_structure import PropertyOfDayStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purchase_moment_enumeration import PurchaseMomentEnumeration
@@ -113,7 +114,6 @@ from netex.models.value_set import ValueSet
 from netex.models.vehicle_mode_enumeration import VehicleModeEnumeration
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
 from netex.models.version_frame_refs_rel_structure import VersionFrameRefsRelStructure
-from xsdata.formats.dataclass.models.generics import DerivedElement
 from xsdata.models.datatype import XmlDateTime
 from xsdata.models.datatype import XmlDuration
 from xsdata.models.datatype import XmlPeriod
@@ -328,8 +328,7 @@ obj = PublicationDelivery(
                                                                                 properties=PropertiesOfDayRelStructure(
                                                                                     property_of_day=[
                                                                                         PropertyOfDay(
-                                                                                            month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                                                                qname='{http://www.netex.org.uk/netex}DayOfMonth',
+                                                                                            month_of_year_or_day_of_month_or_day_of_year=PropertyOfDayStructure.DayOfMonth(
                                                                                                 value=XmlPeriod("---01")
                                                                                             )
                                                                                         ),

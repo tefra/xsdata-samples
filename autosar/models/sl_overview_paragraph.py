@@ -105,12 +105,12 @@ class SlOverviewParagraph:
                 },
                 {
                     "name": "SUP",
-                    "type": Supscript,
+                    "type": Type["SlOverviewParagraph.Sup"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUB",
-                    "type": Supscript,
+                    "type": Type["SlOverviewParagraph.Sub"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
@@ -132,3 +132,11 @@ class SlOverviewParagraph:
                 "required": True,
             },
         )
+
+    @dataclass
+    class Sub(Supscript):
+        pass
+
+    @dataclass
+    class Sup(Supscript):
+        pass

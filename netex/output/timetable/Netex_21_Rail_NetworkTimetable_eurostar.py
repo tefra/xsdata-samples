@@ -272,6 +272,7 @@ from netex.models.train_stop_assignments_rel_structure import TrainStopAssignmen
 from netex.models.transfer_duration_structure import TransferDurationStructure
 from netex.models.transfers_in_frame_rel_structure import TransfersInFrameRelStructure
 from netex.models.transport_organisation_version_structure import TransportOrganisationVersionStructure
+from netex.models.transport_type_version_structure import TransportTypeVersionStructure
 from netex.models.type_of_place import TypeOfPlace
 from netex.models.type_of_place_ref import TypeOfPlaceRef
 from netex.models.type_of_place_refs_rel_structure import TypeOfPlaceRefsRelStructure
@@ -27426,7 +27427,9 @@ obj = PublicationDelivery(
                                             value='18 Coach Train'
                                         ),
                                         self_propelled=True,
-                                        fuel_type_or_type_of_fuel=FuelTypeEnumeration.ELECTRICITY,
+                                        fuel_type_or_type_of_fuel=TransportTypeVersionStructure.FuelType(
+                                            value=FuelTypeEnumeration.ELECTRICITY
+                                        ),
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(

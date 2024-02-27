@@ -37,7 +37,8 @@ class NetworkFrameTopicStructure(TopicStructure):
     choice: Optional[
         Union[
             EmptyType2,
-            XmlDateTime,
+            "NetworkFrameTopicStructure.ChangedSince",
+            "NetworkFrameTopicStructure.CurrentAt",
             ClosedTimestampRangeStructure,
             "NetworkFrameTopicStructure.SelectionValidityConditions",
         ]
@@ -53,12 +54,12 @@ class NetworkFrameTopicStructure(TopicStructure):
                 },
                 {
                     "name": "ChangedSince",
-                    "type": XmlDateTime,
+                    "type": Type["NetworkFrameTopicStructure.ChangedSince"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "CurrentAt",
-                    "type": XmlDateTime,
+                    "type": Type["NetworkFrameTopicStructure.CurrentAt"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -233,5 +234,23 @@ class NetworkFrameTopicStructure(TopicStructure):
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                 ),
+            },
+        )
+
+    @dataclass
+    class ChangedSince:
+        value: Optional[XmlDateTime] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )
+
+    @dataclass
+    class CurrentAt:
+        value: Optional[XmlDateTime] = field(
+            default=None,
+            metadata={
+                "required": True,
             },
         )

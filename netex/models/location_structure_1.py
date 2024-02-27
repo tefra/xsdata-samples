@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional, Union
+from typing import List, Optional, Type, Union
 from .coordinates_structure import CoordinatesStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
@@ -12,7 +12,11 @@ class LocationStructure1:
         name = "LocationStructure"
 
     longitude_or_latitude_or_coordinates: List[
-        Union[Decimal, CoordinatesStructure]
+        Union[
+            "LocationStructure1.Longitude",
+            "LocationStructure1.Latitude",
+            CoordinatesStructure,
+        ]
     ] = field(
         default_factory=list,
         metadata={
@@ -20,17 +24,13 @@ class LocationStructure1:
             "choices": (
                 {
                     "name": "Longitude",
-                    "type": Decimal,
+                    "type": Type["LocationStructure1.Longitude"],
                     "namespace": "http://www.siri.org.uk/siri",
-                    "min_inclusive": Decimal("-180"),
-                    "max_inclusive": Decimal("180"),
                 },
                 {
                     "name": "Latitude",
-                    "type": Decimal,
+                    "type": Type["LocationStructure1.Latitude"],
                     "namespace": "http://www.siri.org.uk/siri",
-                    "min_inclusive": Decimal("-90"),
-                    "max_inclusive": Decimal("90"),
                 },
                 {
                     "name": "Coordinates",
@@ -62,3 +62,25 @@ class LocationStructure1:
             "type": "Attribute",
         },
     )
+
+    @dataclass
+    class Longitude:
+        value: Optional[Decimal] = field(
+            default=None,
+            metadata={
+                "required": True,
+                "min_inclusive": Decimal("-180"),
+                "max_inclusive": Decimal("180"),
+            },
+        )
+
+    @dataclass
+    class Latitude:
+        value: Optional[Decimal] = field(
+            default=None,
+            metadata={
+                "required": True,
+                "min_inclusive": Decimal("-90"),
+                "max_inclusive": Decimal("90"),
+            },
+        )

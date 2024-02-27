@@ -578,91 +578,59 @@
                     "p": {
                       "content": [
                         {
-                          "qname": "{http://www.w3.org/1999/xhtml}b",
-                          "value": {
-                            "content": [
-                              "Titel",
-                              " : Test Titel  "
-                            ]
-                          },
-                          "type": null
+                          "content": [
+                            "Titel",
+                            " : Test Titel  "
+                          ]
                         },
                         {},
                         {
-                          "qname": "{http://www.w3.org/1999/xhtml}b",
-                          "value": {
-                            "content": [
-                              "Bearbeiter",
-                              " : Test Bearbeiter  "
-                            ]
-                          },
-                          "type": null
+                          "content": [
+                            "Bearbeiter",
+                            " : Test Bearbeiter  "
+                          ]
                         },
                         {},
                         {
-                          "qname": "{http://www.w3.org/1999/xhtml}b",
-                          "value": {
-                            "content": [
-                              "Abt./OE",
-                              " : Test Abteilung  "
-                            ]
-                          },
-                          "type": null
+                          "content": [
+                            "Abt./OE",
+                            " : Test Abteilung  "
+                          ]
                         },
                         {},
                         {
-                          "qname": "{http://www.w3.org/1999/xhtml}b",
-                          "value": {
-                            "content": [
-                              "Telefon",
-                              " : Test Telefon  "
-                            ]
-                          },
-                          "type": null
+                          "content": [
+                            "Telefon",
+                            " : Test Telefon  "
+                          ]
                         },
                         {},
                         {
-                          "qname": "{http://www.w3.org/1999/xhtml}b",
-                          "value": {
-                            "content": [
-                              "E-Mail:",
-                              "  some.body@example.com  "
-                            ]
-                          },
-                          "type": null
+                          "content": [
+                            "E-Mail:",
+                            "  some.body@example.com  "
+                          ]
                         },
                         {},
                         {
-                          "qname": "{http://www.w3.org/1999/xhtml}b",
-                          "value": {
-                            "content": [
-                              "Erstausgabe:",
-                              "  09.03.2020  "
-                            ]
-                          },
-                          "type": null
+                          "content": [
+                            "Erstausgabe:",
+                            "  09.03.2020  "
+                          ]
                         },
                         {},
                         {
-                          "qname": "{http://www.w3.org/1999/xhtml}b",
-                          "value": {
-                            "content": [
-                              "Datum \u00c4nderungsstand",
-                              " : 09.03.2020  "
-                            ]
-                          },
-                          "type": null
+                          "content": [
+                            "Datum \u00c4nderungsstand",
+                            " : 09.03.2020  "
+                          ]
                         },
                         {},
                         {
-                          "qname": "{http://www.w3.org/1999/xhtml}b",
-                          "value": {
-                            "content": [
-                              "\u00c4nderungsstand",
-                              " : V1.0  "
-                            ]
-                          },
-                          "type": null
+                          "content": [
+                            "\u00c4nderungsstand",
+                            " : V1.0  "
+                          ]
                         }
                       ]
                     },

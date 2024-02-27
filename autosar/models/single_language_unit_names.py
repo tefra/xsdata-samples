@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .supscript import Supscript
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -50,14 +50,22 @@ class SingleLanguageUnitNames:
             "choices": (
                 {
                     "name": "SUP",
-                    "type": Supscript,
+                    "type": Type["SingleLanguageUnitNames.Sup"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUB",
-                    "type": Supscript,
+                    "type": Type["SingleLanguageUnitNames.Sub"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Sup(Supscript):
+        pass
+
+    @dataclass
+    class Sub(Supscript):
+        pass

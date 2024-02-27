@@ -264,6 +264,7 @@ from netex.models.stop_type_enumeration import StopTypeEnumeration
 from netex.models.submode import Submode
 from netex.models.submodes_rel_structure import SubmodesRelStructure
 from netex.models.target_passing_time import TargetPassingTime
+from netex.models.target_passing_time_versioned_child_structure import TargetPassingTimeVersionedChildStructure
 from netex.models.target_passing_times_rel_structure import TargetPassingTimesRelStructure
 from netex.models.tariff import Tariff
 from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
@@ -289,6 +290,7 @@ from netex.models.transport_mode_structure import TransportModeStructure
 from netex.models.transport_modes_rel_structure import TransportModesRelStructure
 from netex.models.transport_organisation_version_structure import TransportOrganisationVersionStructure
 from netex.models.transport_submode import TransportSubmode
+from netex.models.transport_type_version_structure import TransportTypeVersionStructure
 from netex.models.travel_document import TravelDocument
 from netex.models.travel_document_ref import TravelDocumentRef
 from netex.models.travel_documents_rel_structure import TravelDocumentsRelStructure
@@ -360,7 +362,6 @@ from netex.models.version_frame_defaults_structure import VersionFrameDefaultsSt
 from netex.models.version_frame_refs_rel_structure import VersionFrameRefsRelStructure
 from netex.models.whitelist import Whitelist
 from netex.models.whitelists_in_frame_rel_structure import WhitelistsInFrameRelStructure
-from xsdata.formats.dataclass.models.generics import DerivedElement
 from xsdata.models.datatype import XmlDate
 from xsdata.models.datatype import XmlDateTime
 from xsdata.models.datatype import XmlDuration
@@ -2208,7 +2209,9 @@ obj = PublicationDelivery(
                                         version='any',
                                         self_propelled=True,
                                         propulsion_type=PropulsionTypeEnumeration.COMBUSTION,
-                                        fuel_type_or_type_of_fuel=FuelTypeEnumeration.PETROL_UNLEADED,
+                                        fuel_type_or_type_of_fuel=TransportTypeVersionStructure.FuelType(
+                                            value=FuelTypeEnumeration.PETROL_UNLEADED
+                                        ),
                                         maximum_range=Decimal('400'),
                                         licence_requirements=LicenceRequirementsEnumeration.FULL,
                                         vehicle_category=SimpleVehicleCategoryEnumeration.MEDIUM_CAR,
@@ -2381,8 +2384,7 @@ obj = PublicationDelivery(
                                                         order=1
                                                     ),
                                                     choice_1=[
-                                                        DerivedElement(
-                                                            qname='{http://www.netex.org.uk/netex}AimedDepartureTime',
+                                                        TargetPassingTimeVersionedChildStructure.AimedDepartureTime(
                                                             value=XmlTime(7, 0, 0, 0)
                                                         ),
                                                     ]
@@ -2396,7 +2398,9 @@ obj = PublicationDelivery(
                                                         order=2
                                                     ),
                                                     choice_1=[
-                                                        XmlTime(9, 15, 0, 0),
+                                                        TargetPassingTimeVersionedChildStructure.AimedArrivalTime(
+                                                            value=XmlTime(9, 15, 0, 0)
+                                                        ),
                                                     ]
                                                 ),
                                             ]

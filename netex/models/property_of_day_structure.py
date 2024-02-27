@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type, Union
 from xsdata.models.datatype import XmlPeriod
 from .country_ref_structure import CountryRefStructure
 from .crowding_enumeration import CrowdingEnumeration
@@ -50,24 +50,30 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    month_of_year_or_day_of_month_or_day_of_year: Optional[XmlPeriod] = field(
+    month_of_year_or_day_of_month_or_day_of_year: Optional[
+        Union[
+            "PropertyOfDayStructure.MonthOfYear",
+            "PropertyOfDayStructure.DayOfMonth",
+            "PropertyOfDayStructure.DayOfYear",
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
             "choices": (
                 {
                     "name": "MonthOfYear",
-                    "type": XmlPeriod,
+                    "type": Type["PropertyOfDayStructure.MonthOfYear"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "DayOfMonth",
-                    "type": XmlPeriod,
+                    "type": Type["PropertyOfDayStructure.DayOfMonth"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "DayOfYear",
-                    "type": XmlPeriod,
+                    "type": Type["PropertyOfDayStructure.DayOfYear"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -124,3 +130,30 @@ class PropertyOfDayStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+
+    @dataclass
+    class MonthOfYear:
+        value: Optional[XmlPeriod] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )
+
+    @dataclass
+    class DayOfMonth:
+        value: Optional[XmlPeriod] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )
+
+    @dataclass
+    class DayOfYear:
+        value: Optional[XmlPeriod] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )

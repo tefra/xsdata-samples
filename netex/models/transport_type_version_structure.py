@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Type, Union
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
 )
@@ -83,19 +83,24 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fuel_type_or_type_of_fuel: Optional[FuelTypeEnumeration] = field(
+    fuel_type_or_type_of_fuel: Optional[
+        Union[
+            "TransportTypeVersionStructure.FuelType",
+            "TransportTypeVersionStructure.TypeOfFuel",
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
             "choices": (
                 {
                     "name": "FuelType",
-                    "type": FuelTypeEnumeration,
+                    "type": Type["TransportTypeVersionStructure.FuelType"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "TypeOfFuel",
-                    "type": FuelTypeEnumeration,
+                    "type": Type["TransportTypeVersionStructure.TypeOfFuel"],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -125,3 +130,21 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+
+    @dataclass
+    class FuelType:
+        value: Optional[FuelTypeEnumeration] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )
+
+    @dataclass
+    class TypeOfFuel:
+        value: Optional[FuelTypeEnumeration] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )

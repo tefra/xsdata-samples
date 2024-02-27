@@ -285,6 +285,7 @@ from netex.models.topographic_places_in_frame_rel_structure import TopographicPl
 from netex.models.transferability import Transferability
 from netex.models.transport_organisation_version_structure import TransportOrganisationVersionStructure
 from netex.models.transport_type_refs_rel_structure import TransportTypeRefsRelStructure
+from netex.models.transport_type_version_structure import TransportTypeVersionStructure
 from netex.models.transport_zone_use_enumeration import TransportZoneUseEnumeration
 from netex.models.travel_document import TravelDocument
 from netex.models.travel_documents_rel_structure import TravelDocumentsRelStructure
@@ -704,7 +705,9 @@ obj = PublicationDelivery(
                                         reversing_direction=False,
                                         self_propelled=False,
                                         propulsion_type=PropulsionTypeEnumeration.HUMAN,
-                                        fuel_type_or_type_of_fuel=FuelTypeEnumeration.NONE,
+                                        fuel_type_or_type_of_fuel=TransportTypeVersionStructure.FuelType(
+                                            value=FuelTypeEnumeration.NONE
+                                        ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                         passenger_capacity=PassengerCapacityStructure(
                                             id='pedal_cycle',
@@ -727,7 +730,9 @@ obj = PublicationDelivery(
                                         reversing_direction=False,
                                         self_propelled=True,
                                         propulsion_type=PropulsionTypeEnumeration.ELECTRIC_ASSIST,
-                                        fuel_type_or_type_of_fuel=FuelTypeEnumeration.BATTERY,
+                                        fuel_type_or_type_of_fuel=TransportTypeVersionStructure.FuelType(
+                                            value=FuelTypeEnumeration.BATTERY
+                                        ),
                                         maximum_range=Decimal('15'),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                         passenger_capacity=PassengerCapacityStructure(

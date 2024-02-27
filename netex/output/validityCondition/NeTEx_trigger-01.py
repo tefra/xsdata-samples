@@ -1,6 +1,7 @@
 from netex.models.alternative_texts_rel_structure import DayType1
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityRuleParameter
+from netex.models.alternative_texts_rel_structure import ValidityRuleParameterVersionStructure
 from netex.models.alternative_texts_rel_structure import ValidityTrigger
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
@@ -86,9 +87,10 @@ obj = PublicationDelivery(
                             choice=[
                                 'roadCondition',
                                 RelativeOperatorEnumeration.EQ,
-                                AnyElement(
-                                    qname='{http://www.netex.org.uk/netex}AttributeValue',
-                                    text='icy'
+                                ValidityRuleParameterVersionStructure.AttributeValue(
+                                    content=AnyElement(
+                                        text='icy'
+                                    )
                                 ),
                             ]
                         ),
@@ -136,9 +138,10 @@ obj = PublicationDelivery(
                             choice=[
                                 'RunTime',
                                 RelativeOperatorEnumeration.GT,
-                                AnyElement(
-                                    qname='{http://www.netex.org.uk/netex}AttributeValue',
-                                    text="'PT5M'"
+                                ValidityRuleParameterVersionStructure.AttributeValue(
+                                    content=AnyElement(
+                                        text="'PT5M'"
+                                    )
                                 ),
                             ]
                         ),

@@ -119,12 +119,12 @@ class LOverviewParagraph:
                 },
                 {
                     "name": "SUP",
-                    "type": Supscript,
+                    "type": Type["LOverviewParagraph.Sup"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUB",
-                    "type": Supscript,
+                    "type": Type["LOverviewParagraph.Sub"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
@@ -146,3 +146,11 @@ class LOverviewParagraph:
                 "required": True,
             },
         )
+
+    @dataclass
+    class Sub(Supscript):
+        pass
+
+    @dataclass
+    class Sup(Supscript):
+        pass

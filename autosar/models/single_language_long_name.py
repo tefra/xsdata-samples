@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .emphasis_text import EmphasisText
 from .index_entry import IndexEntry
 from .supscript import Supscript
@@ -63,12 +63,12 @@ class SingleLanguageLongName:
                 },
                 {
                     "name": "SUP",
-                    "type": Supscript,
+                    "type": Type["SingleLanguageLongName.Sup"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUB",
-                    "type": Supscript,
+                    "type": Type["SingleLanguageLongName.Sub"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
@@ -79,3 +79,11 @@ class SingleLanguageLongName:
             ),
         },
     )
+
+    @dataclass
+    class Sup(Supscript):
+        pass
+
+    @dataclass
+    class Sub(Supscript):
+        pass

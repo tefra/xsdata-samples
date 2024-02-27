@@ -272,14 +272,14 @@
             <ATTRIBUTE-VALUE-XHTML>
               <THE-VALUE>
                 <xhtml:p>
-                  <xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Titel</xhtml:b> : Test Titel  <xhtml:br/>
-                  <xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Bearbeiter</xhtml:b> : Test Bearbeiter  <xhtml:br/>
-                  <xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Abt./OE</xhtml:b> : Test Abteilung  <xhtml:br/>
-                  <xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Telefon</xhtml:b> : Test Telefon  <xhtml:br/>
-                  <xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">E-Mail:</xhtml:b>  some.body@example.com  <xhtml:br/>
-                  <xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Erstausgabe:</xhtml:b>  09.03.2020  <xhtml:br/>
-                  <xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">Datum &#196;nderungsstand</xhtml:b> : 09.03.2020  <xhtml:br/>
-                  <xhtml:b xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xhtml:xhtml.InlPres.type">&#196;nderungsstand</xhtml:b> : V1.0  </xhtml:p>
+                  <xhtml:b>Titel</xhtml:b> : Test Titel  <xhtml:br/>
+                  <xhtml:b>Bearbeiter</xhtml:b> : Test Bearbeiter  <xhtml:br/>
+                  <xhtml:b>Abt./OE</xhtml:b> : Test Abteilung  <xhtml:br/>
+                  <xhtml:b>Telefon</xhtml:b> : Test Telefon  <xhtml:br/>
+                  <xhtml:b>E-Mail:</xhtml:b>  some.body@example.com  <xhtml:br/>
+                  <xhtml:b>Erstausgabe:</xhtml:b>  09.03.2020  <xhtml:br/>
+                  <xhtml:b>Datum &#196;nderungsstand</xhtml:b> : 09.03.2020  <xhtml:br/>
+                  <xhtml:b>&#196;nderungsstand</xhtml:b> : V1.0  </xhtml:p>
               </THE-VALUE>
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-XHTML-REF>_ca65e999-bcee-4f6d-838d-5677c77f8ed9</ATTRIBUTE-DEFINITION-XHTML-REF>

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Union
+from typing import List, Optional, Type, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .dated_passing_time_versioned_child_structure import (
     DatedPassingTimeVersionedChildStructure,
@@ -16,29 +16,47 @@ class EstimatedPassingTimeVersionedChildStructure(
     class Meta:
         name = "EstimatedPassingTime_VersionedChildStructure"
 
-    choice_1: List[Union[XmlTime, int, XmlDuration]] = field(
+    choice_1: List[
+        Union[
+            "EstimatedPassingTimeVersionedChildStructure.ExpectedArrivalTime",
+            "EstimatedPassingTimeVersionedChildStructure.ArrivalDayOffset",
+            "EstimatedPassingTimeVersionedChildStructure.ExpectedDepartureTime",
+            "EstimatedPassingTimeVersionedChildStructure.DepartureDayOffset",
+            XmlDuration,
+            "EstimatedPassingTimeVersionedChildStructure.ExpectedNonstopPassingTime",
+            "EstimatedPassingTimeVersionedChildStructure.PassingTimeDayOffset",
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
             "choices": (
                 {
                     "name": "ExpectedArrivalTime",
-                    "type": XmlTime,
+                    "type": Type[
+                        "EstimatedPassingTimeVersionedChildStructure.ExpectedArrivalTime"
+                    ],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "ArrivalDayOffset",
-                    "type": int,
+                    "type": Type[
+                        "EstimatedPassingTimeVersionedChildStructure.ArrivalDayOffset"
+                    ],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "ExpectedDepartureTime",
-                    "type": XmlTime,
+                    "type": Type[
+                        "EstimatedPassingTimeVersionedChildStructure.ExpectedDepartureTime"
+                    ],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "DepartureDayOffset",
-                    "type": int,
+                    "type": Type[
+                        "EstimatedPassingTimeVersionedChildStructure.DepartureDayOffset"
+                    ],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -48,12 +66,16 @@ class EstimatedPassingTimeVersionedChildStructure(
                 },
                 {
                     "name": "ExpectedNonstopPassingTime",
-                    "type": XmlTime,
+                    "type": Type[
+                        "EstimatedPassingTimeVersionedChildStructure.ExpectedNonstopPassingTime"
+                    ],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "PassingTimeDayOffset",
-                    "type": int,
+                    "type": Type[
+                        "EstimatedPassingTimeVersionedChildStructure.PassingTimeDayOffset"
+                    ],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
@@ -68,3 +90,57 @@ class EstimatedPassingTimeVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
+
+    @dataclass
+    class ExpectedArrivalTime:
+        value: Optional[XmlTime] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )
+
+    @dataclass
+    class ArrivalDayOffset:
+        value: Optional[int] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )
+
+    @dataclass
+    class ExpectedDepartureTime:
+        value: Optional[XmlTime] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )
+
+    @dataclass
+    class DepartureDayOffset:
+        value: Optional[int] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )
+
+    @dataclass
+    class ExpectedNonstopPassingTime:
+        value: Optional[XmlTime] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )
+
+    @dataclass
+    class PassingTimeDayOffset:
+        value: Optional[int] = field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )

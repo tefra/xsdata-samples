@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .e_enum_font_simple import EEnumFontSimple
 from .e_enum_simple import EEnumSimple
 from .supscript import Supscript
@@ -83,12 +83,12 @@ class EmphasisText:
             "choices": (
                 {
                     "name": "SUB",
-                    "type": Supscript,
+                    "type": Type["EmphasisText.Sub"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUP",
-                    "type": Supscript,
+                    "type": Type["EmphasisText.Sup"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
@@ -99,3 +99,11 @@ class EmphasisText:
             ),
         },
     )
+
+    @dataclass
+    class Sub(Supscript):
+        pass
+
+    @dataclass
+    class Sup(Supscript):
+        pass

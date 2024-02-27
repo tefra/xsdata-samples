@@ -2,6 +2,7 @@ from netex.models.alternative_texts_rel_structure import AvailabilityCondition
 from netex.models.alternative_texts_rel_structure import DayTypesRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityConditionsRelStructure
 from netex.models.alternative_texts_rel_structure import ValidityRuleParameter
+from netex.models.alternative_texts_rel_structure import ValidityRuleParameterVersionStructure
 from netex.models.codespace import Codespace
 from netex.models.codespace_ref_structure import CodespaceRefStructure
 from netex.models.codespaces_rel_structure import CodespacesRelStructure
@@ -316,9 +317,10 @@ obj = PublicationDelivery(
                                             choice=[
                                                 'roadCondition',
                                                 RelativeOperatorEnumeration.EQ,
-                                                AnyElement(
-                                                    qname='{http://www.netex.org.uk/netex}AttributeValue',
-                                                    text='icy'
+                                                ValidityRuleParameterVersionStructure.AttributeValue(
+                                                    content=AnyElement(
+                                                        text='icy'
+                                                    )
                                                 ),
                                             ]
                                         ),

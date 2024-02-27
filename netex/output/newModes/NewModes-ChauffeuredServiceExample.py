@@ -192,6 +192,7 @@ from netex.models.stop_type_enumeration import StopTypeEnumeration
 from netex.models.submode import Submode
 from netex.models.submodes_rel_structure import SubmodesRelStructure
 from netex.models.target_passing_time import TargetPassingTime
+from netex.models.target_passing_time_versioned_child_structure import TargetPassingTimeVersionedChildStructure
 from netex.models.target_passing_times_rel_structure import TargetPassingTimesRelStructure
 from netex.models.tariff import Tariff
 from netex.models.tariff_basis_enumeration import TariffBasisEnumeration
@@ -219,6 +220,7 @@ from netex.models.topographic_place_refs_rel_structure import TopographicPlaceRe
 from netex.models.topographic_places_in_frame_rel_structure import TopographicPlacesInFrameRelStructure
 from netex.models.transport_organisation_version_structure import TransportOrganisationVersionStructure
 from netex.models.transport_submode import TransportSubmode
+from netex.models.transport_type_version_structure import TransportTypeVersionStructure
 from netex.models.travel_document import TravelDocument
 from netex.models.travel_documents_rel_structure import TravelDocumentsRelStructure
 from netex.models.travel_specification_summary_endpoint_structure import TravelSpecificationSummaryEndpointStructure
@@ -284,7 +286,6 @@ from netex.models.vehicles_in_frame_rel_structure import VehiclesInFrameRelStruc
 from netex.models.vehicles_rel_structure import VehiclesRelStructure
 from netex.models.version_frame_defaults_structure import VersionFrameDefaultsStructure
 from netex.models.version_frame_refs_rel_structure import VersionFrameRefsRelStructure
-from xsdata.formats.dataclass.models.generics import DerivedElement
 from xsdata.models.datatype import XmlDateTime
 from xsdata.models.datatype import XmlDuration
 from xsdata.models.datatype import XmlTime
@@ -720,7 +721,9 @@ obj = PublicationDelivery(
                                         reversing_direction=True,
                                         self_propelled=True,
                                         propulsion_type=PropulsionTypeEnumeration.COMBUSTION,
-                                        fuel_type_or_type_of_fuel=FuelTypeEnumeration.PETROL,
+                                        fuel_type_or_type_of_fuel=TransportTypeVersionStructure.FuelType(
+                                            value=FuelTypeEnumeration.PETROL
+                                        ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                         passenger_capacity=PassengerCapacityStructure(
                                             id='stretch_limo',
@@ -2783,8 +2786,7 @@ obj = PublicationDelivery(
                                                         order=1
                                                     ),
                                                     choice_1=[
-                                                        DerivedElement(
-                                                            qname='{http://www.netex.org.uk/netex}AimedDepartureTime',
+                                                        TargetPassingTimeVersionedChildStructure.AimedDepartureTime(
                                                             value=XmlTime(10, 15, 0, 0)
                                                         ),
                                                     ]
@@ -2798,7 +2800,9 @@ obj = PublicationDelivery(
                                                         order=2
                                                     ),
                                                     choice_1=[
-                                                        XmlTime(11, 10, 0, 0),
+                                                        TargetPassingTimeVersionedChildStructure.AimedArrivalTime(
+                                                            value=XmlTime(11, 10, 0, 0)
+                                                        ),
                                                     ]
                                                 ),
                                             ]

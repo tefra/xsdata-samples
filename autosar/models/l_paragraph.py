@@ -112,12 +112,12 @@ class LParagraph:
                 },
                 {
                     "name": "SUP",
-                    "type": Supscript,
+                    "type": Type["LParagraph.Sup"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUB",
-                    "type": Supscript,
+                    "type": Type["LParagraph.Sub"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
@@ -154,3 +154,11 @@ class LParagraph:
                 "required": True,
             },
         )
+
+    @dataclass
+    class Sub(Supscript):
+        pass
+
+    @dataclass
+    class Sup(Supscript):
+        pass

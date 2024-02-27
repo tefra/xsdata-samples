@@ -554,37 +554,37 @@ class XhtmlCaptionType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt19"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I19"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B19"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big18"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small18"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub18"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup18"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -599,12 +599,12 @@ class XhtmlCaptionType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins15"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del15"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -824,37 +824,37 @@ class XhtmlDtType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt13"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I13"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B13"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big12"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small12"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub12"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup12"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -869,12 +869,12 @@ class XhtmlDtType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins10"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del10"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -1001,37 +1001,37 @@ class XhtmlH2Type:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt5"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I5"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B5"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big4"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small4"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub4"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup4"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -1046,12 +1046,12 @@ class XhtmlH2Type:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins3"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del3"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -1178,37 +1178,37 @@ class XhtmlH3Type:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt6"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I6"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B6"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big5"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small5"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub5"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup5"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -1223,12 +1223,12 @@ class XhtmlH3Type:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins4"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del4"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -1355,37 +1355,37 @@ class XhtmlH4Type:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt7"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I7"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B7"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big6"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small6"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub6"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup6"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -1400,12 +1400,12 @@ class XhtmlH4Type:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins5"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del5"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -1532,37 +1532,37 @@ class XhtmlH5Type:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt8"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I8"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B8"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big7"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small7"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub7"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup7"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -1577,12 +1577,12 @@ class XhtmlH5Type:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins6"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del6"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -1709,37 +1709,37 @@ class XhtmlH6Type:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt9"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I9"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B9"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big8"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small8"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub8"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup8"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -1754,12 +1754,12 @@ class XhtmlH6Type:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins7"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del7"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -1886,37 +1886,37 @@ class XhtmlPType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt11"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I11"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B11"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big10"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small10"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub10"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup10"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -1931,12 +1931,12 @@ class XhtmlPType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins9"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del9"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -2063,17 +2063,17 @@ class XhtmlPreType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt3"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I3"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B3"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -2083,12 +2083,12 @@ class XhtmlPreType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins2"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del2"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -2358,37 +2358,37 @@ class XhtmlTdType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt17"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I17"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B17"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big16"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small16"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub16"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup16"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -2403,12 +2403,12 @@ class XhtmlTdType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins13"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del13"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -2678,37 +2678,37 @@ class XhtmlThType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt18"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I18"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B18"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big17"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small17"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub17"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup17"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -2723,12 +2723,12 @@ class XhtmlThType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins14"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del14"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -3586,37 +3586,37 @@ class XhtmlDivType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt10"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I10"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B10"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big9"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small9"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub9"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup9"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -3631,12 +3631,12 @@ class XhtmlDivType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins8"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del8"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -3843,37 +3843,37 @@ class XhtmlDdType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt14"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I14"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B14"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big13"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small13"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub13"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup13"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -3888,12 +3888,12 @@ class XhtmlDdType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins11"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del11"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -4161,37 +4161,37 @@ class XhtmlLiType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt15"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I15"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B15"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big14"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small14"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub14"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup14"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -4206,12 +4206,12 @@ class XhtmlLiType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins12"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del12"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
@@ -4485,37 +4485,37 @@ class XhtmlEditType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt2"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I2"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B2"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big2"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small2"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub2"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup2"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -4530,17 +4530,197 @@ class XhtmlEditType:
                 },
                 {
                     "name": "ins",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Ins1"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": Type["XhtmlEditType"],
+                    "type": Type["Del1"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+
+@dataclass
+class Del1(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del10(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del11(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del12(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del13(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del14(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del15(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del2(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del3(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del4(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del5(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del6(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del7(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del8(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Del9(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins1(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins10(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins11(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins12(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins13(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins14(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins15(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins2(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins3(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins4(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins5(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins6(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins7(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins8(XhtmlEditType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Ins9(XhtmlEditType):
+    class Meta:
+        global_type = False
 
 
 @dataclass
@@ -4662,37 +4842,37 @@ class XhtmlH1Type:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt4"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I4"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B4"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big3"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small3"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub3"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup3"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -4707,17 +4887,25 @@ class XhtmlH1Type:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlH1Type.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlH1Type.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -5000,37 +5188,37 @@ class XhtmlObjectType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt16"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I16"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B16"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big15"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small15"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub15"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup15"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -5045,17 +5233,25 @@ class XhtmlObjectType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlObjectType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlObjectType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -5229,37 +5425,37 @@ class XhtmlAType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt12"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I12"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B12"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big11"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small11"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub11"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup11"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -5269,17 +5465,25 @@ class XhtmlAType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlAType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlAType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -5401,37 +5605,37 @@ class XhtmlInlPresType:
                 },
                 {
                     "name": "tt",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Tt1"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["I1"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["B1"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Big1"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Small1"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sub1"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": Type["XhtmlInlPresType"],
+                    "type": Type["Sup1"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -5446,17 +5650,799 @@ class XhtmlInlPresType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlInlPresType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlInlPresType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
+
+
+@dataclass
+class B1(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B10(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B11(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B12(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B13(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B14(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B15(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B16(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B17(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B18(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B19(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B2(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B3(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B4(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B5(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B6(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B7(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B8(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class B9(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big1(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big10(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big11(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big12(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big13(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big14(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big15(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big16(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big17(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big18(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big2(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big3(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big4(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big5(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big6(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big7(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big8(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Big9(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I1(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I10(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I11(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I12(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I13(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I14(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I15(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I16(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I17(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I18(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I19(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I2(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I3(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I4(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I5(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I6(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I7(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I8(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class I9(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small1(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small10(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small11(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small12(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small13(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small14(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small15(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small16(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small17(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small18(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small2(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small3(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small4(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small5(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small6(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small7(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small8(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Small9(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub1(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub10(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub11(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub12(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub13(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub14(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub15(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub16(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub17(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub18(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub2(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub3(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub4(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub5(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub6(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub7(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub8(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sub9(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup1(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup10(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup11(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup12(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup13(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup14(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup15(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup16(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup17(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup18(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup2(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup3(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup4(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup5(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup6(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup7(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup8(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Sup9(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt1(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt10(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt11(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt12(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt13(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt14(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt15(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt16(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt17(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt18(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt19(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt2(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt3(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt4(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt5(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt6(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt7(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt8(XhtmlInlPresType):
+    class Meta:
+        global_type = False
+
+
+@dataclass
+class Tt9(XhtmlInlPresType):
+    class Meta:
+        global_type = False
 
 
 @dataclass
@@ -5584,37 +6570,37 @@ class XhtmlQType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlQType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlQType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlQType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlQType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlQType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlQType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlQType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -5629,17 +6615,53 @@ class XhtmlQType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlQType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlQType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -5761,37 +6783,37 @@ class XhtmlAcronymType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAcronymType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAcronymType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAcronymType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAcronymType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAcronymType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAcronymType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAcronymType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -5806,17 +6828,53 @@ class XhtmlAcronymType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlAcronymType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlAcronymType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -5938,37 +6996,37 @@ class XhtmlAbbrType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAbbrType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAbbrType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAbbrType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAbbrType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAbbrType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAbbrType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAbbrType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -5983,17 +7041,53 @@ class XhtmlAbbrType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlAbbrType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlAbbrType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -6115,37 +7209,37 @@ class XhtmlCiteType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCiteType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCiteType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCiteType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCiteType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCiteType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCiteType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCiteType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -6160,17 +7254,53 @@ class XhtmlCiteType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlCiteType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlCiteType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -6292,37 +7422,37 @@ class XhtmlVarType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlVarType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlVarType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlVarType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlVarType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlVarType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlVarType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlVarType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -6337,17 +7467,53 @@ class XhtmlVarType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlVarType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlVarType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -6469,37 +7635,37 @@ class XhtmlKbdType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlKbdType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlKbdType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlKbdType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlKbdType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlKbdType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlKbdType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlKbdType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -6514,17 +7680,53 @@ class XhtmlKbdType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlKbdType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlKbdType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -6646,37 +7848,37 @@ class XhtmlSampType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSampType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSampType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSampType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSampType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSampType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSampType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSampType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -6691,17 +7893,53 @@ class XhtmlSampType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlSampType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlSampType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -6823,37 +8061,37 @@ class XhtmlCodeType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCodeType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCodeType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCodeType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCodeType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCodeType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCodeType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlCodeType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -6868,17 +8106,53 @@ class XhtmlCodeType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlCodeType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlCodeType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -7000,37 +8274,37 @@ class XhtmlDfnType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlDfnType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlDfnType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlDfnType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlDfnType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlDfnType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlDfnType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlDfnType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -7045,17 +8319,53 @@ class XhtmlDfnType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlDfnType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlDfnType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -7177,37 +8487,37 @@ class XhtmlStrongType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlStrongType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlStrongType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlStrongType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlStrongType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlStrongType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlStrongType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlStrongType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -7222,17 +8532,53 @@ class XhtmlStrongType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlStrongType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlStrongType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -7354,37 +8700,37 @@ class XhtmlEmType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlEmType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlEmType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlEmType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlEmType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlEmType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlEmType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlEmType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -7399,17 +8745,53 @@ class XhtmlEmType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlEmType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlEmType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -7531,37 +8913,37 @@ class XhtmlSpanType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSpanType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSpanType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSpanType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSpanType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSpanType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSpanType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlSpanType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -7576,17 +8958,53 @@ class XhtmlSpanType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlSpanType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlSpanType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -7708,37 +9126,37 @@ class XhtmlAddressType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAddressType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAddressType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAddressType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAddressType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAddressType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAddressType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlAddressType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -7753,17 +9171,53 @@ class XhtmlAddressType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlAddressType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlAddressType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass
 
 
 @dataclass
@@ -7885,37 +9339,37 @@ class XhtmlHeadingType:
                 },
                 {
                     "name": "tt",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlHeadingType.Tt"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "i",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlHeadingType.I"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "b",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlHeadingType.B"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "big",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlHeadingType.Big"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "small",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlHeadingType.Small"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sub",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlHeadingType.Sub"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "sup",
-                    "type": XhtmlInlPresType,
+                    "type": Type["XhtmlHeadingType.Sup"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
@@ -7930,14 +9384,50 @@ class XhtmlHeadingType:
                 },
                 {
                     "name": "ins",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlHeadingType.Ins"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
                 {
                     "name": "del",
-                    "type": XhtmlEditType,
+                    "type": Type["XhtmlHeadingType.Del"],
                     "namespace": "http://www.w3.org/1999/xhtml",
                 },
             ),
         },
     )
+
+    @dataclass
+    class Tt(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class I(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class B(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Big(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Small(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sub(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Sup(XhtmlInlPresType):
+        pass
+
+    @dataclass
+    class Ins(XhtmlEditType):
+        pass
+
+    @dataclass
+    class Del(XhtmlEditType):
+        pass

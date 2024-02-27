@@ -205,6 +205,7 @@ from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.proof_of_identity_enumeration import ProofOfIdentityEnumeration
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from netex.models.property_of_day import PropertyOfDay
+from netex.models.property_of_day_structure import PropertyOfDayStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
@@ -29525,7 +29526,9 @@ obj = PublicationDelivery(
                                                     properties=PropertiesOfDayRelStructure(
                                                         property_of_day=[
                                                             PropertyOfDay(
-                                                                month_of_year_or_day_of_month_or_day_of_year=XmlPeriod("--07")
+                                                                month_of_year_or_day_of_month_or_day_of_year=PropertyOfDayStructure.MonthOfYear(
+                                                                    value=XmlPeriod("--07")
+                                                                )
                                                             ),
                                                         ]
                                                     )
@@ -29536,7 +29539,9 @@ obj = PublicationDelivery(
                                                     properties=PropertiesOfDayRelStructure(
                                                         property_of_day=[
                                                             PropertyOfDay(
-                                                                month_of_year_or_day_of_month_or_day_of_year=XmlPeriod("--08")
+                                                                month_of_year_or_day_of_month_or_day_of_year=PropertyOfDayStructure.MonthOfYear(
+                                                                    value=XmlPeriod("--08")
+                                                                )
                                                             ),
                                                         ]
                                                     )

@@ -196,6 +196,7 @@ from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.proof_of_identity_enumeration import ProofOfIdentityEnumeration
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from netex.models.property_of_day import PropertyOfDay
+from netex.models.property_of_day_structure import PropertyOfDayStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.purchase_when_enumeration import PurchaseWhenEnumeration
 from netex.models.purchase_window import PurchaseWindow
@@ -338,7 +339,6 @@ from netex.models.version_frame_refs_rel_structure import VersionFrameRefsRelStr
 from netex.models.version_of_object_ref_structure import VersionOfObjectRefStructure
 from netex.models.via_versioned_child_structure import ViaVersionedChildStructure
 from netex.models.vias_rel_structure import ViasRelStructure
-from xsdata.formats.dataclass.models.generics import DerivedElement
 from xsdata.models.datatype import XmlDate
 from xsdata.models.datatype import XmlDateTime
 from xsdata.models.datatype import XmlDuration
@@ -17889,8 +17889,7 @@ obj = PublicationDelivery(
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
-                                                    month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
+                                                    month_of_year_or_day_of_month_or_day_of_year=PropertyOfDayStructure.DayOfYear(
                                                         value=XmlPeriod("--01-01")
                                                     )
                                                 ),

@@ -45,6 +45,7 @@ from netex.models.simple_vehicle_category_enumeration import SimpleVehicleCatego
 from netex.models.simple_vehicle_type import SimpleVehicleType
 from netex.models.stakeholder_role_type_enumeration import StakeholderRoleTypeEnumeration
 from netex.models.transport_type_refs_rel_structure import TransportTypeRefsRelStructure
+from netex.models.transport_type_version_structure import TransportTypeVersionStructure
 from netex.models.type_of_frame_ref import TypeOfFrameRef
 from netex.models.vehicle import Vehicle
 from netex.models.vehicle_model import VehicleModel
@@ -169,7 +170,9 @@ obj = PublicationDelivery(
                                         version='any',
                                         euro_class='3',
                                         propulsion_type=PropulsionTypeEnumeration.COMBUSTION,
-                                        fuel_type_or_type_of_fuel=FuelTypeEnumeration.DIESEL,
+                                        fuel_type_or_type_of_fuel=TransportTypeVersionStructure.FuelType(
+                                            value=FuelTypeEnumeration.DIESEL
+                                        ),
                                         maximum_range=Decimal('845'),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                         length=Decimal('4'),

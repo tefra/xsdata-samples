@@ -787,7 +787,13 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
         },
     )
     choice: List[
-        Union[str, RelativeOperatorEnumeration, object, bool]
+        Union[
+            str,
+            RelativeOperatorEnumeration,
+            "ValidityRuleParameterVersionStructure.AttributeValue",
+            "ValidityRuleParameterVersionStructure.Method",
+            bool,
+        ]
     ] = field(
         default_factory=list,
         metadata={
@@ -805,12 +811,16 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
                 },
                 {
                     "name": "AttributeValue",
-                    "type": object,
+                    "type": Type[
+                        "ValidityRuleParameterVersionStructure.AttributeValue"
+                    ],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
                     "name": "Method",
-                    "type": object,
+                    "type": Type[
+                        "ValidityRuleParameterVersionStructure.Method"
+                    ],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -822,6 +832,28 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
             "max_occurs": 3,
         },
     )
+
+    @dataclass
+    class AttributeValue:
+        content: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Wildcard",
+                "namespace": "http://www.netex.org.uk/netex",
+                "required": True,
+            },
+        )
+
+    @dataclass
+    class Method:
+        content: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Wildcard",
+                "namespace": "http://www.netex.org.uk/netex",
+                "required": True,
+            },
+        )
 
 
 @dataclass

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Type
 from .emphasis_text import EmphasisText
 from .index_entry import IndexEntry
 from .l_enum_simple import LEnumSimple
@@ -88,12 +88,12 @@ class LLongName:
                 },
                 {
                     "name": "SUP",
-                    "type": Supscript,
+                    "type": Type["LLongName.Sup"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SUB",
-                    "type": Supscript,
+                    "type": Type["LLongName.Sub"],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
@@ -104,3 +104,11 @@ class LLongName:
             ),
         },
     )
+
+    @dataclass
+    class Sup(Supscript):
+        pass
+
+    @dataclass
+    class Sub(Supscript):
+        pass

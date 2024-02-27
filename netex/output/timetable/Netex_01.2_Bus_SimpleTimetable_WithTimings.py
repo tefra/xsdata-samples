@@ -93,6 +93,7 @@ from netex.models.presentation_structure import PresentationStructure
 from netex.models.private_code_structure import PrivateCodeStructure
 from netex.models.properties_of_day_rel_structure import PropertiesOfDayRelStructure
 from netex.models.property_of_day import PropertyOfDay
+from netex.models.property_of_day_structure import PropertyOfDayStructure
 from netex.models.publication_delivery import PublicationDelivery
 from netex.models.publication_request_structure import PublicationRequestStructure
 from netex.models.resource_frame import ResourceFrame
@@ -1898,8 +1899,7 @@ obj = PublicationDelivery(
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
-                                                    month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
+                                                    month_of_year_or_day_of_month_or_day_of_year=PropertyOfDayStructure.DayOfYear(
                                                         value=XmlPeriod("--12-24")
                                                     ),
                                                     holiday_types=[
@@ -1918,8 +1918,7 @@ obj = PublicationDelivery(
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
-                                                    month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
+                                                    month_of_year_or_day_of_month_or_day_of_year=PropertyOfDayStructure.DayOfYear(
                                                         value=XmlPeriod("--12-25")
                                                     ),
                                                     holiday_types=[
@@ -1961,8 +1960,7 @@ obj = PublicationDelivery(
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
-                                                    month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
+                                                    month_of_year_or_day_of_month_or_day_of_year=PropertyOfDayStructure.DayOfYear(
                                                         value=XmlPeriod("--12-31")
                                                     ),
                                                     holiday_types=[
@@ -1981,8 +1979,7 @@ obj = PublicationDelivery(
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
-                                                    month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
+                                                    month_of_year_or_day_of_month_or_day_of_year=PropertyOfDayStructure.DayOfYear(
                                                         value=XmlPeriod("--01-01")
                                                     ),
                                                     holiday_types=[
@@ -2001,8 +1998,7 @@ obj = PublicationDelivery(
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
-                                                    month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
+                                                    month_of_year_or_day_of_month_or_day_of_year=PropertyOfDayStructure.DayOfYear(
                                                         value=XmlPeriod("--02-01")
                                                     ),
                                                     holiday_types=[
