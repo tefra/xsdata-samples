@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .data_type_policy_enum_simple import DataTypePolicyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .vehicle_stopping_position_version_structure import (
     VehicleStoppingPositionVersionStructure,
 )

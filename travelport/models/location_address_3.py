@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_structured_address_4 import TypeStructuredAddress4
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"

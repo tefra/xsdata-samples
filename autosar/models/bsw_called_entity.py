@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -191,15 +192,15 @@ class BswCalledEntity:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswCalledEntity.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["BswCalledEntity.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -311,15 +312,15 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accessed_mode_groups: Optional[
-        "BswCalledEntity.AccessedModeGroups"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ACCESSED-MODE-GROUPS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    accessed_mode_groups: Optional["BswCalledEntity.AccessedModeGroups"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ACCESSED-MODE-GROUPS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     activation_points: Optional["BswCalledEntity.ActivationPoints"] = field(
         default=None,
@@ -361,15 +362,15 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implemented_entry_ref: Optional[
-        "BswCalledEntity.ImplementedEntryRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "IMPLEMENTED-ENTRY-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    implemented_entry_ref: Optional["BswCalledEntity.ImplementedEntryRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "IMPLEMENTED-ENTRY-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     issued_triggers: Optional["BswCalledEntity.IssuedTriggers"] = field(
         default=None,

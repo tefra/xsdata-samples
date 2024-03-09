@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -211,15 +212,15 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_ref: Optional[
-        "BinaryManifestProvideResource.ResourceRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RESOURCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    resource_ref: Optional["BinaryManifestProvideResource.ResourceRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RESOURCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     number_of_notifier_sets: Optional[PositiveInteger] = field(
         default=None,

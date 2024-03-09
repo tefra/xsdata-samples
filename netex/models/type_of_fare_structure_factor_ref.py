@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_fare_structure_factor_ref_structure import (
     TypeOfFareStructureFactorRefStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -178,15 +179,15 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_operation_iref: Optional[
-        OperationInSystemInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CLIENT-SERVER-OPERATION-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    client_server_operation_iref: Optional[OperationInSystemInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CLIENT-SERVER-OPERATION-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     communication_resource_ref: Optional[
         "PortElementToCommunicationResourceMapping.CommunicationResourceRef"
@@ -291,13 +292,13 @@ class PortElementToCommunicationResourceMapping:
 
     @dataclass
     class CommunicationResourceRef(Ref):
-        dest: Optional[
-            CpSoftwareClusterCommunicationResourceSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[CpSoftwareClusterCommunicationResourceSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

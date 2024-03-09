@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .i_pdu_signal_processing_enum_simple import IPduSignalProcessingEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

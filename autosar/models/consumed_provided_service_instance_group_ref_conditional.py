@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .consumed_provided_service_instance_group_subtypes_enum import (
     ConsumedProvidedServiceInstanceGroupSubtypesEnum,
@@ -68,13 +69,13 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
 
     @dataclass
     class ConsumedProvidedServiceInstanceGroupRef(Ref):
-        dest: Optional[
-            ConsumedProvidedServiceInstanceGroupSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[ConsumedProvidedServiceInstanceGroupSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

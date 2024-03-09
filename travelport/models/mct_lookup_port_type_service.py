@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.mct_lookup_port_type_service_input import (
     MctLookupPortTypeServiceInput,
 )

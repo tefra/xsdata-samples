@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
+
 from .all_modes_enumeration import AllModesEnumeration
 from .passenger_equipment_version_structure import (
     PassengerEquipmentVersionStructure,
@@ -61,15 +62,15 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketing_service_facility_list: Optional[
-        TicketingServiceFacilityList
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TicketingServiceFacilityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    ticketing_service_facility_list: Optional[TicketingServiceFacilityList] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TicketingServiceFacilityList",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     ticket_office: Optional[bool] = field(
         default=None,

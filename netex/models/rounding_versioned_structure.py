@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .rounding_method_enumeration import RoundingMethodEnumeration

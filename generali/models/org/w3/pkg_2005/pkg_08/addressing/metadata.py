@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.org.w3.pkg_2005.pkg_08.addressing.metadata_type import (
     MetadataType,
 )

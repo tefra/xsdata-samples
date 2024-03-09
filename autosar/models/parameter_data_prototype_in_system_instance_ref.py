@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .parameter_data_prototype_subtypes_enum import (
     ParameterDataPrototypeSubtypesEnum,
 )

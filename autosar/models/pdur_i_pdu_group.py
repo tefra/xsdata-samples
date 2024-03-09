@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -225,13 +226,13 @@ class PdurIPduGroup:
 
     @dataclass
     class IPdus:
-        pdu_triggering_ref_conditional: List[
-            PduTriggeringRefConditional
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PDU-TRIGGERING-REF-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        pdu_triggering_ref_conditional: List[PduTriggeringRefConditional] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PDU-TRIGGERING-REF-CONDITIONAL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

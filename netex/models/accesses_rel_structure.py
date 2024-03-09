@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .access import Access
 from .access_ref import AccessRef
 from .containment_aggregation_structure import ContainmentAggregationStructure

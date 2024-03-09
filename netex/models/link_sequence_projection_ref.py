@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .link_sequence_projection_ref_structure import (
     LinkSequenceProjectionRefStructure,
 )

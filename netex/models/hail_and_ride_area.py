@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .hail_and_ride_area_version_structure import (
     HailAndRideAreaVersionStructure,
 )

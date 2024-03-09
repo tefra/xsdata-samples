@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.agency_base_info_1 import AgencyBaseInfo1
 from travelport.models.branch_base_info_1 import BranchBaseInfo1
 

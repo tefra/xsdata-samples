@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
@@ -134,15 +135,15 @@ class FieldSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_acknowledge: Optional[
-        TransmissionAcknowledgementRequest
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TRANSMISSION-ACKNOWLEDGE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    transmission_acknowledge: Optional[TransmissionAcknowledgementRequest] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TRANSMISSION-ACKNOWLEDGE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     transmission_props: Optional[TransmissionComSpecProps] = field(
         default=None,

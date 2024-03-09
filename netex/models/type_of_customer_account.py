@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_customer_account_version_structure import (
     TypeOfCustomerAccountVersionStructure,
 )

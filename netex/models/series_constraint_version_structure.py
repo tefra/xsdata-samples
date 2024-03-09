@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
+
 from .connection_ref_structure import ConnectionRefStructure
 from .fare_basis_enumeration import FareBasisEnumeration
 from .fare_points_in_pattern_rel_structure import (

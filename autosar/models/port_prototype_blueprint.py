@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -204,15 +205,15 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "PortPrototypeBlueprint.BlueprintPolicys"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "BLUEPRINT-POLICYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    blueprint_policys: Optional["PortPrototypeBlueprint.BlueprintPolicys"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "BLUEPRINT-POLICYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -238,25 +239,25 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_com_specs: Optional[
-        "PortPrototypeBlueprint.ProvidedComSpecs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PROVIDED-COM-SPECS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    provided_com_specs: Optional["PortPrototypeBlueprint.ProvidedComSpecs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PROVIDED-COM-SPECS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    required_com_specs: Optional[
-        "PortPrototypeBlueprint.RequiredComSpecs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "REQUIRED-COM-SPECS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    required_com_specs: Optional["PortPrototypeBlueprint.RequiredComSpecs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "REQUIRED-COM-SPECS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,
@@ -313,15 +314,15 @@ class PortPrototypeBlueprint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,

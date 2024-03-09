@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_seat_assignment_rsp import (
     BookingSeatAssignmentRsp,
 )
@@ -65,7 +67,10 @@ class BookingSeatAssignmentPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | BookingSeatAssignmentPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | BookingSeatAssignmentPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

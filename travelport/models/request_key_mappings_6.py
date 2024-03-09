@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.key_mapping_6 import KeyMapping6
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"

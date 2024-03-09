@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDate
+
 from .authority_ref import AuthorityRef
 from .general_organisation_ref import GeneralOrganisationRef
 from .group_of_entities_version_structure import (

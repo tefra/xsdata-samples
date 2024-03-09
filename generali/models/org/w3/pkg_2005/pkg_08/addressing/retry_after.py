@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.org.w3.pkg_2005.pkg_08.addressing.attributed_unsigned_long_type import (
     AttributedUnsignedLongType,
 )

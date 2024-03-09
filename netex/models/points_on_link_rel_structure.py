@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .line_string_type import LineStringType
 from .point_on_link import PointOnLink
 from .strict_containment_aggregation_structure import (

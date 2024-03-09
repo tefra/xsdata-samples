@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlPeriod
+
 from .companion_profiles_rel_structure import CompanionProfilesRelStructure
 from .discount_basis_enumeration import DiscountBasisEnumeration
 from .gender_limitation import GenderLimitation
@@ -119,15 +121,15 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "tokens": True,
         },
     )
-    types_of_proof_required_ref: Optional[
-        TypesOfProofRefsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "typesOfProofRequiredRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    types_of_proof_required_ref: Optional[TypesOfProofRefsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "typesOfProofRequiredRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     discount_basis: Optional[DiscountBasisEnumeration] = field(
         default=None,

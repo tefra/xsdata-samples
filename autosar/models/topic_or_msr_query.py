@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .msr_query_topic_1 import MsrQueryTopic1
 from .topic_1 import Topic1
 

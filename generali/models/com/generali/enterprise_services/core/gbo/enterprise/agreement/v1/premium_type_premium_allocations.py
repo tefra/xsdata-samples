@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.premium_allocation_type import (
     PremiumAllocationType,
 )

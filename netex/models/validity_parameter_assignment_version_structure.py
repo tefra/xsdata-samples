@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .access_right_parameter_assignment_version_structure import (
     AccessRightParameterAssignmentVersionStructure,
 )

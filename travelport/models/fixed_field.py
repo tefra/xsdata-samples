@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.action_ref import ActionRef
 from travelport.models.fixed_field_group_ref import FixedFieldGroupRef
 from travelport.models.type_fixed_field_data_format import (

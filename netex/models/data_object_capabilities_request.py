@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .service_capabilities_request_structure import (
     ServiceCapabilitiesRequestStructure,
 )

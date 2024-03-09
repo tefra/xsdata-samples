@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .trip_pattern_ref_structure import TripPatternRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

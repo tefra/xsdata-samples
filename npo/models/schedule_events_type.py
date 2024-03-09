@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.schedule_event_type import ScheduleEventType
 
 __NAMESPACE__ = "urn:vpro:media:2009"

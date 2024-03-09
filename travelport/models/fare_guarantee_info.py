@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.type_fare_guarantee import TypeFareGuarantee
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"

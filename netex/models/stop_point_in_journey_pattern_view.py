@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .stop_point_in_journey_pattern_derived_view_structure import (
     StopPointInJourneyPatternDerivedViewStructure,
 )

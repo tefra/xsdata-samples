@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .capability_not_supported_error_structure import (
     CapabilityNotSupportedErrorStructure,
 )

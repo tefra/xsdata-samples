@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import MlFormula
 from .ecuc_parameter_derivation_formula import EcucParameterDerivationFormula
 from .ecuc_query import EcucQuery

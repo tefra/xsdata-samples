@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -141,15 +142,15 @@ class BinaryManifestResourceDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "BinaryManifestResourceDefinition.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["BinaryManifestResourceDefinition.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     item_definitions: Optional[
         "BinaryManifestResourceDefinition.ItemDefinitions"
@@ -208,13 +209,13 @@ class BinaryManifestResourceDefinition:
 
     @dataclass
     class ItemDefinitions:
-        binary_manifest_item_definition: List[
-            BinaryManifestItemDefinition
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BINARY-MANIFEST-ITEM-DEFINITION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        binary_manifest_item_definition: List[BinaryManifestItemDefinition] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BINARY-MANIFEST-ITEM-DEFINITION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

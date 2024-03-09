@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .i_signal_triggering_subtypes_enum import ISignalTriggeringSubtypesEnum
 from .ref import Ref

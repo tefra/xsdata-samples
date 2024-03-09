@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_form_of_payment_type_2 import (
     TypeFormOfPaymentType2,
 )

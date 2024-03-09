@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .preassigned_fare_product_ref_structure import (
     PreassignedFareProductRefStructure,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .penalty_policy_version_structure import PenaltyPolicyVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

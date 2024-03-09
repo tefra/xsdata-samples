@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -158,15 +159,15 @@ class SdgForeignReferenceWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SdgForeignReferenceWithVariation.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["SdgForeignReferenceWithVariation.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     lower_multiplicity: Optional[PositiveInteger] = field(
         default=None,

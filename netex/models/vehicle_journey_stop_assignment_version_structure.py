@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .dead_run_ref import DeadRunRef
 from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
 from .passenger_stop_assignment_ref import PassengerStopAssignmentRef

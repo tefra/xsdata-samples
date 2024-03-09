@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.universal_record_history_search_rsp import (
     UniversalRecordHistorySearchRsp,
@@ -26,7 +28,9 @@ class UniversalRecordHistorySearchPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        universal_record_history_search_rsp: None | UniversalRecordHistorySearchRsp = field(
+        universal_record_history_search_rsp: (
+            None | UniversalRecordHistorySearchRsp
+        ) = field(
             default=None,
             metadata={
                 "name": "UniversalRecordHistorySearchRsp",
@@ -34,7 +38,9 @@ class UniversalRecordHistorySearchPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
             },
         )
-        fault: None | UniversalRecordHistorySearchPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | UniversalRecordHistorySearchPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -65,7 +71,10 @@ class UniversalRecordHistorySearchPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | UniversalRecordHistorySearchPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | UniversalRecordHistorySearchPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

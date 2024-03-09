@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .response_timestamp import ResponseTimestamp
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .usage_parameter_price_ref_structure import (
     UsageParameterPriceRefStructure,
 )

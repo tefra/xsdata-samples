@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .retail_consortium_version_structure import (
     RetailConsortiumVersionStructure,
 )

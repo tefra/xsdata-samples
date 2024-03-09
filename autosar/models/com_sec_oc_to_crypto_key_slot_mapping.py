@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -149,15 +150,15 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "ComSecOcToCryptoKeySlotMapping.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["ComSecOcToCryptoKeySlotMapping.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -245,13 +246,13 @@ class ComSecOcToCryptoKeySlotMapping:
 
     @dataclass
     class ServiceElementSecureComConfigRef(Ref):
-        dest: Optional[
-            ServiceInterfaceElementSecureComConfigSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[ServiceInterfaceElementSecureComConfigSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

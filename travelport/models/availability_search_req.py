@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_search_req import AirSearchReq
 from travelport.models.point_of_sale_1 import PointOfSale1
 from travelport.models.search_passenger_1 import SearchPassenger1

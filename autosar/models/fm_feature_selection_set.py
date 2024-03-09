@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -170,15 +171,15 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    feature_model_refs: Optional[
-        "FmFeatureSelectionSet.FeatureModelRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FEATURE-MODEL-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    feature_model_refs: Optional["FmFeatureSelectionSet.FeatureModelRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FEATURE-MODEL-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     include_refs: Optional["FmFeatureSelectionSet.IncludeRefs"] = field(
         default=None,
@@ -267,15 +268,15 @@ class FmFeatureSelectionSet:
 
     @dataclass
     class IncludeRefs:
-        include_ref: List[
-            "FmFeatureSelectionSet.IncludeRefs.IncludeRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "INCLUDE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        include_ref: List["FmFeatureSelectionSet.IncludeRefs.IncludeRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "INCLUDE-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

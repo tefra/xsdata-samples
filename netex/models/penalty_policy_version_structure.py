@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .penalty_policy_type_enumeration import PenaltyPolicyTypeEnumeration
 from .same_station_reentry_policy_enumeration import (
     SameStationReentryPolicyEnumeration,

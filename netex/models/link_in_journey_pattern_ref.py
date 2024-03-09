@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .link_in_journey_pattern_ref_structure import (
     LinkInJourneyPatternRefStructure,
 )

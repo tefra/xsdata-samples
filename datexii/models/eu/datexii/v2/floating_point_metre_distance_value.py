@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.data_value import DataValue
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 
@@ -26,13 +27,13 @@ class FloatingPointMetreDistanceValue(DataValue):
             "required": True,
         },
     )
-    floating_point_metre_distance_value_extension: Optional[
-        ExtensionType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "floatingPointMetreDistanceValueExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    floating_point_metre_distance_value_extension: Optional[ExtensionType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "floatingPointMetreDistanceValueExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

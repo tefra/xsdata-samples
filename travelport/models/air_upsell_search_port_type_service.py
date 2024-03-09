@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.air_upsell_search_port_type_service_input import (
     AirUpsellSearchPortTypeServiceInput,
 )

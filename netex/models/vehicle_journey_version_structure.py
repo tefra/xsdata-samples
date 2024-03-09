@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDuration, XmlTime
+
 from .block_ref import BlockRef
 from .compound_train_ref import CompoundTrainRef
 from .course_of_journeys_ref import CourseOfJourneysRef

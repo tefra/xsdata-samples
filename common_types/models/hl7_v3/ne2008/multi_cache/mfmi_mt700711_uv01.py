@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     Cd,
     Ce,
@@ -1156,16 +1157,16 @@ class MfmiMt700711Uv01Subject3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    prior_registered_role: Optional[
-        MfmiMt700711Uv01PriorRegisteredRole
-    ] = field(
-        default=None,
-        metadata={
-            "name": "priorRegisteredRole",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    prior_registered_role: Optional[MfmiMt700711Uv01PriorRegisteredRole] = (
+        field(
+            default=None,
+            metadata={
+                "name": "priorRegisteredRole",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -1298,16 +1299,16 @@ class MfmiMt700711Uv01InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    registration_request: Optional[
-        MfmiMt700711Uv01RegistrationRequest
-    ] = field(
-        default=None,
-        metadata={
-            "name": "registrationRequest",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    registration_request: Optional[MfmiMt700711Uv01RegistrationRequest] = (
+        field(
+            default=None,
+            metadata={
+                "name": "registrationRequest",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

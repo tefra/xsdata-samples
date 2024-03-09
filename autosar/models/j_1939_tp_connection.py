@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .boolean import Boolean
 from .i_pdu_subtypes_enum import IPduSubtypesEnum
@@ -137,15 +138,15 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_refs: Optional[
-        "J1939TpConnection.FlowControlPduRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FLOW-CONTROL-PDU-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    flow_control_pdu_refs: Optional["J1939TpConnection.FlowControlPduRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FLOW-CONTROL-PDU-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     max_bs: Optional[PositiveInteger] = field(
         default=None,
@@ -276,15 +277,15 @@ class J1939TpConnection:
 
     @dataclass
     class ReceiverRefs:
-        receiver_ref: List[
-            "J1939TpConnection.ReceiverRefs.ReceiverRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "RECEIVER-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        receiver_ref: List["J1939TpConnection.ReceiverRefs.ReceiverRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "RECEIVER-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .access_right_parameter_assignments_rel_structure import (
     AccessRightParameterAssignmentsRelStructure,
 )

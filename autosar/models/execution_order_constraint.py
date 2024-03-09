@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -271,15 +272,15 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ordered_elements: Optional[
-        "ExecutionOrderConstraint.OrderedElements"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ORDERED-ELEMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ordered_elements: Optional["ExecutionOrderConstraint.OrderedElements"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ORDERED-ELEMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     permit_multiple_references_to_ee: Optional[Boolean] = field(
         default=None,
@@ -396,13 +397,13 @@ class ExecutionOrderConstraint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        eoc_executable_entity_ref_group: List[
-            EocExecutableEntityRefGroup
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "EOC-EXECUTABLE-ENTITY-REF-GROUP",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        eoc_executable_entity_ref_group: List[EocExecutableEntityRefGroup] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "EOC-EXECUTABLE-ENTITY-REF-GROUP",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

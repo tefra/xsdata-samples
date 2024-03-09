@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .autosar_variable_ref import AutosarVariableRef
 from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
 from .ref import Ref

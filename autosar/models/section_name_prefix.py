@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .c_identifier import CIdentifier
 from .dependency_on_artifact_subtypes_enum import (
@@ -57,15 +58,15 @@ class SectionNamePrefix:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SectionNamePrefix.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["SectionNamePrefix.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     symbol: Optional[CIdentifier] = field(
         default=None,

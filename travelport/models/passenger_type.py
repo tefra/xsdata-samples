@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.fare_guarantee_info import FareGuaranteeInfo
 from travelport.models.type_passenger_type_1 import TypePassengerType1
 

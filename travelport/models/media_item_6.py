@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_response_image_size_6 import TypeResponseImageSize6
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"

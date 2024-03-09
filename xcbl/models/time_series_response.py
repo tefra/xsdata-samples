@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
+
 from xcbl.models.trading_partner_organization_information import (
     ExternalAddressId,
 )
@@ -1348,14 +1349,14 @@ class ContactNumber:
             "required": True,
         }
     )
-    contact_number_type_coded_other: Optional[
-        ContactNumberTypeCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ContactNumberTypeCodedOther",
-            "type": "Element",
-        },
+    contact_number_type_coded_other: Optional[ContactNumberTypeCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ContactNumberTypeCodedOther",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -2104,14 +2105,14 @@ class Location:
             "type": "Element",
         },
     )
-    location_qualifier_coded_other: Optional[
-        LocationQualifierCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "LocationQualifierCodedOther",
-            "type": "Element",
-        },
+    location_qualifier_coded_other: Optional[LocationQualifierCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "LocationQualifierCodedOther",
+                "type": "Element",
+            },
+        )
     )
     location_identifier: Optional[LocationIdentifier] = field(
         default=None,
@@ -2381,23 +2382,23 @@ class CharacteristicAttribute:
             "type": "Element",
         },
     )
-    characteristic_attribute_note: Optional[
-        CharacteristicAttributeNote
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CharacteristicAttributeNote",
-            "type": "Element",
-        },
+    characteristic_attribute_note: Optional[CharacteristicAttributeNote] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CharacteristicAttributeNote",
+                "type": "Element",
+            },
+        )
     )
-    other_characteristic_attribute: List[
-        "OtherCharacteristicAttribute"
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "OtherCharacteristicAttribute",
-            "type": "Element",
-        },
+    other_characteristic_attribute: List["OtherCharacteristicAttribute"] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "OtherCharacteristicAttribute",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -2665,14 +2666,14 @@ class BaseCharacteristicLocation:
             "type": "Element",
         },
     )
-    location_attribute_description: Optional[
-        LocationAttributeDescription
-    ] = field(
-        default=None,
-        metadata={
-            "name": "LocationAttributeDescription",
-            "type": "Element",
-        },
+    location_attribute_description: Optional[LocationAttributeDescription] = (
+        field(
+            default=None,
+            metadata={
+                "name": "LocationAttributeDescription",
+                "type": "Element",
+            },
+        )
     )
     location: Optional[Location] = field(
         default=None,
@@ -2713,14 +2714,14 @@ class BaseCharacteristicProduct:
             "type": "Element",
         },
     )
-    product_attribute_description: Optional[
-        ProductAttributeDescription
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ProductAttributeDescription",
-            "type": "Element",
-        },
+    product_attribute_description: Optional[ProductAttributeDescription] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ProductAttributeDescription",
+                "type": "Element",
+            },
+        )
     )
     list_of_dimension: Optional[ListOfDimension] = field(
         default=None,
@@ -2877,14 +2878,14 @@ class TimeSeriesHeader:
             "required": True,
         }
     )
-    time_series_purpose_coded_other: Optional[
-        TimeSeriesPurposeCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TimeSeriesPurposeCodedOther",
-            "type": "Element",
-        },
+    time_series_purpose_coded_other: Optional[TimeSeriesPurposeCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TimeSeriesPurposeCodedOther",
+                "type": "Element",
+            },
+        )
     )
     time_series_time_period: Optional[TimeSeriesTimePeriod] = field(
         default=None,

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .stop_place_version_structure import StopPlaceVersionStructure
 from .taxi_stands_rel_structure import TaxiStandsRelStructure
 

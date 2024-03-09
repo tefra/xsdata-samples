@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .companion_profile_ref import CompanionProfileRef
 from .companion_relationship_enumeration import (
     CompanionRelationshipEnumeration,
@@ -51,15 +52,15 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             ),
         },
     )
-    companion_relationship_type: Optional[
-        CompanionRelationshipEnumeration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CompanionRelationshipType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    companion_relationship_type: Optional[CompanionRelationshipEnumeration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CompanionRelationshipType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     minimum_number_of_persons: Optional[int] = field(
         default=None,

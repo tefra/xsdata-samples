@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -129,15 +130,15 @@ class RPortPrototype:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "RPortPrototype.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["RPortPrototype.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -215,15 +216,15 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_port_annotations: Optional[
-        "RPortPrototype.ModePortAnnotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MODE-PORT-ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    mode_port_annotations: Optional["RPortPrototype.ModePortAnnotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MODE-PORT-ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     nv_data_port_annotations: Optional[
         "RPortPrototype.NvDataPortAnnotations"

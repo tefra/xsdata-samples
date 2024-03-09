@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .additional_driver_option_version_structure import (
     AdditionalDriverOptionVersionStructure,
 )

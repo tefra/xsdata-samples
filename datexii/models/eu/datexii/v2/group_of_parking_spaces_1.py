@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.dimension import Dimension
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.group_of_locations import GroupOfLocations
@@ -118,15 +119,15 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space: List[
-        GroupOfParkingSpacesParkingSpaceIndexParkingSpace
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "parkingSpace",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    parking_space: List[GroupOfParkingSpacesParkingSpaceIndexParkingSpace] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "parkingSpace",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     group_of_locations: Optional[GroupOfLocations] = field(
         default=None,

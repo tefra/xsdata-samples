@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
+
 from .distance_matrix_element_prices_rel_structure import (
     DistanceMatrixElementPricesRelStructure,
 )
@@ -176,15 +177,15 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    structure_factors: Optional[
-        GeographicalStructureFactorsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "structureFactors",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    structure_factors: Optional[GeographicalStructureFactorsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "structureFactors",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     tariffs: Optional[TariffRefsRelStructure] = field(
         default=None,
@@ -193,25 +194,25 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: Optional[
-        Union[StandardFareTableRef, FareTableRef]
-    ] = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "StandardFareTableRef",
-                    "type": StandardFareTableRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareTableRef",
-                    "type": FareTableRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    fare_table_ref: Optional[Union[StandardFareTableRef, FareTableRef]] = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "StandardFareTableRef",
+                        "type": StandardFareTableRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareTableRef",
+                        "type": FareTableRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     prices: Optional[DistanceMatrixElementPricesRelStructure] = field(
         default=None,

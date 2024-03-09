@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     Consignment,
     DocumentReference,
@@ -155,15 +156,15 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transportation_status_type_code: Optional[
-        TransportationStatusTypeCode
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TransportationStatusTypeCode",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    transportation_status_type_code: Optional[TransportationStatusTypeCode] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TransportationStatusTypeCode",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     sender_party: Optional[SenderParty] = field(
         default=None,

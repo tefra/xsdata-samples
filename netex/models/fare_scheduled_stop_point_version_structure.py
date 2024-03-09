@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref_structure import (
     FareScheduledStopPointRefStructure,
@@ -49,15 +50,15 @@ class FareScheduledStopPointVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accounting_stop_point_ref: Optional[
-        FareScheduledStopPointRefStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AccountingStopPointRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    accounting_stop_point_ref: Optional[FareScheduledStopPointRefStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AccountingStopPointRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     border_point_ref: Optional[BorderPointRef] = field(
         default=None,

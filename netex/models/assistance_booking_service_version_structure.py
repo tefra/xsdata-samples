@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .assistance_availability_enumeration import (
     AssistanceAvailabilityEnumeration,
 )
@@ -28,15 +29,15 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "AssistanceBookingService_VersionStructure"
 
-    assistance_availability: Optional[
-        AssistanceAvailabilityEnumeration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AssistanceAvailability",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    assistance_availability: Optional[AssistanceAvailabilityEnumeration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AssistanceAvailability",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     wheelchair_booking_required: Optional[bool] = field(
         default=None,
@@ -117,25 +118,25 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             ),
         },
     )
-    transport_organisation_ref: Optional[
-        Union[AuthorityRef, OperatorRef]
-    ] = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    transport_organisation_ref: Optional[Union[AuthorityRef, OperatorRef]] = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "AuthorityRef",
+                        "type": AuthorityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OperatorRef",
+                        "type": OperatorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
         default=None,

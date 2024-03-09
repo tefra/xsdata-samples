@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .mobility_service_version_frame_structure import (
     MobilityServiceVersionFrameStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .boundary_event import BoundaryEvent
 from .business_rule_task import BusinessRuleTask
 from .call_activity import CallActivity

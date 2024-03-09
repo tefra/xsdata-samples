@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .path_link_in_sequence import PathLinkInSequence
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

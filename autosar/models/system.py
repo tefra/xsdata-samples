@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -300,15 +301,15 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_software_compositions: Optional[
-        "System.RootSoftwareCompositions"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ROOT-SOFTWARE-COMPOSITIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    root_software_compositions: Optional["System.RootSoftwareCompositions"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ROOT-SOFTWARE-COMPOSITIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sw_clusters: Optional["System.SwClusters"] = field(
         default=None,
@@ -408,15 +409,15 @@ class System:
 
     @dataclass
     class FibexElements:
-        fibex_element_ref_conditional: List[
-            FibexElementRefConditional
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "FIBEX-ELEMENT-REF-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        fibex_element_ref_conditional: List[FibexElementRefConditional] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "FIBEX-ELEMENT-REF-CONDITIONAL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass
@@ -467,15 +468,15 @@ class System:
 
     @dataclass
     class RootSoftwareCompositions:
-        root_sw_composition_prototype: List[
-            RootSwCompositionPrototype
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ROOT-SW-COMPOSITION-PROTOTYPE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        root_sw_composition_prototype: List[RootSwCompositionPrototype] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ROOT-SW-COMPOSITION-PROTOTYPE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

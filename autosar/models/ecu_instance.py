@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -674,15 +675,15 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ttcan_communication_controller: List[
-            TtcanCommunicationController
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TTCAN-COMMUNICATION-CONTROLLER",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ttcan_communication_controller: List[TtcanCommunicationController] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TTCAN-COMMUNICATION-CONTROLLER",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         user_defined_communication_controller: List[
             UserDefinedCommunicationController
@@ -733,15 +734,15 @@ class EcuInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ttcan_communication_connector: List[
-            TtcanCommunicationConnector
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TTCAN-COMMUNICATION-CONNECTOR",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ttcan_communication_connector: List[TtcanCommunicationConnector] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TTCAN-COMMUNICATION-CONNECTOR",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         user_defined_communication_connector: List[
             UserDefinedCommunicationConnector

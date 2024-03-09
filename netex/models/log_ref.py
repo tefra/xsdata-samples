@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .log_ref_structure import LogRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

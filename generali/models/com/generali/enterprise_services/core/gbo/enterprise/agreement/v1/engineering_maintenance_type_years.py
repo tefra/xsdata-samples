@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.maintenance_type import (
     MaintenanceType,
 )

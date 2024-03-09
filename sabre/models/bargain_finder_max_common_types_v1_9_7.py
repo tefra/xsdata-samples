@@ -1,7 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
+
 from xsdata.models.datatype import XmlDate, XmlTime
 
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
@@ -597,7 +599,9 @@ class PassengerTypeQuantityType(TravelerCountType):
                 results.
         """
 
-        birth_date: None | PassengerTypeQuantityType.TpaExtensions.BirthDate = field(
+        birth_date: (
+            None | PassengerTypeQuantityType.TpaExtensions.BirthDate
+        ) = field(
             default=None,
             metadata={
                 "name": "BirthDate",
@@ -621,7 +625,9 @@ class PassengerTypeQuantityType(TravelerCountType):
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        total_number: None | PassengerTypeQuantityType.TpaExtensions.TotalNumber = field(
+        total_number: (
+            None | PassengerTypeQuantityType.TpaExtensions.TotalNumber
+        ) = field(
             default=None,
             metadata={
                 "name": "TotalNumber",
@@ -629,7 +635,9 @@ class PassengerTypeQuantityType(TravelerCountType):
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        voluntary_changes: None | PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges = field(
+        voluntary_changes: (
+            None | PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges
+        ) = field(
             default=None,
             metadata={
                 "name": "VoluntaryChanges",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -155,15 +156,15 @@ class J1939Cluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    j_1939_cluster_variants: Optional[
-        "J1939Cluster.J1939ClusterVariants"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "J-1939-CLUSTER-VARIANTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    j_1939_cluster_variants: Optional["J1939Cluster.J1939ClusterVariants"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "J-1939-CLUSTER-VARIANTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

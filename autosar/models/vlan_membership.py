@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .dhcp_server_configuration import DhcpServerConfiguration
 from .ethernet_physical_channel_subtypes_enum import (
     EthernetPhysicalChannelSubtypesEnum,

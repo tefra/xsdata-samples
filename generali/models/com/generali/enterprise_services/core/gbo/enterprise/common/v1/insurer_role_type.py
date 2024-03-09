@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.insurer_role_type_insurer_capabilities import (
     InsurerRoleTypeInsurerCapabilities,
 )

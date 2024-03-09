@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -121,15 +122,15 @@ class DoIpInstantiation:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DoIpInstantiation.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["DoIpInstantiation.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -227,15 +228,15 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_interfaces: Optional[
-        "DoIpInstantiation.NetworkInterfaces"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "NETWORK-INTERFACES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    network_interfaces: Optional["DoIpInstantiation.NetworkInterfaces"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "NETWORK-INTERFACES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     request_configurations: Optional[
         "DoIpInstantiation.RequestConfigurations"

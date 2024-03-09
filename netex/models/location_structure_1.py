@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional, Type, Union
+
 from .coordinates_structure import CoordinatesStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"

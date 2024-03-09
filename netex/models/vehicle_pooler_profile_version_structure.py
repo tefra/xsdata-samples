@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .user_profile_ref_structure import UserProfileRefStructure
 from .user_profile_version_structure import UserProfileVersionStructure
 

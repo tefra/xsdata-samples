@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .cycle_storage_enumeration import CycleStorageEnumeration
 from .place_equipment_version_structure import PlaceEquipmentVersionStructure
 

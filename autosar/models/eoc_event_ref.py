@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_event_subtypes_enum import AbstractEventSubtypesEnum
 from .admin_data import (
     AdminData,
@@ -168,15 +169,15 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_instance_ref: Optional[
-        "EocEventRef.BswModuleInstanceRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "BSW-MODULE-INSTANCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    bsw_module_instance_ref: Optional["EocEventRef.BswModuleInstanceRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "BSW-MODULE-INSTANCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     component_iref: Optional[ComponentInCompositionInstanceRef] = field(
         default=None,

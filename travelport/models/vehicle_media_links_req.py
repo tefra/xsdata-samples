@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.vehicle_pickup_location import VehiclePickupLocation
 from travelport.models.vehicle_search_id import VehicleSearchId

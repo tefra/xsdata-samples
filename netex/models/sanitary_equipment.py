@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .sanitary_equipment_version_structure import (
     SanitaryEquipmentVersionStructure,
 )

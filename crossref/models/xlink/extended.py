@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from crossref.models.xlink.type_type import TypeType
 
 __NAMESPACE__ = "http://www.w3.org/1999/xlink"

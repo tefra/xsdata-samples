@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .group_of_operators_ref import GroupOfOperatorsRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 

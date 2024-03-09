@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.program_gbotype import (
     ProgramGbotype,
 )

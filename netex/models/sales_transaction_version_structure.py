@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .customer_purchase_packages_rel_structure import (
     CustomerPurchasePackagesRelStructure,
 )

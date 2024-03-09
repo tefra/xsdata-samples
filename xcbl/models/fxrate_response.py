@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.payment_status_response import (
     ConfirmationId,
     CreditAmount,
@@ -637,14 +638,14 @@ class IndicativeRateDetail:
             "type": "Element",
         },
     )
-    indicative_rate_retrieved_date: Optional[
-        IndicativeRateRetrievedDate
-    ] = field(
-        default=None,
-        metadata={
-            "name": "IndicativeRateRetrievedDate",
-            "type": "Element",
-        },
+    indicative_rate_retrieved_date: Optional[IndicativeRateRetrievedDate] = (
+        field(
+            default=None,
+            metadata={
+                "name": "IndicativeRateRetrievedDate",
+                "type": "Element",
+            },
+        )
     )
     current_date_time: Optional[CurrentDateTime] = field(
         default=None,
@@ -725,14 +726,14 @@ class SpotRateDetail:
             "type": "Element",
         },
     )
-    fxtransaction_type_coded_other: Optional[
-        FxtransactionTypeCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FXTransactionTypeCodedOther",
-            "type": "Element",
-        },
+    fxtransaction_type_coded_other: Optional[FxtransactionTypeCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FXTransactionTypeCodedOther",
+                "type": "Element",
+            },
+        )
     )
     fxquote_type_coded: Optional[FxquoteTypeCoded] = field(
         default=None,

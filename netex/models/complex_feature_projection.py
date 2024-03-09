@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .complex_feature_projection_version_structure import (
     ComplexFeatureProjectionVersionStructure,
 )

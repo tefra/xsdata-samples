@@ -93,8 +93,8 @@ from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreem
 )
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.coverage_type import (
     CoverageType,
-    ExposureType,
     ExposuresType,
+    ExposureType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.coverages_type import (
     CoveragesType,

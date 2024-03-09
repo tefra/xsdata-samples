@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .common_version_frame_structure import CommonVersionFrameStructure
 from .driver_trips_in_frame_rel_structure import DriverTripsInFrameRelStructure
 from .duties_in_frame_rel_structure import DutiesInFrameRelStructure

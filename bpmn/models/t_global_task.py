@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .human_performer import HumanPerformer
 from .performer import Performer
 from .potential_owner import PotentialOwner

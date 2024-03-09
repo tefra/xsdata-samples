@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .multilingual_string import MultilingualString
 from .site_component_version_structure import SiteComponentVersionStructure
 

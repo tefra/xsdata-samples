@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
 from .data_prototype_transformation_props import (

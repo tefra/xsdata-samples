@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlPeriod
+
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.std_alt_as_published_value import (
     StdAltAsPublishedValue,
 )

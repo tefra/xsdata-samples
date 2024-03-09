@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .authority import Authority
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .operator import Operator

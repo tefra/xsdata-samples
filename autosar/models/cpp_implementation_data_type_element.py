@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -154,15 +155,15 @@ class CppImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "CppImplementationDataTypeElement.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["CppImplementationDataTypeElement.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     is_optional: Optional[Boolean] = field(
         default=None,
@@ -172,15 +173,15 @@ class CppImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_reference: Optional[
-        CppImplementationDataTypeElementQualifier
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TYPE-REFERENCE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    type_reference: Optional[CppImplementationDataTypeElementQualifier] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TYPE-REFERENCE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

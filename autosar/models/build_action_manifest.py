@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -190,15 +191,15 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "BuildActionManifest.BlueprintPolicys"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "BLUEPRINT-POLICYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    blueprint_policys: Optional["BuildActionManifest.BlueprintPolicys"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "BLUEPRINT-POLICYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -244,15 +245,15 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_action_refs: Optional[
-        "BuildActionManifest.DynamicActionRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DYNAMIC-ACTION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    dynamic_action_refs: Optional["BuildActionManifest.DynamicActionRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DYNAMIC-ACTION-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,
@@ -309,15 +310,15 @@ class BuildActionManifest:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,

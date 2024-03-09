@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .cell_ref_1 import CellRef1
 from .distance_matrix_element_price import DistanceMatrixElementPrice
 from .distance_matrix_element_price_ref import DistanceMatrixElementPriceRef

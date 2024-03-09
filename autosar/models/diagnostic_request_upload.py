@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -185,15 +186,15 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_range_refs: Optional[
-        "DiagnosticRequestUpload.MemoryRangeRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MEMORY-RANGE-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    memory_range_refs: Optional["DiagnosticRequestUpload.MemoryRangeRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MEMORY-RANGE-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     request_upload_class_ref: Optional[
         "DiagnosticRequestUpload.RequestUploadClassRef"

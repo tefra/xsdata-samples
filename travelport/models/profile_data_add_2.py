@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.accounting_reference_2 import AccountingReference2
 from travelport.models.address_2 import Address2
 from travelport.models.advisory_2 import Advisory2

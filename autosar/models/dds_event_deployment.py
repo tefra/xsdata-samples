@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -94,15 +95,15 @@ class DdsEventDeployment:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DdsEventDeployment.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["DdsEventDeployment.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -168,15 +169,15 @@ class DdsEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transport_protocols: Optional[
-        "DdsEventDeployment.TransportProtocols"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TRANSPORT-PROTOCOLS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    transport_protocols: Optional["DdsEventDeployment.TransportProtocols"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TRANSPORT-PROTOCOLS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

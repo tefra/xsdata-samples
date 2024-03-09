@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .transport_administrative_zone_ref_structure import (
     TransportAdministrativeZoneRefStructure,
 )

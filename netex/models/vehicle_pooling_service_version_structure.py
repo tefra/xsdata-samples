@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .common_vehicle_service_version_structure import (
     CommonVehicleServiceVersionStructure,
 )

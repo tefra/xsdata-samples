@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.agency_payment_history_2 import AgencyPaymentHistory2
 from travelport.models.agent_voucher_history_2 import AgentVoucherHistory2
 from travelport.models.certificate_history_2 import CertificateHistory2

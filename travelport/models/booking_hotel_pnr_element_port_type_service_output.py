@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_hotel_pnr_element_rsp import (
     BookingHotelPnrElementRsp,
 )
@@ -24,15 +26,19 @@ class BookingHotelPnrElementPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        booking_hotel_pnr_element_rsp: None | BookingHotelPnrElementRsp = field(
-            default=None,
-            metadata={
-                "name": "BookingHotelPnrElementRsp",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            },
+        booking_hotel_pnr_element_rsp: None | BookingHotelPnrElementRsp = (
+            field(
+                default=None,
+                metadata={
+                    "name": "BookingHotelPnrElementRsp",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
+                },
+            )
         )
-        fault: None | BookingHotelPnrElementPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | BookingHotelPnrElementPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class BookingHotelPnrElementPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | BookingHotelPnrElementPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | BookingHotelPnrElementPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

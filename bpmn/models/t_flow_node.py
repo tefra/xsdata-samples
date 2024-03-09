@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 from xml.etree.ElementTree import QName
+
 from .t_flow_element import TFlowElement
 
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"

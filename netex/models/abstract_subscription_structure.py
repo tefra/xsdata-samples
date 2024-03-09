@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from .participant_ref_structure import ParticipantRefStructure
 from .subscription_qualifier_structure import SubscriptionQualifierStructure
 

@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.profile_retrieve_history_port_type_service_input import (
     ProfileRetrieveHistoryPortTypeServiceInput,
 )

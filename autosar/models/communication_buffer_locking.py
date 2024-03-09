@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .support_buffer_locking_enum import SupportBufferLockingEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .price_rule_step_result_structure import PriceRuleStepResultStructure
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

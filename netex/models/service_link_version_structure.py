@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .link_version_structure import LinkVersionStructure
 from .operational_context_ref import OperationalContextRef
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure

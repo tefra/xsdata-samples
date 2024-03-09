@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .customer_account_status_ref_structure import (
     CustomerAccountStatusRefStructure,
 )

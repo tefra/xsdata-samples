@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.availability_to_promise_response import (
     AtpcheckType,
     Atpresponse,
@@ -305,21 +306,21 @@ class AvailabilityToPromise:
             "required": True,
         }
     )
-    availability_to_promise_detail: Optional[
-        AvailabilityToPromiseDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AvailabilityToPromiseDetail",
-            "type": "Element",
-        },
+    availability_to_promise_detail: Optional[AvailabilityToPromiseDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AvailabilityToPromiseDetail",
+                "type": "Element",
+            },
+        )
     )
-    availability_to_promise_summary: Optional[
-        AvailabilityToPromiseSummary
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AvailabilityToPromiseSummary",
-            "type": "Element",
-        },
+    availability_to_promise_summary: Optional[AvailabilityToPromiseSummary] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AvailabilityToPromiseSummary",
+                "type": "Element",
+            },
+        )
     )

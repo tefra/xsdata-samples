@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .mode_activation_kind_simple import ModeActivationKindSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

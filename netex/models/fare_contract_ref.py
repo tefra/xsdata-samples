@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .fare_contract_ref_structure import FareContractRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

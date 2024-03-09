@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .customer_purchase_package_ref import CustomerPurchasePackageRef
 from .entity_in_version_structure import DataManagedObjectStructure
 from .marked_as_enumeration import MarkedAsEnumeration
@@ -47,15 +48,15 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_purchase_package_ref: Optional[
-        CustomerPurchasePackageRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CustomerPurchasePackageRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    customer_purchase_package_ref: Optional[CustomerPurchasePackageRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CustomerPurchasePackageRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     marked_as: Optional[MarkedAsEnumeration] = field(
         default=None,

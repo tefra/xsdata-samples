@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .boolean import Boolean
 from .dlt_log_channel import DltLogChannel
 from .string import String

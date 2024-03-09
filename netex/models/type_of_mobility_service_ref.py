@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_mobility_service_ref_structure import (
     TypeOfMobilityServiceRefStructure,
 )

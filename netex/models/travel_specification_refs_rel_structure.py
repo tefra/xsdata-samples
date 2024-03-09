@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .offered_travel_specification_ref import OfferedTravelSpecificationRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .requested_travel_specification_ref import RequestedTravelSpecificationRef

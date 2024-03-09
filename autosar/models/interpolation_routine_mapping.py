@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .interpolation_routine import InterpolationRoutine
 from .ref import Ref
 from .sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum

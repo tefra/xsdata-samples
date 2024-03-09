@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .nv_block_needs_reliability_enum_simple import (
     NvBlockNeedsReliabilityEnumSimple,
 )

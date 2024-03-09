@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .diagram_element import DiagramElement
 from .point import Point
 

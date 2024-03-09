@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.add_traveler import AddTraveler
 from travelport.models.booking_base_req import BookingBaseReq
 from travelport.models.delete_traveler import DeleteTraveler

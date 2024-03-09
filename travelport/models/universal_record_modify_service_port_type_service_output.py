@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.availability_error_info import AvailabilityErrorInfo
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.universal_modify_error_info import (
@@ -38,7 +40,9 @@ class UniversalRecordModifyServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
             },
         )
-        fault: None | UniversalRecordModifyServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | UniversalRecordModifyServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -69,7 +73,10 @@ class UniversalRecordModifyServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | UniversalRecordModifyServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | UniversalRecordModifyServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -95,7 +102,9 @@ class UniversalRecordModifyServicePortTypeServiceOutput:
                         "namespace": "http://www.travelport.com/schema/air_v52_0",
                     },
                 )
-                universal_modify_error_info: None | UniversalModifyErrorInfo = field(
+                universal_modify_error_info: (
+                    None | UniversalModifyErrorInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "UniversalModifyErrorInfo",

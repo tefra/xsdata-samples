@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .pocd_mt000040 import PocdMt000040ClinicalDocument
 
 __NAMESPACE__ = "urn:hl7-org:v3"

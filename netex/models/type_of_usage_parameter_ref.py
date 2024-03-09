@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_usage_parameter_ref_structure import (
     TypeOfUsageParameterRefStructure,
 )

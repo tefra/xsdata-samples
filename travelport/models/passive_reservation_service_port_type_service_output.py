@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.passive_create_reservation_rsp import (
     PassiveCreateReservationRsp,
@@ -24,15 +26,19 @@ class PassiveReservationServicePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        passive_create_reservation_rsp: None | PassiveCreateReservationRsp = field(
-            default=None,
-            metadata={
-                "name": "PassiveCreateReservationRsp",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+        passive_create_reservation_rsp: None | PassiveCreateReservationRsp = (
+            field(
+                default=None,
+                metadata={
+                    "name": "PassiveCreateReservationRsp",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/universal_v52_0",
+                },
+            )
         )
-        fault: None | PassiveReservationServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | PassiveReservationServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class PassiveReservationServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | PassiveReservationServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | PassiveReservationServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

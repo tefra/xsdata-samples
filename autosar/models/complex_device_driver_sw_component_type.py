@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -202,15 +203,15 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "ComplexDeviceDriverSwComponentType.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["ComplexDeviceDriverSwComponentType.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -266,15 +267,15 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: Optional[
-        "ComplexDeviceDriverSwComponentType.PortGroups"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PORT-GROUPS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    port_groups: Optional["ComplexDeviceDriverSwComponentType.PortGroups"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PORT-GROUPS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     unit_group_refs: Optional[
         "ComplexDeviceDriverSwComponentType.UnitGroupRefs"
@@ -369,15 +370,15 @@ class ComplexDeviceDriverSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,

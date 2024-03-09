@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.openlr_area_location_reference import (
     OpenlrAreaLocationReference,
@@ -25,13 +26,13 @@ class OpenlrRectangleLocationReference(OpenlrAreaLocationReference):
             "required": True,
         },
     )
-    openlr_rectangle_location_reference_extension: Optional[
-        ExtensionType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "openlrRectangleLocationReferenceExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    openlr_rectangle_location_reference_extension: Optional[ExtensionType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "openlrRectangleLocationReferenceExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

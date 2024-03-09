@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .coupling_port_fifo import CouplingPortFifo
 from .coupling_port_rate_policy import CouplingPortRatePolicy
 from .coupling_port_scheduler import CouplingPortScheduler
@@ -152,16 +153,16 @@ class CouplingPortDetails:
 
     @dataclass
     class EthernetPriorityRegenerations:
-        ethernet_priority_regeneration: List[
-            EthernetPriorityRegeneration
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ETHERNET-PRIORITY-REGENERATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-                "max_occurs": 8,
-            },
+        ethernet_priority_regeneration: List[EthernetPriorityRegeneration] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ETHERNET-PRIORITY-REGENERATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                    "max_occurs": 8,
+                },
+            )
         )
 
     @dataclass

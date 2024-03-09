@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .waiting_equipment_version_structure import (
     WaitingEquipmentVersionStructure,
 )

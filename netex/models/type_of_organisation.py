@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .type_of_organisation_value_structure import (
     TypeOfOrganisationValueStructure,
 )

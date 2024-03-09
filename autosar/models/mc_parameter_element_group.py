@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .identifier import Identifier
 from .parameter_data_prototype_subtypes_enum import (
     ParameterDataPrototypeSubtypesEnum,
@@ -46,25 +47,25 @@ class McParameterElementGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ram_location_ref: Optional[
-        "McParameterElementGroup.RamLocationRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RAM-LOCATION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ram_location_ref: Optional["McParameterElementGroup.RamLocationRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RAM-LOCATION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    rom_location_ref: Optional[
-        "McParameterElementGroup.RomLocationRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ROM-LOCATION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    rom_location_ref: Optional["McParameterElementGroup.RomLocationRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ROM-LOCATION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

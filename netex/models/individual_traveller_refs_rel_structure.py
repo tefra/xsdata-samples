@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .individual_traveller_ref import IndividualTravellerRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 

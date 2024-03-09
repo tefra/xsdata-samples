@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_cancel_req import AirCancelReq
 from travelport.models.supported_versions import SupportedVersions
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .access_spaces_rel_structure import AccessSpacesRelStructure
 from .accesses_rel_structure import AccessesRelStructure
 from .air_submode import AirSubmode
@@ -231,15 +232,15 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    main_terminus_for_places: Optional[
-        TopographicPlaceRefsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "mainTerminusForPlaces",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    main_terminus_for_places: Optional[TopographicPlaceRefsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "mainTerminusForPlaces",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     limited_use: Optional[LimitedUseTypeEnumeration] = field(
         default=None,
@@ -311,13 +312,13 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_stopping_places: Optional[
-        VehicleStoppingPlacesRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "vehicleStoppingPlaces",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    vehicle_stopping_places: Optional[VehicleStoppingPlacesRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "vehicleStoppingPlaces",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

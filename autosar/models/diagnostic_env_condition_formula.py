@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .diagnostic_env_data_condition import DiagnosticEnvDataCondition
 from .diagnostic_env_mode_condition import DiagnosticEnvModeCondition
 from .diagnostic_logical_operator_enum import DiagnosticLogicalOperatorEnum
@@ -96,23 +97,23 @@ class DiagnosticEnvConditionFormula:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_env_data_condition: List[
-            DiagnosticEnvDataCondition
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DIAGNOSTIC-ENV-DATA-CONDITION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        diagnostic_env_data_condition: List[DiagnosticEnvDataCondition] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DIAGNOSTIC-ENV-DATA-CONDITION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
-        diagnostic_env_mode_condition: List[
-            DiagnosticEnvModeCondition
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DIAGNOSTIC-ENV-MODE-CONDITION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        diagnostic_env_mode_condition: List[DiagnosticEnvModeCondition] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DIAGNOSTIC-ENV-MODE-CONDITION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

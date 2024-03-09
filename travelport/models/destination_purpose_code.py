@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_destination_code import TypeDestinationCode
 from travelport.models.type_purpose_code import TypePurposeCode
 

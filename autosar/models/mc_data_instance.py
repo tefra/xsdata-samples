@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -170,15 +171,15 @@ class McDataInstance:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "McDataInstance.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["McDataInstance.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -286,15 +287,15 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resulting_rpt_sw_prototyping_access: Optional[
-        RptSwPrototypingAccess
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RESULTING-RPT-SW-PROTOTYPING-ACCESS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    resulting_rpt_sw_prototyping_access: Optional[RptSwPrototypingAccess] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RESULTING-RPT-SW-PROTOTYPING-ACCESS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     role: Optional[Identifier] = field(
         default=None,

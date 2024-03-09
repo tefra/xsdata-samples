@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -185,15 +186,15 @@ class DataWriteCompletedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_on_event_ref: Optional[
-        "DataWriteCompletedEvent.StartOnEventRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "START-ON-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    start_on_event_ref: Optional["DataWriteCompletedEvent.StartOnEventRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "START-ON-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -203,15 +204,15 @@ class DataWriteCompletedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_source_ref: Optional[
-        "DataWriteCompletedEvent.EventSourceRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EVENT-SOURCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_source_ref: Optional["DataWriteCompletedEvent.EventSourceRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-SOURCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

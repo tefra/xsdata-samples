@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDuration
+
 from .derived_view_structure import DerivedViewStructure
 from .fare_point_in_pattern_ref import FarePointInPatternRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef

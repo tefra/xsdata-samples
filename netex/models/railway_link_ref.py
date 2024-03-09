@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .railway_link_ref_structure import RailwayLinkRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

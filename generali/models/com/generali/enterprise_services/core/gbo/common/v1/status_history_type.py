@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type_state_transition import (
     StatusHistoryTypeStateTransition,
 )

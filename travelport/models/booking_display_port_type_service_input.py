@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_display_req import BookingDisplayReq
 from travelport.models.session_context import SessionContext
 

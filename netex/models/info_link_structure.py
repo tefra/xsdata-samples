@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .type_of_infolink_enumeration import TypeOfInfolinkEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

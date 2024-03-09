@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -92,15 +93,15 @@ class CouplingPortShaper:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CouplingPortShaper.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["CouplingPortShaper.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -158,15 +159,15 @@ class CouplingPortShaper:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    predecessor_fifo_ref: Optional[
-        "CouplingPortShaper.PredecessorFifoRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PREDECESSOR-FIFO-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    predecessor_fifo_ref: Optional["CouplingPortShaper.PredecessorFifoRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PREDECESSOR-FIFO-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

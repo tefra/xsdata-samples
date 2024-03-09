@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .accessibility_info_facility_list import AccessibilityInfoFacilityList
 from .accessibility_tool_list import AccessibilityToolList
 from .assistance_facility_list import AssistanceFacilityList
@@ -168,15 +169,15 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_comms_facility_list: Optional[
-        PassengerCommsFacilityList
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PassengerCommsFacilityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    passenger_comms_facility_list: Optional[PassengerCommsFacilityList] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PassengerCommsFacilityList",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     passenger_information_equipment_list: List[
         PassengerInformationEquipmentEnumeration
@@ -231,13 +232,13 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketing_service_facility_list: Optional[
-        TicketingServiceFacilityList
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TicketingServiceFacilityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    ticketing_service_facility_list: Optional[TicketingServiceFacilityList] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TicketingServiceFacilityList",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

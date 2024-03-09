@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_implementation_data_type_subtypes_enum import (
     AbstractImplementationDataTypeSubtypesEnum,
 )
@@ -246,15 +247,15 @@ class PersistencyKeyValueStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: Optional[
-        "PersistencyKeyValueStorageInterface.Namespaces"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "NAMESPACES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    namespaces: Optional["PersistencyKeyValueStorageInterface.Namespaces"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "NAMESPACES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     service_kind: Optional[ServiceProviderEnum] = field(
         default=None,
@@ -290,15 +291,15 @@ class PersistencyKeyValueStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_strategy: Optional[
-        PersistencyCollectionLevelUpdateStrategyEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "UPDATE-STRATEGY",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    update_strategy: Optional[PersistencyCollectionLevelUpdateStrategyEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "UPDATE-STRATEGY",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     data_elements: Optional[
         "PersistencyKeyValueStorageInterface.DataElements"
@@ -375,15 +376,15 @@ class PersistencyKeyValueStorageInterface:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,

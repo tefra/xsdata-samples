@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_service_feature_value_structure import (
     TypeOfServiceFeatureValueStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .data_object_request import DataObjectRequest
 from .service_request_structure import ServiceRequestStructure
 

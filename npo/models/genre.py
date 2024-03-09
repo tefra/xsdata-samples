@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from npo.models.genre_type_2 import GenreType2
 
 __NAMESPACE__ = "urn:vpro:pages:2013"

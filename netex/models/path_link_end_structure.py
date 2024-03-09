@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .entrance_ref_structure import EntranceRefStructure
 from .level_ref_structure import LevelRefStructure
 from .place_ref_structure import PlaceRefStructure

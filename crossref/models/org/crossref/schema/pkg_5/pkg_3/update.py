@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDate
+
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.cm_update_type import (
     CmUpdateType,
 )

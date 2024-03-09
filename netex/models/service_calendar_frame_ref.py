@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .service_calendar_frame_ref_structure import (
     ServiceCalendarFrameRefStructure,
 )

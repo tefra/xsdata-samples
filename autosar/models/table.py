@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .caption import Caption
 from .chapter_enum_break_simple import ChapterEnumBreakSimple

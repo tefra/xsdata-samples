@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.price_check_result import ErrorInfo
 from xcbl.models.sourcing_result import (
     LineItemNumberReference,

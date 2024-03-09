@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.uimeta_data_delete_port_type_service_input import (
     UimetaDataDeletePortTypeServiceInput,
 )

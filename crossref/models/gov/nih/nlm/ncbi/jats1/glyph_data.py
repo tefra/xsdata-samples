@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from crossref.models.xml.space_value import SpaceValue
 
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"

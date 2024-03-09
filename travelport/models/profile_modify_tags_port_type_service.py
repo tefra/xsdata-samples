@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.profile_modify_tags_port_type_service_input import (
     ProfileModifyTagsPortTypeServiceInput,
 )

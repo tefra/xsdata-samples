@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_core_req_6 import BaseCoreReq6
 from travelport.models.override_pcc_6 import OverridePcc6
 

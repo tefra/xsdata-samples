@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_signal_based_to_i_signal_triggering_mapping_subtypes_enum import (
     AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum,
 )
@@ -158,15 +159,15 @@ class SignalServiceTranslationEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SignalServiceTranslationEventProps.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["SignalServiceTranslationEventProps.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     element_propss: Optional[
         "SignalServiceTranslationEventProps.ElementPropss"

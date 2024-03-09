@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .eth_global_time_message_format_enum_simple import (
     EthGlobalTimeMessageFormatEnumSimple,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .t_standard_loop_characteristics import TStandardLoopCharacteristics
 
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"

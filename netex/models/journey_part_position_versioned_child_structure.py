@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .entity_in_version_structure import VersionedChildStructure
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .journey_part_ref_structure import JourneyPartRefStructure

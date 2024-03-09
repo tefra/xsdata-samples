@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from crossref.models.gov.nih.nlm.ncbi.jats1.award_group import AwardGroup
 from crossref.models.gov.nih.nlm.ncbi.jats1.resource_group import ResourceGroup
 from crossref.models.gov.nih.nlm.ncbi.jats1.support_description import (

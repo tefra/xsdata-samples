@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from crossref.models.gov.nih.nlm.ncbi.jats1.contrib_id import ContribId
 from crossref.models.gov.nih.nlm.ncbi.jats1.name import Name
 from crossref.models.gov.nih.nlm.ncbi.jats1.name_alternatives import (

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_sharing_place_assignment_version_structure import (
     VehicleSharingPlaceAssignmentVersionStructure,
 )

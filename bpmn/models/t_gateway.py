@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .t_flow_node import TFlowNode
 from .t_gateway_direction import TGatewayDirection
 

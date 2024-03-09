@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
     BaseIdentifiedComponentType,
 )

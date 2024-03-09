@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -183,15 +184,15 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    recovery_action_iref: Optional[
-        PPortPrototypeInExecutableInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RECOVERY-ACTION-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    recovery_action_iref: Optional[PPortPrototypeInExecutableInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RECOVERY-ACTION-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     recovery_notification_ref: Optional[
         "RecoveryNotificationToPPortPrototypeMapping.RecoveryNotificationRef"

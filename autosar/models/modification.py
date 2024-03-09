@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

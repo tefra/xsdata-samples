@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .group_of_operators import GroupOfOperators
 from .group_of_operators_ref import GroupOfOperatorsRef
 from .multilingual_string import MultilingualString

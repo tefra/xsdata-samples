@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_exchange_ticketing_rsp import (
     AirExchangeTicketingRsp,
 )
@@ -65,7 +67,10 @@ class AirExchangeTicketingPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirExchangeTicketingPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | AirExchangeTicketingPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

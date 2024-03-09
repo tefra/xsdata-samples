@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .error_description_structure import ErrorDescriptionStructure
 from .message_qualifier_structure import MessageQualifierStructure

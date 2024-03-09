@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from crossref.models.org.crossref.relations.related_item import RelatedItem
 
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"

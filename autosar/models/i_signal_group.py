@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -204,15 +205,15 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_group_ref: Optional[
-        "ISignalGroup.SystemSignalGroupRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SYSTEM-SIGNAL-GROUP-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    system_signal_group_ref: Optional["ISignalGroup.SystemSignalGroupRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SYSTEM-SIGNAL-GROUP-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     transformation_i_signal_propss: Optional[
         "ISignalGroup.TransformationISignalPropss"

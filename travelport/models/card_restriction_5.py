@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.required_field_5 import RequiredField5
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"

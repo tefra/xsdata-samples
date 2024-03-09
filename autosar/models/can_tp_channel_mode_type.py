@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .can_tp_channel_mode_type_simple import CanTpChannelModeTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

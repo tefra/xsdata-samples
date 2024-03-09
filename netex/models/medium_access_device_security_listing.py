@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .medium_access_device_security_listing_versioned_child_structure import (
     MediumAccessDeviceSecurityListingVersionedChildStructure,
 )

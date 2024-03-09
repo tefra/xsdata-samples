@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .dhcp_server_configuration import DhcpServerConfiguration
 from .do_ip_entity import DoIpEntity
 from .time_synchronization import TimeSynchronization

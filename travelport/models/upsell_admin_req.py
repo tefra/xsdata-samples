@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_upsell_criteria import AirUpsellCriteria
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.hotel_upsell_criteria import HotelUpsellCriteria

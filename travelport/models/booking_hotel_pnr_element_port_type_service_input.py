@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_hotel_pnr_element_req import (
     BookingHotelPnrElementReq,
 )
@@ -42,11 +44,13 @@ class BookingHotelPnrElementPortTypeServiceInput:
 
     @dataclass
     class Body:
-        booking_hotel_pnr_element_req: None | BookingHotelPnrElementReq = field(
-            default=None,
-            metadata={
-                "name": "BookingHotelPnrElementReq",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            },
+        booking_hotel_pnr_element_req: None | BookingHotelPnrElementReq = (
+            field(
+                default=None,
+                metadata={
+                    "name": "BookingHotelPnrElementReq",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
+                },
+            )
         )

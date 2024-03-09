@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .acl_operation_subtypes_enum import AclOperationSubtypesEnum
 from .admin_data import (
     AdminData,
@@ -189,15 +190,15 @@ class AclOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implied_operation_refs: Optional[
-        "AclOperation.ImpliedOperationRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "IMPLIED-OPERATION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    implied_operation_refs: Optional["AclOperation.ImpliedOperationRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "IMPLIED-OPERATION-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,
@@ -254,15 +255,15 @@ class AclOperation:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,

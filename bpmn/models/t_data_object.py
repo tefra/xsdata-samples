@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xml.etree.ElementTree import QName
+
 from .data_state import DataState
 from .t_flow_element import TFlowElement
 

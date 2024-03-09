@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .physical_dimension_subtypes_enum import PhysicalDimensionSubtypesEnum
 from .ref import Ref
 

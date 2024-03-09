@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .service_frame_ref_structure import ServiceFrameRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.single_profile_migration_rsp_1 import (
     SingleProfileMigrationRsp1,
@@ -24,15 +26,19 @@ class SingleProfileMigrationPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        single_profile_migration_rsp: None | SingleProfileMigrationRsp1 = field(
-            default=None,
-            metadata={
-                "name": "SingleProfileMigrationRsp",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            },
+        single_profile_migration_rsp: None | SingleProfileMigrationRsp1 = (
+            field(
+                default=None,
+                metadata={
+                    "name": "SingleProfileMigrationRsp",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
+                },
+            )
         )
-        fault: None | SingleProfileMigrationPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | SingleProfileMigrationPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class SingleProfileMigrationPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | SingleProfileMigrationPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | SingleProfileMigrationPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

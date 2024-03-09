@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.profile_modify_template_req import (
     ProfileModifyTemplateReq,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -176,15 +177,15 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_ref: Optional[
-        "SomeipProvidedEventGroup.EventGroupRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EVENT-GROUP-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_group_ref: Optional["SomeipProvidedEventGroup.EventGroupRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-GROUP-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     event_multicast_udp_port: Optional[PositiveInteger] = field(
         default=None,
@@ -286,13 +287,13 @@ class SomeipProvidedEventGroup:
 
     @dataclass
     class SdServerEventGroupTimingConfigRef(Ref):
-        dest: Optional[
-            SomeipSdServerEventGroupTimingConfigSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[SomeipSdServerEventGroupTimingConfigSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     AdExplicit,
     Ce,
@@ -436,16 +437,16 @@ class CoctMt500000UvEmployment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    employer_organization: Optional[
-        CoctMt500000UvEmployerOrganization
-    ] = field(
-        default=None,
-        metadata={
-            "name": "employerOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    employer_organization: Optional[CoctMt500000UvEmployerOrganization] = (
+        field(
+            default=None,
+            metadata={
+                "name": "employerOrganization",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -493,16 +494,16 @@ class CoctMt500000UvLimitation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    accommodation_coverage: Optional[
-        CoctMt500000UvAccommodationCoverage
-    ] = field(
-        default=None,
-        metadata={
-            "name": "accommodationCoverage",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    accommodation_coverage: Optional[CoctMt500000UvAccommodationCoverage] = (
+        field(
+            default=None,
+            metadata={
+                "name": "accommodationCoverage",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from .extensions_1 import Extensions1
 from .response_endpoint_structure import ResponseEndpointStructure
 from .response_status import ResponseStatus

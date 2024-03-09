@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.concentration_of_vehicles_value import (
     ConcentrationOfVehiclesValue,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .shelter_equipment_version_structure import (
     ShelterEquipmentVersionStructure,
 )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from xsdata.models.datatype import XmlDuration, XmlTime
+
 from .booking_access_enumeration import BookingAccessEnumeration
 from .booking_method_enumeration import BookingMethodEnumeration
 from .compound_train_ref import CompoundTrainRef

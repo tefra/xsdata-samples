@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .passing_time_view_structure import PassingTimeViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

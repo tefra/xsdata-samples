@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -169,15 +170,15 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    environment_variables: Optional[
-        "StartupConfig.EnvironmentVariables"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ENVIRONMENT-VARIABLES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    environment_variables: Optional["StartupConfig.EnvironmentVariables"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ENVIRONMENT-VARIABLES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     execution_error_ref: Optional["StartupConfig.ExecutionErrorRef"] = field(
         default=None,

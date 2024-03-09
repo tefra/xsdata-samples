@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from xsdata.models.datatype import XmlDateTime
+
 from reqif.models.org.w3.xml.pkg_1998.namespace import LangValue
 from reqif.models.xtml import (
     XhtmlDivType,
@@ -371,15 +373,15 @@ class AttributeDefinitionBoolean:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-BOOLEAN"
 
-    alternative_id: Optional[
-        "AttributeDefinitionBoolean.AlternativeId"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ALTERNATIVE-ID",
-            "type": "Element",
-            "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        },
+    alternative_id: Optional["AttributeDefinitionBoolean.AlternativeId"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ALTERNATIVE-ID",
+                "type": "Element",
+                "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+            },
+        )
     )
     default_value: Optional["AttributeDefinitionBoolean.DefaultValue"] = field(
         default=None,
@@ -579,15 +581,15 @@ class AttributeDefinitionEnumeration:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-ENUMERATION"
 
-    default_value: Optional[
-        "AttributeDefinitionEnumeration.DefaultValue"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DEFAULT-VALUE",
-            "type": "Element",
-            "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        },
+    default_value: Optional["AttributeDefinitionEnumeration.DefaultValue"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DEFAULT-VALUE",
+                "type": "Element",
+                "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+            },
+        )
     )
     alternative_id: Optional[
         "AttributeDefinitionEnumeration.AlternativeId"
@@ -656,15 +658,15 @@ class AttributeDefinitionEnumeration:
 
     @dataclass
     class DefaultValue:
-        attribute_value_enumeration: Optional[
-            AttributeValueEnumeration
-        ] = field(
-            default=None,
-            metadata={
-                "name": "ATTRIBUTE-VALUE-ENUMERATION",
-                "type": "Element",
-                "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            },
+        attribute_value_enumeration: Optional[AttributeValueEnumeration] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "ATTRIBUTE-VALUE-ENUMERATION",
+                    "type": "Element",
+                    "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                },
+            )
         )
 
     @dataclass
@@ -696,15 +698,15 @@ class AttributeDefinitionInteger:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-INTEGER"
 
-    alternative_id: Optional[
-        "AttributeDefinitionInteger.AlternativeId"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ALTERNATIVE-ID",
-            "type": "Element",
-            "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        },
+    alternative_id: Optional["AttributeDefinitionInteger.AlternativeId"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ALTERNATIVE-ID",
+                "type": "Element",
+                "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+            },
+        )
     )
     default_value: Optional["AttributeDefinitionInteger.DefaultValue"] = field(
         default=None,
@@ -904,15 +906,15 @@ class AttributeDefinitionString:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-STRING"
 
-    alternative_id: Optional[
-        "AttributeDefinitionString.AlternativeId"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ALTERNATIVE-ID",
-            "type": "Element",
-            "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        },
+    alternative_id: Optional["AttributeDefinitionString.AlternativeId"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ALTERNATIVE-ID",
+                "type": "Element",
+                "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+            },
+        )
     )
     default_value: Optional["AttributeDefinitionString.DefaultValue"] = field(
         default=None,
@@ -1009,15 +1011,15 @@ class DatatypeDefinitionBoolean:
     class Meta:
         name = "DATATYPE-DEFINITION-BOOLEAN"
 
-    alternative_id: Optional[
-        "DatatypeDefinitionBoolean.AlternativeId"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ALTERNATIVE-ID",
-            "type": "Element",
-            "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        },
+    alternative_id: Optional["DatatypeDefinitionBoolean.AlternativeId"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ALTERNATIVE-ID",
+                "type": "Element",
+                "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+            },
+        )
     )
     desc: Optional[str] = field(
         default=None,
@@ -1123,15 +1125,15 @@ class DatatypeDefinitionInteger:
     class Meta:
         name = "DATATYPE-DEFINITION-INTEGER"
 
-    alternative_id: Optional[
-        "DatatypeDefinitionInteger.AlternativeId"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ALTERNATIVE-ID",
-            "type": "Element",
-            "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        },
+    alternative_id: Optional["DatatypeDefinitionInteger.AlternativeId"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ALTERNATIVE-ID",
+                "type": "Element",
+                "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+            },
+        )
     )
     desc: Optional[str] = field(
         default=None,
@@ -1482,16 +1484,16 @@ class RelationGroup:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    source_specification: Optional[
-        "RelationGroup.SourceSpecification"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SOURCE-SPECIFICATION",
-            "type": "Element",
-            "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
-        },
+    source_specification: Optional["RelationGroup.SourceSpecification"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SOURCE-SPECIFICATION",
+                "type": "Element",
+                "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
+            },
+        )
     )
     spec_relations: Optional["RelationGroup.SpecRelations"] = field(
         default=None,
@@ -1501,16 +1503,16 @@ class RelationGroup:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    target_specification: Optional[
-        "RelationGroup.TargetSpecification"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TARGET-SPECIFICATION",
-            "type": "Element",
-            "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
-        },
+    target_specification: Optional["RelationGroup.TargetSpecification"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-SPECIFICATION",
+                "type": "Element",
+                "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+                "required": True,
+            },
+        )
     )
     type_value: Optional["RelationGroup.TypeType"] = field(
         default=None,
@@ -1866,15 +1868,15 @@ class DatatypeDefinitionEnumeration:
     class Meta:
         name = "DATATYPE-DEFINITION-ENUMERATION"
 
-    alternative_id: Optional[
-        "DatatypeDefinitionEnumeration.AlternativeId"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ALTERNATIVE-ID",
-            "type": "Element",
-            "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        },
+    alternative_id: Optional["DatatypeDefinitionEnumeration.AlternativeId"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ALTERNATIVE-ID",
+                "type": "Element",
+                "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
+            },
+        )
     )
     specified_values: Optional[
         "DatatypeDefinitionEnumeration.SpecifiedValues"

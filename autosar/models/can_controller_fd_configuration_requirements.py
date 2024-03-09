@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .float_mod import Float
 from .integer import Integer

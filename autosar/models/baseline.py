@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .documentation_subtypes_enum import DocumentationSubtypesEnum
 from .ref import Ref
 from .sdg_def_subtypes_enum import SdgDefSubtypesEnum
@@ -47,15 +48,15 @@ class Baseline:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    custom_specification_refs: Optional[
-        "Baseline.CustomSpecificationRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CUSTOM-SPECIFICATION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    custom_specification_refs: Optional["Baseline.CustomSpecificationRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CUSTOM-SPECIFICATION-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     custom_sdg_def_refs: Optional["Baseline.CustomSdgDefRefs"] = field(
         default=None,

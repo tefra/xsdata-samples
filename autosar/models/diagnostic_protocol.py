@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -117,15 +118,15 @@ class DiagnosticProtocol:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticProtocol.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["DiagnosticProtocol.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -209,15 +210,15 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    send_resp_pend_on_trans_to_boot: Optional[
-        BooleanValueVariationPoint
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SEND-RESP-PEND-ON-TRANS-TO-BOOT",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    send_resp_pend_on_trans_to_boot: Optional[BooleanValueVariationPoint] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SEND-RESP-PEND-ON-TRANS-TO-BOOT",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     service_tables: Optional["DiagnosticProtocol.ServiceTables"] = field(
         default=None,

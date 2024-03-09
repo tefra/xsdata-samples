@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from crossref.models.xlink.actuate_type import ActuateType
 from crossref.models.xlink.show_type import ShowType
 from crossref.models.xlink.type_type import TypeType

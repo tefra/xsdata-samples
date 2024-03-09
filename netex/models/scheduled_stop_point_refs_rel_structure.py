@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .scheduled_stop_point_ref import ScheduledStopPointRef

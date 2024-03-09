@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .authenticated_request_structure import AuthenticatedRequestStructure
 from .empty_type_1 import EmptyType1
 from .extensions_1 import Extensions1

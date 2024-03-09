@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .flexible_stop_place_version_structure import (
     FlexibleStopPlaceVersionStructure,
 )

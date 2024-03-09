@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDuration
+
 from travelport.models.booking_info import BookingInfo
 from travelport.models.connection import Connection
 

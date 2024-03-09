@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .phm_health_channel_status_subtypes_enum import (
     PhmHealthChannelStatusSubtypesEnum,
 )
@@ -42,15 +43,15 @@ class HealthChannelExternalReportedStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    status_ref: Optional[
-        "HealthChannelExternalReportedStatus.StatusRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "STATUS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    status_ref: Optional["HealthChannelExternalReportedStatus.StatusRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "STATUS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.base_air_exchange_quote_req import (
     BaseAirExchangeQuoteReq,
 )

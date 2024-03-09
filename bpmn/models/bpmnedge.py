@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xml.etree.ElementTree import QName
+
 from .bpmnlabel import Bpmnlabel
 from .labeled_edge import LabeledEdge
 from .message_visible_kind import MessageVisibleKind

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .route_link_version_structure import RouteLinkVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

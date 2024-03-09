@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .headway_use_enumeration import HeadwayUseEnumeration
 from .journey_frequency_group_version_structure import (
     JourneyFrequencyGroupVersionStructure,

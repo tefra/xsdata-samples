@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.associated_remark_4 import AssociatedRemark4
 from travelport.models.passive_remark import PassiveRemark
 from travelport.models.passive_segment import PassiveSegment

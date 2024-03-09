@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .area_enum_nohref_simple import AreaEnumNohrefSimple
 from .area_enum_shape_simple import AreaEnumShapeSimple
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .direction_ref import DirectionRef
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .flexible_line_ref import FlexibleLineRef

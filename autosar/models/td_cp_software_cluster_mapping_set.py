@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -247,13 +248,13 @@ class TdCpSoftwareClusterMappingSet:
 
     @dataclass
     class TdCpSoftwareClusterToTdMappings:
-        td_cp_software_cluster_mapping: List[
-            TdCpSoftwareClusterMapping
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-CP-SOFTWARE-CLUSTER-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_cp_software_cluster_mapping: List[TdCpSoftwareClusterMapping] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-CP-SOFTWARE-CLUSTER-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

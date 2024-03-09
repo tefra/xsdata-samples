@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -305,15 +306,15 @@ class CpSoftwareClusterBinaryManifestDescriptor:
 
     @dataclass
     class MetaDataFields:
-        binary_manifest_meta_data_field: List[
-            BinaryManifestMetaDataField
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BINARY-MANIFEST-META-DATA-FIELD",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        binary_manifest_meta_data_field: List[BinaryManifestMetaDataField] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BINARY-MANIFEST-META-DATA-FIELD",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

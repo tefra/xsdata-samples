@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_merchandising_fulfillment_rsp import (
     AirMerchandisingFulfillmentRsp,
 )
@@ -24,7 +26,9 @@ class AirMerchandisingFulfillmentPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_merchandising_fulfillment_rsp: None | AirMerchandisingFulfillmentRsp = field(
+        air_merchandising_fulfillment_rsp: (
+            None | AirMerchandisingFulfillmentRsp
+        ) = field(
             default=None,
             metadata={
                 "name": "AirMerchandisingFulfillmentRsp",
@@ -32,7 +36,9 @@ class AirMerchandisingFulfillmentPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
             },
         )
-        fault: None | AirMerchandisingFulfillmentPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | AirMerchandisingFulfillmentPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class AirMerchandisingFulfillmentPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirMerchandisingFulfillmentPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | AirMerchandisingFulfillmentPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

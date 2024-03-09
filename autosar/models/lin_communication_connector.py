@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -384,13 +385,13 @@ class LinCommunicationConnector:
 
     @dataclass
     class LinOrderedConfigurableFrames:
-        lin_ordered_configurable_frame: List[
-            LinOrderedConfigurableFrame
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "LIN-ORDERED-CONFIGURABLE-FRAME",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        lin_ordered_configurable_frame: List[LinOrderedConfigurableFrame] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "LIN-ORDERED-CONFIGURABLE-FRAME",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

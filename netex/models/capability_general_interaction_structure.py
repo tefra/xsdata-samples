@@ -17,16 +17,16 @@ class CapabilityGeneralInteractionStructure:
             "required": True,
         },
     )
-    delivery: Optional[
-        "CapabilityGeneralInteractionStructure.Delivery"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "Delivery",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
-        },
+    delivery: Optional["CapabilityGeneralInteractionStructure.Delivery"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "Delivery",
+                "type": "Element",
+                "namespace": "http://www.siri.org.uk/siri",
+                "required": True,
+            },
+        )
     )
     multipart_despatch: bool = field(
         default=True,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .class_refs_rel_structure import ClassRefsRelStructure
 from .customer_account_status import CustomerAccountStatus
 from .type_of_access_right_assignment import TypeOfAccessRightAssignment

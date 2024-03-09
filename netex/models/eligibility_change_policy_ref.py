@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .eligibility_change_policy_ref_structure import (
     EligibilityChangePolicyRefStructure,
 )

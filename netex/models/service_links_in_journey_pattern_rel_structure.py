@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .service_link_in_journey_pattern import ServiceLinkInJourneyPattern
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

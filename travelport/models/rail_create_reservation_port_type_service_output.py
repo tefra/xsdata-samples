@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.rail_create_reservation_rsp import (
     RailCreateReservationRsp,
@@ -65,7 +67,10 @@ class RailCreateReservationPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | RailCreateReservationPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | RailCreateReservationPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

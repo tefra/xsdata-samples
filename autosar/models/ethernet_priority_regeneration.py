@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .identifier import Identifier
 from .positive_integer import PositiveInteger
 from .short_name_fragment import ShortNameFragment

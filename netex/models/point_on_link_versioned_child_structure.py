@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
+
 from .activation_point_1 import ActivationPoint1
 from .activation_point_ref import ActivationPointRef
 from .beacon_point import BeaconPoint

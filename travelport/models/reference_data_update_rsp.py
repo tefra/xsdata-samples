@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.base_rsp_1 import BaseRsp1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"

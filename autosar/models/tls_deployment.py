@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -213,15 +214,15 @@ class TlsDeployment:
 
     @dataclass
     class PskIdentityToKeySlotMappings:
-        psk_identity_to_key_slot_mapping: List[
-            PskIdentityToKeySlotMapping
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PSK-IDENTITY-TO-KEY-SLOT-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        psk_identity_to_key_slot_mapping: List[PskIdentityToKeySlotMapping] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PSK-IDENTITY-TO-KEY-SLOT-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

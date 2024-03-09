@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -177,15 +178,15 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    authentication_ref: Optional[
-        "TlsCryptoCipherSuite.AuthenticationRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AUTHENTICATION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    authentication_ref: Optional["TlsCryptoCipherSuite.AuthenticationRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AUTHENTICATION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     certificate_ref: Optional["TlsCryptoCipherSuite.CertificateRef"] = field(
         default=None,
@@ -203,25 +204,25 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_exchange_refs: Optional[
-        "TlsCryptoCipherSuite.KeyExchangeRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "KEY-EXCHANGE-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    key_exchange_refs: Optional["TlsCryptoCipherSuite.KeyExchangeRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "KEY-EXCHANGE-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    pre_shared_key_ref: Optional[
-        "TlsCryptoCipherSuite.PreSharedKeyRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PRE-SHARED-KEY-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    pre_shared_key_ref: Optional["TlsCryptoCipherSuite.PreSharedKeyRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PRE-SHARED-KEY-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     priority: Optional[PositiveInteger] = field(
         default=None,

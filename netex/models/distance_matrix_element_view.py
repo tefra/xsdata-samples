@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .distance_matrix_element_derived_view_structure import (
     DistanceMatrixElementDerivedViewStructure,
 )

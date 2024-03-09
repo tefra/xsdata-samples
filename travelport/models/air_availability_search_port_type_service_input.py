@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.availability_search_req import AvailabilitySearchReq
 from travelport.models.session_context import SessionContext
 

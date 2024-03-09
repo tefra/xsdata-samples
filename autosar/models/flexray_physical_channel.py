@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -181,15 +182,15 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_triggerings: Optional[
-        "FlexrayPhysicalChannel.FrameTriggerings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FRAME-TRIGGERINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    frame_triggerings: Optional["FlexrayPhysicalChannel.FrameTriggerings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FRAME-TRIGGERINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     i_signal_triggerings: Optional[
         "FlexrayPhysicalChannel.ISignalTriggerings"

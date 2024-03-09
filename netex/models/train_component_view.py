@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .train_component_derived_view_structure import (
     TrainComponentDerivedViewStructure,
 )

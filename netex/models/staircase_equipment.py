@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .staircase_equipment_version_structure import (
     StaircaseEquipmentVersionStructure,
 )

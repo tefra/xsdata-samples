@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .rte_event_in_ecu_instance_ref import RteEventInEcuInstanceRef
 from .variable_access_in_ecu_instance_ref import VariableAccessInEcuInstanceRef
 

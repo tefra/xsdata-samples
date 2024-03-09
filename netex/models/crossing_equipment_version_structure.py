@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
 from .crossing_type_enumeration import CrossingTypeEnumeration
 from .tactile_warning_strip_enumeration import TactileWarningStripEnumeration

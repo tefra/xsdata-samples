@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .place_lighting_version_structure import PlaceLightingVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

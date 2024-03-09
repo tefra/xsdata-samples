@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_machine_readability_version_structure import (
     TypeOfMachineReadabilityVersionStructure,
 )

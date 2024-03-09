@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -147,15 +148,15 @@ class DiagnosticPowertrainFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticPowertrainFreezeFrame.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["DiagnosticPowertrainFreezeFrame.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -220,15 +221,15 @@ class DiagnosticPowertrainFreezeFrame:
 
     @dataclass
     class PidRefs:
-        pid_ref: List[
-            "DiagnosticPowertrainFreezeFrame.PidRefs.PidRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PID-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        pid_ref: List["DiagnosticPowertrainFreezeFrame.PidRefs.PidRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PID-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .point_of_interest_vehicle_entrance_ref_structure import (
     PointOfInterestVehicleEntranceRefStructure,
 )

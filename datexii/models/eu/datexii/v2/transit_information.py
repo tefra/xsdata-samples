@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.non_road_event_information import (
@@ -63,16 +65,16 @@ class TransitInformation(NonRoadEventInformation):
             "max_length": 1024,
         },
     )
-    transit_service_information: Optional[
-        TransitServiceInformationEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "transitServiceInformation",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    transit_service_information: Optional[TransitServiceInformationEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "transitServiceInformation",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     transit_service_type: Optional[TransitServiceTypeEnum] = field(
         default=None,

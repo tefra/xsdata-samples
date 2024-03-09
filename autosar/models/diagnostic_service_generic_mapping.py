@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -155,15 +156,15 @@ class DiagnosticServiceGenericMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticServiceGenericMapping.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["DiagnosticServiceGenericMapping.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -183,15 +184,15 @@ class DiagnosticServiceGenericMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: Optional[
-        "DiagnosticServiceGenericMapping.ProcessRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PROCESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    process_ref: Optional["DiagnosticServiceGenericMapping.ProcessRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PROCESS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     swc_service_dependency_in_executable_iref: Optional[
         SwcServiceDependencyInExecutableInstanceRef

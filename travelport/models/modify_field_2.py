@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_action_2 import TypeAction2
 from travelport.models.type_custom_field_data_format_2 import (
     TypeCustomFieldDataFormat2,

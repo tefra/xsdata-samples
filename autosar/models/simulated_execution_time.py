@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -176,15 +177,15 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_ref: Optional[
-        "SimulatedExecutionTime.ExclusiveAreaRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EXCLUSIVE-AREA-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    exclusive_area_ref: Optional["SimulatedExecutionTime.ExclusiveAreaRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EXCLUSIVE-AREA-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     executable_entity_ref: Optional[
         "SimulatedExecutionTime.ExecutableEntityRef"

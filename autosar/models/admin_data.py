@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from .caption import Caption
 from .category_string import CategoryString
 from .chapter_enum_break_simple import ChapterEnumBreakSimple
@@ -1923,15 +1924,15 @@ class StructuredReq:
 
     @dataclass
     class TestedItemRefs:
-        tested_item_ref: List[
-            "StructuredReq.TestedItemRefs.TestedItemRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TESTED-ITEM-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        tested_item_ref: List["StructuredReq.TestedItemRefs.TestedItemRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TESTED-ITEM-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

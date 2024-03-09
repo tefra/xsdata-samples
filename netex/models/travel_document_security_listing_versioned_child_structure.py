@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .security_listing_versioned_child_structure import (
     SecurityListingVersionedChildStructure,
 )

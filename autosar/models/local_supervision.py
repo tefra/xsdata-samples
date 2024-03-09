@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -102,15 +103,15 @@ class LocalSupervision:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "LocalSupervision.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["LocalSupervision.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -186,15 +187,15 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    logical_supervisions: Optional[
-        "LocalSupervision.LogicalSupervisions"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "LOGICAL-SUPERVISIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    logical_supervisions: Optional["LocalSupervision.LogicalSupervisions"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "LOGICAL-SUPERVISIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     transitions: Optional["LocalSupervision.Transitions"] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.payment_request_acknowledgment import (
     FinancialInstitutionDetail,
     PaymentDocumentId,
@@ -542,14 +543,14 @@ class FinancialChargesAllocation:
             "required": True,
         }
     )
-    charge_regulation_coded_other: Optional[
-        ChargeRegulationCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ChargeRegulationCodedOther",
-            "type": "Element",
-        },
+    charge_regulation_coded_other: Optional[ChargeRegulationCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ChargeRegulationCodedOther",
+                "type": "Element",
+            },
+        )
     )
     fee_amount: Optional[FeeAmount] = field(
         default=None,
@@ -682,14 +683,14 @@ class LegalReportingInformation:
             "required": True,
         }
     )
-    legal_reporting_payment_amount: Optional[
-        LegalReportingPaymentAmount
-    ] = field(
-        default=None,
-        metadata={
-            "name": "LegalReportingPaymentAmount",
-            "type": "Element",
-        },
+    legal_reporting_payment_amount: Optional[LegalReportingPaymentAmount] = (
+        field(
+            default=None,
+            metadata={
+                "name": "LegalReportingPaymentAmount",
+                "type": "Element",
+            },
+        )
     )
     legal_reporting_supplying_country: Optional[
         LegalReportingSupplyingCountry
@@ -700,14 +701,14 @@ class LegalReportingInformation:
             "type": "Element",
         },
     )
-    legal_reporting_payee_country: Optional[
-        LegalReportingPayeeCountry
-    ] = field(
-        default=None,
-        metadata={
-            "name": "LegalReportingPayeeCountry",
-            "type": "Element",
-        },
+    legal_reporting_payee_country: Optional[LegalReportingPayeeCountry] = (
+        field(
+            default=None,
+            metadata={
+                "name": "LegalReportingPayeeCountry",
+                "type": "Element",
+            },
+        )
     )
     legal_reporting_import_date: Optional[LegalReportingImportDate] = field(
         default=None,
@@ -867,14 +868,14 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    intra_company_payment_indicator: Optional[
-        IntraCompanyPaymentIndicator
-    ] = field(
-        default=None,
-        metadata={
-            "name": "IntraCompanyPaymentIndicator",
-            "type": "Element",
-        },
+    intra_company_payment_indicator: Optional[IntraCompanyPaymentIndicator] = (
+        field(
+            default=None,
+            metadata={
+                "name": "IntraCompanyPaymentIndicator",
+                "type": "Element",
+            },
+        )
     )
     payment_mean_coded: PaymentMeanCoded = field(
         metadata={
@@ -925,14 +926,14 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    list_of_rate_of_exchange_detail: Optional[
-        ListOfRateOfExchangeDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfRateOfExchangeDetail",
-            "type": "Element",
-        },
+    list_of_rate_of_exchange_detail: Optional[ListOfRateOfExchangeDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfRateOfExchangeDetail",
+                "type": "Element",
+            },
+        )
     )
     payment_detail_attachment: Optional[PaymentDetailAttachment] = field(
         default=None,
@@ -969,14 +970,14 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    list_of_payment_document_detail: Optional[
-        ListOfPaymentDocumentDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfPaymentDocumentDetail",
-            "type": "Element",
-        },
+    list_of_payment_document_detail: Optional[ListOfPaymentDocumentDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfPaymentDocumentDetail",
+                "type": "Element",
+            },
+        )
     )
 
 

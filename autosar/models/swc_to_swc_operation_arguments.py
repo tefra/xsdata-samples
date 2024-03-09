@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .operation_in_system_instance_ref import OperationInSystemInstanceRef
 from .swc_to_swc_operation_arguments_direction_enum import (
     SwcToSwcOperationArgumentsDirectionEnum,
@@ -49,15 +50,15 @@ class SwcToSwcOperationArguments:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_irefs: Optional[
-        "SwcToSwcOperationArguments.OperationIrefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OPERATION-IREFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    operation_irefs: Optional["SwcToSwcOperationArguments.OperationIrefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "OPERATION-IREFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

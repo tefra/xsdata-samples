@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.other_guarantee_info_type_4 import (
     OtherGuaranteeInfoType4,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .fare_demand_factor_version_structure import (
     FareDemandFactorVersionStructure,
 )

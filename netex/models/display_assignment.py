@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .display_assignment_version_structure import (
     DisplayAssignmentVersionStructure,
 )

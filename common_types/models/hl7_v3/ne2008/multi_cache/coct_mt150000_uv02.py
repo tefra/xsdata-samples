@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from ..core.datatypes_base import (
     AdExplicit,
     Ce,
@@ -268,16 +269,16 @@ class CoctMt150000Uv02Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_organization_part_of: List[
-        "CoctMt150000Uv02OrganizationPartOf"
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "asOrganizationPartOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    as_organization_part_of: List["CoctMt150000Uv02OrganizationPartOf"] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "asOrganizationPartOf",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     contact_party: List[CoctMt150000Uv02ContactParty] = field(
         default_factory=list,
@@ -288,16 +289,16 @@ class CoctMt150000Uv02Organization:
             "nillable": True,
         },
     )
-    organization_contains: List[
-        "CoctMt150000Uv02OrganizationContains"
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "organizationContains",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    organization_contains: List["CoctMt150000Uv02OrganizationContains"] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "organizationContains",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

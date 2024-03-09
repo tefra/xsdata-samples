@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_search_rsp_1 import BaseSearchRsp1
 from travelport.models.currency_rate_conversion import CurrencyRateConversion
 from travelport.models.hotel_super_shopper_results import (

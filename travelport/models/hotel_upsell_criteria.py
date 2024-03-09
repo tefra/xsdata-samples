@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.hotel_upsell_add import HotelUpsellAdd
 from travelport.models.hotel_upsell_delete import HotelUpsellDelete
 from travelport.models.hotel_upsell_update import HotelUpsellUpdate

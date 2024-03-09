@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_compare_type_enum import DiagnosticCompareTypeEnum
 from .diagnostic_env_mode_element_subtypes_enum import (
     DiagnosticEnvModeElementSubtypesEnum,
@@ -51,15 +52,15 @@ class DiagnosticEnvModeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_element_ref: Optional[
-        "DiagnosticEnvModeCondition.ModeElementRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MODE-ELEMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    mode_element_ref: Optional["DiagnosticEnvModeCondition.ModeElementRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MODE-ELEMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

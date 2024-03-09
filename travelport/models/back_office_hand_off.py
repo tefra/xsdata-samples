@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_back_office import TypeBackOffice
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"

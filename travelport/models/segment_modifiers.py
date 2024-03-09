@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_segment_ref import AirSegmentRef
 from travelport.models.baggage_allowance import BaggageAllowance
 from travelport.models.ticket_validity import TicketValidity

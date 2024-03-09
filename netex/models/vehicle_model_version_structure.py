@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .car_model_profile_ref import CarModelProfileRef
 from .compound_train_ref import CompoundTrainRef
 from .cycle_model_profile_ref import CycleModelProfileRef
@@ -86,15 +87,15 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    equipment_profiles: Optional[
-        VehicleEquipmentProfileRefsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "equipmentProfiles",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    equipment_profiles: Optional[VehicleEquipmentProfileRefsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "equipmentProfiles",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     vehicle_model_profile_ref: Optional[
         Union[CycleModelProfileRef, CarModelProfileRef]

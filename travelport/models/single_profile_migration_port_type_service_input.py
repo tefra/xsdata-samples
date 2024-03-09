@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.single_profile_migration_req_1 import (
     SingleProfileMigrationReq1,
 )
@@ -30,11 +32,13 @@ class SingleProfileMigrationPortTypeServiceInput:
 
     @dataclass
     class Body:
-        single_profile_migration_req: None | SingleProfileMigrationReq1 = field(
-            default=None,
-            metadata={
-                "name": "SingleProfileMigrationReq",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            },
+        single_profile_migration_req: None | SingleProfileMigrationReq1 = (
+            field(
+                default=None,
+                metadata={
+                    "name": "SingleProfileMigrationReq",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
+                },
+            )
         )

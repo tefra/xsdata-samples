@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.external_cache_access_rsp import ExternalCacheAccessRsp
 
@@ -63,7 +65,10 @@ class ExternalCacheAccessPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ExternalCacheAccessPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | ExternalCacheAccessPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

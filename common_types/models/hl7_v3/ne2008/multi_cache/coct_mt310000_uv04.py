@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     Cs,
     Ii,
@@ -577,16 +578,16 @@ class CoctMt310000Uv04Encounter:
             "required": True,
         },
     )
-    pertinent_information: Optional[
-        CoctMt310000Uv04PertinentInformation3
-    ] = field(
-        default=None,
-        metadata={
-            "name": "pertinentInformation",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    pertinent_information: Optional[CoctMt310000Uv04PertinentInformation3] = (
+        field(
+            default=None,
+            metadata={
+                "name": "pertinentInformation",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -887,27 +888,27 @@ class CoctMt310000Uv04AccomodationSupplied:
             "required": True,
         },
     )
-    pertinent_information1: Optional[
-        CoctMt310000Uv04PertinentInformation1
-    ] = field(
-        default=None,
-        metadata={
-            "name": "pertinentInformation1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information1: Optional[CoctMt310000Uv04PertinentInformation1] = (
+        field(
+            default=None,
+            metadata={
+                "name": "pertinentInformation1",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    pertinent_information2: Optional[
-        CoctMt310000Uv04PertinentInformation2
-    ] = field(
-        default=None,
-        metadata={
-            "name": "pertinentInformation2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    pertinent_information2: Optional[CoctMt310000Uv04PertinentInformation2] = (
+        field(
+            default=None,
+            metadata={
+                "name": "pertinentInformation2",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

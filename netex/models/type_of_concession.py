@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_concession_version_structure import (
     TypeOfConcessionVersionStructure,
 )

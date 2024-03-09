@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .frequency_groups_rel_structure import FrequencyGroupsRelStructure
 from .service_journey_version_structure import ServiceJourneyVersionStructure
 from .template_vehicle_journey_type_enumeration import (

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
 from datexii.models.eu.datexii.v2.text_display_area_settings import (
@@ -103,15 +104,15 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    managed_logical_location_override: Optional[
-        VmsManagedLogicalLocation
-    ] = field(
-        default=None,
-        metadata={
-            "name": "managedLogicalLocationOverride",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    managed_logical_location_override: Optional[VmsManagedLogicalLocation] = (
+        field(
+            default=None,
+            metadata={
+                "name": "managedLogicalLocationOverride",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     vms_dynamic_characteristics: Optional[VmsDynamicCharacteristics] = field(
         default=None,

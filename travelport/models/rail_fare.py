@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.fare_validity import FareValidity
 from travelport.models.ful_fillment_type import FulFillmentType
 from travelport.models.host_token_1 import HostToken1

@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime
+
 from travelport.models.type_trinary import TypeTrinary
 
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"

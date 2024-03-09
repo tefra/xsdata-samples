@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from datexii.models.eu.datexii.v2.catalogue_reference import CatalogueReference
 from datexii.models.eu.datexii.v2.changed_flag_enum import ChangedFlagEnum
 from datexii.models.eu.datexii.v2.deny_reason_enum import DenyReasonEnum

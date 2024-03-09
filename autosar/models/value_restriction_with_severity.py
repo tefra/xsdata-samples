@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .limit_value import LimitValue
 from .positive_integer import PositiveInteger
 from .regular_expression import RegularExpression

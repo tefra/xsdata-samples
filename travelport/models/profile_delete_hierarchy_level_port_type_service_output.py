@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.profile_delete_hierarchy_level_rsp import (
     ProfileDeleteHierarchyLevelRsp,
@@ -27,7 +29,9 @@ class ProfileDeleteHierarchyLevelPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        profile_delete_hierarchy_level_rsp: None | ProfileDeleteHierarchyLevelRsp = field(
+        profile_delete_hierarchy_level_rsp: (
+            None | ProfileDeleteHierarchyLevelRsp
+        ) = field(
             default=None,
             metadata={
                 "name": "ProfileDeleteHierarchyLevelRsp",
@@ -35,7 +39,9 @@ class ProfileDeleteHierarchyLevelPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
             },
         )
-        fault: None | ProfileDeleteHierarchyLevelPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | ProfileDeleteHierarchyLevelPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -66,7 +72,10 @@ class ProfileDeleteHierarchyLevelPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ProfileDeleteHierarchyLevelPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | ProfileDeleteHierarchyLevelPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -84,11 +93,13 @@ class ProfileDeleteHierarchyLevelPortTypeServiceOutput:
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
                     },
                 )
-                profile_summary_error_info: None | ProfileSummaryErrorInfo1 = field(
-                    default=None,
-                    metadata={
-                        "name": "ProfileSummaryErrorInfo",
-                        "type": "Element",
-                        "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-                    },
+                profile_summary_error_info: None | ProfileSummaryErrorInfo1 = (
+                    field(
+                        default=None,
+                        metadata={
+                            "name": "ProfileSummaryErrorInfo",
+                            "type": "Element",
+                            "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
+                        },
+                    )
                 )

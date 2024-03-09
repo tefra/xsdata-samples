@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .adaptive_module_instantiation_subtypes_enum import (
     AdaptiveModuleInstantiationSubtypesEnum,
 )
@@ -170,15 +171,15 @@ class SoftwareCluster:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SoftwareCluster.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["SoftwareCluster.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -310,15 +311,15 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_addresss: Optional[
-        "SoftwareCluster.DiagnosticAddresss"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DIAGNOSTIC-ADDRESSS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    diagnostic_addresss: Optional["SoftwareCluster.DiagnosticAddresss"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DIAGNOSTIC-ADDRESSS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     diagnostic_extract_ref: Optional[
         "SoftwareCluster.DiagnosticExtractRef"
@@ -372,15 +373,15 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_signature_ref: Optional[
-        "SoftwareCluster.VendorSignatureRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "VENDOR-SIGNATURE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    vendor_signature_ref: Optional["SoftwareCluster.VendorSignatureRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "VENDOR-SIGNATURE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     version: Optional[StrongRevisionLabelString] = field(
         default=None,

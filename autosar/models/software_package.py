@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -134,15 +135,15 @@ class SoftwarePackage:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SoftwarePackage.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["SoftwarePackage.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -216,15 +217,15 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delta_package_applicable_version: Optional[
-        StrongRevisionLabelString
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DELTA-PACKAGE-APPLICABLE-VERSION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    delta_package_applicable_version: Optional[StrongRevisionLabelString] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DELTA-PACKAGE-APPLICABLE-VERSION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     maximum_supported_ucm_version: Optional[RevisionLabelString] = field(
         default=None,
@@ -284,15 +285,15 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_cluster_ref: Optional[
-        "SoftwarePackage.SoftwareClusterRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SOFTWARE-CLUSTER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    software_cluster_ref: Optional["SoftwarePackage.SoftwareClusterRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SOFTWARE-CLUSTER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     uncompressed_software_cluster_size: Optional[PositiveInteger] = field(
         default=None,
@@ -392,13 +393,13 @@ class SoftwarePackage:
 
     @dataclass
     class VerifyIrefs:
-        verify_iref: List[
-            FunctionGroupStateInFunctionGroupSetInstanceRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "VERIFY-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        verify_iref: List[FunctionGroupStateInFunctionGroupSetInstanceRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "VERIFY-IREF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

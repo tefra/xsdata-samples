@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .port_interface_subtypes_enum import PortInterfaceSubtypesEnum
 from .ref import Ref
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .i_signal_triggering_subtypes_enum import ISignalTriggeringSubtypesEnum
 from .integer import Integer
 from .lin_frame_triggering_subtypes_enum import LinFrameTriggeringSubtypesEnum
@@ -44,15 +45,15 @@ class LinErrorResponse:
     class Meta:
         name = "LIN-ERROR-RESPONSE"
 
-    frame_triggering_ref: Optional[
-        "LinErrorResponse.FrameTriggeringRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FRAME-TRIGGERING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    frame_triggering_ref: Optional["LinErrorResponse.FrameTriggeringRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FRAME-TRIGGERING-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     response_error_position: Optional[Integer] = field(
         default=None,

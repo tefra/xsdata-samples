@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .check_constraint import CheckConstraint
 from .check_constraint_ref import CheckConstraintRef
 from .containment_aggregation_structure import ContainmentAggregationStructure

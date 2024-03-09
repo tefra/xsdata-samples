@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .log_trace_log_mode_enum_simple import LogTraceLogModeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

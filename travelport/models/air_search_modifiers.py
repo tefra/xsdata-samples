@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_search_modifiers_order_by import (
     AirSearchModifiersOrderBy,
 )
@@ -180,7 +182,9 @@ class AirSearchModifiers:
             },
         )
     )
-    permitted_booking_codes: None | AirSearchModifiers.PermittedBookingCodes = field(
+    permitted_booking_codes: (
+        None | AirSearchModifiers.PermittedBookingCodes
+    ) = field(
         default=None,
         metadata={
             "name": "PermittedBookingCodes",
@@ -194,7 +198,9 @@ class AirSearchModifiers:
             "type": "Element",
         },
     )
-    prohibited_booking_codes: None | AirSearchModifiers.ProhibitedBookingCodes = field(
+    prohibited_booking_codes: (
+        None | AirSearchModifiers.ProhibitedBookingCodes
+    ) = field(
         default=None,
         metadata={
             "name": "ProhibitedBookingCodes",

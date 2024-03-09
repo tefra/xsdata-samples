@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_upsell_search_rsp import AirUpsellSearchRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -61,7 +63,9 @@ class AirUpsellSearchPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirUpsellSearchPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | AirUpsellSearchPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

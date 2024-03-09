@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.profile_modify_bridge_branches_req import (
     ProfileModifyBridgeBranchesReq,
 )
@@ -23,7 +25,9 @@ class ProfileModifyBridgeBranchesPortTypeServiceInput:
 
     @dataclass
     class Body:
-        profile_modify_bridge_branches_req: None | ProfileModifyBridgeBranchesReq = field(
+        profile_modify_bridge_branches_req: (
+            None | ProfileModifyBridgeBranchesReq
+        ) = field(
             default=None,
             metadata={
                 "name": "ProfileModifyBridgeBranchesReq",

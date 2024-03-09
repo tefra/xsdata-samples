@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .service_not_available_error_structure import (
     ServiceNotAvailableErrorStructure,
 )

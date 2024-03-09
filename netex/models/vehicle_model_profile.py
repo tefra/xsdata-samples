@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_model_profile_version_structure import (
     VehicleModelProfileVersionStructure,
 )

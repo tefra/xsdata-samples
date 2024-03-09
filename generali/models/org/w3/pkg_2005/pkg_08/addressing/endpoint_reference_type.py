@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
+
 from generali.models.org.w3.pkg_2005.pkg_08.addressing.attributed_uritype import (
     AttributedUritype,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_payment_method_ref_structure import (
     TypeOfPaymentMethodRefStructure,
 )

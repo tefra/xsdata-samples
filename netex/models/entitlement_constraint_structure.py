@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .same_class_of_use_enumeration import SameClassOfUseEnumeration
 from .same_journey_enumeration import SameJourneyEnumeration
 from .same_operator_enumeration import SameOperatorEnumeration

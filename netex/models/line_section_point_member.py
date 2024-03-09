@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .point_on_line_section_versioned_child_structure import (
     PointOnLineSectionVersionedChildStructure,
 )

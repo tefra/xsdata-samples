@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.base_system_traceability_type import (
     BaseSystemTraceabilityType,
 )

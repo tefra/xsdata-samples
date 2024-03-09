@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .execution_order_constraint_type_enum_simple import (
     ExecutionOrderConstraintTypeEnumSimple,
 )

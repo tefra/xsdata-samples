@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .sales_offer_package_entitlement_given_ref_structure import (
     SalesOfferPackageEntitlementGivenRefStructure,
 )

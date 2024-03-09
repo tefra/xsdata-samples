@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .authority_ref import AuthorityRef
 from .entity_in_version_structure import DataManagedObjectStructure

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .frame_containment_structure import FrameContainmentStructure
 from .sections_in_sequence_rel_structure import FareSection
 

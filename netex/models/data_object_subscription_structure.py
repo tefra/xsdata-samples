@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .abstract_subscription_structure import AbstractSubscriptionStructure
 from .data_object_request import DataObjectRequest
 from .extensions_1 import Extensions1
@@ -21,15 +22,15 @@ class DataObjectSubscriptionStructure(AbstractSubscriptionStructure):
             "required": True,
         },
     )
-    subscription_policy: Optional[
-        NetworkFrameSubscriptionPolicyStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SubscriptionPolicy",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    subscription_policy: Optional[NetworkFrameSubscriptionPolicyStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SubscriptionPolicy",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     extensions: Optional[Extensions1] = field(
         default=None,

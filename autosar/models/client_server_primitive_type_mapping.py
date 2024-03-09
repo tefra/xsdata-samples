@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .argument_data_prototype_subtypes_enum import (
     ArgumentDataPrototypeSubtypesEnum,
 )
@@ -33,15 +34,15 @@ class ClientServerPrimitiveTypeMapping:
     class Meta:
         name = "CLIENT-SERVER-PRIMITIVE-TYPE-MAPPING"
 
-    argument_ref: Optional[
-        "ClientServerPrimitiveTypeMapping.ArgumentRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ARGUMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    argument_ref: Optional["ClientServerPrimitiveTypeMapping.ArgumentRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ARGUMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     system_signal_ref: Optional[
         "ClientServerPrimitiveTypeMapping.SystemSignalRef"

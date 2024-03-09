@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union, Any
+from typing import Any, List, Optional, Type, Union
+
 from .air_submode import AirSubmode
 from .all_modes_enumeration import AllModesEnumeration
 from .bus_submode import BusSubmode

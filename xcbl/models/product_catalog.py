@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
+
 from xcbl.models.sourcing_create import AttributeName
 from xcbl.models.sourcing_result import (
     AttachmentPurpose,

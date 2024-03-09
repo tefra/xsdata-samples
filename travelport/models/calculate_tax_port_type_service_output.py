@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.calculate_tax_rsp import CalculateTaxRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -61,7 +63,9 @@ class CalculateTaxPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | CalculateTaxPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | CalculateTaxPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

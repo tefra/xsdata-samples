@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .service_journey_interchange_version_structure import (
     ServiceJourneyInterchangeVersionStructure,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .notice_assignment_version_structure import (
     NoticeAssignmentVersionStructure,
 )

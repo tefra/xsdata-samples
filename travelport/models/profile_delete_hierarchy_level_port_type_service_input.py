@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.profile_delete_hierarchy_level_req import (
     ProfileDeleteHierarchyLevelReq,
 )
@@ -23,7 +25,9 @@ class ProfileDeleteHierarchyLevelPortTypeServiceInput:
 
     @dataclass
     class Body:
-        profile_delete_hierarchy_level_req: None | ProfileDeleteHierarchyLevelReq = field(
+        profile_delete_hierarchy_level_req: (
+            None | ProfileDeleteHierarchyLevelReq
+        ) = field(
             default=None,
             metadata={
                 "name": "ProfileDeleteHierarchyLevelReq",

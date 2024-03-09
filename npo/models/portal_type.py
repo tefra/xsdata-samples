@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.section_type import SectionType
 
 __NAMESPACE__ = "urn:vpro:pages:2013"

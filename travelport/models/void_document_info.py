@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.void_document_info_document_type import (
     VoidDocumentInfoDocumentType,
 )

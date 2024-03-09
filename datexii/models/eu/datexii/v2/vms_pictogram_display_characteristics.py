@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.position_absolute_enum import (
     PositionAbsoluteEnum,
@@ -166,15 +167,15 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_position_relative_to_text: Optional[
-        PositionRelativeEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "pictogramPositionRelativeToText",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    pictogram_position_relative_to_text: Optional[PositionRelativeEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "pictogramPositionRelativeToText",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     vms_supplementary_panel_characteristics: Optional[
         VmsSupplementaryPanelCharacteristics

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.cache_type import (
     CacheType,
 )

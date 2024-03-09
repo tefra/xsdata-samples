@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .infrastructure_version_frame_structure import (
     InfrastructureVersionFrameStructure,
 )

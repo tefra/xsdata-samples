@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_base_req import BookingBaseReq
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
@@ -19,7 +21,9 @@ class BookingDisplayReq(BookingBaseReq):
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
-    provider_reservation_info: None | BookingDisplayReq.ProviderReservationInfo = field(
+    provider_reservation_info: (
+        None | BookingDisplayReq.ProviderReservationInfo
+    ) = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfo",

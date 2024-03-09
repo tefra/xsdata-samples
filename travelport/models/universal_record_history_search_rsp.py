@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.universal_record_history_search_result import (
     UniversalRecordHistorySearchResult,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
 from .ref import Ref
 from .someip_tp_channel_subtypes_enum import SomeipTpChannelSubtypesEnum

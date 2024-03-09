@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .access_space import AccessSpace
 from .access_zone import AccessZone
 from .addressable_place import AddressablePlace

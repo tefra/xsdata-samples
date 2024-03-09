@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .activated_equipment_ref_structure import ActivatedEquipmentRefStructure
 from .activation_link_ref_structure import ActivationLinkRefStructure
 from .activation_point_ref_structure import ActivationPointRefStructure

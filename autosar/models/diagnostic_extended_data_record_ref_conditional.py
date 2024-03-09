@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .diagnostic_extended_data_record_subtypes_enum import (
     DiagnosticExtendedDataRecordSubtypesEnum,

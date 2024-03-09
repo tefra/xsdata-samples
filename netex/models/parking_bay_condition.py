@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .parking_bay_condition_version_structure import (
     ParkingBayConditionVersionStructure,
 )

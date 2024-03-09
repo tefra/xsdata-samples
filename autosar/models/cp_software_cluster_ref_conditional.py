@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .cp_software_cluster_subtypes_enum import CpSoftwareClusterSubtypesEnum
 from .ref import Ref

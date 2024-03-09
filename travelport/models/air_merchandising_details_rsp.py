@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.brand import Brand
 from travelport.models.optional_services import OptionalServices
@@ -40,7 +42,9 @@ class AirMerchandisingDetailsRsp(BaseRsp1):
             "max_occurs": 99,
         },
     )
-    unassociated_booking_code_list: None | AirMerchandisingDetailsRsp.UnassociatedBookingCodeList = field(
+    unassociated_booking_code_list: (
+        None | AirMerchandisingDetailsRsp.UnassociatedBookingCodeList
+    ) = field(
         default=None,
         metadata={
             "name": "UnassociatedBookingCodeList",

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.emdsummary import Emdsummary
 from travelport.models.emdtraveler_info import EmdtravelerInfo
 from travelport.models.payment_1 import Payment1

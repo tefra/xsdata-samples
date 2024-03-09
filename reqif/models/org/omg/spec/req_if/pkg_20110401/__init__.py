@@ -30,12 +30,12 @@ from reqif.models.org.omg.spec.req_if.pkg_20110401.reqif import (
     ReqIfHeader,
     ReqIfToolExtension,
     SpecHierarchy,
+    Specification,
+    SpecificationType,
     SpecObject,
     SpecObjectType,
     SpecRelation,
     SpecRelationType,
-    Specification,
-    SpecificationType,
     XhtmlContent,
 )
 

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .wire_point_ref_structure import WirePointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

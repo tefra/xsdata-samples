@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.end_terminal_session_rsp import EndTerminalSessionRsp
 from travelport.models.error_info_4 import ErrorInfo4
 
@@ -30,7 +32,9 @@ class EndTerminalSessionServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/terminal_v33_0",
             },
         )
-        fault: None | EndTerminalSessionServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | EndTerminalSessionServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -61,7 +65,10 @@ class EndTerminalSessionServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | EndTerminalSessionServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | EndTerminalSessionServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

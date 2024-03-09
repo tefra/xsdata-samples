@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .lin_frame_triggering_subtypes_enum import LinFrameTriggeringSubtypesEnum
 from .positive_integer import PositiveInteger
 from .ref import Ref

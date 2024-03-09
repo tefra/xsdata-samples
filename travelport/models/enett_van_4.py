@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDuration
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"

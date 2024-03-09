@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -203,23 +204,23 @@ class TimeSyncModuleInstantiation:
 
     @dataclass
     class TimeBases:
-        synchronized_time_base_consumer: List[
-            SynchronizedTimeBaseConsumer
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SYNCHRONIZED-TIME-BASE-CONSUMER",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        synchronized_time_base_consumer: List[SynchronizedTimeBaseConsumer] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SYNCHRONIZED-TIME-BASE-CONSUMER",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
-        synchronized_time_base_provider: List[
-            SynchronizedTimeBaseProvider
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SYNCHRONIZED-TIME-BASE-PROVIDER",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        synchronized_time_base_provider: List[SynchronizedTimeBaseProvider] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SYNCHRONIZED-TIME-BASE-PROVIDER",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

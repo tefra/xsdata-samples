@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .sw_impl_policy_enum_simple import SwImplPolicyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

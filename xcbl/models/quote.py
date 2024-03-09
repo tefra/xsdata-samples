@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.request_for_quotation import (
     PaymentInstructions,
     RequestQuoteReference,
@@ -34,6 +35,8 @@ from xcbl.models.sourcing_result import (
     PricingDetail,
     ReasonTaxExemptCoded,
     ReasonTaxExemptCodedOther,
+    TaxableAmount,
+    TaxableAmountInTaxAccountingCurrency,
     TaxAmount,
     TaxAmountInTaxAccountingCurrency,
     TaxCategoryCoded,
@@ -46,8 +49,6 @@ from xcbl.models.sourcing_result import (
     TaxPercent,
     TaxTypeCoded,
     TaxTypeCodedOther,
-    TaxableAmount,
-    TaxableAmountInTaxAccountingCurrency,
     TermsOfDelivery,
     TotalQuantity,
 )
@@ -394,14 +395,14 @@ class TaxReference:
             "type": "Element",
         },
     )
-    tax_payment_method_coded_other: Optional[
-        TaxPaymentMethodCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TaxPaymentMethodCodedOther",
-            "type": "Element",
-        },
+    tax_payment_method_coded_other: Optional[TaxPaymentMethodCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TaxPaymentMethodCodedOther",
+                "type": "Element",
+            },
+        )
     )
     taxable_amount: Optional[TaxableAmount] = field(
         default=None,

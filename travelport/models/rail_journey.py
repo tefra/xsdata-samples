@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.host_token_1 import HostToken1
 from travelport.models.journey_remark import JourneyRemark
 from travelport.models.rail_segment import RailSegment

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .taxi_parking_area_version_structure import (
     TaxiParkingAreaVersionStructure,
 )

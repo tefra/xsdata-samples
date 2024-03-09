@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .overtaking_possibility_ref_structure import (
     OvertakingPossibilityRefStructure,
 )

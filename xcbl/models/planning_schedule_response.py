@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.shipping_schedule_response import (
     CommitmentLevelCoded,
     CommitmentLevelCodedOther,
@@ -248,14 +249,14 @@ class BasePlanningDetail:
             "required": True,
         }
     )
-    forecast_frequency_coded_other: Optional[
-        ForecastFrequencyCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ForecastFrequencyCodedOther",
-            "type": "Element",
-        },
+    forecast_frequency_coded_other: Optional[ForecastFrequencyCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ForecastFrequencyCodedOther",
+                "type": "Element",
+            },
+        )
     )
     item_quantities: Optional[ItemQuantities] = field(
         default=None,
@@ -271,14 +272,14 @@ class BasePlanningDetail:
             "type": "Element",
         },
     )
-    item_release_status_coded_other: Optional[
-        ItemReleaseStatusCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ItemReleaseStatusCodedOther",
-            "type": "Element",
-        },
+    item_release_status_coded_other: Optional[ItemReleaseStatusCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ItemReleaseStatusCodedOther",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -347,14 +348,14 @@ class PlanningScheduleHeader:
             "required": True,
         }
     )
-    quantity_qualifier_coded_other: Optional[
-        QuantityQualifierCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "QuantityQualifierCodedOther",
-            "type": "Element",
-        },
+    quantity_qualifier_coded_other: Optional[QuantityQualifierCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "QuantityQualifierCodedOther",
+                "type": "Element",
+            },
+        )
     )
     validity_dates: Optional[ValidityDates] = field(
         default=None,
@@ -377,14 +378,14 @@ class PlanningScheduleHeader:
             "required": True,
         }
     )
-    planning_schedule_header_note: Optional[
-        PlanningScheduleHeaderNote
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PlanningScheduleHeaderNote",
-            "type": "Element",
-        },
+    planning_schedule_header_note: Optional[PlanningScheduleHeaderNote] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PlanningScheduleHeaderNote",
+                "type": "Element",
+            },
+        )
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,

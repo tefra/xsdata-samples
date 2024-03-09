@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .check_constraint_ref import CheckConstraintRef
 from .class_of_use_ref import ClassOfUseRef

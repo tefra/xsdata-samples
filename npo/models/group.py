@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from npo.models.group_type import GroupType
 
 __NAMESPACE__ = "urn:vpro:media:2009"

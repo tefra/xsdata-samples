@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_search_rsp_1 import BaseSearchRsp1
 from travelport.models.host_token_1 import HostToken1
 from travelport.models.hotel_search_result import HotelSearchResult

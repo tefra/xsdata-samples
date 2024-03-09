@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .country_ref import CountryRef
 from .multilingual_string import MultilingualString
 from .place_version_structure import PlaceVersionStructure

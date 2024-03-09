@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.issn_media_type import (
     IssnMediaType,
 )

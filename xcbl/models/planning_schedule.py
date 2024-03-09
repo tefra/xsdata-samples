@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.planning_schedule_response import (
     LocationGroupedPlanningDetail,
     MaterialGroupedPlanningDetail,
@@ -10,29 +11,29 @@ from xcbl.models.planning_schedule_response import (
 
 @dataclass(kw_only=True)
 class ListOfLocationGroupedPlanningDetail:
-    location_grouped_planning_detail: List[
-        LocationGroupedPlanningDetail
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "LocationGroupedPlanningDetail",
-            "type": "Element",
-            "min_occurs": 1,
-        },
+    location_grouped_planning_detail: List[LocationGroupedPlanningDetail] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "LocationGroupedPlanningDetail",
+                "type": "Element",
+                "min_occurs": 1,
+            },
+        )
     )
 
 
 @dataclass(kw_only=True)
 class ListOfMaterialGroupedPlanningDetail:
-    material_grouped_planning_detail: List[
-        MaterialGroupedPlanningDetail
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "MaterialGroupedPlanningDetail",
-            "type": "Element",
-            "min_occurs": 1,
-        },
+    material_grouped_planning_detail: List[MaterialGroupedPlanningDetail] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "MaterialGroupedPlanningDetail",
+                "type": "Element",
+                "min_occurs": 1,
+            },
+        )
     )
 
 

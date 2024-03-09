@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.mcoinformation_1 import Mcoinformation1
 from travelport.models.tcrinfo import Tcrinfo
 from travelport.models.ticket_info import TicketInfo

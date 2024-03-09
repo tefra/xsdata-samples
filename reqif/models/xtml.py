@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional, Type, Union
+
 from xsdata.models.datatype import XmlDateTime
+
 from reqif.models.org.w3.xml.pkg_1998.namespace import (
     LangValue,
     SpaceValue,

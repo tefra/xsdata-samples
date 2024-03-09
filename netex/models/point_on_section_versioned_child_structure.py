@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .activation_link_ref import ActivationLinkRef
 from .activation_point_1 import ActivationPoint1
 from .activation_point_ref import ActivationPointRef

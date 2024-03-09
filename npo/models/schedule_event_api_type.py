@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.group import Group
 from npo.models.program import Program
 from npo.models.schedule_event_type import ScheduleEventType

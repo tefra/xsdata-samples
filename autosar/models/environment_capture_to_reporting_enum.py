@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .environment_capture_to_reporting_enum_simple import (
     EnvironmentCaptureToReportingEnumSimple,
 )

@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.air_reservation_criteria import AirReservationCriteria
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.hotel_reservation_criteria import (
@@ -56,7 +59,9 @@ class UniversalRecordSearchReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    universal_record_search_modifiers: None | UniversalRecordSearchModifiers = field(
+    universal_record_search_modifiers: (
+        None | UniversalRecordSearchModifiers
+    ) = field(
         default=None,
         metadata={
             "name": "UniversalRecordSearchModifiers",

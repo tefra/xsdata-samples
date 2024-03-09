@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .boarding_permission import BoardingPermission
 from .class_of_use_ref import ClassOfUseRef
 from .entity_in_version_structure import VersionedChildStructure

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .booking_method_enumeration import BookingMethodEnumeration
 from .usage_parameter_version_structure import UsageParameterVersionStructure
 

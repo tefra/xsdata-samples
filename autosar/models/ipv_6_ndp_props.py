@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .positive_integer import PositiveInteger
 from .time_value import TimeValue
@@ -214,15 +215,15 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_neighbor_unreachability_detection_enabled: Optional[
-        Boolean
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TCP-IP-NDP-NEIGHBOR-UNREACHABILITY-DETECTION-ENABLED",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tcp_ip_ndp_neighbor_unreachability_detection_enabled: Optional[Boolean] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TCP-IP-NDP-NEIGHBOR-UNREACHABILITY-DETECTION-ENABLED",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tcp_ip_ndp_num_multicast_solicitations: Optional[PositiveInteger] = field(
         default=None,
@@ -280,15 +281,15 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_slaac_dad_number_of_transmissions: Optional[
-        PositiveInteger
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TCP-IP-NDP-SLAAC-DAD-NUMBER-OF-TRANSMISSIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tcp_ip_ndp_slaac_dad_number_of_transmissions: Optional[PositiveInteger] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TCP-IP-NDP-SLAAC-DAD-NUMBER-OF-TRANSMISSIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tcp_ip_ndp_slaac_dad_retransmission_delay: Optional[TimeValue] = field(
         default=None,

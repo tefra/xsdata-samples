@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.delivery_info_2 import DeliveryInfo2
 from travelport.models.phone_number_3 import PhoneNumber3
 from travelport.models.type_element_status_3 import TypeElementStatus3

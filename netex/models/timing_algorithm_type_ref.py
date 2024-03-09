@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .timing_algorithm_type_ref_structure import (
     TimingAlgorithmTypeRefStructure,
 )

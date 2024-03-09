@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.discount_card_1 import DiscountCard1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"

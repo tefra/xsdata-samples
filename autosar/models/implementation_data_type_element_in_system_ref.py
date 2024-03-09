@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
 )
@@ -75,15 +76,15 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_ref: Optional[
-        "ImplementationDataTypeElementInSystemRef.BaseRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "BASE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    base_ref: Optional["ImplementationDataTypeElementInSystemRef.BaseRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "BASE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     context_swc_prototype_refs: Optional[
         "ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs"

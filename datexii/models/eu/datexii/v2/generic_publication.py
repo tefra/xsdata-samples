@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.generic_publication_extension_type import (
     GenericPublicationExtensionType,
 )

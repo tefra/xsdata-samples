@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.traveler_identity_information_1 import (
     TravelerIdentityInformation1,
 )
@@ -151,13 +153,15 @@ class TypeHistorySubElement1:
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
         },
     )
-    loyalty_program_enrollment: None | TypeLoyaltyProgramEnrollmentHistory1 = field(
-        default=None,
-        metadata={
-            "name": "LoyaltyProgramEnrollment",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        },
+    loyalty_program_enrollment: None | TypeLoyaltyProgramEnrollmentHistory1 = (
+        field(
+            default=None,
+            metadata={
+                "name": "LoyaltyProgramEnrollment",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
+            },
+        )
     )
     contract: None | TypeContractHistory1 = field(
         default=None,
@@ -191,7 +195,9 @@ class TypeHistorySubElement1:
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
         },
     )
-    alternate_contact_address: None | TypeHistorySubElement1.AlternateContactAddress = field(
+    alternate_contact_address: (
+        None | TypeHistorySubElement1.AlternateContactAddress
+    ) = field(
         default=None,
         metadata={
             "name": "AlternateContactAddress",
@@ -199,7 +205,9 @@ class TypeHistorySubElement1:
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
         },
     )
-    alternate_contact_phone: None | TypeHistorySubElement1.AlternateContactPhone = field(
+    alternate_contact_phone: (
+        None | TypeHistorySubElement1.AlternateContactPhone
+    ) = field(
         default=None,
         metadata={
             "name": "AlternateContactPhone",
@@ -207,7 +215,9 @@ class TypeHistorySubElement1:
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
         },
     )
-    alternate_contact_electronic_address: None | TypeHistorySubElement1.AlternateContactElectronicAddress = field(
+    alternate_contact_electronic_address: (
+        None | TypeHistorySubElement1.AlternateContactElectronicAddress
+    ) = field(
         default=None,
         metadata={
             "name": "AlternateContactElectronicAddress",

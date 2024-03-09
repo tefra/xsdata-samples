@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -108,15 +109,15 @@ class DataReceivedEvent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DataReceivedEvent.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["DataReceivedEvent.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -176,15 +177,15 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: Optional[
-        "DataReceivedEvent.DisabledModeIrefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DISABLED-MODE-IREFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    disabled_mode_irefs: Optional["DataReceivedEvent.DisabledModeIrefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DISABLED-MODE-IREFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     start_on_event_ref: Optional["DataReceivedEvent.StartOnEventRef"] = field(
         default=None,

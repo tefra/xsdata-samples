@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -100,15 +101,15 @@ class ClientIdDefinition:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ClientIdDefinition.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["ClientIdDefinition.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -166,15 +167,15 @@ class ClientIdDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_operation_iref: Optional[
-        OperationInSystemInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CLIENT-SERVER-OPERATION-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    client_server_operation_iref: Optional[OperationInSystemInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CLIENT-SERVER-OPERATION-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,

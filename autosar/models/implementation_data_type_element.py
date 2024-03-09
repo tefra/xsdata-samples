@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -229,15 +230,15 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_elements: Optional[
-        "ImplementationDataTypeElement.SubElements"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SUB-ELEMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sub_elements: Optional["ImplementationDataTypeElement.SubElements"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SUB-ELEMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sw_data_def_props: Optional[SwDataDefProps] = field(
         default=None,

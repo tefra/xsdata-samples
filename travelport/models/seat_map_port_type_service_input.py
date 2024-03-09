@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.seat_map_req import SeatMapReq
 from travelport.models.session_context import SessionContext
 

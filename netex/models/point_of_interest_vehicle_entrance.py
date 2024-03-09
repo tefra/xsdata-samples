@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .point_of_interest_vehicle_entrance_version_structure import (
     PointOfInterestVehicleEntranceVersionStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
     Idtype,
 )
@@ -131,23 +132,23 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    reinsurance_nature: Optional[
-        ReinsurerInvolvementTypeReinsuranceNature
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ReinsuranceNature",
-            "type": "Element",
-            "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        },
+    reinsurance_nature: Optional[ReinsurerInvolvementTypeReinsuranceNature] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ReinsuranceNature",
+                "type": "Element",
+                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
+            },
+        )
     )
-    reinsurance_type: Optional[
-        ReinsurerInvolvementTypeReinsuranceType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ReinsuranceType",
-            "type": "Element",
-            "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        },
+    reinsurance_type: Optional[ReinsurerInvolvementTypeReinsuranceType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ReinsuranceType",
+                "type": "Element",
+                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
+            },
+        )
     )

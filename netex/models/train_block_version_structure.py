@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .block_version_structure import BlockVersionStructure
 from .coupled_journeys_rel_structure import CoupledJourneysRelStructure
 

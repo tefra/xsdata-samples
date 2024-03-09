@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .travel_agent_ref_structure import TravelAgentRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

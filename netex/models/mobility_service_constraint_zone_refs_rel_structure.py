@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .mobility_service_constraint_zone_ref import (
     MobilityServiceConstraintZoneRef,
 )

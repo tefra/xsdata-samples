@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .client_intent_enum import ClientIntentEnum
 from .client_server_operation_subtypes_enum import (
     ClientServerOperationSubtypesEnum,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .pricing_service import PricingService
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .general_group_of_entities_ref import GeneralGroupOfEntitiesRef
 from .type_of_concession_ref import TypeOfConcessionRef
 from .usage_parameter_version_structure import UsageParameterVersionStructure

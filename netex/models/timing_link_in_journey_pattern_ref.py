@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .timing_link_in_journey_pattern_ref_structure import (
     TimingLinkInJourneyPatternRefStructure,
 )

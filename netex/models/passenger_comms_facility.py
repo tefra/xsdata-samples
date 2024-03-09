@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .passenger_comms_facility_enumeration import (
     PassengerCommsFacilityEnumeration,
 )

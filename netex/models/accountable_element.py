@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .accountable_element_structure import AccountableElementStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

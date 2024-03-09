@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .data_input_association import DataInputAssociation
 from .data_output_association import DataOutputAssociation
 from .human_performer import HumanPerformer
@@ -85,15 +86,15 @@ class TActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    standard_loop_characteristics: Optional[
-        StandardLoopCharacteristics
-    ] = field(
-        default=None,
-        metadata={
-            "name": "standardLoopCharacteristics",
-            "type": "Element",
-            "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        },
+    standard_loop_characteristics: Optional[StandardLoopCharacteristics] = (
+        field(
+            default=None,
+            metadata={
+                "name": "standardLoopCharacteristics",
+                "type": "Element",
+                "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
+            },
+        )
     )
     multi_instance_loop_characteristics: Optional[
         MultiInstanceLoopCharacteristics

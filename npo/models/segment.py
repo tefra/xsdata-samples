@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from npo.models.segment_type import SegmentType
 
 __NAMESPACE__ = "urn:vpro:media:2009"

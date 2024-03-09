@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .graphic_fit_enum_simple import GraphicFitEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.action import Action
 from travelport.models.base_rsp_5 import BaseRsp5
 

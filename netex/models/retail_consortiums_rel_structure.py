@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .retail_consortium import RetailConsortium
 from .retail_consortium_ref import RetailConsortiumRef

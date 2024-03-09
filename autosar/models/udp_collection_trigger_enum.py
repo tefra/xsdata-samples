@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .udp_collection_trigger_enum_simple import UdpCollectionTriggerEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

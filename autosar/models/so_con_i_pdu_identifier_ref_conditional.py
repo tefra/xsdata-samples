@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .ref import Ref
 from .so_con_i_pdu_identifier_subtypes_enum import (

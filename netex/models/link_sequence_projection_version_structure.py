@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
+
 from .line_string import LineString
 from .link_sequence_ref_structure import LinkSequenceRefStructure
 from .point_refs_rel_structure import PointRefsRelStructure

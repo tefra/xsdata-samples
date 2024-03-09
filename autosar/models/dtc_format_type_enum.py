@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .dtc_format_type_enum_simple import DtcFormatTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

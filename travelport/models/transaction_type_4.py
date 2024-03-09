@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_tier_4 import AirTier4
 from travelport.models.type_booking_transactions_allowed_4 import (
     TypeBookingTransactionsAllowed4,

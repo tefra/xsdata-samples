@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .time_interval import TimeInterval
 from .time_interval_ref import TimeIntervalRef

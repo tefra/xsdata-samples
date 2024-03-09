@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -195,15 +196,15 @@ class BswInterruptEntity:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswInterruptEntity.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["BswInterruptEntity.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -253,15 +254,15 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reasons: Optional[
-        "BswInterruptEntity.ActivationReasons"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ACTIVATION-REASONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    activation_reasons: Optional["BswInterruptEntity.ActivationReasons"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ACTIVATION-REASONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     can_enter_exclusive_area_refs: Optional[
         "BswInterruptEntity.CanEnterExclusiveAreaRefs"
@@ -317,15 +318,15 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accessed_mode_groups: Optional[
-        "BswInterruptEntity.AccessedModeGroups"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ACCESSED-MODE-GROUPS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    accessed_mode_groups: Optional["BswInterruptEntity.AccessedModeGroups"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ACCESSED-MODE-GROUPS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     activation_points: Optional["BswInterruptEntity.ActivationPoints"] = field(
         default=None,
@@ -351,15 +352,15 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_receive_points: Optional[
-        "BswInterruptEntity.DataReceivePoints"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DATA-RECEIVE-POINTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_receive_points: Optional["BswInterruptEntity.DataReceivePoints"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-RECEIVE-POINTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     data_send_points: Optional["BswInterruptEntity.DataSendPoints"] = field(
         default=None,
@@ -387,15 +388,15 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    managed_mode_groups: Optional[
-        "BswInterruptEntity.ManagedModeGroups"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MANAGED-MODE-GROUPS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    managed_mode_groups: Optional["BswInterruptEntity.ManagedModeGroups"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MANAGED-MODE-GROUPS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     scheduler_name_prefix_ref: Optional[
         "BswInterruptEntity.SchedulerNamePrefixRef"

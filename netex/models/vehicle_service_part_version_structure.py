@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .entity_in_version_structure import DataManagedObjectStructure
 from .garage_point_ref_structure import GaragePointRefStructure
 from .multilingual_string import MultilingualString

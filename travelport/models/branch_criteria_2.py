@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_filter_control_and_workspace_2 import (
     TypeFilterControlAndWorkspace2,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .positive_integer import PositiveInteger
 from .ref import Ref
 from .time_sync_server_configuration_subtypes_enum import (

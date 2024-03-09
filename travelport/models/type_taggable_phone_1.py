@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.tag_ref_1 import TagRef1
 from travelport.models.type_contact_purpose_1 import TypeContactPurpose1
 from travelport.models.type_phone_1 import TypePhone1

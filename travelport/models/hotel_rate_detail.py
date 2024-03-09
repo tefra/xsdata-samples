@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.accepted_payment import AcceptedPayment
 from travelport.models.cancel_info import CancelInfo
 from travelport.models.commission_2 import Commission2
@@ -529,15 +531,15 @@ class HotelRateDetail:
                 supplier (chain or property).
             """
 
-            meal_plan: list[
-                HotelRateDetail.Inclusions.MealPlans.MealPlan
-            ] = field(
-                default_factory=list,
-                metadata={
-                    "name": "MealPlan",
-                    "type": "Element",
-                    "max_occurs": 99,
-                },
+            meal_plan: list[HotelRateDetail.Inclusions.MealPlans.MealPlan] = (
+                field(
+                    default_factory=list,
+                    metadata={
+                        "name": "MealPlan",
+                        "type": "Element",
+                        "max_occurs": 99,
+                    },
+                )
             )
             breakfast: None | TypeTrinary = field(
                 default=None,

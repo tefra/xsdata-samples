@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .travel_document_security_listing_ref import (
     TravelDocumentSecurityListingRef,

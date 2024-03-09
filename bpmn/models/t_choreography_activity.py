@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xml.etree.ElementTree import QName
+
 from .correlation_key import CorrelationKey
 from .t_choreography_loop_type import TChoreographyLoopType
 from .t_flow_node import TFlowNode

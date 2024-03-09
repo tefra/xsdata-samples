@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     Annotation,
     VariationPoint,
@@ -55,15 +56,15 @@ class EcucInstanceReferenceValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    definition_ref: Optional[
-        "EcucInstanceReferenceValue.DefinitionRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DEFINITION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    definition_ref: Optional["EcucInstanceReferenceValue.DefinitionRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DEFINITION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     annotations: Optional["EcucInstanceReferenceValue.Annotations"] = field(
         default=None,

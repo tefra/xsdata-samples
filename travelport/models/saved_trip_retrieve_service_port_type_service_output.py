@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.saved_trip_retrieve_rsp import SavedTripRetrieveRsp
 
@@ -30,7 +32,9 @@ class SavedTripRetrieveServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
             },
         )
-        fault: None | SavedTripRetrieveServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | SavedTripRetrieveServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -61,7 +65,10 @@ class SavedTripRetrieveServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | SavedTripRetrieveServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | SavedTripRetrieveServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

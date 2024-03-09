@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .derived_view_structure import DerivedViewStructure
 from .timing_link_in_journey_pattern_ref import TimingLinkInJourneyPatternRef
 from .timing_link_ref import TimingLinkRef

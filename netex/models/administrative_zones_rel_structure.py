@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from .administrative_zone_ref import AdministrativeZoneRef
 from .all_modes_enumeration import AllModesEnumeration
 from .authority_ref import AuthorityRef

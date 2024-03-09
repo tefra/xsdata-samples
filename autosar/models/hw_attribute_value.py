@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import (
     Annotation,
     VariationPoint,
@@ -49,15 +50,15 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_attribute_def_ref: Optional[
-        "HwAttributeValue.HwAttributeDefRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "HW-ATTRIBUTE-DEF-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    hw_attribute_def_ref: Optional["HwAttributeValue.HwAttributeDefRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "HW-ATTRIBUTE-DEF-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     v: Optional[NumericalValueVariationPoint] = field(
         default=None,

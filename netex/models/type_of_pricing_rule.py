@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_pricing_rule_version_structure import (
     TypeOfPricingRuleVersionStructure,
 )

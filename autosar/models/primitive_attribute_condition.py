@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .limit_value import LimitValue
 from .positive_integer import PositiveInteger
@@ -117,15 +118,15 @@ class PrimitiveAttributeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    attribute_ref: Optional[
-        "PrimitiveAttributeCondition.AttributeRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ATTRIBUTE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    attribute_ref: Optional["PrimitiveAttributeCondition.AttributeRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ATTRIBUTE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .communication_service_version_structure import (
     CommunicationServiceVersionStructure,
 )

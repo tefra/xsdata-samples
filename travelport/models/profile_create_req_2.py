@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_5 import BaseReq5
 from travelport.models.profile_data_2 import ProfileData2
 from travelport.models.profile_link_2 import ProfileLink2
@@ -157,14 +159,18 @@ class ProfileCreateReq2(BaseReq5):
                 "type": "Element",
             },
         )
-        provisioning_code: None | ProfileCreateReq2.ProfileParent.ProvisioningCode = field(
+        provisioning_code: (
+            None | ProfileCreateReq2.ProfileParent.ProvisioningCode
+        ) = field(
             default=None,
             metadata={
                 "name": "ProvisioningCode",
                 "type": "Element",
             },
         )
-        unique_profile_id: None | ProfileCreateReq2.ProfileParent.UniqueProfileId = field(
+        unique_profile_id: (
+            None | ProfileCreateReq2.ProfileParent.UniqueProfileId
+        ) = field(
             default=None,
             metadata={
                 "name": "UniqueProfileID",

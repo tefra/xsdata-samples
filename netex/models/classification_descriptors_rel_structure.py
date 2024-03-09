@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .classification_descriptor_version_structure import (
     ClassificationDescriptorVersionStructure,
 )

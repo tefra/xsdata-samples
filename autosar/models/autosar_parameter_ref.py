@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .data_prototype_subtypes_enum import DataPrototypeSubtypesEnum
 from .parameter_in_atomic_swc_type_instance_ref import (
     ParameterInAtomicSwcTypeInstanceRef,
@@ -52,25 +53,25 @@ class AutosarParameterRef:
     class Meta:
         name = "AUTOSAR-PARAMETER-REF"
 
-    autosar_parameter_iref: Optional[
-        ParameterInAtomicSwcTypeInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AUTOSAR-PARAMETER-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    autosar_parameter_iref: Optional[ParameterInAtomicSwcTypeInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AUTOSAR-PARAMETER-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    local_parameter_ref: Optional[
-        "AutosarParameterRef.LocalParameterRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "LOCAL-PARAMETER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    local_parameter_ref: Optional["AutosarParameterRef.LocalParameterRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "LOCAL-PARAMETER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from ..core.datatypes_base import (
     Cd,
     Cs,
@@ -210,16 +211,16 @@ class PrpaMt900350Uv02ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_organization: Optional[
-        CoctMt090200Uv01AssignedOrganization
-    ] = field(
-        default=None,
-        metadata={
-            "name": "assignedOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    assigned_organization: Optional[CoctMt090200Uv01AssignedOrganization] = (
+        field(
+            default=None,
+            metadata={
+                "name": "assignedOrganization",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

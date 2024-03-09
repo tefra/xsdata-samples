@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .application_data_prototype_in_system_instance_ref import (
     ApplicationDataPrototypeInSystemInstanceRef,
 )

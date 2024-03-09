@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from xsdata.models.datatype import XmlDate
+
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef

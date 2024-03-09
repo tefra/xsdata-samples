@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -181,15 +182,15 @@ class PortInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "PortInterfaceMappingSet.BlueprintPolicys"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "BLUEPRINT-POLICYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    blueprint_policys: Optional["PortInterfaceMappingSet.BlueprintPolicys"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "BLUEPRINT-POLICYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -264,15 +265,15 @@ class PortInterfaceMappingSet:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -285,15 +286,15 @@ class PortInterfaceMappingSet:
 
     @dataclass
     class PortInterfaceMappings:
-        client_server_interface_mapping: List[
-            ClientServerInterfaceMapping
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "CLIENT-SERVER-INTERFACE-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        client_server_interface_mapping: List[ClientServerInterfaceMapping] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "CLIENT-SERVER-INTERFACE-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         mode_interface_mapping: List[ModeInterfaceMapping] = field(
             default_factory=list,

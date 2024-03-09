@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .can_tp_addressing_format_type_simple import (
     CanTpAddressingFormatTypeSimple,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .diagnostic_data_element_subtypes_enum import (
     DiagnosticDataElementSubtypesEnum,
 )

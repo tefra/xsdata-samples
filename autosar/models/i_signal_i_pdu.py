@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -236,15 +237,15 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_to_pdu_mappings: Optional[
-        "ISignalIPdu.ISignalToPduMappings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "I-SIGNAL-TO-PDU-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    i_signal_to_pdu_mappings: Optional["ISignalIPdu.ISignalToPduMappings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "I-SIGNAL-TO-PDU-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     pdu_counters: Optional["ISignalIPdu.PduCounters"] = field(
         default=None,

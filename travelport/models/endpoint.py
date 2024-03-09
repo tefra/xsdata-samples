@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_endpoint_data_type import TypeEndpointDataType
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"

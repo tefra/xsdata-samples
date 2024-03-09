@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_exchange_modifiers import AirExchangeModifiers
 from travelport.models.air_pricing_solution import AirPricingSolution
 from travelport.models.base_core_req_1 import BaseCoreReq1
@@ -52,7 +54,9 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "max_occurs": 999,
         },
     )
-    provider_reservation_info: None | BaseAirExchangeQuoteReq.ProviderReservationInfo = field(
+    provider_reservation_info: (
+        None | BaseAirExchangeQuoteReq.ProviderReservationInfo
+    ) = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfo",

@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.type_air_fare_1 import TypeAirFare1
 from travelport.models.type_base_preference_history_1 import (
     TypeBasePreferenceHistory1,

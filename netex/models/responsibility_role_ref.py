@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .responsibility_role_ref_structure import ResponsibilityRoleRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

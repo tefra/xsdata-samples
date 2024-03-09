@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.vms_setting import VmsSetting
 from datexii.models.eu.datexii.v2.vms_unit_fault import VmsUnitFault

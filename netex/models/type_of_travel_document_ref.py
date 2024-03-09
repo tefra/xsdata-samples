@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_travel_document_ref_structure import (
     TypeOfTravelDocumentRefStructure,
 )

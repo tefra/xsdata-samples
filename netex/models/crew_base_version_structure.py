@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .garage_point_ref import GaragePointRef
 from .garage_refs_rel_structure import GarageRefsRelStructure
 from .group_of_entities_version_structure import (

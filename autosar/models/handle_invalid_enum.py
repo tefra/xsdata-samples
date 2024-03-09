@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .handle_invalid_enum_simple import HandleInvalidEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

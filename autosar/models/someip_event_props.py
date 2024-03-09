@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ref import Ref
 from .someip_collection_props import SomeipCollectionProps
 from .someip_event_deployment_subtypes_enum import (

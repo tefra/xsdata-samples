@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.rail_supplier import RailSupplier
 from travelport.models.type_rail_direction import TypeRailDirection
 

@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
+
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .activated_equipment_ref import ActivatedEquipmentRef
 from .assistance_booking_service_ref import AssistanceBookingServiceRef

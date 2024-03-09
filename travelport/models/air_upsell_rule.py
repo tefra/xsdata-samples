@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_upsell_offer import AirUpsellOffer
 from travelport.models.air_upsell_qualify import AirUpsellQualify
 

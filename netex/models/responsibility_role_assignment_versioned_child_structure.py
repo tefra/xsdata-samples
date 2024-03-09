@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .data_role_type_enumeration import DataRoleTypeEnumeration
 from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString

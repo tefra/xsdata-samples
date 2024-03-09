@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_search_rsp import AirSearchRsp
 from travelport.models.brand_list import BrandList
 

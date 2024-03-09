@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .ref import Ref
 from .security_event_definition_subtypes_enum import (

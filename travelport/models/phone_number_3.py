@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.phone_number_type_3 import PhoneNumberType3
 from travelport.models.provider_reservation_info_ref_3 import (
     ProviderReservationInfoRef3,

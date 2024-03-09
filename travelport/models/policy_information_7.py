@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.remark_8 import Remark8
 from travelport.models.type_policy_6 import TypePolicy6
 

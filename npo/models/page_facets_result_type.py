@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.date_facet_result_item_type import DateFacetResultItemType
 from npo.models.named_term_facet_result_item_type import (
     NamedTermFacetResultItemType,

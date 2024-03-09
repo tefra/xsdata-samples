@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_6 import BaseReq6
 from travelport.models.next_result_reference_6 import NextResultReference6
 

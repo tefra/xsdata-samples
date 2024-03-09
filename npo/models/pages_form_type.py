@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.media_form import MediaForm
 from npo.models.page_sort_list_type import PageSortListType
 from npo.models.pages_facets_type import PagesFacetsType

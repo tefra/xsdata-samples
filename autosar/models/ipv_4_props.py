@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ipv_4_arp_props import Ipv4ArpProps
 from .ipv_4_auto_ip_props import Ipv4AutoIpProps
 from .ipv_4_fragmentation_props import Ipv4FragmentationProps

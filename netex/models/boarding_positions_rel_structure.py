@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .boarding_position import BoardingPosition
 from .boarding_position_ref import BoardingPositionRef
 from .containment_aggregation_structure import ContainmentAggregationStructure

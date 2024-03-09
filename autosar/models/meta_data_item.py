@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .positive_integer import PositiveInteger
 from .text_value_specification import TextValueSpecification
 

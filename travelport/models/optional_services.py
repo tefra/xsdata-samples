@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.fee_info import FeeInfo
 from travelport.models.grouped_option_info import GroupedOptionInfo
 from travelport.models.optional_service_1 import OptionalService1

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.order_response import (
     ChangeOrderHeader,
     ChangeOrderItemDetail,
@@ -53,14 +54,14 @@ class ListOfChangeOrderPackageDetail:
 
 @dataclass(kw_only=True)
 class ChangeOrderDetail:
-    list_of_change_order_item_detail: Optional[
-        ListOfChangeOrderItemDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfChangeOrderItemDetail",
-            "type": "Element",
-        },
+    list_of_change_order_item_detail: Optional[ListOfChangeOrderItemDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfChangeOrderItemDetail",
+                "type": "Element",
+            },
+        )
     )
     list_of_change_order_package_detail: Optional[
         ListOfChangeOrderPackageDetail

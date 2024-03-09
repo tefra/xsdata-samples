@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.archive_locations import (
     ArchiveLocations,
 )

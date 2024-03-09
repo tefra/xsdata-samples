@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.date_range_matcher_type import DateRangeMatcherType
 from npo.models.matcher_list import MatcherList
 

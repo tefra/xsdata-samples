@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.commission_1 import Commission1
 from travelport.models.destination_purpose_code import DestinationPurposeCode
 from travelport.models.document_options import DocumentOptions

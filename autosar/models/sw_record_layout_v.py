@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .asam_record_layout_semantics import AsamRecordLayoutSemantics
 from .axis_index_type import AxisIndexType
 from .identifier import Identifier

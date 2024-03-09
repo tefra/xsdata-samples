@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .capabilities_request import CapabilitiesRequest
 from .capabilities_response import CapabilitiesResponse
 from .check_status_request import CheckStatusRequest

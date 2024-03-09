@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.airport_6 import Airport6
 from travelport.models.city_6 import City6
 from travelport.models.city_or_airport_6 import CityOrAirport6

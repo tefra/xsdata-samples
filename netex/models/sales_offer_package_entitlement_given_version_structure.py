@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .entitlement_constraint_structure import EntitlementConstraintStructure
 from .entitlement_type_enumeration import EntitlementTypeEnumeration
 from .sales_offer_package_ref import SalesOfferPackageRef

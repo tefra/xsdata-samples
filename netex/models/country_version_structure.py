@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .place_version_structure import PlaceVersionStructure
 from .private_code_structure import PrivateCodeStructure

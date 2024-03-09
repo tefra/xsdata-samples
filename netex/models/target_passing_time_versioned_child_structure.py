@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from xsdata.models.datatype import XmlDuration, XmlTime
+
 from .dated_passing_time_versioned_child_structure import (
     DatedPassingTimeVersionedChildStructure,
 )

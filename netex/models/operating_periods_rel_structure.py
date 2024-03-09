@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .operating_period_1 import OperatingPeriod1
 from .operating_period_ref import OperatingPeriodRef

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .variable_data_prototype_in_system_instance_ref import (
     VariableDataPrototypeInSystemInstanceRef,
 )
@@ -62,14 +63,14 @@ class SwcToSwcSignal:
 
     @dataclass
     class DataElementIrefs:
-        data_element_iref: List[
-            VariableDataPrototypeInSystemInstanceRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DATA-ELEMENT-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-                "max_occurs": 2,
-            },
+        data_element_iref: List[VariableDataPrototypeInSystemInstanceRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DATA-ELEMENT-IREF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                    "max_occurs": 2,
+                },
+            )
         )

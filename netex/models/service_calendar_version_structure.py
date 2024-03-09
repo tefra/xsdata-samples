@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDate, XmlDuration, XmlTime
+
 from .day_type_assignments_rel_structure import DayTypeAssignmentsRelStructure
 from .entity_in_version_structure import (
     DataManagedObjectStructure,

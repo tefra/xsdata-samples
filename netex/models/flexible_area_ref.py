@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .flexible_area_ref_structure import FlexibleAreaRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

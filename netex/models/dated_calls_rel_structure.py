@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .dated_call import DatedCall
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

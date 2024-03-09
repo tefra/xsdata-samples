@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .mobile_device_ref_structure import MobileDeviceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

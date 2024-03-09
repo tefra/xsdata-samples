@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .fare_class_enumeration import FareClassEnumeration
 from .type_of_value_version_structure import TypeOfValueVersionStructure
 

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .rhythmical_journey_group_version_structure import (
     RhythmicalJourneyGroupVersionStructure,
 )

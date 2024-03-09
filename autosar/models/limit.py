@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from .binding_time_enum_simple import BindingTimeEnumSimple
 from .interval_type_enum_simple import IntervalTypeEnumSimple
 from .ref import Ref

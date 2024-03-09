@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -253,15 +254,15 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deferring_fid_refs: Optional[
-        "DiagnosticEventNeeds.DeferringFidRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DEFERRING-FID-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    deferring_fid_refs: Optional["DiagnosticEventNeeds.DeferringFidRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DEFERRING-FID-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     diag_event_debounce_algorithm: Optional[
         "DiagnosticEventNeeds.DiagEventDebounceAlgorithm"
@@ -289,15 +290,15 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    inhibiting_fid_ref: Optional[
-        "DiagnosticEventNeeds.InhibitingFidRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "INHIBITING-FID-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    inhibiting_fid_ref: Optional["DiagnosticEventNeeds.InhibitingFidRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "INHIBITING-FID-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     inhibiting_secondary_fid_refs: Optional[
         "DiagnosticEventNeeds.InhibitingSecondaryFidRefs"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_event_subtypes_enum import AbstractEventSubtypesEnum
 from .admin_data import (
     AdminData,
@@ -166,15 +167,15 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SynchronizationPointConstraint.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["SynchronizationPointConstraint.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     trace_refs: Optional["SynchronizationPointConstraint.TraceRefs"] = field(
         default=None,

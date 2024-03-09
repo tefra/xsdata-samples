@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.branded_fare_admin_rsp import BrandedFareAdminRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -61,7 +63,9 @@ class BrandedFareAdminPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | BrandedFareAdminPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | BrandedFareAdminPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

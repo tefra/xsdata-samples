@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.tpeg_loc01_simple_point_location_subtype_enum import (
     TpegLoc01SimplePointLocationSubtypeEnum,

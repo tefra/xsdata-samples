@@ -1,19 +1,36 @@
 from dataclasses import dataclass
+
 from ubl.models.common.ubl_unqualified_data_types_2_1 import (
     AmountType as UblUnqualifiedDataTypes21AmountType,
+)
+from ubl.models.common.ubl_unqualified_data_types_2_1 import (
     BinaryObjectType,
     CodeType,
-    DateType as UblUnqualifiedDataTypes21DateType,
     IdentifierType,
     IndicatorType,
-    MeasureType as UblUnqualifiedDataTypes21MeasureType,
-    NameType as UblUnqualifiedDataTypes21NameType,
     NumericType,
-    PercentType as UblUnqualifiedDataTypes21PercentType,
-    QuantityType as UblUnqualifiedDataTypes21QuantityType,
-    RateType as UblUnqualifiedDataTypes21RateType,
-    TextType as UblUnqualifiedDataTypes21TextType,
     TimeType,
+)
+from ubl.models.common.ubl_unqualified_data_types_2_1 import (
+    DateType as UblUnqualifiedDataTypes21DateType,
+)
+from ubl.models.common.ubl_unqualified_data_types_2_1 import (
+    MeasureType as UblUnqualifiedDataTypes21MeasureType,
+)
+from ubl.models.common.ubl_unqualified_data_types_2_1 import (
+    NameType as UblUnqualifiedDataTypes21NameType,
+)
+from ubl.models.common.ubl_unqualified_data_types_2_1 import (
+    PercentType as UblUnqualifiedDataTypes21PercentType,
+)
+from ubl.models.common.ubl_unqualified_data_types_2_1 import (
+    QuantityType as UblUnqualifiedDataTypes21QuantityType,
+)
+from ubl.models.common.ubl_unqualified_data_types_2_1 import (
+    RateType as UblUnqualifiedDataTypes21RateType,
+)
+from ubl.models.common.ubl_unqualified_data_types_2_1 import (
+    TextType as UblUnqualifiedDataTypes21TextType,
 )
 
 __NAMESPACE__ = (

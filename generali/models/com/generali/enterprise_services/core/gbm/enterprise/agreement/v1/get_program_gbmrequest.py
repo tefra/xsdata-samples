@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.com.generali.enterprise_services.core.gbm.enterprise.agreement.v1.get_program_gbmrequest_type import (
     GetProgramGbmrequestType,
 )

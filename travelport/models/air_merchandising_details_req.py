@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.merchandising_availability_details import (
     MerchandisingAvailabilityDetails,
@@ -35,7 +37,9 @@ class AirMerchandisingDetailsReq(BaseReq1):
             "type": "Element",
         },
     )
-    merchandising_availability_details: None | MerchandisingAvailabilityDetails = field(
+    merchandising_availability_details: (
+        None | MerchandisingAvailabilityDetails
+    ) = field(
         default=None,
         metadata={
             "name": "MerchandisingAvailabilityDetails",

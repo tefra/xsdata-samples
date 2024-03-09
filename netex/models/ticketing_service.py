@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .ticketing_service_version_structure import (
     TicketingServiceVersionStructure,
 )

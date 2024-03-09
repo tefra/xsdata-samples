@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .network_restriction_version_structure import (
     NetworkRestrictionVersionStructure,
 )

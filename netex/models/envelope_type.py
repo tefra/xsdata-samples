@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from .direct_position_type import DirectPositionType
 from .pos import Pos
 

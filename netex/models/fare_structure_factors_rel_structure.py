@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_quota_factor_ref import FareQuotaFactorRef

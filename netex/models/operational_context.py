@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .operational_context_version_structure import (
     OperationalContextVersionStructure,
 )

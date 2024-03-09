@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .ar_package_subtypes_enum import ArPackageSubtypesEnum
 from .boolean import Boolean
 from .identifier import Identifier
@@ -91,15 +92,15 @@ class ReferenceBase:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_in_package_refs: Optional[
-        "ReferenceBase.GlobalInPackageRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "GLOBAL-IN-PACKAGE-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    global_in_package_refs: Optional["ReferenceBase.GlobalInPackageRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "GLOBAL-IN-PACKAGE-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     global_elements: Optional["ReferenceBase.GlobalElements"] = field(
         default=None,

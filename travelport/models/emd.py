@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime
+
 from travelport.models.emd_availability_charge_indicator import (
     EmdAvailabilityChargeIndicator,
 )

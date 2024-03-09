@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .access_space import AccessSpace
 from .access_zone import AccessZone
 from .addressable_place import AddressablePlace
@@ -52,8 +53,8 @@ from .point_of_interest_vehicle_entrance import PointOfInterestVehicleEntrance
 from .pool_of_vehicles import PoolOfVehicles
 from .postal_address import PostalAddress
 from .priceable_object_version_structure import (
-    FareTableInContext,
     FareTable1,
+    FareTableInContext,
     PriceGroup1,
 )
 from .quay_1 import Quay1

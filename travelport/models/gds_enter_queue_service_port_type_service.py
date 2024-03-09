@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.gds_enter_queue_service_port_type_service_input import (
     GdsEnterQueueServicePortTypeServiceInput,
 )

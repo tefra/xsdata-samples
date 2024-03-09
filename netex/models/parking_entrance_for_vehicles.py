@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .parking_entrance_for_vehicles_version_structure import (
     ParkingEntranceForVehiclesVersionStructure,
 )

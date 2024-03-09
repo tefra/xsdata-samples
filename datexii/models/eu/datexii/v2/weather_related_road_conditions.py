@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.road_conditions import RoadConditions
 from datexii.models.eu.datexii.v2.road_surface_condition_measurements import (

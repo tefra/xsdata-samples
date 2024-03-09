@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .limiting_rule_versioned_structure import LimitingRuleVersionedStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

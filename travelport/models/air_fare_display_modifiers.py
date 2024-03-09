@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.cabin_class_1 import CabinClass1
 from travelport.models.penalty_fare_information import PenaltyFareInformation
 from travelport.models.type_atpcoglobal_indicator import (

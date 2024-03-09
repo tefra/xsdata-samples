@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from datexii.models.eu.datexii.v2.special_day import SpecialDay
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"

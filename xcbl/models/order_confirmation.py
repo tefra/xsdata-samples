@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.order_confirmation_response import (
     ListOfAccountAssignment,
     OrderConfirmationItemNum,
@@ -219,14 +220,14 @@ class OrderConfirmationDetailReferences:
             "type": "Element",
         },
     )
-    contract_and_system_reference: Optional[
-        ContractAndSystemReference
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ContractAndSystemReference",
-            "type": "Element",
-        },
+    contract_and_system_reference: Optional[ContractAndSystemReference] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ContractAndSystemReference",
+                "type": "Element",
+            },
+        )
     )
     list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
         default=None,
@@ -304,14 +305,14 @@ class OrderConfirmationHeader:
             "type": "Element",
         },
     )
-    order_confirmation_header_note: Optional[
-        OrderConfirmationHeaderNote
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OrderConfirmationHeaderNote",
-            "type": "Element",
-        },
+    order_confirmation_header_note: Optional[OrderConfirmationHeaderNote] = (
+        field(
+            default=None,
+            metadata={
+                "name": "OrderConfirmationHeaderNote",
+                "type": "Element",
+            },
+        )
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,

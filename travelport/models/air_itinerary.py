@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_segment import AirSegment
 from travelport.models.apisrequirements import Apisrequirements
 from travelport.models.host_token_1 import HostToken1

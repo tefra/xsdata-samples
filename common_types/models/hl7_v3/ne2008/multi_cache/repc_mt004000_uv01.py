@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     Cd,
     Ce,
@@ -178,16 +179,16 @@ class RepcMt004000Uv01Author:
             "nillable": True,
         },
     )
-    personal_relationship: Optional[
-        CoctMt910000UvPersonalRelationship
-    ] = field(
-        default=None,
-        metadata={
-            "name": "personalRelationship",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    personal_relationship: Optional[CoctMt910000UvPersonalRelationship] = (
+        field(
+            default=None,
+            metadata={
+                "name": "personalRelationship",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     care_giver: Optional[CoctMt910000UvCareGiver] = field(
         default=None,
@@ -544,16 +545,16 @@ class RepcMt004000Uv01Performer:
             "nillable": True,
         },
     )
-    personal_relationship: Optional[
-        CoctMt910000UvPersonalRelationship
-    ] = field(
-        default=None,
-        metadata={
-            "name": "personalRelationship",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    personal_relationship: Optional[CoctMt910000UvPersonalRelationship] = (
+        field(
+            default=None,
+            metadata={
+                "name": "personalRelationship",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     care_giver: Optional[CoctMt910000UvCareGiver] = field(
         default=None,
@@ -977,16 +978,16 @@ class RepcMt004000Uv01PrimaryInformationRecipient:
             "nillable": True,
         },
     )
-    personal_relationship: Optional[
-        CoctMt910000UvPersonalRelationship
-    ] = field(
-        default=None,
-        metadata={
-            "name": "personalRelationship",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    personal_relationship: Optional[CoctMt910000UvPersonalRelationship] = (
+        field(
+            default=None,
+            metadata={
+                "name": "personalRelationship",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     care_giver: Optional[CoctMt910000UvCareGiver] = field(
         default=None,
@@ -1702,27 +1703,27 @@ class RepcMt004000Uv01CareProvisionEvent:
             "nillable": True,
         },
     )
-    pertinent_information2: List[
-        RepcMt004000Uv01PertinentInformation4
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "pertinentInformation2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information2: List[RepcMt004000Uv01PertinentInformation4] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "pertinentInformation2",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    pertinent_information3: List[
-        RepcMt004000Uv01PertinentInformation5
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "pertinentInformation3",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information3: List[RepcMt004000Uv01PertinentInformation5] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "pertinentInformation3",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     component: List[RepcMt004000Uv01Component] = field(
         default_factory=list,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .extensions_1 import Extensions1
 from .request_structure import RequestStructure
 

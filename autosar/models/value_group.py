@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .multilanguage_long_name import MultilanguageLongName
 from .numerical_or_text import NumericalOrText
 from .numerical_value import NumericalValue

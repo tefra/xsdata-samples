@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .escalator_equipment_version_structure import (
     EscalatorEquipmentVersionStructure,
 )

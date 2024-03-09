@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.credit_card_3 import CreditCard3
 from travelport.models.guarantee_type_7 import GuaranteeType7
 from travelport.models.other_guarantee_info_2 import OtherGuaranteeInfo2

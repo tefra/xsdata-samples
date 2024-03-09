@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.industry_standard_ssr_1 import IndustryStandardSsr1
 from travelport.models.service_rule_type_1 import ServiceRuleType1
 from travelport.models.ssr_1 import Ssr1

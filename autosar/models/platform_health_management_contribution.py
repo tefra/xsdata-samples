@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -289,15 +290,15 @@ class PlatformHealthManagementContribution:
 
     @dataclass
     class HealthChannels:
-        health_channel_external_status: List[
-            HealthChannelExternalStatus
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "HEALTH-CHANNEL-EXTERNAL-STATUS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        health_channel_external_status: List[HealthChannelExternalStatus] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "HEALTH-CHANNEL-EXTERNAL-STATUS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         health_channel_supervision: List[HealthChannelSupervision] = field(
             default_factory=list,

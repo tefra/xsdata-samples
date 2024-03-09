@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from voko.models.art import Art
 from voko.models.parto import Parto
 from voko.models.sekcio import Sekcio

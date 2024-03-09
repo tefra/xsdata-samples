@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     DocumentReference,
     InstructionForReturnsLine,
@@ -170,16 +171,16 @@ class InstructionForReturnsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    instruction_for_returns_line: Tuple[
-        InstructionForReturnsLine, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "InstructionForReturnsLine",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "min_occurs": 1,
-        },
+    instruction_for_returns_line: Tuple[InstructionForReturnsLine, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "InstructionForReturnsLine",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+                "min_occurs": 1,
+            },
+        )
     )
 
 

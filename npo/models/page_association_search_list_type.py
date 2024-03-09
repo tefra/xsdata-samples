@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.association_search_type import AssociationSearchType
 
 __NAMESPACE__ = "urn:vpro:api:2013"

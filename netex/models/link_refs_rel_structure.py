@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .activation_link_ref import ActivationLinkRef
 from .activation_link_ref_by_value import ActivationLinkRefByValue
 from .line_link_ref import LineLinkRef

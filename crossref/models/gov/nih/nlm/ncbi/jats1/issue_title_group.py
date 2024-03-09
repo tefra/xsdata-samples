@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from crossref.models.gov.nih.nlm.ncbi.jats1.issue_subtitle import IssueSubtitle
 from crossref.models.gov.nih.nlm.ncbi.jats1.issue_title import IssueTitle
 from crossref.models.gov.nih.nlm.ncbi.jats1.trans_title_group import (

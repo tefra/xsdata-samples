@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -419,15 +420,15 @@ class CouplingPort:
 
     @dataclass
     class PncMappingRefs:
-        pnc_mapping_ref: List[
-            "CouplingPort.PncMappingRefs.PncMappingRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PNC-MAPPING-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        pnc_mapping_ref: List["CouplingPort.PncMappingRefs.PncMappingRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PNC-MAPPING-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass
@@ -465,13 +466,13 @@ class CouplingPort:
 
     @dataclass
     class WakeupSleepOnDatalineConfigRef(Ref):
-        dest: Optional[
-            EthernetWakeupSleepOnDatalineConfigSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[EthernetWakeupSleepOnDatalineConfigSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

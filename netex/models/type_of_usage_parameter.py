@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_usage_parameter_version_structure import (
     TypeOfUsageParameterVersionStructure,
 )

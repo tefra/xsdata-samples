@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.discount_card_6 import DiscountCard6
 from travelport.models.loyalty_card_6 import LoyaltyCard6
 from travelport.models.name_6 import Name6

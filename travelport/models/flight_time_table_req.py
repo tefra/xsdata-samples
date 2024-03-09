@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_search_req_1 import BaseSearchReq1
 from travelport.models.flight_time_table_criteria import (
     FlightTimeTableCriteria,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .data_input import DataInput
 from .data_output import DataOutput
 from .input_set import InputSet

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .array_size_semantics_enum import ArraySizeSemanticsEnum
 from .integer import Integer
 from .integer_value_variation_point import IntegerValueVariationPoint

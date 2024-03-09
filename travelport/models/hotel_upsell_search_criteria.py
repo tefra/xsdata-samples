@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.hotel_upsell_offer_search_criteria import (
     HotelUpsellOfferSearchCriteria,
 )
@@ -19,14 +21,18 @@ class HotelUpsellSearchCriteria:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    hotel_upsell_offer_search_criteria: None | HotelUpsellOfferSearchCriteria = field(
+    hotel_upsell_offer_search_criteria: (
+        None | HotelUpsellOfferSearchCriteria
+    ) = field(
         default=None,
         metadata={
             "name": "HotelUpsellOfferSearchCriteria",
             "type": "Element",
         },
     )
-    hotel_upsell_qualify_search_criteria: None | HotelUpsellQualifySearchCriteria = field(
+    hotel_upsell_qualify_search_criteria: (
+        None | HotelUpsellQualifySearchCriteria
+    ) = field(
         default=None,
         metadata={
             "name": "HotelUpsellQualifySearchCriteria",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .identifier import Identifier
 from .sw_axis_cont import SwAxisCont
@@ -72,15 +73,15 @@ class ApplicationValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_axis_conts: Optional[
-        "ApplicationValueSpecification.SwAxisConts"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SW-AXIS-CONTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sw_axis_conts: Optional["ApplicationValueSpecification.SwAxisConts"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SW-AXIS-CONTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sw_value_cont: Optional[SwValueCont] = field(
         default=None,

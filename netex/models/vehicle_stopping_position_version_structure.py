@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .multilingual_string import MultilingualString
 from .relation_to_vehicle_enumeration import RelationToVehicleEnumeration
 from .stop_place_component_version_structure import (

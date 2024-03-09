@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .ethernet_communication_connector_subtypes_enum import (
     EthernetCommunicationConnectorSubtypesEnum,
 )
@@ -49,25 +50,25 @@ class NmNetworkHandle:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "NmNetworkHandle.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["NmNetworkHandle.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    partial_network_refs: Optional[
-        "NmNetworkHandle.PartialNetworkRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PARTIAL-NETWORK-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    partial_network_refs: Optional["NmNetworkHandle.PartialNetworkRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PARTIAL-NETWORK-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     vlan_refs: Optional["NmNetworkHandle.VlanRefs"] = field(
         default=None,

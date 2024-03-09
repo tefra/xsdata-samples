@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .special_service import SpecialService

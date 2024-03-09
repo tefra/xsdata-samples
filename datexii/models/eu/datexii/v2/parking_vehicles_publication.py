@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from datexii.models.eu.datexii.v2.parking_table_versioned_reference import (
     ParkingTableVersionedReference,
 )

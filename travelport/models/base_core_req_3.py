@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.agent_idoverride_3 import AgentIdoverride3
 from travelport.models.billing_point_of_sale_info_3 import (
     BillingPointOfSaleInfo3,

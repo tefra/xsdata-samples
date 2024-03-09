@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.image_type_2 import ImageType2
 
 __NAMESPACE__ = "urn:vpro:pages:2013"

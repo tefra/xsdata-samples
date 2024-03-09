@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
+
 from npo.models.age_rating_type import AgeRatingType
 from npo.models.av_attributes_type import AvAttributesType
 from npo.models.av_type_enum import AvTypeEnum

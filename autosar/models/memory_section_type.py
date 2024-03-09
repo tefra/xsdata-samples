@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .memory_section_type_simple import MemorySectionTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

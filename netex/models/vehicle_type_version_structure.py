@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .facility_requirements_rel_structure import (
     FacilityRequirementsRelStructure,
 )
@@ -144,15 +145,15 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    can_manoeuvre: Optional[
-        VehicleManoeuvringRequirementsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "canManoeuvre",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    can_manoeuvre: Optional[VehicleManoeuvringRequirementsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "canManoeuvre",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     satisfies_facility_requirements: Optional[
         FacilityRequirementsRelStructure

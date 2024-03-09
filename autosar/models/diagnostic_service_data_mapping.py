@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -202,15 +203,15 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_data_element_iref: Optional[
-        DataPrototypeInSystemInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MAPPED-DATA-ELEMENT-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    mapped_data_element_iref: Optional[DataPrototypeInSystemInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MAPPED-DATA-ELEMENT-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     process_ref: Optional["DiagnosticServiceDataMapping.ProcessRef"] = field(
         default=None,

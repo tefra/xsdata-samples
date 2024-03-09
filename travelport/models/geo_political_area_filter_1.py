@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_geo_political_area_filter_type_1 import (
     TypeGeoPoliticalAreaFilterType1,
 )

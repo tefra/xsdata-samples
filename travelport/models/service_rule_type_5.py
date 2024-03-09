@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.formatted_text_text_type_5 import FormattedTextTextType5
 from travelport.models.modification_type_5 import ModificationType5
 from travelport.models.optional_service_applicability_type_5 import (
@@ -166,7 +168,9 @@ class ServiceRuleType5:
             mapped to Other
         """
 
-        application_limits: None | ServiceRuleType5.ApplicationLevel.ApplicationLimits = field(
+        application_limits: (
+            None | ServiceRuleType5.ApplicationLevel.ApplicationLimits
+        ) = field(
             default=None,
             metadata={
                 "name": "ApplicationLimits",
@@ -208,17 +212,17 @@ class ServiceRuleType5:
                 The application limits for a particular level
             """
 
-            application_limit: list[
-                OptionalServiceApplicationLimitType5
-            ] = field(
-                default_factory=list,
-                metadata={
-                    "name": "ApplicationLimit",
-                    "type": "Element",
-                    "namespace": "http://www.travelport.com/schema/common_v34_0",
-                    "min_occurs": 1,
-                    "max_occurs": 10,
-                },
+            application_limit: list[OptionalServiceApplicationLimitType5] = (
+                field(
+                    default_factory=list,
+                    metadata={
+                        "name": "ApplicationLimit",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v34_0",
+                        "min_occurs": 1,
+                        "max_occurs": 10,
+                    },
+                )
             )
 
     @dataclass
@@ -363,16 +367,16 @@ class ServiceRuleType5:
                 service
             """
 
-            application_limit: list[
-                OptionalServiceApplicationLimitType5
-            ] = field(
-                default_factory=list,
-                metadata={
-                    "name": "ApplicationLimit",
-                    "type": "Element",
-                    "namespace": "http://www.travelport.com/schema/common_v34_0",
-                    "max_occurs": 10,
-                },
+            application_limit: list[OptionalServiceApplicationLimitType5] = (
+                field(
+                    default_factory=list,
+                    metadata={
+                        "name": "ApplicationLimit",
+                        "type": "Element",
+                        "namespace": "http://www.travelport.com/schema/common_v34_0",
+                        "max_occurs": 10,
+                    },
+                )
             )
             secondary_type: None | str = field(
                 default=None,

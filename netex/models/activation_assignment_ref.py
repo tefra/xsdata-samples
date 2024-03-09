@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .activation_assignment_ref_structure import (
     ActivationAssignmentRefStructure,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .class_in_frame_ref_structure import ClassInFrameRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

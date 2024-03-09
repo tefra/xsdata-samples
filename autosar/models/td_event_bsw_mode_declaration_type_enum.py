@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .td_event_bsw_mode_declaration_type_enum_simple import (
     TdEventBswModeDeclarationTypeEnumSimple,
 )

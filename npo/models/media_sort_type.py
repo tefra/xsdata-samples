@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.media_sort_type_enum import MediaSortTypeEnum
 from npo.models.order_type_enum import OrderTypeEnum
 

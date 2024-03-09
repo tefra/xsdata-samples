@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .derived_view_structure import DerivedViewStructure
 from .destination_display_ref import DestinationDisplayRef

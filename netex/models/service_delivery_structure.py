@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .data_object_delivery import DataObjectDelivery
 from .error_description_structure import ErrorDescriptionStructure
@@ -19,15 +20,15 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: Optional[
-        "ServiceDeliveryStructure.ErrorCondition"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ErrorCondition",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        },
+    error_condition: Optional["ServiceDeliveryStructure.ErrorCondition"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ErrorCondition",
+                "type": "Element",
+                "namespace": "http://www.siri.org.uk/siri",
+            },
+        )
     )
     more_data: Optional[bool] = field(
         default=None,

@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.provider_reservation_divide_service_port_type_service_input import (
     ProviderReservationDivideServicePortTypeServiceInput,
 )

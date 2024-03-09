@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDate
+
 from .authority_ref import AuthorityRef
 from .equipment_version_structure import EquipmentVersionStructure
 from .general_organisation_ref import GeneralOrganisationRef

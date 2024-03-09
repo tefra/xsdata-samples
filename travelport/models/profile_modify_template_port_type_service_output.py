@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.profile_modify_template_rsp import (
     ProfileModifyTemplateRsp,
@@ -65,7 +67,10 @@ class ProfileModifyTemplatePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ProfileModifyTemplatePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | ProfileModifyTemplatePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

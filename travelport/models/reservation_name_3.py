@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_traveler_ref_3 import BookingTravelerRef3
 from travelport.models.name_override_3 import NameOverride3
 

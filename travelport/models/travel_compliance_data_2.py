@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_element_status_3 import TypeElementStatus3
 from travelport.models.type_profile_type_4 import TypeProfileType4
 
@@ -55,15 +57,15 @@ class TravelComplianceData2:
             "max_occurs": 2,
         },
     )
-    contract_compliance: list[
-        TravelComplianceData2.ContractCompliance
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "ContractCompliance",
-            "type": "Element",
-            "max_occurs": 2,
-        },
+    contract_compliance: list[TravelComplianceData2.ContractCompliance] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "ContractCompliance",
+                "type": "Element",
+                "max_occurs": 2,
+            },
+        )
     )
     preferred_supplier: list[TravelComplianceData2.PreferredSupplier] = field(
         default_factory=list,

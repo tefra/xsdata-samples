@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_upsell_add import AirUpsellAdd
 from travelport.models.air_upsell_delete import AirUpsellDelete
 from travelport.models.air_upsell_update import AirUpsellUpdate

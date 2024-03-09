@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .rounding_ref_structure import RoundingRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

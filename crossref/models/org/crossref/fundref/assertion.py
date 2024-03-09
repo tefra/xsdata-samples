@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from crossref.models.org.crossref.fundref.assertion_name import AssertionName
 from crossref.models.org.crossref.fundref.assertion_provider import (
     AssertionProvider,

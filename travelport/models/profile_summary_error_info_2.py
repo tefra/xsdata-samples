@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_error_info_5 import TypeErrorInfo5
 from travelport.models.type_profile_type_7 import TypeProfileType7
 

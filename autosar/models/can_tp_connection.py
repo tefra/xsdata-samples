@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .boolean import Boolean
 from .can_tp_address_subtypes_enum import CanTpAddressSubtypesEnum
@@ -129,15 +130,15 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_ref: Optional[
-        "CanTpConnection.FlowControlPduRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FLOW-CONTROL-PDU-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    flow_control_pdu_ref: Optional["CanTpConnection.FlowControlPduRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FLOW-CONTROL-PDU-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     max_block_size: Optional[Integer] = field(
         default=None,

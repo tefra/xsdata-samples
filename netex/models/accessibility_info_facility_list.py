@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .accessibility_info_facility_enumeration import (
     AccessibilityInfoFacilityEnumeration,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.delay_band_enum import DelayBandEnum
 from datexii.models.eu.datexii.v2.delays_type_enum import DelaysTypeEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType

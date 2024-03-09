@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.currency_conversion_rsp import CurrencyConversionRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -30,7 +32,9 @@ class UtilCurrencyConversionPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
             },
         )
-        fault: None | UtilCurrencyConversionPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | UtilCurrencyConversionPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -61,7 +65,10 @@ class UtilCurrencyConversionPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | UtilCurrencyConversionPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | UtilCurrencyConversionPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

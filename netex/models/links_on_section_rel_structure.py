@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .link_on_section import LinkOnSection
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

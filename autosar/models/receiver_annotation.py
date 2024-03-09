@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import DocumentationBlock
 from .boolean import Boolean
 from .data_limit_kind_enum import DataLimitKindEnum

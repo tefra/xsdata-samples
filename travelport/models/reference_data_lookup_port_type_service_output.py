@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.reference_data_search_rsp import ReferenceDataSearchRsp
 
@@ -63,7 +65,10 @@ class ReferenceDataLookupPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ReferenceDataLookupPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | ReferenceDataLookupPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

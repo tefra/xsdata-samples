@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.hotel_media_links_service_port_type_service_input import (
     HotelMediaLinksServicePortTypeServiceInput,
 )

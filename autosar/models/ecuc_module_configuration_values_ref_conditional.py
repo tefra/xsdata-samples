@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .ecuc_module_configuration_values_subtypes_enum import (
     EcucModuleConfigurationValuesSubtypesEnum,

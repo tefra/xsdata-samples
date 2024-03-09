@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .application_array_element_subtypes_enum import (
     ApplicationArrayElementSubtypesEnum,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .service_link_ref_by_value_structure import ServiceLinkRefByValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

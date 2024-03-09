@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Union
+
 from crossref.models.org.w3.pkg_1998.math.math_ml.mspace_dir import MspaceDir
 from crossref.models.org.w3.pkg_1998.math.math_ml.mspace_fontstyle import (
     MspaceFontstyle,

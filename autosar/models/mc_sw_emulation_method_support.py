@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .identifier import Identifier
 from .mc_parameter_element_group import McParameterElementGroup
@@ -77,15 +78,15 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element_groups: Optional[
-        "McSwEmulationMethodSupport.ElementGroups"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ELEMENT-GROUPS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    element_groups: Optional["McSwEmulationMethodSupport.ElementGroups"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ELEMENT-GROUPS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     reference_table_ref: Optional[
         "McSwEmulationMethodSupport.ReferenceTableRef"

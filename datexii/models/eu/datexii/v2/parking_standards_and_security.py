@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDate
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.labelsecurity_level_enum import (
     LABELSecurityLevelEnum,
@@ -66,25 +68,25 @@ class ParkingStandardsAndSecurity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    label_security_level_self_assessment: Optional[
-        LABELSecurityLevelEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "labelSecurityLevelSelfAssessment",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    label_security_level_self_assessment: Optional[LABELSecurityLevelEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "labelSecurityLevelSelfAssessment",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
-    label_service_level_self_assessment: Optional[
-        LABELServiceLevelEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "labelServiceLevelSelfAssessment",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    label_service_level_self_assessment: Optional[LABELServiceLevelEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "labelServiceLevelSelfAssessment",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     parking_security: List[ParkingSecurityEnum] = field(
         default_factory=list,
@@ -110,15 +112,15 @@ class ParkingStandardsAndSecurity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_security_national_classification: Optional[
-        MultilingualString
-    ] = field(
-        default=None,
-        metadata={
-            "name": "parkingSecurityNationalClassification",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    parking_security_national_classification: Optional[MultilingualString] = (
+        field(
+            default=None,
+            metadata={
+                "name": "parkingSecurityNationalClassification",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     certified_secure_parking: Optional[bool] = field(
         default=None,

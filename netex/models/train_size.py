@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .train_size_structure import TrainSizeStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

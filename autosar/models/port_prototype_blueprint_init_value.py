@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,

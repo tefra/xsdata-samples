@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .event_group_control_type_enum_simple import (
     EventGroupControlTypeEnumSimple,
 )

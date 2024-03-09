@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .journey_pattern_ref_structure import JourneyPatternRefStructure
 from .journey_pattern_refs_rel_structure import JourneyPatternRefsRelStructure
@@ -13,15 +14,15 @@ class ServiceExclusionVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "ServiceExclusion_VersionStructure"
 
-    excluding_journey_pattern_ref: Optional[
-        JourneyPatternRefStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ExcludingJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    excluding_journey_pattern_ref: Optional[JourneyPatternRefStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ExcludingJourneyPatternRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     start_point_ref: Optional[ScheduledStopPointRefStructure] = field(
         default=None,
@@ -39,13 +40,13 @@ class ServiceExclusionVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    excluded_journey_pattern_refs: Optional[
-        JourneyPatternRefsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "excludedJourneyPatternRefs",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    excluded_journey_pattern_refs: Optional[JourneyPatternRefsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "excludedJourneyPatternRefs",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

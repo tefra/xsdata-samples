@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .entity_in_version_structure import EntityInVersionStructure
 from .location_structure_2 import LocationStructure2
 from .multilingual_string import MultilingualString

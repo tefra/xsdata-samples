@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.general_instruction_to_road_users_type_enum import (
     GeneralInstructionToRoadUsersTypeEnum,

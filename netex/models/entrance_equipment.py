@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .entrance_equipment_version_structure import (
     EntranceEquipmentVersionStructure,
 )

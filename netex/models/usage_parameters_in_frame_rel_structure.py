@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .additional_driver_option import AdditionalDriverOption
 from .cancelling import Cancelling
 from .charging_policy import ChargingPolicy

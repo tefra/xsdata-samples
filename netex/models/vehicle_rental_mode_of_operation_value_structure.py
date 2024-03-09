@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .alternative_mode_of_operation_value_structure import (
     AlternativeModeOfOperationValueStructure,
 )

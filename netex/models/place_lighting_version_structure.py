@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
 from .lighting_enumeration import LightingEnumeration
 from .lighting_on_method_enumeration import LightingOnMethodEnumeration

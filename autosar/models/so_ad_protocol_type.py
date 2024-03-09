@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .so_ad_protocol_type_simple import SoAdProtocolTypeSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

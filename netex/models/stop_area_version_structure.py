@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .stop_area_ref_structure import StopAreaRefStructure
 from .topographic_place_ref import TopographicPlaceRef
 from .topographic_place_view import TopographicPlaceView

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .journey_run_times_rel_structure import JourneyRunTimesRelStructure
 from .link_in_link_sequence_versioned_child_structure import (
     LinkInLinkSequenceVersionedChildStructure,

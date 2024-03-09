@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .endpoint_not_available_access_structure import (
     EndpointNotAvailableAccessStructure,
 )

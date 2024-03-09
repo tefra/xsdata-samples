@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .boolean import Boolean
 from .cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
@@ -178,15 +179,15 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    session_handling_sr: Optional[
-        SomeipTransformerSessionHandlingEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SESSION-HANDLING-SR",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    session_handling_sr: Optional[SomeipTransformerSessionHandlingEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SESSION-HANDLING-SR",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     size_of_array_length_fields: Optional[PositiveInteger] = field(
         default=None,

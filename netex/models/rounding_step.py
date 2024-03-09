@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .rounding_step_versioned_child_structure import (
     RoundingStepVersionedChildStructure,
 )

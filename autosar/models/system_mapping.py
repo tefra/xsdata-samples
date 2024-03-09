@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -299,15 +300,15 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_resource_mappings: Optional[
-        "SystemMapping.EcuResourceMappings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ECU-RESOURCE-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecu_resource_mappings: Optional["SystemMapping.EcuResourceMappings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECU-RESOURCE-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     j_1939_controller_application_to_j_1939_nm_node_mappings: Optional[
         "SystemMapping.J1939ControllerApplicationToJ1939NmNodeMappings"
@@ -345,15 +346,15 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_estimations: Optional[
-        "SystemMapping.ResourceEstimations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RESOURCE-ESTIMATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    resource_estimations: Optional["SystemMapping.ResourceEstimations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RESOURCE-ESTIMATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     resource_to_application_partition_mappings: Optional[
         "SystemMapping.ResourceToApplicationPartitionMappings"
@@ -527,15 +528,15 @@ class SystemMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        client_server_to_signal_mapping: List[
-            ClientServerToSignalMapping
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "CLIENT-SERVER-TO-SIGNAL-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        client_server_to_signal_mapping: List[ClientServerToSignalMapping] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "CLIENT-SERVER-TO-SIGNAL-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         sender_receiver_composite_element_to_signal_mapping: List[
             SenderReceiverCompositeElementToSignalMapping

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .requested_travel_specification_version_structure import (
     RequestedTravelSpecificationVersionStructure,
 )

@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime
+
 from travelport.models.advtype import Advtype
 from travelport.models.chgtype import Chgtype
 from travelport.models.maxtype import Maxtype

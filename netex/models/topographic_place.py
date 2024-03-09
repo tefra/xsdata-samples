@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .topographic_place_version_structure import (
     TopographicPlaceVersionStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     CataloguePricingUpdateLine,
     ContractorCustomerParty,
@@ -252,16 +253,16 @@ class CataloguePricingUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    catalogue_pricing_update_line: Tuple[
-        CataloguePricingUpdateLine, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "CataloguePricingUpdateLine",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "min_occurs": 1,
-        },
+    catalogue_pricing_update_line: Tuple[CataloguePricingUpdateLine, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "CataloguePricingUpdateLine",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+                "min_occurs": 1,
+            },
+        )
     )
 
 

@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .communications_transport_method_enumeration import (
     CommunicationsTransportMethodEnumeration,
 )

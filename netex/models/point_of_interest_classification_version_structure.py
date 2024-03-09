@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .classification_descriptors_rel_structure import (
     ClassificationDescriptorsRelStructure,
 )

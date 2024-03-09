@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.aspect_ratio_enum import AspectRatioEnum
 from npo.models.color_type import ColorType
 

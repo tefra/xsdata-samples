@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .access_space_ref import AccessSpaceRef
 from .addressable_place_ref import AddressablePlaceRef
 from .assignment_version_structure_1 import AssignmentVersionStructure1

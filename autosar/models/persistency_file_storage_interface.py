@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -197,15 +198,15 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "PersistencyFileStorageInterface.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["PersistencyFileStorageInterface.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -283,25 +284,25 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_strategy: Optional[
-        PersistencyCollectionLevelUpdateStrategyEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "UPDATE-STRATEGY",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    update_strategy: Optional[PersistencyCollectionLevelUpdateStrategyEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "UPDATE-STRATEGY",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    file_elements: Optional[
-        "PersistencyFileStorageInterface.FileElements"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FILE-ELEMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    file_elements: Optional["PersistencyFileStorageInterface.FileElements"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FILE-ELEMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     max_number_of_files: Optional[PositiveInteger] = field(
         default=None,
@@ -366,15 +367,15 @@ class PersistencyFileStorageInterface:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,

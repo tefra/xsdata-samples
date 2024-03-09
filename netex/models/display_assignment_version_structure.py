@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .direction_ref import DirectionRef
@@ -121,15 +122,15 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    display_assignment_type: Optional[
-        DisplayAssignmentTypeEnumeration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DisplayAssignmentType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    display_assignment_type: Optional[DisplayAssignmentTypeEnumeration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DisplayAssignmentType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     number_of_journeys_to_show: Optional[int] = field(
         default=None,

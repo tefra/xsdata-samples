@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_pricing_info_ref import AirPricingInfoRef
 from travelport.models.commission_1 import Commission1
 from travelport.models.credit_card_auth_1 import CreditCardAuth1

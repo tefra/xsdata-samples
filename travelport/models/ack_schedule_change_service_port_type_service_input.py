@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.ack_schedule_change_req import AckScheduleChangeReq
 from travelport.models.supported_versions import SupportedVersions
 

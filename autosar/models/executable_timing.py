@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -149,15 +150,15 @@ class ExecutableTiming:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ExecutableTiming.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["ExecutableTiming.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -223,15 +224,15 @@ class ExecutableTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_descriptions: Optional[
-        "ExecutableTiming.TimingDescriptions"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TIMING-DESCRIPTIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    timing_descriptions: Optional["ExecutableTiming.TimingDescriptions"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TIMING-DESCRIPTIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     timing_guarantees: Optional["ExecutableTiming.TimingGuarantees"] = field(
         default=None,
@@ -241,15 +242,15 @@ class ExecutableTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_requirements: Optional[
-        "ExecutableTiming.TimingRequirements"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TIMING-REQUIREMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    timing_requirements: Optional["ExecutableTiming.TimingRequirements"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TIMING-REQUIREMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     timing_resource: Optional[TimingExtensionResource] = field(
         default=None,
@@ -325,15 +326,15 @@ class ExecutableTiming:
 
     @dataclass
     class TimingDescriptions:
-        td_event_bsw_internal_behavior: List[
-            TdEventBswInternalBehavior
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-EVENT-BSW-INTERNAL-BEHAVIOR",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_event_bsw_internal_behavior: List[TdEventBswInternalBehavior] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-EVENT-BSW-INTERNAL-BEHAVIOR",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         td_event_bsw_mode_declaration: List[TdEventBswModeDeclaration] = field(
             default_factory=list,
@@ -359,15 +360,15 @@ class ExecutableTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_fr_cluster_cycle_start: List[
-            TdEventFrClusterCycleStart
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-EVENT-FR-CLUSTER-CYCLE-START",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_event_fr_cluster_cycle_start: List[TdEventFrClusterCycleStart] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-EVENT-FR-CLUSTER-CYCLE-START",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         td_event_frame: List[TdEventFrame] = field(
             default_factory=list,
@@ -427,25 +428,25 @@ class ExecutableTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_service_instance_event: List[
-            TdEventServiceInstanceEvent
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-EVENT-SERVICE-INSTANCE-EVENT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_event_service_instance_event: List[TdEventServiceInstanceEvent] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-EVENT-SERVICE-INSTANCE-EVENT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
-        td_event_service_instance_field: List[
-            TdEventServiceInstanceField
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-EVENT-SERVICE-INSTANCE-FIELD",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_event_service_instance_field: List[TdEventServiceInstanceField] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-EVENT-SERVICE-INSTANCE-FIELD",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         td_event_service_instance_method: List[
             TdEventServiceInstanceMethod
@@ -457,15 +458,15 @@ class ExecutableTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_swc_internal_behavior: List[
-            TdEventSwcInternalBehavior
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-EVENT-SWC-INTERNAL-BEHAVIOR",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_event_swc_internal_behavior: List[TdEventSwcInternalBehavior] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-EVENT-SWC-INTERNAL-BEHAVIOR",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         td_event_swc_internal_behavior_reference: List[
             TdEventSwcInternalBehaviorReference
@@ -511,15 +512,15 @@ class ExecutableTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        timing_description_event_chain: List[
-            TimingDescriptionEventChain
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TIMING-DESCRIPTION-EVENT-CHAIN",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        timing_description_event_chain: List[TimingDescriptionEventChain] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TIMING-DESCRIPTION-EVENT-CHAIN",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass
@@ -540,15 +541,15 @@ class ExecutableTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        burst_pattern_event_triggering: List[
-            BurstPatternEventTriggering
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BURST-PATTERN-EVENT-TRIGGERING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        burst_pattern_event_triggering: List[BurstPatternEventTriggering] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BURST-PATTERN-EVENT-TRIGGERING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         concrete_pattern_event_triggering: List[
             ConcretePatternEventTriggering
@@ -647,15 +648,15 @@ class ExecutableTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        burst_pattern_event_triggering: List[
-            BurstPatternEventTriggering
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BURST-PATTERN-EVENT-TRIGGERING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        burst_pattern_event_triggering: List[BurstPatternEventTriggering] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BURST-PATTERN-EVENT-TRIGGERING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         concrete_pattern_event_triggering: List[
             ConcretePatternEventTriggering

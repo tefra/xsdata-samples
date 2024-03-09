@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .chapter_enum_break_simple import ChapterEnumBreakSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

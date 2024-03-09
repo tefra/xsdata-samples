@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .flexible_link_properties_versioned_child_structure import (
     FlexibleLinkPropertiesVersionedChildStructure,
 )

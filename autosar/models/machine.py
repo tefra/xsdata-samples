@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -383,15 +384,15 @@ class Machine:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        time_sync_module_instantiation: List[
-            TimeSyncModuleInstantiation
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TIME-SYNC-MODULE-INSTANTIATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        time_sync_module_instantiation: List[TimeSyncModuleInstantiation] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TIME-SYNC-MODULE-INSTANTIATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         ucm_module_instantiation: List[UcmModuleInstantiation] = field(
             default_factory=list,

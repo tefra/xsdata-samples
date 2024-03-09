@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .fare_demand_type_enumeration import FareDemandTypeEnumeration
 from .quality_structure_factor_version_structure import (
     QualityStructureFactorVersionStructure,
@@ -42,13 +43,13 @@ class FareDemandFactorVersionStructure(QualityStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_times_at_stop_points: Optional[
-        StartTimeAtStopPointsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "startTimesAtStopPoints",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    start_times_at_stop_points: Optional[StartTimeAtStopPointsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "startTimesAtStopPoints",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

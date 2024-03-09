@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .arrival_structure import ArrivalStructure
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .departure_structure import DepartureStructure

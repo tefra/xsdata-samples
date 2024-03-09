@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .ref import Ref
 from .software_cluster_dependency_operator_enum import (

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union, Any
+from typing import Any, List, Optional, Type, Union
+
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
+
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .activated_equipment_ref import ActivatedEquipmentRef
 from .additional_driver_option_ref import AdditionalDriverOptionRef
@@ -1015,25 +1017,25 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "priceGroups_RelStructure"
 
-    price_group_ref_or_price_group: List[
-        Union[PriceGroupRef, PriceGroup1]
-    ] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "PriceGroupRef",
-                    "type": PriceGroupRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "PriceGroup",
-                    "type": PriceGroup1,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    price_group_ref_or_price_group: List[Union[PriceGroupRef, PriceGroup1]] = (
+        field(
+            default_factory=list,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "PriceGroupRef",
+                        "type": PriceGroupRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "PriceGroup",
+                        "type": PriceGroup1,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
 
 
@@ -1763,25 +1765,25 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: Optional[
-        Union[AuthorityRef, OperatorRef]
-    ] = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    transport_organisation_ref: Optional[Union[AuthorityRef, OperatorRef]] = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "AuthorityRef",
+                        "type": AuthorityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OperatorRef",
+                        "type": OperatorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     group_of_lines_ref: Optional[Union[NetworkRef, GroupOfLinesRef]] = field(
         default=None,
@@ -2512,25 +2514,25 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: Optional[
-        Union[StandardFareTableRef, FareTableRef]
-    ] = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "StandardFareTableRef",
-                    "type": StandardFareTableRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareTableRef",
-                    "type": FareTableRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    fare_table_ref: Optional[Union[StandardFareTableRef, FareTableRef]] = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "StandardFareTableRef",
+                        "type": StandardFareTableRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareTableRef",
+                        "type": FareTableRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     column_ref: Optional[FareTableColumnRefStructure] = field(
         default=None,

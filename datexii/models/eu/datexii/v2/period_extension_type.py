@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.period_extended import PeriodExtended
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"

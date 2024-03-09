@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
     ContractingParty,
@@ -154,16 +155,16 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tenderer_party_qualification: Tuple[
-        TendererPartyQualification, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "TendererPartyQualification",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "min_occurs": 1,
-        },
+    tenderer_party_qualification: Tuple[TendererPartyQualification, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "TendererPartyQualification",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+                "min_occurs": 1,
+            },
+        )
     )
     contracting_party: Optional[ContractingParty] = field(
         default=None,
@@ -181,15 +182,15 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: Tuple[
-        AdditionalDocumentReference, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "AdditionalDocumentReference",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "AdditionalDocumentReference",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
 
 

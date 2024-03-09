@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .journey_headway_versioned_child_structure import (
     JourneyHeadwayVersionedChildStructure,
 )

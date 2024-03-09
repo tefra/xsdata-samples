@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .numerical_value import NumericalValue
 from .numerical_value_variation_point import NumericalValueVariationPoint
 

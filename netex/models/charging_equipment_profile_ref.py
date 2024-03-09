@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .charging_equipment_profile_ref_structure import (
     ChargingEquipmentProfileRefStructure,
 )

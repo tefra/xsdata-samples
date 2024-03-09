@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
 )
@@ -429,15 +430,15 @@ class PncMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: Optional[
-                AdaptivePlatformServiceInstanceSubtypesEnum
-            ] = field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
+            dest: Optional[AdaptivePlatformServiceInstanceSubtypesEnum] = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "DEST",
+                        "type": "Attribute",
+                        "required": True,
+                    },
+                )
             )
 
     @dataclass
@@ -453,15 +454,15 @@ class PncMapping:
 
     @dataclass
     class WakeupFrameRefs:
-        wakeup_frame_ref: List[
-            "PncMapping.WakeupFrameRefs.WakeupFrameRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "WAKEUP-FRAME-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        wakeup_frame_ref: List["PncMapping.WakeupFrameRefs.WakeupFrameRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "WAKEUP-FRAME-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

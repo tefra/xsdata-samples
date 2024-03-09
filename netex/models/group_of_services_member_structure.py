@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .abstract_group_member_versioned_child_structure import (
     AbstractGroupMemberVersionedChildStructure,
 )

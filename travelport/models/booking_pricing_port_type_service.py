@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.booking_pricing_port_type_service_input import (
     BookingPricingPortTypeServiceInput,
 )

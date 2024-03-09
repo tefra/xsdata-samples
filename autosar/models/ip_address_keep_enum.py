@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ip_address_keep_enum_simple import IpAddressKeepEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

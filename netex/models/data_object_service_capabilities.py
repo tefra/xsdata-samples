@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .data_object_service_capabilities_structure import (
     DataObjectServiceCapabilitiesStructure,
 )

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.keyword_1 import Keyword1
 from travelport.models.permitted_providers_1 import PermittedProviders1

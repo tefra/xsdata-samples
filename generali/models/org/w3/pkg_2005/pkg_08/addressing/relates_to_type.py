@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Dict, Union
+
 from generali.models.org.w3.pkg_2005.pkg_08.addressing.relationship_type import (
     RelationshipType,
 )

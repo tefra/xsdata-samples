@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     Cd,
     Ce,
@@ -48,8 +49,8 @@ from .mfmi_mt700712_uv01 import (
     MfmiMt700712Uv01Custodian,
     MfmiMt700712Uv01DataEnterer,
     MfmiMt700712Uv01Definition,
-    MfmiMt700712Uv01InFulfillmentOf,
     MfmiMt700712Uv01InformationRecipient,
+    MfmiMt700712Uv01InFulfillmentOf,
     MfmiMt700712Uv01Overseer,
     MfmiMt700712Uv01QueryAck,
     MfmiMt700712Uv01Reason,

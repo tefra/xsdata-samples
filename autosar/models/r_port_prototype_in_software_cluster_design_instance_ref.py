@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
 from .ref import Ref
 from .root_sw_cluster_design_component_prototype_subtypes_enum import (
@@ -81,15 +82,15 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
 
     @dataclass
     class ContextRootSwClusterDesignComponentPrototypeRef(Ref):
-        dest: Optional[
-            RootSwClusterDesignComponentPrototypeSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[RootSwClusterDesignComponentPrototypeSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )
 
     @dataclass

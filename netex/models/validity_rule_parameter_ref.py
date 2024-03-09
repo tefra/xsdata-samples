@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .validity_rule_parameter_ref_structure import (
     ValidityRuleParameterRefStructure,
 )

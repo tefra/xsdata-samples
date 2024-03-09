@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.network_management import NetworkManagement
 from datexii.models.eu.datexii.v2.speed_management_type_enum import (

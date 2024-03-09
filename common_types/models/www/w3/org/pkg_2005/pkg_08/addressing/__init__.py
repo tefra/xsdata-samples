@@ -1,8 +1,8 @@
 from .ws_addr import (
     Action,
     AttributedQnameType,
-    AttributedUritype,
     AttributedUnsignedLongType,
+    AttributedUritype,
     EndpointReference,
     EndpointReferenceType,
     FaultTo,

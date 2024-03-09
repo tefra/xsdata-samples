@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .offered_travel_specification_ref_structure import (
     OfferedTravelSpecificationRefStructure,
 )

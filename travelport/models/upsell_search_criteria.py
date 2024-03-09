@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.effective_date import EffectiveDate
 from travelport.models.expiration_date import ExpirationDate
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from ..core.datatypes_base import (
     AdExplicit,
     Ce,
@@ -83,16 +84,16 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "nillable": True,
         },
     )
-    service_provider_organization: Optional[
-        CoctMt150003Uv03Organization
-    ] = field(
-        default=None,
-        metadata={
-            "name": "serviceProviderOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    service_provider_organization: Optional[CoctMt150003Uv03Organization] = (
+        field(
+            default=None,
+            metadata={
+                "name": "serviceProviderOrganization",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

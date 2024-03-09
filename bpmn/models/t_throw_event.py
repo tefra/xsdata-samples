@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xml.etree.ElementTree import QName
+
 from .cancel_event_definition import CancelEventDefinition
 from .compensate_event_definition import CompensateEventDefinition
 from .conditional_event_definition import ConditionalEventDefinition

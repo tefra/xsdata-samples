@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .p_trigger_in_atomic_swc_type_instance_ref import (
     PTriggerInAtomicSwcTypeInstanceRef,
@@ -36,15 +37,15 @@ class SwcBswSynchronizedTrigger:
     class Meta:
         name = "SWC-BSW-SYNCHRONIZED-TRIGGER"
 
-    bsw_trigger_ref: Optional[
-        "SwcBswSynchronizedTrigger.BswTriggerRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "BSW-TRIGGER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    bsw_trigger_ref: Optional["SwcBswSynchronizedTrigger.BswTriggerRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "BSW-TRIGGER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     swc_trigger_iref: Optional[PTriggerInAtomicSwcTypeInstanceRef] = field(
         default=None,

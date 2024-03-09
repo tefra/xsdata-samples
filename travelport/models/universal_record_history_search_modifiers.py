@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
 
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
@@ -44,7 +46,9 @@ class UniversalRecordHistorySearchModifiers:
             "type": "Element",
         },
     )
-    modified_range: None | UniversalRecordHistorySearchModifiers.ModifiedRange = field(
+    modified_range: (
+        None | UniversalRecordHistorySearchModifiers.ModifiedRange
+    ) = field(
         default=None,
         metadata={
             "name": "ModifiedRange",

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_upsell_search_criteria import (
     AirUpsellSearchCriteria,
 )

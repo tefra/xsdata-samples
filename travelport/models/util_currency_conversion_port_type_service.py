@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.util_currency_conversion_port_type_service_input import (
     UtilCurrencyConversionPortTypeServiceInput,
 )

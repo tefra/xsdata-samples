@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.balance import Balance
 from travelport.models.charges import Charges
 from travelport.models.commission_3 import Commission3

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .parking_properties_versioned_child_structure import (
     ParkingPropertiesVersionedChildStructure,
 )

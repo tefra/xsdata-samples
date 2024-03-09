@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_integer_restriction_1 import (
     TypeIntegerRestriction1,
 )

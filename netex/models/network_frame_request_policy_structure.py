@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDateTime, XmlDuration
+
 from .output_detail_enumeration import OutputDetailEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

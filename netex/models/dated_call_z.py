@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .dated_call_versioned_child_structure import (
     DatedCallVersionedChildStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName

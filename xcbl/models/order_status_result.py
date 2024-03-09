@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.price_check_result import (
     ErrorInfo,
     GeneralLineItemNote,
@@ -315,14 +316,14 @@ class OrderStatusResultSummary:
             "required": True,
         }
     )
-    order_status_summary_error_info: Optional[
-        OrderStatusSummaryErrorInfo
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OrderStatusSummaryErrorInfo",
-            "type": "Element",
-        },
+    order_status_summary_error_info: Optional[OrderStatusSummaryErrorInfo] = (
+        field(
+            default=None,
+            metadata={
+                "name": "OrderStatusSummaryErrorInfo",
+                "type": "Element",
+            },
+        )
     )
     total_number_of_line_item: Optional[TotalNumberOfLineItem] = field(
         default=None,
@@ -700,14 +701,14 @@ class OrderStatusResultReference:
             "type": "Element",
         },
     )
-    list_of_order_status_result_item: Optional[
-        ListOfOrderStatusResultItem
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfOrderStatusResultItem",
-            "type": "Element",
-        },
+    list_of_order_status_result_item: Optional[ListOfOrderStatusResultItem] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfOrderStatusResultItem",
+                "type": "Element",
+            },
+        )
     )
 
 

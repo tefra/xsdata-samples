@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.rail_pricing_solution import RailPricingSolution
 from travelport.models.rail_solution_changed_info_reason_code import (
     RailSolutionChangedInfoReasonCode,

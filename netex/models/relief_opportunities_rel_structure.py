@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .relief_opportunity import ReliefOpportunity
 from .relief_opportunity_ref import ReliefOpportunityRef

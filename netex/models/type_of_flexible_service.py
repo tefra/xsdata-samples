@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_flexible_service_value_structure import (
     TypeOfFlexibleServiceValueStructure,
 )

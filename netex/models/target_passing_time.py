@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .target_passing_time_versioned_child_structure import (
     TargetPassingTimeVersionedChildStructure,
 )

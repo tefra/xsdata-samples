@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer_account_security_listing import CustomerAccountSecurityListing
 from .customer_security_listing import CustomerSecurityListing

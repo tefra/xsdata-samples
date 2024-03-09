@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .group_of_link_sequences_version_structure import (
     GroupOfLinkSequencesVersionStructure,
 )

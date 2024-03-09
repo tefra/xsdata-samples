@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .entity_in_version_structure import VersionedChildStructure
 from .fare_table_column_ref_structure import FareTableColumnRefStructure
 from .fare_table_ref import FareTableRef
@@ -31,25 +32,25 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: Optional[
-        Union[StandardFareTableRef, FareTableRef]
-    ] = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "StandardFareTableRef",
-                    "type": StandardFareTableRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FareTableRef",
-                    "type": FareTableRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    fare_table_ref: Optional[Union[StandardFareTableRef, FareTableRef]] = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "StandardFareTableRef",
+                        "type": StandardFareTableRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FareTableRef",
+                        "type": FareTableRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     column_ref: Optional[FareTableColumnRefStructure] = field(
         default=None,

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_time_spec_2 import TypeTimeSpec2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"

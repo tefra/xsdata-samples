@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -336,15 +337,15 @@ class SecuredIPdu:
 
     @dataclass
     class AuthenticationPropsRef(Ref):
-        dest: Optional[
-            SecureCommunicationAuthenticationPropsSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[SecureCommunicationAuthenticationPropsSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )
 
     @dataclass

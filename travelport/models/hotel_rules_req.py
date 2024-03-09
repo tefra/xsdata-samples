@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.hotel_property import HotelProperty
 from travelport.models.hotel_rules_lookup_rules_detail_reqd import (

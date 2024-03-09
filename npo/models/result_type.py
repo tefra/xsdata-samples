@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.total_qualifier import TotalQualifier
 
 __NAMESPACE__ = "urn:vpro:api:2013"

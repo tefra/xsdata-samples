@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_traveler_ref_1 import BookingTravelerRef1
 from travelport.models.type_guest_child_information import (
     TypeGuestChildInformation,

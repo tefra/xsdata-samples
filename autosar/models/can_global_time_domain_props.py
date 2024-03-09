@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .positive_integer import PositiveInteger
 
@@ -40,15 +41,15 @@ class CanGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fup_data_id_lists: Optional[
-        "CanGlobalTimeDomainProps.FupDataIdLists"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FUP-DATA-ID-LISTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    fup_data_id_lists: Optional["CanGlobalTimeDomainProps.FupDataIdLists"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FUP-DATA-ID-LISTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ofns_data_id_lists: Optional[
         "CanGlobalTimeDomainProps.OfnsDataIdLists"
@@ -60,15 +61,15 @@ class CanGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ofs_data_id_lists: Optional[
-        "CanGlobalTimeDomainProps.OfsDataIdLists"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OFS-DATA-ID-LISTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ofs_data_id_lists: Optional["CanGlobalTimeDomainProps.OfsDataIdLists"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "OFS-DATA-ID-LISTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sync_data_id_lists: Optional[
         "CanGlobalTimeDomainProps.SyncDataIdLists"

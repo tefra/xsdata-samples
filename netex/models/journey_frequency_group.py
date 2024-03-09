@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .journey_frequency_group_version_structure import (
     JourneyFrequencyGroupVersionStructure,
 )

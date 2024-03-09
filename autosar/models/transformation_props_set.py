@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -216,15 +217,15 @@ class TransformationPropsSet:
 
     @dataclass
     class TransformationPropss:
-        ap_someip_transformation_props: List[
-            ApSomeipTransformationProps
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "AP-SOMEIP-TRANSFORMATION-PROPS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ap_someip_transformation_props: List[ApSomeipTransformationProps] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "AP-SOMEIP-TRANSFORMATION-PROPS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         someip_transformation_props: List[SomeipTransformationProps] = field(
             default_factory=list,

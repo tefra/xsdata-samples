@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_segment import AirSegment
 from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.co2_emissions import Co2Emissions

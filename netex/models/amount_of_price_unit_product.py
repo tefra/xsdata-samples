@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .amount_of_price_unit_product_version_structure import (
     AmountOfPriceUnitProductVersionStructure,
 )

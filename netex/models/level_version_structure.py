@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .accessibility_assessment_versioned_child_structure import (
     AccessibilityAssessmentVersionedChildStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ike_authentication_method_enum_simple import (
     IkeAuthenticationMethodEnumSimple,
 )

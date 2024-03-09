@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .purpose_of_grouping_value_structure import (
     PurposeOfGroupingValueStructure,
 )

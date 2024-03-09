@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes import (
     IvlInt,
     IvlPq,
@@ -339,16 +340,16 @@ class RepcMt000100Uv01Author3:
             "nillable": True,
         },
     )
-    personal_relationship: Optional[
-        CoctMt910000UvPersonalRelationship
-    ] = field(
-        default=None,
-        metadata={
-            "name": "personalRelationship",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    personal_relationship: Optional[CoctMt910000UvPersonalRelationship] = (
+        field(
+            default=None,
+            metadata={
+                "name": "personalRelationship",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     care_giver: Optional[CoctMt910000UvCareGiver] = field(
         default=None,
@@ -737,16 +738,16 @@ class RepcMt000100Uv01Informant12:
             "nillable": True,
         },
     )
-    personal_relationship: Optional[
-        CoctMt910000UvPersonalRelationship
-    ] = field(
-        default=None,
-        metadata={
-            "name": "personalRelationship",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    personal_relationship: Optional[CoctMt910000UvPersonalRelationship] = (
+        field(
+            default=None,
+            metadata={
+                "name": "personalRelationship",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     care_giver: Optional[CoctMt910000UvCareGiver] = field(
         default=None,
@@ -1027,16 +1028,16 @@ class RepcMt000100Uv01Performer3:
             "nillable": True,
         },
     )
-    personal_relationship: Optional[
-        CoctMt910000UvPersonalRelationship
-    ] = field(
-        default=None,
-        metadata={
-            "name": "personalRelationship",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    personal_relationship: Optional[CoctMt910000UvPersonalRelationship] = (
+        field(
+            default=None,
+            metadata={
+                "name": "personalRelationship",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     care_giver: Optional[CoctMt910000UvCareGiver] = field(
         default=None,
@@ -1344,16 +1345,16 @@ class RepcMt000100Uv01Subject4:
             "nillable": True,
         },
     )
-    personal_relationship: Optional[
-        CoctMt910000UvPersonalRelationship
-    ] = field(
-        default=None,
-        metadata={
-            "name": "personalRelationship",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    personal_relationship: Optional[CoctMt910000UvPersonalRelationship] = (
+        field(
+            default=None,
+            metadata={
+                "name": "personalRelationship",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     care_giver: Optional[CoctMt910000UvCareGiver] = field(
         default=None,
@@ -1751,16 +1752,16 @@ class RepcMt000100Uv01HealthCareFacility:
             "nillable": True,
         },
     )
-    service_provider_organization: Optional[
-        RepcMt000100Uv01Organization
-    ] = field(
-        default=None,
-        metadata={
-            "name": "serviceProviderOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    service_provider_organization: Optional[RepcMt000100Uv01Organization] = (
+        field(
+            default=None,
+            metadata={
+                "name": "serviceProviderOrganization",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

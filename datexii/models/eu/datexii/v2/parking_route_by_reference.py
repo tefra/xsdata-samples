@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.parking_route import ParkingRoute
 from datexii.models.eu.datexii.v2.parking_route_details_versioned_reference import (

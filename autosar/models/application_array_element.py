@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -212,15 +213,15 @@ class ApplicationArrayElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_elements: Optional[
-        PositiveIntegerValueVariationPoint
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MAX-NUMBER-OF-ELEMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    max_number_of_elements: Optional[PositiveIntegerValueVariationPoint] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MAX-NUMBER-OF-ELEMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

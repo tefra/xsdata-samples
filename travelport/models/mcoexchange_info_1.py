@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.exchanged_coupon_1 import ExchangedCoupon1
 from travelport.models.form_of_payment_1 import FormOfPayment1
 

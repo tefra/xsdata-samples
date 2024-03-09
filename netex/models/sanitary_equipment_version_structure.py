@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
+
 from .accessibility_assessment import AccessibilityAssessment
 from .gender_limitation_enumeration import GenderLimitationEnumeration
 from .passenger_equipment_version_structure import (

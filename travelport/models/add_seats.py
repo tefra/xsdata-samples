@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.auto_seat_assignment import AutoSeatAssignment
 from travelport.models.specific_seat_assignment import SpecificSeatAssignment
 

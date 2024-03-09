@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.risk_element_type import (
     RiskElementType,
 )

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.traveler_identity_information_2 import (
     TravelerIdentityInformation2,
 )
@@ -193,7 +195,9 @@ class TypeHistorySubElement2:
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
         },
     )
-    alternate_contact_address: None | TypeHistorySubElement2.AlternateContactAddress = field(
+    alternate_contact_address: (
+        None | TypeHistorySubElement2.AlternateContactAddress
+    ) = field(
         default=None,
         metadata={
             "name": "AlternateContactAddress",
@@ -201,7 +205,9 @@ class TypeHistorySubElement2:
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
         },
     )
-    alternate_contact_phone: None | TypeHistorySubElement2.AlternateContactPhone = field(
+    alternate_contact_phone: (
+        None | TypeHistorySubElement2.AlternateContactPhone
+    ) = field(
         default=None,
         metadata={
             "name": "AlternateContactPhone",
@@ -209,7 +215,9 @@ class TypeHistorySubElement2:
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
         },
     )
-    alternate_contact_electronic_address: None | TypeHistorySubElement2.AlternateContactElectronicAddress = field(
+    alternate_contact_electronic_address: (
+        None | TypeHistorySubElement2.AlternateContactElectronicAddress
+    ) = field(
         default=None,
         metadata={
             "name": "AlternateContactElectronicAddress",

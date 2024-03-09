@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from xcbl.models.trading_partner_organization_information import (
     TradingPartnerDisplayName,
     TradingPartnerIdentifications,

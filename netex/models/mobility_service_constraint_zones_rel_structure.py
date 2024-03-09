@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .mobility_service_constraint_zone import MobilityServiceConstraintZone
 from .mobility_service_constraint_zone_ref import (

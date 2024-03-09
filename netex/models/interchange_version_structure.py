@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .access_mode_enumeration import AccessModeEnumeration
 from .connection_certainty_enumeration import ConnectionCertaintyEnumeration
 from .connection_ref_structure import ConnectionRefStructure

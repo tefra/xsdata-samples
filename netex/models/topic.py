@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .topic_structure import TopicStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

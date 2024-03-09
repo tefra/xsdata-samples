@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from .fm_attribute_def_subtypes_enum import FmAttributeDefSubtypesEnum
 from .fm_feature_subtypes_enum import FmFeatureSubtypesEnum
 from .ref import Ref

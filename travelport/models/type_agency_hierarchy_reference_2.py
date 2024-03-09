@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_agency_profile_level_2 import (
     TypeAgencyProfileLevel2,
 )

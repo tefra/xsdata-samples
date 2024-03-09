@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_profile_link_relationship_1 import (
     TypeProfileLinkRelationship1,
 )

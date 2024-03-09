@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .frame_enum_simple import FrameEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

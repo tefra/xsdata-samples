@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.create_field_2 import CreateField2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"

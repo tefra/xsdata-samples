@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_surface_type import AbstractSurfaceType
 from .exterior import Exterior
 from .interior import Interior

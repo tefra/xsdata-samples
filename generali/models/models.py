@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from generali.models.amount import (
     Characteristics,
     ErrorCode,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .access_rights_in_product_rel_structure import (
     AccessRightsInProductRelStructure,
 )
@@ -259,15 +260,15 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_rights_in_product: Optional[
-        AccessRightsInProductRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "accessRightsInProduct",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    access_rights_in_product: Optional[AccessRightsInProductRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "accessRightsInProduct",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     tariffs: Optional[TariffRefsRelStructure] = field(
         default=None,

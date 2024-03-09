@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.supported_versions import SupportedVersions
 from travelport.models.universal_record_history_search_req import (
     UniversalRecordHistorySearchReq,
@@ -44,7 +46,9 @@ class UniversalRecordHistorySearchPortTypeServiceInput:
 
     @dataclass
     class Body:
-        universal_record_history_search_req: None | UniversalRecordHistorySearchReq = field(
+        universal_record_history_search_req: (
+            None | UniversalRecordHistorySearchReq
+        ) = field(
             default=None,
             metadata={
                 "name": "UniversalRecordHistorySearchReq",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -158,15 +159,15 @@ class PostBuildVariantCriterion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_method_ref: Optional[
-        "PostBuildVariantCriterion.CompuMethodRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "COMPU-METHOD-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    compu_method_ref: Optional["PostBuildVariantCriterion.CompuMethodRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMPU-METHOD-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

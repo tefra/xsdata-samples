@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.name_2 import Name2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"

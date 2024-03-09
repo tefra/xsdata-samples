@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -311,15 +312,15 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_certificate_refs: Optional[
-        "IpSecRule.RemoteCertificateRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "REMOTE-CERTIFICATE-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    remote_certificate_refs: Optional["IpSecRule.RemoteCertificateRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "REMOTE-CERTIFICATE-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     remote_id: Optional[String] = field(
         default=None,

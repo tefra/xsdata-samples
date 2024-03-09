@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .taxi_service_place_assignment_ref import TaxiServicePlaceAssignmentRef
 

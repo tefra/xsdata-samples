@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
 )
@@ -130,25 +131,25 @@ class ClientServerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    call_signal_ref: Optional[
-        "ClientServerToSignalMapping.CallSignalRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CALL-SIGNAL-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    call_signal_ref: Optional["ClientServerToSignalMapping.CallSignalRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CALL-SIGNAL-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    client_server_operation_iref: Optional[
-        OperationInSystemInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CLIENT-SERVER-OPERATION-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    client_server_operation_iref: Optional[OperationInSystemInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CLIENT-SERVER-OPERATION-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     length_client_id: Optional[PositiveInteger] = field(
         default=None,
@@ -176,15 +177,15 @@ class ClientServerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    serializer_ref: Optional[
-        "ClientServerToSignalMapping.SerializerRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SERIALIZER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    serializer_ref: Optional["ClientServerToSignalMapping.SerializerRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SERIALIZER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xml.etree.ElementTree import QName
+
 from .artifact import Artifact
 from .association import Association
 from .auditing import Auditing

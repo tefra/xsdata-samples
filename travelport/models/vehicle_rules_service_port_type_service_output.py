@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.vehicle_rules_rsp import VehicleRulesRsp
 
@@ -63,7 +65,10 @@ class VehicleRulesServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | VehicleRulesServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | VehicleRulesServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

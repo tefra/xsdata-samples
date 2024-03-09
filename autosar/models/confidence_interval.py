@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .float_mod import Float
 from .multidimensional_time import MultidimensionalTime
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .graphic_fit_enum_simple import GraphicFitEnumSimple
 from .graphic_notation_enum_simple import GraphicNotationEnumSimple
 from .nmtoken_string import NmtokenString

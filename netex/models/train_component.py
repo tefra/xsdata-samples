@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .train_component_version_structure import TrainComponentVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

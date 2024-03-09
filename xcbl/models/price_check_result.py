@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.remittance_advice import SupplierParty
 from xcbl.models.sourcing_result import (
     BuyerParty,
@@ -692,14 +693,14 @@ class PriceCheckResultSummary:
             "required": True,
         }
     )
-    price_check_summary_error_info: Optional[
-        PriceCheckSummaryErrorInfo
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PriceCheckSummaryErrorInfo",
-            "type": "Element",
-        },
+    price_check_summary_error_info: Optional[PriceCheckSummaryErrorInfo] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PriceCheckSummaryErrorInfo",
+                "type": "Element",
+            },
+        )
     )
     total_number_of_line_item: Optional[TotalNumberOfLineItem] = field(
         default=None,

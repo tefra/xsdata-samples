@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .onward_timing_link_derived_view_structure import (
     OnwardTimingLinkDerivedViewStructure,
 )

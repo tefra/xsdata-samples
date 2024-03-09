@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.seat_assignment_1 import SeatAssignment1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"

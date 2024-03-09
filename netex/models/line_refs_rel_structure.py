@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .flexible_line_ref import FlexibleLineRef
 from .line_ref import LineRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure

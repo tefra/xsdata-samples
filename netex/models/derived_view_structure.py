@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .branding_ref import BrandingRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

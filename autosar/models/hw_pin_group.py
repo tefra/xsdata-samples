@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -263,15 +264,15 @@ class HwPinGroup:
 
     @dataclass
     class HwCategoryRefs:
-        hw_category_ref: List[
-            "HwPinGroup.HwCategoryRefs.HwCategoryRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "HW-CATEGORY-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        hw_category_ref: List["HwPinGroup.HwCategoryRefs.HwCategoryRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "HW-CATEGORY-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

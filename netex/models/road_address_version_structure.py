@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .address_version_structure import AddressVersionStructure
 from .compass_bearing16_enumeration import CompassBearing16Enumeration
 from .multilingual_string import MultilingualString

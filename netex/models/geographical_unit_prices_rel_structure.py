@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from .cell_ref_1 import CellRef1
 from .fare_price_versioned_child_structure import (
     FarePriceVersionedChildStructure,

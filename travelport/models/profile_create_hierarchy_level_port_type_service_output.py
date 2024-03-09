@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.profile_create_hierarchy_level_rsp import (
     ProfileCreateHierarchyLevelRsp,
@@ -24,7 +26,9 @@ class ProfileCreateHierarchyLevelPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        profile_create_hierarchy_level_rsp: None | ProfileCreateHierarchyLevelRsp = field(
+        profile_create_hierarchy_level_rsp: (
+            None | ProfileCreateHierarchyLevelRsp
+        ) = field(
             default=None,
             metadata={
                 "name": "ProfileCreateHierarchyLevelRsp",
@@ -32,7 +36,9 @@ class ProfileCreateHierarchyLevelPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
             },
         )
-        fault: None | ProfileCreateHierarchyLevelPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | ProfileCreateHierarchyLevelPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class ProfileCreateHierarchyLevelPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ProfileCreateHierarchyLevelPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | ProfileCreateHierarchyLevelPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .customer_payment_means_versioned_child_structure import (
     CustomerPaymentMeansVersionedChildStructure,
 )

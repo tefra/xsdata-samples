@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.text_info import TextInfo
 from travelport.models.urlinfo import Urlinfo
 

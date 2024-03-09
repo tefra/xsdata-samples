@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_charging_equipment_version_structure import (
     VehicleChargingEquipmentVersionStructure,
 )

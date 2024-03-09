@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .class_relationship_in_frame_structure import (
     ClassRelationshipInFrameStructure,
 )

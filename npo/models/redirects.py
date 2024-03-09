@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from npo.models.redirect_list import RedirectList
 
 __NAMESPACE__ = "urn:vpro:api:2013"

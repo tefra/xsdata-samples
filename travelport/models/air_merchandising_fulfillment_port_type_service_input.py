@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_merchandising_fulfillment_req import (
     AirMerchandisingFulfillmentReq,
 )
@@ -44,7 +46,9 @@ class AirMerchandisingFulfillmentPortTypeServiceInput:
 
     @dataclass
     class Body:
-        air_merchandising_fulfillment_req: None | AirMerchandisingFulfillmentReq = field(
+        air_merchandising_fulfillment_req: (
+            None | AirMerchandisingFulfillmentReq
+        ) = field(
             default=None,
             metadata={
                 "name": "AirMerchandisingFulfillmentReq",

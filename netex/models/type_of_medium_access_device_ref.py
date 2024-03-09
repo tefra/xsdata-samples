@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_medium_access_device_ref_structure import (
     TypeOfMediumAccessDeviceRefStructure,
 )

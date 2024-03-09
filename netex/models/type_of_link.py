@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .type_of_link_value_structure import TypeOfLinkValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

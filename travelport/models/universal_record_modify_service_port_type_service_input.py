@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.session_context import SessionContext
 from travelport.models.supported_versions import SupportedVersions
 from travelport.models.universal_record_modify_req import (

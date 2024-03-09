@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .mode_in_process_instance_ref import ModeInProcessInstanceRef
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

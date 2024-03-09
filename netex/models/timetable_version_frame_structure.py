@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .accessibility_assessment import AccessibilityAssessment
 from .common_version_frame_structure import CommonVersionFrameStructure
 from .compound_train_ref import CompoundTrainRef
@@ -157,15 +158,15 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_times: Optional[
-        ContainedAvailabilityConditionsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "bookingTimes",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    booking_times: Optional[ContainedAvailabilityConditionsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "bookingTimes",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     accessibility_assessment: Optional[AccessibilityAssessment] = field(
         default=None,
@@ -274,15 +275,15 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_part_couples: Optional[
-        JourneyPartCouplesInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "journeyPartCouples",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    journey_part_couples: Optional[JourneyPartCouplesInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "journeyPartCouples",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     coupled_journeys: Optional[CoupledJourneysInFrameRelStructure] = field(
         default=None,
@@ -292,15 +293,15 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_facility_sets: Optional[
-        ServiceFacilitySetsInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "serviceFacilitySets",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    service_facility_sets: Optional[ServiceFacilitySetsInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "serviceFacilitySets",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     types_of_service: Optional[TypesOfServiceInFrameRelStructure] = field(
         default=None,
@@ -353,25 +354,25 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_interchanges: Optional[
-        JourneyInterchangesInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "journeyInterchanges",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    journey_interchanges: Optional[JourneyInterchangesInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "journeyInterchanges",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
-    default_interchanges: Optional[
-        DefaultInterchangseInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "defaultInterchanges",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    default_interchanges: Optional[DefaultInterchangseInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "defaultInterchanges",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     interchange_rules: Optional[InterchangeRulesInFrameRelStructure] = field(
         default=None,
@@ -389,13 +390,13 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_accountings: Optional[
-        JourneyAccountingsInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "journeyAccountings",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    journey_accountings: Optional[JourneyAccountingsInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "journeyAccountings",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

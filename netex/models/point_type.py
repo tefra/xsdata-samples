@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .abstract_geometric_primitive_type import AbstractGeometricPrimitiveType
 from .pos import Pos
 

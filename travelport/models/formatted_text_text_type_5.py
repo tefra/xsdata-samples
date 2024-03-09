@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.formatted_text_text_type_text_format_5 import (
     FormattedTextTextTypeTextFormat5,
 )

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.profile_modify_tags_req_1 import ProfileModifyTagsReq1
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"

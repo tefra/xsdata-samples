@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.non_weather_related_road_condition_type_enum import (
     NonWeatherRelatedRoadConditionTypeEnum,
@@ -31,13 +32,13 @@ class NonWeatherRelatedRoadConditions(RoadConditions):
             "min_occurs": 1,
         },
     )
-    non_weather_related_road_conditions_extension: Optional[
-        ExtensionType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "nonWeatherRelatedRoadConditionsExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    non_weather_related_road_conditions_extension: Optional[ExtensionType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "nonWeatherRelatedRoadConditionsExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

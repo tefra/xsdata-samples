@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .distance_matrix_element_ref_structure import (
     DistanceMatrixElementRefStructure,
 )

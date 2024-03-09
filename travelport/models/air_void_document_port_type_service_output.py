@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_void_document_rsp import AirVoidDocumentRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -61,7 +63,9 @@ class AirVoidDocumentPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirVoidDocumentPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | AirVoidDocumentPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

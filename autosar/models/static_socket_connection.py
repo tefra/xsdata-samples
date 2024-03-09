@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -161,15 +162,15 @@ class StaticSocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_identifiers: Optional[
-        "StaticSocketConnection.IPduIdentifiers"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "I-PDU-IDENTIFIERS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    i_pdu_identifiers: Optional["StaticSocketConnection.IPduIdentifiers"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "I-PDU-IDENTIFIERS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     remote_addresss: Optional["StaticSocketConnection.RemoteAddresss"] = field(
         default=None,
@@ -255,13 +256,13 @@ class StaticSocketConnection:
 
     @dataclass
     class RemoteAddresss:
-        socket_address_ref_conditional: List[
-            SocketAddressRefConditional
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SOCKET-ADDRESS-REF-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        socket_address_ref_conditional: List[SocketAddressRefConditional] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SOCKET-ADDRESS-REF-CONDITIONAL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

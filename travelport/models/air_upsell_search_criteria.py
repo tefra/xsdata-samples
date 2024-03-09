@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_upsell_offer_search_criteria import (
     AirUpsellOfferSearchCriteria,
 )
@@ -28,7 +30,9 @@ class AirUpsellSearchCriteria:
             },
         )
     )
-    air_upsell_qualify_search_criteria: None | AirUpsellQualifySearchCriteria = field(
+    air_upsell_qualify_search_criteria: (
+        None | AirUpsellQualifySearchCriteria
+    ) = field(
         default=None,
         metadata={
             "name": "AirUpsellQualifySearchCriteria",

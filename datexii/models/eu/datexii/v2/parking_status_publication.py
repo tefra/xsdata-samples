@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.header_information import HeaderInformation
 from datexii.models.eu.datexii.v2.parking_record_status import (
     ParkingRecordStatus,

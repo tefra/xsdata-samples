@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"

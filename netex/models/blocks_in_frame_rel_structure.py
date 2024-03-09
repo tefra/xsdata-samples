@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .block import Block
 from .compound_block import CompoundBlock
 from .containment_aggregation_structure import ContainmentAggregationStructure

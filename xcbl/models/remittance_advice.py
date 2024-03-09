@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.request_for_quotation import (
     AccountNumber,
     BuyersCatalogNumber,
@@ -1342,14 +1343,14 @@ class Adjustment:
             "required": True,
         }
     )
-    adjustment_reason_coded_other: Optional[
-        AdjustmentReasonCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AdjustmentReasonCodedOther",
-            "type": "Element",
-        },
+    adjustment_reason_coded_other: Optional[AdjustmentReasonCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AdjustmentReasonCodedOther",
+                "type": "Element",
+            },
+        )
     )
     adjustment_date: Optional[AdjustmentDate] = field(
         default=None,
@@ -1592,14 +1593,14 @@ class InvoicePricingDetail:
             "type": "Element",
         },
     )
-    tax_accounting_sub_total_value: Optional[
-        TaxAccountingSubTotalValue
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TaxAccountingSubTotalValue",
-            "type": "Element",
-        },
+    tax_accounting_sub_total_value: Optional[TaxAccountingSubTotalValue] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TaxAccountingSubTotalValue",
+                "type": "Element",
+            },
+        )
     )
     actual_payment_status: Optional[ActualPaymentStatus] = field(
         default=None,
@@ -1714,14 +1715,14 @@ class PurchaseOrderReference:
             "type": "Element",
         },
     )
-    purchase_order_line_item_number: Optional[
-        PurchaseOrderLineItemNumber
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PurchaseOrderLineItemNumber",
-            "type": "Element",
-        },
+    purchase_order_line_item_number: Optional[PurchaseOrderLineItemNumber] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PurchaseOrderLineItemNumber",
+                "type": "Element",
+            },
+        )
     )
     partial_order_coded: Optional[PartialOrderCoded] = field(
         default=None,
@@ -1894,14 +1895,14 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    remittance_advice_status_coded: Optional[
-        RemittanceAdviceStatusCoded
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RemittanceAdviceStatusCoded",
-            "type": "Element",
-        },
+    remittance_advice_status_coded: Optional[RemittanceAdviceStatusCoded] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RemittanceAdviceStatusCoded",
+                "type": "Element",
+            },
+        )
     )
     remittance_advice_status_coded_other: Optional[
         RemittanceAdviceStatusCodedOther
@@ -1940,14 +1941,14 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    list_of_rate_of_exchange_detail: Optional[
-        ListOfRateOfExchangeDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfRateOfExchangeDetail",
-            "type": "Element",
-        },
+    list_of_rate_of_exchange_detail: Optional[ListOfRateOfExchangeDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfRateOfExchangeDetail",
+                "type": "Element",
+            },
+        )
     )
     list_of_price: Optional[ListOfPrice] = field(
         default=None,

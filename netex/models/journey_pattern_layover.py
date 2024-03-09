@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .journey_pattern_layover_structure import JourneyPatternLayoverStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

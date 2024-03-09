@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_contact_purpose_1 import TypeContactPurpose1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"

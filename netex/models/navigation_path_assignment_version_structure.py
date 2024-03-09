@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .connection_ref import ConnectionRef
 from .default_connection_ref import DefaultConnectionRef
 from .navigation_path_ref import NavigationPathRef

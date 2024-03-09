@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from crossref.models.gov.nih.nlm.ncbi.jats1.article_meta import ArticleMeta
 from crossref.models.gov.nih.nlm.ncbi.jats1.journal_meta import JournalMeta
 from crossref.models.gov.nih.nlm.ncbi.jats1.notes import Notes

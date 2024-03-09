@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .passenger_carrying_requirement_version_structure import (
     PassengerCarryingRequirementVersionStructure,
 )

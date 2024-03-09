@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .application_composite_element_in_port_interface_instance_ref import (
     ApplicationCompositeElementInPortInterfaceInstanceRef,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_quay_alignment_version_structure import (
     VehicleQuayAlignmentVersionStructure,
 )

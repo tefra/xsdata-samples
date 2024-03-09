@@ -40,7 +40,6 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.cartesianproduct import (
 from crossref.models.org.w3.pkg_1998.math.math_ml.cbytes import Cbytes
 from crossref.models.org.w3.pkg_1998.math.math_ml.ceiling import Ceiling
 from crossref.models.org.w3.pkg_1998.math.math_ml.cerror import (
-    ImpliedMrow,
     Apply,
     ApplyContent,
     Bind,
@@ -58,6 +57,7 @@ from crossref.models.org.w3.pkg_1998.math.math_ml.cerror import (
     Degree,
     Domainofapplication,
     Fn,
+    ImpliedMrow,
     ListType,
     Logbase,
     Lowlimit,

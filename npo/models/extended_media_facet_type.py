@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.media_search_type import MediaSearchType
 from npo.models.text_facet_type import TextFacetType
 

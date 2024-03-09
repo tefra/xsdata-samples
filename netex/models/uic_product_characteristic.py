@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .uic_product_characteristic_enumeration import (
     UicProductCharacteristicEnumeration,
 )

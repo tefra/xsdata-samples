@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.field_data_search_1 import FieldDataSearch1
 from travelport.models.type_search_accounting_reference_1 import (
     TypeSearchAccountingReference1,

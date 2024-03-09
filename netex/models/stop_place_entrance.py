@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .stop_place_entrance_version_structure import (
     StopPlaceEntranceVersionStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes import (
     RtoMoPq,
     RtoPqPq,
@@ -1408,16 +1409,16 @@ class CoctMt510000Uv06Definition:
             "nillable": True,
         },
     )
-    accomodation_supplied1: Optional[
-        CoctMt310000Uv04AccomodationSupplied
-    ] = field(
-        default=None,
-        metadata={
-            "name": "accomodationSupplied1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    accomodation_supplied1: Optional[CoctMt310000Uv04AccomodationSupplied] = (
+        field(
+            default=None,
+            metadata={
+                "name": "accomodationSupplied1",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     supply_event2: Optional[CoctMt600000Uv06SupplyEvent] = field(
         default=None,
@@ -2253,16 +2254,16 @@ class CoctMt510000Uv06Reference2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    coverage_charge_policy: Optional[
-        CoctMt510000Uv06CoverageChargePolicy
-    ] = field(
-        default=None,
-        metadata={
-            "name": "coverageChargePolicy",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    coverage_charge_policy: Optional[CoctMt510000Uv06CoverageChargePolicy] = (
+        field(
+            default=None,
+            metadata={
+                "name": "coverageChargePolicy",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -3113,16 +3114,16 @@ class CoctMt510000Uv06Part:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    personal_relationship: Optional[
-        CoctMt510000Uv06PersonalRelationship
-    ] = field(
-        default=None,
-        metadata={
-            "name": "personalRelationship",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    personal_relationship: Optional[CoctMt510000Uv06PersonalRelationship] = (
+        field(
+            default=None,
+            metadata={
+                "name": "personalRelationship",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -3344,16 +3345,16 @@ class CoctMt510000Uv06CoveredParty:
             "nillable": True,
         },
     )
-    indirect_authority2: Optional[
-        CoctMt510000Uv06IndirectAuthorithyOver2
-    ] = field(
-        default=None,
-        metadata={
-            "name": "indirectAuthority2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    indirect_authority2: Optional[CoctMt510000Uv06IndirectAuthorithyOver2] = (
+        field(
+            default=None,
+            metadata={
+                "name": "indirectAuthority2",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

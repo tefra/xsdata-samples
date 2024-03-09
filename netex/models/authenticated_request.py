@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .authenticated_request_structure import AuthenticatedRequestStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"

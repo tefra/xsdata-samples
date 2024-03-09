@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.audio_attributes_type import AudioAttributesType
 from npo.models.av_file_format_enum import AvFileFormatEnum
 from npo.models.video_attributes_type import VideoAttributesType

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.uimeta_data_delete_rsp import UimetaDataDeleteRsp
 
@@ -61,7 +63,9 @@ class UimetaDataDeletePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | UimetaDataDeletePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | UimetaDataDeletePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

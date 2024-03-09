@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from .ecuc_query_subtypes_enum import EcucQuerySubtypesEnum
 from .ref import Ref
 

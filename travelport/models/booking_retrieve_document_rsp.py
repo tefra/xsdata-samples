@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_base_rsp import BookingBaseRsp
 from travelport.models.etr import Etr
 from travelport.models.type_failure_info import TypeFailureInfo

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -281,15 +282,15 @@ class FmFeatureMapElement:
 
         @dataclass
         class PostBuildVariantCriterionValueSetRef(Ref):
-            dest: Optional[
-                PostBuildVariantCriterionValueSetSubtypesEnum
-            ] = field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
+            dest: Optional[PostBuildVariantCriterionValueSetSubtypesEnum] = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "DEST",
+                        "type": "Attribute",
+                        "required": True,
+                    },
+                )
             )
 
     @dataclass

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .machine_readable_enumeration import MachineReadableEnumeration
 from .media_type_enumeration import MediaTypeEnumeration

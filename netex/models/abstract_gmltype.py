@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .description_reference import DescriptionReference
 from .identifier import Identifier
 from .name import Name

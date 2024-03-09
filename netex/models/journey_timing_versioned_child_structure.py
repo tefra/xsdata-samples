@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 from .operational_context_ref import OperationalContextRef

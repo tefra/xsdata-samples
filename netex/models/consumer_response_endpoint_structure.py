@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .message_ref_structure import MessageRefStructure
 from .participant_ref_structure import ParticipantRefStructure
 from .response_structure import ResponseStructure

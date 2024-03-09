@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.profile_modify_bridge_branches_rsp import (
     ProfileModifyBridgeBranchesRsp,
@@ -24,7 +26,9 @@ class ProfileModifyBridgeBranchesPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        profile_modify_bridge_branches_rsp: None | ProfileModifyBridgeBranchesRsp = field(
+        profile_modify_bridge_branches_rsp: (
+            None | ProfileModifyBridgeBranchesRsp
+        ) = field(
             default=None,
             metadata={
                 "name": "ProfileModifyBridgeBranchesRsp",
@@ -32,7 +36,9 @@ class ProfileModifyBridgeBranchesPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
             },
         )
-        fault: None | ProfileModifyBridgeBranchesPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | ProfileModifyBridgeBranchesPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class ProfileModifyBridgeBranchesPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ProfileModifyBridgeBranchesPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | ProfileModifyBridgeBranchesPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.email_4 import Email4
 from travelport.models.phone_number_5 import PhoneNumber5
 from travelport.models.type_structured_address_5 import TypeStructuredAddress5

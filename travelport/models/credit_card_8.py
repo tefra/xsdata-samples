@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_credit_card_type_7 import TypeCreditCardType7
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"

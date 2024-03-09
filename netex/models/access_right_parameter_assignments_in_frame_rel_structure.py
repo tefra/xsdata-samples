@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .access_right_parameter_assignment_1 import (
     AccessRightParameterAssignment1,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from ubl.models.common.ubl_unqualified_data_types_2_1 import IdentifierType
 
 __NAMESPACE__ = (

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .destination_display_variants_rel_structure import (
     DestinationDisplayVariantsRelStructure,
 )

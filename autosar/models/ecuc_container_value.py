@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -112,15 +113,15 @@ class EcucContainerValue:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EcucContainerValue.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["EcucContainerValue.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -303,15 +304,15 @@ class EcucContainerValue:
 
     @dataclass
     class ReferenceValues:
-        ecuc_instance_reference_value: List[
-            EcucInstanceReferenceValue
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ECUC-INSTANCE-REFERENCE-VALUE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ecuc_instance_reference_value: List[EcucInstanceReferenceValue] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ECUC-INSTANCE-REFERENCE-VALUE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         ecuc_reference_value: List[EcucReferenceValue] = field(
             default_factory=list,

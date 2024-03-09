@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .physical_channel_subtypes_enum import PhysicalChannelSubtypesEnum
 from .ref import Ref

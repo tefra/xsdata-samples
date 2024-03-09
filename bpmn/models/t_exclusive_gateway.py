@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .t_gateway import TGateway
 
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"

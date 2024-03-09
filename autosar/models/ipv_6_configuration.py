@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .boolean import Boolean
 from .ip6_address_string import Ip6AddressString
 from .ip_address_keep_enum import IpAddressKeepEnum
@@ -65,15 +66,15 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dns_server_addresses: Optional[
-        "Ipv6Configuration.DnsServerAddresses"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DNS-SERVER-ADDRESSES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    dns_server_addresses: Optional["Ipv6Configuration.DnsServerAddresses"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DNS-SERVER-ADDRESSES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     enable_anycast: Optional[Boolean] = field(
         default=None,

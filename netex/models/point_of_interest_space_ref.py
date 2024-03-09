@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .point_of_interest_space_ref_structure import (
     PointOfInterestSpaceRefStructure,
 )

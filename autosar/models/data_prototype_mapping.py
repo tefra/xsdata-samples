@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
 )
@@ -115,15 +116,15 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    text_table_mappings: Optional[
-        "DataPrototypeMapping.TextTableMappings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TEXT-TABLE-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    text_table_mappings: Optional["DataPrototypeMapping.TextTableMappings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TEXT-TABLE-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

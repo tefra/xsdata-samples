@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .empty_type_2 import EmptyType2
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

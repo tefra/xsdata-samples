@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .variable_access_scope_enum_simple import VariableAccessScopeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

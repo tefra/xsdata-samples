@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.saved_trip_activity_type import SavedTripActivityType
 
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
@@ -108,25 +110,25 @@ class SavedTripActivity:
             "max_occurs": 999,
         },
     )
-    air_pricing_modifier_ref: list[
-        SavedTripActivity.AirPricingModifierRef
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "AirPricingModifierRef",
-            "type": "Element",
-            "max_occurs": 999,
-        },
+    air_pricing_modifier_ref: list[SavedTripActivity.AirPricingModifierRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "AirPricingModifierRef",
+                "type": "Element",
+                "max_occurs": 999,
+            },
+        )
     )
-    air_pricing_solution_ref: list[
-        SavedTripActivity.AirPricingSolutionRef
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "AirPricingSolutionRef",
-            "type": "Element",
-            "max_occurs": 999,
-        },
+    air_pricing_solution_ref: list[SavedTripActivity.AirPricingSolutionRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "AirPricingSolutionRef",
+                "type": "Element",
+                "max_occurs": 999,
+            },
+        )
     )
     vehicle_search_modifiers_ref: list[
         SavedTripActivity.VehicleSearchModifiersRef
@@ -166,15 +168,15 @@ class SavedTripActivity:
             "max_occurs": 999,
         },
     )
-    payment_information_ref: list[
-        SavedTripActivity.PaymentInformationRef
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "PaymentInformationRef",
-            "type": "Element",
-            "max_occurs": 999,
-        },
+    payment_information_ref: list[SavedTripActivity.PaymentInformationRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "PaymentInformationRef",
+                "type": "Element",
+                "max_occurs": 999,
+            },
+        )
     )
     delivery_address_ref: list[SavedTripActivity.DeliveryAddressRef] = field(
         default_factory=list,
@@ -184,15 +186,15 @@ class SavedTripActivity:
             "max_occurs": 999,
         },
     )
-    collection_address_ref: list[
-        SavedTripActivity.CollectionAddressRef
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "CollectionAddressRef",
-            "type": "Element",
-            "max_occurs": 999,
-        },
+    collection_address_ref: list[SavedTripActivity.CollectionAddressRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "CollectionAddressRef",
+                "type": "Element",
+                "max_occurs": 999,
+            },
+        )
     )
     flight_arrival_information_ref: list[
         SavedTripActivity.FlightArrivalInformationRef

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_end_rsp import BookingEndRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -61,7 +63,9 @@ class BookingEndPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | BookingEndPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | BookingEndPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

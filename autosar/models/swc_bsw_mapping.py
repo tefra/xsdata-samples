@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -216,15 +217,15 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    synchronized_triggers: Optional[
-        "SwcBswMapping.SynchronizedTriggers"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SYNCHRONIZED-TRIGGERS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    synchronized_triggers: Optional["SwcBswMapping.SynchronizedTriggers"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SYNCHRONIZED-TRIGGERS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

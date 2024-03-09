@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .dead_run_endpoint_structure import DeadRunEndpointStructure
 from .dead_run_type_enumeration import DeadRunTypeEnumeration
 from .direction_type import DirectionType

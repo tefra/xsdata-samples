@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .individual_traveller_ref import IndividualTravellerRef
 from .trip_leg_ref import TripLegRef
 from .trip_ref import TripRef
@@ -26,15 +27,15 @@ class CustomerPurchaseParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_pooling_driver_info_ref: Optional[
-        VehiclePoolingDriverInfoRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "VehiclePoolingDriverInfoRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    vehicle_pooling_driver_info_ref: Optional[VehiclePoolingDriverInfoRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "VehiclePoolingDriverInfoRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     trip_ref: Optional[TripRef] = field(
         default=None,

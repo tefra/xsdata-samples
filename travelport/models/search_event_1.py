@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_event_type_1 import TypeEventType1
 from travelport.models.type_time_range_1 import TypeTimeRange1
 

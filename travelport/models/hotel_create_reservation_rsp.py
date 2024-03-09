@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.hotel_property import HotelProperty
 from travelport.models.hotel_rate_detail import HotelRateDetail
@@ -28,7 +30,9 @@ class HotelCreateReservationRsp(BaseRsp1):
             "type": "Element",
         },
     )
-    hotel_rate_changed_info: None | HotelCreateReservationRsp.HotelRateChangedInfo = field(
+    hotel_rate_changed_info: (
+        None | HotelCreateReservationRsp.HotelRateChangedInfo
+    ) = field(
         default=None,
         metadata={
             "name": "HotelRateChangedInfo",

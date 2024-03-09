@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
+
 from .local_service_version_structure import LocalServiceVersionStructure
 from .luggage_service_facility_enumeration import (
     LuggageServiceFacilityEnumeration,
@@ -14,16 +15,16 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "LuggageService_VersionStructure"
 
-    luggage_service_facility_list: List[
-        LuggageServiceFacilityEnumeration
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "LuggageServiceFacilityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "tokens": True,
-        },
+    luggage_service_facility_list: List[LuggageServiceFacilityEnumeration] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "LuggageServiceFacilityList",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "tokens": True,
+            },
+        )
     )
     luggage_trolleys: Optional[bool] = field(
         default=None,

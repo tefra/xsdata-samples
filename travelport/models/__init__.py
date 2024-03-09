@@ -1237,7 +1237,6 @@ from travelport.models.collection_address import CollectionAddress
 from travelport.models.command import Command
 from travelport.models.command_response import CommandResponse
 from travelport.models.commission_1 import Commission1
-from travelport.models.commission_10 import Commission10
 from travelport.models.commission_2 import Commission2
 from travelport.models.commission_3 import Commission3
 from travelport.models.commission_4 import Commission4
@@ -1246,6 +1245,7 @@ from travelport.models.commission_6 import Commission6
 from travelport.models.commission_7 import Commission7
 from travelport.models.commission_8 import Commission8
 from travelport.models.commission_9 import Commission9
+from travelport.models.commission_10 import Commission10
 from travelport.models.commission_reference_1 import CommissionReference1
 from travelport.models.commission_reference_2 import CommissionReference2
 from travelport.models.commission_remark_1 import CommissionRemark1
@@ -1979,8 +1979,6 @@ from travelport.models.guarantee_info_guarantee_type import (
 )
 from travelport.models.guarantee_payment_type import GuaranteePaymentType
 from travelport.models.guarantee_type_1 import GuaranteeType1
-from travelport.models.guarantee_type_10 import GuaranteeType10
-from travelport.models.guarantee_type_11 import GuaranteeType11
 from travelport.models.guarantee_type_2 import GuaranteeType2
 from travelport.models.guarantee_type_3 import GuaranteeType3
 from travelport.models.guarantee_type_4 import GuaranteeType4
@@ -1989,6 +1987,8 @@ from travelport.models.guarantee_type_6 import GuaranteeType6
 from travelport.models.guarantee_type_7 import GuaranteeType7
 from travelport.models.guarantee_type_8 import GuaranteeType8
 from travelport.models.guarantee_type_9 import GuaranteeType9
+from travelport.models.guarantee_type_10 import GuaranteeType10
+from travelport.models.guarantee_type_11 import GuaranteeType11
 from travelport.models.guest_information import GuestInformation
 from travelport.models.guest_reviews import GuestReviews
 from travelport.models.hierarchy_level import HierarchyLevel

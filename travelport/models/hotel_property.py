@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.amenities import Amenities
 from travelport.models.coordinate_location_1 import CoordinateLocation1
 from travelport.models.distance_1 import Distance1

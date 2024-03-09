@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .complex_feature import ComplexFeature
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .simple_feature import SimpleFeature

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.flex_explore_modifiers_type import (
     FlexExploreModifiersType,
 )

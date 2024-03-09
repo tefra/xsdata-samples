@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .chapter_enum_break_simple import ChapterEnumBreakSimple
 from .general_parameter import GeneralParameter
 from .keep_with_previous_enum_simple import KeepWithPreviousEnumSimple

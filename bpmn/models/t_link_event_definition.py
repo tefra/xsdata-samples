@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xml.etree.ElementTree import QName
+
 from .t_event_definition import TEventDefinition
 
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"

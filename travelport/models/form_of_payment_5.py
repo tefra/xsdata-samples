@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.agency_payment_5 import AgencyPayment5
 from travelport.models.agent_voucher_5 import AgentVoucher5
 from travelport.models.certificate_5 import Certificate5
@@ -188,15 +190,15 @@ class FormOfPayment5:
             "type": "Element",
         },
     )
-    provider_reservation_info_ref: list[
-        TypeFormOfPaymentPnrreference4
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "ProviderReservationInfoRef",
-            "type": "Element",
-            "max_occurs": 999,
-        },
+    provider_reservation_info_ref: list[TypeFormOfPaymentPnrreference4] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "ProviderReservationInfoRef",
+                "type": "Element",
+                "max_occurs": 999,
+            },
+        )
     )
     segment_ref: list[TypeGeneralReference4] = field(
         default_factory=list,

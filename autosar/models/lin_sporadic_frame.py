@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -112,15 +113,15 @@ class LinSporadicFrame:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "LinSporadicFrame.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["LinSporadicFrame.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -186,15 +187,15 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_to_frame_mappings: Optional[
-        "LinSporadicFrame.PduToFrameMappings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PDU-TO-FRAME-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    pdu_to_frame_mappings: Optional["LinSporadicFrame.PduToFrameMappings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PDU-TO-FRAME-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     substituted_frame_refs: Optional[
         "LinSporadicFrame.SubstitutedFrameRefs"

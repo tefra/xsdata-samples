@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .boolean import Boolean
 from .flexray_tp_connection_control_subtypes_enum import (
@@ -114,15 +115,15 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reversed_tp_sdu_ref: Optional[
-        "FlexrayTpConnection.ReversedTpSduRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "REVERSED-TP-SDU-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    reversed_tp_sdu_ref: Optional["FlexrayTpConnection.ReversedTpSduRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "REVERSED-TP-SDU-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     rx_pdu_pool_ref: Optional["FlexrayTpConnection.RxPduPoolRef"] = field(
         default=None,
@@ -206,15 +207,15 @@ class FlexrayTpConnection:
 
     @dataclass
     class ReceiverRefs:
-        receiver_ref: List[
-            "FlexrayTpConnection.ReceiverRefs.ReceiverRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "RECEIVER-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        receiver_ref: List["FlexrayTpConnection.ReceiverRefs.ReceiverRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "RECEIVER-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

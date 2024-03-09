@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xcbl.models.time_series_response import (
     ListOfCharacteristicCombinations,
     ListOfTimeSeriesKeyFigureData,

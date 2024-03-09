@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.accessibility_enum import AccessibilityEnum
 from datexii.models.eu.datexii.v2.availability_enum import AvailabilityEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType

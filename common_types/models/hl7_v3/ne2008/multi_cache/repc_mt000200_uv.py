@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes import (
     IvlInt,
     IvlPq,
@@ -3318,15 +3319,15 @@ class RepcMt000200UvConsumable:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administerable_material: Optional[
-        RepcMt000200UvAdministerableMaterial
-    ] = field(
-        default=None,
-        metadata={
-            "name": "administerableMaterial",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
+    administerable_material: Optional[RepcMt000200UvAdministerableMaterial] = (
+        field(
+            default=None,
+            metadata={
+                "name": "administerableMaterial",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+            },
+        )
     )
     medication: Optional[CoctMt230100UvMedication] = field(
         default=None,
@@ -3647,16 +3648,16 @@ class RepcMt000200UvComponent13:
             "nillable": True,
         },
     )
-    observation_definition: Optional[
-        RepcMt000200UvObservationDefinition
-    ] = field(
-        default=None,
-        metadata={
-            "name": "observationDefinition",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    observation_definition: Optional[RepcMt000200UvObservationDefinition] = (
+        field(
+            default=None,
+            metadata={
+                "name": "observationDefinition",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     procedure_definition: Optional[RepcMt000200UvProcedureDefinition] = field(
         default=None,
@@ -3766,16 +3767,16 @@ class RepcMt000200UvInFulfillmentOf2:
             "nillable": True,
         },
     )
-    observation_definition: Optional[
-        RepcMt000200UvObservationDefinition
-    ] = field(
-        default=None,
-        metadata={
-            "name": "observationDefinition",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    observation_definition: Optional[RepcMt000200UvObservationDefinition] = (
+        field(
+            default=None,
+            metadata={
+                "name": "observationDefinition",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     procedure_definition: Optional[RepcMt000200UvProcedureDefinition] = field(
         default=None,

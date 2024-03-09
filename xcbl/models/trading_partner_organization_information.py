@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.trading_partner_user_information import (
     City,
     Country,
@@ -445,14 +446,14 @@ class BankDetail:
             "type": "Element",
         },
     )
-    trading_partner_account_holder: Optional[
-        TradingPartnerAccountHolder
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TradingPartnerAccountHolder",
-            "type": "Element",
-        },
+    trading_partner_account_holder: Optional[TradingPartnerAccountHolder] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TradingPartnerAccountHolder",
+                "type": "Element",
+            },
+        )
     )
     bank_account_control_key: Optional[BankAccountControlKey] = field(
         default=None,

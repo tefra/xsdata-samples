@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.client_data_list import ClientDataList
 from travelport.models.type_key_element_1 import TypeKeyElement1
 

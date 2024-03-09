@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.provider_reservation_display_details_rsp import (
     ProviderReservationDisplayDetailsRsp,
@@ -14,7 +16,9 @@ class ProviderReservationDisplayServicePortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | ProviderReservationDisplayServicePortTypeServiceOutput.Body = field(
+    body: (
+        None | ProviderReservationDisplayServicePortTypeServiceOutput.Body
+    ) = field(
         default=None,
         metadata={
             "name": "Body",
@@ -24,7 +28,9 @@ class ProviderReservationDisplayServicePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        provider_reservation_display_details_rsp: None | ProviderReservationDisplayDetailsRsp = field(
+        provider_reservation_display_details_rsp: (
+            None | ProviderReservationDisplayDetailsRsp
+        ) = field(
             default=None,
             metadata={
                 "name": "ProviderReservationDisplayDetailsRsp",
@@ -32,7 +38,10 @@ class ProviderReservationDisplayServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
             },
         )
-        fault: None | ProviderReservationDisplayServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None
+            | ProviderReservationDisplayServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +72,10 @@ class ProviderReservationDisplayServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ProviderReservationDisplayServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | ProviderReservationDisplayServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

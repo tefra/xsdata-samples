@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -196,15 +197,15 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    error_mappings: Optional[
-        "ClientServerInterfaceMapping.ErrorMappings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ERROR-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    error_mappings: Optional["ClientServerInterfaceMapping.ErrorMappings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ERROR-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     operation_mappings: Optional[
         "ClientServerInterfaceMapping.OperationMappings"
@@ -271,15 +272,15 @@ class ClientServerInterfaceMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -305,13 +306,13 @@ class ClientServerInterfaceMapping:
 
     @dataclass
     class OperationMappings:
-        client_server_operation_mapping: List[
-            ClientServerOperationMapping
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "CLIENT-SERVER-OPERATION-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        client_server_operation_mapping: List[ClientServerOperationMapping] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "CLIENT-SERVER-OPERATION-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

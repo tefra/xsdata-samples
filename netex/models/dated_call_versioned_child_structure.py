@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDate
+
 from .call_versioned_child_structure import CallVersionedChildStructure
 from .driver_ref import DriverRef
 

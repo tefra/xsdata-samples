@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.rail_exchange_rsp import RailExchangeRsp
 
@@ -32,7 +34,10 @@ class RailExchangeCreateReservationPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/rail_v52_0",
             },
         )
-        fault: None | RailExchangeCreateReservationPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None
+            | RailExchangeCreateReservationPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +68,10 @@ class RailExchangeCreateReservationPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | RailExchangeCreateReservationPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | RailExchangeCreateReservationPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

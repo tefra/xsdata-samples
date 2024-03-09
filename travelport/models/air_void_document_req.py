@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_reservation_locator_code import (
     AirReservationLocatorCode,
 )

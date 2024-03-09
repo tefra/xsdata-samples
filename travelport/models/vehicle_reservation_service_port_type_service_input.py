@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.supported_versions import SupportedVersions
 from travelport.models.vehicle_create_reservation_req import (
     VehicleCreateReservationReq,
@@ -44,11 +46,13 @@ class VehicleReservationServicePortTypeServiceInput:
 
     @dataclass
     class Body:
-        vehicle_create_reservation_req: None | VehicleCreateReservationReq = field(
-            default=None,
-            metadata={
-                "name": "VehicleCreateReservationReq",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+        vehicle_create_reservation_req: None | VehicleCreateReservationReq = (
+            field(
+                default=None,
+                metadata={
+                    "name": "VehicleCreateReservationReq",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/universal_v52_0",
+                },
+            )
         )

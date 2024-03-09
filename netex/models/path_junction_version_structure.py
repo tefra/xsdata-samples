@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .covered_enumeration import CoveredEnumeration
 from .gated_enumeration import GatedEnumeration
 from .lighting_enumeration import LightingEnumeration

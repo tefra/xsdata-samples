@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -113,15 +114,15 @@ class DiagnosticEcuReset:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticEcuReset.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["DiagnosticEcuReset.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -197,15 +198,15 @@ class DiagnosticEcuReset:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_reset_class_ref: Optional[
-        "DiagnosticEcuReset.EcuResetClassRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ECU-RESET-CLASS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecu_reset_class_ref: Optional["DiagnosticEcuReset.EcuResetClassRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECU-RESET-CLASS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     respond_to_reset: Optional[DiagnosticResponseToEcuResetEnum] = field(
         default=None,

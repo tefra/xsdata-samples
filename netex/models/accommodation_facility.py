@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .accommodation_facility_enumeration import (
     AccommodationFacilityEnumeration,
 )

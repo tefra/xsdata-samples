@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -221,15 +222,15 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_tcp_options_ref: Optional[
-        "SocketAddress.AllowedTcpOptionsRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ALLOWED-TCP-OPTIONS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    allowed_tcp_options_ref: Optional["SocketAddress.AllowedTcpOptionsRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ALLOWED-TCP-OPTIONS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     application_endpoint: Optional[ApplicationEndpoint] = field(
         default=None,

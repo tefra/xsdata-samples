@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .train_in_compound_train_ref_structure import (
     TrainInCompoundTrainRefStructure,
 )

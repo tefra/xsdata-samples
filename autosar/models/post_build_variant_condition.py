@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .integer_value_variation_point import IntegerValueVariationPoint
 from .post_build_variant_criterion_subtypes_enum import (
     PostBuildVariantCriterionSubtypesEnum,

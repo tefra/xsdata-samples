@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .accessibility_assessment import AccessibilityAssessment
 from .activated_equipment_ref import ActivatedEquipmentRef

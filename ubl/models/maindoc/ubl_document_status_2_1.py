@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentResponse,
     DocumentResponse,
@@ -148,15 +149,15 @@ class DocumentStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_response: Tuple[
-        AdditionalDocumentResponse, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "AdditionalDocumentResponse",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    additional_document_response: Tuple[AdditionalDocumentResponse, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "AdditionalDocumentResponse",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
 
 

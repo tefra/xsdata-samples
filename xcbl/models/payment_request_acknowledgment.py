@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.payment_status_response import (
     ConfirmationId,
     CreditAmount,
@@ -307,14 +308,14 @@ class FinancialInstitutionDetail:
             "required": True,
         }
     )
-    list_of_financial_institutions: Optional[
-        ListOfFinancialInstitutions
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfFinancialInstitutions",
-            "type": "Element",
-        },
+    list_of_financial_institutions: Optional[ListOfFinancialInstitutions] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfFinancialInstitutions",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -376,14 +377,14 @@ class PaymentRequestAcknDetail:
             "type": "Element",
         },
     )
-    list_of_rate_of_exchange_detail: Optional[
-        ListOfRateOfExchangeDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfRateOfExchangeDetail",
-            "type": "Element",
-        },
+    list_of_rate_of_exchange_detail: Optional[ListOfRateOfExchangeDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfRateOfExchangeDetail",
+                "type": "Element",
+            },
+        )
     )
     excpetion_note: Optional[ExcpetionNote] = field(
         default=None,

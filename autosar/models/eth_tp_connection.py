@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
 from .ref import Ref
 from .tp_connection_ident import TpConnectionIdent

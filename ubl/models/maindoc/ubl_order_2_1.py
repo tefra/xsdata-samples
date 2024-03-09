@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
     AdditionalDocumentReference,
@@ -164,15 +165,15 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    requested_invoice_currency_code: Optional[
-        RequestedInvoiceCurrencyCode
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RequestedInvoiceCurrencyCode",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    requested_invoice_currency_code: Optional[RequestedInvoiceCurrencyCode] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RequestedInvoiceCurrencyCode",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     document_currency_code: Optional[DocumentCurrencyCode] = field(
         default=None,
@@ -254,15 +255,15 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_document_reference: Optional[
-        OriginatorDocumentReference
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OriginatorDocumentReference",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    originator_document_reference: Optional[OriginatorDocumentReference] = (
+        field(
+            default=None,
+            metadata={
+                "name": "OriginatorDocumentReference",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
     catalogue_reference: Optional[CatalogueReference] = field(
         default=None,
@@ -272,15 +273,15 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: Tuple[
-        AdditionalDocumentReference, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "AdditionalDocumentReference",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "AdditionalDocumentReference",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
     contract: Tuple[Contract, ...] = field(
         default_factory=tuple,

@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.type_base_preference_2 import TypeBasePreference2
 from travelport.models.type_geo_political_area_type_2 import (
     TypeGeoPoliticalAreaType2,

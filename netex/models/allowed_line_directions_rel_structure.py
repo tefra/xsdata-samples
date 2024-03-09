@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .allowed_line_direction import AllowedLineDirection
 from .allowed_line_direction_ref import AllowedLineDirectionRef
 from .containment_aggregation_structure import ContainmentAggregationStructure

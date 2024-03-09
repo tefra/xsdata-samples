@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .boarding_position_version_structure import (
     BoardingPositionVersionStructure,
 )

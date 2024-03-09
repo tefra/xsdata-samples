@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .customer_purchase_package_price_versioned_child_structure import (
     CustomerPurchasePackagePriceVersionedChildStructure,
 )

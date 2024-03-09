@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
 from .residence_type_enumeration import ResidenceTypeEnumeration

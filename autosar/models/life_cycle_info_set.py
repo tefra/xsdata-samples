@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -116,15 +117,15 @@ class LifeCycleInfoSet:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "LifeCycleInfoSet.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["LifeCycleInfoSet.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -182,15 +183,15 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_lc_state_ref: Optional[
-        "LifeCycleInfoSet.DefaultLcStateRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DEFAULT-LC-STATE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    default_lc_state_ref: Optional["LifeCycleInfoSet.DefaultLcStateRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DEFAULT-LC-STATE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     default_period_begin: Optional[LifeCyclePeriod] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .country_ref import CountryRef
 from .group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
 from .notice_assignment_version_structure import (

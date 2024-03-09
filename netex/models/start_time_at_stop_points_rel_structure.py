@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .start_time_at_stop_point import StartTimeAtStopPoint
 from .start_time_at_stop_point_ref import StartTimeAtStopPointRef
 from .strict_containment_aggregation_structure import (

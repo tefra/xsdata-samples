@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from crossref.models.gov.nih.nlm.ncbi.jats1.count import Count
 from crossref.models.gov.nih.nlm.ncbi.jats1.equation_count import EquationCount
 from crossref.models.gov.nih.nlm.ncbi.jats1.fig_count import FigCount

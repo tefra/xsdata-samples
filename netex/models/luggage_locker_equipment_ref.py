@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .luggage_locker_equipment_ref_structure import (
     LuggageLockerEquipmentRefStructure,
 )

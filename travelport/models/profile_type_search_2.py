@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.account_criteria_2 import AccountCriteria2
 from travelport.models.agency_criteria_2 import AgencyCriteria2
 from travelport.models.agency_group_criteria_2 import AgencyGroupCriteria2

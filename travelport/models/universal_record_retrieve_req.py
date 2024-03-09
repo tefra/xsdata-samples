@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
@@ -43,7 +45,9 @@ class UniversalRecordRetrieveReq(BaseReq1):
             "max_length": 8,
         },
     )
-    provider_reservation_info: None | UniversalRecordRetrieveReq.ProviderReservationInfo = field(
+    provider_reservation_info: (
+        None | UniversalRecordRetrieveReq.ProviderReservationInfo
+    ) = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfo",

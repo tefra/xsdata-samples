@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_rsp_5 import BaseRsp5
 from travelport.models.profile_parent_search_summary_2 import (
     ProfileParentSearchSummary2,

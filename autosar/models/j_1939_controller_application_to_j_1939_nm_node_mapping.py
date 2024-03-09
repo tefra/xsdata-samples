@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .j_1939_controller_application_subtypes_enum import (
     J1939ControllerApplicationSubtypesEnum,
 )

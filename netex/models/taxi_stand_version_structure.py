@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .quay_version_structure import QuayVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.endpoint_ref import EndpointRef
 from travelport.models.type_action_reference import TypeActionReference
 

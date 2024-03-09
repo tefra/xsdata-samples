@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .general_group_of_entities_ref_structure import (
     GeneralGroupOfEntitiesRefStructure,
 )

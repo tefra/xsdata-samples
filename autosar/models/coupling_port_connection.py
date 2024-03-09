@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .coupling_port_ref_conditional import CouplingPortRefConditional
 from .coupling_port_subtypes_enum import CouplingPortSubtypesEnum
@@ -121,15 +122,15 @@ class CouplingPortConnection:
 
     @dataclass
     class NodePorts:
-        coupling_port_ref_conditional: List[
-            CouplingPortRefConditional
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "COUPLING-PORT-REF-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        coupling_port_ref_conditional: List[CouplingPortRefConditional] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "COUPLING-PORT-REF-CONDITIONAL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

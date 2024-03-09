@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .resource_frame_version_frame_structure import (
     ResourceFrameVersionFrameStructure,
 )

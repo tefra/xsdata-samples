@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .fare_structure_element_in_sequence_ref_structure import (
     FareStructureElementInSequenceRefStructure,
 )

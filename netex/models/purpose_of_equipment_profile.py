@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .purpose_of_equipment_profile_value_structure import (
     PurposeOfEquipmentProfileValueStructure,
 )

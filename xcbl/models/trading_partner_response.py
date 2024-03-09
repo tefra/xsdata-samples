@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.trading_partner_user_information import (
     PrimaryId,
     UserId,
@@ -305,14 +306,14 @@ class PrimaryMessageInformation:
             "required": True,
         }
     )
-    primary_return_code_description: Optional[
-        PrimaryReturnCodeDescription
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PrimaryReturnCodeDescription",
-            "type": "Element",
-        },
+    primary_return_code_description: Optional[PrimaryReturnCodeDescription] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PrimaryReturnCodeDescription",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -345,14 +346,14 @@ class TradingPartnerResponseInfo:
             "required": True,
         }
     )
-    list_of_returned_identification: Optional[
-        ListOfReturnedIdentification
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfReturnedIdentification",
-            "type": "Element",
-        },
+    list_of_returned_identification: Optional[ListOfReturnedIdentification] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfReturnedIdentification",
+                "type": "Element",
+            },
+        )
     )
     redirect_url: Optional[RedirectUrl] = field(
         default=None,

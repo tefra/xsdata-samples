@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .link_version_structure import LinkVersionStructure
 from .vehicle_meeting_point_ref_structure import (
     VehicleMeetingPointRefStructure,

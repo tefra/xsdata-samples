@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.fare_ticket_designator import FareTicketDesignator
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"

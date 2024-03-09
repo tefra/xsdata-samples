@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .ref import Ref
 from .someip_sd_server_service_instance_config_subtypes_enum import (
@@ -68,13 +69,13 @@ class SomeipSdServerServiceInstanceConfigRefConditional:
 
     @dataclass
     class SomeipSdServerServiceInstanceConfigRef(Ref):
-        dest: Optional[
-            SomeipSdServerServiceInstanceConfigSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[SomeipSdServerServiceInstanceConfigSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

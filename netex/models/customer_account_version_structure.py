@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from .account_status_type_enumeration import AccountStatusTypeEnumeration
 from .customer_account_status_ref import CustomerAccountStatusRef
 from .customer_payment_means_ref import CustomerPaymentMeansRef
@@ -83,15 +85,15 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_account_status_type: Optional[
-        AccountStatusTypeEnumeration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CustomerAccountStatusType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    customer_account_status_type: Optional[AccountStatusTypeEnumeration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CustomerAccountStatusType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     fare_contracts: Optional[FareContractsRelStructure] = field(
         default=None,
@@ -127,13 +129,13 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_devices: Optional[
-        MediumAccessDeviceRefsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "mediumAccessDevices",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    medium_access_devices: Optional[MediumAccessDeviceRefsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "mediumAccessDevices",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

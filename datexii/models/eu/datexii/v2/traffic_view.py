@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.linear_traffic_view import LinearTrafficView
 from datexii.models.eu.datexii.v2.predefined_non_ordered_location_group_versioned_reference import (

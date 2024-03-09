@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .data_object_service_permission_structure import (
     DataObjectServicePermissionStructure,
 )

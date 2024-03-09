@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .any_instance_ref import AnyInstanceRef
 from .identifiable_subtypes_enum import IdentifiableSubtypesEnum
 from .identifier import Identifier

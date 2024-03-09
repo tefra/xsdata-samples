@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.date_range_facets_type import DateRangeFacetsType
 from npo.models.extended_page_facet_type import ExtendedPageFacetType
 from npo.models.page_facet_type import PageFacetType

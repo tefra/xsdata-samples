@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDuration
+
 from .connecting_journey_view import ConnectingJourneyView
 from .connection_certainty_enumeration import ConnectionCertaintyEnumeration
 from .derived_view_structure import DerivedViewStructure
@@ -18,15 +20,15 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "ServiceJourneyInterchange_DerivedViewStructure"
 
-    service_journey_interchange_ref: Optional[
-        ServiceJourneyInterchangeRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ServiceJourneyInterchangeRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    service_journey_interchange_ref: Optional[ServiceJourneyInterchangeRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ServiceJourneyInterchangeRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     description: Optional[MultilingualString] = field(
         default=None,

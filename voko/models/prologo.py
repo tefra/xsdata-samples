@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from voko.models.alineo import Alineo
 from voko.models.autoro import Autoro
 from voko.models.titolo import Titolo

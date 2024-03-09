@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .facility_ref_structure import FacilityRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

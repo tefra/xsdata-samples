@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .meta_data_item import MetaDataItem
 from .ref import Ref
 from .variable_data_prototype_subtypes_enum import (

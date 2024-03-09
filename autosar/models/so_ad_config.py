@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .logic_address import LogicAddress
 from .socket_address import SocketAddress
 from .socket_connection import SocketConnection

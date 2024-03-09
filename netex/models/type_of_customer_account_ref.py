@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_customer_account_ref_structure import (
     TypeOfCustomerAccountRefStructure,
 )

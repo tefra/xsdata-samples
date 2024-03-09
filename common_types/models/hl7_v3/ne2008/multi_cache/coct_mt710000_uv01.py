@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from ..core.datatypes_base import (
     Ce,
     Cs,
@@ -224,27 +225,27 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_located_entity_part_of: List[
-        CoctMt710000Uv01LocatedEntityPartOf
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "asLocatedEntityPartOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    as_located_entity_part_of: List[CoctMt710000Uv01LocatedEntityPartOf] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "asLocatedEntityPartOf",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    located_entity_has_parts: List[
-        CoctMt710000Uv01LocatedEntityHasParts
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "locatedEntityHasParts",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    located_entity_has_parts: List[CoctMt710000Uv01LocatedEntityHasParts] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "locatedEntityHasParts",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

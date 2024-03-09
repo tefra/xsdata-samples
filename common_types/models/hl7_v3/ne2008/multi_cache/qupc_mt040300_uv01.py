@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from ..core.datatypes_base import (
     Bl,
     Cd,
@@ -523,16 +524,16 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    care_record_time_period: Optional[
-        QupcMt040300Uv01CareRecordTimePeriod
-    ] = field(
-        default=None,
-        metadata={
-            "name": "careRecordTimePeriod",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    care_record_time_period: Optional[QupcMt040300Uv01CareRecordTimePeriod] = (
+        field(
+            default=None,
+            metadata={
+                "name": "careRecordTimePeriod",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     clinical_statement_time_period: Optional[
         QupcMt040300Uv01ClinicalStatementTimePeriod

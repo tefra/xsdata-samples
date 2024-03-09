@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_void_document_req import AirVoidDocumentReq
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"

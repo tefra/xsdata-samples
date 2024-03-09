@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .category_value import CategoryValue
 from .t_root_element import TRootElement
 

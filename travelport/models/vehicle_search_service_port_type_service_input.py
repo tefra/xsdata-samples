@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.vehicle_search_availability_req import (
     VehicleSearchAvailabilityReq,
 )
@@ -23,7 +25,9 @@ class VehicleSearchServicePortTypeServiceInput:
 
     @dataclass
     class Body:
-        vehicle_search_availability_req: None | VehicleSearchAvailabilityReq = field(
+        vehicle_search_availability_req: (
+            None | VehicleSearchAvailabilityReq
+        ) = field(
             default=None,
             metadata={
                 "name": "VehicleSearchAvailabilityReq",

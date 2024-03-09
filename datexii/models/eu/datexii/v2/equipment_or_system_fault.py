@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.equipment_or_system_fault_type_enum import (
     EquipmentOrSystemFaultTypeEnum,
 )
@@ -38,16 +39,16 @@ class EquipmentOrSystemFault(TrafficElement):
             "required": True,
         },
     )
-    faulty_equipment_or_system_type: Optional[
-        EquipmentOrSystemTypeEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "faultyEquipmentOrSystemType",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    faulty_equipment_or_system_type: Optional[EquipmentOrSystemTypeEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "faultyEquipmentOrSystemType",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     equipment_or_system_fault_extension: Optional[ExtensionType] = field(
         default=None,

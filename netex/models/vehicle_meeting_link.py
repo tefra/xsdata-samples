@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_meeting_link_version_structure import (
     VehicleMeetingLinkVersionStructure,
 )

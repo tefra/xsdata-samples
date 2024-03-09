@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .application_rule_based_value_specification import (
     ApplicationRuleBasedValueSpecification,
@@ -52,15 +53,15 @@ class ApplicationAssocMapElementValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional[
-        "ApplicationAssocMapElementValueSpecification.Value"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "VALUE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    value: Optional["ApplicationAssocMapElementValueSpecification.Value"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "VALUE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,
@@ -166,15 +167,15 @@ class ApplicationAssocMapElementValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        record_value_specification: Optional[
-            "RecordValueSpecification"
-        ] = field(
-            default=None,
-            metadata={
-                "name": "RECORD-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        record_value_specification: Optional["RecordValueSpecification"] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "RECORD-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         reference_value_specification: Optional[
             ReferenceValueSpecification
@@ -283,15 +284,15 @@ class ApplicationAssocMapElementValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        record_value_specification: Optional[
-            "RecordValueSpecification"
-        ] = field(
-            default=None,
-            metadata={
-                "name": "RECORD-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        record_value_specification: Optional["RecordValueSpecification"] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "RECORD-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         reference_value_specification: Optional[
             ReferenceValueSpecification
@@ -560,15 +561,15 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: List[
-            NumericalValueSpecification
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "NUMERICAL-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        numerical_value_specification: List[NumericalValueSpecification] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "NUMERICAL-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         record_value_specification: List["RecordValueSpecification"] = field(
             default_factory=list,
@@ -578,15 +579,15 @@ class ArrayValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: List[
-            ReferenceValueSpecification
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "REFERENCE-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        reference_value_specification: List[ReferenceValueSpecification] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "REFERENCE-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         text_value_specification: List[TextValueSpecification] = field(
             default_factory=list,
@@ -658,15 +659,15 @@ class CompositeRuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    arguments: Optional[
-        "CompositeRuleBasedValueSpecification.Arguments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ARGUMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    arguments: Optional["CompositeRuleBasedValueSpecification.Arguments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ARGUMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     max_size_to_fill: Optional[PositiveInteger] = field(
         default=None,
@@ -874,15 +875,15 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: List[
-            NumericalValueSpecification
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "NUMERICAL-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        numerical_value_specification: List[NumericalValueSpecification] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "NUMERICAL-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         record_value_specification: List["RecordValueSpecification"] = field(
             default_factory=list,
@@ -892,15 +893,15 @@ class RecordValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: List[
-            ReferenceValueSpecification
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "REFERENCE-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        reference_value_specification: List[ReferenceValueSpecification] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "REFERENCE-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         text_value_specification: List[TextValueSpecification] = field(
             default_factory=list,

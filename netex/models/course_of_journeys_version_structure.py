@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDuration, XmlTime
+
 from .block_ref import BlockRef
 from .entity_in_version_structure import DataManagedObjectStructure
 from .flexible_line_ref import FlexibleLineRef

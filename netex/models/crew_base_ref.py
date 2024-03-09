@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .crew_base_ref_structure import CrewBaseRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

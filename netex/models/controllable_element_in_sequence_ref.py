@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .controllable_element_in_sequence_ref_structure import (
     ControllableElementInSequenceRefStructure,
 )

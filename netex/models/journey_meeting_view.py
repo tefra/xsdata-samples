@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .journey_meeting_derived_view_structure import (
     JourneyMeetingDerivedViewStructure,
 )

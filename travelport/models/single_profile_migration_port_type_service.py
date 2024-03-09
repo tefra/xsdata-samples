@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.single_profile_migration_port_type_service_input import (
     SingleProfileMigrationPortTypeServiceInput,
 )

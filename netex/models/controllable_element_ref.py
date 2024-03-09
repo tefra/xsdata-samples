@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .controllable_element_ref_structure import ControllableElementRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

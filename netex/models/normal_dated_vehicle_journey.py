@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .normal_dated_vehicle_journey_version_structure import (
     NormalDatedVehicleJourneyVersionStructure,
 )

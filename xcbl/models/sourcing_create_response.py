@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.sourcing_result_response import (
     Purpose,
     SourcingCreateReference,
@@ -236,14 +237,14 @@ class SourcingCreateResponsePurpose:
 
 @dataclass(kw_only=True)
 class SourcingCreateSummary:
-    total_number_of_sourcing_items: Optional[
-        TotalNumberOfSourcingItems
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TotalNumberOfSourcingItems",
-            "type": "Element",
-        },
+    total_number_of_sourcing_items: Optional[TotalNumberOfSourcingItems] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TotalNumberOfSourcingItems",
+                "type": "Element",
+            },
+        )
     )
     total_number_of_participants: Optional[TotalNumberOfParticipants] = field(
         default=None,
@@ -263,15 +264,15 @@ class SourcingCreateSummary:
 
 @dataclass(kw_only=True)
 class ListOfSourcingCreateResponseDetail:
-    sourcing_create_response_detail: List[
-        SourcingCreateResponseDetail
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "SourcingCreateResponseDetail",
-            "type": "Element",
-            "min_occurs": 1,
-        },
+    sourcing_create_response_detail: List[SourcingCreateResponseDetail] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "SourcingCreateResponseDetail",
+                "type": "Element",
+                "min_occurs": 1,
+            },
+        )
     )
 
 
@@ -321,14 +322,14 @@ class SourcingCreateResponseHeader:
             "required": True,
         }
     )
-    sourcing_response_coded_other: Optional[
-        SourcingResponseCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SourcingResponseCodedOther",
-            "type": "Element",
-        },
+    sourcing_response_coded_other: Optional[SourcingResponseCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SourcingResponseCodedOther",
+                "type": "Element",
+            },
+        )
     )
     language: Language = field(
         metadata={
@@ -337,14 +338,14 @@ class SourcingCreateResponseHeader:
             "required": True,
         }
     )
-    sourcing_create_response_note: Optional[
-        SourcingCreateResponseNote
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SourcingCreateResponseNote",
-            "type": "Element",
-        },
+    sourcing_create_response_note: Optional[SourcingCreateResponseNote] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SourcingCreateResponseNote",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -372,15 +373,15 @@ class SourcingItemComponentResponse:
 
 @dataclass(kw_only=True)
 class ListOfSourcingItemComponentResponse:
-    sourcing_item_component_response: List[
-        SourcingItemComponentResponse
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "SourcingItemComponentResponse",
-            "type": "Element",
-            "min_occurs": 1,
-        },
+    sourcing_item_component_response: List[SourcingItemComponentResponse] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "SourcingItemComponentResponse",
+                "type": "Element",
+                "min_occurs": 1,
+            },
+        )
     )
 
 

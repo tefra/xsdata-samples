@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .interchange_rule_timing import InterchangeRuleTiming
 from .interchange_rule_timing_ref import InterchangeRuleTimingRef

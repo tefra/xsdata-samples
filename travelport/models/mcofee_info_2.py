@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.mcofee_info_fee_applies_to_ind_2 import (
     McofeeInfoFeeAppliesToInd2,
 )

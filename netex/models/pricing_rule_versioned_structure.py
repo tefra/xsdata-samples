@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
+
 from .discounting_rule_ref import DiscountingRuleRef
 from .entity_in_version_structure import DataManagedObjectStructure
 from .limiting_rule_ref import LimitingRuleRef

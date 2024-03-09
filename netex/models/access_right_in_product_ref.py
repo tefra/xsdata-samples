@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .access_right_in_product_ref_structure import (
     AccessRightInProductRefStructure,
 )

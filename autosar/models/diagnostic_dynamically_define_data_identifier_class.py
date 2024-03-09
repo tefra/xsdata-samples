@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -215,15 +216,15 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_handling: Optional[
-        DiagnosticHandleDddiConfigurationEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CONFIGURATION-HANDLING",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    configuration_handling: Optional[DiagnosticHandleDddiConfigurationEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONFIGURATION-HANDLING",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     subfunctions: Optional[
         "DiagnosticDynamicallyDefineDataIdentifierClass.Subfunctions"

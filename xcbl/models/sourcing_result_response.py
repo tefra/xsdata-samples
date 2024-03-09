@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xcbl.models.trading_partner_response import Reference
 from xcbl.models.trading_partner_user_information import Language
 

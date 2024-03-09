@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .fare_zone import FareZone
 from .frame_containment_structure import FrameContainmentStructure
 

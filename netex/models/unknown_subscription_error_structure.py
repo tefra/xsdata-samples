@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .error_code_structure import ErrorCodeStructure
 from .subscription_qualifier_structure import SubscriptionQualifierStructure
 

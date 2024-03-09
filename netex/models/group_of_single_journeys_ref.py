@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .group_of_single_journeys_ref_structure import (
     GroupOfSingleJourneysRefStructure,
 )

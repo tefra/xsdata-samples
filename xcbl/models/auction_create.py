@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.auction_create_response import (
     AuctionCreateHeader,
     AuctionCreateSummary,

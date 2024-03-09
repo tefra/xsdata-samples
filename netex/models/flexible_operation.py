@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .flexible_mode_of_operation_value_structure import (
     FlexibleModeOfOperationValueStructure,
 )

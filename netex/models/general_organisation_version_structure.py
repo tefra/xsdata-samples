@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .other_organisation_version_structure import (
     OtherOrganisationVersionStructure,
 )

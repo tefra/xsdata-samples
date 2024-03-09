@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .group_of_points_version_structure import GroupOfPointsVersionStructure
 from .polygon import Polygon
 from .projections_rel_structure import ProjectionsRelStructure

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_sharing_parking_area_version_structure import (
     VehicleSharingParkingAreaVersionStructure,
 )

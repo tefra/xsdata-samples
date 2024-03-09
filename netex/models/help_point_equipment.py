@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .help_point_equipment_version_structure import (
     HelpPointEquipmentVersionStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -180,15 +181,15 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: Optional[
-        MultiplicityRestrictionWithSeverity
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MULTIPLICITY-RESTRICTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MULTIPLICITY-RESTRICTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
         default=None,
@@ -420,15 +421,15 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: Optional[
-        MultiplicityRestrictionWithSeverity
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MULTIPLICITY-RESTRICTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MULTIPLICITY-RESTRICTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
         default=None,
@@ -786,15 +787,15 @@ class ClassContentConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        primitive_attribute_tailoring: List[
-            PrimitiveAttributeTailoring
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PRIMITIVE-ATTRIBUTE-TAILORING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        primitive_attribute_tailoring: List[PrimitiveAttributeTailoring] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PRIMITIVE-ATTRIBUTE-TAILORING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         reference_tailoring: List["ReferenceTailoring"] = field(
             default_factory=list,
@@ -991,15 +992,15 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: Optional[
-        MultiplicityRestrictionWithSeverity
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MULTIPLICITY-RESTRICTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MULTIPLICITY-RESTRICTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
         default=None,
@@ -1167,15 +1168,15 @@ class ReferenceTailoring:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ReferenceTailoring.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["ReferenceTailoring.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -1241,15 +1242,15 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: Optional[
-        MultiplicityRestrictionWithSeverity
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MULTIPLICITY-RESTRICTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MULTIPLICITY-RESTRICTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
         default=None,

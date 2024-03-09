@@ -1,6 +1,8 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
+
 from travelport.models.action_status_1 import ActionStatus1
 from travelport.models.air_create_reservation_req_check_price_variance_type import (
     AirCreateReservationReqCheckPriceVarianceType,
@@ -207,16 +209,16 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "max_occurs": 999,
         },
     )
-    air_pricing_ticketing_modifiers: list[
-        AirPricingTicketingModifiers
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "AirPricingTicketingModifiers",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "max_occurs": 99,
-        },
+    air_pricing_ticketing_modifiers: list[AirPricingTicketingModifiers] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "AirPricingTicketingModifiers",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v52_0",
+                "max_occurs": 99,
+            },
+        )
     )
     retain_reservation: TypeRetainReservation = field(
         default=TypeRetainReservation.NONE,

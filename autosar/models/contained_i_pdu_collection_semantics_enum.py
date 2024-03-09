@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .contained_i_pdu_collection_semantics_enum_simple import (
     ContainedIPduCollectionSemanticsEnumSimple,
 )

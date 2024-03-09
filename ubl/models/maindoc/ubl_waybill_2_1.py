@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     CarrierParty,
     ConsignorParty,
@@ -156,15 +157,15 @@ class WaybillType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_carriage_value_amount: Optional[
-        DeclaredCarriageValueAmount
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DeclaredCarriageValueAmount",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    declared_carriage_value_amount: Optional[DeclaredCarriageValueAmount] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DeclaredCarriageValueAmount",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     other_instruction: Tuple[OtherInstruction, ...] = field(
         default_factory=tuple,

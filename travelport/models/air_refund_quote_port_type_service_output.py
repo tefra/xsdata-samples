@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_refund_quote_rsp import AirRefundQuoteRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -61,7 +63,9 @@ class AirRefundQuotePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirRefundQuotePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | AirRefundQuotePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

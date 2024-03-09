@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.associated_remark_4 import AssociatedRemark4
 from travelport.models.base_reservation_1 import BaseReservation1
 from travelport.models.booking_traveler_ref_1 import BookingTravelerRef1

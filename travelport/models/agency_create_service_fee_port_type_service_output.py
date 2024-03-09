@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.agency_service_fee_create_rsp import (
     AgencyServiceFeeCreateRsp,
 )
@@ -34,7 +36,9 @@ class AgencyCreateServiceFeePortTypeServiceOutput:
                 },
             )
         )
-        fault: None | AgencyCreateServiceFeePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | AgencyCreateServiceFeePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -65,7 +69,10 @@ class AgencyCreateServiceFeePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AgencyCreateServiceFeePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | AgencyCreateServiceFeePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -265,15 +266,15 @@ class BswModuleDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_module_refs: Optional[
-        "BswModuleDependency.TargetModuleRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TARGET-MODULE-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    target_module_refs: Optional["BswModuleDependency.TargetModuleRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-MODULE-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     required_entrys: Optional["BswModuleDependency.RequiredEntrys"] = field(
         default=None,
@@ -283,15 +284,15 @@ class BswModuleDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    expected_callbacks: Optional[
-        "BswModuleDependency.ExpectedCallbacks"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EXPECTED-CALLBACKS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    expected_callbacks: Optional["BswModuleDependency.ExpectedCallbacks"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EXPECTED-CALLBACKS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     service_items: Optional["BswModuleDependency.ServiceItems"] = field(
         default=None,
@@ -499,15 +500,15 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_manager_needs: List[
-            DiagnosticEventManagerNeeds
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DIAGNOSTIC-EVENT-MANAGER-NEEDS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        diagnostic_event_manager_needs: List[DiagnosticEventManagerNeeds] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DIAGNOSTIC-EVENT-MANAGER-NEEDS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         diagnostic_event_needs: List[DiagnosticEventNeeds] = field(
             default_factory=list,
@@ -641,15 +642,15 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_gid_synchronization_needs: List[
-            DoIpGidSynchronizationNeeds
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DO-IP-GID-SYNCHRONIZATION-NEEDS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        do_ip_gid_synchronization_needs: List[DoIpGidSynchronizationNeeds] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DO-IP-GID-SYNCHRONIZATION-NEEDS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         do_ip_power_mode_status_needs: List[DoIpPowerModeStatusNeeds] = field(
             default_factory=list,
@@ -747,15 +748,15 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ids_mgr_custom_timestamp_needs: List[
-            IdsMgrCustomTimestampNeeds
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "IDS-MGR-CUSTOM-TIMESTAMP-NEEDS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ids_mgr_custom_timestamp_needs: List[IdsMgrCustomTimestampNeeds] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "IDS-MGR-CUSTOM-TIMESTAMP-NEEDS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         ids_mgr_needs: List[IdsMgrNeeds] = field(
             default_factory=list,
@@ -909,15 +910,15 @@ class BswModuleDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        vendor_specific_service_needs: List[
-            VendorSpecificServiceNeeds
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "VENDOR-SPECIFIC-SERVICE-NEEDS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        vendor_specific_service_needs: List[VendorSpecificServiceNeeds] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "VENDOR-SPECIFIC-SERVICE-NEEDS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         warning_indicator_requested_bit_needs: List[
             WarningIndicatorRequestedBitNeeds

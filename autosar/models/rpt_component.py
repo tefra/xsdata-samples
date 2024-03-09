@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -174,15 +175,15 @@ class RptComponent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_executable_entitys: Optional[
-        "RptComponent.RptExecutableEntitys"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RPT-EXECUTABLE-ENTITYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    rpt_executable_entitys: Optional["RptComponent.RptExecutableEntitys"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RPT-EXECUTABLE-ENTITYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,

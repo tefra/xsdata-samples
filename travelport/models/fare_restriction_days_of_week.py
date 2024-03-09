@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_fare_directionality import TypeFareDirectionality
 from travelport.models.type_fare_trip_type import TypeFareTripType
 

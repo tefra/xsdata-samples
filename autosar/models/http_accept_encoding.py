@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .http_accept_encoding_enum import HttpAcceptEncodingEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

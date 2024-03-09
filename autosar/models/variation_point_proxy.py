@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -322,15 +323,15 @@ class VariationPointProxy:
 
     @dataclass
     class ValueAccess:
-        boolean_value_variation_point: Optional[
-            BooleanValueVariationPoint
-        ] = field(
-            default=None,
-            metadata={
-                "name": "BOOLEAN-VALUE-VARIATION-POINT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        boolean_value_variation_point: Optional[BooleanValueVariationPoint] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "BOOLEAN-VALUE-VARIATION-POINT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         diagnostic_debounce_behavior_enum_value_variation_point: Optional[
             DiagnosticDebounceBehaviorEnumValueVariationPoint
@@ -372,25 +373,25 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        float_value_variation_point: Optional[
-            FloatValueVariationPoint
-        ] = field(
-            default=None,
-            metadata={
-                "name": "FLOAT-VALUE-VARIATION-POINT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        float_value_variation_point: Optional[FloatValueVariationPoint] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "FLOAT-VALUE-VARIATION-POINT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
-        integer_value_variation_point: Optional[
-            IntegerValueVariationPoint
-        ] = field(
-            default=None,
-            metadata={
-                "name": "INTEGER-VALUE-VARIATION-POINT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        integer_value_variation_point: Optional[IntegerValueVariationPoint] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "INTEGER-VALUE-VARIATION-POINT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         limit: Optional[Limit] = field(
             default=None,

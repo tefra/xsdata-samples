@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .charging_equipment_profile import ChargingEquipmentProfile
 from .containment_aggregation_structure import ContainmentAggregationStructure
 

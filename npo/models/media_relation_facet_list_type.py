@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.abstract_facet_type import AbstractFacetType
 from npo.models.media_relation_facet_type import MediaRelationFacetType
 from npo.models.media_relation_search_type import MediaRelationSearchType

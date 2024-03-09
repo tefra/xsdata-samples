@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .mobility_service_constraint_zone_ref_structure import (
     MobilityServiceConstraintZoneRefStructure,
 )

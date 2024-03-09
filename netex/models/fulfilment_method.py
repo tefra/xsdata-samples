@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .fulfilment_method_version_structure import (
     FulfilmentMethodVersionStructure,
 )

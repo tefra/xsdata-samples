@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .abstract_gmltype import AbstractGmltype
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"

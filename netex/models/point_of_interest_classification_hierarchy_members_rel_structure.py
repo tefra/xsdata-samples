@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .point_of_interest_classification_hierarchy_member_structure import (
     PointOfInterestClassificationHierarchyMemberStructure,
 )

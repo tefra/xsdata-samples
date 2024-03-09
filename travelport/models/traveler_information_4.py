@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.phone_number_5 import PhoneNumber5
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"

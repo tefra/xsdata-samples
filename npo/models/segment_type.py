@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDuration
+
 from npo.models.base_media_type import BaseMediaType
 from npo.models.recursive_member_ref import RecursiveMemberRef
 from npo.models.segment_type_enum import SegmentTypeEnum

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_store_event_support_enum_simple import (
     DiagnosticStoreEventSupportEnumSimple,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .execution_time_type_enum_simple import ExecutionTimeTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

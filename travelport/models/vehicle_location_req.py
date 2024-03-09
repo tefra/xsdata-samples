@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.reference_point_1 import ReferencePoint1
 from travelport.models.type_pickup_date_location import TypePickupDateLocation

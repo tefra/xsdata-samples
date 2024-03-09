@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .time_unit_version_structure import TimeUnitVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

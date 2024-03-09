@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.twitter_type_type import TwitterTypeType
 
 __NAMESPACE__ = "urn:vpro:media:2009"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .flexible_mode_of_operation_ref import FlexibleModeOfOperationRef
 from .parking_area_refs_rel_structure import ParkingAreaRefsRelStructure
 from .personal_mode_of_operation_ref import PersonalModeOfOperationRef

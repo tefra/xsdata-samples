@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -159,15 +160,15 @@ class DiagnosticEvent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticEvent.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["DiagnosticEvent.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -259,25 +260,25 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    confirmation_threshold: Optional[
-        PositiveIntegerValueVariationPoint
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CONFIRMATION-THRESHOLD",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    confirmation_threshold: Optional[PositiveIntegerValueVariationPoint] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONFIRMATION-THRESHOLD",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    connected_indicators: Optional[
-        "DiagnosticEvent.ConnectedIndicators"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CONNECTED-INDICATORS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    connected_indicators: Optional["DiagnosticEvent.ConnectedIndicators"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONNECTED-INDICATORS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     event_clear_allowed: Optional[DiagnosticEventClearAllowedEnum] = field(
         default=None,
@@ -376,13 +377,13 @@ class DiagnosticEvent:
 
     @dataclass
     class ConnectedIndicators:
-        diagnostic_connected_indicator: List[
-            DiagnosticConnectedIndicator
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DIAGNOSTIC-CONNECTED-INDICATOR",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        diagnostic_connected_indicator: List[DiagnosticConnectedIndicator] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DIAGNOSTIC-CONNECTED-INDICATOR",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

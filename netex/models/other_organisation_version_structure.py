@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .organisation_version_structure import OrganisationVersionStructure
 from .postal_address_version_structure import PostalAddressVersionStructure
 

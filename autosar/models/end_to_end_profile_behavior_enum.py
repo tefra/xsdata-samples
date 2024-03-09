@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .end_to_end_profile_behavior_enum_simple import (
     EndToEndProfileBehaviorEnumSimple,
 )

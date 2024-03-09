@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.order_status_result import (
     BuyerReferenceNumber,
     OrderDate,
@@ -303,14 +304,14 @@ class OrderStatusRequestHeader:
             "type": "Element",
         },
     )
-    order_status_list_of_attachment: Optional[
-        OrderStatusListOfAttachment
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OrderStatusListOfAttachment",
-            "type": "Element",
-        },
+    order_status_list_of_attachment: Optional[OrderStatusListOfAttachment] = (
+        field(
+            default=None,
+            metadata={
+                "name": "OrderStatusListOfAttachment",
+                "type": "Element",
+            },
+        )
     )
 
 

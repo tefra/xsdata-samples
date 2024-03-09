@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .onboard_stay_versioned_chlld_structure import (
     OnboardStayVersionedChlldStructure,
 )

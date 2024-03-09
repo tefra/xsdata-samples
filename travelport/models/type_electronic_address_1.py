@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_email_format_1 import TypeEmailFormat1
 from travelport.models.type_tckey_element import TypeTckeyElement
 

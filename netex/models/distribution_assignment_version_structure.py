@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .all_authorities_ref import AllAuthoritiesRef
 from .all_countries_ref import AllCountriesRef
 from .all_distribution_channels_ref import AllDistributionChannelsRef
@@ -217,15 +218,15 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             ),
         },
     )
-    distribution_channel_type: Optional[
-        DistributionChannelTypeEnumeration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DistributionChannelType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    distribution_channel_type: Optional[DistributionChannelTypeEnumeration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DistributionChannelType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     allowed_in_channel: Optional[bool] = field(
         default=None,
@@ -384,15 +385,15 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketing_service_facility_list: Optional[
-        TicketingServiceFacilityList
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TicketingServiceFacilityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    ticketing_service_facility_list: Optional[TicketingServiceFacilityList] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TicketingServiceFacilityList",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     payment_methods: List[PaymentMethodEnumeration] = field(
         default_factory=list,

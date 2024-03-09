@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.direction_enum import DirectionEnum
 from datexii.models.eu.datexii.v2.distance_along_linear_element import (
     DistanceAlongLinearElement,
@@ -44,15 +45,15 @@ class LinearWithinLinearElement:
     :ivar linear_within_linear_element_extension:
     """
 
-    administrative_area_of_linear_section: Optional[
-        MultilingualString
-    ] = field(
-        default=None,
-        metadata={
-            "name": "administrativeAreaOfLinearSection",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    administrative_area_of_linear_section: Optional[MultilingualString] = (
+        field(
+            default=None,
+            metadata={
+                "name": "administrativeAreaOfLinearSection",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     direction_bound_on_linear_section: Optional[DirectionEnum] = field(
         default=None,

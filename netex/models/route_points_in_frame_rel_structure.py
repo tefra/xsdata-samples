@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .route_point import RoutePoint
 

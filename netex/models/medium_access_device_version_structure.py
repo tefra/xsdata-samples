@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .customer_ref import CustomerRef
 from .entity_in_version_structure import DataManagedObjectStructure
 from .medium_application_instance_rel_structure import (
@@ -40,23 +41,23 @@ class MediumAccessDeviceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_medium_access_device_ref: Optional[
-        TypeOfMediumAccessDeviceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfMediumAccessDeviceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    type_of_medium_access_device_ref: Optional[TypeOfMediumAccessDeviceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TypeOfMediumAccessDeviceRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
-    application_instances: Optional[
-        MediumApplicationInstanceRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "applicationInstances",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    application_instances: Optional[MediumApplicationInstanceRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "applicationInstances",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

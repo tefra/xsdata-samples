@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .commercial_profile_eligibility_ref import CommercialProfileEligibilityRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .residential_qualification_eligibility_ref import (

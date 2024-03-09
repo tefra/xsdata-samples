@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .application_record_element_subtypes_enum import (
     ApplicationRecordElementSubtypesEnum,
 )
@@ -354,15 +355,15 @@ class SenderRecRecordElementMapping:
 
     @dataclass
     class ComplexTypeMapping:
-        sender_rec_array_type_mapping: Optional[
-            SenderRecArrayTypeMapping
-        ] = field(
-            default=None,
-            metadata={
-                "name": "SENDER-REC-ARRAY-TYPE-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        sender_rec_array_type_mapping: Optional[SenderRecArrayTypeMapping] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "SENDER-REC-ARRAY-TYPE-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         sender_rec_record_type_mapping: Optional[
             "SenderRecRecordTypeMapping"

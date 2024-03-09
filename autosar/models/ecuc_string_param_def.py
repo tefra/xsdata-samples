@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -184,15 +185,15 @@ class EcucStringParamDef:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EcucStringParamDef.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["EcucStringParamDef.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -364,15 +365,15 @@ class EcucStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_config_classes: Optional[
-        "EcucStringParamDef.ValueConfigClasses"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "VALUE-CONFIG-CLASSES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    value_config_classes: Optional["EcucStringParamDef.ValueConfigClasses"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "VALUE-CONFIG-CLASSES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     derivation: Optional[EcucDerivationSpecification] = field(
         default=None,
@@ -503,15 +504,15 @@ class EcucStringParamDef:
 
     @dataclass
     class ValueConfigClasses:
-        ecuc_value_configuration_class: List[
-            EcucValueConfigurationClass
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ECUC-VALUE-CONFIGURATION-CLASS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ecuc_value_configuration_class: List[EcucValueConfigurationClass] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ECUC-VALUE-CONFIGURATION-CLASS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

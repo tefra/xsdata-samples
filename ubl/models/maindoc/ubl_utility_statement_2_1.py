@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
     CustomerParty,
@@ -24,8 +25,8 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
     ProfileExecutionId,
     ProfileId,
     UblversionId,
-    Uuid,
     UtilityStatementTypeCode,
+    Uuid,
 )
 from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 
@@ -169,15 +170,15 @@ class UtilityStatementType:
             "required": True,
         },
     )
-    additional_document_reference: Tuple[
-        AdditionalDocumentReference, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "AdditionalDocumentReference",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "AdditionalDocumentReference",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.universal_record_cancel_rsp import (
     UniversalRecordCancelRsp,
@@ -34,7 +36,9 @@ class UniversalRecordCancelServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
             },
         )
-        fault: None | UniversalRecordCancelServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | UniversalRecordCancelServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -65,7 +69,10 @@ class UniversalRecordCancelServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | UniversalRecordCancelServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | UniversalRecordCancelServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

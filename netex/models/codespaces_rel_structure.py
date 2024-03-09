@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .codespace import Codespace
 from .codespace_ref import CodespaceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure

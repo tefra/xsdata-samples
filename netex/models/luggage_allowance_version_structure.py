@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .baggage_type_enumeration import BaggageTypeEnumeration
 from .baggage_use_type_enumeration import BaggageUseTypeEnumeration
 from .luggage_allowance_type_enumeration import LuggageAllowanceTypeEnumeration

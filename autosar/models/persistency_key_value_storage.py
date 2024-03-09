@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -206,25 +207,25 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_strategy: Optional[
-        PersistencyCollectionLevelUpdateStrategyEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "UPDATE-STRATEGY",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    update_strategy: Optional[PersistencyCollectionLevelUpdateStrategyEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "UPDATE-STRATEGY",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    key_value_pairs: Optional[
-        "PersistencyKeyValueStorage.KeyValuePairs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "KEY-VALUE-PAIRS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    key_value_pairs: Optional["PersistencyKeyValueStorage.KeyValuePairs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "KEY-VALUE-PAIRS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     uri: Optional[UriString] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.electric_charging import ElectricCharging
 from datexii.models.eu.datexii.v2.equipment_type_enum import EquipmentTypeEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType

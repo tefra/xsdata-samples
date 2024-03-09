@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .udp_checksum_calculation_enum_simple import (
     UdpChecksumCalculationEnumSimple,
 )

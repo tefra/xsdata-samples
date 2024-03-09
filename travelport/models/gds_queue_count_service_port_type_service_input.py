@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.gds_queue_count_req import GdsQueueCountReq
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .composition_sw_component_type_subtypes_enum import (
     CompositionSwComponentTypeSubtypesEnum,
 )

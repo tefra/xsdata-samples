@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .meeting_restriction import MeetingRestriction
 from .overtaking_possibility import OvertakingPossibility

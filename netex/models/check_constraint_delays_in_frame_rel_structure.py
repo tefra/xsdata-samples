@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .check_constraint_delay import CheckConstraintDelay
 from .containment_aggregation_structure import ContainmentAggregationStructure
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .fare_product_ref_structure import FareProductRefStructure
 from .fare_product_refs_rel_structure import FareProductRefsRelStructure
 from .preassigned_fare_product_version_structure import (

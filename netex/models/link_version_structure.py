@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .entity_in_version_structure import DataManagedObjectStructure
 from .line_string import LineString
 from .link_type_refs_rel_structure import LinkTypeRefsRelStructure

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.openlr_last_location_reference_point import (
     OpenlrLastLocationReferencePoint,
@@ -58,16 +59,16 @@ class OpenlrBasePointLocation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    openlr_location_reference_point: Optional[
-        OpenlrLocationReferencePoint
-    ] = field(
-        default=None,
-        metadata={
-            "name": "openlrLocationReferencePoint",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    openlr_location_reference_point: Optional[OpenlrLocationReferencePoint] = (
+        field(
+            default=None,
+            metadata={
+                "name": "openlrLocationReferencePoint",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     openlr_last_location_reference_point: Optional[
         OpenlrLastLocationReferencePoint

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes import (
     IvlInt,
     RtoPqPq,
@@ -878,16 +879,16 @@ class CoctMt300000Uv04PrescriberRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    playing_prescriber_person: Optional[
-        CoctMt300000Uv04PrescriberPerson
-    ] = field(
-        default=None,
-        metadata={
-            "name": "playingPrescriberPerson",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    playing_prescriber_person: Optional[CoctMt300000Uv04PrescriberPerson] = (
+        field(
+            default=None,
+            metadata={
+                "name": "playingPrescriberPerson",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -1056,16 +1057,16 @@ class CoctMt300000Uv04Product:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_product: Optional[
-        CoctMt300000Uv04ManufacturedProduct
-    ] = field(
-        default=None,
-        metadata={
-            "name": "manufacturedProduct",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    manufactured_product: Optional[CoctMt300000Uv04ManufacturedProduct] = (
+        field(
+            default=None,
+            metadata={
+                "name": "manufacturedProduct",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -1338,16 +1339,16 @@ class CoctMt300000Uv04SubstanceAdministrationOrder:
             "nillable": True,
         },
     )
-    pertinent_information: Optional[
-        CoctMt300000Uv04PertinentInformation
-    ] = field(
-        default=None,
-        metadata={
-            "name": "pertinentInformation",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information: Optional[CoctMt300000Uv04PertinentInformation] = (
+        field(
+            default=None,
+            metadata={
+                "name": "pertinentInformation",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -1494,16 +1495,16 @@ class CoctMt300000Uv04SubstanceAdministrationIntent:
             "nillable": True,
         },
     )
-    pertinent_information: Optional[
-        CoctMt300000Uv04PertinentInformation2
-    ] = field(
-        default=None,
-        metadata={
-            "name": "pertinentInformation",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information: Optional[CoctMt300000Uv04PertinentInformation2] = (
+        field(
+            default=None,
+            metadata={
+                "name": "pertinentInformation",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     subject_of: List[CoctMt300000Uv04Subject] = field(
         default_factory=list,

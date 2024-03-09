@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_fare_contract_entry_ref_structure import (
     TypeOfFareContractEntryRefStructure,
 )

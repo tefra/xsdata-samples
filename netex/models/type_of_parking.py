@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_parking_value_structure import TypeOfParkingValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

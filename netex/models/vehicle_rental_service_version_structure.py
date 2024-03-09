@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .common_vehicle_service_version_structure import (
     CommonVehicleServiceVersionStructure,
 )

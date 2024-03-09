@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .authority_ref import AuthorityRef
 from .equipment_places_rel_structure import EquipmentPlacesRelStructure
 from .general_organisation_ref import GeneralOrganisationRef

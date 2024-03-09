@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     Consignment,
     DocumentReference,
@@ -8,9 +9,9 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     Signature,
     StatusLocation,
     StatusPeriod,
+    TransportationStatusRequestDocumentReference,
     TransportEvent,
     TransportExecutionPlanDocumentReference,
-    TransportationStatusRequestDocumentReference,
     UpdatedDeliveryTransportEvent,
     UpdatedPickupTransportEvent,
 )
@@ -27,8 +28,8 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
     ProfileExecutionId,
     ProfileId,
     ShippingOrderId,
-    TransportExecutionStatusCode,
     TransportationStatusTypeCode,
+    TransportExecutionStatusCode,
     UblversionId,
     Uuid,
 )
@@ -162,25 +163,25 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transportation_status_type_code: Optional[
-        TransportationStatusTypeCode
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TransportationStatusTypeCode",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    transportation_status_type_code: Optional[TransportationStatusTypeCode] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TransportationStatusTypeCode",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
-    transport_execution_status_code: Optional[
-        TransportExecutionStatusCode
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TransportExecutionStatusCode",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    transport_execution_status_code: Optional[TransportExecutionStatusCode] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TransportExecutionStatusCode",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     consignment: Tuple[Consignment, ...] = field(
         default_factory=tuple,
@@ -250,15 +251,15 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    updated_pickup_transport_event: Optional[
-        UpdatedPickupTransportEvent
-    ] = field(
-        default=None,
-        metadata={
-            "name": "UpdatedPickupTransportEvent",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    updated_pickup_transport_event: Optional[UpdatedPickupTransportEvent] = (
+        field(
+            default=None,
+            metadata={
+                "name": "UpdatedPickupTransportEvent",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
     updated_delivery_transport_event: Optional[
         UpdatedDeliveryTransportEvent

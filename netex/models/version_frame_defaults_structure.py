@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .codespace_ref_structure import CodespaceRefStructure
 from .data_source_ref_structure import DataSourceRefStructure
 from .locale_structure import LocaleStructure
@@ -27,15 +28,15 @@ class VersionFrameDefaultsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    default_responsibility_set_ref: Optional[
-        ResponsibilitySetRefStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DefaultResponsibilitySetRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    default_responsibility_set_ref: Optional[ResponsibilitySetRefStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DefaultResponsibilitySetRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     default_locale: Optional[LocaleStructure] = field(
         default=None,

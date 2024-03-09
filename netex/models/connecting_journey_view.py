@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .connecting_journey_derived_view_structure import (
     ConnectingJourneyDerivedViewStructure,
 )

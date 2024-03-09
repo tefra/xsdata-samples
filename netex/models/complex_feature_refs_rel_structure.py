@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .complex_feature_ref import ComplexFeatureRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 

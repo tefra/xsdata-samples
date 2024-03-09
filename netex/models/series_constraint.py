@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .series_constraint_version_structure import (
     SeriesConstraintVersionStructure,
 )

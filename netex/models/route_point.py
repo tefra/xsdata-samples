@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .route_point_version_structure import RoutePointVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

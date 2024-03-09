@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .stop_place_1 import StopPlace1
 from .stop_place_ref import StopPlaceRef

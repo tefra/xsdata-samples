@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.lane_enum import LaneEnum
 from datexii.models.eu.datexii.v2.measured_or_derived_data_type_enum import (
@@ -87,13 +88,13 @@ class MeasurementSpecificCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_specific_characteristics_extension: Optional[
-        ExtensionType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "measurementSpecificCharacteristicsExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    measurement_specific_characteristics_extension: Optional[ExtensionType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "measurementSpecificCharacteristicsExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

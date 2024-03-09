@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.requisition_category_4 import RequisitionCategory4
 from travelport.models.requisition_type_4 import RequisitionType4
 

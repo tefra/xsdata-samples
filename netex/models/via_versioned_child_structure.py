@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .border_point_ref import BorderPointRef
 from .destination_display_ref import DestinationDisplayRef
 from .destination_display_view import DestinationDisplayView

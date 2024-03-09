@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.match import Match
 from npo.models.simple_match_type import SimpleMatchType
 

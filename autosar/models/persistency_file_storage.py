@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -207,15 +208,15 @@ class PersistencyFileStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_strategy: Optional[
-        PersistencyCollectionLevelUpdateStrategyEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "UPDATE-STRATEGY",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    update_strategy: Optional[PersistencyCollectionLevelUpdateStrategyEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "UPDATE-STRATEGY",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     files: Optional["PersistencyFileStorage.Files"] = field(
         default=None,

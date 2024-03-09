@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_agency_payment_history_1 import (
     TypeAgencyPaymentHistory1,
 )

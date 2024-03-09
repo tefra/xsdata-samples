@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .priceable_object_version_structure import PriceableObjectVersionStructure
 from .type_of_usage_parameter_ref import TypeOfUsageParameterRef
 from .usage_parameter_prices_rel_structure import (

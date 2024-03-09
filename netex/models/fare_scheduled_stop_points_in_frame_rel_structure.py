@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .fare_scheduled_stop_point import FareScheduledStopPoint
 from .frame_containment_structure import FrameContainmentStructure
 from .scheduled_stop_point import ScheduledStopPoint

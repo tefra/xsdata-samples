@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_commission_level_6 import TypeCommissionLevel6
 from travelport.models.type_commission_modifier_6 import (
     TypeCommissionModifier6,

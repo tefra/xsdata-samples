@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .audible_signals_available import AudibleSignalsAvailable
 from .entity_in_version_structure import VersionedChildStructure
 from .escalator_free_access import EscalatorFreeAccess

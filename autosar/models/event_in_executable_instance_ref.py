@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
 from .ref import Ref
 from .root_sw_component_prototype_subtypes_enum import (

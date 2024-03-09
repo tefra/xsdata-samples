@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .latency_constraint_type_enum_simple import (
     LatencyConstraintTypeEnumSimple,
 )

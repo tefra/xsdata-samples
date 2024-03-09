@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration, XmlTime
+
 from .headway_interval_structure import HeadwayIntervalStructure
 from .passing_time_view_structure import PassingTimeViewStructure
 

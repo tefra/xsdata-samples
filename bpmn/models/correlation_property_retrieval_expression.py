@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .t_correlation_property_retrieval_expression import (
     TCorrelationPropertyRetrievalExpression,
 )

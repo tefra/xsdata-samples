@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.hotel_search_availability_req import (
     HotelSearchAvailabilityReq,
 )
@@ -23,11 +25,13 @@ class HotelSearchServicePortTypeServiceInput:
 
     @dataclass
     class Body:
-        hotel_search_availability_req: None | HotelSearchAvailabilityReq = field(
-            default=None,
-            metadata={
-                "name": "HotelSearchAvailabilityReq",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            },
+        hotel_search_availability_req: None | HotelSearchAvailabilityReq = (
+            field(
+                default=None,
+                metadata={
+                    "name": "HotelSearchAvailabilityReq",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/hotel_v52_0",
+                },
+            )
         )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .access_space_ref import AccessSpaceRef
 from .address_ref import AddressRef
 from .all_authorities_ref import AllAuthoritiesRef
@@ -508,30 +509,30 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    address_ref: List[
-        Union[PostalAddressRef, RoadAddressRef, AddressRef]
-    ] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "PostalAddressRef",
-                    "type": PostalAddressRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RoadAddressRef",
-                    "type": RoadAddressRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "AddressRef",
-                    "type": AddressRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    address_ref: List[Union[PostalAddressRef, RoadAddressRef, AddressRef]] = (
+        field(
+            default_factory=list,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "PostalAddressRef",
+                        "type": PostalAddressRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoadAddressRef",
+                        "type": RoadAddressRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AddressRef",
+                        "type": AddressRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     choice_1: List[
         Union[
@@ -1171,27 +1172,27 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    type_of_fare_structure_factor_ref: List[
-        TypeOfFareStructureFactorRef
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfFareStructureFactorRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "sequence": 1,
-        },
+    type_of_fare_structure_factor_ref: List[TypeOfFareStructureFactorRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "TypeOfFareStructureFactorRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "sequence": 1,
+            },
+        )
     )
-    type_of_fare_structure_element_ref: List[
-        TypeOfFareStructureElementRef
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "TypeOfFareStructureElementRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "sequence": 1,
-        },
+    type_of_fare_structure_element_ref: List[TypeOfFareStructureElementRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "TypeOfFareStructureElementRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "sequence": 1,
+            },
+        )
     )
     type_of_tariff_ref: List[TypeOfTariffRef] = field(
         default_factory=list,

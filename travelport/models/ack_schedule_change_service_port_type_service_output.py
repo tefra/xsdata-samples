@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.ack_schedule_change_rsp import AckScheduleChangeRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -30,7 +32,9 @@ class AckScheduleChangeServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
             },
         )
-        fault: None | AckScheduleChangeServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | AckScheduleChangeServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -61,7 +65,10 @@ class AckScheduleChangeServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AckScheduleChangeServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | AckScheduleChangeServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

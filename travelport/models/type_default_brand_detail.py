@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.applicable_segment import ApplicableSegment
 from travelport.models.image_location import ImageLocation
 from travelport.models.text import Text

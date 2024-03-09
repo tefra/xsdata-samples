@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.add_svc import AddSvc
 from travelport.models.air_exchange_bundle import AirExchangeBundle
 from travelport.models.air_exchange_bundle_total import AirExchangeBundleTotal

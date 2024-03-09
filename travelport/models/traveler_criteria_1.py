@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.applied_profile_criteria import AppliedProfileCriteria
 from travelport.models.name_criteria import NameCriteria
 

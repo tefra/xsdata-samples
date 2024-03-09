@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.account_code_1 import AccountCode1
 from travelport.models.brand_modifiers import BrandModifiers
 from travelport.models.contract_code import ContractCode
@@ -114,7 +116,9 @@ class AirPricingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    prohibited_rule_categories: None | AirPricingModifiers.ProhibitedRuleCategories = field(
+    prohibited_rule_categories: (
+        None | AirPricingModifiers.ProhibitedRuleCategories
+    ) = field(
         default=None,
         metadata={
             "name": "ProhibitedRuleCategories",

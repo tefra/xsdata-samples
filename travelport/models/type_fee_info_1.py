@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.included_in_base_1 import IncludedInBase1
 from travelport.models.type_element_status_1 import TypeElementStatus1
 

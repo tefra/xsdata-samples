@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.profile_retrieve_history_rsp_1 import (
     ProfileRetrieveHistoryRsp1,
@@ -24,15 +26,19 @@ class ProfileRetrieveHistoryPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        profile_retrieve_history_rsp: None | ProfileRetrieveHistoryRsp1 = field(
-            default=None,
-            metadata={
-                "name": "ProfileRetrieveHistoryRsp",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            },
+        profile_retrieve_history_rsp: None | ProfileRetrieveHistoryRsp1 = (
+            field(
+                default=None,
+                metadata={
+                    "name": "ProfileRetrieveHistoryRsp",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
+                },
+            )
         )
-        fault: None | ProfileRetrieveHistoryPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | ProfileRetrieveHistoryPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class ProfileRetrieveHistoryPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ProfileRetrieveHistoryPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | ProfileRetrieveHistoryPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

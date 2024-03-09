@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .railway_link_ref import RailwayLinkRef
 from .railway_point_ref import RailwayPointRef
 from .road_link_ref import RoadLinkRef

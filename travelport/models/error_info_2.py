@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_error_info_2 import TypeErrorInfo2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"

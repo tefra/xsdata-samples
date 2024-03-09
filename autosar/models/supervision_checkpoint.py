@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -164,15 +165,15 @@ class SupervisionCheckpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    phm_checkpoint_iref: Optional[
-        PhmCheckpointInExecutableInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PHM-CHECKPOINT-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    phm_checkpoint_iref: Optional[PhmCheckpointInExecutableInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PHM-CHECKPOINT-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     process_ref: Optional["SupervisionCheckpoint.ProcessRef"] = field(
         default=None,

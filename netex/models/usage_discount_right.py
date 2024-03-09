@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .usage_discount_right_version_structure import (
     UsageDiscountRightVersionStructure,
 )

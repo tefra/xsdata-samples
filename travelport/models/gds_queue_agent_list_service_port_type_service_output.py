@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.gds_queue_agent_list_rsp import GdsQueueAgentListRsp
 
@@ -30,7 +32,9 @@ class GdsQueueAgentListServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/gdsQueue_v52_0",
             },
         )
-        fault: None | GdsQueueAgentListServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | GdsQueueAgentListServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -61,7 +65,10 @@ class GdsQueueAgentListServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | GdsQueueAgentListServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | GdsQueueAgentListServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

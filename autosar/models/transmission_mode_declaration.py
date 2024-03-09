@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .mode_driven_transmission_mode_condition import (
     ModeDrivenTransmissionModeCondition,
 )

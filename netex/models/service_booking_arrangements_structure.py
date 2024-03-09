@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .booking_charge_type_enumeration import BookingChargeTypeEnumeration
 

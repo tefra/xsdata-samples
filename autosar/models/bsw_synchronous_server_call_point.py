@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .bsw_distinguished_partition_subtypes_enum import (
     BswDistinguishedPartitionSubtypesEnum,

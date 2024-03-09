@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_low_fare_search_req import BaseLowFareSearchReq
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"

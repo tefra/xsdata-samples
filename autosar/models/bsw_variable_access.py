@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .bsw_distinguished_partition_subtypes_enum import (
     BswDistinguishedPartitionSubtypesEnum,
@@ -58,15 +59,15 @@ class BswVariableAccess:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswVariableAccess.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["BswVariableAccess.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     accessed_variable_ref: Optional[
         "BswVariableAccess.AccessedVariableRef"

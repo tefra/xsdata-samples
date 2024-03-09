@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .diagnostic_common_props_conditional import (
     DiagnosticCommonPropsConditional,
 )

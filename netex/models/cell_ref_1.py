@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .cell_ref_structure import CellRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

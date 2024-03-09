@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration, XmlTime
+
 from .duty_part_ref import DutyPartRef
 from .journey_part_ref import JourneyPartRef
 from .time_demand_type_ref import TimeDemandTypeRef

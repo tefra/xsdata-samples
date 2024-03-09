@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.host_token_list_1 import HostTokenList1
 from travelport.models.rail_exchange_solution import RailExchangeSolution

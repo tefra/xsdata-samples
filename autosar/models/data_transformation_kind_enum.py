@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .data_transformation_kind_enum_simple import (
     DataTransformationKindEnumSimple,
 )

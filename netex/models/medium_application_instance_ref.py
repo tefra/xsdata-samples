@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .medium_application_instance_ref_structure import (
     MediumApplicationInstanceRefStructure,
 )

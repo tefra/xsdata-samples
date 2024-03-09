@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .journey_version_structure import JourneyVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

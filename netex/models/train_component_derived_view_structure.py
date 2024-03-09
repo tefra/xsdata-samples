@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .derived_view_structure import DerivedViewStructure
 from .fare_classes import FareClasses
 from .multilingual_string import MultilingualString

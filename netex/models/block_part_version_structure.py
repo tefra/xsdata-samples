@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .block_ref import BlockRef
 from .compound_block_ref import CompoundBlockRef
 from .compound_train_ref import CompoundTrainRef

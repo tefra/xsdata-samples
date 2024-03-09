@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
+
 from generali.models.address import Address
 from generali.models.created_date_time import CreatedDateTime
 from generali.models.currency_id import CurrencyId

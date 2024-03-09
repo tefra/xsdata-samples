@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
 from .ref import Ref
 from .root_sw_composition_prototype_subtypes_enum import (
@@ -59,15 +60,15 @@ class TriggerInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_ref: Optional[
-        "TriggerInSystemInstanceRef.ContextPortRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CONTEXT-PORT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    context_port_ref: Optional["TriggerInSystemInstanceRef.ContextPortRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONTEXT-PORT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     target_trigger_ref: Optional[
         "TriggerInSystemInstanceRef.TargetTriggerRef"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .td_event_i_pdu_type_enum_simple import TdEventIPduTypeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

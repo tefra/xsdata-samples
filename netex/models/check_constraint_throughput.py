@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .check_constraint_throughput_version_structure import (
     CheckConstraintThroughputVersionStructure,
 )

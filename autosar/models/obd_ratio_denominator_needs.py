@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -185,15 +186,15 @@ class ObdRatioDenominatorNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    denominator_condition: Optional[
-        DiagnosticDenominatorConditionEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DENOMINATOR-CONDITION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    denominator_condition: Optional[DiagnosticDenominatorConditionEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DENOMINATOR-CONDITION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

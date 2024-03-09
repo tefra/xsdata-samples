@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .parking_entrance_for_vehicles import ParkingEntranceForVehicles
 from .parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Abbrev,
     Alternatives,

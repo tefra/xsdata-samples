@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_area_info import TypeAreaInfo
 from travelport.models.type_structured_address_1 import TypeStructuredAddress1
 from travelport.models.type_vehicle_location import TypeVehicleLocation

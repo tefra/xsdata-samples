@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_create_reservation_rsp import (
     AirCreateReservationRsp,
 )
@@ -66,7 +68,10 @@ class AirCreateReservationPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirCreateReservationPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | AirCreateReservationPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

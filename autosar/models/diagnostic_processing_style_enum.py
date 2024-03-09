@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_processing_style_enum_simple import (
     DiagnosticProcessingStyleEnumSimple,
 )

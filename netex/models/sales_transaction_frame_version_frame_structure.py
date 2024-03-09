@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .blacklists_in_frame_rel_structure import BlacklistsInFrameRelStructure
 from .common_version_frame_structure import CommonVersionFrameStructure
 from .customer_accounts_in_frame_rel_structure import (
@@ -82,15 +83,15 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_devices: Optional[
-        MediumAccessDevicesInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "mediumAccessDevices",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    medium_access_devices: Optional[MediumAccessDevicesInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "mediumAccessDevices",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     blacklists: Optional[BlacklistsInFrameRelStructure] = field(
         default=None,

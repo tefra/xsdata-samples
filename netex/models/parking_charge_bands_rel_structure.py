@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .parking_charge_band_ref import ParkingChargeBandRef
 from .priceable_object_version_structure import ParkingChargeBand

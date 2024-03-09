@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .boolean import Boolean
 from .integer import Integer
 from .nm_node_subtypes_enum import NmNodeSubtypesEnum

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .access_summary import AccessSummary
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

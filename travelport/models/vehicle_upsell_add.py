@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.vehicle_upsell_offer import VehicleUpsellOffer
 from travelport.models.vehicle_upsell_qualify import VehicleUpsellQualify
 

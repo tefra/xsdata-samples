@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     AdExplicit,
     AnyType,
@@ -1142,16 +1143,16 @@ class PrpaMt201310Uv02PersonalRelationship:
             "nillable": True,
         },
     )
-    relationship_holder2: Optional[
-        CoctMt030007UvNonPersonLivingSubject
-    ] = field(
-        default=None,
-        metadata={
-            "name": "relationshipHolder2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    relationship_holder2: Optional[CoctMt030007UvNonPersonLivingSubject] = (
+        field(
+            default=None,
+            metadata={
+                "name": "relationshipHolder2",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -2500,16 +2501,16 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    language_communication: List[
-        PrpaMt201310Uv02LanguageCommunication
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "languageCommunication",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    language_communication: List[PrpaMt201310Uv02LanguageCommunication] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "languageCommunication",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

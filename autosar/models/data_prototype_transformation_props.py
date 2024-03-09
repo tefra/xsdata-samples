@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .data_prototype_in_port_interface_ref import (
     DataPrototypeInPortInterfaceRef,
 )

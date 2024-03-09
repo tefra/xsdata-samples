@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from voko.models.baz import Baz
 from voko.models.ctl import Ctl
 from voko.models.em import Em

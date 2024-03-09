@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .group_of_timing_links_rel_structure import GroupOfTimingLinksRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

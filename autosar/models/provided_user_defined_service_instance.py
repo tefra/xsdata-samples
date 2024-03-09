@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -162,15 +163,15 @@ class ProvidedUserDefinedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "ProvidedUserDefinedServiceInstance.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["ProvidedUserDefinedServiceInstance.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -267,15 +268,15 @@ class ProvidedUserDefinedServiceInstance:
 
     @dataclass
     class E2EEventProtectionPropss:
-        end_2_end_event_protection_props: List[
-            End2EndEventProtectionProps
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "END-2-END-EVENT-PROTECTION-PROPS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        end_2_end_event_protection_props: List[End2EndEventProtectionProps] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "END-2-END-EVENT-PROTECTION-PROPS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

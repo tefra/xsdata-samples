@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
@@ -61,25 +62,25 @@ class CalibrationParameterValue:
     class Meta:
         name = "CALIBRATION-PARAMETER-VALUE"
 
-    appl_init_value: Optional[
-        "CalibrationParameterValue.ApplInitValue"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "APPL-INIT-VALUE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    appl_init_value: Optional["CalibrationParameterValue.ApplInitValue"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "APPL-INIT-VALUE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    impl_init_value: Optional[
-        "CalibrationParameterValue.ImplInitValue"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "IMPL-INIT-VALUE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    impl_init_value: Optional["CalibrationParameterValue.ImplInitValue"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "IMPL-INIT-VALUE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     initialized_parameter_ref: Optional[
         "CalibrationParameterValue.InitializedParameterRef"

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.issuance_modifiers import IssuanceModifiers
 from travelport.models.provider_reservation_detail_1 import (

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .charging_policy_ref_structure import ChargingPolicyRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

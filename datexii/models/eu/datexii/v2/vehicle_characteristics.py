@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.fuel_type_enum import FuelTypeEnum
 from datexii.models.eu.datexii.v2.gross_weight_characteristic import (
     GrossWeightCharacteristic,

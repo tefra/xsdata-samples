@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .medical_facility_enumeration import MedicalFacilityEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

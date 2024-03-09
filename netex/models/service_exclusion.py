@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .service_exclusion_version_structure import (
     ServiceExclusionVersionStructure,
 )

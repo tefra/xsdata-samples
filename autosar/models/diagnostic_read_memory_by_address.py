@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -195,15 +196,15 @@ class DiagnosticReadMemoryByAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    read_class_ref: Optional[
-        "DiagnosticReadMemoryByAddress.ReadClassRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "READ-CLASS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    read_class_ref: Optional["DiagnosticReadMemoryByAddress.ReadClassRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "READ-CLASS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

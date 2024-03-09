@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .activation_assignment import ActivationAssignment
 from .activation_assignment_ref import ActivationAssignmentRef
 from .containment_aggregation_structure import ContainmentAggregationStructure

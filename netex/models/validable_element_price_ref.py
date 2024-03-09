@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .validable_element_price_ref_structure import (
     ValidableElementPriceRefStructure,
 )

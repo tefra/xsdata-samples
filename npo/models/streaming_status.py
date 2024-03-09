@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.streaming_status_value import StreamingStatusValue
 
 __NAMESPACE__ = "urn:vpro:media:2009"

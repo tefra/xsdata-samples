@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .metro_submode_enumeration import MetroSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

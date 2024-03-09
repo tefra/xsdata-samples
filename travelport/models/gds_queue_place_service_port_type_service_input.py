@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.gds_queue_place_req import GdsQueuePlaceReq
 from travelport.models.supported_versions import SupportedVersions
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.axle_spacing import AxleSpacing
 from datexii.models.eu.datexii.v2.axle_weight import AxleWeight
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -131,15 +132,15 @@ class Vehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    hazardous_goods_associated_with_vehicle: Optional[
-        HazardousMaterials
-    ] = field(
-        default=None,
-        metadata={
-            "name": "hazardousGoodsAssociatedWithVehicle",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    hazardous_goods_associated_with_vehicle: Optional[HazardousMaterials] = (
+        field(
+            default=None,
+            metadata={
+                "name": "hazardousGoodsAssociatedWithVehicle",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     vehicle_extension: Optional[ExtensionType] = field(
         default=None,

@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.saved_trip_modify_service_port_type_service_input import (
     SavedTripModifyServicePortTypeServiceInput,
 )

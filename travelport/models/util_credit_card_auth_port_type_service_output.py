@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.credit_card_auth_rsp import CreditCardAuthRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -63,7 +65,10 @@ class UtilCreditCardAuthPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | UtilCreditCardAuthPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | UtilCreditCardAuthPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

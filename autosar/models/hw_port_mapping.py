@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .communication_connector_subtypes_enum import (
     CommunicationConnectorSubtypesEnum,
 )

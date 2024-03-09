@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.intention_enum import IntentionEnum
 from npo.models.owner_type_enum import OwnerTypeEnum
 

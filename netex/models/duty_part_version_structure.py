@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration, XmlTime
+
 from .accountable_element_structure import AccountableElementStructure
 from .duty_ref import DutyRef
 from .timing_point_ref_structure import TimingPointRefStructure

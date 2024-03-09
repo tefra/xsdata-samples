@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -161,15 +162,15 @@ class InterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interface_mappings: Optional[
-        "InterfaceMappingSet.InterfaceMappings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "INTERFACE-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    interface_mappings: Optional["InterfaceMappingSet.InterfaceMappings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "INTERFACE-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

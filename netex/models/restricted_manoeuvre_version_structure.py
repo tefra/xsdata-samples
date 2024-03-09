@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .compound_train_ref import CompoundTrainRef
 from .infrastructure_link_restriction_version_structure import (
     InfrastructureLinkRestrictionVersionStructure,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .integer import Integer
 from .lin_error_response import LinErrorResponse
 from .lin_slave_config_ident import LinSlaveConfigIdent

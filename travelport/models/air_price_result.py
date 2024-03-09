@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_pricing_solution import AirPricingSolution
 from travelport.models.fare_rule import FareRule
 from travelport.models.type_result_message_1 import TypeResultMessage1

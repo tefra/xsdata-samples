@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.vms_pictogram_display_area_pictogram_sequencing_index_vms_pictogram import (
     VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram,

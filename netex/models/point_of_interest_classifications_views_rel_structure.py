@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .point_of_interest_classification_ref import (
     PointOfInterestClassificationRef,

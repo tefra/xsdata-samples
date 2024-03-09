@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .access_facility_list import AccessFacilityList
 from .emergency_service_list import EmergencyServiceList
 from .facility_set_version_structure import FacilitySetVersionStructure
@@ -47,15 +48,15 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    luggage_service_facility_list: Optional[
-        LuggageServiceFacilityList
-    ] = field(
-        default=None,
-        metadata={
-            "name": "LuggageServiceFacilityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    luggage_service_facility_list: Optional[LuggageServiceFacilityList] = (
+        field(
+            default=None,
+            metadata={
+                "name": "LuggageServiceFacilityList",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     money_facility_list: Optional[MoneyFacilityList] = field(
         default=None,

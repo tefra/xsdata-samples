@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .driver_ref import DriverRef
 from .operating_day_ref import OperatingDayRef
 from .service_journey_version_structure import ServiceJourneyVersionStructure

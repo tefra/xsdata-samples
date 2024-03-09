@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .service_journey_ref import ServiceJourneyRef
 from .single_journey_ref import SingleJourneyRef

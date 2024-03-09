@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .unknown_subscription_error_structure import (
     UnknownSubscriptionErrorStructure,
 )

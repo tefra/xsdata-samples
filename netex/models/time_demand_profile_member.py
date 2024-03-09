@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .time_demand_profile_member_version_structure import (
     TimeDemandProfileMemberVersionStructure,
 )

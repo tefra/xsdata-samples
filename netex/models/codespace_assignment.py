@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .codespace_assignment_versioned_child_structure import (
     CodespaceAssignmentVersionedChildStructure,
 )

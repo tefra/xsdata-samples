@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .nmtoken_string import NmtokenString
 from .regular_expression import RegularExpression
 from .revision_label_string import RevisionLabelString

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .general_sign_structure import GeneralSignStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

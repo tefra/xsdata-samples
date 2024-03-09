@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .delivery_variants_rel_structure import DeliveryVariantsRelStructure
 from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString

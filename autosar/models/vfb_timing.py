@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -351,15 +352,15 @@ class VfbTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -383,15 +384,15 @@ class VfbTiming:
 
     @dataclass
     class TimingDescriptions:
-        td_event_bsw_internal_behavior: List[
-            TdEventBswInternalBehavior
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-EVENT-BSW-INTERNAL-BEHAVIOR",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_event_bsw_internal_behavior: List[TdEventBswInternalBehavior] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-EVENT-BSW-INTERNAL-BEHAVIOR",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         td_event_bsw_mode_declaration: List[TdEventBswModeDeclaration] = field(
             default_factory=list,
@@ -417,15 +418,15 @@ class VfbTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_fr_cluster_cycle_start: List[
-            TdEventFrClusterCycleStart
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-EVENT-FR-CLUSTER-CYCLE-START",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_event_fr_cluster_cycle_start: List[TdEventFrClusterCycleStart] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-EVENT-FR-CLUSTER-CYCLE-START",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         td_event_frame: List[TdEventFrame] = field(
             default_factory=list,
@@ -485,25 +486,25 @@ class VfbTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_service_instance_event: List[
-            TdEventServiceInstanceEvent
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-EVENT-SERVICE-INSTANCE-EVENT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_event_service_instance_event: List[TdEventServiceInstanceEvent] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-EVENT-SERVICE-INSTANCE-EVENT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
-        td_event_service_instance_field: List[
-            TdEventServiceInstanceField
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-EVENT-SERVICE-INSTANCE-FIELD",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_event_service_instance_field: List[TdEventServiceInstanceField] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-EVENT-SERVICE-INSTANCE-FIELD",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         td_event_service_instance_method: List[
             TdEventServiceInstanceMethod
@@ -515,15 +516,15 @@ class VfbTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        td_event_swc_internal_behavior: List[
-            TdEventSwcInternalBehavior
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TD-EVENT-SWC-INTERNAL-BEHAVIOR",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        td_event_swc_internal_behavior: List[TdEventSwcInternalBehavior] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TD-EVENT-SWC-INTERNAL-BEHAVIOR",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         td_event_swc_internal_behavior_reference: List[
             TdEventSwcInternalBehaviorReference
@@ -569,15 +570,15 @@ class VfbTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        timing_description_event_chain: List[
-            TimingDescriptionEventChain
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TIMING-DESCRIPTION-EVENT-CHAIN",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        timing_description_event_chain: List[TimingDescriptionEventChain] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TIMING-DESCRIPTION-EVENT-CHAIN",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass
@@ -598,15 +599,15 @@ class VfbTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        burst_pattern_event_triggering: List[
-            BurstPatternEventTriggering
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BURST-PATTERN-EVENT-TRIGGERING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        burst_pattern_event_triggering: List[BurstPatternEventTriggering] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BURST-PATTERN-EVENT-TRIGGERING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         concrete_pattern_event_triggering: List[
             ConcretePatternEventTriggering
@@ -705,15 +706,15 @@ class VfbTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        burst_pattern_event_triggering: List[
-            BurstPatternEventTriggering
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BURST-PATTERN-EVENT-TRIGGERING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        burst_pattern_event_triggering: List[BurstPatternEventTriggering] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BURST-PATTERN-EVENT-TRIGGERING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         concrete_pattern_event_triggering: List[
             ConcretePatternEventTriggering

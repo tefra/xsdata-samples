@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from .emphasis_text import EmphasisText
 from .index_entry import IndexEntry
 from .l_enum_simple import LEnumSimple

@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xml.etree.ElementTree import QName
+
 from .correlation_property_binding import CorrelationPropertyBinding
 from .t_base_element import TBaseElement
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .infrastructure_link_version_structure import (
     InfrastructureLinkVersionStructure,
 )

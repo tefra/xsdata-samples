@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -304,28 +305,28 @@ class BusMirrorChannelMappingCan:
 
     @dataclass
     class TargetPduTriggerings:
-        pdu_triggering_ref_conditional: List[
-            PduTriggeringRefConditional
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PDU-TRIGGERING-REF-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        pdu_triggering_ref_conditional: List[PduTriggeringRefConditional] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PDU-TRIGGERING-REF-CONDITIONAL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass
     class CanIdRangeMappings:
-        bus_mirror_can_id_range_mapping: List[
-            BusMirrorCanIdRangeMapping
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BUS-MIRROR-CAN-ID-RANGE-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        bus_mirror_can_id_range_mapping: List[BusMirrorCanIdRangeMapping] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BUS-MIRROR-CAN-ID-RANGE-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

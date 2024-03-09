@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     AdExplicit,
     Bl,
@@ -1635,16 +1636,16 @@ class CoctMt030000Uv04Person:
             "nillable": True,
         },
     )
-    language_communication: List[
-        CoctMt030000Uv04LanguageCommunication
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "languageCommunication",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    language_communication: List[CoctMt030000Uv04LanguageCommunication] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "languageCommunication",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

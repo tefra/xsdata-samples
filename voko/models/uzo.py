@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from voko.models.tld import Tld
 from voko.models.uzo_tip import UzoTip
 

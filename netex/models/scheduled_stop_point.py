@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .scheduled_stop_point_version_structure import (
     ScheduledStopPointVersionStructure,
 )

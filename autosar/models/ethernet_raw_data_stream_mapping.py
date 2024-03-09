@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -189,25 +190,25 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deployment_ref: Optional[
-        "EthernetRawDataStreamMapping.DeploymentRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DEPLOYMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    deployment_ref: Optional["EthernetRawDataStreamMapping.DeploymentRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DEPLOYMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    port_prototype_iref: Optional[
-        RPortPrototypeInExecutableInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PORT-PROTOTYPE-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    port_prototype_iref: Optional[RPortPrototypeInExecutableInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PORT-PROTOTYPE-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     process_ref: Optional["EthernetRawDataStreamMapping.ProcessRef"] = field(
         default=None,
@@ -235,15 +236,15 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    socket_options: Optional[
-        "EthernetRawDataStreamMapping.SocketOptions"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SOCKET-OPTIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    socket_options: Optional["EthernetRawDataStreamMapping.SocketOptions"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SOCKET-OPTIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tcp_port: Optional[PositiveInteger] = field(
         default=None,

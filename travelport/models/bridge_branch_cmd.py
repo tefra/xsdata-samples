@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.bridge_branch_add import BridgeBranchAdd
 from travelport.models.bridge_branch_delete import BridgeBranchDelete
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .entity_in_version_structure import DataManagedObjectStructure
 from .flexible_line_ref import FlexibleLineRef
 from .group_of_lines_ref import GroupOfLinesRef

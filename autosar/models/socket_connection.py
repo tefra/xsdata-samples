@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     DocumentationBlock,
@@ -310,15 +311,15 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runtime_port_configuration: Optional[
-        RuntimeAddressConfigurationEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RUNTIME-PORT-CONFIGURATION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    runtime_port_configuration: Optional[RuntimeAddressConfigurationEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RUNTIME-PORT-CONFIGURATION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     short_label: Optional[Identifier] = field(
         default=None,

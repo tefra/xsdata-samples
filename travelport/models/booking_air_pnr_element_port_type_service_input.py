@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_air_pnr_element_req import (
     BookingAirPnrElementReq,
 )

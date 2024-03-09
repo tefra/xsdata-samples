@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ipv_4_dhcp_server_configuration import Ipv4DhcpServerConfiguration
 from .ipv_6_dhcp_server_configuration import Ipv6DhcpServerConfiguration
 
@@ -33,25 +34,25 @@ class DhcpServerConfiguration:
     class Meta:
         name = "DHCP-SERVER-CONFIGURATION"
 
-    ipv_4_dhcp_server_configuration: Optional[
-        Ipv4DhcpServerConfiguration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "IPV-4-DHCP-SERVER-CONFIGURATION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ipv_4_dhcp_server_configuration: Optional[Ipv4DhcpServerConfiguration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "IPV-4-DHCP-SERVER-CONFIGURATION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    ipv_6_dhcp_server_configuration: Optional[
-        Ipv6DhcpServerConfiguration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "IPV-6-DHCP-SERVER-CONFIGURATION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ipv_6_dhcp_server_configuration: Optional[Ipv6DhcpServerConfiguration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "IPV-6-DHCP-SERVER-CONFIGURATION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

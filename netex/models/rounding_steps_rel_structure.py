@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .rounding_step import RoundingStep
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

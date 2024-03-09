@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_retrieve_document_req import (
     BookingRetrieveDocumentReq,
 )
@@ -32,22 +34,26 @@ class BookingRetrieveDocumentPortTypeServiceInput:
 
     @dataclass
     class Operation:
-        booking_retrieve_document_req: None | BookingRetrieveDocumentReq = field(
-            default=None,
-            metadata={
-                "name": "BookingRetrieveDocumentReq",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            },
+        booking_retrieve_document_req: None | BookingRetrieveDocumentReq = (
+            field(
+                default=None,
+                metadata={
+                    "name": "BookingRetrieveDocumentReq",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
+                },
+            )
         )
 
     @dataclass
     class Body:
-        booking_retrieve_document_req: None | BookingRetrieveDocumentReq = field(
-            default=None,
-            metadata={
-                "name": "BookingRetrieveDocumentReq",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            },
+        booking_retrieve_document_req: None | BookingRetrieveDocumentReq = (
+            field(
+                default=None,
+                metadata={
+                    "name": "BookingRetrieveDocumentReq",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
+                },
+            )
         )

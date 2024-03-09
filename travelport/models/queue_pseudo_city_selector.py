@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.queue_selector_1 import QueueSelector1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"

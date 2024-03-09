@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .abstract_provided_port_prototype_subtypes_enum import (
     AbstractProvidedPortPrototypeSubtypesEnum,
 )

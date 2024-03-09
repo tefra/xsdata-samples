@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -189,15 +190,15 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: Optional[
-        MultiplicityRestrictionWithSeverity
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MULTIPLICITY-RESTRICTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MULTIPLICITY-RESTRICTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
         default=None,
@@ -207,15 +208,15 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_value_handling: Optional[
-        DefaultValueApplicationStrategyEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DEFAULT-VALUE-HANDLING",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    default_value_handling: Optional[DefaultValueApplicationStrategyEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DEFAULT-VALUE-HANDLING",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sub_attribute_tailorings: Optional[
         "PrimitiveAttributeTailoring.SubAttributeTailorings"
@@ -282,13 +283,13 @@ class PrimitiveAttributeTailoring:
 
     @dataclass
     class SubAttributeTailorings:
-        primitive_attribute_tailoring: List[
-            "PrimitiveAttributeTailoring"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PRIMITIVE-ATTRIBUTE-TAILORING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        primitive_attribute_tailoring: List["PrimitiveAttributeTailoring"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PRIMITIVE-ATTRIBUTE-TAILORING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

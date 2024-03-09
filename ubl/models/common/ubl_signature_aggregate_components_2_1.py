@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from ubl.models.common.ubl_common_basic_components_2_1 import Id
 from ubl.models.common.ubl_signature_basic_components_2_1 import (
     ReferencedSignatureId,

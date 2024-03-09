@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
 )
@@ -73,13 +75,13 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    register_break_of_journey: Optional[
-        RegisterBreakOfJourneyEnumeration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RegisterBreakOfJourney",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    register_break_of_journey: Optional[RegisterBreakOfJourneyEnumeration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RegisterBreakOfJourney",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

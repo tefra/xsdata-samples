@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -169,15 +170,15 @@ class EcucReferenceDef:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EcucReferenceDef.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["EcucReferenceDef.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -237,15 +238,15 @@ class EcucReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_validation_conds: Optional[
-        "EcucReferenceDef.EcucValidationConds"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ECUC-VALIDATION-CONDS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecuc_validation_conds: Optional["EcucReferenceDef.EcucValidationConds"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECUC-VALIDATION-CONDS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ecuc_cond: Optional[EcucConditionSpecification] = field(
         default=None,
@@ -349,15 +350,15 @@ class EcucReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_config_classes: Optional[
-        "EcucReferenceDef.ValueConfigClasses"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "VALUE-CONFIG-CLASSES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    value_config_classes: Optional["EcucReferenceDef.ValueConfigClasses"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "VALUE-CONFIG-CLASSES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     requires_symbolic_name_value: Optional[Boolean] = field(
         default=None,
@@ -470,15 +471,15 @@ class EcucReferenceDef:
 
     @dataclass
     class ValueConfigClasses:
-        ecuc_value_configuration_class: List[
-            EcucValueConfigurationClass
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ECUC-VALUE-CONFIGURATION-CLASS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ecuc_value_configuration_class: List[EcucValueConfigurationClass] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ECUC-VALUE-CONFIGURATION-CLASS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .cp_software_cluster_resource_subtypes_enum import (
     CpSoftwareClusterResourceSubtypesEnum,
 )

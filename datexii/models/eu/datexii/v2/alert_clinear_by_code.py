@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.alert_cdirection import AlertCDirection
 from datexii.models.eu.datexii.v2.alert_clinear import AlertCLinear
 from datexii.models.eu.datexii.v2.alert_clocation import AlertCLocation

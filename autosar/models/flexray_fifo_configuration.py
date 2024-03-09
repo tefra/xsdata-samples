@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .boolean import Boolean
 from .flexray_fifo_range import FlexrayFifoRange
 from .flexray_physical_channel_subtypes_enum import (

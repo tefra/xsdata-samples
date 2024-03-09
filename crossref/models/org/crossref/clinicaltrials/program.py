@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from crossref.models.org.crossref.clinicaltrials.clinical_trial_number import (
     ClinicalTrialNumber,
 )

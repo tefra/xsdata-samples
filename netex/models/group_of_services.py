@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .group_of_services_version_structure import (
     GroupOfServicesVersionStructure,
 )

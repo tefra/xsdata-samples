@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .fare_quota_factor_version_structure import (
     FareQuotaFactorVersionStructure,
 )

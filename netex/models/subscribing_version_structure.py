@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .subscription_renewal_policy_enumeration import (
     SubscriptionRenewalPolicyEnumeration,
@@ -54,15 +56,15 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    possible_installmentt_intervals: Optional[
-        TimeIntervalRefsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "possibleInstallmenttIntervals",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    possible_installmentt_intervals: Optional[TimeIntervalRefsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "possibleInstallmenttIntervals",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     installment_payment_methods: List[PaymentMethodEnumeration] = field(
         default_factory=list,

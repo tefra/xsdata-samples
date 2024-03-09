@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_rail_pricing_solution import (
     TypeRailPricingSolution,
 )

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_taggable_electronic_address_2 import (
     TypeTaggableElectronicAddress2,
 )

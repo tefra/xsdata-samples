@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ref import Ref
 from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 
@@ -31,15 +32,15 @@ class SequenceCounterMapping:
     class Meta:
         name = "SEQUENCE-COUNTER-MAPPING"
 
-    system_signal_ref: Optional[
-        "SequenceCounterMapping.SystemSignalRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SYSTEM-SIGNAL-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    system_signal_ref: Optional["SequenceCounterMapping.SystemSignalRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SYSTEM-SIGNAL-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

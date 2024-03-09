@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .group_of_timebands_ref import GroupOfTimebandsRef
 from .group_of_timebands_versioned_child_structure import (

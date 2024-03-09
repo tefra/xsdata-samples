@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -166,25 +167,25 @@ class TlsCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_exchange_refs: Optional[
-        "TlsCryptoServiceMapping.KeyExchangeRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "KEY-EXCHANGE-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    key_exchange_refs: Optional["TlsCryptoServiceMapping.KeyExchangeRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "KEY-EXCHANGE-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    tls_cipher_suites: Optional[
-        "TlsCryptoServiceMapping.TlsCipherSuites"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TLS-CIPHER-SUITES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tls_cipher_suites: Optional["TlsCryptoServiceMapping.TlsCipherSuites"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TLS-CIPHER-SUITES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .flexible_stop_place_ref import FlexibleStopPlaceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 

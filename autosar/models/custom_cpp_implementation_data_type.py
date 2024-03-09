@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -188,15 +189,15 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "CustomCppImplementationDataType.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["CustomCppImplementationDataType.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     blueprint_policys: Optional[
         "CustomCppImplementationDataType.BlueprintPolicys"
@@ -256,15 +257,15 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_elements: Optional[
-        "CustomCppImplementationDataType.SubElements"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SUB-ELEMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sub_elements: Optional["CustomCppImplementationDataType.SubElements"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SUB-ELEMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     template_arguments: Optional[
         "CustomCppImplementationDataType.TemplateArguments"
@@ -349,15 +350,15 @@ class CustomCppImplementationDataType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,

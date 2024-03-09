@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .data_prototype_group_subtypes_enum import DataPrototypeGroupSubtypesEnum
 from .ref import Ref

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.com.generali.enterprise_services.core.gbm.enterprise.organisation.v1.notify_organisation_gbmresponse_type import (
     NotifyOrganisationGbmresponseType,
 )

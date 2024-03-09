@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import SubjGroup
 from crossref.models.gov.nih.nlm.ncbi.jats1.series_text import SeriesText
 from crossref.models.gov.nih.nlm.ncbi.jats1.series_title import SeriesTitle

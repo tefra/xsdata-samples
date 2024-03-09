@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .geographical_unit_version_structure import (
     GeographicalUnitVersionStructure,
 )

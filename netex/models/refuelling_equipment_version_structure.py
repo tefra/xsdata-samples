@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .fuel_type_enumeration import FuelTypeEnumeration
 from .place_equipment_version_structure import PlaceEquipmentVersionStructure
 

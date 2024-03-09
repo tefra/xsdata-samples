@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .category_string import CategoryString
 from .software_cluster_dependency_compare_condition import (
     SoftwareClusterDependencyCompareCondition,

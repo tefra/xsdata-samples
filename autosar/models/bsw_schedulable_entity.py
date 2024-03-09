@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -249,15 +250,15 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reasons: Optional[
-        "BswSchedulableEntity.ActivationReasons"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ACTIVATION-REASONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    activation_reasons: Optional["BswSchedulableEntity.ActivationReasons"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ACTIVATION-REASONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     can_enter_exclusive_area_refs: Optional[
         "BswSchedulableEntity.CanEnterExclusiveAreaRefs"
@@ -305,15 +306,15 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_addr_method_ref: Optional[
-        "BswSchedulableEntity.SwAddrMethodRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SW-ADDR-METHOD-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sw_addr_method_ref: Optional["BswSchedulableEntity.SwAddrMethodRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SW-ADDR-METHOD-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     accessed_mode_groups: Optional[
         "BswSchedulableEntity.AccessedModeGroups"
@@ -325,15 +326,15 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_points: Optional[
-        "BswSchedulableEntity.ActivationPoints"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ACTIVATION-POINTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    activation_points: Optional["BswSchedulableEntity.ActivationPoints"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ACTIVATION-POINTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     call_points: Optional["BswSchedulableEntity.CallPoints"] = field(
         default=None,
@@ -351,15 +352,15 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_receive_points: Optional[
-        "BswSchedulableEntity.DataReceivePoints"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DATA-RECEIVE-POINTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_receive_points: Optional["BswSchedulableEntity.DataReceivePoints"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-RECEIVE-POINTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     data_send_points: Optional["BswSchedulableEntity.DataSendPoints"] = field(
         default=None,
@@ -387,15 +388,15 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    managed_mode_groups: Optional[
-        "BswSchedulableEntity.ManagedModeGroups"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MANAGED-MODE-GROUPS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    managed_mode_groups: Optional["BswSchedulableEntity.ManagedModeGroups"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MANAGED-MODE-GROUPS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     scheduler_name_prefix_ref: Optional[
         "BswSchedulableEntity.SchedulerNamePrefixRef"

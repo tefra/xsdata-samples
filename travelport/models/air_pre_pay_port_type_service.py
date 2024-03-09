@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.air_pre_pay_port_type_service_input import (
     AirPrePayPortTypeServiceInput,
 )

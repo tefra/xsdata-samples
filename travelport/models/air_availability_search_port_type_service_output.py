@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.availability_search_rsp import AvailabilitySearchRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -63,7 +65,10 @@ class AirAvailabilitySearchPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirAvailabilitySearchPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | AirAvailabilitySearchPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .publication_request_structure import PublicationRequestStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

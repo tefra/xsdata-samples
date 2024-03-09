@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type_description import (
     BaseFaultTypeDescription,
 )

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.accounting_remark_1 import AccountingRemark1
 from travelport.models.air_pricing_info import AirPricingInfo
 from travelport.models.air_pricing_payment import AirPricingPayment
@@ -195,16 +197,16 @@ class AirAdd:
             "max_occurs": 99,
         },
     )
-    air_pricing_ticketing_modifiers: list[
-        AirPricingTicketingModifiers
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "AirPricingTicketingModifiers",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "max_occurs": 99,
-        },
+    air_pricing_ticketing_modifiers: list[AirPricingTicketingModifiers] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "AirPricingTicketingModifiers",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v52_0",
+                "max_occurs": 99,
+            },
+        )
     )
     optional_services_info: None | OptionalServicesInfo = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .fare_table_ref import FareTableRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .standard_fare_table_ref import StandardFareTableRef

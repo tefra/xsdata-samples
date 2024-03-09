@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .hire_service_ref_structure import HireServiceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

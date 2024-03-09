@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from crossref.models.org.crossref.fundref.assertion import Assertion
 
 __NAMESPACE__ = "http://www.crossref.org/fundref.xsd"

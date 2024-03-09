@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.update import Update
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"

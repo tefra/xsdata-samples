@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .distribution_assignment_ref import DistributionAssignmentRef
 from .logical_operation_enumeration import LogicalOperationEnumeration

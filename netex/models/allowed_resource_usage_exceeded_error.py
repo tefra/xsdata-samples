@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .allowed_resource_usage_exceeded_error_structure import (
     AllowedResourceUsageExceededErrorStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     AdExplicit,
     Ce,
@@ -539,16 +540,16 @@ class CoctMt670000Uv04GuarantorRole:
             "nillable": True,
         },
     )
-    guarantor_organization: Optional[
-        CoctMt670000Uv04GuarantorOrganization
-    ] = field(
-        default=None,
-        metadata={
-            "name": "guarantorOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    guarantor_organization: Optional[CoctMt670000Uv04GuarantorOrganization] = (
+        field(
+            default=None,
+            metadata={
+                "name": "guarantorOrganization",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     contract_held: List[CoctMt670000Uv04Holder] = field(
         default_factory=list,

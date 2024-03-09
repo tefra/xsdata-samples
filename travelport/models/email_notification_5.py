@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.email_notification_recipients_5 import (
     EmailNotificationRecipients5,
 )

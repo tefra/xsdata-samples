@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef
 from .journey_timing_versioned_child_structure import (

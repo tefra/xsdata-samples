@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .estimated_passing_time_view_structure import (
     EstimatedPassingTimeViewStructure,
 )

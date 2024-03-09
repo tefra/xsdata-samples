@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.vehicle_media_links_rsp import VehicleMediaLinksRsp
 
@@ -30,7 +32,9 @@ class VehicleMediaLinksServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             },
         )
-        fault: None | VehicleMediaLinksServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | VehicleMediaLinksServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -61,7 +65,10 @@ class VehicleMediaLinksServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | VehicleMediaLinksServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | VehicleMediaLinksServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

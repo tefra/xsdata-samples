@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type, Union, Any
+from typing import Any, List, Optional, Type, Union
+
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
+
 from .availability_condition_ref import AvailabilityConditionRef
 from .branding_ref import BrandingRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -320,36 +322,36 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             ),
         },
     )
-    choice: List[
-        Union[XmlTime, TimeOfDayEnumeration, int, XmlDuration]
-    ] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "EndTime",
-                    "type": XmlTime,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "EndEvent",
-                    "type": TimeOfDayEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DayOffset",
-                    "type": int,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Duration",
-                    "type": XmlDuration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 2,
-        },
+    choice: List[Union[XmlTime, TimeOfDayEnumeration, int, XmlDuration]] = (
+        field(
+            default_factory=list,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "EndTime",
+                        "type": XmlTime,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "EndEvent",
+                        "type": TimeOfDayEnumeration,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DayOffset",
+                        "type": int,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "Duration",
+                        "type": XmlDuration,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+                "max_occurs": 2,
+            },
+        )
     )
 
 

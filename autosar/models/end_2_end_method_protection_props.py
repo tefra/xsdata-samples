@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .e_2_e_profile_configuration_subtypes_enum import (
     E2EProfileConfigurationSubtypesEnum,
 )

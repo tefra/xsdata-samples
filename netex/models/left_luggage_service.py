@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .left_luggage_service_version_structure import (
     LeftLuggageServiceVersionStructure,
 )

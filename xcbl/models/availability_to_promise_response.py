@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.shipping_schedule_response import (
     TotalNumberOfLineItems,
     TransportRouting,

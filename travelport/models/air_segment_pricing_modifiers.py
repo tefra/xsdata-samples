@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_code import BookingCode
 from travelport.models.type_connection_indicator import TypeConnectionIndicator
 from travelport.models.type_fare_break import TypeFareBreak
@@ -39,7 +41,9 @@ class AirSegmentPricingModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    permitted_booking_codes: None | AirSegmentPricingModifiers.PermittedBookingCodes = field(
+    permitted_booking_codes: (
+        None | AirSegmentPricingModifiers.PermittedBookingCodes
+    ) = field(
         default=None,
         metadata={
             "name": "PermittedBookingCodes",

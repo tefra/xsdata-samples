@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.pages_search_type import PagesSearchType
 from npo.models.text_facet_type import TextFacetType
 

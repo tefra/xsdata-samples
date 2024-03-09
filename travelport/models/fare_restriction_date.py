@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.fare_restriction_date_end_date_indicator import (
     FareRestrictionDateEndDateIndicator,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .application_error_subtypes_enum import ApplicationErrorSubtypesEnum
 from .ref import Ref
 

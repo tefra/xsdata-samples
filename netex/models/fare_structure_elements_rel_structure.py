@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_structure_element import FareStructureElement
 from .fare_structure_element_ref import FareStructureElementRef

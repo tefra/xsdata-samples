@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.media_type_enum import MediaTypeEnum
 from npo.models.term_facet_result_item_type import TermFacetResultItemType
 

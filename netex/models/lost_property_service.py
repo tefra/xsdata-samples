@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .lost_property_service_version_structure import (
     LostPropertyServiceVersionStructure,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_retail_device_ref_structure import TypeOfRetailDeviceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

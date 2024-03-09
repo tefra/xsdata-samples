@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_clear_event_allowed_behavior_enum_simple import (
     DiagnosticClearEventAllowedBehaviorEnumSimple,
 )

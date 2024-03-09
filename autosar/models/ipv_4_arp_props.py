@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .positive_integer import PositiveInteger
 from .time_value import TimeValue
@@ -41,15 +42,15 @@ class Ipv4ArpProps:
     class Meta:
         name = "IPV-4-ARP-PROPS"
 
-    tcp_ip_arp_num_gratuitous_arp_on_startup: Optional[
-        PositiveInteger
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TCP-IP-ARP-NUM-GRATUITOUS-ARP-ON-STARTUP",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tcp_ip_arp_num_gratuitous_arp_on_startup: Optional[PositiveInteger] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TCP-IP-ARP-NUM-GRATUITOUS-ARP-ON-STARTUP",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tcp_ip_arp_packet_queue_enabled: Optional[Boolean] = field(
         default=None,

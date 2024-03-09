@@ -1,8 +1,11 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
+
 from xsdata.models.datatype import XmlDate, XmlDuration
+
 from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     AdvResTicketingType,
     AirTripType,
@@ -2525,7 +2528,9 @@ class DiversityControlType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        operating_duplicate: None | DiversityControlType.Dimensions.OperatingDuplicate = field(
+        operating_duplicate: (
+            None | DiversityControlType.Dimensions.OperatingDuplicate
+        ) = field(
             default=None,
             metadata={
                 "name": "OperatingDuplicate",
@@ -2533,7 +2538,9 @@ class DiversityControlType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        inbound_outbound_pairing: None | DiversityControlType.Dimensions.InboundOutboundPairing = field(
+        inbound_outbound_pairing: (
+            None | DiversityControlType.Dimensions.InboundOutboundPairing
+        ) = field(
             default=None,
             metadata={
                 "name": "InboundOutboundPairing",
@@ -3187,7 +3194,9 @@ class ExchangeOriginDestinationFlightType:
 
     @dataclass
     class Fare(FareDetailsType):
-        adjustment: None | ExchangeOriginDestinationFlightType.Fare.Adjustment = field(
+        adjustment: (
+            None | ExchangeOriginDestinationFlightType.Fare.Adjustment
+        ) = field(
             default=None,
             metadata={
                 "name": "Adjustment",
@@ -3399,7 +3408,9 @@ class FlexibleFaresType:
             account_code:
         """
 
-        exclude_restricted: None | FlexibleFaresType.FareParameters.ExcludeRestricted = field(
+        exclude_restricted: (
+            None | FlexibleFaresType.FareParameters.ExcludeRestricted
+        ) = field(
             default=None,
             metadata={
                 "name": "ExcludeRestricted",
@@ -3427,7 +3438,9 @@ class FlexibleFaresType:
                 },
             )
         )
-        refund_penalty: None | FlexibleFaresType.FareParameters.RefundPenalty = field(
+        refund_penalty: (
+            None | FlexibleFaresType.FareParameters.RefundPenalty
+        ) = field(
             default=None,
             metadata={
                 "name": "RefundPenalty",
@@ -3463,7 +3476,9 @@ class FlexibleFaresType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        passenger_type: None | FlexibleFaresType.FareParameters.PassengerType = field(
+        passenger_type: (
+            None | FlexibleFaresType.FareParameters.PassengerType
+        ) = field(
             default=None,
             metadata={
                 "name": "PassengerType",
@@ -3471,7 +3486,9 @@ class FlexibleFaresType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        negotiated_fares_only: None | FlexibleFaresType.FareParameters.NegotiatedFaresOnly = field(
+        negotiated_fares_only: (
+            None | FlexibleFaresType.FareParameters.NegotiatedFaresOnly
+        ) = field(
             default=None,
             metadata={
                 "name": "NegotiatedFaresOnly",
@@ -3512,25 +3529,25 @@ class FlexibleFaresType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        corporate_id: list[
-            FlexibleFaresType.FareParameters.CorporateId
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "CorporateID",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-            },
+        corporate_id: list[FlexibleFaresType.FareParameters.CorporateId] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "CorporateID",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                },
+            )
         )
-        account_code: list[
-            FlexibleFaresType.FareParameters.AccountCode
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "AccountCode",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-            },
+        account_code: list[FlexibleFaresType.FareParameters.AccountCode] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "AccountCode",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                },
+            )
         )
 
         @dataclass
@@ -4224,7 +4241,9 @@ class PriceRequestInformationType:
                 Amount and Percentage.
         """
 
-        public_fare: None | PriceRequestInformationType.TpaExtensions.PublicFare = field(
+        public_fare: (
+            None | PriceRequestInformationType.TpaExtensions.PublicFare
+        ) = field(
             default=None,
             metadata={
                 "name": "PublicFare",
@@ -4232,7 +4251,9 @@ class PriceRequestInformationType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        private_fare: None | PriceRequestInformationType.TpaExtensions.PrivateFare = field(
+        private_fare: (
+            None | PriceRequestInformationType.TpaExtensions.PrivateFare
+        ) = field(
             default=None,
             metadata={
                 "name": "PrivateFare",
@@ -4270,7 +4291,9 @@ class PriceRequestInformationType:
                 },
             )
         )
-        indicators: None | PriceRequestInformationType.TpaExtensions.Indicators = field(
+        indicators: (
+            None | PriceRequestInformationType.TpaExtensions.Indicators
+        ) = field(
             default=None,
             metadata={
                 "name": "Indicators",
@@ -4286,7 +4309,9 @@ class PriceRequestInformationType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        customer_type: None | PriceRequestInformationType.TpaExtensions.CustomerType = field(
+        customer_type: (
+            None | PriceRequestInformationType.TpaExtensions.CustomerType
+        ) = field(
             default=None,
             metadata={
                 "name": "CustomerType",
@@ -4294,7 +4319,10 @@ class PriceRequestInformationType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        multiple_traveler_groups: None | PriceRequestInformationType.TpaExtensions.MultipleTravelerGroups = field(
+        multiple_traveler_groups: (
+            None
+            | PriceRequestInformationType.TpaExtensions.MultipleTravelerGroups
+        ) = field(
             default=None,
             metadata={
                 "name": "MultipleTravelerGroups",
@@ -4302,7 +4330,10 @@ class PriceRequestInformationType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        branded_fare_indicators: None | PriceRequestInformationType.TpaExtensions.BrandedFareIndicators = field(
+        branded_fare_indicators: (
+            None
+            | PriceRequestInformationType.TpaExtensions.BrandedFareIndicators
+        ) = field(
             default=None,
             metadata={
                 "name": "BrandedFareIndicators",
@@ -4310,7 +4341,9 @@ class PriceRequestInformationType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        passenger_status: None | PriceRequestInformationType.TpaExtensions.PassengerStatus = field(
+        passenger_status: (
+            None | PriceRequestInformationType.TpaExtensions.PassengerStatus
+        ) = field(
             default=None,
             metadata={
                 "name": "PassengerStatus",
@@ -4344,7 +4377,10 @@ class PriceRequestInformationType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        eticketable_override: None | PriceRequestInformationType.TpaExtensions.EticketableOverride = field(
+        eticketable_override: (
+            None
+            | PriceRequestInformationType.TpaExtensions.EticketableOverride
+        ) = field(
             default=None,
             metadata={
                 "name": "ETicketableOverride",
@@ -4362,7 +4398,10 @@ class PriceRequestInformationType:
                 },
             )
         )
-        use_reduced_constructions: None | PriceRequestInformationType.TpaExtensions.UseReducedConstructions = field(
+        use_reduced_constructions: (
+            None
+            | PriceRequestInformationType.TpaExtensions.UseReducedConstructions
+        ) = field(
             default=None,
             metadata={
                 "name": "UseReducedConstructions",
@@ -4380,7 +4419,9 @@ class PriceRequestInformationType:
                 },
             )
         )
-        fare_breaks_at_legs: None | PriceRequestInformationType.TpaExtensions.FareBreaksAtLegs = field(
+        fare_breaks_at_legs: (
+            None | PriceRequestInformationType.TpaExtensions.FareBreaksAtLegs
+        ) = field(
             default=None,
             metadata={
                 "name": "FareBreaksAtLegs",
@@ -4388,7 +4429,9 @@ class PriceRequestInformationType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        fare_adjustment: None | PriceRequestInformationType.TpaExtensions.FareAdjustment = field(
+        fare_adjustment: (
+            None | PriceRequestInformationType.TpaExtensions.FareAdjustment
+        ) = field(
             default=None,
             metadata={
                 "name": "FareAdjustment",
@@ -4444,7 +4487,9 @@ class PriceRequestInformationType:
 
         @dataclass
         class Priority:
-            price: None | PriceRequestInformationType.TpaExtensions.Priority.Price = field(
+            price: (
+                None | PriceRequestInformationType.TpaExtensions.Priority.Price
+            ) = field(
                 default=None,
                 metadata={
                     "name": "Price",
@@ -4453,7 +4498,10 @@ class PriceRequestInformationType:
                     "required": True,
                 },
             )
-            direct_flights: None | PriceRequestInformationType.TpaExtensions.Priority.DirectFlights = field(
+            direct_flights: (
+                None
+                | PriceRequestInformationType.TpaExtensions.Priority.DirectFlights
+            ) = field(
                 default=None,
                 metadata={
                     "name": "DirectFlights",
@@ -4462,7 +4510,9 @@ class PriceRequestInformationType:
                     "required": True,
                 },
             )
-            time: None | PriceRequestInformationType.TpaExtensions.Priority.Time = field(
+            time: (
+                None | PriceRequestInformationType.TpaExtensions.Priority.Time
+            ) = field(
                 default=None,
                 metadata={
                     "name": "Time",
@@ -4471,7 +4521,10 @@ class PriceRequestInformationType:
                     "required": True,
                 },
             )
-            vendor: None | PriceRequestInformationType.TpaExtensions.Priority.Vendor = field(
+            vendor: (
+                None
+                | PriceRequestInformationType.TpaExtensions.Priority.Vendor
+            ) = field(
                 default=None,
                 metadata={
                     "name": "Vendor",
@@ -4555,7 +4608,10 @@ class PriceRequestInformationType:
                     it is true or false.
             """
 
-            retain_fare: None | PriceRequestInformationType.TpaExtensions.Indicators.RetainFare = field(
+            retain_fare: (
+                None
+                | PriceRequestInformationType.TpaExtensions.Indicators.RetainFare
+            ) = field(
                 default=None,
                 metadata={
                     "name": "RetainFare",
@@ -4563,7 +4619,10 @@ class PriceRequestInformationType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            min_max_stay: None | PriceRequestInformationType.TpaExtensions.Indicators.MinMaxStay = field(
+            min_max_stay: (
+                None
+                | PriceRequestInformationType.TpaExtensions.Indicators.MinMaxStay
+            ) = field(
                 default=None,
                 metadata={
                     "name": "MinMaxStay",
@@ -4571,7 +4630,10 @@ class PriceRequestInformationType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            refund_penalty: None | PriceRequestInformationType.TpaExtensions.Indicators.RefundPenalty = field(
+            refund_penalty: (
+                None
+                | PriceRequestInformationType.TpaExtensions.Indicators.RefundPenalty
+            ) = field(
                 default=None,
                 metadata={
                     "name": "RefundPenalty",
@@ -4579,7 +4641,10 @@ class PriceRequestInformationType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            res_ticketing: None | PriceRequestInformationType.TpaExtensions.Indicators.ResTicketing = field(
+            res_ticketing: (
+                None
+                | PriceRequestInformationType.TpaExtensions.Indicators.ResTicketing
+            ) = field(
                 default=None,
                 metadata={
                     "name": "ResTicketing",
@@ -4587,7 +4652,10 @@ class PriceRequestInformationType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            travel_policy: None | PriceRequestInformationType.TpaExtensions.Indicators.TravelPolicy = field(
+            travel_policy: (
+                None
+                | PriceRequestInformationType.TpaExtensions.Indicators.TravelPolicy
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TravelPolicy",
@@ -4691,7 +4759,10 @@ class PriceRequestInformationType:
                     per itin
             """
 
-            return_cheapest_unbranded_fare: None | PriceRequestInformationType.TpaExtensions.BrandedFareIndicators.ReturnCheapestUnbrandedFare = field(
+            return_cheapest_unbranded_fare: (
+                None
+                | PriceRequestInformationType.TpaExtensions.BrandedFareIndicators.ReturnCheapestUnbrandedFare
+            ) = field(
                 default=None,
                 metadata={
                     "name": "ReturnCheapestUnbrandedFare",
@@ -5458,7 +5529,9 @@ class AirSearchPrefsType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    spanish_family_discount: None | AirSearchPrefsType.SpanishFamilyDiscount = field(
+    spanish_family_discount: (
+        None | AirSearchPrefsType.SpanishFamilyDiscount
+    ) = field(
         default=None,
         metadata={
             "name": "SpanishFamilyDiscount",
@@ -5771,7 +5844,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        num_trips_with_routing: None | AirSearchPrefsType.TpaExtensions.NumTripsWithRouting = field(
+        num_trips_with_routing: (
+            None | AirSearchPrefsType.TpaExtensions.NumTripsWithRouting
+        ) = field(
             default=None,
             metadata={
                 "name": "NumTripsWithRouting",
@@ -5779,7 +5854,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        online_indicator: None | AirSearchPrefsType.TpaExtensions.OnlineIndicator = field(
+        online_indicator: (
+            None | AirSearchPrefsType.TpaExtensions.OnlineIndicator
+        ) = field(
             default=None,
             metadata={
                 "name": "OnlineIndicator",
@@ -5787,7 +5864,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        interline_indicator: None | AirSearchPrefsType.TpaExtensions.InterlineIndicator = field(
+        interline_indicator: (
+            None | AirSearchPrefsType.TpaExtensions.InterlineIndicator
+        ) = field(
             default=None,
             metadata={
                 "name": "InterlineIndicator",
@@ -5821,7 +5900,9 @@ class AirSearchPrefsType:
                 },
             )
         )
-        domestic_layover_time: None | AirSearchPrefsType.TpaExtensions.DomesticLayoverTime = field(
+        domestic_layover_time: (
+            None | AirSearchPrefsType.TpaExtensions.DomesticLayoverTime
+        ) = field(
             default=None,
             metadata={
                 "name": "DomesticLayoverTime",
@@ -5829,7 +5910,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        long_connect_time: None | AirSearchPrefsType.TpaExtensions.LongConnectTime = field(
+        long_connect_time: (
+            None | AirSearchPrefsType.TpaExtensions.LongConnectTime
+        ) = field(
             default=None,
             metadata={
                 "name": "LongConnectTime",
@@ -5837,7 +5920,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        long_connect_points: None | AirSearchPrefsType.TpaExtensions.LongConnectPoints = field(
+        long_connect_points: (
+            None | AirSearchPrefsType.TpaExtensions.LongConnectPoints
+        ) = field(
             default=None,
             metadata={
                 "name": "LongConnectPoints",
@@ -5845,7 +5930,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        air_service_only: None | AirSearchPrefsType.TpaExtensions.AirServiceOnly = field(
+        air_service_only: (
+            None | AirSearchPrefsType.TpaExtensions.AirServiceOnly
+        ) = field(
             default=None,
             metadata={
                 "name": "AirServiceOnly",
@@ -5853,7 +5940,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        jet_service_only: None | AirSearchPrefsType.TpaExtensions.JetServiceOnly = field(
+        jet_service_only: (
+            None | AirSearchPrefsType.TpaExtensions.JetServiceOnly
+        ) = field(
             default=None,
             metadata={
                 "name": "JetServiceOnly",
@@ -5861,7 +5950,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        same_connection_airport_only: None | AirSearchPrefsType.TpaExtensions.SameConnectionAirportOnly = field(
+        same_connection_airport_only: (
+            None | AirSearchPrefsType.TpaExtensions.SameConnectionAirportOnly
+        ) = field(
             default=None,
             metadata={
                 "name": "SameConnectionAirportOnly",
@@ -5869,7 +5960,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        same_origin_airport_only: None | AirSearchPrefsType.TpaExtensions.SameOriginAirportOnly = field(
+        same_origin_airport_only: (
+            None | AirSearchPrefsType.TpaExtensions.SameOriginAirportOnly
+        ) = field(
             default=None,
             metadata={
                 "name": "SameOriginAirportOnly",
@@ -5877,7 +5970,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        same_turnaround_airport_only: None | AirSearchPrefsType.TpaExtensions.SameTurnaroundAirportOnly = field(
+        same_turnaround_airport_only: (
+            None | AirSearchPrefsType.TpaExtensions.SameTurnaroundAirportOnly
+        ) = field(
             default=None,
             metadata={
                 "name": "SameTurnaroundAirportOnly",
@@ -5885,7 +5980,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        aircraft_type_penalty: None | AirSearchPrefsType.TpaExtensions.AircraftTypePenalty = field(
+        aircraft_type_penalty: (
+            None | AirSearchPrefsType.TpaExtensions.AircraftTypePenalty
+        ) = field(
             default=None,
             metadata={
                 "name": "AircraftTypePenalty",
@@ -5893,7 +5990,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        alternate_airport_penalty: None | AirSearchPrefsType.TpaExtensions.AlternateAirportPenalty = field(
+        alternate_airport_penalty: (
+            None | AirSearchPrefsType.TpaExtensions.AlternateAirportPenalty
+        ) = field(
             default=None,
             metadata={
                 "name": "AlternateAirportPenalty",
@@ -5901,7 +6000,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        fare_amount_threshold: None | AirSearchPrefsType.TpaExtensions.FareAmountThreshold = field(
+        fare_amount_threshold: (
+            None | AirSearchPrefsType.TpaExtensions.FareAmountThreshold
+        ) = field(
             default=None,
             metadata={
                 "name": "FareAmountThreshold",
@@ -5909,7 +6010,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        num_of_low_fare_sol: None | AirSearchPrefsType.TpaExtensions.NumOfLowFareSol = field(
+        num_of_low_fare_sol: (
+            None | AirSearchPrefsType.TpaExtensions.NumOfLowFareSol
+        ) = field(
             default=None,
             metadata={
                 "name": "numOfLowFareSol",
@@ -5917,7 +6020,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        num_of_must_price_onl_sol: None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceOnlSol = field(
+        num_of_must_price_onl_sol: (
+            None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceOnlSol
+        ) = field(
             default=None,
             metadata={
                 "name": "numOfMustPriceOnlSol",
@@ -5925,7 +6030,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        num_of_must_price_inrl_sol: None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceInrlSol = field(
+        num_of_must_price_inrl_sol: (
+            None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceInrlSol
+        ) = field(
             default=None,
             metadata={
                 "name": "numOfMustPriceInrlSol",
@@ -5933,7 +6040,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        num_of_must_price_nstp_onl_sol: None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstpOnlSol = field(
+        num_of_must_price_nstp_onl_sol: (
+            None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstpOnlSol
+        ) = field(
             default=None,
             metadata={
                 "name": "numOfMustPriceNStpOnlSol",
@@ -5941,7 +6050,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        num_of_must_price_nstp_inrl_sol: None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstpInrlSol = field(
+        num_of_must_price_nstp_inrl_sol: (
+            None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstpInrlSol
+        ) = field(
             default=None,
             metadata={
                 "name": "numOfMustPriceNStpInrlSol",
@@ -5949,7 +6060,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        num_of_must_price_sstop_onl_sol: None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceSstopOnlSol = field(
+        num_of_must_price_sstop_onl_sol: (
+            None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceSstopOnlSol
+        ) = field(
             default=None,
             metadata={
                 "name": "numOfMustPriceSStopOnlSol",
@@ -5957,7 +6070,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        stp_penalty_in_usd: None | AirSearchPrefsType.TpaExtensions.StpPenaltyInUsd = field(
+        stp_penalty_in_usd: (
+            None | AirSearchPrefsType.TpaExtensions.StpPenaltyInUsd
+        ) = field(
             default=None,
             metadata={
                 "name": "stpPenaltyInUSD",
@@ -5965,7 +6080,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        dur_penalty_in_usd: None | AirSearchPrefsType.TpaExtensions.DurPenaltyInUsd = field(
+        dur_penalty_in_usd: (
+            None | AirSearchPrefsType.TpaExtensions.DurPenaltyInUsd
+        ) = field(
             default=None,
             metadata={
                 "name": "durPenaltyInUSD",
@@ -5973,7 +6090,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        dep_penalty_in_usd: None | AirSearchPrefsType.TpaExtensions.DepPenaltyInUsd = field(
+        dep_penalty_in_usd: (
+            None | AirSearchPrefsType.TpaExtensions.DepPenaltyInUsd
+        ) = field(
             default=None,
             metadata={
                 "name": "depPenaltyInUSD",
@@ -5981,7 +6100,10 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        max_allowed_must_price_overage_per_crr: None | AirSearchPrefsType.TpaExtensions.MaxAllowedMustPriceOveragePerCrr = field(
+        max_allowed_must_price_overage_per_crr: (
+            None
+            | AirSearchPrefsType.TpaExtensions.MaxAllowedMustPriceOveragePerCrr
+        ) = field(
             default=None,
             metadata={
                 "name": "maxAllowedMustPriceOveragePerCrr",
@@ -5989,7 +6111,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        flt_opt_must_price_reuse_limit: None | AirSearchPrefsType.TpaExtensions.FltOptMustPriceReuseLimit = field(
+        flt_opt_must_price_reuse_limit: (
+            None | AirSearchPrefsType.TpaExtensions.FltOptMustPriceReuseLimit
+        ) = field(
             default=None,
             metadata={
                 "name": "fltOptMustPriceReuseLimit",
@@ -5997,7 +6121,10 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        upper_bound_must_price_factor_for_not_non_stp: None | AirSearchPrefsType.TpaExtensions.UpperBoundMustPriceFactorForNotNonStp = field(
+        upper_bound_must_price_factor_for_not_non_stp: (
+            None
+            | AirSearchPrefsType.TpaExtensions.UpperBoundMustPriceFactorForNotNonStp
+        ) = field(
             default=None,
             metadata={
                 "name": "upperBoundMustPriceFactorForNotNonStp",
@@ -6005,7 +6132,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        upper_bound_lfsfactor: None | AirSearchPrefsType.TpaExtensions.UpperBoundLfsfactor = field(
+        upper_bound_lfsfactor: (
+            None | AirSearchPrefsType.TpaExtensions.UpperBoundLfsfactor
+        ) = field(
             default=None,
             metadata={
                 "name": "upperBoundLFSFactor",
@@ -6013,7 +6142,10 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        num_of_must_price_nstp1_stp_onl_sol: None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstp1StpOnlSol = field(
+        num_of_must_price_nstp1_stp_onl_sol: (
+            None
+            | AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstp1StpOnlSol
+        ) = field(
             default=None,
             metadata={
                 "name": "numOfMustPriceNStp1StpOnlSol",
@@ -6021,7 +6153,10 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        num_of_must_price_nstp1_stp_inrl_sol: None | AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstp1StpInrlSol = field(
+        num_of_must_price_nstp1_stp_inrl_sol: (
+            None
+            | AirSearchPrefsType.TpaExtensions.NumOfMustPriceNstp1StpInrlSol
+        ) = field(
             default=None,
             metadata={
                 "name": "numOfMustPriceNStp1StpInrlSol",
@@ -6029,7 +6164,10 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        upper_bound_must_price_factor_for_non_stp: None | AirSearchPrefsType.TpaExtensions.UpperBoundMustPriceFactorForNonStp = field(
+        upper_bound_must_price_factor_for_non_stp: (
+            None
+            | AirSearchPrefsType.TpaExtensions.UpperBoundMustPriceFactorForNonStp
+        ) = field(
             default=None,
             metadata={
                 "name": "upperBoundMustPriceFactorForNonStp",
@@ -6037,7 +6175,10 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        max_allowed_lfsoverage_per_crr_percent: None | AirSearchPrefsType.TpaExtensions.MaxAllowedLfsoveragePerCrrPercent = field(
+        max_allowed_lfsoverage_per_crr_percent: (
+            None
+            | AirSearchPrefsType.TpaExtensions.MaxAllowedLfsoveragePerCrrPercent
+        ) = field(
             default=None,
             metadata={
                 "name": "maxAllowedLFSOveragePerCrrPercent",
@@ -6045,7 +6186,10 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        target_min_num_of_lfsonl_sol_per_crr: None | AirSearchPrefsType.TpaExtensions.TargetMinNumOfLfsonlSolPerCrr = field(
+        target_min_num_of_lfsonl_sol_per_crr: (
+            None
+            | AirSearchPrefsType.TpaExtensions.TargetMinNumOfLfsonlSolPerCrr
+        ) = field(
             default=None,
             metadata={
                 "name": "targetMinNumOfLFSOnlSolPerCrr",
@@ -6053,7 +6197,10 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        target_min_num_of_lfstot_onl_sol_percent: None | AirSearchPrefsType.TpaExtensions.TargetMinNumOfLfstotOnlSolPercent = field(
+        target_min_num_of_lfstot_onl_sol_percent: (
+            None
+            | AirSearchPrefsType.TpaExtensions.TargetMinNumOfLfstotOnlSolPercent
+        ) = field(
             default=None,
             metadata={
                 "name": "targetMinNumOfLFSTotOnlSolPercent",
@@ -6061,7 +6208,10 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        flt_opt_lfsreuse_limit_for_non_avs: None | AirSearchPrefsType.TpaExtensions.FltOptLfsreuseLimitForNonAvs = field(
+        flt_opt_lfsreuse_limit_for_non_avs: (
+            None
+            | AirSearchPrefsType.TpaExtensions.FltOptLfsreuseLimitForNonAvs
+        ) = field(
             default=None,
             metadata={
                 "name": "fltOptLFSReuseLimitForNonAVS",
@@ -6069,7 +6219,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        flt_opt_lfsreuse_limit_for_avs: None | AirSearchPrefsType.TpaExtensions.FltOptLfsreuseLimitForAvs = field(
+        flt_opt_lfsreuse_limit_for_avs: (
+            None | AirSearchPrefsType.TpaExtensions.FltOptLfsreuseLimitForAvs
+        ) = field(
             default=None,
             metadata={
                 "name": "fltOptLFSReuseLimitForAVS",
@@ -6077,7 +6229,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        avs_penalty_crrs: None | AirSearchPrefsType.TpaExtensions.AvsPenaltyCrrs = field(
+        avs_penalty_crrs: (
+            None | AirSearchPrefsType.TpaExtensions.AvsPenaltyCrrs
+        ) = field(
             default=None,
             metadata={
                 "name": "avsPenaltyCrrs",
@@ -6085,7 +6239,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        max_num_of_non_stp_onl_sol: None | AirSearchPrefsType.TpaExtensions.MaxNumOfNonStpOnlSol = field(
+        max_num_of_non_stp_onl_sol: (
+            None | AirSearchPrefsType.TpaExtensions.MaxNumOfNonStpOnlSol
+        ) = field(
             default=None,
             metadata={
                 "name": "maxNumOfNonStpOnlSol",
@@ -6093,7 +6249,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        max_num_of_non_stp_inrl_sol: None | AirSearchPrefsType.TpaExtensions.MaxNumOfNonStpInrlSol = field(
+        max_num_of_non_stp_inrl_sol: (
+            None | AirSearchPrefsType.TpaExtensions.MaxNumOfNonStpInrlSol
+        ) = field(
             default=None,
             metadata={
                 "name": "maxNumOfNonStpInrlSol",
@@ -6101,7 +6259,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        max_num_of_single_stp_onl_sol: None | AirSearchPrefsType.TpaExtensions.MaxNumOfSingleStpOnlSol = field(
+        max_num_of_single_stp_onl_sol: (
+            None | AirSearchPrefsType.TpaExtensions.MaxNumOfSingleStpOnlSol
+        ) = field(
             default=None,
             metadata={
                 "name": "maxNumOfSingleStpOnlSol",
@@ -6109,7 +6269,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        max_num_of2_plus_stp_sol: None | AirSearchPrefsType.TpaExtensions.MaxNumOf2PlusStpSol = field(
+        max_num_of2_plus_stp_sol: (
+            None | AirSearchPrefsType.TpaExtensions.MaxNumOf2PlusStpSol
+        ) = field(
             default=None,
             metadata={
                 "name": "maxNumOf2PlusStpSol",
@@ -6117,7 +6279,10 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        min_allowed_overage_per_crr_percent: None | AirSearchPrefsType.TpaExtensions.MinAllowedOveragePerCrrPercent = field(
+        min_allowed_overage_per_crr_percent: (
+            None
+            | AirSearchPrefsType.TpaExtensions.MinAllowedOveragePerCrrPercent
+        ) = field(
             default=None,
             metadata={
                 "name": "minAllowedOveragePerCrrPercent",
@@ -6125,7 +6290,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        min_allowed_overage_per_crr: None | AirSearchPrefsType.TpaExtensions.MinAllowedOveragePerCrr = field(
+        min_allowed_overage_per_crr: (
+            None | AirSearchPrefsType.TpaExtensions.MinAllowedOveragePerCrr
+        ) = field(
             default=None,
             metadata={
                 "name": "minAllowedOveragePerCrr",
@@ -6133,7 +6300,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        max_rel_fare_lvl_ofx_for_non_stp: None | AirSearchPrefsType.TpaExtensions.MaxRelFareLvlOfxForNonStp = field(
+        max_rel_fare_lvl_ofx_for_non_stp: (
+            None | AirSearchPrefsType.TpaExtensions.MaxRelFareLvlOfxForNonStp
+        ) = field(
             default=None,
             metadata={
                 "name": "maxRelFareLvlOfxForNonStp",
@@ -6141,7 +6310,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        max_rel_fare_lvl_ofx_for_cnx: None | AirSearchPrefsType.TpaExtensions.MaxRelFareLvlOfxForCnx = field(
+        max_rel_fare_lvl_ofx_for_cnx: (
+            None | AirSearchPrefsType.TpaExtensions.MaxRelFareLvlOfxForCnx
+        ) = field(
             default=None,
             metadata={
                 "name": "maxRelFareLvlOfxForCnx",
@@ -6149,7 +6320,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        num_of_must_price2_plus_stp_sol: None | AirSearchPrefsType.TpaExtensions.NumOfMustPrice2PlusStpSol = field(
+        num_of_must_price2_plus_stp_sol: (
+            None | AirSearchPrefsType.TpaExtensions.NumOfMustPrice2PlusStpSol
+        ) = field(
             default=None,
             metadata={
                 "name": "numOfMustPrice2PlusStpSol",
@@ -6157,7 +6330,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        itinerary_number_threshold: None | AirSearchPrefsType.TpaExtensions.ItineraryNumberThreshold = field(
+        itinerary_number_threshold: (
+            None | AirSearchPrefsType.TpaExtensions.ItineraryNumberThreshold
+        ) = field(
             default=None,
             metadata={
                 "name": "ItineraryNumberThreshold",
@@ -6173,7 +6348,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        exempt_all_taxes: None | AirSearchPrefsType.TpaExtensions.ExemptAllTaxes = field(
+        exempt_all_taxes: (
+            None | AirSearchPrefsType.TpaExtensions.ExemptAllTaxes
+        ) = field(
             default=None,
             metadata={
                 "name": "ExemptAllTaxes",
@@ -6181,7 +6358,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        exempt_all_taxes_and_fees: None | AirSearchPrefsType.TpaExtensions.ExemptAllTaxesAndFees = field(
+        exempt_all_taxes_and_fees: (
+            None | AirSearchPrefsType.TpaExtensions.ExemptAllTaxesAndFees
+        ) = field(
             default=None,
             metadata={
                 "name": "ExemptAllTaxesAndFees",
@@ -6215,7 +6394,9 @@ class AirSearchPrefsType:
                 },
             )
         )
-        ticketing_sum_of_locals: None | AirSearchPrefsType.TpaExtensions.TicketingSumOfLocals = field(
+        ticketing_sum_of_locals: (
+            None | AirSearchPrefsType.TpaExtensions.TicketingSumOfLocals
+        ) = field(
             default=None,
             metadata={
                 "name": "TicketingSumOfLocals",
@@ -6223,7 +6404,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        multi_airport_codes: None | AirSearchPrefsType.TpaExtensions.MultiAirportCodes = field(
+        multi_airport_codes: (
+            None | AirSearchPrefsType.TpaExtensions.MultiAirportCodes
+        ) = field(
             default=None,
             metadata={
                 "name": "MultiAirportCodes",
@@ -6257,7 +6440,9 @@ class AirSearchPrefsType:
                 },
             )
         )
-        exclude_call_direct_carriers: None | AirSearchPrefsType.TpaExtensions.ExcludeCallDirectCarriers = field(
+        exclude_call_direct_carriers: (
+            None | AirSearchPrefsType.TpaExtensions.ExcludeCallDirectCarriers
+        ) = field(
             default=None,
             metadata={
                 "name": "ExcludeCallDirectCarriers",
@@ -6273,7 +6458,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        validating_carrier_check: None | AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck = field(
+        validating_carrier_check: (
+            None | AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck
+        ) = field(
             default=None,
             metadata={
                 "name": "ValidatingCarrierCheck",
@@ -6290,7 +6477,9 @@ class AirSearchPrefsType:
                 "pattern": r"[a-zA-Z0-9]{3}",
             },
         )
-        flight_repeat_limit: None | AirSearchPrefsType.TpaExtensions.FlightRepeatLimit = field(
+        flight_repeat_limit: (
+            None | AirSearchPrefsType.TpaExtensions.FlightRepeatLimit
+        ) = field(
             default=None,
             metadata={
                 "name": "FlightRepeatLimit",
@@ -6306,7 +6495,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        diversity_parameters: None | AirSearchPrefsType.TpaExtensions.DiversityParameters = field(
+        diversity_parameters: (
+            None | AirSearchPrefsType.TpaExtensions.DiversityParameters
+        ) = field(
             default=None,
             metadata={
                 "name": "DiversityParameters",
@@ -6314,7 +6505,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        additional_fare_limit: None | AirSearchPrefsType.TpaExtensions.AdditionalFareLimit = field(
+        additional_fare_limit: (
+            None | AirSearchPrefsType.TpaExtensions.AdditionalFareLimit
+        ) = field(
             default=None,
             metadata={
                 "name": "AdditionalFareLimit",
@@ -6322,7 +6515,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        fare_focus_rules: None | AirSearchPrefsType.TpaExtensions.FareFocusRules = field(
+        fare_focus_rules: (
+            None | AirSearchPrefsType.TpaExtensions.FareFocusRules
+        ) = field(
             default=None,
             metadata={
                 "name": "FareFocusRules",
@@ -6330,7 +6525,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        selling_levels: None | AirSearchPrefsType.TpaExtensions.SellingLevels = field(
+        selling_levels: (
+            None | AirSearchPrefsType.TpaExtensions.SellingLevels
+        ) = field(
             default=None,
             metadata={
                 "name": "SellingLevels",
@@ -6346,7 +6543,9 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        options_per_date_pair_list: None | AirSearchPrefsType.TpaExtensions.OptionsPerDatePairList = field(
+        options_per_date_pair_list: (
+            None | AirSearchPrefsType.TpaExtensions.OptionsPerDatePairList
+        ) = field(
             default=None,
             metadata={
                 "name": "OptionsPerDatePairList",
@@ -6354,15 +6553,15 @@ class AirSearchPrefsType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        country_pref: list[
-            AirSearchPrefsType.TpaExtensions.CountryPref
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "CountryPref",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-            },
+        country_pref: list[AirSearchPrefsType.TpaExtensions.CountryPref] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "CountryPref",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                },
+            )
         )
         retailer_rules: None | RetailerRulesType = field(
             default=None,
@@ -6972,7 +7171,10 @@ class AirSearchPrefsType:
 
         @dataclass
         class ValidatingCarrierCheck:
-            settlement_validation: None | AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.SettlementValidation = field(
+            settlement_validation: (
+                None
+                | AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.SettlementValidation
+            ) = field(
                 default=None,
                 metadata={
                     "name": "SettlementValidation",
@@ -6981,7 +7183,10 @@ class AirSearchPrefsType:
                     "required": True,
                 },
             )
-            ietvalidation: None | AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Ietvalidation = field(
+            ietvalidation: (
+                None
+                | AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Ietvalidation
+            ) = field(
                 default=None,
                 metadata={
                     "name": "IETValidation",
@@ -7105,7 +7310,10 @@ class AirSearchPrefsType:
                     options.
             """
 
-            weightings: None | AirSearchPrefsType.TpaExtensions.DiversityParameters.Weightings = field(
+            weightings: (
+                None
+                | AirSearchPrefsType.TpaExtensions.DiversityParameters.Weightings
+            ) = field(
                 default=None,
                 metadata={
                     "name": "Weightings",
@@ -7113,7 +7321,10 @@ class AirSearchPrefsType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            time_of_day_distribution: None | AirSearchPrefsType.TpaExtensions.DiversityParameters.TimeOfDayDistribution = field(
+            time_of_day_distribution: (
+                None
+                | AirSearchPrefsType.TpaExtensions.DiversityParameters.TimeOfDayDistribution
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TimeOfDayDistribution",
@@ -7267,7 +7478,10 @@ class AirSearchPrefsType:
 
         @dataclass
         class SellingLevels:
-            selling_level_rules: None | AirSearchPrefsType.TpaExtensions.SellingLevels.SellingLevelRules = field(
+            selling_level_rules: (
+                None
+                | AirSearchPrefsType.TpaExtensions.SellingLevels.SellingLevelRules
+            ) = field(
                 default=None,
                 metadata={
                     "name": "SellingLevelRules",
@@ -7275,7 +7489,10 @@ class AirSearchPrefsType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            show_fare_amounts: None | AirSearchPrefsType.TpaExtensions.SellingLevels.ShowFareAmounts = field(
+            show_fare_amounts: (
+                None
+                | AirSearchPrefsType.TpaExtensions.SellingLevels.ShowFareAmounts
+            ) = field(
                 default=None,
                 metadata={
                     "name": "ShowFareAmounts",
@@ -8064,7 +8281,9 @@ class ExchangeTravelPreferencesTpaExtensionsType:
     class Meta:
         name = "ExchangeTravelPreferencesTPA_ExtensionsType"
 
-    exempt_all_taxes: None | ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxes = field(
+    exempt_all_taxes: (
+        None | ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxes
+    ) = field(
         default=None,
         metadata={
             "name": "ExemptAllTaxes",
@@ -8072,7 +8291,9 @@ class ExchangeTravelPreferencesTpaExtensionsType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    exempt_all_taxes_and_fees: None | ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxesAndFees = field(
+    exempt_all_taxes_and_fees: (
+        None | ExchangeTravelPreferencesTpaExtensionsType.ExemptAllTaxesAndFees
+    ) = field(
         default=None,
         metadata={
             "name": "ExemptAllTaxesAndFees",
@@ -8172,7 +8393,9 @@ class OriginDestinationInformationType(TravelDateTimeType):
             },
         )
     )
-    destination_location: None | OriginDestinationInformationType.DestinationLocation = field(
+    destination_location: (
+        None | OriginDestinationInformationType.DestinationLocation
+    ) = field(
         default=None,
         metadata={
             "name": "DestinationLocation",
@@ -8827,17 +9050,17 @@ class TransactionType:
                 rule.
         """
 
-        fare_override: list[
-            TransactionType.FareOverrides.FareOverride
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareOverride",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "min_occurs": 1,
-                "max_occurs": 4,
-            },
+        fare_override: list[TransactionType.FareOverrides.FareOverride] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "FareOverride",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "min_occurs": 1,
+                    "max_occurs": 4,
+                },
+            )
         )
 
         @dataclass
@@ -9119,7 +9342,10 @@ class ExchangeOriginDestinationInformationType(
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    sister_destination_mileage: None | ExchangeOriginDestinationInformationType.SisterDestinationMileage = field(
+    sister_destination_mileage: (
+        None
+        | ExchangeOriginDestinationInformationType.SisterDestinationMileage
+    ) = field(
         default=None,
         metadata={
             "name": "SisterDestinationMileage",
@@ -9135,7 +9361,9 @@ class ExchangeOriginDestinationInformationType(
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    sister_origin_mileage: None | ExchangeOriginDestinationInformationType.SisterOriginMileage = field(
+    sister_origin_mileage: (
+        None | ExchangeOriginDestinationInformationType.SisterOriginMileage
+    ) = field(
         default=None,
         metadata={
             "name": "SisterOriginMileage",
@@ -9143,7 +9371,9 @@ class ExchangeOriginDestinationInformationType(
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    segment_type: None | ExchangeOriginDestinationInformationType.SegmentType = field(
+    segment_type: (
+        None | ExchangeOriginDestinationInformationType.SegmentType
+    ) = field(
         default=None,
         metadata={
             "name": "SegmentType",
@@ -9151,7 +9381,9 @@ class ExchangeOriginDestinationInformationType(
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    alternate_time: None | ExchangeOriginDestinationInformationType.AlternateTime = field(
+    alternate_time: (
+        None | ExchangeOriginDestinationInformationType.AlternateTime
+    ) = field(
         default=None,
         metadata={
             "name": "AlternateTime",
@@ -9159,7 +9391,9 @@ class ExchangeOriginDestinationInformationType(
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    max_one_way_options: None | ExchangeOriginDestinationInformationType.MaxOneWayOptions = field(
+    max_one_way_options: (
+        None | ExchangeOriginDestinationInformationType.MaxOneWayOptions
+    ) = field(
         default=None,
         metadata={
             "name": "MaxOneWayOptions",
@@ -9167,7 +9401,9 @@ class ExchangeOriginDestinationInformationType(
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    num_one_way_options: None | ExchangeOriginDestinationInformationType.NumOneWayOptions = field(
+    num_one_way_options: (
+        None | ExchangeOriginDestinationInformationType.NumOneWayOptions
+    ) = field(
         default=None,
         metadata={
             "name": "NumOneWayOptions",
@@ -9183,7 +9419,9 @@ class ExchangeOriginDestinationInformationType(
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    connection_time: None | ExchangeOriginDestinationInformationType.ConnectionTime = field(
+    connection_time: (
+        None | ExchangeOriginDestinationInformationType.ConnectionTime
+    ) = field(
         default=None,
         metadata={
             "name": "ConnectionTime",
@@ -9191,7 +9429,9 @@ class ExchangeOriginDestinationInformationType(
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    total_travel_time: None | ExchangeOriginDestinationInformationType.TotalTravelTime = field(
+    total_travel_time: (
+        None | ExchangeOriginDestinationInformationType.TotalTravelTime
+    ) = field(
         default=None,
         metadata={
             "name": "TotalTravelTime",
@@ -9837,7 +10077,9 @@ class OtaAirLowFareSearchRq:
             "type": "Attribute",
         },
     )
-    transaction_status_code: None | OtaAirLowFareSearchRqTransactionStatusCode = field(
+    transaction_status_code: (
+        None | OtaAirLowFareSearchRqTransactionStatusCode
+    ) = field(
         default=None,
         metadata={
             "name": "TransactionStatusCode",
@@ -9946,7 +10188,9 @@ class OtaAirLowFareSearchRq:
                 "type": "Element",
             },
         )
-        messaging_details: None | OtaAirLowFareSearchRq.TpaExtensions.MessagingDetails = field(
+        messaging_details: (
+            None | OtaAirLowFareSearchRq.TpaExtensions.MessagingDetails
+        ) = field(
             default=None,
             metadata={
                 "name": "MessagingDetails",
@@ -9962,7 +10206,9 @@ class OtaAirLowFareSearchRq:
                 "type": "Element",
             },
         )
-        alternate_airport_mileage: None | OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportMileage = field(
+        alternate_airport_mileage: (
+            None | OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportMileage
+        ) = field(
             default=None,
             metadata={
                 "name": "AlternateAirportMileage",
@@ -10006,21 +10252,27 @@ class OtaAirLowFareSearchRq:
                 },
             )
         )
-        alternate_dates_processing: None | OtaAirLowFareSearchRq.TpaExtensions.AlternateDatesProcessing = field(
+        alternate_dates_processing: (
+            None | OtaAirLowFareSearchRq.TpaExtensions.AlternateDatesProcessing
+        ) = field(
             default=None,
             metadata={
                 "name": "AlternateDatesProcessing",
                 "type": "Element",
             },
         )
-        itinerary_cache: None | OtaAirLowFareSearchRq.TpaExtensions.ItineraryCache = field(
+        itinerary_cache: (
+            None | OtaAirLowFareSearchRq.TpaExtensions.ItineraryCache
+        ) = field(
             default=None,
             metadata={
                 "name": "ItineraryCache",
                 "type": "Element",
             },
         )
-        multi_ticket: None | OtaAirLowFareSearchRq.TpaExtensions.MultiTicket = field(
+        multi_ticket: (
+            None | OtaAirLowFareSearchRq.TpaExtensions.MultiTicket
+        ) = field(
             default=None,
             metadata={
                 "name": "MultiTicket",
@@ -10036,7 +10288,9 @@ class OtaAirLowFareSearchRq:
                 },
             )
         )
-        reservation_data: None | OtaAirLowFareSearchRq.TpaExtensions.ReservationData = field(
+        reservation_data: (
+            None | OtaAirLowFareSearchRq.TpaExtensions.ReservationData
+        ) = field(
             default=None,
             metadata={
                 "name": "ReservationData",
@@ -10055,7 +10309,10 @@ class OtaAirLowFareSearchRq:
 
         @dataclass
         class MessagingDetails:
-            mdrsubset: None | OtaAirLowFareSearchRq.TpaExtensions.MessagingDetails.Mdrsubset = field(
+            mdrsubset: (
+                None
+                | OtaAirLowFareSearchRq.TpaExtensions.MessagingDetails.Mdrsubset
+            ) = field(
                 default=None,
                 metadata={
                     "name": "MDRSubset",
@@ -10184,7 +10441,10 @@ class OtaAirLowFareSearchRq:
                     office/agency by a reservation system.
             """
 
-            travel_preferences: None | OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences = field(
+            travel_preferences: (
+                None
+                | OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TravelPreferences",
@@ -10213,7 +10473,10 @@ class OtaAirLowFareSearchRq:
                         "type": "Element",
                     },
                 )
-                tpa_extensions: None | OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences.TpaExtensions = field(
+                tpa_extensions: (
+                    None
+                    | OtaAirLowFareSearchRq.TpaExtensions.AlternatePcc.TravelPreferences.TpaExtensions
+                ) = field(
                     default=None,
                     metadata={
                         "name": "TPA_Extensions",
@@ -10281,7 +10544,10 @@ class OtaAirLowFareSearchRq:
                     city).
             """
 
-            specified_location: None | OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.SpecifiedLocation = field(
+            specified_location: (
+                None
+                | OtaAirLowFareSearchRq.TpaExtensions.AlternateAirportCities.SpecifiedLocation
+            ) = field(
                 default=None,
                 metadata={
                     "name": "SpecifiedLocation",
@@ -10357,7 +10623,10 @@ class OtaAirLowFareSearchRq:
                 Context Shopping
         """
 
-        tpa_extensions: None | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions = field(
+        tpa_extensions: (
+            None
+            | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions
+        ) = field(
             default=None,
             metadata={
                 "name": "TPA_Extensions",
@@ -10457,7 +10726,10 @@ class OtaAirLowFareSearchRq:
                     "type": "Element",
                 },
             )
-            sister_destination_mileage: None | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SisterDestinationMileage = field(
+            sister_destination_mileage: (
+                None
+                | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SisterDestinationMileage
+            ) = field(
                 default=None,
                 metadata={
                     "name": "SisterDestinationMileage",
@@ -10471,35 +10743,50 @@ class OtaAirLowFareSearchRq:
                     "type": "Element",
                 },
             )
-            sister_origin_mileage: None | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SisterOriginMileage = field(
+            sister_origin_mileage: (
+                None
+                | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SisterOriginMileage
+            ) = field(
                 default=None,
                 metadata={
                     "name": "SisterOriginMileage",
                     "type": "Element",
                 },
             )
-            segment_type: None | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SegmentType = field(
+            segment_type: (
+                None
+                | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.SegmentType
+            ) = field(
                 default=None,
                 metadata={
                     "name": "SegmentType",
                     "type": "Element",
                 },
             )
-            alternate_time: None | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.AlternateTime = field(
+            alternate_time: (
+                None
+                | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.AlternateTime
+            ) = field(
                 default=None,
                 metadata={
                     "name": "AlternateTime",
                     "type": "Element",
                 },
             )
-            max_one_way_options: None | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.MaxOneWayOptions = field(
+            max_one_way_options: (
+                None
+                | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.MaxOneWayOptions
+            ) = field(
                 default=None,
                 metadata={
                     "name": "MaxOneWayOptions",
                     "type": "Element",
                 },
             )
-            num_one_way_options: None | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.NumOneWayOptions = field(
+            num_one_way_options: (
+                None
+                | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.NumOneWayOptions
+            ) = field(
                 default=None,
                 metadata={
                     "name": "NumOneWayOptions",
@@ -10513,14 +10800,20 @@ class OtaAirLowFareSearchRq:
                     "type": "Element",
                 },
             )
-            connection_time: None | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.ConnectionTime = field(
+            connection_time: (
+                None
+                | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.ConnectionTime
+            ) = field(
                 default=None,
                 metadata={
                     "name": "ConnectionTime",
                     "type": "Element",
                 },
             )
-            total_travel_time: None | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.TotalTravelTime = field(
+            total_travel_time: (
+                None
+                | OtaAirLowFareSearchRq.OriginDestinationInformation.TpaExtensions.TotalTravelTime
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TotalTravelTime",
@@ -10778,7 +11071,9 @@ class OtaAirLowFareSearchRq:
             max_options: Maximum number of options to return.
         """
 
-        departure_date_time: None | OtaAirLowFareSearchRq.Leg.DepartureDateTime = field(
+        departure_date_time: (
+            None | OtaAirLowFareSearchRq.Leg.DepartureDateTime
+        ) = field(
             default=None,
             metadata={
                 "name": "DepartureDateTime",

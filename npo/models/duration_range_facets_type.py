@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.abstract_facet_type import AbstractFacetType
 from npo.models.duration_range_facet_item_type import (
     DurationRangeFacetItemType,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .stop_place_derived_view_structure import StopPlaceDerivedViewStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

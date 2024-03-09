@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ecuc_scope_enum_simple import EcucScopeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

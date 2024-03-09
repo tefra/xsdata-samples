@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .car_pooling_service_ref import CarPoolingServiceRef
 from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure

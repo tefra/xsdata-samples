@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .car_pooling_service_ref import CarPoolingServiceRef
 from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
 from .group_of_entities_version_structure import (

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .cell_ref_1 import CellRef1
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.application_rate_value import (
     ApplicationRateValue,
 )
@@ -83,13 +84,13 @@ class RoadSurfaceConditionMeasurements:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_surface_condition_measurements_extension: Optional[
-        ExtensionType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "roadSurfaceConditionMeasurementsExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    road_surface_condition_measurements_extension: Optional[ExtensionType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "roadSurfaceConditionMeasurementsExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

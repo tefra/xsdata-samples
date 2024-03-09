@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xml.etree.ElementTree import QName
+
 from .bpmnlabel import Bpmnlabel
 from .labeled_shape import LabeledShape
 from .participant_band_kind import ParticipantBandKind

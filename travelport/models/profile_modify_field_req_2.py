@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_5 import BaseReq5
 from travelport.models.modify_field_2 import ModifyField2
 from travelport.models.modify_field_group_2 import ModifyFieldGroup2

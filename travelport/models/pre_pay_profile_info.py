@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.account_related_rules import AccountRelatedRules
 from travelport.models.affiliations import Affiliations
 from travelport.models.pre_pay_account import PrePayAccount

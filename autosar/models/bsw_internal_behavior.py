@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -453,15 +454,15 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_policys: Optional[
-        "BswInternalBehavior.ParameterPolicys"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PARAMETER-POLICYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    parameter_policys: Optional["BswInternalBehavior.ParameterPolicys"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PARAMETER-POLICYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     released_trigger_policys: Optional[
         "BswInternalBehavior.ReleasedTriggerPolicys"
@@ -527,15 +528,15 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_sender_policys: Optional[
-        "BswInternalBehavior.ModeSenderPolicys"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MODE-SENDER-POLICYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    mode_sender_policys: Optional["BswInternalBehavior.ModeSenderPolicys"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MODE-SENDER-POLICYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     mode_receiver_policys: Optional[
         "BswInternalBehavior.ModeReceiverPolicys"
@@ -547,15 +548,15 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_dependencys: Optional[
-        "BswInternalBehavior.ServiceDependencys"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SERVICE-DEPENDENCYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    service_dependencys: Optional["BswInternalBehavior.ServiceDependencys"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SERVICE-DEPENDENCYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     per_instance_parameters: Optional[
         "BswInternalBehavior.PerInstanceParameters"
@@ -577,15 +578,15 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reception_policys: Optional[
-        "BswInternalBehavior.ReceptionPolicys"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RECEPTION-POLICYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    reception_policys: Optional["BswInternalBehavior.ReceptionPolicys"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RECEPTION-POLICYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     distinguished_partitions: Optional[
         "BswInternalBehavior.DistinguishedPartitions"
@@ -668,15 +669,15 @@ class BswInternalBehavior:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: Optional[
-                ConstantSpecificationMappingSetSubtypesEnum
-            ] = field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
+            dest: Optional[ConstantSpecificationMappingSetSubtypesEnum] = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "DEST",
+                        "type": "Attribute",
+                        "required": True,
+                    },
+                )
             )
 
     @dataclass
@@ -749,15 +750,15 @@ class BswInternalBehavior:
 
     @dataclass
     class BswPerInstanceMemoryPolicys:
-        bsw_per_instance_memory_policy: List[
-            BswPerInstanceMemoryPolicy
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BSW-PER-INSTANCE-MEMORY-POLICY",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        bsw_per_instance_memory_policy: List[BswPerInstanceMemoryPolicy] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BSW-PER-INSTANCE-MEMORY-POLICY",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass
@@ -852,15 +853,15 @@ class BswInternalBehavior:
 
     @dataclass
     class InternalTriggeringPoints:
-        bsw_internal_triggering_point: List[
-            BswInternalTriggeringPoint
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BSW-INTERNAL-TRIGGERING-POINT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        bsw_internal_triggering_point: List[BswInternalTriggeringPoint] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BSW-INTERNAL-TRIGGERING-POINT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

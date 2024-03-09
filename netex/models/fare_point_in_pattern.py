@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .fare_point_in_pattern_versioned_child_structure import (
     FarePointInPatternVersionedChildStructure,
 )

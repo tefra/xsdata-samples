@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .property import Property
 from .t_flow_node import TFlowNode
 

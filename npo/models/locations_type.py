@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.location_type import LocationType
 
 __NAMESPACE__ = "urn:vpro:media:2009"

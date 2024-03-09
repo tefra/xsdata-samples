@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .controllable_element_in_sequence import ControllableElementInSequence
 from .controllable_element_in_sequence_ref import (
     ControllableElementInSequenceRef,

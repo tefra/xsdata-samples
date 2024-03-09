@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.order_type_enum import OrderTypeEnum
 from npo.models.page_sort_type_enum import PageSortTypeEnum
 

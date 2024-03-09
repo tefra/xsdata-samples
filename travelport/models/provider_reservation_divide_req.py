@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.provider_reservation_divide_req_create_child_universal_record import (
     ProviderReservationDivideReqCreateChildUniversalRecord,
@@ -69,7 +71,9 @@ class ProviderReservationDivideReq(BaseReq1):
             "max_length": 15,
         },
     )
-    create_child_universal_record: None | ProviderReservationDivideReqCreateChildUniversalRecord = field(
+    create_child_universal_record: (
+        None | ProviderReservationDivideReqCreateChildUniversalRecord
+    ) = field(
         default=None,
         metadata={
             "name": "CreateChildUniversalRecord",

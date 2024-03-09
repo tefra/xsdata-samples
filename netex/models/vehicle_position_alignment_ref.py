@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_position_alignment_ref_structure import (
     VehiclePositionAlignmentRefStructure,
 )

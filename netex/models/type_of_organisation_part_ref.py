@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_organisation_part_ref_structure import (
     TypeOfOrganisationPartRefStructure,
 )

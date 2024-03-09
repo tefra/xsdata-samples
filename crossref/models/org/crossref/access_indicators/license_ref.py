@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDate
+
 from crossref.models.org.crossref.access_indicators.license_ref_applies_to import (
     LicenseRefAppliesTo,
 )

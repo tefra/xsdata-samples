@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.price_match_error import PriceMatchError
 from travelport.models.vehicle_create_reservation_rsp import (
@@ -25,15 +27,19 @@ class VehicleReservationServicePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        vehicle_create_reservation_rsp: None | VehicleCreateReservationRsp = field(
-            default=None,
-            metadata={
-                "name": "VehicleCreateReservationRsp",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+        vehicle_create_reservation_rsp: None | VehicleCreateReservationRsp = (
+            field(
+                default=None,
+                metadata={
+                    "name": "VehicleCreateReservationRsp",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/universal_v52_0",
+                },
+            )
         )
-        fault: None | VehicleReservationServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | VehicleReservationServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -64,7 +70,10 @@ class VehicleReservationServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | VehicleReservationServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | VehicleReservationServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

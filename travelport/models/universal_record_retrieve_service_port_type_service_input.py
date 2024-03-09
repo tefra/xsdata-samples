@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.session_context import SessionContext
 from travelport.models.supported_versions import SupportedVersions
 from travelport.models.universal_record_retrieve_req import (
@@ -15,7 +17,9 @@ class UniversalRecordRetrieveServicePortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | UniversalRecordRetrieveServicePortTypeServiceInput.Header = field(
+    header: (
+        None | UniversalRecordRetrieveServicePortTypeServiceInput.Header
+    ) = field(
         default=None,
         metadata={
             "name": "Header",
@@ -53,11 +57,13 @@ class UniversalRecordRetrieveServicePortTypeServiceInput:
 
     @dataclass
     class Body:
-        universal_record_retrieve_req: None | UniversalRecordRetrieveReq = field(
-            default=None,
-            metadata={
-                "name": "UniversalRecordRetrieveReq",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+        universal_record_retrieve_req: None | UniversalRecordRetrieveReq = (
+            field(
+                default=None,
+                metadata={
+                    "name": "UniversalRecordRetrieveReq",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/universal_v52_0",
+                },
+            )
         )

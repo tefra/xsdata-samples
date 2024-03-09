@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .customer_account_ref import CustomerAccountRef
 from .customer_purchase_package_elements_rel_structure import (
     CustomerPurchasePackageElementsRelStructure,
@@ -121,15 +122,15 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_assignments: Optional[
-        DistributionAssignmentsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "distributionAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    distribution_assignments: Optional[DistributionAssignmentsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "distributionAssignments",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     customer_purchase_package_elements: Optional[
         CustomerPurchasePackageElementsRelStructure
@@ -197,13 +198,13 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    medium_application_instance_ref: Optional[
-        MediumApplicationInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MediumApplicationInstanceRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    medium_application_instance_ref: Optional[MediumApplicationInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MediumApplicationInstanceRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .connection_end_structure import ConnectionEndStructure
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .transfer_version_structure import TransferVersionStructure

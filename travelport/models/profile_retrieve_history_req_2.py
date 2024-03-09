@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_5 import BaseReq5
 from travelport.models.profile_history_retrieve_criteria_2 import (
     ProfileHistoryRetrieveCriteria2,
@@ -41,7 +43,9 @@ class ProfileRetrieveHistoryReq2(BaseReq5):
             "required": True,
         },
     )
-    profile_history_retrieve_criteria: None | ProfileHistoryRetrieveCriteria2 = field(
+    profile_history_retrieve_criteria: (
+        None | ProfileHistoryRetrieveCriteria2
+    ) = field(
         default=None,
         metadata={
             "name": "ProfileHistoryRetrieveCriteria",

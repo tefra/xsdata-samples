@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .equipment_position_structure import EquipmentPositionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

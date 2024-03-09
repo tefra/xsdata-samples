@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlTime
+
 from .day_type_ref import DayTypeRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .derived_view_structure import DerivedViewStructure

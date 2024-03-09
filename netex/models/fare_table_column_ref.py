@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .fare_table_column_ref_structure import FareTableColumnRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

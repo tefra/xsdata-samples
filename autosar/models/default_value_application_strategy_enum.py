@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .default_value_application_strategy_enum_simple import (
     DefaultValueApplicationStrategyEnumSimple,
 )

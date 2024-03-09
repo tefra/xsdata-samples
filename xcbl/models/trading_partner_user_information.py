@@ -792,14 +792,14 @@ class CertificatePurpose:
             "required": True,
         }
     )
-    certificate_purpose_coded_other: Optional[
-        CertificatePurposeCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CertificatePurposeCodedOther",
-            "type": "Element",
-        },
+    certificate_purpose_coded_other: Optional[CertificatePurposeCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CertificatePurposeCodedOther",
+                "type": "Element",
+            },
+        )
     )
 
 

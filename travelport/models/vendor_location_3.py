@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_vendor_location_3 import TypeVendorLocation3
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"

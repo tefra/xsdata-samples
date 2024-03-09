@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .crypto_certificate_format_enum_simple import (
     CryptoCertificateFormatEnumSimple,
 )

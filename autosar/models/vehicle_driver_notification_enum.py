@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .vehicle_driver_notification_enum_simple import (
     VehicleDriverNotificationEnumSimple,
 )

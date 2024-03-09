@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.host_token_list_1 import HostTokenList1
 from travelport.models.rail_pricing_modifiers import RailPricingModifiers

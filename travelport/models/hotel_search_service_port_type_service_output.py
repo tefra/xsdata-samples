@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.hotel_search_availability_rsp import (
     HotelSearchAvailabilityRsp,
@@ -24,13 +26,15 @@ class HotelSearchServicePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        hotel_search_availability_rsp: None | HotelSearchAvailabilityRsp = field(
-            default=None,
-            metadata={
-                "name": "HotelSearchAvailabilityRsp",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            },
+        hotel_search_availability_rsp: None | HotelSearchAvailabilityRsp = (
+            field(
+                default=None,
+                metadata={
+                    "name": "HotelSearchAvailabilityRsp",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/hotel_v52_0",
+                },
+            )
         )
         fault: None | HotelSearchServicePortTypeServiceOutput.Body.Fault = (
             field(
@@ -65,7 +69,10 @@ class HotelSearchServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | HotelSearchServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | HotelSearchServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

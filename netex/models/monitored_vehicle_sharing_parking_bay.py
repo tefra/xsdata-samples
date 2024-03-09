@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .monitored_vehicle_sharing_parking_bay_version_structure import (
     MonitoredVehicleSharingParkingBayVersionStructure,
 )

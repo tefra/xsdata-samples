@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .unapproved_key_access_structure import UnapprovedKeyAccessStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"

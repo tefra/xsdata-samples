@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .adaptive_swc_internal_behavior import AdaptiveSwcInternalBehavior
 from .admin_data import (
     AdminData,
@@ -190,15 +191,15 @@ class AdaptiveApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "AdaptiveApplicationSwComponentType.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["AdaptiveApplicationSwComponentType.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -254,15 +255,15 @@ class AdaptiveApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: Optional[
-        "AdaptiveApplicationSwComponentType.PortGroups"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PORT-GROUPS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    port_groups: Optional["AdaptiveApplicationSwComponentType.PortGroups"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PORT-GROUPS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     unit_group_refs: Optional[
         "AdaptiveApplicationSwComponentType.UnitGroupRefs"
@@ -339,15 +340,15 @@ class AdaptiveApplicationSwComponentType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -444,13 +445,13 @@ class AdaptiveApplicationSwComponentType:
 
     @dataclass
     class InternalBehaviors:
-        adaptive_swc_internal_behavior: List[
-            AdaptiveSwcInternalBehavior
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ADAPTIVE-SWC-INTERNAL-BEHAVIOR",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        adaptive_swc_internal_behavior: List[AdaptiveSwcInternalBehavior] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ADAPTIVE-SWC-INTERNAL-BEHAVIOR",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

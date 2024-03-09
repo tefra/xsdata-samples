@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.passive_create_reservation_req import (
     PassiveCreateReservationReq,
 )
@@ -44,11 +46,13 @@ class PassiveReservationServicePortTypeServiceInput:
 
     @dataclass
     class Body:
-        passive_create_reservation_req: None | PassiveCreateReservationReq = field(
-            default=None,
-            metadata={
-                "name": "PassiveCreateReservationReq",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+        passive_create_reservation_req: None | PassiveCreateReservationReq = (
+            field(
+                default=None,
+                metadata={
+                    "name": "PassiveCreateReservationReq",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/universal_v52_0",
+                },
+            )
         )

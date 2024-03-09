@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .geographical_unit_price_ref_structure import (
     GeographicalUnitPriceRefStructure,
 )

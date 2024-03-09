@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
     TextType,
 )
@@ -63,13 +64,13 @@ class TelephoneNumberType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    subscriber_number_text: Optional[
-        TelephoneNumberSubscriberNumberType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SubscriberNumberText",
-            "type": "Element",
-            "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        },
+    subscriber_number_text: Optional[TelephoneNumberSubscriberNumberType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SubscriberNumberText",
+                "type": "Element",
+                "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
+            },
+        )
     )

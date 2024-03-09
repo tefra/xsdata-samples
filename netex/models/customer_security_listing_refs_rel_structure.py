@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .customer_security_listing_ref import CustomerSecurityListingRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 

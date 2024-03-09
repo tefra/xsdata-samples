@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.gds_enter_queue_rsp import GdsEnterQueueRsp
 
@@ -63,7 +65,10 @@ class GdsEnterQueueServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | GdsEnterQueueServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | GdsEnterQueueServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .activated_equipments_in_frame_rel_structure import (
     ActivatedEquipmentsInFrameRelStructure,
 )
@@ -154,15 +155,15 @@ class InfrastructureVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    activated_equipments: Optional[
-        ActivatedEquipmentsInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "activatedEquipments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    activated_equipments: Optional[ActivatedEquipmentsInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "activatedEquipments",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     vehicle_types: Optional[VehicleTypesInFrameRelStructure] = field(
         default=None,

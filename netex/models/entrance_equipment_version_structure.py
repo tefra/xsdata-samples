@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
 from .entrance_attention_enumeration import EntranceAttentionEnumeration
 from .necessary_force_enumeration import NecessaryForceEnumeration

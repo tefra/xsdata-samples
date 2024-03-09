@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_retrieve_document_rsp import (
     BookingRetrieveDocumentRsp,
 )
@@ -24,15 +26,19 @@ class BookingRetrieveDocumentPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        booking_retrieve_document_rsp: None | BookingRetrieveDocumentRsp = field(
-            default=None,
-            metadata={
-                "name": "BookingRetrieveDocumentRsp",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            },
+        booking_retrieve_document_rsp: None | BookingRetrieveDocumentRsp = (
+            field(
+                default=None,
+                metadata={
+                    "name": "BookingRetrieveDocumentRsp",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
+                },
+            )
         )
-        fault: None | BookingRetrieveDocumentPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | BookingRetrieveDocumentPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class BookingRetrieveDocumentPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | BookingRetrieveDocumentPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | BookingRetrieveDocumentPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

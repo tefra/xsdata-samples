@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -176,15 +177,15 @@ class TdEventFrClusterCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: Optional[
-        "TdEventFrClusterCycleStart.EcuInstanceRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ECU-INSTANCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecu_instance_ref: Optional["TdEventFrClusterCycleStart.EcuInstanceRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECU-INSTANCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     cycle_repetition: Optional[Integer] = field(
         default=None,
@@ -194,15 +195,15 @@ class TdEventFrClusterCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fr_cluster_ref: Optional[
-        "TdEventFrClusterCycleStart.FrClusterRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FR-CLUSTER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    fr_cluster_ref: Optional["TdEventFrClusterCycleStart.FrClusterRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FR-CLUSTER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

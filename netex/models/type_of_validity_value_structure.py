@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .class_refs_rel_structure import ClassRefsRelStructure
 from .frame_nature_enumeration import FrameNatureEnumeration
 from .type_of_value_version_structure import TypeOfValueVersionStructure

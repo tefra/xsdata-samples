@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.content_provider_retrieve_req import (
     ContentProviderRetrieveReq,
 )

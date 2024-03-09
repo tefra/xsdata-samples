@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .discount_basis_enumeration import DiscountBasisEnumeration
 from .frequency_of_use_type_enumeration import FrequencyOfUseTypeEnumeration
 from .time_interval_ref import TimeIntervalRef

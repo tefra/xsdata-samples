@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_denominator_condition_enum_simple import (
     DiagnosticDenominatorConditionEnumSimple,
 )

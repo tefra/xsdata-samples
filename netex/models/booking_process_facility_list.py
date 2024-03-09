@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .booking_process_enumeration import BookingProcessEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

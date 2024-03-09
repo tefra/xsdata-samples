@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .t_event_based_gateway_type import TEventBasedGatewayType
 from .t_gateway import TGateway
 

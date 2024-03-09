@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .boolean import Boolean
 from .can_controller_configuration import CanControllerConfiguration
@@ -171,15 +172,15 @@ class TtcanCommunicationControllerConditional:
 
     @dataclass
     class CanControllerAttributes:
-        can_controller_configuration: Optional[
-            CanControllerConfiguration
-        ] = field(
-            default=None,
-            metadata={
-                "name": "CAN-CONTROLLER-CONFIGURATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        can_controller_configuration: Optional[CanControllerConfiguration] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "CAN-CONTROLLER-CONFIGURATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         can_controller_configuration_requirements: Optional[
             CanControllerConfigurationRequirements

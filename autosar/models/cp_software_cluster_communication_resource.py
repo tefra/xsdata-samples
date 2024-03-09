@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -246,13 +247,13 @@ class CpSoftwareClusterCommunicationResource:
 
     @dataclass
     class DependentResources:
-        role_based_resource_dependency: List[
-            RoleBasedResourceDependency
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ROLE-BASED-RESOURCE-DEPENDENCY",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        role_based_resource_dependency: List[RoleBasedResourceDependency] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ROLE-BASED-RESOURCE-DEPENDENCY",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

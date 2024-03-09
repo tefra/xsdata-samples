@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .transmission_mode_definition_enum_simple import (
     TransmissionModeDefinitionEnumSimple,
 )

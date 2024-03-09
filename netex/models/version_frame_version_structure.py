@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .codespaces_rel_structure import CodespacesRelStructure
 from .entity_in_version_structure import (
     DataManagedObjectStructure,
@@ -90,15 +91,15 @@ class VersionFrameVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    content_validity_conditions: Optional[
-        ValidityConditionsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "contentValidityConditions",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    content_validity_conditions: Optional[ValidityConditionsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "contentValidityConditions",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     layers: Optional[LayerRefsRelStructure] = field(
         default=None,

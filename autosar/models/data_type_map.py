@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .abstract_implementation_data_type_subtypes_enum import (
     AbstractImplementationDataTypeSubtypesEnum,
 )

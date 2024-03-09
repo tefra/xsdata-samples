@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .item_label_pos_enum_simple import ItemLabelPosEnumSimple
 from .l_overview_paragraph import LOverviewParagraph
 

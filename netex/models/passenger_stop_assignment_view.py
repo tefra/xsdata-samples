@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .passenger_stop_assignment_derived_view_structure import (
     PassengerStopAssignmentDerivedViewStructure,
 )

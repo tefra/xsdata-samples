@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_price_versioned_child_structure import (
     FarePriceVersionedChildStructure,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .message_qualifier_structure import MessageQualifierStructure
 from .participant_ref_structure import ParticipantRefStructure
 from .request_timestamp import RequestTimestamp

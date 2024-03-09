@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDuration
+
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .destination_display_ref import DestinationDisplayRef
 from .destination_display_view import DestinationDisplayView

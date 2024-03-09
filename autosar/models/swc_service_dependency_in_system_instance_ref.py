@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .ref import Ref
 from .root_sw_composition_prototype_subtypes_enum import (
     RootSwCompositionPrototypeSubtypesEnum,
@@ -37,15 +38,15 @@ class SwcServiceDependencyInSystemInstanceRef:
     class Meta:
         name = "SWC-SERVICE-DEPENDENCY-IN-SYSTEM-INSTANCE-REF"
 
-    base_ref: Optional[
-        "SwcServiceDependencyInSystemInstanceRef.BaseRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "BASE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    base_ref: Optional["SwcServiceDependencyInSystemInstanceRef.BaseRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "BASE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     context_root_sw_composition_ref: Optional[
         "SwcServiceDependencyInSystemInstanceRef.ContextRootSwCompositionRef"

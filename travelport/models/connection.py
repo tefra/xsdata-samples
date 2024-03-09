@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.fare_note import FareNote
 from travelport.models.type_ignore_stop_over import TypeIgnoreStopOver
 

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.baggage_allowance_info import BaggageAllowanceInfo
 from travelport.models.carry_on_allowance_info import CarryOnAllowanceInfo
 from travelport.models.embargo_info import EmbargoInfo

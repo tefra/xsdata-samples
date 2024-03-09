@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.loyalty_card_details import LoyaltyCardDetails
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"

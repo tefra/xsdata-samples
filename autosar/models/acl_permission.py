@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .acl_object_set_subtypes_enum import AclObjectSetSubtypesEnum
 from .acl_operation_subtypes_enum import AclOperationSubtypesEnum
 from .acl_role_subtypes_enum import AclRoleSubtypesEnum
@@ -294,15 +295,15 @@ class AclPermission:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -334,15 +335,15 @@ class AclPermission:
 
     @dataclass
     class AclObjectRefs:
-        acl_object_ref: List[
-            "AclPermission.AclObjectRefs.AclObjectRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ACL-OBJECT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        acl_object_ref: List["AclPermission.AclObjectRefs.AclObjectRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ACL-OBJECT-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

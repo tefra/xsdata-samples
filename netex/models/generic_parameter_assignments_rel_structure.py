@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .logical_operation_enumeration import LogicalOperationEnumeration
 from .validity_parameter_assignment_version_structure import (

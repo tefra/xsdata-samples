@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.air_seat_assignment_3 import AirSeatAssignment3
 from travelport.models.applied_profile_3 import AppliedProfile3
 from travelport.models.booking_traveler_name_3 import BookingTravelerName3

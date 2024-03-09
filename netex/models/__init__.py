@@ -270,10 +270,10 @@ from .administrative_zone_refs_rel_structure import (
 )
 from .administrative_zones_rel_structure import (
     AdministrativeZone1,
+    AdministrativeZonesRelStructure,
     AdministrativeZoneVersionStructure,
     TransportAdministrativeZone,
     TransportAdministrativeZoneVersionStructure,
-    AdministrativeZonesRelStructure,
 )
 from .air_submode import AirSubmode
 from .air_submode_enumeration import AirSubmodeEnumeration
@@ -758,8 +758,8 @@ from .companion_profiles_rel_structure import CompanionProfilesRelStructure
 from .companion_relationship_enumeration import (
     CompanionRelationshipEnumeration,
 )
-from .compass_bearing16_enumeration import CompassBearing16Enumeration
 from .compass_bearing8_enumeration import CompassBearing8Enumeration
+from .compass_bearing16_enumeration import CompassBearing16Enumeration
 from .complaints_service import ComplaintsService
 from .complaints_service_ref import ComplaintsServiceRef
 from .complaints_service_ref_structure import ComplaintsServiceRefStructure
@@ -1553,37 +1553,37 @@ from .entity_in_version_in_frame_rel_structure import (
 )
 from .entity_in_version_structure import (
     AlternativeText,
+    AlternativeTextsRelStructure,
     AlternativeTextVersionedChildStructure,
     AvailabilityCondition,
     AvailabilityConditionVersionStructure,
     DataManagedObjectStructure,
     DayType1,
+    DayTypesRelStructure,
     DayTypeVersionStructure,
     EntityInVersionStructure,
     FareDayType,
     FareDayTypeVersionedStructure,
     OperatingDay,
+    OperatingDaysRelStructure,
     OperatingDayVersionStructure,
     OrganisationDayType,
     OrganisationDayTypeVersionStructure,
     SimpleAvailabilityCondition,
+    TimebandsRelStructure,
     TimebandVersionedChildStructure,
     ValidBetween,
     ValidBetweenVersionStructure,
     ValidDuring,
     ValidDuringVersionStructure,
     ValidityCondition1,
+    ValidityConditionsRelStructure,
     ValidityConditionVersionStructure,
     ValidityRuleParameter,
     ValidityRuleParameterVersionStructure,
     ValidityTrigger,
     ValidityTriggerVersionStructure,
     VersionedChildStructure,
-    AlternativeTextsRelStructure,
-    DayTypesRelStructure,
-    OperatingDaysRelStructure,
-    TimebandsRelStructure,
-    ValidityConditionsRelStructure,
 )
 from .entity_structure import EntityStructure
 from .entrance import Entrance
@@ -1864,8 +1864,8 @@ from .fare_table_column_ref import FareTableColumnRef
 from .fare_table_column_ref_structure import FareTableColumnRefStructure
 from .fare_table_columns_rel_structure import (
     FareTableColumn,
-    FareTableColumnVersionedChildStructure,
     FareTableColumnsRelStructure,
+    FareTableColumnVersionedChildStructure,
 )
 from .fare_table_ref import FareTableRef
 from .fare_table_ref_structure import FareTableRefStructure
@@ -1874,8 +1874,8 @@ from .fare_table_row_ref import FareTableRowRef
 from .fare_table_row_ref_structure import FareTableRowRefStructure
 from .fare_table_rows_rel_structure import (
     FareTableRow,
-    FareTableRowVersionedChildStructure,
     FareTableRowsRelStructure,
+    FareTableRowVersionedChildStructure,
 )
 from .fare_table_specifics_structure import FareTableSpecificsStructure
 from .fare_tables_in_frame_rel_structure import FareTablesInFrameRelStructure
@@ -2079,13 +2079,13 @@ from .general_sign_structure import GeneralSignStructure
 from .general_version_frame_structure import (
     CompositeFrame,
     CompositeVersionFrameStructure,
+    EntitiesInVersionRelStructure,
     EntityEntity,
     EntityEntityStructure,
-    GeneralFrame,
-    GeneralVersionFrameStructure,
-    EntitiesInVersionRelStructure,
     FramesRelStructure,
+    GeneralFrame,
     GeneralFrameMembersRelStructure,
+    GeneralVersionFrameStructure,
 )
 from .general_zone import GeneralZone
 from .general_zone_version_structure import GeneralZoneVersionStructure
@@ -2095,8 +2095,8 @@ from .generic_parameter_assignment_ref_structure import (
 from .generic_parameter_assignments_rel_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
-    GenericParameterAssignmentVersionStructure,
     GenericParameterAssignmentsRelStructure,
+    GenericParameterAssignmentVersionStructure,
 )
 from .geographical_interval import GeographicalInterval
 from .geographical_interval_price import GeographicalIntervalPrice
@@ -2138,8 +2138,8 @@ from .geographical_unit_price_ref_structure import (
     GeographicalUnitPriceRefStructure,
 )
 from .geographical_unit_prices_rel_structure import (
-    GeographicalUnitPriceVersionedChildStructure,
     GeographicalUnitPricesRelStructure,
+    GeographicalUnitPriceVersionedChildStructure,
 )
 from .geographical_unit_ref import GeographicalUnitRef
 from .geographical_unit_ref_structure import GeographicalUnitRefStructure
@@ -3829,23 +3829,23 @@ from .priceable_object_refs_rel_structure import (
 )
 from .priceable_object_version_structure import (
     Cell1,
+    CellsRelStructure,
     CellVersionedChildStructure,
+    FarePricesRelStructure,
     FareStructureFactorVersionStructure,
-    FareTableInContext,
     FareTable1,
+    FareTableInContext,
+    FareTablesRelStructure,
     FareTableVersionStructure,
     ParkingChargeBand,
     ParkingChargeBandVersionStructure,
     ParkingPrice,
     ParkingPriceVersionedChildStructure,
-    PriceGroup1,
-    PriceGroupVersionStructure,
     PriceableObjectVersionStructure,
-    TimeStructureFactorVersionStructure,
-    CellsRelStructure,
-    FarePricesRelStructure,
-    FareTablesRelStructure,
+    PriceGroup1,
     PriceGroupsRelStructure,
+    PriceGroupVersionStructure,
+    TimeStructureFactorVersionStructure,
 )
 from .pricing_parameter_set import PricingParameterSet
 from .pricing_parameter_set_ref import PricingParameterSetRef
@@ -4517,8 +4517,8 @@ from .sections_in_sequence_rel_structure import (
     LinkSequenceVersionStructure,
     SectionInSequence,
     SectionInSequenceVersionedChildStructure,
-    SectionVersionStructure,
     SectionsInSequenceRelStructure,
+    SectionVersionStructure,
 )
 from .security_list import SecurityList
 from .security_list_ref import SecurityListRef
@@ -4847,8 +4847,8 @@ from .specific_parameter_assignment_ref_structure import (
 )
 from .specific_parameter_assignments_rel_structure import (
     SpecificParameterAssignment,
-    SpecificParameterAssignmentVersionStructure,
     SpecificParameterAssignmentsRelStructure,
+    SpecificParameterAssignmentVersionStructure,
 )
 from .srs_name_1 import SrsName1
 from .srs_name_2 import SrsName2

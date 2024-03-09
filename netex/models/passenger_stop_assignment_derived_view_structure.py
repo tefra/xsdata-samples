@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .derived_view_structure import DerivedViewStructure
 from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
 from .multilingual_string import MultilingualString

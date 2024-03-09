@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .hw_element_subtypes_enum import HwElementSubtypesEnum
 from .memory_section_subtypes_enum import MemorySectionSubtypesEnum
 from .ref import Ref

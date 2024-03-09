@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .customer_purchase_package import CustomerPurchasePackage
 from .customer_purchase_package_ref import CustomerPurchasePackageRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure

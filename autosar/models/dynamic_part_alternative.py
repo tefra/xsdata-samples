@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
 from .integer import Integer

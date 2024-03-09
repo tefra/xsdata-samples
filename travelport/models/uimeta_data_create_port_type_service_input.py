@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.uimeta_data_create_req import UimetaDataCreateReq
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"

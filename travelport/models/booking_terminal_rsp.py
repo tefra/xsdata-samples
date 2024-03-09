@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_base_rsp import BookingBaseRsp
 from travelport.models.command_response import CommandResponse
 

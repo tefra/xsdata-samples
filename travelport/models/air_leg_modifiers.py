@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_leg_modifiers_order_by import AirLegModifiersOrderBy
 from travelport.models.alliance import Alliance
 from travelport.models.booking_code import BookingCode
@@ -110,21 +112,27 @@ class AirLegModifiers:
             "type": "Element",
         },
     )
-    permitted_connection_points: None | AirLegModifiers.PermittedConnectionPoints = field(
+    permitted_connection_points: (
+        None | AirLegModifiers.PermittedConnectionPoints
+    ) = field(
         default=None,
         metadata={
             "name": "PermittedConnectionPoints",
             "type": "Element",
         },
     )
-    prohibited_connection_points: None | AirLegModifiers.ProhibitedConnectionPoints = field(
+    prohibited_connection_points: (
+        None | AirLegModifiers.ProhibitedConnectionPoints
+    ) = field(
         default=None,
         metadata={
             "name": "ProhibitedConnectionPoints",
             "type": "Element",
         },
     )
-    preferred_connection_points: None | AirLegModifiers.PreferredConnectionPoints = field(
+    preferred_connection_points: (
+        None | AirLegModifiers.PreferredConnectionPoints
+    ) = field(
         default=None,
         metadata={
             "name": "PreferredConnectionPoints",

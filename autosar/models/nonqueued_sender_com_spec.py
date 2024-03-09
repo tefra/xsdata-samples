@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
@@ -97,15 +98,15 @@ class NonqueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: Optional[
-        "NonqueuedSenderComSpec.DataElementRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DATA-ELEMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_element_ref: Optional["NonqueuedSenderComSpec.DataElementRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-ELEMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     data_update_period: Optional[TimeValue] = field(
         default=None,
@@ -139,15 +140,15 @@ class NonqueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_acknowledge: Optional[
-        TransmissionAcknowledgementRequest
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TRANSMISSION-ACKNOWLEDGE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    transmission_acknowledge: Optional[TransmissionAcknowledgementRequest] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TRANSMISSION-ACKNOWLEDGE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     transmission_props: Optional[TransmissionComSpecProps] = field(
         default=None,

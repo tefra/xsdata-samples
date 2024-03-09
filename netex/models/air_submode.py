@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .air_submode_enumeration import AirSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

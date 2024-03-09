@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .data_filter_type_enum import DataFilterTypeEnum
 from .positive_integer import PositiveInteger
 from .unlimited_integer import UnlimitedInteger

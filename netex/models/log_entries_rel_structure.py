@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,
 )

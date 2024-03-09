@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.credit_card_auth_2 import CreditCardAuth2
 from travelport.models.form_of_payment_3 import FormOfPayment3
 from travelport.models.payment_2 import Payment2

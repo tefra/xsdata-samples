@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -171,15 +172,15 @@ class UserDefinedPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_connectors: Optional[
-        "UserDefinedPhysicalChannel.CommConnectors"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "COMM-CONNECTORS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    comm_connectors: Optional["UserDefinedPhysicalChannel.CommConnectors"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMM-CONNECTORS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     frame_triggerings: Optional[
         "UserDefinedPhysicalChannel.FrameTriggerings"
@@ -211,15 +212,15 @@ class UserDefinedPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: Optional[
-        "UserDefinedPhysicalChannel.PduTriggerings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PDU-TRIGGERINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    pdu_triggerings: Optional["UserDefinedPhysicalChannel.PduTriggerings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PDU-TRIGGERINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, Optional, Tuple, Any
+from typing import Any, Dict, Optional, Tuple
+
 from xsdata.models.datatype import XmlDateTime
+
 from ubl.models.common.ubl_xmldsig_core_schema_2_1 import (
     CanonicalizationMethod,
     DigestMethod,
@@ -868,15 +870,15 @@ class CommitmentTypeIndicationType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    commitment_type_qualifiers: Optional[
-        CommitmentTypeQualifiersListType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CommitmentTypeQualifiers",
-            "type": "Element",
-            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        },
+    commitment_type_qualifiers: Optional[CommitmentTypeQualifiersListType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CommitmentTypeQualifiers",
+                "type": "Element",
+                "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+            },
+        )
     )
 
 
@@ -1261,15 +1263,15 @@ class SignedDataObjectPropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    commitment_type_indication: Tuple[
-        CommitmentTypeIndicationType, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "CommitmentTypeIndication",
-            "type": "Element",
-            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        },
+    commitment_type_indication: Tuple[CommitmentTypeIndicationType, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "CommitmentTypeIndication",
+                "type": "Element",
+                "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+            },
+        )
     )
     all_data_objects_time_stamp: Tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
@@ -1314,15 +1316,15 @@ class SignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    signature_policy_identifier: Optional[
-        SignaturePolicyIdentifierType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SignaturePolicyIdentifier",
-            "type": "Element",
-            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        },
+    signature_policy_identifier: Optional[SignaturePolicyIdentifierType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SignaturePolicyIdentifier",
+                "type": "Element",
+                "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+            },
+        )
     )
     signature_production_place: Optional[SignatureProductionPlaceType] = field(
         default=None,
@@ -1383,15 +1385,15 @@ class UnsignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    attribute_certificate_refs: Tuple[
-        CompleteCertificateRefsType, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "AttributeCertificateRefs",
-            "type": "Element",
-            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        },
+    attribute_certificate_refs: Tuple[CompleteCertificateRefsType, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "AttributeCertificateRefs",
+                "type": "Element",
+                "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+            },
+        )
     )
     attribute_revocation_refs: Tuple[CompleteRevocationRefsType, ...] = field(
         default_factory=tuple,
@@ -1488,25 +1490,25 @@ class SignedDataObjectProperties(SignedDataObjectPropertiesType):
 
 @dataclass(frozen=True)
 class SignedPropertiesType:
-    signed_signature_properties: Optional[
-        SignedSignaturePropertiesType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SignedSignatureProperties",
-            "type": "Element",
-            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        },
+    signed_signature_properties: Optional[SignedSignaturePropertiesType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SignedSignatureProperties",
+                "type": "Element",
+                "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+            },
+        )
     )
-    signed_data_object_properties: Optional[
-        SignedDataObjectPropertiesType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SignedDataObjectProperties",
-            "type": "Element",
-            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        },
+    signed_data_object_properties: Optional[SignedDataObjectPropertiesType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SignedDataObjectProperties",
+                "type": "Element",
+                "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+            },
+        )
     )
     id: Optional[str] = field(
         default=None,

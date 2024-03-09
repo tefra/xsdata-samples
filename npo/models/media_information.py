@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from npo.models.media_table_type import MediaTableType
 
 __NAMESPACE__ = "urn:vpro:media:2009"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -253,15 +254,15 @@ class SdgClass:
 
     @dataclass
     class Attributes:
-        sdg_aggregation_with_variation: List[
-            SdgAggregationWithVariation
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SDG-AGGREGATION-WITH-VARIATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        sdg_aggregation_with_variation: List[SdgAggregationWithVariation] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SDG-AGGREGATION-WITH-VARIATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         sdg_foreign_reference: List[SdgForeignReference] = field(
             default_factory=list,

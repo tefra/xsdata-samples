@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .authority_ref import AuthorityRef
 from .contact_structure import ContactStructure
@@ -42,15 +43,15 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_channel_type: Optional[
-        DistributionChannelTypeEnumeration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DistributionChannelType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    distribution_channel_type: Optional[DistributionChannelTypeEnumeration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DistributionChannelType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     is_obligatory: Optional[bool] = field(
         default=None,
@@ -156,15 +157,15 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "tokens": True,
         },
     )
-    types_of_payment_method: Optional[
-        TypeOfPaymentMethodRefsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "typesOfPaymentMethod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    types_of_payment_method: Optional[TypeOfPaymentMethodRefsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "typesOfPaymentMethod",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     distribution_rights: List[DistributionRightsEnumeration] = field(
         default_factory=list,

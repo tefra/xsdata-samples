@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.profile_retrieve_bridge_branches_req import (
     ProfileRetrieveBridgeBranchesReq,
 )
@@ -25,7 +27,9 @@ class ProfileRetrieveBridgeBranchesPortTypeServiceInput:
 
     @dataclass
     class Body:
-        profile_retrieve_bridge_branches_req: None | ProfileRetrieveBridgeBranchesReq = field(
+        profile_retrieve_bridge_branches_req: (
+            None | ProfileRetrieveBridgeBranchesReq
+        ) = field(
             default=None,
             metadata={
                 "name": "ProfileRetrieveBridgeBranchesReq",

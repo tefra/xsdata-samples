@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .swc_to_ecu_mapping_constraint_type_simple import (
     SwcToEcuMappingConstraintTypeSimple,
 )

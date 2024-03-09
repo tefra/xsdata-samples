@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.ful_fillment_type import FulFillmentType
 from travelport.models.operating_company import OperatingCompany
 from travelport.models.rail_avail_info import RailAvailInfo

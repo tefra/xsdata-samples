@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_monitor_update_kind_enum_simple import (
     DiagnosticMonitorUpdateKindEnumSimple,
 )

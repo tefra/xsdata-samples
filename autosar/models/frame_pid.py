@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .integer import Integer
 from .positive_integer import PositiveInteger
 

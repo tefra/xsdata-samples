@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -213,15 +214,15 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    collected_instance_irefs: Optional[
-        "Collection.CollectedInstanceIrefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "COLLECTED-INSTANCE-IREFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    collected_instance_irefs: Optional["Collection.CollectedInstanceIrefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "COLLECTED-INSTANCE-IREFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     source_instance_irefs: Optional["Collection.SourceInstanceIrefs"] = field(
         default=None,

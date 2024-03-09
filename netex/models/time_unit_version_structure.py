@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .fare_unit_version_structure import FareUnitVersionStructure
 from .time_unit_prices_rel_structure import TimeUnitPricesRelStructure
 

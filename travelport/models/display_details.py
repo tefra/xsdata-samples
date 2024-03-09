@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.display_contents import DisplayContents
 from travelport.models.display_detail import DisplayDetail
 

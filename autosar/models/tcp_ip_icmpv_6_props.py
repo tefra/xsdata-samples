@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .positive_integer import PositiveInteger
 
@@ -68,15 +69,15 @@ class TcpIpIcmpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_icmp_v_6_msg_destination_unreachable_enabled: Optional[
-        Boolean
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TCP-IP-ICMP-V-6-MSG-DESTINATION-UNREACHABLE-ENABLED",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tcp_ip_icmp_v_6_msg_destination_unreachable_enabled: Optional[Boolean] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TCP-IP-ICMP-V-6-MSG-DESTINATION-UNREACHABLE-ENABLED",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tcp_ip_icmp_v_6_msg_parameter_problem_enabled: Optional[Boolean] = field(
         default=None,

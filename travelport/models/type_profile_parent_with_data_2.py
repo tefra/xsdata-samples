@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_info_2 import BaseInfo2
 from travelport.models.profile_data_2 import ProfileData2
 from travelport.models.type_profile_entity_status_with_delete_2 import (

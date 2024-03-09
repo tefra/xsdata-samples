@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.branch_id import BranchId
 
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"

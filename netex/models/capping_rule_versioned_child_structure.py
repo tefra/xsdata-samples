@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional, Union
+
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_period_enumeration import CappingPeriodEnumeration
 from .capping_rule_prices_rel_structure import CappingRulePricesRelStructure

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .group_of_distance_matrix_elements_version_structure import (
     GroupOfDistanceMatrixElementsVersionStructure,
 )

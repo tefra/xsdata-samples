@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.rule_advanced_purchase import RuleAdvancedPurchase
 from travelport.models.rule_charges import RuleCharges
 from travelport.models.rule_length_of_stay import RuleLengthOfStay

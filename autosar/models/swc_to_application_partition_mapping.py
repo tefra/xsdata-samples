@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -154,15 +155,15 @@ class SwcToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SwcToApplicationPartitionMapping.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["SwcToApplicationPartitionMapping.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     application_partition_ref: Optional[
         "SwcToApplicationPartitionMapping.ApplicationPartitionRef"
@@ -174,15 +175,15 @@ class SwcToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_prototype_iref: Optional[
-        ComponentInSystemInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SW-COMPONENT-PROTOTYPE-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sw_component_prototype_iref: Optional[ComponentInSystemInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SW-COMPONENT-PROTOTYPE-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,

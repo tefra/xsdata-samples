@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .discovery_technology_enum import DiscoveryTechnologyEnum
 from .string import String
 

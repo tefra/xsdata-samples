@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .integer import Integer
 from .lin_frame_subtypes_enum import LinFrameSubtypesEnum
 from .ref import Ref

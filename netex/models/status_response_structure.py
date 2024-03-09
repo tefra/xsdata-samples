@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime, XmlDuration
+
 from .message_qualifier_structure import MessageQualifierStructure
 from .participant_ref_structure import ParticipantRefStructure
 from .response_structure import ResponseStructure

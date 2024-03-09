@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.profile_retrieve_hierarchy_req import (
     ProfileRetrieveHierarchyReq,
 )
@@ -23,11 +25,13 @@ class ProfileRetrieveHierarchyPortTypeServiceInput:
 
     @dataclass
     class Body:
-        profile_retrieve_hierarchy_req: None | ProfileRetrieveHierarchyReq = field(
-            default=None,
-            metadata={
-                "name": "ProfileRetrieveHierarchyReq",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            },
+        profile_retrieve_hierarchy_req: None | ProfileRetrieveHierarchyReq = (
+            field(
+                default=None,
+                metadata={
+                    "name": "ProfileRetrieveHierarchyReq",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
+                },
+            )
         )

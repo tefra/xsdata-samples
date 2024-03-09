@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .access import Access
 from .access_right_parameter_assignment_1 import (
     AccessRightParameterAssignment1,
@@ -283,8 +284,8 @@ from .postal_address import PostalAddress
 from .preassigned_fare_product import PreassignedFareProduct
 from .price_unit import PriceUnit
 from .priceable_object_version_structure import (
-    FareTableInContext,
     FareTable1,
+    FareTableInContext,
     ParkingChargeBand,
     PriceGroup1,
 )

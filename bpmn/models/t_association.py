@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xml.etree.ElementTree import QName
+
 from .t_artifact import TArtifact
 from .t_association_direction import TAssociationDirection
 

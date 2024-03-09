@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .t_catch_event import TCatchEvent
 
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"

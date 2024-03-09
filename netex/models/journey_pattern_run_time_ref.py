@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .journey_pattern_run_time_ref_structure import (
     JourneyPatternRunTimeRefStructure,
 )

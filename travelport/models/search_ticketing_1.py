@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.search_ticketing_reservation_status_1 import (
     SearchTicketingReservationStatus1,
 )

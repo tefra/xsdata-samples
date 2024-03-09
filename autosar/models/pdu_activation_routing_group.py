@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .event_group_control_type_enum import EventGroupControlTypeEnum
 from .identifier import Identifier

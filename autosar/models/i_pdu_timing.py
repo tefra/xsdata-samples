@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import (
     AdminData,
     DocumentationBlock,
@@ -107,15 +108,15 @@ class IPduTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_mode_declaration: Optional[
-        TransmissionModeDeclaration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TRANSMISSION-MODE-DECLARATION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    transmission_mode_declaration: Optional[TransmissionModeDeclaration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TRANSMISSION-MODE-DECLARATION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,

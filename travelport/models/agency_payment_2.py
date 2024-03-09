@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_agency_payment_2 import TypeAgencyPayment2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"

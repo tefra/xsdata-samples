@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -208,15 +209,15 @@ class BinaryManifestRequireResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_ref: Optional[
-        "BinaryManifestRequireResource.ResourceRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RESOURCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    resource_ref: Optional["BinaryManifestRequireResource.ResourceRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RESOURCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     connection_is_mandatory: Optional[Boolean] = field(
         default=None,

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDateTime, XmlDuration
+
 from .error_description_structure import ErrorDescriptionStructure
 from .extensions_1 import Extensions1
 from .other_error import OtherError

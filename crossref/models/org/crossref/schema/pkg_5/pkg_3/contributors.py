@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.anonymous import Anonymous
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.organization import (
     Organization,

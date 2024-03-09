@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .autosar_parameter_ref import AutosarParameterRef
 from .autosar_variable_ref import AutosarVariableRef
 from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
@@ -54,16 +55,16 @@ class SwDataDependencyArgs:
             "sequence": 1,
         },
     )
-    mc_data_instance_ref: List[
-        "SwDataDependencyArgs.McDataInstanceRef"
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "MC-DATA-INSTANCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-            "sequence": 1,
-        },
+    mc_data_instance_ref: List["SwDataDependencyArgs.McDataInstanceRef"] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "MC-DATA-INSTANCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+                "sequence": 1,
+            },
+        )
     )
     autosar_variable: List[AutosarVariableRef] = field(
         default_factory=list,

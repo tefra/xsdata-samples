@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .block_parts_rel_structure import BlockPartsRelStructure
 from .compound_train_ref import CompoundTrainRef
 from .entity_in_version_structure import DataManagedObjectStructure

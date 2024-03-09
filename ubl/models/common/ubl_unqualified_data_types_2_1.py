@@ -1,14 +1,30 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
+
 from ubl.models.common.ccts_cct_schema_module_2_1 import (
     AmountType as CctsCctSchemaModule21AmountType,
+)
+from ubl.models.common.ccts_cct_schema_module_2_1 import (
     BinaryObjectType as CctsCctSchemaModule21BinaryObjectType,
+)
+from ubl.models.common.ccts_cct_schema_module_2_1 import (
     CodeType as CctsCctSchemaModule21CodeType,
+)
+from ubl.models.common.ccts_cct_schema_module_2_1 import (
     IdentifierType as CctsCctSchemaModule21IdentifierType,
+)
+from ubl.models.common.ccts_cct_schema_module_2_1 import (
     MeasureType as CctsCctSchemaModule21MeasureType,
+)
+from ubl.models.common.ccts_cct_schema_module_2_1 import (
     NumericType as CctsCctSchemaModule21NumericType,
+)
+from ubl.models.common.ccts_cct_schema_module_2_1 import (
     QuantityType as CctsCctSchemaModule21QuantityType,
+)
+from ubl.models.common.ccts_cct_schema_module_2_1 import (
     TextType as CctsCctSchemaModule21TextType,
 )
 

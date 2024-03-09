@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .layer_ref_structure import LayerRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

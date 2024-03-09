@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .routing_constraint_zone_version_structure import (
     RoutingConstraintZoneVersionStructure,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .day_type_assignment_version_structure import (
     DayTypeAssignmentVersionStructure,
 )

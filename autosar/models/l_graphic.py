@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .graphic import Graphic
 from .l_enum_simple import LEnumSimple
 from .map import Map

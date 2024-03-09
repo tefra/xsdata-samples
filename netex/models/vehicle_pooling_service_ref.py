@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_pooling_service_ref_structure import (
     VehiclePoolingServiceRefStructure,
 )

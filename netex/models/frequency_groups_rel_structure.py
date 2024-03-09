@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .headway_journey_group import HeadwayJourneyGroup
 from .headway_journey_group_ref import HeadwayJourneyGroupRef

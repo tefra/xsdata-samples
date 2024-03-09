@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -101,15 +102,15 @@ class HwAttributeDef:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "HwAttributeDef.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["HwAttributeDef.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -159,15 +160,15 @@ class HwAttributeDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_attribute_literals: Optional[
-        "HwAttributeDef.HwAttributeLiterals"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "HW-ATTRIBUTE-LITERALS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    hw_attribute_literals: Optional["HwAttributeDef.HwAttributeLiterals"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "HW-ATTRIBUTE-LITERALS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     is_required: Optional[Boolean] = field(
         default=None,

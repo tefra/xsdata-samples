@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.create_terminal_session_rsp import (
     CreateTerminalSessionRsp,
 )
@@ -34,7 +36,9 @@ class CreateTerminalSessionServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/terminal_v33_0",
             },
         )
-        fault: None | CreateTerminalSessionServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | CreateTerminalSessionServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -65,7 +69,10 @@ class CreateTerminalSessionServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | CreateTerminalSessionServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | CreateTerminalSessionServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

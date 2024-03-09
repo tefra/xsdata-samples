@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .common_section_ref import CommonSectionRef
 from .dated_special_service_ref import DatedSpecialServiceRef

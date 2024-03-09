@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -212,15 +213,15 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    shall_run_on_refs: Optional[
-        "ProcessToMachineMapping.ShallRunOnRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHALL-RUN-ON-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    shall_run_on_refs: Optional["ProcessToMachineMapping.ShallRunOnRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHALL-RUN-ON-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,
@@ -269,15 +270,15 @@ class ProcessToMachineMapping:
 
     @dataclass
     class DesignRef(Ref):
-        dest: Optional[
-            ProcessDesignToMachineDesignMappingSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[ProcessDesignToMachineDesignMappingSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )
 
     @dataclass

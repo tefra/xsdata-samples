@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .dynamic_vehicle_meeting_point_assignment_version_structure import (
     DynamicVehicleMeetingPointAssignmentVersionStructure,
 )

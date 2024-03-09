@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.abstract_facet_type import AbstractFacetType
 from npo.models.date_range_facet_item_type import DateRangeFacetItemType
 from npo.models.date_range_preset_type_enum import DateRangePresetTypeEnum

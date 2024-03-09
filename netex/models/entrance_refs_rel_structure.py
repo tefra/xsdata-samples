@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .entrance_ref import EntranceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .compound_train_ref_structure import CompoundTrainRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

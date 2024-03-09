@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .line_string import LineString
 from .point_1 import Point1
 from .polygon import Polygon

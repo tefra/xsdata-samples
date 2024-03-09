@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.price_check_result import ErrorInfo
 from xcbl.models.remittance_advice import (
     FixedAsset,
@@ -326,14 +327,14 @@ class AccountAssignment:
             "type": "Element",
         },
     )
-    account_assignment_order_number: Optional[
-        AccountAssignmentOrderNumber
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AccountAssignmentOrderNumber",
-            "type": "Element",
-        },
+    account_assignment_order_number: Optional[AccountAssignmentOrderNumber] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AccountAssignmentOrderNumber",
+                "type": "Element",
+            },
+        )
     )
     operation_number: Optional[OperationNumber] = field(
         default=None,

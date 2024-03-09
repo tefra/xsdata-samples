@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .geographical_unit_ref_structure import GeographicalUnitRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

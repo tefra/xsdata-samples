@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -109,15 +110,15 @@ class SwcModeSwitchEvent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SwcModeSwitchEvent.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["SwcModeSwitchEvent.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -177,15 +178,15 @@ class SwcModeSwitchEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: Optional[
-        "SwcModeSwitchEvent.DisabledModeIrefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DISABLED-MODE-IREFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    disabled_mode_irefs: Optional["SwcModeSwitchEvent.DisabledModeIrefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DISABLED-MODE-IREFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     start_on_event_ref: Optional["SwcModeSwitchEvent.StartOnEventRef"] = field(
         default=None,

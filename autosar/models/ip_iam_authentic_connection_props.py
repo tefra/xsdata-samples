@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ethernet_physical_channel_subtypes_enum import (
     EthernetPhysicalChannelSubtypesEnum,
 )

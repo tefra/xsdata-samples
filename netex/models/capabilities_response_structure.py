@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .data_object_capabilities_response import DataObjectCapabilitiesResponse
 from .producer_response_structure import ProducerResponseStructure
 

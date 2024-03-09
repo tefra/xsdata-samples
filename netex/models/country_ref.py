@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .country_ref_structure import CountryRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

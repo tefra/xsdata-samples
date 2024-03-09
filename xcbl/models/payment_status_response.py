@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.remittance_advice import (
     PayerParty,
     PaymentParty,
@@ -284,14 +285,14 @@ class PaymentStatusRequestId:
 
 @dataclass(kw_only=True)
 class PaymentStatusRequestSummary:
-    total_number_payment_requests: Optional[
-        TotalNumberPaymentRequests
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TotalNumberPaymentRequests",
-            "type": "Element",
-        },
+    total_number_payment_requests: Optional[TotalNumberPaymentRequests] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TotalNumberPaymentRequests",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -383,14 +384,14 @@ class PaymentException:
             "required": True,
         }
     )
-    payment_exception_coded_other: Optional[
-        PaymentExceptionCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PaymentExceptionCodedOther",
-            "type": "Element",
-        },
+    payment_exception_coded_other: Optional[PaymentExceptionCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PaymentExceptionCodedOther",
+                "type": "Element",
+            },
+        )
     )
     payment_exception_note: Optional[PaymentExceptionNote] = field(
         default=None,

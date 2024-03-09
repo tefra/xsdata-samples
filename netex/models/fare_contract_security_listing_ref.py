@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .fare_contract_security_listing_ref_structure import (
     FareContractSecurityListingRefStructure,
 )

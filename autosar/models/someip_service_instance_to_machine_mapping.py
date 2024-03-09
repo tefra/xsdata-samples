@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
 )
@@ -427,13 +428,13 @@ class SomeipServiceInstanceToMachineMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: Optional[
-                AdaptivePlatformServiceInstanceSubtypesEnum
-            ] = field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
+            dest: Optional[AdaptivePlatformServiceInstanceSubtypesEnum] = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "DEST",
+                        "type": "Attribute",
+                        "required": True,
+                    },
+                )
             )

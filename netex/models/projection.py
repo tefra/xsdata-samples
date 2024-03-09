@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .projection_version_structure import ProjectionVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

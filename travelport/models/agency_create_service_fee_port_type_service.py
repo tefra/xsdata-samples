@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.agency_create_service_fee_port_type_service_input import (
     AgencyCreateServiceFeePortTypeServiceInput,
 )

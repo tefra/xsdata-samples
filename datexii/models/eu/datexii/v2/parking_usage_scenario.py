@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.overall_period import OverallPeriod
 from datexii.models.eu.datexii.v2.parking_usage_scenario_enum import (

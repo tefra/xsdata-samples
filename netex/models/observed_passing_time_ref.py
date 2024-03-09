@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .observed_passing_time_ref_structure import (
     ObservedPassingTimeRefStructure,
 )

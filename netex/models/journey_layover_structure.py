@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDuration
+
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
 from .border_point_ref import BorderPointRef

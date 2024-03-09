@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.connection_point_1 import ConnectionPoint1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/rail_v52_0"
@@ -10,14 +12,18 @@ class RailLegModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    permitted_connection_points: None | RailLegModifiers.PermittedConnectionPoints = field(
+    permitted_connection_points: (
+        None | RailLegModifiers.PermittedConnectionPoints
+    ) = field(
         default=None,
         metadata={
             "name": "PermittedConnectionPoints",
             "type": "Element",
         },
     )
-    prohibited_connection_points: None | RailLegModifiers.ProhibitedConnectionPoints = field(
+    prohibited_connection_points: (
+        None | RailLegModifiers.ProhibitedConnectionPoints
+    ) = field(
         default=None,
         metadata={
             "name": "ProhibitedConnectionPoints",

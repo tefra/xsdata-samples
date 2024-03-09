@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ref import Ref
 from .service_event_deployment_subtypes_enum import (
     ServiceEventDeploymentSubtypesEnum,

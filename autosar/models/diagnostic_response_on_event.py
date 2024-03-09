@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -213,15 +214,15 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    response_on_event_action: Optional[
-        DiagnosticResponseOnEventActionEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RESPONSE-ON-EVENT-ACTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    response_on_event_action: Optional[DiagnosticResponseOnEventActionEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RESPONSE-ON-EVENT-ACTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     response_on_event_class_ref: Optional[
         "DiagnosticResponseOnEvent.ResponseOnEventClassRef"
@@ -299,25 +300,25 @@ class DiagnosticResponseOnEvent:
 
     @dataclass
     class Events:
-        diagnostic_data_change_trigger: List[
-            DiagnosticDataChangeTrigger
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DIAGNOSTIC-DATA-CHANGE-TRIGGER",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        diagnostic_data_change_trigger: List[DiagnosticDataChangeTrigger] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DIAGNOSTIC-DATA-CHANGE-TRIGGER",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
-        diagnostic_dtc_change_trigger: List[
-            DiagnosticDtcChangeTrigger
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DIAGNOSTIC-DTC-CHANGE-TRIGGER",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        diagnostic_dtc_change_trigger: List[DiagnosticDtcChangeTrigger] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DIAGNOSTIC-DTC-CHANGE-TRIGGER",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

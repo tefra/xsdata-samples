@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .abstract_ring_type import AbstractRingType
 from .point_property import PointProperty
 from .pos import Pos

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -176,15 +177,15 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_events: Optional[
-        "DiagnosticTestResult.DiagnosticEvents"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DIAGNOSTIC-EVENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    diagnostic_events: Optional["DiagnosticTestResult.DiagnosticEvents"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DIAGNOSTIC-EVENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     event_ref: Optional["DiagnosticTestResult.EventRef"] = field(
         default=None,

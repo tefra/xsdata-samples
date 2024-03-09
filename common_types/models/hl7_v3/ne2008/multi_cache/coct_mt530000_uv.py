@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes import (
     IvlInt,
     IvlPq,
@@ -1462,16 +1463,16 @@ class CoctMt530000UvHealthCareFacility:
             "nillable": True,
         },
     )
-    service_provider_organization: Optional[
-        CoctMt530000UvOrganization
-    ] = field(
-        default=None,
-        metadata={
-            "name": "serviceProviderOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    service_provider_organization: Optional[CoctMt530000UvOrganization] = (
+        field(
+            default=None,
+            metadata={
+                "name": "serviceProviderOrganization",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -3276,16 +3277,16 @@ class CoctMt530000UvConsumable:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administerable_material: Optional[
-        CoctMt530000UvAdministerableMaterial
-    ] = field(
-        default=None,
-        metadata={
-            "name": "administerableMaterial",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    administerable_material: Optional[CoctMt530000UvAdministerableMaterial] = (
+        field(
+            default=None,
+            metadata={
+                "name": "administerableMaterial",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     medication: Optional[CoctMt230100UvMedication] = field(
         default=None,

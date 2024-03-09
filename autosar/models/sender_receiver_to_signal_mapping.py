@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
 )
@@ -119,15 +120,15 @@ class SenderReceiverToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_iref: Optional[
-        VariableDataPrototypeInSystemInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DATA-ELEMENT-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_element_iref: Optional[VariableDataPrototypeInSystemInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-ELEMENT-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sender_to_signal_text_table_mapping: Optional[TextTableMapping] = field(
         default=None,

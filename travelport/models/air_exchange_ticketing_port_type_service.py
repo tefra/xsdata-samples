@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.air_exchange_ticketing_port_type_service_input import (
     AirExchangeTicketingPortTypeServiceInput,
 )

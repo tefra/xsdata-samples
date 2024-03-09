@@ -1,6 +1,8 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
+
 from travelport.models.type_adjustment_target import TypeAdjustmentTarget
 from travelport.models.type_adjustment_type import TypeAdjustmentType
 

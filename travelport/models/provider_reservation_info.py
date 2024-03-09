@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
+
 from travelport.models.provider_reservation_details import (
     ProviderReservationDetails,
 )
@@ -78,7 +81,9 @@ class ProviderReservationInfo:
             "type": "Element",
         },
     )
-    provider_reservation_display_details_list: None | ProviderReservationDisplayDetailsList = field(
+    provider_reservation_display_details_list: (
+        None | ProviderReservationDisplayDetailsList
+    ) = field(
         default=None,
         metadata={
             "name": "ProviderReservationDisplayDetailsList",

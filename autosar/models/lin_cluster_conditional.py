@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .can_physical_channel import CanPhysicalChannel
 from .ethernet_physical_channel import EthernetPhysicalChannel
@@ -55,15 +56,15 @@ class LinClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: Optional[
-        "LinClusterConditional.PhysicalChannels"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PHYSICAL-CHANNELS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    physical_channels: Optional["LinClusterConditional.PhysicalChannels"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PHYSICAL-CHANNELS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     protocol_name: Optional[String] = field(
         default=None,
@@ -155,13 +156,13 @@ class LinClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_physical_channel: List[
-            UserDefinedPhysicalChannel
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "USER-DEFINED-PHYSICAL-CHANNEL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        user_defined_physical_channel: List[UserDefinedPhysicalChannel] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "USER-DEFINED-PHYSICAL-CHANNEL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

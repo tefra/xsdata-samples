@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .group_of_distance_matrix_elements import GroupOfDistanceMatrixElements
 from .group_of_distance_matrix_elements_ref import (

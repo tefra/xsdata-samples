@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import DocumentationBlock
 from .life_cycle_period import LifeCyclePeriod
 from .life_cycle_state_subtypes_enum import LifeCycleStateSubtypesEnum
@@ -138,15 +139,15 @@ class LifeCycleInfo:
 
     @dataclass
     class UseInsteadRefs:
-        use_instead_ref: List[
-            "LifeCycleInfo.UseInsteadRefs.UseInsteadRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "USE-INSTEAD-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        use_instead_ref: List["LifeCycleInfo.UseInsteadRefs.UseInsteadRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "USE-INSTEAD-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

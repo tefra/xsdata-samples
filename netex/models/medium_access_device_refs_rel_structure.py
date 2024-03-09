@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .emv_card_ref import EmvCardRef
 from .mobile_device_ref import MobileDeviceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure

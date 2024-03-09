@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .can_frame_tx_behavior_enum_simple import CanFrameTxBehaviorEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

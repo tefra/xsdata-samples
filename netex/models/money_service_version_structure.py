@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .local_service_version_structure import LocalServiceVersionStructure
 from .money_service_enumeration import MoneyServiceEnumeration
 

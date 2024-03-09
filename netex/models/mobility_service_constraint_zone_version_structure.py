@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
+
 from .car_pooling_service_ref import CarPoolingServiceRef
 from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
 from .online_service_ref import OnlineServiceRef
@@ -95,13 +96,13 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
             ),
         },
     )
-    vehicle_restrictions: Optional[
-        VehicleTypeZoneRestrictionsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "vehicleRestrictions",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    vehicle_restrictions: Optional[VehicleTypeZoneRestrictionsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "vehicleRestrictions",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

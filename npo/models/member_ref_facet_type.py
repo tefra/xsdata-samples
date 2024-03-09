@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.media_facet_type import MediaFacetType
 from npo.models.member_ref_search_type import MemberRefSearchType
 

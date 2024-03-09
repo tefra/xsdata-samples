@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .path_link_in_sequence_versioned_child_structure import (
     PathLinkInSequenceVersionedChildStructure,
 )

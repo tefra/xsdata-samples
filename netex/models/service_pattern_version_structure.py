@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .destination_display_ref import DestinationDisplayRef
 from .destination_display_view import DestinationDisplayView
 from .direction_ref import DirectionRef
@@ -176,23 +177,23 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_in_sequence: Optional[
-        StopPointsInJourneyPatternRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "pointsInSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    points_in_sequence: Optional[StopPointsInJourneyPatternRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "pointsInSequence",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
-    links_in_sequence: Optional[
-        ServiceLinksInJourneyPatternRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "linksInSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    links_in_sequence: Optional[ServiceLinksInJourneyPatternRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "linksInSequence",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

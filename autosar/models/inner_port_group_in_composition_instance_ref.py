@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .port_group_subtypes_enum import PortGroupSubtypesEnum
 from .ref import Ref
 from .sw_component_prototype_subtypes_enum import (
@@ -32,15 +33,15 @@ class InnerPortGroupInCompositionInstanceRef:
     class Meta:
         name = "INNER-PORT-GROUP-IN-COMPOSITION-INSTANCE-REF"
 
-    context_ref: List[
-        "InnerPortGroupInCompositionInstanceRef.ContextRef"
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "CONTEXT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    context_ref: List["InnerPortGroupInCompositionInstanceRef.ContextRef"] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "CONTEXT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     target_ref: Optional[
         "InnerPortGroupInCompositionInstanceRef.TargetRef"

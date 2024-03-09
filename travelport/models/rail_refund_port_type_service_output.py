@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.rail_refund_rsp import RailRefundRsp
 
@@ -61,7 +63,9 @@ class RailRefundPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | RailRefundPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | RailRefundPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

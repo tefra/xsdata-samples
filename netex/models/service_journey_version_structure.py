@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDuration, XmlTime
+
 from .block_ref import BlockRef
 from .calls_rel_structure import CallsRelStructure
 from .check_constraints_rel_structure import CheckConstraintsRelStructure

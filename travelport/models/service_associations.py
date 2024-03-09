@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.optional_service_ref import OptionalServiceRef
 from travelport.models.response_message_1 import ResponseMessage1
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .administrative_zones_rel_structure import AdministrativeZonesRelStructure
 from .authority_ref import AuthorityRef
 from .contact_structure import ContactStructure
@@ -180,15 +181,15 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    delegated_responsibility_sets: Optional[
-        ResponsibilitySetsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "delegatedResponsibilitySets",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    delegated_responsibility_sets: Optional[ResponsibilitySetsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "delegatedResponsibilitySets",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     delegated_from: Optional[OrganisationRefsRelStructure] = field(
         default=None,

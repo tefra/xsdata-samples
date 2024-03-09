@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .crypto_certificate_subtypes_enum import CryptoCertificateSubtypesEnum
 from .crypto_key_slot_subtypes_enum import CryptoKeySlotSubtypesEnum
 from .ref import Ref

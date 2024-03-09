@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.available_discount import AvailableDiscount
 from travelport.models.baggage_restriction import BaggageRestriction
 

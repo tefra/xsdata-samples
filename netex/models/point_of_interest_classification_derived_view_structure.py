@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .derived_view_structure import DerivedViewStructure
 from .multilingual_string import MultilingualString
 from .point_of_interest_classification_ref import (

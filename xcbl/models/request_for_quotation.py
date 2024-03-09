@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.shipping_schedule import ListOfPackageDetail
 from xcbl.models.shipping_schedule_response import (
     OrderType,
@@ -1283,14 +1284,14 @@ class RequestQuoteDetails:
             "type": "Element",
         },
     )
-    request_quote_delivery_detail: Optional[
-        RequestQuoteDeliveryDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RequestQuoteDeliveryDetail",
-            "type": "Element",
-        },
+    request_quote_delivery_detail: Optional[RequestQuoteDeliveryDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RequestQuoteDeliveryDetail",
+                "type": "Element",
+            },
+        )
     )
     request_quote_item_list_of_attachment: Optional[
         RequestQuoteItemListOfAttachment
@@ -1340,14 +1341,14 @@ class RequestQuoteReference:
             "type": "Element",
         },
     )
-    other_request_quote_references: Optional[
-        OtherRequestQuoteReferences
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OtherRequestQuoteReferences",
-            "type": "Element",
-        },
+    other_request_quote_references: Optional[OtherRequestQuoteReferences] = (
+        field(
+            default=None,
+            metadata={
+                "name": "OtherRequestQuoteReferences",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -1639,23 +1640,23 @@ class RequestQuoteHeader:
             "type": "Element",
         },
     )
-    request_quote_terms_of_payment: Optional[
-        RequestQuoteTermsOfPayment
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RequestQuoteTermsOfPayment",
-            "type": "Element",
-        },
+    request_quote_terms_of_payment: Optional[RequestQuoteTermsOfPayment] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RequestQuoteTermsOfPayment",
+                "type": "Element",
+            },
+        )
     )
-    request_quote_terms_of_delivery: Optional[
-        RequestQuoteTermsOfDelivery
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RequestQuoteTermsOfDelivery",
-            "type": "Element",
-        },
+    request_quote_terms_of_delivery: Optional[RequestQuoteTermsOfDelivery] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RequestQuoteTermsOfDelivery",
+                "type": "Element",
+            },
+        )
     )
     request_quote_tax: Optional[RequestQuoteTax] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .multilingual_string import MultilingualString
 from .vehicle_model_profile_version_structure import (
     VehicleModelProfileVersionStructure,

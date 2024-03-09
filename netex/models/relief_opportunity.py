@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .relief_opportunity_version_structure import (
     ReliefOpportunityVersionStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .boolean import Boolean
 from .flexray_ar_tp_connection import FlexrayArTpConnection
@@ -175,15 +176,15 @@ class FlexrayArTpChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_ref: Optional[
-        "FlexrayArTpChannel.FlowControlPduRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FLOW-CONTROL-PDU-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    flow_control_pdu_ref: Optional["FlexrayArTpChannel.FlowControlPduRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FLOW-CONTROL-PDU-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     max_ar: Optional[Integer] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from voko.models.art import Art
 from voko.models.epilogo import Epilogo
 from voko.models.precipa_parto import PrecipaParto

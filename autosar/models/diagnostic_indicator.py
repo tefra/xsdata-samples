@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -173,15 +174,15 @@ class DiagnosticIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_value: Optional[
-        DiagnosticIndicatorTypeEnumValueVariationPoint
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TYPE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    type_value: Optional[DiagnosticIndicatorTypeEnumValueVariationPoint] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TYPE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

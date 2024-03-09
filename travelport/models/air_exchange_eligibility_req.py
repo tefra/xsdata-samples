@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
@@ -22,7 +24,9 @@ class AirExchangeEligibilityReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    provider_reservation_info: None | AirExchangeEligibilityReq.ProviderReservationInfo = field(
+    provider_reservation_info: (
+        None | AirExchangeEligibilityReq.ProviderReservationInfo
+    ) = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfo",

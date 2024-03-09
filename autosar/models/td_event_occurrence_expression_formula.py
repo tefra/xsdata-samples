@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from .autosar_operation_argument_instance_subtypes_enum import (
     AutosarOperationArgumentInstanceSubtypesEnum,
 )

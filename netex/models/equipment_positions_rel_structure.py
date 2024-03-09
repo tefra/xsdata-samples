@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .equipment_position import EquipmentPosition
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

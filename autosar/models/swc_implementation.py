@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -180,15 +181,15 @@ class SwcImplementation:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SwcImplementation.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["SwcImplementation.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -272,15 +273,15 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    generated_artifacts: Optional[
-        "SwcImplementation.GeneratedArtifacts"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "GENERATED-ARTIFACTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    generated_artifacts: Optional["SwcImplementation.GeneratedArtifacts"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "GENERATED-ARTIFACTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     hw_element_refs: Optional["SwcImplementation.HwElementRefs"] = field(
         default=None,
@@ -314,15 +315,15 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_artifacts: Optional[
-        "SwcImplementation.RequiredArtifacts"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "REQUIRED-ARTIFACTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    required_artifacts: Optional["SwcImplementation.RequiredArtifacts"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "REQUIRED-ARTIFACTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     required_generator_tools: Optional[
         "SwcImplementation.RequiredGeneratorTools"
@@ -350,15 +351,15 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_bsw_mapping_ref: Optional[
-        "SwcImplementation.SwcBswMappingRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SWC-BSW-MAPPING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    swc_bsw_mapping_ref: Optional["SwcImplementation.SwcBswMappingRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SWC-BSW-MAPPING-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     used_code_generator: Optional[String] = field(
         default=None,

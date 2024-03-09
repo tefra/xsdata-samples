@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -159,15 +160,15 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticReadDataByIdentifier.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["DiagnosticReadDataByIdentifier.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -197,15 +198,15 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    read_class_ref: Optional[
-        "DiagnosticReadDataByIdentifier.ReadClassRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "READ-CLASS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    read_class_ref: Optional["DiagnosticReadDataByIdentifier.ReadClassRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "READ-CLASS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,
@@ -276,13 +277,13 @@ class DiagnosticReadDataByIdentifier:
 
     @dataclass
     class ReadClassRef(Ref):
-        dest: Optional[
-            DiagnosticReadDataByIdentifierClassSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[DiagnosticReadDataByIdentifierClassSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

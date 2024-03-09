@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .severity_enum_simple import SeverityEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

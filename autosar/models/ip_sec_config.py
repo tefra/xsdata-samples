@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .ip_sec_config_props_subtypes_enum import IpSecConfigPropsSubtypesEnum
 from .ip_sec_rule import IpSecRule
 from .ref import Ref
@@ -33,15 +34,15 @@ class IpSecConfig:
     class Meta:
         name = "IP-SEC-CONFIG"
 
-    ip_sec_config_props_ref: Optional[
-        "IpSecConfig.IpSecConfigPropsRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "IP-SEC-CONFIG-PROPS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ip_sec_config_props_ref: Optional["IpSecConfig.IpSecConfigPropsRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "IP-SEC-CONFIG-PROPS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ip_sec_rules: Optional["IpSecConfig.IpSecRules"] = field(
         default=None,

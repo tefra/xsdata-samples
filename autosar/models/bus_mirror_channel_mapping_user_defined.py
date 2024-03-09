@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -158,15 +159,15 @@ class BusMirrorChannelMappingUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "BusMirrorChannelMappingUserDefined.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["BusMirrorChannelMappingUserDefined.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -257,13 +258,13 @@ class BusMirrorChannelMappingUserDefined:
 
     @dataclass
     class TargetPduTriggerings:
-        pdu_triggering_ref_conditional: List[
-            PduTriggeringRefConditional
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PDU-TRIGGERING-REF-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        pdu_triggering_ref_conditional: List[PduTriggeringRefConditional] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PDU-TRIGGERING-REF-CONDITIONAL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

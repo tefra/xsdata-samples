@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .parking_bay_status_enumeration import ParkingBayStatusEnumeration
 from .parking_bay_status_ref import ParkingBayStatusRef
 from .vehicle_sharing_parking_bay_version_structure import (

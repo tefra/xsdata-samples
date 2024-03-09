@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .autosar_data_type_subtypes_enum import AutosarDataTypeSubtypesEnum
 from .ref import Ref

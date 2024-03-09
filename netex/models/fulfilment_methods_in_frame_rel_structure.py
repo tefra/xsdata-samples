@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .frame_containment_structure import FrameContainmentStructure
 from .fulfilment_method import FulfilmentMethod
 

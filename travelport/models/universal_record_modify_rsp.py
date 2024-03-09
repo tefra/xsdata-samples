@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_solution_changed_info import AirSolutionChangedInfo
 from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.universal_modify_failure_info import (

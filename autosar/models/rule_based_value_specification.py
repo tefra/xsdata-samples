@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .identifier import Identifier
 from .integer import Integer
 from .rule_arguments import RuleArguments

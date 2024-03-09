@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -203,15 +204,15 @@ class DiagnosticIoControlNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    current_value_ref: Optional[
-        "DiagnosticIoControlNeeds.CurrentValueRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CURRENT-VALUE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    current_value_ref: Optional["DiagnosticIoControlNeeds.CurrentValueRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CURRENT-VALUE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     did_number: Optional[PositiveInteger] = field(
         default=None,

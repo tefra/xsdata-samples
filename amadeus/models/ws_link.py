@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 __NAMESPACE__ = "http://wsdl.amadeus.com/2010/06/ws/Link_v1"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .authority_ref import AuthorityRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .operator_ref import OperatorRef

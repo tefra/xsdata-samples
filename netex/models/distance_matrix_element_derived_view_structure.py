@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .derived_view_structure import DerivedViewStructure
 from .multilingual_string import MultilingualString
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure

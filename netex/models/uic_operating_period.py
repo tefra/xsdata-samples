@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .uic_operating_period_version_structure import (
     UicOperatingPeriodVersionStructure,
 )

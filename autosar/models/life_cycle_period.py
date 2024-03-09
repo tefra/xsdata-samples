@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .date import Date
 from .revision_label_string import RevisionLabelString
 

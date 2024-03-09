@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .ticket_validator_equipment_version_structure import (
     TicketValidatorEquipmentVersionStructure,
 )

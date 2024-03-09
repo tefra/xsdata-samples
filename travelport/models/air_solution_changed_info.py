@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_pricing_solution import AirPricingSolution
 from travelport.models.air_solution_changed_info_reason_code import (
     AirSolutionChangedInfoReasonCode,

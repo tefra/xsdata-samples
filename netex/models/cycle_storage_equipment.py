@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .cycle_storage_equipment_version_structure import (
     CycleStorageEquipmentVersionStructure,
 )

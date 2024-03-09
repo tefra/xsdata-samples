@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_fare_pull_1 import TypeFarePull1
 from travelport.models.type_fee_info_1 import TypeFeeInfo1
 from travelport.models.type_form_of_refund import TypeFormOfRefund

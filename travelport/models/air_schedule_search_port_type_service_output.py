@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.schedule_search_rsp import ScheduleSearchRsp
 
@@ -63,7 +65,9 @@ class AirScheduleSearchPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirScheduleSearchPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | AirScheduleSearchPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .bsw_execution_context_simple import BswExecutionContextSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

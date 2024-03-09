@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .entity_structure import EntityStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

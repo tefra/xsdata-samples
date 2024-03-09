@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .acl_scope_enum import AclScopeEnum
 from .admin_data import (
     AdminData,
@@ -260,25 +261,25 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    object_definition_refs: Optional[
-        "AclObjectSet.ObjectDefinitionRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OBJECT-DEFINITION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    object_definition_refs: Optional["AclObjectSet.ObjectDefinitionRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "OBJECT-DEFINITION-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    object_defintion_refs: Optional[
-        "AclObjectSet.ObjectDefintionRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OBJECT-DEFINTION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    object_defintion_refs: Optional["AclObjectSet.ObjectDefintionRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "OBJECT-DEFINTION-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     object_refs: Optional["AclObjectSet.ObjectRefs"] = field(
         default=None,
@@ -343,15 +344,15 @@ class AclObjectSet:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,

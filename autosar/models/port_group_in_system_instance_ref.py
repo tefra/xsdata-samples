@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .port_group_subtypes_enum import PortGroupSubtypesEnum
 from .ref import Ref
 from .root_sw_composition_prototype_subtypes_enum import (

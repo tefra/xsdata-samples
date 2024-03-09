@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_add import AirAdd
 from travelport.models.air_delete import AirDelete
 from travelport.models.air_update import AirUpdate

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .topic_1 import Topic1
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

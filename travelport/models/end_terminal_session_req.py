@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_4 import BaseReq4
 from travelport.models.host_token_3 import HostToken3
 

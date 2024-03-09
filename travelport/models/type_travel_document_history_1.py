@@ -1,7 +1,10 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.type_geo_political_area_type_1 import (
     TypeGeoPoliticalAreaType1,
 )

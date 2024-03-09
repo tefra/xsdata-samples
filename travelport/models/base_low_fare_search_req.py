@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_exchange_modifiers import AirExchangeModifiers
 from travelport.models.air_pricing_modifiers import AirPricingModifiers
 from travelport.models.base_air_search_req import BaseAirSearchReq

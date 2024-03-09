@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .refuelling_equipment_version_structure import (
     RefuellingEquipmentVersionStructure,
 )

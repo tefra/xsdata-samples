@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.individual_role_type import (
     IndividualRoleType,
 )

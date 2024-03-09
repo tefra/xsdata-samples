@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.group_of_locations import GroupOfLocations
 from datexii.models.eu.datexii.v2.time_precision_enum import TimePrecisionEnum
@@ -62,12 +64,12 @@ class BasicData:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_or_calculated_time_precision: Optional[
-        TimePrecisionEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "measurementOrCalculatedTimePrecision",
-            "type": "Attribute",
-        },
+    measurement_or_calculated_time_precision: Optional[TimePrecisionEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "measurementOrCalculatedTimePrecision",
+                "type": "Attribute",
+            },
+        )
     )

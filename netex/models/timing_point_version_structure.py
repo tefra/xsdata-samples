@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .point_version_structure import PointVersionStructure
 from .timing_point_status_enumeration import TimingPointStatusEnumeration
 

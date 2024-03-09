@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .companion_profile_version_structure import (
     CompanionProfileVersionStructure,
 )

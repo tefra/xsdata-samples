@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .point_of_interest_classification_hierarchy_version_structure import (
     PointOfInterestClassificationHierarchyVersionStructure,
 )

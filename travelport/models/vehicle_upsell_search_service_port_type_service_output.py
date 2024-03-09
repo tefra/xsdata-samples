@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.vehicle_upsell_search_availability_rsp import (
     VehicleUpsellSearchAvailabilityRsp,
@@ -24,7 +26,9 @@ class VehicleUpsellSearchServicePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        vehicle_upsell_search_availability_rsp: None | VehicleUpsellSearchAvailabilityRsp = field(
+        vehicle_upsell_search_availability_rsp: (
+            None | VehicleUpsellSearchAvailabilityRsp
+        ) = field(
             default=None,
             metadata={
                 "name": "VehicleUpsellSearchAvailabilityRsp",
@@ -32,7 +36,9 @@ class VehicleUpsellSearchServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             },
         )
-        fault: None | VehicleUpsellSearchServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | VehicleUpsellSearchServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class VehicleUpsellSearchServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | VehicleUpsellSearchServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | VehicleUpsellSearchServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -181,25 +182,25 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_connectors: Optional[
-        "EthernetPhysicalChannel.CommConnectors"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "COMM-CONNECTORS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    comm_connectors: Optional["EthernetPhysicalChannel.CommConnectors"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMM-CONNECTORS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    frame_triggerings: Optional[
-        "EthernetPhysicalChannel.FrameTriggerings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FRAME-TRIGGERINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    frame_triggerings: Optional["EthernetPhysicalChannel.FrameTriggerings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FRAME-TRIGGERINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     i_signal_triggerings: Optional[
         "EthernetPhysicalChannel.ISignalTriggerings"
@@ -221,15 +222,15 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: Optional[
-        "EthernetPhysicalChannel.PduTriggerings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PDU-TRIGGERINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    pdu_triggerings: Optional["EthernetPhysicalChannel.PduTriggerings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PDU-TRIGGERINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -239,15 +240,15 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_endpoints: Optional[
-        "EthernetPhysicalChannel.NetworkEndpoints"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "NETWORK-ENDPOINTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    network_endpoints: Optional["EthernetPhysicalChannel.NetworkEndpoints"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "NETWORK-ENDPOINTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     so_ad_config: Optional[SoAdConfig] = field(
         default=None,

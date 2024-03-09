@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .route_instruction import RouteInstruction
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

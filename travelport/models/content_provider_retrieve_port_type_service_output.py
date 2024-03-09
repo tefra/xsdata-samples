@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.content_provider_retrieve_rsp import (
     ContentProviderRetrieveRsp,
 )
@@ -34,7 +36,9 @@ class ContentProviderRetrievePortTypeServiceOutput:
                 },
             )
         )
-        fault: None | ContentProviderRetrievePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | ContentProviderRetrievePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -65,7 +69,10 @@ class ContentProviderRetrievePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ContentProviderRetrievePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | ContentProviderRetrievePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

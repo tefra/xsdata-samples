@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .vehicle_access_facility_enumeration import (
     VehicleAccessFacilityEnumeration,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_handle_dddi_configuration_enum_simple import (
     DiagnosticHandleDddiConfigurationEnumSimple,
 )

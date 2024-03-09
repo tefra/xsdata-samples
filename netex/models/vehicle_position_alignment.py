@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_position_alignment_version_structure import (
     VehiclePositionAlignmentVersionStructure,
 )

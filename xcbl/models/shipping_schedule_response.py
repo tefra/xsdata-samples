@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.sourcing_result import (
     BillToParty,
     BuyerParty,
@@ -36,8 +37,8 @@ from xcbl.models.sourcing_result import (
     ServiceLevelCoded,
     ServiceLevelCodedOther,
     ShipFromParty,
-    ShipToParty,
     ShippingInstructions,
+    ShipToParty,
     TermsOfDelivery,
     TotalQuantity,
     TransitDirection,
@@ -710,14 +711,14 @@ class RequestedResponse:
             "required": True,
         }
     )
-    requested_response_coded_other: Optional[
-        RequestedResponseCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RequestedResponseCodedOther",
-            "type": "Element",
-        },
+    requested_response_coded_other: Optional[RequestedResponseCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RequestedResponseCodedOther",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -1519,14 +1520,14 @@ class ShippingScheduleHeader:
             "required": True,
         }
     )
-    quantity_qualifier_coded_other: Optional[
-        QuantityQualifierCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "QuantityQualifierCodedOther",
-            "type": "Element",
-        },
+    quantity_qualifier_coded_other: Optional[QuantityQualifierCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "QuantityQualifierCodedOther",
+                "type": "Element",
+            },
+        )
     )
     validity_dates: Optional[ValidityDates] = field(
         default=None,
@@ -1563,14 +1564,14 @@ class ShippingScheduleHeader:
             "required": True,
         }
     )
-    shipping_schedule_header_note: Optional[
-        ShippingScheduleHeaderNote
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ShippingScheduleHeaderNote",
-            "type": "Element",
-        },
+    shipping_schedule_header_note: Optional[ShippingScheduleHeaderNote] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ShippingScheduleHeaderNote",
+                "type": "Element",
+            },
+        )
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
@@ -1737,14 +1738,14 @@ class BaseShippingDetail:
             "required": True,
         }
     )
-    forecast_frequency_coded_other: Optional[
-        ForecastFrequencyCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ForecastFrequencyCodedOther",
-            "type": "Element",
-        },
+    forecast_frequency_coded_other: Optional[ForecastFrequencyCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ForecastFrequencyCodedOther",
+                "type": "Element",
+            },
+        )
     )
     item_quantities: Optional[ItemQuantities] = field(
         default=None,
@@ -1760,14 +1761,14 @@ class BaseShippingDetail:
             "type": "Element",
         },
     )
-    item_release_status_coded_other: Optional[
-        ItemReleaseStatusCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ItemReleaseStatusCodedOther",
-            "type": "Element",
-        },
+    item_release_status_coded_other: Optional[ItemReleaseStatusCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ItemReleaseStatusCodedOther",
+                "type": "Element",
+            },
+        )
     )
     item_packaging_reference: List[ItemPackagingReference] = field(
         default_factory=list,

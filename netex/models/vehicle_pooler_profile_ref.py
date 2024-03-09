@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_pooler_profile_ref_structure import (
     VehiclePoolerProfileRefStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from crossref.models.gov.nih.nlm.ncbi.jats1.resource_id import ResourceId
 from crossref.models.gov.nih.nlm.ncbi.jats1.resource_name import ResourceName
 

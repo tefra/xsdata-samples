@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -202,15 +203,15 @@ class DiagnosticOperationCyclePortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: Optional[
-        "DiagnosticOperationCyclePortMapping.ProcessRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PROCESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    process_ref: Optional["DiagnosticOperationCyclePortMapping.ProcessRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PROCESS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     swc_flat_service_dependency_ref: Optional[
         "DiagnosticOperationCyclePortMapping.SwcFlatServiceDependencyRef"

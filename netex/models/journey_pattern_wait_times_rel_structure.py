@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .journey_pattern_wait_time import JourneyPatternWaitTime
 from .journey_pattern_wait_time_ref import JourneyPatternWaitTimeRef
 from .strict_containment_aggregation_structure import (

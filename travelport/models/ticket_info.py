@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime
+
 from travelport.models.conjuncted_ticket_info import ConjunctedTicketInfo
 from travelport.models.exchanged_ticket_info import ExchangedTicketInfo
 from travelport.models.name_1 import Name1

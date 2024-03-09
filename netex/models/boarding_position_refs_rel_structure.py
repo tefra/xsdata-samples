@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .boarding_position_ref import BoardingPositionRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 

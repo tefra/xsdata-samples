@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .parking_capacity import ParkingCapacity
 from .parking_capacity_ref import ParkingCapacityRef

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .acl_scope_enum_simple import AclScopeEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

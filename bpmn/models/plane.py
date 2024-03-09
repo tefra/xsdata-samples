@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .bpmnedge import Bpmnedge
 from .bpmnshape import Bpmnshape
 from .diagram_element import DiagramElement

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .platform_module_ethernet_endpoint_configuration_subtypes_enum import (
     PlatformModuleEthernetEndpointConfigurationSubtypesEnum,

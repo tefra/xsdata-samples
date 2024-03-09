@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.area_extended import AreaExtended
 from datexii.models.eu.datexii.v2.openlr_extended_area import (
     OpenlrExtendedArea,

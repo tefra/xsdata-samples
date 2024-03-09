@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.named_area import NamedArea
 from datexii.models.eu.datexii.v2.polygon_area import PolygonArea
 

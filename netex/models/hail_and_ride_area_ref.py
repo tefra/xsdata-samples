@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .hail_and_ride_area_ref_structure import HailAndRideAreaRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

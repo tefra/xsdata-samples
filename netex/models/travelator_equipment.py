@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .travelator_equipment_version_structure import (
     TravelatorEquipmentVersionStructure,
 )

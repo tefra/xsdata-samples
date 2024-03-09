@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.cabin_class_4 import CabinClass4
 from travelport.models.seat_attributes_4 import SeatAttributes4
 from travelport.models.type_key_based_reference_4 import TypeKeyBasedReference4

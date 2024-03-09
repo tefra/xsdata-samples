@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -153,15 +154,15 @@ class DiagnosticIndicatorPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticIndicatorPortMapping.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["DiagnosticIndicatorPortMapping.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -171,15 +172,15 @@ class DiagnosticIndicatorPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    indicator_ref: Optional[
-        "DiagnosticIndicatorPortMapping.IndicatorRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "INDICATOR-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    indicator_ref: Optional["DiagnosticIndicatorPortMapping.IndicatorRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "INDICATOR-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     process_ref: Optional["DiagnosticIndicatorPortMapping.ProcessRef"] = field(
         default=None,

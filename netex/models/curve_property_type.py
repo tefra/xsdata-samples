@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .line_string import LineString
 from .nil_reason_enumeration_value import NilReasonEnumerationValue
 

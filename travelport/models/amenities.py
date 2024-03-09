@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.amenity import Amenity
 
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"

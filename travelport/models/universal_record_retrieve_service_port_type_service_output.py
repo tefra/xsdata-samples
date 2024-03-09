@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.universal_record_error_info import (
     UniversalRecordErrorInfo,
@@ -29,15 +31,20 @@ class UniversalRecordRetrieveServicePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        universal_record_retrieve_rsp: None | UniversalRecordRetrieveRsp = field(
-            default=None,
-            metadata={
-                "name": "UniversalRecordRetrieveRsp",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            },
+        universal_record_retrieve_rsp: None | UniversalRecordRetrieveRsp = (
+            field(
+                default=None,
+                metadata={
+                    "name": "UniversalRecordRetrieveRsp",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/universal_v52_0",
+                },
+            )
         )
-        fault: None | UniversalRecordRetrieveServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None
+            | UniversalRecordRetrieveServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -68,7 +75,10 @@ class UniversalRecordRetrieveServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | UniversalRecordRetrieveServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | UniversalRecordRetrieveServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -86,7 +96,9 @@ class UniversalRecordRetrieveServicePortTypeServiceOutput:
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
                     },
                 )
-                universal_record_error_info: None | UniversalRecordErrorInfo = field(
+                universal_record_error_info: (
+                    None | UniversalRecordErrorInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "UniversalRecordErrorInfo",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .type_of_payment_method_ref import TypeOfPaymentMethodRef
 

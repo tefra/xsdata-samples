@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlTime
+
 from travelport.models.connection import Connection
 from travelport.models.type_days_of_operation import TypeDaysOfOperation
 

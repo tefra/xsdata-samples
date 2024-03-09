@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_exchange_multi_quote_rsp import (
     AirExchangeMultiQuoteRsp,
 )
@@ -65,7 +67,10 @@ class AirExchangeMultiQuotePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirExchangeMultiQuotePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | AirExchangeMultiQuotePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

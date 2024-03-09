@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .distribution_assignment import DistributionAssignment
 from .frame_containment_structure import FrameContainmentStructure
 

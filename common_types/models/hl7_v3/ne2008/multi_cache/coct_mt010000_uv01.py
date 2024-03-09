@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     AdExplicit,
     Bl,
@@ -1114,16 +1115,16 @@ class CoctMt010000Uv01ResponsibleParty1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_organization: Optional[
-        CoctMt090200Uv01AssignedOrganization
-    ] = field(
-        default=None,
-        metadata={
-            "name": "assignedOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    assigned_organization: Optional[CoctMt090200Uv01AssignedOrganization] = (
+        field(
+            default=None,
+            metadata={
+                "name": "assignedOrganization",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -1452,16 +1453,16 @@ class CoctMt010000Uv01ServiceDeliveryLocation:
             "nillable": True,
         },
     )
-    service_provider_organization: Optional[
-        CoctMt150000Uv02Organization
-    ] = field(
-        default=None,
-        metadata={
-            "name": "serviceProviderOrganization",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    service_provider_organization: Optional[CoctMt150000Uv02Organization] = (
+        field(
+            default=None,
+            metadata={
+                "name": "serviceProviderOrganization",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     location_of: List[CoctMt010000Uv01Location3] = field(
         default_factory=list,
@@ -1827,27 +1828,27 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    pertinent_information1: List[
-        CoctMt010000Uv01PertinentInformation2
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "pertinentInformation1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information1: List[CoctMt010000Uv01PertinentInformation2] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "pertinentInformation1",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    pertinent_information2: List[
-        CoctMt010000Uv01PertinentInformation3
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "pertinentInformation2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information2: List[CoctMt010000Uv01PertinentInformation3] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "pertinentInformation2",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     transported_by: List[CoctMt010000Uv01TransportedBy] = field(
         default_factory=list,

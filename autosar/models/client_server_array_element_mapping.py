@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .application_record_element_subtypes_enum import (
     ApplicationRecordElementSubtypesEnum,
 )
@@ -407,15 +408,15 @@ class ClientServerRecordTypeMapping:
     class Meta:
         name = "CLIENT-SERVER-RECORD-TYPE-MAPPING"
 
-    argument_ref: Optional[
-        "ClientServerRecordTypeMapping.ArgumentRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ARGUMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    argument_ref: Optional["ClientServerRecordTypeMapping.ArgumentRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ARGUMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     record_element_mappings: Optional[
         "ClientServerRecordTypeMapping.RecordElementMappings"

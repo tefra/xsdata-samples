@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_segment_error import AirSegmentError
 from travelport.models.type_error_info_1 import TypeErrorInfo1
 

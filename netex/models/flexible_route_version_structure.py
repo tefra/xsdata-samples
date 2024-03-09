@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .flexible_route_type_enumeration import FlexibleRouteTypeEnumeration
 from .route_version_structure import RouteVersionStructure
 

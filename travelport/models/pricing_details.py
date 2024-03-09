@@ -1,7 +1,10 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.type_form_of_refund import TypeFormOfRefund
 from travelport.models.type_itinerary_code import TypeItineraryCode
 from travelport.models.type_pricing_type import TypePricingType

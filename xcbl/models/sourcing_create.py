@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.sourcing_create_response import (
     ItemNumber,
     ParentItemIdentifier,
@@ -846,14 +847,14 @@ class VisibilityOfBuyer:
             "type": "Element",
         },
     )
-    alternative_buyer_contact_name: Optional[
-        AlternativeBuyerContactName
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AlternativeBuyerContactName",
-            "type": "Element",
-        },
+    alternative_buyer_contact_name: Optional[AlternativeBuyerContactName] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AlternativeBuyerContactName",
+                "type": "Element",
+            },
+        )
     )
     alternative_contact_phone_number: Optional[
         AlternativeContactPhoneNumber
@@ -871,14 +872,14 @@ class VisibilityOfBuyer:
             "type": "Element",
         },
     )
-    alternative_contact_fax_number: Optional[
-        AlternativeContactFaxNumber
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AlternativeContactFaxNumber",
-            "type": "Element",
-        },
+    alternative_contact_fax_number: Optional[AlternativeContactFaxNumber] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AlternativeContactFaxNumber",
+                "type": "Element",
+            },
+        )
     )
     alternative_contact_email: Optional[AlternativeContactEmail] = field(
         default=None,
@@ -1110,14 +1111,14 @@ class SourcingAttribute:
             "required": True,
         }
     )
-    sourcing_attribute_description: Optional[
-        SourcingAttributeDescription
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SourcingAttributeDescription",
-            "type": "Element",
-        },
+    sourcing_attribute_description: Optional[SourcingAttributeDescription] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SourcingAttributeDescription",
+                "type": "Element",
+            },
+        )
     )
     sourcing_attribute_data_type_coded: SourcingAttributeDataTypeCoded = field(
         metadata={
@@ -1184,14 +1185,14 @@ class SourcingAttribute:
             "required": True,
         }
     )
-    sourcing_attribute_field_size: Optional[
-        SourcingAttributeFieldSize
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SourcingAttributeFieldSize",
-            "type": "Element",
-        },
+    sourcing_attribute_field_size: Optional[SourcingAttributeFieldSize] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SourcingAttributeFieldSize",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -1651,14 +1652,14 @@ class SourcingCreateHeader:
             "required": True,
         }
     )
-    sourcing_create_general_notes: Optional[
-        SourcingCreateGeneralNotes
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SourcingCreateGeneralNotes",
-            "type": "Element",
-        },
+    sourcing_create_general_notes: Optional[SourcingCreateGeneralNotes] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SourcingCreateGeneralNotes",
+                "type": "Element",
+            },
+        )
     )
     sourcing_create_list_of_attachment: Optional[
         SourcingCreateListOfAttachment

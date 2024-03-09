@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .activation_link_ref import ActivationLinkRef
 from .entity_in_version_structure import VersionedChildStructure
 from .flexible_link_type_enumeration import FlexibleLinkTypeEnumeration

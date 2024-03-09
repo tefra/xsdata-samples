@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.accounting_remark_6 import AccountingRemark6
 from travelport.models.general_remark_6 import GeneralRemark6
 from travelport.models.passive_info_6 import PassiveInfo6

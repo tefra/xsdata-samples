@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .accesses_in_frame_rel_structure import AccessesInFrameRelStructure
 from .addresses_in_frame_rel_structure import AddressesInFrameRelStructure
 from .check_constraint_delays_in_frame_rel_structure import (
@@ -82,15 +83,15 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_stop_places: Optional[
-        GroupsOfStopPlacesInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "groupsOfStopPlaces",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    groups_of_stop_places: Optional[GroupsOfStopPlacesInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "groupsOfStopPlaces",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     stop_places: Optional[StopPlacesInFrameRelStructure] = field(
         default=None,
@@ -100,15 +101,15 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_stop_places: Optional[
-        FlexibleStopPlacesInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "flexibleStopPlaces",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    flexible_stop_places: Optional[FlexibleStopPlacesInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "flexibleStopPlaces",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     points_of_interest: Optional[PointsOfInterestInFrameRelStructure] = field(
         default=None,

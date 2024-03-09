@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .interchange_rule_filter import InterchangeRuleFilter
 

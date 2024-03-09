@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .transport_organisation_version_structure import (
     TransportOrganisationVersionStructure,
 )

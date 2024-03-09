@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .passenger_information_facility_enumeration import (
     PassengerInformationFacilityEnumeration,
 )

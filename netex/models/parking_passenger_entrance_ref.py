@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .parking_passenger_entrance_ref_structure import (
     ParkingPassengerEntranceRefStructure,
 )

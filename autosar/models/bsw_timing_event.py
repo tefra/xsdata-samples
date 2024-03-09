@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -114,15 +115,15 @@ class BswTimingEvent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswTimingEvent.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["BswTimingEvent.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -192,15 +193,15 @@ class BswTimingEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_in_mode_irefs: Optional[
-        "BswTimingEvent.DisabledInModeIrefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DISABLED-IN-MODE-IREFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    disabled_in_mode_irefs: Optional["BswTimingEvent.DisabledInModeIrefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DISABLED-IN-MODE-IREFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     starts_on_event_ref: Optional["BswTimingEvent.StartsOnEventRef"] = field(
         default=None,
@@ -308,15 +309,15 @@ class BswTimingEvent:
 
     @dataclass
     class DisabledInModeIrefs:
-        disabled_in_mode_iref: List[
-            ModeInBswModuleDescriptionInstanceRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DISABLED-IN-MODE-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        disabled_in_mode_iref: List[ModeInBswModuleDescriptionInstanceRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DISABLED-IN-MODE-IREF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

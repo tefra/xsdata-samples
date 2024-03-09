@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .journey_pattern_run_time import JourneyPatternRunTime
 from .journey_pattern_run_time_ref import JourneyPatternRunTimeRef
 from .strict_containment_aggregation_structure import (

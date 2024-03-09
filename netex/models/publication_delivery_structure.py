@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime, XmlDuration
+
 from .data_objects_rel_structure import DataObjectsRelStructure
 from .multilingual_string import MultilingualString
 from .participant_ref import ParticipantRef

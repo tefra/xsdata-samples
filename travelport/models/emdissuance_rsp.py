@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.emdinfo import Emdinfo
 from travelport.models.emdsummary_info import EmdsummaryInfo

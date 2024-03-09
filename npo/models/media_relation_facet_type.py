@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.extended_media_facet_type import ExtendedMediaFacetType
 from npo.models.media_relation_search_type import MediaRelationSearchType
 

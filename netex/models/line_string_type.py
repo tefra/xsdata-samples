@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .abstract_curve_type import AbstractCurveType
 from .point_property import PointProperty
 from .pos import Pos

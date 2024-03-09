@@ -1,9 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .frame_containment_structure import FrameContainmentStructure
 from .priceable_object_version_structure import (
-    FareTableInContext,
     FareTable1,
+    FareTableInContext,
 )
 from .standard_fare_table import StandardFareTable
 

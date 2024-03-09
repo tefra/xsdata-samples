@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -167,15 +168,15 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reported_security_event_iref: Optional[
-        RPortInCompositionInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "REPORTED-SECURITY-EVENT-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    reported_security_event_iref: Optional[RPortInCompositionInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "REPORTED-SECURITY-EVENT-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     security_event_definition_ref: Optional[
         "SecurityEventReportToSecurityEventDefinitionMapping.SecurityEventDefinitionRef"

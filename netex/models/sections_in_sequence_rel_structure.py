@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional, Union
+
 from .authority_ref import AuthorityRef
 from .common_section_point_members_rel_structure import (
     CommonSectionPointMembersRelStructure,
@@ -474,25 +475,25 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         },
     )
-    transport_organisation_ref: Optional[
-        Union[AuthorityRef, OperatorRef]
-    ] = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    transport_organisation_ref: Optional[Union[AuthorityRef, OperatorRef]] = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "AuthorityRef",
+                        "type": AuthorityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OperatorRef",
+                        "type": OperatorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
 
 
@@ -548,15 +549,15 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
             ),
         },
     )
-    from_point_in_pattern_ref: Optional[
-        FarePointInPatternRefStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "FromPointInPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    from_point_in_pattern_ref: Optional[FarePointInPatternRefStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "FromPointInPatternRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     to_point_in_pattern_ref: Optional[FarePointInPatternRefStructure] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .integer import Integer
 from .internal_constrs import InternalConstrs
 from .phys_constrs import PhysConstrs

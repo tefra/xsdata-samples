@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .pulse_test_enum_simple import PulseTestEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

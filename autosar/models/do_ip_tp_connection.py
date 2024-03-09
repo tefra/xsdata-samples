@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .do_ip_logic_address_subtypes_enum import DoIpLogicAddressSubtypesEnum
 from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
 from .ref import Ref

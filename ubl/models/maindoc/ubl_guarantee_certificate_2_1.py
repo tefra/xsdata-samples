@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ApplicablePeriod,
     ApplicableRegulation,
@@ -183,15 +184,15 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    guarantee_document_reference: Tuple[
-        GuaranteeDocumentReference, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "GuaranteeDocumentReference",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    guarantee_document_reference: Tuple[GuaranteeDocumentReference, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "GuaranteeDocumentReference",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
     immobilized_security: Tuple[ImmobilizedSecurity, ...] = field(
         default_factory=tuple,

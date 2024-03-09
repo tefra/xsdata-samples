@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.geo_role_type import GeoRoleType
 from npo.models.gtaa_status_type import GtaaStatusType
 

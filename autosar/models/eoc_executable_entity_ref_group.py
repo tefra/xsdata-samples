@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -220,15 +221,15 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    successor_refs: Optional[
-        "EocExecutableEntityRefGroup.SuccessorRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SUCCESSOR-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    successor_refs: Optional["EocExecutableEntityRefGroup.SuccessorRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SUCCESSOR-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     triggering_event_ref: Optional[
         "EocExecutableEntityRefGroup.TriggeringEventRef"

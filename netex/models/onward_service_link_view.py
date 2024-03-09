@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .onward_service_link_derived_view_structure import (
     OnwardServiceLinkDerivedViewStructure,
 )

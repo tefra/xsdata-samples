@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -183,15 +184,15 @@ class DiagnosticRequestVehicleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    info_type_ref: Optional[
-        "DiagnosticRequestVehicleInfo.InfoTypeRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "INFO-TYPE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    info_type_ref: Optional["DiagnosticRequestVehicleInfo.InfoTypeRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "INFO-TYPE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     request_vehicle_information_class_ref: Optional[
         "DiagnosticRequestVehicleInfo.RequestVehicleInformationClassRef"

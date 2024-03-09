@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .mobility_journey_frame_ref_structure import (
     MobilityJourneyFrameRefStructure,
 )

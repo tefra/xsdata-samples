@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.org.w3.pkg_2006.pkg_02.addressing.wsdl.attributed_qname_type import (
     AttributedQnameType,
 )

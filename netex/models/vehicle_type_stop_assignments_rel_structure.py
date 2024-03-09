@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .vehicle_type_stop_assignment import VehicleTypeStopAssignment
 from .vehicle_type_stop_assignment_ref import VehicleTypeStopAssignmentRef

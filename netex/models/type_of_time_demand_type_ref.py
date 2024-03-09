@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_time_demand_type_ref_structure import (
     TypeOfTimeDemandTypeRefStructure,
 )

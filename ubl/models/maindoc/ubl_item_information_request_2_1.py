@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     BuyerCustomerParty,
     DocumentReference,
@@ -180,16 +181,16 @@ class ItemInformationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item_information_request_line: Tuple[
-        ItemInformationRequestLine, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "ItemInformationRequestLine",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "min_occurs": 1,
-        },
+    item_information_request_line: Tuple[ItemInformationRequestLine, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "name": "ItemInformationRequestLine",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+                "min_occurs": 1,
+            },
+        )
     )
 
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .coupling_port_role_enum_simple import CouplingPortRoleEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

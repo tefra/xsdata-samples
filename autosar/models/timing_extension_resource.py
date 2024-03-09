@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -161,15 +162,15 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_arguments: Optional[
-        "TimingExtensionResource.TimingArguments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TIMING-ARGUMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    timing_arguments: Optional["TimingExtensionResource.TimingArguments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TIMING-ARGUMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     timing_modes: Optional["TimingExtensionResource.TimingModes"] = field(
         default=None,
@@ -179,15 +180,15 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_variables: Optional[
-        "TimingExtensionResource.TimingVariables"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TIMING-VARIABLES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    timing_variables: Optional["TimingExtensionResource.TimingVariables"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TIMING-VARIABLES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

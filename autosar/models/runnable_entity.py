@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -277,15 +278,15 @@ class RunnableEntity:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "RunnableEntity.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["RunnableEntity.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -511,15 +512,15 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    read_local_variables: Optional[
-        "RunnableEntity.ReadLocalVariables"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "READ-LOCAL-VARIABLES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    read_local_variables: Optional["RunnableEntity.ReadLocalVariables"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "READ-LOCAL-VARIABLES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     server_call_points: Optional["RunnableEntity.ServerCallPoints"] = field(
         default=None,
@@ -851,25 +852,25 @@ class RunnableEntity:
 
     @dataclass
     class ServerCallPoints:
-        asynchronous_server_call_point: List[
-            AsynchronousServerCallPoint
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ASYNCHRONOUS-SERVER-CALL-POINT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        asynchronous_server_call_point: List[AsynchronousServerCallPoint] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ASYNCHRONOUS-SERVER-CALL-POINT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
-        synchronous_server_call_point: List[
-            SynchronousServerCallPoint
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SYNCHRONOUS-SERVER-CALL-POINT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        synchronous_server_call_point: List[SynchronousServerCallPoint] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SYNCHRONOUS-SERVER-CALL-POINT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

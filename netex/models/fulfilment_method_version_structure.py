@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .fulfilment_method_prices_rel_structure import (
     FulfilmentMethodPricesRelStructure,
 )

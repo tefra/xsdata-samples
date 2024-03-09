@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .train_stop_assignment_ref_structure import (
     TrainStopAssignmentRefStructure,
 )

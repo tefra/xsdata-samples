@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .abstract_discovery_request_structure import (
     AbstractDiscoveryRequestStructure,
 )

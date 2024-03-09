@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xcbl.models.sourcing_result_response import (
     GeneralNote,
     Purpose,

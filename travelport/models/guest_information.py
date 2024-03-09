@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.number_of_adults import NumberOfAdults
 from travelport.models.number_of_children import NumberOfChildren
 

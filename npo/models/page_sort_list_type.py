@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.page_sort_type import PageSortType
 
 __NAMESPACE__ = "urn:vpro:api:2013"

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.profile_search_rsp_1 import ProfileSearchRsp1
 
@@ -61,7 +63,9 @@ class ProfileSearchPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ProfileSearchPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | ProfileSearchPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ethernet_connection_negotiation_enum_simple import (
     EthernetConnectionNegotiationEnumSimple,
 )

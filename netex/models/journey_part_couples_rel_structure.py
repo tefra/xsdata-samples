@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .journey_part_couple import JourneyPartCouple
 from .journey_part_couple_ref import JourneyPartCoupleRef

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .address import Address
 from .admin_data import (
     AdminData,

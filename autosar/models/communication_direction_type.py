@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .communication_direction_type_simple import (
     CommunicationDirectionTypeSimple,
 )

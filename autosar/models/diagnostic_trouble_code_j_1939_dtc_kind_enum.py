@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_trouble_code_j_1939_dtc_kind_enum_simple import (
     DiagnosticTroubleCodeJ1939DtcKindEnumSimple,
 )

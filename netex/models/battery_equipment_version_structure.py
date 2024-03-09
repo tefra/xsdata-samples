@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .place_equipment_version_structure import PlaceEquipmentVersionStructure
 from .type_of_battery_chemistry_ref import TypeOfBatteryChemistryRef
 

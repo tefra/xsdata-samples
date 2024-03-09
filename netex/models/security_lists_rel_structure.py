@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .blacklist_ref import BlacklistRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .whitelist_ref import WhitelistRef

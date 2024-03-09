@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Permissions
 from crossref.models.gov.nih.nlm.ncbi.jats1.article_id import ArticleId
 from crossref.models.gov.nih.nlm.ncbi.jats1.article_version import (

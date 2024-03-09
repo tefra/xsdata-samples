@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_text_block_1 import TypeTextBlock1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"

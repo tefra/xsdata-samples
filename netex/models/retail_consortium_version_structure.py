@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .blacklist_refs_rel_structure import BlacklistRefsRelStructure
 from .organisation_refs_rel_structure import OrganisationRefsRelStructure
 from .organisation_version_structure import OrganisationVersionStructure

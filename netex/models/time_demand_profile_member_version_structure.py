@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .group_member_versioned_child_structure import (
     GroupMemberVersionedChildStructure,
 )

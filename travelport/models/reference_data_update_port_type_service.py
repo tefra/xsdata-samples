@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.reference_data_update_port_type_service_input import (
     ReferenceDataUpdatePortTypeServiceInput,
 )

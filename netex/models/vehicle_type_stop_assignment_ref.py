@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_type_stop_assignment_ref_structure import (
     VehicleTypeStopAssignmentRefStructure,
 )

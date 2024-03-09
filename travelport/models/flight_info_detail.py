@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.codeshare_info import CodeshareInfo
 from travelport.models.in_flight_services import InFlightServices
 from travelport.models.meals import Meals

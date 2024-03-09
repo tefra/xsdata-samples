@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_rental_service_ref_structure import (
     VehicleRentalServiceRefStructure,
 )

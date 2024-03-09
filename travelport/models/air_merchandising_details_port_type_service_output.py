@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_merchandising_details_rsp import (
     AirMerchandisingDetailsRsp,
 )
@@ -34,7 +36,9 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
                 },
             )
         )
-        fault: None | AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -65,7 +69,10 @@ class AirMerchandisingDetailsPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | AirMerchandisingDetailsPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .consumer_response_endpoint_structure import (
     ConsumerResponseEndpointStructure,
 )

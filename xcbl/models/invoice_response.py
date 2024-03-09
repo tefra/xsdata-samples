@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.price_check_result import ErrorInfo
 from xcbl.models.remittance_advice import InvoiceType
 from xcbl.models.sourcing_result import (
@@ -291,12 +292,12 @@ class InvoiceResponse:
             "required": True,
         }
     )
-    list_of_invoice_response_detail: Optional[
-        ListOfInvoiceResponseDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfInvoiceResponseDetail",
-            "type": "Element",
-        },
+    list_of_invoice_response_detail: Optional[ListOfInvoiceResponseDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfInvoiceResponseDetail",
+                "type": "Element",
+            },
+        )
     )

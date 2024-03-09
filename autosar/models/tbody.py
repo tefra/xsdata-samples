@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .row import Row
 from .valign_enum_simple import ValignEnumSimple
 

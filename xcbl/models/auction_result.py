@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.auction_result_response import AuctionCreateReference
 from xcbl.models.sourcing_result import (
     BaseItemDetail,

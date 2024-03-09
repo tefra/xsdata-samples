@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.hotel_super_shopper_rsp import HotelSuperShopperRsp
 
@@ -30,7 +32,9 @@ class HotelSuperShopperServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             },
         )
-        fault: None | HotelSuperShopperServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | HotelSuperShopperServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -61,7 +65,10 @@ class HotelSuperShopperServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | HotelSuperShopperServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | HotelSuperShopperServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

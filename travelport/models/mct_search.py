@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.type_mct_connection import TypeMctConnection
 
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"

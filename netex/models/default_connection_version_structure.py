@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .access_space_ref import AccessSpaceRef
 from .boarding_position_ref import BoardingPositionRef
 from .default_connection_end_structure import DefaultConnectionEndStructure

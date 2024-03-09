@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -176,15 +177,15 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: Optional[
-        "EthernetFrameTriggering.PduTriggerings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PDU-TRIGGERINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    pdu_triggerings: Optional["EthernetFrameTriggering.PduTriggerings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PDU-TRIGGERINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -276,13 +277,13 @@ class EthernetFrameTriggering:
 
     @dataclass
     class PduTriggerings:
-        pdu_triggering_ref_conditional: List[
-            PduTriggeringRefConditional
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PDU-TRIGGERING-REF-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        pdu_triggering_ref_conditional: List[PduTriggeringRefConditional] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PDU-TRIGGERING-REF-CONDITIONAL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

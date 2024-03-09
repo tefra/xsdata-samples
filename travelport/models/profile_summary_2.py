@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.account_info_2 import AccountInfo2
 from travelport.models.accounting_reference_2 import AccountingReference2
 from travelport.models.agency_group_info_2 import AgencyGroupInfo2
@@ -137,15 +139,15 @@ class ProfileSummary2:
             "type": "Element",
         },
     )
-    immediate_parent_profile: list[
-        ProfileSummary2.ImmediateParentProfile
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "ImmediateParentProfile",
-            "type": "Element",
-            "max_occurs": 999,
-        },
+    immediate_parent_profile: list[ProfileSummary2.ImmediateParentProfile] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "ImmediateParentProfile",
+                "type": "Element",
+                "max_occurs": 999,
+            },
+        )
     )
     contract: list[Contract2] = field(
         default_factory=list,

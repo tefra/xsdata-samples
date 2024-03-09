@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .controllable_element import ControllableElement
 from .controllable_element_ref import ControllableElementRef
 from .strict_containment_aggregation_structure import (

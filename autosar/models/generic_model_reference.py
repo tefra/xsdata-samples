@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

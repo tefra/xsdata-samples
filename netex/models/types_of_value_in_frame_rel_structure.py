@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .branding import Branding
 from .charging_moment import ChargingMoment
 from .class_of_use import ClassOfUse

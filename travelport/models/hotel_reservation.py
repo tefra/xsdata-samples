@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.associated_remark_3 import AssociatedRemark3
 from travelport.models.base_reservation_1 import BaseReservation1
 from travelport.models.booking_source_1 import BookingSource1
@@ -248,7 +250,9 @@ class HotelReservation(BaseReservation1):
             "max_occurs": 99,
         },
     )
-    adapted_room_guest_allocation: None | HotelReservation.AdaptedRoomGuestAllocation = field(
+    adapted_room_guest_allocation: (
+        None | HotelReservation.AdaptedRoomGuestAllocation
+    ) = field(
         default=None,
         metadata={
             "name": "AdaptedRoomGuestAllocation",

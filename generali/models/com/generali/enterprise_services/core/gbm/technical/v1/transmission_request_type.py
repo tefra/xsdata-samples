@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from generali.models.com.generali.enterprise_services.core.gbm.technical.v1.payload_type import (
     PayloadType,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .journey_timing_versioned_child_structure import (
     JourneyTimingVersionedChildStructure,
 )

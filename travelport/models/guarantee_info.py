@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime
+
 from travelport.models.deposit_amount import DepositAmount
 from travelport.models.guarantee_info_guarantee_type import (
     GuaranteeInfoGuaranteeType,

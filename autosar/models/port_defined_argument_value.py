@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
@@ -60,15 +61,15 @@ class PortDefinedArgumentValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_type_tref: Optional[
-        "PortDefinedArgumentValue.ValueTypeTref"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "VALUE-TYPE-TREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    value_type_tref: Optional["PortDefinedArgumentValue.ValueTypeTref"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "VALUE-TYPE-TREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

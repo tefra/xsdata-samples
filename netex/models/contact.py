@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .contact_version_structure import ContactVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

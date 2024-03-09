@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_policy_codes_list_1 import TypePolicyCodesList1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"

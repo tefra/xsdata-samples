@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime
+
 from travelport.models.type_ticket_status import TypeTicketStatus
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"

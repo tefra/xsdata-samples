@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -537,25 +538,25 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_dependencys: Optional[
-        "SwcInternalBehavior.ServiceDependencys"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SERVICE-DEPENDENCYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    service_dependencys: Optional["SwcInternalBehavior.ServiceDependencys"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SERVICE-DEPENDENCYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    shared_parameters: Optional[
-        "SwcInternalBehavior.SharedParameters"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHARED-PARAMETERS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    shared_parameters: Optional["SwcInternalBehavior.SharedParameters"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHARED-PARAMETERS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     supports_multiple_instantiation: Optional[Boolean] = field(
         default=None,
@@ -654,15 +655,15 @@ class SwcInternalBehavior:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: Optional[
-                ConstantSpecificationMappingSetSubtypesEnum
-            ] = field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
+            dest: Optional[ConstantSpecificationMappingSetSubtypesEnum] = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "DEST",
+                        "type": "Attribute",
+                        "required": True,
+                    },
+                )
             )
 
     @dataclass
@@ -785,15 +786,15 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        external_trigger_occurred_event: List[
-            ExternalTriggerOccurredEvent
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "EXTERNAL-TRIGGER-OCCURRED-EVENT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        external_trigger_occurred_event: List[ExternalTriggerOccurredEvent] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "EXTERNAL-TRIGGER-OCCURRED-EVENT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         init_event: List[InitEvent] = field(
             default_factory=list,
@@ -803,15 +804,15 @@ class SwcInternalBehavior:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        internal_trigger_occurred_event: List[
-            InternalTriggerOccurredEvent
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "INTERNAL-TRIGGER-OCCURRED-EVENT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        internal_trigger_occurred_event: List[InternalTriggerOccurredEvent] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "INTERNAL-TRIGGER-OCCURRED-EVENT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         mode_switched_ack_event: List[ModeSwitchedAckEvent] = field(
             default_factory=list,

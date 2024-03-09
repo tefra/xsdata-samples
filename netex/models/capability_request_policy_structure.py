@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .empty_type_1 import EmptyType1
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"

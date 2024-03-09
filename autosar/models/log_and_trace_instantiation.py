@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -170,15 +171,15 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_log_channels: Optional[
-        "LogAndTraceInstantiation.DltLogChannels"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DLT-LOG-CHANNELS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    dlt_log_channels: Optional["LogAndTraceInstantiation.DltLogChannels"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DLT-LOG-CHANNELS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     queue_size: Optional[PositiveInteger] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .address_ref import AddressRef
 from .boarding_position_ref import BoardingPositionRef
 from .parking_ref import ParkingRef

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .time_sync_client_configuration import TimeSyncClientConfiguration
 from .time_sync_server_configuration import TimeSyncServerConfiguration
 

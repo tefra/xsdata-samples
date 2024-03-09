@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_fare_display_rule_key import AirFareDisplayRuleKey
 from travelport.models.air_fare_rules_modifier import AirFareRulesModifier
 from travelport.models.base_req_1 import BaseReq1

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .access_right_parameter_assignments_in_frame_rel_structure import (
     AccessRightParameterAssignmentsInFrameRelStructure,
 )
@@ -111,25 +112,25 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: Optional[
-        Union[AuthorityRef, OperatorRef]
-    ] = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AuthorityRef",
-                    "type": AuthorityRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "OperatorRef",
-                    "type": OperatorRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    transport_organisation_ref: Optional[Union[AuthorityRef, OperatorRef]] = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "AuthorityRef",
+                        "type": AuthorityRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "OperatorRef",
+                        "type": OperatorRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     pricing_parameter_set: Optional[PricingParameterSet] = field(
         default=None,
@@ -204,15 +205,15 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_intervals: Optional[
-        GeographicalIntervalsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "geographicalIntervals",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    geographical_intervals: Optional[GeographicalIntervalsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "geographicalIntervals",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     geographical_structure_factors: Optional[
         GeographicalStructureFactorsRelStructure
@@ -258,15 +259,15 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance_matrix_elements: Optional[
-        DistanceMatrixElementsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "distanceMatrixElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    distance_matrix_elements: Optional[DistanceMatrixElementsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "distanceMatrixElements",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     groups_of_distance_matrix_elements: Optional[
         GroupsOfDistanceMatrixElementsRelStructure
@@ -393,15 +394,15 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_offer_packages: Optional[
-        SalesOfferPackagesInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "salesOfferPackages",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    sales_offer_packages: Optional[SalesOfferPackagesInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "salesOfferPackages",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     sales_offer_package_elements: Optional[
         SalesOfferPackageElementsInFrameRelStructure

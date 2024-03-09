@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_element_status_4 import TypeElementStatus4
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
@@ -38,7 +40,9 @@ class CommissionRemark3:
         name = "CommissionRemark"
         namespace = "http://www.travelport.com/schema/common_v33_0"
 
-    provider_reservation_level: None | CommissionRemark3.ProviderReservationLevel = field(
+    provider_reservation_level: (
+        None | CommissionRemark3.ProviderReservationLevel
+    ) = field(
         default=None,
         metadata={
             "name": "ProviderReservationLevel",

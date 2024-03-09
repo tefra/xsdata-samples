@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.name_1 import Name1
 
@@ -16,15 +19,15 @@ class FindEmployeesOnFlightRsp(BaseRsp1):
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    employees_on_flight: list[
-        FindEmployeesOnFlightRsp.EmployeesOnFlight
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "EmployeesOnFlight",
-            "type": "Element",
-            "max_occurs": 999,
-        },
+    employees_on_flight: list[FindEmployeesOnFlightRsp.EmployeesOnFlight] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "EmployeesOnFlight",
+                "type": "Element",
+                "max_occurs": 999,
+            },
+        )
     )
 
     @dataclass

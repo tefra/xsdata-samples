@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .journey_accounting_version_structure import (
     JourneyAccountingVersionStructure,
 )

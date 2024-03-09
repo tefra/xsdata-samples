@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .access_control_enum import AccessControlEnum
 from .admin_data import (
     AdminData,
@@ -334,15 +335,15 @@ class MachineDesign:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ttcan_communication_connector: List[
-            TtcanCommunicationConnector
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TTCAN-COMMUNICATION-CONNECTOR",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ttcan_communication_connector: List[TtcanCommunicationConnector] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TTCAN-COMMUNICATION-CONNECTOR",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         user_defined_communication_connector: List[
             UserDefinedCommunicationConnector

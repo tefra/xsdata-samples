@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_leg_modifiers import AirLegModifiers
 from travelport.models.type_flexible_time_spec_1 import TypeFlexibleTimeSpec1
 from travelport.models.type_search_location_1 import TypeSearchLocation1

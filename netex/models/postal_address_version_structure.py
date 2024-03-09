@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .address_ref_structure import AddressRefStructure
 from .address_version_structure import AddressVersionStructure
 from .multilingual_string import MultilingualString

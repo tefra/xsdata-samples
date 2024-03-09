@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .authority_ref import AuthorityRef
 from .general_organisation_ref import GeneralOrganisationRef
 from .management_agent_ref import ManagementAgentRef

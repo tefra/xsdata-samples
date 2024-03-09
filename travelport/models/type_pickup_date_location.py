@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.type_vehicle_location import TypeVehicleLocation
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"

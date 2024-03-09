@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .passenger_accessibility_needs_structure import (
     PassengerAccessibilityNeedsStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
@@ -53,25 +54,25 @@ class NvProvideComSpec:
     class Meta:
         name = "NV-PROVIDE-COM-SPEC"
 
-    ram_block_init_value: Optional[
-        "NvProvideComSpec.RamBlockInitValue"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RAM-BLOCK-INIT-VALUE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ram_block_init_value: Optional["NvProvideComSpec.RamBlockInitValue"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RAM-BLOCK-INIT-VALUE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    rom_block_init_value: Optional[
-        "NvProvideComSpec.RomBlockInitValue"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ROM-BLOCK-INIT-VALUE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    rom_block_init_value: Optional["NvProvideComSpec.RomBlockInitValue"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ROM-BLOCK-INIT-VALUE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variable_ref: Optional["NvProvideComSpec.VariableRef"] = field(
         default=None,

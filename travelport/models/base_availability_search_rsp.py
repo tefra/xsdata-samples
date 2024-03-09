@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_itinerary_solution import AirItinerarySolution
 from travelport.models.air_segment_list import AirSegmentList
 from travelport.models.apisrequirements_list import ApisrequirementsList

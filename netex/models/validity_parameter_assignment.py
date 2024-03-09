@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .validity_parameter_assignment_version_structure import (
     ValidityParameterAssignmentVersionStructure,
 )

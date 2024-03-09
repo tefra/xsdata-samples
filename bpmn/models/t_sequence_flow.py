@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .t_expression import TExpression
 from .t_flow_element import TFlowElement
 

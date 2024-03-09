@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.included_item import IncludedItem
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"

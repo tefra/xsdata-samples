@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .transfer_restriction_version_structure import (
     TransferRestrictionVersionStructure,
 )

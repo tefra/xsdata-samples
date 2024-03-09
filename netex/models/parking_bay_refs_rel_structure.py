@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .monitored_vehicle_sharing_parking_bay_ref import (
     MonitoredVehicleSharingParkingBayRef,
 )

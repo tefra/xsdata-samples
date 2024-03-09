@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .multilingual_string import MultilingualString
 from .passenger_equipment_version_structure import (
     PassengerEquipmentVersionStructure,

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .customer_purchase_package_ref_structure import (
     CustomerPurchasePackageRefStructure,
 )

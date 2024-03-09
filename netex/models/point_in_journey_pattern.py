@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .point_in_journey_pattern_versioned_child_structure import (
     PointInJourneyPatternVersionedChildStructure,
 )

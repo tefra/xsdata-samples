@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.saved_trip_create_req import SavedTripCreateReq
 from travelport.models.supported_versions import SupportedVersions
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -114,15 +115,15 @@ class VehiclePackage:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "VehiclePackage.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["VehiclePackage.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -180,25 +181,25 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    driver_notifications: Optional[
-        "VehiclePackage.DriverNotifications"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DRIVER-NOTIFICATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    driver_notifications: Optional["VehiclePackage.DriverNotifications"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DRIVER-NOTIFICATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    packager_signature_ref: Optional[
-        "VehiclePackage.PackagerSignatureRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PACKAGER-SIGNATURE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    packager_signature_ref: Optional["VehiclePackage.PackagerSignatureRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PACKAGER-SIGNATURE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     repository: Optional[UriString] = field(
         default=None,

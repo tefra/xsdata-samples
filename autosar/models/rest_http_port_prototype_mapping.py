@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -199,15 +200,15 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: Optional[
-        PortPrototypeInExecutableInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PORT-PROTOTYPE-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    port_prototype_iref: Optional[PortPrototypeInExecutableInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PORT-PROTOTYPE-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     port_prototype_slug_fragment: Optional[String] = field(
         default=None,

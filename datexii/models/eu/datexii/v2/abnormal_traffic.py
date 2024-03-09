@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.abnormal_traffic_type_enum import (
     AbnormalTrafficTypeEnum,
 )
@@ -72,15 +73,15 @@ class AbnormalTraffic(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_flow_characteristics: Optional[
-        TrafficFlowCharacteristicsEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "trafficFlowCharacteristics",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    traffic_flow_characteristics: Optional[TrafficFlowCharacteristicsEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "trafficFlowCharacteristics",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     traffic_trend_type: Optional[TrafficTrendTypeEnum] = field(
         default=None,

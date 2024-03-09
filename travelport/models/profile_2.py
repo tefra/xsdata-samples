@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.profile_data_2 import ProfileData2
 from travelport.models.profile_link_2 import ProfileLink2
 from travelport.models.profile_parent_summary_2 import ProfileParentSummary2

@@ -1,13 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ReceiverParty,
     SenderParty,
     ServiceChargePaymentTerms,
     Signature,
+    TransportationService,
     TransportServiceDescriptionRequestDocumentReference,
     TransportServiceProviderParty,
-    TransportationService,
     ValidityPeriod,
 )
 from ubl.models.common.ubl_common_basic_components_2_1 import (

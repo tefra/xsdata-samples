@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .application_composite_element_data_prototype_subtypes_enum import (
     ApplicationCompositeElementDataPrototypeSubtypesEnum,
 )

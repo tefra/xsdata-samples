@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.order_response import (
     NumberOfLines,
     TaxAccountingCurrency,
@@ -282,14 +283,14 @@ class TaxPointDate:
 
 @dataclass(kw_only=True)
 class AllowOrChargeTreatment:
-    allow_or_charge_treatment_coded: Optional[
-        AllowOrChargeTreatmentCoded
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AllowOrChargeTreatmentCoded",
-            "type": "Element",
-        },
+    allow_or_charge_treatment_coded: Optional[AllowOrChargeTreatmentCoded] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AllowOrChargeTreatmentCoded",
+                "type": "Element",
+            },
+        )
     )
     allow_or_charge_treatment_coded_other: Optional[
         AllowOrChargeTreatmentCodedOther
@@ -1313,14 +1314,14 @@ class InvoiceHeader:
             "type": "Element",
         },
     )
-    list_of_rate_of_exchange_detail: Optional[
-        ListOfRateOfExchangeDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfRateOfExchangeDetail",
-            "type": "Element",
-        },
+    list_of_rate_of_exchange_detail: Optional[ListOfRateOfExchangeDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfRateOfExchangeDetail",
+                "type": "Element",
+            },
+        )
     )
     tax_accounting_currency: Optional[TaxAccountingCurrency] = field(
         default=None,
@@ -1392,23 +1393,23 @@ class InvoiceHeader:
             "type": "Element",
         },
     )
-    invoice_allowances_or_charges: Optional[
-        InvoiceAllowancesOrCharges
-    ] = field(
-        default=None,
-        metadata={
-            "name": "InvoiceAllowancesOrCharges",
-            "type": "Element",
-        },
+    invoice_allowances_or_charges: Optional[InvoiceAllowancesOrCharges] = (
+        field(
+            default=None,
+            metadata={
+                "name": "InvoiceAllowancesOrCharges",
+                "type": "Element",
+            },
+        )
     )
-    country_specific_requirements: Optional[
-        CountrySpecificRequirements
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CountrySpecificRequirements",
-            "type": "Element",
-        },
+    country_specific_requirements: Optional[CountrySpecificRequirements] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CountrySpecificRequirements",
+                "type": "Element",
+            },
+        )
     )
     invoice_header_note: Optional[InvoiceHeaderNote] = field(
         default=None,

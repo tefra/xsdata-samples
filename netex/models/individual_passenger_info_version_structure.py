@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from .entity_in_version_structure import DataManagedObjectStructure
 from .individual_traveller_ref import IndividualTravellerRef
 from .multilingual_string import MultilingualString

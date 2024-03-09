@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .compound_train import CompoundTrain
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .simple_vehicle_type import SimpleVehicleType

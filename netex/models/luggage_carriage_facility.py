@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .luggage_carriage_enumeration import LuggageCarriageEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

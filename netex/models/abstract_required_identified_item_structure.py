@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .abstract_item_structure import AbstractItemStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"

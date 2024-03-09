@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .access_space_ref import AccessSpaceRef
 from .accessibility_info_facility_list import AccessibilityInfoFacilityList
 from .boarding_position_ref import BoardingPositionRef

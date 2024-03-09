@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .interchange_version_structure import InterchangeVersionStructure
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 from .service_journey_pattern_interchange_ref import (

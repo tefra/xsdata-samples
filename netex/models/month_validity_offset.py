@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .month_validity_offset_versioned_structure import (
     MonthValidityOffsetVersionedStructure,
 )

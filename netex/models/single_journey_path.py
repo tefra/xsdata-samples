@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .single_journey_path_version_structure import (
     SingleJourneyPathVersionStructure,
 )

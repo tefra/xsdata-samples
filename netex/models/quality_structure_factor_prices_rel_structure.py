@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .cell_ref_1 import CellRef1
 from .quality_structure_factor_price_ref import QualityStructureFactorPriceRef
 from .quality_structure_factor_price_versioned_child_structure import (

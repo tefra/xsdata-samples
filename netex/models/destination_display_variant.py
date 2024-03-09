@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .destination_display_variant_version_structure import (
     DestinationDisplayVariantVersionStructure,
 )

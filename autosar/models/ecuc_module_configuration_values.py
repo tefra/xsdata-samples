@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -203,15 +204,15 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    definition_ref: Optional[
-        "EcucModuleConfigurationValues.DefinitionRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DEFINITION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    definition_ref: Optional["EcucModuleConfigurationValues.DefinitionRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DEFINITION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ecuc_def_edition: Optional[RevisionLabelString] = field(
         default=None,
@@ -221,15 +222,15 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_config_variant: Optional[
-        EcucConfigurationVariantEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "IMPLEMENTATION-CONFIG-VARIANT",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    implementation_config_variant: Optional[EcucConfigurationVariantEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "IMPLEMENTATION-CONFIG-VARIANT",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     module_description_ref: Optional[
         "EcucModuleConfigurationValues.ModuleDescriptionRef"

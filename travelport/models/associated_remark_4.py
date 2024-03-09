@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_associated_remark_with_segment_ref_1 import (
     TypeAssociatedRemarkWithSegmentRef1,
 )

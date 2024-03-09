@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_5 import BaseReq5
 from travelport.models.profile_search_modifiers_2 import (
     ProfileSearchModifiers2,

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_product_category_ref_structure import (
     TypeOfProductCategoryRefStructure,
 )

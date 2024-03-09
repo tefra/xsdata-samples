@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -187,15 +188,15 @@ class DataReceiveErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_on_event_ref: Optional[
-        "DataReceiveErrorEvent.StartOnEventRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "START-ON-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    start_on_event_ref: Optional["DataReceiveErrorEvent.StartOnEventRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "START-ON-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,

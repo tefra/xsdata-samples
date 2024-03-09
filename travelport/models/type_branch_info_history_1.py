@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_profile_info_1 import TypeProfileInfo1
 from travelport.models.type_provider_info_history_1 import (
     TypeProviderInfoHistory1,

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.pseudo_city_code_1 import PseudoCityCode1
 from travelport.models.type_element_status_1 import TypeElementStatus1
 

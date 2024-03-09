@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .responsibility_role_assignment import ResponsibilityRoleAssignment
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

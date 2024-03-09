@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .scale_constr_validity_enum_simple import ScaleConstrValidityEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
+
 from xcbl.models.shipping_schedule_response import (
     ContractReferences,
     LocationGroupedShippingDetail,
@@ -1022,29 +1023,29 @@ class HazardousPackaging:
 
 @dataclass(kw_only=True)
 class ListOfLocationGroupedShippingDetail:
-    location_grouped_shipping_detail: List[
-        LocationGroupedShippingDetail
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "LocationGroupedShippingDetail",
-            "type": "Element",
-            "min_occurs": 1,
-        },
+    location_grouped_shipping_detail: List[LocationGroupedShippingDetail] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "LocationGroupedShippingDetail",
+                "type": "Element",
+                "min_occurs": 1,
+            },
+        )
     )
 
 
 @dataclass(kw_only=True)
 class ListOfMaterialGroupedShippingDetail:
-    material_grouped_shipping_detail: List[
-        MaterialGroupedShippingDetail
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "MaterialGroupedShippingDetail",
-            "type": "Element",
-            "min_occurs": 1,
-        },
+    material_grouped_shipping_detail: List[MaterialGroupedShippingDetail] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "MaterialGroupedShippingDetail",
+                "type": "Element",
+                "min_occurs": 1,
+            },
+        )
     )
 
 
@@ -1104,14 +1105,14 @@ class PackageIdentifier:
             "required": True,
         }
     )
-    package_identifier_coded_other: Optional[
-        PackageIdentifierCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PackageIdentifierCodedOther",
-            "type": "Element",
-        },
+    package_identifier_coded_other: Optional[PackageIdentifierCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PackageIdentifierCodedOther",
+                "type": "Element",
+            },
+        )
     )
     package_identifier_value: Optional[PackageIdentifierValue] = field(
         default=None,
@@ -1561,14 +1562,14 @@ class Package:
             "type": "Element",
         },
     )
-    list_of_package_characteristic: Optional[
-        ListOfPackageCharacteristic
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfPackageCharacteristic",
-            "type": "Element",
-        },
+    list_of_package_characteristic: Optional[ListOfPackageCharacteristic] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfPackageCharacteristic",
+                "type": "Element",
+            },
+        )
     )
     list_of_dimension: Optional[ListOfDimension] = field(
         default=None,

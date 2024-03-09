@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -285,15 +286,15 @@ class DoIpInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    socket_connection_refs: Optional[
-        "DoIpInterface.SocketConnectionRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SOCKET-CONNECTION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    socket_connection_refs: Optional["DoIpInterface.SocketConnectionRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SOCKET-CONNECTION-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     use_mac_address_for_identification: Optional[Boolean] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .country_ref import CountryRef
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .multilingual_string import MultilingualString

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from crossref.models.xml.lang_value import LangValue
 from crossref.models.xml.space_value import SpaceValue
 

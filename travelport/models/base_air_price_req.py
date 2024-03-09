@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.air_itinerary import AirItinerary
 from travelport.models.air_pricing_command import AirPricingCommand
 from travelport.models.air_pricing_modifiers import AirPricingModifiers

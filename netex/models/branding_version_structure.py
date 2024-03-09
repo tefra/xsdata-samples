@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .presentation_structure import PresentationStructure
 from .type_of_value_version_structure import TypeOfValueVersionStructure
 

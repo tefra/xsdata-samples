@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .t_multi_instance_loop_characteristics import (
     TMultiInstanceLoopCharacteristics,
 )

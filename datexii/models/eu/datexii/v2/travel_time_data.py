@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.basic_data import BasicData
 from datexii.models.eu.datexii.v2.duration_value import DurationValue
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType

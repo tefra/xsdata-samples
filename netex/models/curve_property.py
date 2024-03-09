@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .curve_property_type import CurvePropertyType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"

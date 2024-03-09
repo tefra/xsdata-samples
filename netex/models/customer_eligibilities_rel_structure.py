@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .commercial_profile_eligibility import CommercialProfileEligibility
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .residential_qualification_eligibility import (

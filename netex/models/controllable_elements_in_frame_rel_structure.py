@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .controllable_element import ControllableElement
 from .frame_containment_structure import FrameContainmentStructure
 

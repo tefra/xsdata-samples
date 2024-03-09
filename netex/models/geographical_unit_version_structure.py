@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
+
 from .fare_unit_version_structure import FareUnitVersionStructure
 from .geographical_unit_prices_rel_structure import (
     GeographicalUnitPricesRelStructure,

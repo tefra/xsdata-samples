@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_type_at_point_version_structure import (
     VehicleTypeAtPointVersionStructure,
 )

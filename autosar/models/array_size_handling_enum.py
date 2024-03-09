@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .array_size_handling_enum_simple import ArraySizeHandlingEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

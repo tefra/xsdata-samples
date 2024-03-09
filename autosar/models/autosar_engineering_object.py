@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .nmtoken_string import NmtokenString
 from .revision_label_string import RevisionLabelString
 
@@ -58,15 +59,15 @@ class AutosarEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    revision_labels: Optional[
-        "AutosarEngineeringObject.RevisionLabels"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "REVISION-LABELS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    revision_labels: Optional["AutosarEngineeringObject.RevisionLabels"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "REVISION-LABELS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     domain: Optional[NmtokenString] = field(
         default=None,

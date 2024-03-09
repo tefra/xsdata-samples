@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -192,15 +193,15 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    server_argument_impl_policy: Optional[
-        ServerArgumentImplPolicyEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SERVER-ARGUMENT-IMPL-POLICY",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    server_argument_impl_policy: Optional[ServerArgumentImplPolicyEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SERVER-ARGUMENT-IMPL-POLICY",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     type_blueprints: Optional["ArgumentDataPrototype.TypeBlueprints"] = field(
         default=None,

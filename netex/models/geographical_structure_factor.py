@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .geographical_structure_factor_version_structure import (
     GeographicalStructureFactorVersionStructure,
 )

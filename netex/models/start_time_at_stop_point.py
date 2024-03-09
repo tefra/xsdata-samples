@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .start_time_at_stop_point_versioned_child_structure import (
     StartTimeAtStopPointVersionedChildStructure,
 )

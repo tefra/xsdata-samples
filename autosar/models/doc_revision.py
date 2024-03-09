@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .date import Date
 from .modification import Modification
 from .nmtoken_string import NmtokenString

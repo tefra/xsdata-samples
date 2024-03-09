@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .mc_data_instance import McDataInstance
 from .mc_sw_emulation_method_support import McSwEmulationMethodSupport
 from .ref import Ref
@@ -65,25 +66,25 @@ class McSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_parameter_instances: Optional[
-        "McSupportData.McParameterInstances"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MC-PARAMETER-INSTANCES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    mc_parameter_instances: Optional["McSupportData.McParameterInstances"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MC-PARAMETER-INSTANCES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    mc_variable_instances: Optional[
-        "McSupportData.McVariableInstances"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MC-VARIABLE-INSTANCES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    mc_variable_instances: Optional["McSupportData.McVariableInstances"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MC-VARIABLE-INSTANCES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     measurable_system_constant_values_refs: Optional[
         "McSupportData.MeasurableSystemConstantValuesRefs"
@@ -121,15 +122,15 @@ class McSupportData:
 
     @dataclass
     class EmulationSupports:
-        mc_sw_emulation_method_support: List[
-            McSwEmulationMethodSupport
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "MC-SW-EMULATION-METHOD-SUPPORT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        mc_sw_emulation_method_support: List[McSwEmulationMethodSupport] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "MC-SW-EMULATION-METHOD-SUPPORT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

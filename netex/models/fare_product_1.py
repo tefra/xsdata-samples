@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .fare_product_version_structure import FareProductVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

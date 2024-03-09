@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dead_run_journey_pattern import DeadRunJourneyPattern
 from .journey_pattern_view import JourneyPatternView

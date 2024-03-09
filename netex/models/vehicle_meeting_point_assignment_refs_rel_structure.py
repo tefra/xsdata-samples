@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .dynamic_vehicle_meeting_point_assignment_ref import (
     DynamicVehicleMeetingPointAssignmentRef,
 )

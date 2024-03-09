@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -145,15 +146,15 @@ class TcpOptionFilterList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_tcp_options: Optional[
-        "TcpOptionFilterList.AllowedTcpOptions"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ALLOWED-TCP-OPTIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    allowed_tcp_options: Optional["TcpOptionFilterList.AllowedTcpOptions"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ALLOWED-TCP-OPTIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

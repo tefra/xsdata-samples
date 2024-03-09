@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .customer_purchase_parameter_assignment_version_structure import (
     CustomerPurchaseParameterAssignmentVersionStructure,
 )

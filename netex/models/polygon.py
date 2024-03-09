@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .polygon_type import PolygonType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"

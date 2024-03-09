@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -277,15 +278,15 @@ class McFunction:
 
     @dataclass
     class SubFunctionRefs:
-        sub_function_ref: List[
-            "McFunction.SubFunctionRefs.SubFunctionRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SUB-FUNCTION-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        sub_function_ref: List["McFunction.SubFunctionRefs.SubFunctionRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SUB-FUNCTION-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

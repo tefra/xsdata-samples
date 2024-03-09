@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .accessibility_assessment_ref_structure import (
     AccessibilityAssessmentRefStructure,
 )

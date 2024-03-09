@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_non_air_reservation_ref_4 import (
     TypeNonAirReservationRef4,
 )

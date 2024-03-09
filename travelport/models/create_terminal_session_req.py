@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_4 import BaseReq4
 
 __NAMESPACE__ = "http://www.travelport.com/schema/terminal_v33_0"

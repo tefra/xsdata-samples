@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.profile_search_action_port_type_service_input import (
     ProfileSearchActionPortTypeServiceInput,
 )

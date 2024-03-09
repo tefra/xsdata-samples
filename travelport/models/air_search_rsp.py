@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_price_point_list import AirPricePointList
 from travelport.models.air_pricing_solution import AirPricingSolution
 from travelport.models.alternate_location_distance_list import (

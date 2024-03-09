@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .border_point_ref import BorderPointRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef

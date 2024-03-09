@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.universal_record_history_search_port_type_service_input import (
     UniversalRecordHistorySearchPortTypeServiceInput,
 )

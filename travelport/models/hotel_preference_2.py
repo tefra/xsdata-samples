@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.type_base_preference_2 import TypeBasePreference2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"

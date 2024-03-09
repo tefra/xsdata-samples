@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .distribution_channel_refs_rel_structure import (
     DistributionChannelRefsRelStructure,
 )

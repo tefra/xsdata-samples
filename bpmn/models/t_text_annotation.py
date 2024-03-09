@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .t_artifact import TArtifact
 from .text import Text
 

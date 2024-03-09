@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .line_section_point_type_enumeration import (
     LineSectionPointTypeEnumeration,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .residential_qualification_version_structure import (
     ResidentialQualificationVersionStructure,
 )

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.abstract_facet_type import AbstractFacetType
 from npo.models.page_relation_facet_type import PageRelationFacetType
 from npo.models.page_relation_search_type import PageRelationSearchType

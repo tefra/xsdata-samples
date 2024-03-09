@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_iam_remote_subject_subtypes_enum import (
     AbstractIamRemoteSubjectSubtypesEnum,
 )
@@ -112,15 +113,15 @@ class ComMethodGrant:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ComMethodGrant.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["ComMethodGrant.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -186,15 +187,15 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_ref: Optional[
-        "ComMethodGrant.ServiceInstanceRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SERVICE-INSTANCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    service_instance_ref: Optional["ComMethodGrant.ServiceInstanceRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SERVICE-INSTANCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     design_ref: Optional["ComMethodGrant.DesignRef"] = field(
         default=None,
@@ -204,15 +205,15 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_deployment_ref: Optional[
-        "ComMethodGrant.ServiceDeploymentRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SERVICE-DEPLOYMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    service_deployment_ref: Optional["ComMethodGrant.ServiceDeploymentRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SERVICE-DEPLOYMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -145,15 +146,15 @@ class ConstantSpecificationMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "ConstantSpecificationMappingSet.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["ConstantSpecificationMappingSet.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -218,13 +219,13 @@ class ConstantSpecificationMappingSet:
 
     @dataclass
     class Mappings:
-        constant_specification_mapping: List[
-            ConstantSpecificationMapping
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "CONSTANT-SPECIFICATION-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        constant_specification_mapping: List[ConstantSpecificationMapping] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "CONSTANT-SPECIFICATION-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

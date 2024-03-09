@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .crypto_service_key_generation_enum_simple import (
     CryptoServiceKeyGenerationEnumSimple,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_jump_to_boot_loader_enum_simple import (
     DiagnosticJumpToBootLoaderEnumSimple,
 )

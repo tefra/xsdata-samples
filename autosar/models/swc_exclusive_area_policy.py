@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .api_principle_enum import ApiPrincipleEnum
 from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
@@ -47,15 +48,15 @@ class SwcExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_ref: Optional[
-        "SwcExclusiveAreaPolicy.ExclusiveAreaRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EXCLUSIVE-AREA-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    exclusive_area_ref: Optional["SwcExclusiveAreaPolicy.ExclusiveAreaRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EXCLUSIVE-AREA-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import Annotation
 from .numerical_value_variation_point import NumericalValueVariationPoint
 from .ref import Ref
@@ -37,15 +38,15 @@ class SwSystemconstValue:
     class Meta:
         name = "SW-SYSTEMCONST-VALUE"
 
-    sw_systemconst_ref: Optional[
-        "SwSystemconstValue.SwSystemconstRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SW-SYSTEMCONST-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sw_systemconst_ref: Optional["SwSystemconstValue.SwSystemconstRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SW-SYSTEMCONST-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     value: Optional[NumericalValueVariationPoint] = field(
         default=None,

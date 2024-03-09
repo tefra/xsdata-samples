@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_phone_type_1 import TypePhoneType1
 from travelport.models.type_tckey_element import TypeTckeyElement
 

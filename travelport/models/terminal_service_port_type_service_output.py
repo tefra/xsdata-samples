@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_4 import ErrorInfo4
 from travelport.models.terminal_rsp import TerminalRsp
 
@@ -61,7 +63,9 @@ class TerminalServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | TerminalServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | TerminalServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

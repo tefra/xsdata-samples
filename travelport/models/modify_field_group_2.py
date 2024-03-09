@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.modify_field_2 import ModifyField2
 from travelport.models.type_update_action_2 import TypeUpdateAction2
 

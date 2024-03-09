@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .route_ref import RouteRef
 from .sections_in_sequence_rel_structure import LinkSequenceVersionStructure
 from .vehicle_meeting_points_in_sequence_rel_structure import (

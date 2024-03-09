@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .dhcpv_6_props import Dhcpv6Props
 from .ipv_6_fragmentation_props import Ipv6FragmentationProps
 from .ipv_6_ndp_props import Ipv6NdpProps

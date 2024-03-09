@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime
+
 from npo.models.range_matcher_type import RangeMatcherType
 
 __NAMESPACE__ = "urn:vpro:api:2013"

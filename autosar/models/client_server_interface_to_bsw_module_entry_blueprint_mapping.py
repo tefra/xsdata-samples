@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -302,15 +303,15 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -347,13 +348,13 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
 
     @dataclass
     class PortDefinedArgumentBlueprints:
-        port_defined_argument_blueprint: List[
-            PortDefinedArgumentBlueprint
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PORT-DEFINED-ARGUMENT-BLUEPRINT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        port_defined_argument_blueprint: List[PortDefinedArgumentBlueprint] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PORT-DEFINED-ARGUMENT-BLUEPRINT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

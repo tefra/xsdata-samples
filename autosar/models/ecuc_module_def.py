@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -238,25 +239,25 @@ class EcucModuleDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: Optional[
-        "EcucModuleDef.RelatedTraceItemRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RELATED-TRACE-ITEM-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    related_trace_item_ref: Optional["EcucModuleDef.RelatedTraceItemRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RELATED-TRACE-ITEM-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    ecuc_validation_conds: Optional[
-        "EcucModuleDef.EcucValidationConds"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ECUC-VALIDATION-CONDS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecuc_validation_conds: Optional["EcucModuleDef.EcucValidationConds"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECUC-VALIDATION-CONDS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ecuc_cond: Optional[EcucConditionSpecification] = field(
         default=None,
@@ -314,15 +315,15 @@ class EcucModuleDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    refined_module_def_ref: Optional[
-        "EcucModuleDef.RefinedModuleDefRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "REFINED-MODULE-DEF-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    refined_module_def_ref: Optional["EcucModuleDef.RefinedModuleDefRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "REFINED-MODULE-DEF-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     supported_config_variants: Optional[
         "EcucModuleDef.SupportedConfigVariants"
@@ -397,15 +398,15 @@ class EcucModuleDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,

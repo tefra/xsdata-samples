@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .quality_structure_factor_price_ref_structure import (
     QualityStructureFactorPriceRefStructure,
 )

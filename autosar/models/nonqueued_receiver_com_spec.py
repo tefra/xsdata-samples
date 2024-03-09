@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
@@ -182,15 +183,15 @@ class NonqueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: Optional[
-        "NonqueuedReceiverComSpec.DataElementRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DATA-ELEMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_element_ref: Optional["NonqueuedReceiverComSpec.DataElementRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-ELEMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     data_update_period: Optional[TimeValue] = field(
         default=None,
@@ -226,15 +227,15 @@ class NonqueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_delta_counter_init: Optional[
-        PositiveIntegerValueVariationPoint
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MAX-DELTA-COUNTER-INIT",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    max_delta_counter_init: Optional[PositiveIntegerValueVariationPoint] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MAX-DELTA-COUNTER-INIT",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     max_no_new_or_repeated_data: Optional[PositiveInteger] = field(
         default=None,

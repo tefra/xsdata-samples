@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.passive_cancel_req import PassiveCancelReq
 from travelport.models.supported_versions import SupportedVersions
 

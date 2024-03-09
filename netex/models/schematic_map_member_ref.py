@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .schematic_map_member_ref_structure import SchematicMapMemberRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

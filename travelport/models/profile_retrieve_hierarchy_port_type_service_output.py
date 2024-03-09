@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.profile_retrieve_hierarchy_rsp import (
     ProfileRetrieveHierarchyRsp,
@@ -24,15 +26,19 @@ class ProfileRetrieveHierarchyPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        profile_retrieve_hierarchy_rsp: None | ProfileRetrieveHierarchyRsp = field(
-            default=None,
-            metadata={
-                "name": "ProfileRetrieveHierarchyRsp",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            },
+        profile_retrieve_hierarchy_rsp: None | ProfileRetrieveHierarchyRsp = (
+            field(
+                default=None,
+                metadata={
+                    "name": "ProfileRetrieveHierarchyRsp",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
+                },
+            )
         )
-        fault: None | ProfileRetrieveHierarchyPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | ProfileRetrieveHierarchyPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class ProfileRetrieveHierarchyPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | ProfileRetrieveHierarchyPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | ProfileRetrieveHierarchyPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

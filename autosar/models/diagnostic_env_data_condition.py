@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
     ArrayValueSpecification,
@@ -72,15 +73,15 @@ class DiagnosticEnvDataCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: Optional[
-        "DiagnosticEnvDataCondition.DataElementRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DATA-ELEMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_element_ref: Optional["DiagnosticEnvDataCondition.DataElementRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-ELEMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

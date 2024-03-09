@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.goods_receipt import (
     ItemShipFromParty,
     ItemShipToParty,
@@ -303,14 +304,14 @@ class Asndates:
             "type": "Element",
         },
     )
-    schedule_delivery_date_before: Optional[
-        ScheduleDeliveryDateBefore
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ScheduleDeliveryDateBefore",
-            "type": "Element",
-        },
+    schedule_delivery_date_before: Optional[ScheduleDeliveryDateBefore] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ScheduleDeliveryDateBefore",
+                "type": "Element",
+            },
+        )
     )
     list_of_date_coded: Optional[ListOfDateCoded] = field(
         default=None,

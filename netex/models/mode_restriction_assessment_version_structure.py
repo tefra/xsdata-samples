@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .data_managed_object_view_structure import DataManagedObjectViewStructure
 from .flexible_mode_of_operation_ref import FlexibleModeOfOperationRef
 from .personal_mode_of_operation_ref import PersonalModeOfOperationRef

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_event_window_time_enum_simple import (
     DiagnosticEventWindowTimeEnumSimple,
 )

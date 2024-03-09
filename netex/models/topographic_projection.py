@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .topographic_projection_version_structure import (
     TopographicProjectionVersionStructure,
 )

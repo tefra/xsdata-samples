@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .check_constraint_throughput import CheckConstraintThroughput
 from .check_constraint_throughput_ref import CheckConstraintThroughputRef
 from .strict_containment_aggregation_structure import (

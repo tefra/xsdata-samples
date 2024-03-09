@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.loyalty_card_1 import LoyaltyCard1
 from travelport.models.person_name_search import PersonNameSearch

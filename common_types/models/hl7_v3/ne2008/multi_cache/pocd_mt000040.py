@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes import (
     IvlInt,
     IvlPq,
@@ -104,8 +105,8 @@ from ..core.voc import (
     XRoleClassCoverageInvoice,
     XRoleClassCredentialedEntity,
     XRoleClassPayeePolicyRelationship,
-    XSuccReplPrev,
     XServiceEventPerformer,
+    XSuccReplPrev,
 )
 
 __NAMESPACE__ = "urn:hl7-org:v3"
@@ -1423,15 +1424,15 @@ class PocdMt000040Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_organization_part_of: Optional[
-        "PocdMt000040OrganizationPartOf"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "asOrganizationPartOf",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
+    as_organization_part_of: Optional["PocdMt000040OrganizationPartOf"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "asOrganizationPartOf",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -5269,16 +5270,16 @@ class PocdMt000040Component1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    encompassing_encounter: Optional[
-        PocdMt000040EncompassingEncounter
-    ] = field(
-        default=None,
-        metadata={
-            "name": "encompassingEncounter",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    encompassing_encounter: Optional[PocdMt000040EncompassingEncounter] = (
+        field(
+            default=None,
+            metadata={
+                "name": "encompassingEncounter",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -7483,15 +7484,15 @@ class PocdMt000040Entry:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    substance_administration: Optional[
-        PocdMt000040SubstanceAdministration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "substanceAdministration",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
+    substance_administration: Optional[PocdMt000040SubstanceAdministration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "substanceAdministration",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+            },
+        )
     )
     supply: Optional[PocdMt000040Supply] = field(
         default=None,

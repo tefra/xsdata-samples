@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .customer_service_version_structure import CustomerServiceVersionStructure
 from .meeting_point_enumeration import MeetingPointEnumeration
 from .multilingual_string import MultilingualString

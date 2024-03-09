@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .rental_penalty_policy_type_enumeration import (
     RentalPenaltyPolicyTypeEnumeration,
 )

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_air_exchange_req import BookingAirExchangeReq
 from travelport.models.session_context import SessionContext
 

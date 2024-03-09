@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     AnyType,
     Cd,
@@ -625,16 +626,16 @@ class CoctMt600000Uv06HealthCareProvider:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    health_care_provider_person: Optional[
-        CoctMt600000Uv06ProviderPerson
-    ] = field(
-        default=None,
-        metadata={
-            "name": "healthCareProviderPerson",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    health_care_provider_person: Optional[CoctMt600000Uv06ProviderPerson] = (
+        field(
+            default=None,
+            metadata={
+                "name": "healthCareProviderPerson",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -960,16 +961,16 @@ class CoctMt600000Uv06ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_vision_product: Optional[
-        CoctMt600000Uv06VisionProduct
-    ] = field(
-        default=None,
-        metadata={
-            "name": "manufacturedVisionProduct",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    manufactured_vision_product: Optional[CoctMt600000Uv06VisionProduct] = (
+        field(
+            default=None,
+            metadata={
+                "name": "manufacturedVisionProduct",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     product_of: List[CoctMt600000Uv06Product2] = field(
         default_factory=list,
@@ -1160,16 +1161,16 @@ class CoctMt600000Uv06Product:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_product: Optional[
-        CoctMt600000Uv06ManufacturedProduct
-    ] = field(
-        default=None,
-        metadata={
-            "name": "manufacturedProduct",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    manufactured_product: Optional[CoctMt600000Uv06ManufacturedProduct] = (
+        field(
+            default=None,
+            metadata={
+                "name": "manufacturedProduct",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -1467,27 +1468,27 @@ class CoctMt600000Uv06SupplyEvent:
             "required": True,
         },
     )
-    pertinent_information1: List[
-        CoctMt600000Uv06PertinentInformation1
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "pertinentInformation1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information1: List[CoctMt600000Uv06PertinentInformation1] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "pertinentInformation1",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    pertinent_information2: Optional[
-        CoctMt600000Uv06PertinentInformation2
-    ] = field(
-        default=None,
-        metadata={
-            "name": "pertinentInformation2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information2: Optional[CoctMt600000Uv06PertinentInformation2] = (
+        field(
+            default=None,
+            metadata={
+                "name": "pertinentInformation2",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     pertinent_information3: List[CoctMt600000Uv06PertinentInformation] = field(
         default_factory=list,

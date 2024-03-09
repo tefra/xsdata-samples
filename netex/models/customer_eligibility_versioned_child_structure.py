@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .customer_ref import CustomerRef
 from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString

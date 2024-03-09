@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime
+
 from travelport.models.endorsement_3 import Endorsement3
 from travelport.models.form_of_payment_4 import FormOfPayment4
 from travelport.models.mcoexchange_info_3 import McoexchangeInfo3

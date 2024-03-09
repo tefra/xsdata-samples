@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.electronic_misc_document import ElectronicMiscDocument
 from travelport.models.emdcommission import Emdcommission
 from travelport.models.emdendorsement import Emdendorsement

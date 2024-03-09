@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .condition_summary import ConditionSummary
 from .distribution_assignments_rel_structure import (
     DistributionAssignmentsRelStructure,
@@ -41,15 +42,15 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_sales_offer_package_ref: Optional[
-        TypeOfSalesOfferPackageRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TypeOfSalesOfferPackageRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    type_of_sales_offer_package_ref: Optional[TypeOfSalesOfferPackageRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TypeOfSalesOfferPackageRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     condition_summary: Optional[ConditionSummary] = field(
         default=None,
@@ -69,15 +70,15 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_assignments: Optional[
-        DistributionAssignmentsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "distributionAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    distribution_assignments: Optional[DistributionAssignmentsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "distributionAssignments",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     rounding_ref: Optional[RoundingRef] = field(
         default=None,

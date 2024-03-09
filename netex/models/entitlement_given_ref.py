@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .entitlement_given_ref_structure import EntitlementGivenRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

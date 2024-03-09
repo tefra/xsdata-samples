@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .delivery_variant_ref_structure import DeliveryVariantRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

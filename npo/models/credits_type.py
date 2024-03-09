@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.name_type import NameType
 from npo.models.person_type import PersonType
 

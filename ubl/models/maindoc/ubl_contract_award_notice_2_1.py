@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Tuple
+
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ContractingParty,
     MinutesDocumentReference,
@@ -9,9 +10,9 @@ from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ProcurementProjectLot,
     ReceiverParty,
     Signature,
-    TenderResult,
     TenderingProcess,
     TenderingTerms,
+    TenderResult,
 )
 from ubl.models.common.ubl_common_basic_components_2_1 import (
     ContractFolderId,

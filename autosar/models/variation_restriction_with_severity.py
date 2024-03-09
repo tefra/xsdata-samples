@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .boolean import Boolean
 from .full_binding_time_enum import FullBindingTimeEnum
 from .severity_enum import SeverityEnum

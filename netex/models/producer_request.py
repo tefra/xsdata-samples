@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .producer_request_endpoint_structure import (
     ProducerRequestEndpointStructure,
 )

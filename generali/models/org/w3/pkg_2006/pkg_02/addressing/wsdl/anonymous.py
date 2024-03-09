@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Dict, Optional
+
 from generali.models.org.w3.pkg_2006.pkg_02.addressing.wsdl.anonymous_type import (
     AnonymousType,
 )

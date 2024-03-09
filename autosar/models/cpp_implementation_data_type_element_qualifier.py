@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .cpp_implementation_data_type_subtypes_enum import (
     CppImplementationDataTypeSubtypesEnum,

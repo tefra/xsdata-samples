@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.hotel_rate_detail import HotelRateDetail
 from travelport.models.hotel_rule_item import HotelRuleItem

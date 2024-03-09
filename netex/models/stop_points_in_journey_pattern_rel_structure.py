@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .stop_point_in_journey_pattern import StopPointInJourneyPattern
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

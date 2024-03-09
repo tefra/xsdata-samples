@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.find_employees_on_flight_req import (
     FindEmployeesOnFlightReq,
 )

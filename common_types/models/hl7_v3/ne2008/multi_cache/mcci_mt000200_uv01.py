@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from ..core.datatypes_base import (
     AnyType,
     Ce,
@@ -507,16 +508,16 @@ class McciMt000200Uv01Acknowledgement:
             "nillable": True,
         },
     )
-    acknowledgement_detail: List[
-        McciMt000200Uv01AcknowledgementDetail
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "acknowledgementDetail",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    acknowledgement_detail: List[McciMt000200Uv01AcknowledgementDetail] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "acknowledgementDetail",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

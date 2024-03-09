@@ -239,8 +239,8 @@ from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_
     StatusHistoryTypeStateTransitionReasonsReasonCode,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.subdivisions_type import (
-    SubDivisionType,
     SubdivisionsType,
+    SubDivisionType,
 )
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.telephone_number_country_code_type import (
     TelephoneNumberCountryCodeType,

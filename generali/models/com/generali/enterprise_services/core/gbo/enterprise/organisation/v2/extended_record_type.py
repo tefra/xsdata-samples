@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.company_info_type import (
     CompanyInfoType,
 )

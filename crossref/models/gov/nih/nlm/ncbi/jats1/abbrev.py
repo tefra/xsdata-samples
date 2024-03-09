@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from crossref.models.gov.nih.nlm.ncbi.jats1.access_date import AccessDate
 from crossref.models.gov.nih.nlm.ncbi.jats1.alt_text import AltText
 from crossref.models.gov.nih.nlm.ncbi.jats1.anonymous import Anonymous

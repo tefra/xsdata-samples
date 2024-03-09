@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .association_role_type import AssociationRoleType
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .key_usage_restriction_enum_simple import KeyUsageRestrictionEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

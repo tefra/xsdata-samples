@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.media_item_1 import MediaItem1
 from travelport.models.type_result_message_1 import TypeResultMessage1
 from travelport.models.vehicle import Vehicle

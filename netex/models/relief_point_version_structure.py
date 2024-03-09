@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .crew_base_ref import CrewBaseRef
 from .timing_point_version_structure import TimingPointVersionStructure
 

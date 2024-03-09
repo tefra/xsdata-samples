@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_fare_rule_category_code import (
     TypeFareRuleCategoryCode,
 )

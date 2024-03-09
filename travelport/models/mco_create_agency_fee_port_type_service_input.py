@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.create_agency_fee_mco_req import CreateAgencyFeeMcoReq
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"

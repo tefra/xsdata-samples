@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_segment_sell_failure_info import (
     AirSegmentSellFailureInfo,
 )

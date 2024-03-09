@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .passage_type_enumeration import PassageTypeEnumeration
 from .point_of_interest_component_version_structure import (
     PointOfInterestComponentVersionStructure,

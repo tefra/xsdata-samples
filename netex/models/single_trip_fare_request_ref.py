@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .single_trip_fare_request_ref_structure import (
     SingleTripFareRequestRefStructure,
 )

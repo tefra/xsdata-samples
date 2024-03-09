@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .msr_query_arg import MsrQueryArg
 from .string import String
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -165,15 +166,15 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requestor_refs: Optional[
-        "TdCpSoftwareClusterMapping.RequestorRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "REQUESTOR-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    requestor_refs: Optional["TdCpSoftwareClusterMapping.RequestorRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "REQUESTOR-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     timing_description_ref: Optional[
         "TdCpSoftwareClusterMapping.TimingDescriptionRef"

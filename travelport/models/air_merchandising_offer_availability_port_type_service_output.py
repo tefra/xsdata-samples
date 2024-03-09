@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_merchandising_offer_availability_rsp import (
     AirMerchandisingOfferAvailabilityRsp,
 )
@@ -14,7 +16,9 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body = field(
+    body: (
+        None | AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body
+    ) = field(
         default=None,
         metadata={
             "name": "Body",
@@ -24,7 +28,9 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
 
     @dataclass
     class Body:
-        air_merchandising_offer_availability_rsp: None | AirMerchandisingOfferAvailabilityRsp = field(
+        air_merchandising_offer_availability_rsp: (
+            None | AirMerchandisingOfferAvailabilityRsp
+        ) = field(
             default=None,
             metadata={
                 "name": "AirMerchandisingOfferAvailabilityRsp",
@@ -32,7 +38,10 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
             },
         )
-        fault: None | AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None
+            | AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +72,10 @@ class AirMerchandisingOfferAvailabilityPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | AirMerchandisingOfferAvailabilityPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .artifact import Artifact
 from .association import Association
 from .boundary_event import BoundaryEvent

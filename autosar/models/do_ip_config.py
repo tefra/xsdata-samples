@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .do_ip_interface import DoIpInterface
 from .do_ip_logic_address import DoIpLogicAddress
 

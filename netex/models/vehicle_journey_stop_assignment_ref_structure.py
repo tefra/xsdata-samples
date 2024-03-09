@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .passenger_stop_assignment_ref_structure import (
     PassengerStopAssignmentRefStructure,
 )

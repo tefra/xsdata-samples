@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .retail_device import RetailDevice
 from .retail_device_ref import RetailDeviceRef

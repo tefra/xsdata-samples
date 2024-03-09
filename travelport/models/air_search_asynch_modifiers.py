@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
@@ -13,7 +14,9 @@ class AirSearchAsynchModifiers:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    initial_asynch_result: None | AirSearchAsynchModifiers.InitialAsynchResult = field(
+    initial_asynch_result: (
+        None | AirSearchAsynchModifiers.InitialAsynchResult
+    ) = field(
         default=None,
         metadata={
             "name": "InitialAsynchResult",

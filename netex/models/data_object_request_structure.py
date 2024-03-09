@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .abstract_functional_service_request_structure import (
     AbstractFunctionalServiceRequestStructure,
 )

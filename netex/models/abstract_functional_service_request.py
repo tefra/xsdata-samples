@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .abstract_functional_service_request_structure import (
     AbstractFunctionalServiceRequestStructure,
 )

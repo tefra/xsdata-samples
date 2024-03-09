@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import DocumentationBlock
 from .argument_data_prototype_subtypes_enum import (
     ArgumentDataPrototypeSubtypesEnum,
@@ -115,15 +116,15 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    argument_ref: Optional[
-        "IoHwAbstractionServerAnnotation.ArgumentRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ARGUMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    argument_ref: Optional["IoHwAbstractionServerAnnotation.ArgumentRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ARGUMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     bsw_resolution: Optional[Float] = field(
         default=None,
@@ -169,15 +170,15 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_ref: Optional[
-        "IoHwAbstractionServerAnnotation.TriggerRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TRIGGER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    trigger_ref: Optional["IoHwAbstractionServerAnnotation.TriggerRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TRIGGER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

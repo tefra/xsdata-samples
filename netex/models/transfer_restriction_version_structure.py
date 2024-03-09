@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 from .transfer_constraint_type_enumeration import (

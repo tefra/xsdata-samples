@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_rental_period_rental_unit import (
     TypeRentalPeriodRentalUnit,
 )

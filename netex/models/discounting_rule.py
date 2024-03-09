@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .discounting_rule_versioned_structure import (
     DiscountingRuleVersionedStructure,
 )

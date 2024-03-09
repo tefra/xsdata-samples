@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .common_sections_in_frame_rel_structure import (
     CommonSectionsInFrameRelStructure,
 )
@@ -152,15 +153,15 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_link_properties: Optional[
-        FlexibleLinkPropertiesRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "flexibleLinkProperties",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    flexible_link_properties: Optional[FlexibleLinkPropertiesRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "flexibleLinkProperties",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     common_sections: Optional[CommonSectionsInFrameRelStructure] = field(
         default=None,
@@ -209,15 +210,15 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_displays: Optional[
-        DestinationDisplaysInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "destinationDisplays",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    destination_displays: Optional[DestinationDisplaysInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "destinationDisplays",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     line_networks: Optional[LineNetworksInFrameRelStructure] = field(
         default=None,
@@ -227,15 +228,15 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_points: Optional[
-        ScheduledStopPointsInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "scheduledStopPoints",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    scheduled_stop_points: Optional[ScheduledStopPointsInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "scheduledStopPoints",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     service_links: Optional[ServiceLinksInFrameRelStructure] = field(
         default=None,
@@ -393,15 +394,15 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    display_assignments: Optional[
-        DisplayAssignmentsInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "displayAssignments",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    display_assignments: Optional[DisplayAssignmentsInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "displayAssignments",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     passenger_information_equipments: Optional[
         PassengerInformationEquipmentsInFrameRelStructure

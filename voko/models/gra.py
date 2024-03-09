@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from voko.models.vspec import Vspec
 
 

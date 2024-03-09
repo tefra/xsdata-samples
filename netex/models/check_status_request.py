@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .check_status_request_structure import CheckStatusRequestStructure
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"

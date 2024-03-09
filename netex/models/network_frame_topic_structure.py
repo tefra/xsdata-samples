@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from xsdata.models.datatype import XmlDateTime
+
 from .closed_timestamp_range_structure import ClosedTimestampRangeStructure
 from .composite_frame_ref import CompositeFrameRef
 from .driver_schedule_frame_ref import DriverScheduleFrameRef

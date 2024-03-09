@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_air_exchange_quote_rsp import (
     BookingAirExchangeQuoteRsp,
 )
@@ -24,15 +26,19 @@ class BookingAirExchangeQuotePortTypeServiceOutput:
 
     @dataclass
     class Body:
-        booking_air_exchange_quote_rsp: None | BookingAirExchangeQuoteRsp = field(
-            default=None,
-            metadata={
-                "name": "BookingAirExchangeQuoteRsp",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            },
+        booking_air_exchange_quote_rsp: None | BookingAirExchangeQuoteRsp = (
+            field(
+                default=None,
+                metadata={
+                    "name": "BookingAirExchangeQuoteRsp",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
+                },
+            )
         )
-        fault: None | BookingAirExchangeQuotePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | BookingAirExchangeQuotePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +69,10 @@ class BookingAirExchangeQuotePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | BookingAirExchangeQuotePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | BookingAirExchangeQuotePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

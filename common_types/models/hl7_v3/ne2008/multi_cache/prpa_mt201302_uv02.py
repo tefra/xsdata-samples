@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     AdExplicit,
     AnyType,
@@ -642,14 +643,14 @@ class PrpaMt201302Uv02PersonalRelationshipId(Ii):
     class Meta:
         name = "PRPA_MT201302UV02.PersonalRelationship.id"
 
-    update_mode: Optional[
-        PrpaMt201302Uv02PersonalRelationshipIdUpdateMode
-    ] = field(
-        default=None,
-        metadata={
-            "name": "updateMode",
-            "type": "Attribute",
-        },
+    update_mode: Optional[PrpaMt201302Uv02PersonalRelationshipIdUpdateMode] = (
+        field(
+            default=None,
+            metadata={
+                "name": "updateMode",
+                "type": "Attribute",
+            },
+        )
     )
 
 
@@ -1881,16 +1882,16 @@ class PrpaMt201302Uv02PersonalRelationship:
             "nillable": True,
         },
     )
-    relationship_holder2: Optional[
-        CoctMt030007UvNonPersonLivingSubject
-    ] = field(
-        default=None,
-        metadata={
-            "name": "relationshipHolder2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    relationship_holder2: Optional[CoctMt030007UvNonPersonLivingSubject] = (
+        field(
+            default=None,
+            metadata={
+                "name": "relationshipHolder2",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -2596,16 +2597,16 @@ class PrpaMt201302Uv02Person:
             "nillable": True,
         },
     )
-    language_communication: List[
-        PrpaMt201302Uv02LanguageCommunication
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "languageCommunication",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    language_communication: List[PrpaMt201302Uv02LanguageCommunication] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "languageCommunication",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -2711,14 +2712,14 @@ class PrpaMt201302Uv02PatientPatientPerson(PrpaMt201302Uv02Person):
     class Meta:
         name = "PRPA_MT201302UV02.Patient.patientPerson"
 
-    update_mode: Optional[
-        PrpaMt201302Uv02PatientPatientPersonUpdateMode
-    ] = field(
-        default=None,
-        metadata={
-            "name": "updateMode",
-            "type": "Attribute",
-        },
+    update_mode: Optional[PrpaMt201302Uv02PatientPatientPersonUpdateMode] = (
+        field(
+            default=None,
+            metadata={
+                "name": "updateMode",
+                "type": "Attribute",
+            },
+        )
     )
 
 

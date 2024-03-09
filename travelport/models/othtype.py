@@ -1,6 +1,8 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
+
 from xsdata.models.datatype import XmlDate
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"

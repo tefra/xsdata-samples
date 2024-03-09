@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .fm_attribute_def_subtypes_enum import FmAttributeDefSubtypesEnum
 from .numerical_value import NumericalValue
 from .ref import Ref

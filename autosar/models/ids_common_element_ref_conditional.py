@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .ids_common_element_subtypes_enum import IdsCommonElementSubtypesEnum
 from .ref import Ref

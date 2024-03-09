@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -170,15 +171,15 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_prototype_iref: Optional[
-        ComponentInSystemInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SW-COMPONENT-PROTOTYPE-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sw_component_prototype_iref: Optional[ComponentInSystemInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SW-COMPONENT-PROTOTYPE-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

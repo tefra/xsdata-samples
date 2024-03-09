@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.activity import Activity
 from datexii.models.eu.datexii.v2.authority_operation_type_enum import (
     AuthorityOperationTypeEnum,

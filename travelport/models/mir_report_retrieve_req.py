@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.mir_report_retrieve_req_report_format import (
     MirReportRetrieveReqReportFormat,

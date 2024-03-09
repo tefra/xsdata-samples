@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
 )
@@ -66,25 +67,25 @@ class TriggerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_refs: Optional[
-        "TriggerToSignalMapping.EventGroupRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EVENT-GROUP-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_group_refs: Optional["TriggerToSignalMapping.EventGroupRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-GROUP-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    event_handler_refs: Optional[
-        "TriggerToSignalMapping.EventHandlerRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EVENT-HANDLER-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_handler_refs: Optional["TriggerToSignalMapping.EventHandlerRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-HANDLER-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -120,15 +121,15 @@ class TriggerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_ref: Optional[
-        "TriggerToSignalMapping.SystemSignalRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SYSTEM-SIGNAL-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    system_signal_ref: Optional["TriggerToSignalMapping.SystemSignalRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SYSTEM-SIGNAL-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.matcher_list import MatcherList
 from npo.models.text_matcher_type import TextMatcherType
 

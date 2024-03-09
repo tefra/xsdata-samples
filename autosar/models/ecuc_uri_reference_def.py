@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -373,15 +374,15 @@ class EcucUriReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_uri_ref: Optional[
-        "EcucUriReferenceDef.DestinationUriRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DESTINATION-URI-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    destination_uri_ref: Optional["EcucUriReferenceDef.DestinationUriRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DESTINATION-URI-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,
@@ -478,15 +479,15 @@ class EcucUriReferenceDef:
 
     @dataclass
     class ValueConfigClasses:
-        ecuc_value_configuration_class: List[
-            EcucValueConfigurationClass
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ECUC-VALUE-CONFIGURATION-CLASS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ecuc_value_configuration_class: List[EcucValueConfigurationClass] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ECUC-VALUE-CONFIGURATION-CLASS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .integer_value_variation_point import IntegerValueVariationPoint
 from .ref import Ref
 from .sw_axis_type_subtypes_enum import SwAxisTypeSubtypesEnum
@@ -59,15 +60,15 @@ class SwAxisGeneric:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_generic_axis_params: Optional[
-        "SwAxisGeneric.SwGenericAxisParams"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SW-GENERIC-AXIS-PARAMS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sw_generic_axis_params: Optional["SwAxisGeneric.SwGenericAxisParams"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SW-GENERIC-AXIS-PARAMS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

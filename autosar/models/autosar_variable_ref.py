@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ar_variable_in_implementation_data_instance_ref import (
     ArVariableInImplementationDataInstanceRef,
 )
@@ -64,25 +65,25 @@ class AutosarVariableRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    autosar_variable_iref: Optional[
-        VariableInAtomicSwcTypeInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AUTOSAR-VARIABLE-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    autosar_variable_iref: Optional[VariableInAtomicSwcTypeInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AUTOSAR-VARIABLE-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    local_variable_ref: Optional[
-        "AutosarVariableRef.LocalVariableRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "LOCAL-VARIABLE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    local_variable_ref: Optional["AutosarVariableRef.LocalVariableRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "LOCAL-VARIABLE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

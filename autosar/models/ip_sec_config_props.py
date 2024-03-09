@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -122,15 +123,15 @@ class IpSecConfigProps:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "IpSecConfigProps.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["IpSecConfigProps.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -188,15 +189,15 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ah_cipher_suite_names: Optional[
-        "IpSecConfigProps.AhCipherSuiteNames"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AH-CIPHER-SUITE-NAMES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ah_cipher_suite_names: Optional["IpSecConfigProps.AhCipherSuiteNames"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AH-CIPHER-SUITE-NAMES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     dpd_action: Optional[IPsecDpdActionEnum] = field(
         default=None,

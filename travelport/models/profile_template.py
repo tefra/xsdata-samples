@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.custom_field import CustomField
 from travelport.models.custom_field_group import CustomFieldGroup
 from travelport.models.fixed_field_group import FixedFieldGroup

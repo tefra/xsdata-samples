@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.account_code_1 import AccountCode1
 from travelport.models.air_itinerary_details import AirItineraryDetails
 

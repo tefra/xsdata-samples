@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlTime
+
 from .explicit_journey_refs_rel_structure import (
     ExplicitJourneyRefsRelStructure,
 )

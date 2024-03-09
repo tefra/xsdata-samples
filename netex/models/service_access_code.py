@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .service_access_code_version_structure import (
     ServiceAccessCodeVersionStructure,
 )

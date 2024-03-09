@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .garage_ref import GarageRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 

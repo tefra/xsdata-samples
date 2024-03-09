@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     AdExplicit,
     Cd,
@@ -390,16 +391,16 @@ class CoctMt740000Uv04HealthCareProvider:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    health_care_provider_person: Optional[
-        CoctMt740000Uv04ProviderPerson
-    ] = field(
-        default=None,
-        metadata={
-            "name": "healthCareProviderPerson",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    health_care_provider_person: Optional[CoctMt740000Uv04ProviderPerson] = (
+        field(
+            default=None,
+            metadata={
+                "name": "healthCareProviderPerson",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -985,27 +986,27 @@ class CoctMt740000Uv04OralHealthService:
             "nillable": True,
         },
     )
-    pertinent_information1: List[
-        CoctMt740000Uv04PertinentInformation1
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "pertinentInformation1",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information1: List[CoctMt740000Uv04PertinentInformation1] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "pertinentInformation1",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    pertinent_information2: List[
-        CoctMt740000Uv04PertinentInformation2
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "pertinentInformation2",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    pertinent_information2: List[CoctMt740000Uv04PertinentInformation2] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "pertinentInformation2",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     referenced_by: Optional[CoctMt740000Uv04Reference] = field(
         default=None,

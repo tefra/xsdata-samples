@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .data_transformation_status_forwarding_enum_simple import (
     DataTransformationStatusForwardingEnumSimple,
 )

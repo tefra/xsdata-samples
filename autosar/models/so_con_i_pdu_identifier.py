@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .identifier import Identifier
 from .pdu_collection_semantics_enum import PduCollectionSemanticsEnum
 from .pdu_collection_trigger_enum import PduCollectionTriggerEnum
@@ -106,15 +107,15 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggering_ref: Optional[
-        "SoConIPduIdentifier.PduTriggeringRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PDU-TRIGGERING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    pdu_triggering_ref: Optional["SoConIPduIdentifier.PduTriggeringRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PDU-TRIGGERING-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

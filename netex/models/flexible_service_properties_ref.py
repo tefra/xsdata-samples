@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .flexible_service_properties_ref_structure import (
     FlexibleServicePropertiesRefStructure,
 )

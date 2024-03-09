@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .t_base_element import TBaseElement
 from .t_formal_expression import TFormalExpression
 from .t_implicit_throw_event import TImplicitThrowEvent

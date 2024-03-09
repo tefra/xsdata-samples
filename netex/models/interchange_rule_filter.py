@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .interchange_rule_parameter_structure import (
     InterchangeRuleParameterStructure,
 )

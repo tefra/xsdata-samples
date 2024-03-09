@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.party_ids import (
     PartyIds,
 )

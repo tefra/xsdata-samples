@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_voucher_type_2 import TypeVoucherType2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"

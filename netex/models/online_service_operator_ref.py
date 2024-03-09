@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .online_service_operator_ref_structure import (
     OnlineServiceOperatorRefStructure,
 )

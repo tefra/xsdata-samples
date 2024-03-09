@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDuration
+
 from .data_name_spaces_structure import DataNameSpacesStructure
 from .delivery_method_enumeration import DeliveryMethodEnumeration
 from .empty_type_1 import EmptyType1

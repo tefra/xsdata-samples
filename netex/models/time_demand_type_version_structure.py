@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .entity_in_version_structure import DataManagedObjectStructure
 from .journey_headways_rel_structure import JourneyHeadwaysRelStructure
 from .journey_layovers_rel_structure import JourneyLayoversRelStructure

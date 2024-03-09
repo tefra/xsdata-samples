@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .driver_schedule_version_frame_structure import (
     DriverScheduleVersionFrameStructure,
 )

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.proprietary_data_proprietary_data_type_1 import (
     ProprietaryDataProprietaryDataType1,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -371,15 +372,15 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class E2EEventProtectionPropss:
-        end_2_end_event_protection_props: List[
-            End2EndEventProtectionProps
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "END-2-END-EVENT-PROTECTION-PROPS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        end_2_end_event_protection_props: List[End2EndEventProtectionProps] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "END-2-END-EVENT-PROTECTION-PROPS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass
@@ -465,13 +466,13 @@ class RequiredSomeipServiceInstance:
 
     @dataclass
     class SdClientConfigRef(Ref):
-        dest: Optional[
-            SomeipSdClientServiceInstanceConfigSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[SomeipSdClientServiceInstanceConfigSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

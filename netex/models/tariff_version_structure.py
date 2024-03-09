@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .assistance_service_ref import AssistanceServiceRef
@@ -406,15 +407,15 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_intervals: Optional[
-        GeographicalIntervalsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "geographicalIntervals",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    geographical_intervals: Optional[GeographicalIntervalsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "geographicalIntervals",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     geographical_structure_factors: Optional[
         GeographicalStructureFactorsRelStructure
@@ -460,25 +461,25 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_structure_elements: Optional[
-        FareStructureElementsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "fareStructureElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    fare_structure_elements: Optional[FareStructureElementsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "fareStructureElements",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
-    distance_matrix_elements: Optional[
-        DistanceMatrixElementsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "distanceMatrixElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    distance_matrix_elements: Optional[DistanceMatrixElementsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "distanceMatrixElements",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     groups_of_distance_matrix_elements: Optional[
         GroupsOfDistanceMatrixElementsRelStructure

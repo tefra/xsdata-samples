@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_key_element_2 import TypeKeyElement2
 from travelport.models.type_proprietary_data_history_proprietary_data_type_2 import (
     TypeProprietaryDataHistoryProprietaryDataType2,
@@ -27,7 +29,9 @@ class TypeProprietaryDataHistory2(TypeKeyElement2):
     class Meta:
         name = "typeProprietaryDataHistory"
 
-    proprietary_data_type: None | TypeProprietaryDataHistoryProprietaryDataType2 = field(
+    proprietary_data_type: (
+        None | TypeProprietaryDataHistoryProprietaryDataType2
+    ) = field(
         default=None,
         metadata={
             "name": "ProprietaryDataType",

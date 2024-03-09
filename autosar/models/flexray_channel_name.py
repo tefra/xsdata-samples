@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .flexray_channel_name_simple import FlexrayChannelNameSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

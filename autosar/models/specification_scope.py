@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .specification_document_scope import SpecificationDocumentScope
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

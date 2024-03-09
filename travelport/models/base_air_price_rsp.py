@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_itinerary import AirItinerary
 from travelport.models.air_price_result import AirPriceResult
 from travelport.models.base_rsp_1 import BaseRsp1

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .charging_equipment_profile import ChargingEquipmentProfile
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .vehicle_equipment_profile import VehicleEquipmentProfile

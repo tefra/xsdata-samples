@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .rough_surface_structure import RoughSurfaceStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

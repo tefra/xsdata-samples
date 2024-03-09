@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .address import Address
 from .symbol_string import SymbolString
 

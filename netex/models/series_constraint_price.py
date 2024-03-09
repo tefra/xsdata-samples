@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .series_constraint_price_versioned_child_structure import (
     SeriesConstraintPriceVersionedChildStructure,
 )

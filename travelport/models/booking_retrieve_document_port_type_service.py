@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.booking_retrieve_document_port_type_service_input import (
     BookingRetrieveDocumentPortTypeServiceInput,
 )

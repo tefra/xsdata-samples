@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .common_version_frame_structure import CommonVersionFrameStructure
 from .fleets_rel_structure import FleetsRelStructure
 from .mobility_service_constraint_zones_in_frame_rel_structure import (
@@ -82,15 +83,15 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_meeting_links: Optional[
-        VehicleMeetingLinksInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "vehicleMeetingLinks",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    vehicle_meeting_links: Optional[VehicleMeetingLinksInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "vehicleMeetingLinks",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     vehicle_meeting_point_assignments: Optional[
         VehicleMeetingPointAssignmentsInFrameRelStructure

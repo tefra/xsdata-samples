@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .multilingual_string import MultilingualString
 from .type_of_entity_version_structure import TypeOfEntityVersionStructure
 

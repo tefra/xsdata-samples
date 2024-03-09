@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from .e_enum_font_simple import EEnumFontSimple
 from .e_enum_simple import EEnumSimple
 from .supscript import Supscript

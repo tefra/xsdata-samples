@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .activation_assignment_version_structure import (
     ActivationAssignmentVersionStructure,
 )

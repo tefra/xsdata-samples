@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .serviced_organisation_ref_structure import (
     ServicedOrganisationRefStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .fare_structure_element_in_sequence_versioned_child_structure import (
     FareStructureElementInSequenceVersionedChildStructure,
 )

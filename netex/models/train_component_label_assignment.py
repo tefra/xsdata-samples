@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .train_component_label_assignment_version_structure import (
     TrainComponentLabelAssignmentVersionStructure,
 )

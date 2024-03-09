@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ecuc_destination_uri_nesting_contract_enum_simple import (
     EcucDestinationUriNestingContractEnumSimple,
 )

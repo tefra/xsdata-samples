@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.duration_value import DurationValue
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.floating_point_metre_distance_value import (
@@ -30,15 +31,15 @@ class TrafficHeadway(TrafficData):
     :ivar traffic_headway_extension:
     """
 
-    average_distance_headway: Optional[
-        FloatingPointMetreDistanceValue
-    ] = field(
-        default=None,
-        metadata={
-            "name": "averageDistanceHeadway",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    average_distance_headway: Optional[FloatingPointMetreDistanceValue] = (
+        field(
+            default=None,
+            metadata={
+                "name": "averageDistanceHeadway",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     average_time_headway: Optional[DurationValue] = field(
         default=None,

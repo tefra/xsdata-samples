@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from .empty_type_1 import EmptyType1
 from .participant_ref_structure import ParticipantRefStructure
 from .subscription_qualifier_structure import SubscriptionQualifierStructure

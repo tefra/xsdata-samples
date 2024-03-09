@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .blacklist import Blacklist
 from .frame_containment_structure import FrameContainmentStructure
 

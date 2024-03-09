@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_source_1 import BookingSource1
 from travelport.models.driver_info import DriverInfo
 from travelport.models.loyalty_card_1 import LoyaltyCard1

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_type_preference_ref_structure import (
     VehicleTypePreferenceRefStructure,
 )

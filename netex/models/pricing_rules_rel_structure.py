@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .discounting_rule import DiscountingRule
 from .frame_containment_structure import FrameContainmentStructure
 from .limiting_rule import LimitingRule

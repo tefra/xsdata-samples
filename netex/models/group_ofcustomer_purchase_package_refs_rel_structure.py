@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .group_of_customer_purchase_packages_ref import (
     GroupOfCustomerPurchasePackagesRef,
 )

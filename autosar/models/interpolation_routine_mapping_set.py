@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -141,15 +142,15 @@ class InterpolationRoutineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "InterpolationRoutineMappingSet.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["InterpolationRoutineMappingSet.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -216,13 +217,13 @@ class InterpolationRoutineMappingSet:
 
     @dataclass
     class InterpolationRoutineMappings:
-        interpolation_routine_mapping: List[
-            InterpolationRoutineMapping
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "INTERPOLATION-ROUTINE-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        interpolation_routine_mapping: List[InterpolationRoutineMapping] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "INTERPOLATION-ROUTINE-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

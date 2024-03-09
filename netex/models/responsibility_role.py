@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .responsibility_role_version_structure import (
     ResponsibilityRoleVersionStructure,
 )

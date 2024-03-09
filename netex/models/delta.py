@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .delta_structure import DeltaStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

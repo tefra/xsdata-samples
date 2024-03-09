@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.direction_enum import DirectionEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.tpeg_loc01_linear_location_subtype_enum import (
@@ -34,16 +35,16 @@ class TpegLinearLocation:
             "required": True,
         },
     )
-    tpeg_linear_location_type: Optional[
-        TpegLoc01LinearLocationSubtypeEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "tpegLinearLocationType",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    tpeg_linear_location_type: Optional[TpegLoc01LinearLocationSubtypeEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "tpegLinearLocationType",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     to: Optional[TpegPoint] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.order_confirmation import DeliveryComplete
 from xcbl.models.remittance_advice import PurchaseOrderLineItemNumber
 from xcbl.models.shipping_schedule import ListOfPackageDetail
@@ -269,14 +270,14 @@ class GoodsCondition:
             "type": "Element",
         },
     )
-    element_identifier_coded_other: Optional[
-        ElementIdentifierCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ElementIdentifierCodedOther",
-            "type": "Element",
-        },
+    element_identifier_coded_other: Optional[ElementIdentifierCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ElementIdentifierCodedOther",
+                "type": "Element",
+            },
+        )
     )
     identifying_reference: Optional[IdentifyingReference] = field(
         default=None,
@@ -285,23 +286,23 @@ class GoodsCondition:
             "type": "Element",
         },
     )
-    delivery_stage_qualifier_coded: Optional[
-        DeliveryStageQualifierCoded
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DeliveryStageQualifierCoded",
-            "type": "Element",
-        },
+    delivery_stage_qualifier_coded: Optional[DeliveryStageQualifierCoded] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DeliveryStageQualifierCoded",
+                "type": "Element",
+            },
+        )
     )
-    delivery_stage_qualifier_other: Optional[
-        DeliveryStageQualifierOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DeliveryStageQualifierOther",
-            "type": "Element",
-        },
+    delivery_stage_qualifier_other: Optional[DeliveryStageQualifierOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DeliveryStageQualifierOther",
+                "type": "Element",
+            },
+        )
     )
     goods_condition_coded: GoodsConditionCoded = field(
         metadata={
@@ -463,14 +464,14 @@ class GoodsReceiptItemOrderReference:
             "required": True,
         }
     )
-    purchase_order_line_item_number: Optional[
-        PurchaseOrderLineItemNumber
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PurchaseOrderLineItemNumber",
-            "type": "Element",
-        },
+    purchase_order_line_item_number: Optional[PurchaseOrderLineItemNumber] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PurchaseOrderLineItemNumber",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -685,14 +686,14 @@ class GoodsReceiptHeader:
             "required": True,
         }
     )
-    goods_receipt_type_coded_other: Optional[
-        GoodsReceiptTypeCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "GoodsReceiptTypeCodedOther",
-            "type": "Element",
-        },
+    goods_receipt_type_coded_other: Optional[GoodsReceiptTypeCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "GoodsReceiptTypeCodedOther",
+                "type": "Element",
+            },
+        )
     )
     list_of_goods_condition: Optional[ListOfGoodsCondition] = field(
         default=None,
@@ -883,14 +884,14 @@ class GoodsReceiptItemDetail:
             "type": "Element",
         },
     )
-    goods_receipt_delivery_detail: Optional[
-        GoodsReceiptDeliveryDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "GoodsReceiptDeliveryDetail",
-            "type": "Element",
-        },
+    goods_receipt_delivery_detail: Optional[GoodsReceiptDeliveryDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "GoodsReceiptDeliveryDetail",
+                "type": "Element",
+            },
+        )
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,

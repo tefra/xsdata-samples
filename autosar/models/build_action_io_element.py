@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import Sdg
 from .build_engineering_object import BuildEngineeringObject
 from .ecuc_definition_element_subtypes_enum import (
@@ -76,15 +77,15 @@ class BuildActionIoElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_definition_ref: Optional[
-        "BuildActionIoElement.EcucDefinitionRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ECUC-DEFINITION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecuc_definition_ref: Optional["BuildActionIoElement.EcucDefinitionRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECUC-DEFINITION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     engineering_object: Optional[BuildEngineeringObject] = field(
         default=None,

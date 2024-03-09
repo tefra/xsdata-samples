@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .data_object_capabilities_request import DataObjectCapabilitiesRequest
 from .request_structure import RequestStructure
 

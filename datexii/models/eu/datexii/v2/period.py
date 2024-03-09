@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from datexii.models.eu.datexii.v2.day_week_month import DayWeekMonth
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.period_extension_type import (

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .td_event_service_instance_event_type_enum_simple import (
     TdEventServiceInstanceEventTypeEnumSimple,
 )

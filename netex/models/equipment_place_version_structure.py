@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .equipment_positions_rel_structure import EquipmentPositionsRelStructure
 from .equipments_rel_structure import EquipmentsRelStructure
 from .site_element_version_structure import SiteElementVersionStructure

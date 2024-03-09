@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .passenger_capacity import PassengerCapacity
 from .passenger_capacity_ref import PassengerCapacityRef

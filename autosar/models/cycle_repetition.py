@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .cycle_repetition_type import CycleRepetitionType
 from .integer import Integer
 

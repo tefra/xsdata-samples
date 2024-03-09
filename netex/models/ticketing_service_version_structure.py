@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .local_service_version_structure import LocalServiceVersionStructure
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .ticket_type_enumeration import TicketTypeEnumeration

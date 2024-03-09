@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .luggage_service_facility_enumeration import (
     LuggageServiceFacilityEnumeration,
 )

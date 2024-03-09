@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from .binding_time_enum_simple import BindingTimeEnumSimple
 from .ref import Ref
 from .sw_systemconst_subtypes_enum import SwSystemconstSubtypesEnum

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.provider_reservation_divide_req import (
     ProviderReservationDivideReq,
 )
@@ -25,7 +27,9 @@ class ProviderReservationDivideServicePortTypeServiceInput:
 
     @dataclass
     class Body:
-        provider_reservation_divide_req: None | ProviderReservationDivideReq = field(
+        provider_reservation_divide_req: (
+            None | ProviderReservationDivideReq
+        ) = field(
             default=None,
             metadata={
                 "name": "ProviderReservationDivideReq",

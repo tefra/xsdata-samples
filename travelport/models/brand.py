@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.default_brand_detail import DefaultBrandDetail
 from travelport.models.image_location import ImageLocation
 from travelport.models.optional_services import OptionalServices

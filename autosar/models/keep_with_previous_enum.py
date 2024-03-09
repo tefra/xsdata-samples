@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .keep_with_previous_enum_simple import KeepWithPreviousEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

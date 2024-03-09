@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDateTime
+
 from .capping_rule_price_ref import CappingRulePriceRef
 from .cell_ref_1 import CellRef1
 from .controllable_element_price_ref import ControllableElementPriceRef

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .numerical_value_variation_point import NumericalValueVariationPoint
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

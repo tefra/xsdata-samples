@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlTime
 
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"

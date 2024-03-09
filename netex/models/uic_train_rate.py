@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .uic_rate_type_enumeration import UicRateTypeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

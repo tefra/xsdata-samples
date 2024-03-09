@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.address_2 import Address2
 from travelport.models.electronic_address_2 import ElectronicAddress2
 from travelport.models.external_identifier_2 import ExternalIdentifier2

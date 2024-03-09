@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     AdExplicit,
     AnyType,
@@ -1569,16 +1570,16 @@ class CoctMt230100UvAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    territorial_authority: Optional[
-        CoctMt230100UvTerritorialAuthority
-    ] = field(
-        default=None,
-        metadata={
-            "name": "territorialAuthority",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    territorial_authority: Optional[CoctMt230100UvTerritorialAuthority] = (
+        field(
+            default=None,
+            metadata={
+                "name": "territorialAuthority",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -1711,16 +1712,16 @@ class CoctMt230100UvSubstance:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_substance_manufacturer: List[
-        CoctMt230100UvSubstanceManufacturer
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "asSubstanceManufacturer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    as_substance_manufacturer: List[CoctMt230100UvSubstanceManufacturer] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "asSubstanceManufacturer",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     sub_ingredient: List[CoctMt230100UvSubIngredient] = field(
         default_factory=list,
@@ -2332,16 +2333,16 @@ class CoctMt230100UvContent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    container_packaged_medicine: Optional[
-        CoctMt230100UvPackagedMedicine
-    ] = field(
-        default=None,
-        metadata={
-            "name": "containerPackagedMedicine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    container_packaged_medicine: Optional[CoctMt230100UvPackagedMedicine] = (
+        field(
+            default=None,
+            metadata={
+                "name": "containerPackagedMedicine",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            },
+        )
     )
     subject_of1: List[CoctMt230100UvSubject14] = field(
         default_factory=list,
@@ -2432,16 +2433,16 @@ class CoctMt230100UvSubContent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    contained_packaged_medicine: Optional[
-        CoctMt230100UvPackagedMedicine
-    ] = field(
-        default=None,
-        metadata={
-            "name": "containedPackagedMedicine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    contained_packaged_medicine: Optional[CoctMt230100UvPackagedMedicine] = (
+        field(
+            default=None,
+            metadata={
+                "name": "containedPackagedMedicine",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -2514,16 +2515,16 @@ class CoctMt230100UvSuperContent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    container_packaged_medicine: Optional[
-        CoctMt230100UvPackagedMedicine
-    ] = field(
-        default=None,
-        metadata={
-            "name": "containerPackagedMedicine",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    container_packaged_medicine: Optional[CoctMt230100UvPackagedMedicine] = (
+        field(
+            default=None,
+            metadata={
+                "name": "containerPackagedMedicine",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

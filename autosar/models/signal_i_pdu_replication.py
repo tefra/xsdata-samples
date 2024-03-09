@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
 from .integer import Integer
@@ -45,15 +46,15 @@ class SignalIPduReplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    replica_pdus_refs: Optional[
-        "SignalIPduReplication.ReplicaPdusRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "REPLICA-PDUS-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    replica_pdus_refs: Optional["SignalIPduReplication.ReplicaPdusRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "REPLICA-PDUS-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,

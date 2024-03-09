@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .priceable_object_version_structure import (
     FareStructureFactorVersionStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .application_composite_element_data_prototype_subtypes_enum import (
     ApplicationCompositeElementDataPrototypeSubtypesEnum,
 )
@@ -45,15 +46,15 @@ class OperationArgumentInComponentInstanceRef:
     class Meta:
         name = "OPERATION-ARGUMENT-IN-COMPONENT-INSTANCE-REF"
 
-    base_ref: Optional[
-        "OperationArgumentInComponentInstanceRef.BaseRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "BASE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    base_ref: Optional["OperationArgumentInComponentInstanceRef.BaseRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "BASE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     context_component_ref: List[
         "OperationArgumentInComponentInstanceRef.ContextComponentRef"

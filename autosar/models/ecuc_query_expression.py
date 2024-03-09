@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
+
 from .ecuc_definition_element_subtypes_enum import (
     EcucDefinitionElementSubtypesEnum,
 )

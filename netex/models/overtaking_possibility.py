@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .overtaking_possibility_version_structure import (
     OvertakingPossibilityVersionStructure,
 )

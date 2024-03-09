@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -247,13 +248,13 @@ class RunnableEntityGroup:
 
     @dataclass
     class RunnableEntityIrefs:
-        runnable_entity_iref: List[
-            RunnableEntityInCompositionInstanceRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "RUNNABLE-ENTITY-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        runnable_entity_iref: List[RunnableEntityInCompositionInstanceRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "RUNNABLE-ENTITY-IREF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

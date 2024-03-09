@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.vehicle_search_service_port_type_service_input import (
     VehicleSearchServicePortTypeServiceInput,
 )

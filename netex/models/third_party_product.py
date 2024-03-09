@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .third_party_product_version_structure import (
     ThirdPartyProductVersionStructure,
 )

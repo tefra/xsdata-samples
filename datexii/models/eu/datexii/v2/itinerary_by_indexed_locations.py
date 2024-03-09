@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.itinerary import Itinerary
 from datexii.models.eu.datexii.v2.location_contained_in_itinerary import (
@@ -22,15 +23,15 @@ class ItineraryByIndexedLocations(Itinerary):
     :ivar itinerary_by_indexed_locations_extension:
     """
 
-    location_contained_in_itinerary: List[
-        LocationContainedInItinerary
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "locationContainedInItinerary",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    location_contained_in_itinerary: List[LocationContainedInItinerary] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "locationContainedInItinerary",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     itinerary_by_indexed_locations_extension: Optional[ExtensionType] = field(
         default=None,

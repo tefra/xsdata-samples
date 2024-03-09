@@ -1,8 +1,11 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
+
 from xsdata.models.datatype import XmlDate, XmlTime
+
 from sabre.models.bargain_finder_max_common_types_v1_9_7 import (
     AdvResTicketingType,
     AirTripType,
@@ -2232,16 +2235,16 @@ class BookFlightSegmentType:
             stop_airport: Stop point of flight segment.
         """
 
-        stop_airport: list[
-            BookFlightSegmentType.StopAirports.StopAirport
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "StopAirport",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "min_occurs": 1,
-            },
+        stop_airport: list[BookFlightSegmentType.StopAirports.StopAirport] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "StopAirport",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "min_occurs": 1,
+                },
+            )
         )
 
         @dataclass
@@ -2348,7 +2351,9 @@ class BookFlightSegmentType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        data_element: None | BookFlightSegmentType.TpaExtensions.DataElement = field(
+        data_element: (
+            None | BookFlightSegmentType.TpaExtensions.DataElement
+        ) = field(
             default=None,
             metadata={
                 "name": "DataElement",
@@ -3041,7 +3046,9 @@ class FareType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        selling_fare_data_list: None | FareType.TpaExtensions.SellingFareDataList = field(
+        selling_fare_data_list: (
+            None | FareType.TpaExtensions.SellingFareDataList
+        ) = field(
             default=None,
             metadata={
                 "name": "SellingFareDataList",
@@ -3104,7 +3111,9 @@ class FareType:
                         "required": True,
                     },
                 )
-                equiv_fare: None | FareType.TpaExtensions.Legs.Leg.EquivFare = field(
+                equiv_fare: (
+                    None | FareType.TpaExtensions.Legs.Leg.EquivFare
+                ) = field(
                     default=None,
                     metadata={
                         "name": "EquivFare",
@@ -3129,7 +3138,9 @@ class FareType:
                         "required": True,
                     },
                 )
-                total_mileage: None | FareType.TpaExtensions.Legs.Leg.TotalMileage = field(
+                total_mileage: (
+                    None | FareType.TpaExtensions.Legs.Leg.TotalMileage
+                ) = field(
                     default=None,
                     metadata={
                         "name": "TotalMileage",
@@ -3249,7 +3260,10 @@ class FareType:
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     },
                 )
-                equiv_fare: None | FareType.TpaExtensions.FareComponents.FareComponent.EquivFare = field(
+                equiv_fare: (
+                    None
+                    | FareType.TpaExtensions.FareComponents.FareComponent.EquivFare
+                ) = field(
                     default=None,
                     metadata={
                         "name": "EquivFare",
@@ -3257,7 +3271,10 @@ class FareType:
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     },
                 )
-                taxes: None | FareType.TpaExtensions.FareComponents.FareComponent.Taxes = field(
+                taxes: (
+                    None
+                    | FareType.TpaExtensions.FareComponents.FareComponent.Taxes
+                ) = field(
                     default=None,
                     metadata={
                         "name": "Taxes",
@@ -3616,7 +3633,9 @@ class AirItineraryType:
         departure_date: Itinerary departure date
     """
 
-    origin_destination_options: None | AirItineraryType.OriginDestinationOptions = field(
+    origin_destination_options: (
+        None | AirItineraryType.OriginDestinationOptions
+    ) = field(
         default=None,
         metadata={
             "name": "OriginDestinationOptions",
@@ -4203,7 +4222,9 @@ class PtcfareBreakdownType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            tpa_extensions: None | PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions = field(
+            tpa_extensions: (
+                None | PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TPA_Extensions",
@@ -4228,7 +4249,10 @@ class PtcfareBreakdownType:
 
             @dataclass
             class TpaExtensions:
-                seats_remaining: None | PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions.SeatsRemaining = field(
+                seats_remaining: (
+                    None
+                    | PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions.SeatsRemaining
+                ) = field(
                     default=None,
                     metadata={
                         "name": "SeatsRemaining",
@@ -4236,7 +4260,10 @@ class PtcfareBreakdownType:
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     },
                 )
-                cabin: None | PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions.Cabin = field(
+                cabin: (
+                    None
+                    | PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions.Cabin
+                ) = field(
                     default=None,
                     metadata={
                         "name": "Cabin",
@@ -4254,7 +4281,10 @@ class PtcfareBreakdownType:
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     },
                 )
-                meal: None | PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions.Meal = field(
+                meal: (
+                    None
+                    | PtcfareBreakdownType.FareInfos.FareInfo.TpaExtensions.Meal
+                ) = field(
                     default=None,
                     metadata={
                         "name": "Meal",
@@ -4410,7 +4440,9 @@ class AirItineraryPricingInfoType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         },
     )
-    ptc_fare_breakdowns: None | AirItineraryPricingInfoType.PtcFareBreakdowns = field(
+    ptc_fare_breakdowns: (
+        None | AirItineraryPricingInfoType.PtcFareBreakdowns
+    ) = field(
         default=None,
         metadata={
             "name": "PTC_FareBreakdowns",
@@ -4536,7 +4568,9 @@ class AirItineraryPricingInfoType:
             "length": 1,
         },
     )
-    spanish_family_discount_indicator: None | AirItineraryPricingInfoTypeSpanishFamilyDiscountIndicator = field(
+    spanish_family_discount_indicator: (
+        None | AirItineraryPricingInfoTypeSpanishFamilyDiscountIndicator
+    ) = field(
         default=None,
         metadata={
             "name": "SpanishFamilyDiscountIndicator",
@@ -4601,17 +4635,17 @@ class AirItineraryPricingInfoType:
             fare_info: Detailed information on individual priced fares
         """
 
-        fare_info: list[
-            AirItineraryPricingInfoType.FareInfos.FareInfo
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareInfo",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "min_occurs": 1,
-                "max_occurs": 10,
-            },
+        fare_info: list[AirItineraryPricingInfoType.FareInfos.FareInfo] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "FareInfo",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                    "min_occurs": 1,
+                    "max_occurs": 10,
+                },
+            )
         )
 
         @dataclass
@@ -4683,7 +4717,10 @@ class AirItineraryPricingInfoType:
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                 },
             )
-            tpa_extensions: None | AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions = field(
+            tpa_extensions: (
+                None
+                | AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TPA_Extensions",
@@ -4708,7 +4745,10 @@ class AirItineraryPricingInfoType:
 
             @dataclass
             class TpaExtensions:
-                seats_remaining: None | AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions.SeatsRemaining = field(
+                seats_remaining: (
+                    None
+                    | AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions.SeatsRemaining
+                ) = field(
                     default=None,
                     metadata={
                         "name": "SeatsRemaining",
@@ -4716,7 +4756,10 @@ class AirItineraryPricingInfoType:
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     },
                 )
-                cabin: None | AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions.Cabin = field(
+                cabin: (
+                    None
+                    | AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions.Cabin
+                ) = field(
                     default=None,
                     metadata={
                         "name": "Cabin",
@@ -4734,7 +4777,10 @@ class AirItineraryPricingInfoType:
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
                     },
                 )
-                meal: None | AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions.Meal = field(
+                meal: (
+                    None
+                    | AirItineraryPricingInfoType.FareInfos.FareInfo.TpaExtensions.Meal
+                ) = field(
                     default=None,
                     metadata={
                         "name": "Meal",
@@ -4850,7 +4896,9 @@ class AirItineraryPricingInfoType:
             validating_carrier:
         """
 
-        divide_in_party: None | AirItineraryPricingInfoType.TpaExtensions.DivideInParty = field(
+        divide_in_party: (
+            None | AirItineraryPricingInfoType.TpaExtensions.DivideInParty
+        ) = field(
             default=None,
             metadata={
                 "name": "DivideInParty",
@@ -4858,7 +4906,9 @@ class AirItineraryPricingInfoType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        promo_offer: None | AirItineraryPricingInfoType.TpaExtensions.PromoOffer = field(
+        promo_offer: (
+            None | AirItineraryPricingInfoType.TpaExtensions.PromoOffer
+        ) = field(
             default=None,
             metadata={
                 "name": "PromoOffer",
@@ -4866,17 +4916,19 @@ class AirItineraryPricingInfoType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        fare_note: list[
-            AirItineraryPricingInfoType.TpaExtensions.FareNote
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "FareNote",
-                "type": "Element",
-                "namespace": "http://www.opentravel.org/OTA/2003/05",
-            },
+        fare_note: list[AirItineraryPricingInfoType.TpaExtensions.FareNote] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "FareNote",
+                    "type": "Element",
+                    "namespace": "http://www.opentravel.org/OTA/2003/05",
+                },
+            )
         )
-        promo_redemption: None | AirItineraryPricingInfoType.TpaExtensions.PromoRedemption = field(
+        promo_redemption: (
+            None | AirItineraryPricingInfoType.TpaExtensions.PromoRedemption
+        ) = field(
             default=None,
             metadata={
                 "name": "PromoRedemption",
@@ -4892,7 +4944,10 @@ class AirItineraryPricingInfoType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        multiple_traveler_groups: None | AirItineraryPricingInfoType.TpaExtensions.MultipleTravelerGroups = field(
+        multiple_traveler_groups: (
+            None
+            | AirItineraryPricingInfoType.TpaExtensions.MultipleTravelerGroups
+        ) = field(
             default=None,
             metadata={
                 "name": "MultipleTravelerGroups",
@@ -4900,7 +4955,9 @@ class AirItineraryPricingInfoType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        ancillary_fee_groups: None | AirItineraryPricingInfoType.TpaExtensions.AncillaryFeeGroups = field(
+        ancillary_fee_groups: (
+            None | AirItineraryPricingInfoType.TpaExtensions.AncillaryFeeGroups
+        ) = field(
             default=None,
             metadata={
                 "name": "AncillaryFeeGroups",
@@ -5147,16 +5204,16 @@ class AirItineraryPricingInfoType:
 
         @dataclass
         class Legs:
-            leg: list[
-                AirItineraryPricingInfoType.TpaExtensions.Legs.Leg
-            ] = field(
-                default_factory=list,
-                metadata={
-                    "name": "Leg",
-                    "type": "Element",
-                    "namespace": "http://www.opentravel.org/OTA/2003/05",
-                    "min_occurs": 1,
-                },
+            leg: list[AirItineraryPricingInfoType.TpaExtensions.Legs.Leg] = (
+                field(
+                    default_factory=list,
+                    metadata={
+                        "name": "Leg",
+                        "type": "Element",
+                        "namespace": "http://www.opentravel.org/OTA/2003/05",
+                        "min_occurs": 1,
+                    },
+                )
             )
 
             @dataclass
@@ -5329,7 +5386,9 @@ class TicketPricingType:
         number: Ticket position related to entire itinerary
     """
 
-    origin_destination_options: None | TicketPricingType.OriginDestinationOptions = field(
+    origin_destination_options: (
+        None | TicketPricingType.OriginDestinationOptions
+    ) = field(
         default=None,
         metadata={
             "name": "OriginDestinationOptions",
@@ -5463,7 +5522,9 @@ class TicketPricingType:
                 Ticketing transactions..
         """
 
-        validating_carrier: None | TicketPricingType.TpaExtensions.ValidatingCarrier = field(
+        validating_carrier: (
+            None | TicketPricingType.TpaExtensions.ValidatingCarrier
+        ) = field(
             default=None,
             metadata={
                 "name": "ValidatingCarrier",
@@ -5699,7 +5760,9 @@ class PricedItineraryType:
                 },
             )
         )
-        validating_carrier: None | PricedItineraryType.TpaExtensions.ValidatingCarrier = field(
+        validating_carrier: (
+            None | PricedItineraryType.TpaExtensions.ValidatingCarrier
+        ) = field(
             default=None,
             metadata={
                 "name": "ValidatingCarrier",
@@ -5715,7 +5778,9 @@ class PricedItineraryType:
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
             },
         )
-        diversity_swapper: None | PricedItineraryType.TpaExtensions.DiversitySwapper = field(
+        diversity_swapper: (
+            None | PricedItineraryType.TpaExtensions.DiversitySwapper
+        ) = field(
             default=None,
             metadata={
                 "name": "DiversitySwapper",
@@ -5746,7 +5811,10 @@ class PricedItineraryType:
                     sold on multiple separate tickets
             """
 
-            air_itinerary_pricing_info: None | PricedItineraryType.TpaExtensions.AdditionalFares.AirItineraryPricingInfo = field(
+            air_itinerary_pricing_info: (
+                None
+                | PricedItineraryType.TpaExtensions.AdditionalFares.AirItineraryPricingInfo
+            ) = field(
                 default=None,
                 metadata={
                     "name": "AirItineraryPricingInfo",
@@ -5806,7 +5874,9 @@ class PricedItineraryType:
                     an action performed by Travelocity.
             """
 
-            fare_types: None | PricedItineraryType.TpaExtensions.Ops.FareTypes = field(
+            fare_types: (
+                None | PricedItineraryType.TpaExtensions.Ops.FareTypes
+            ) = field(
                 default=None,
                 metadata={
                     "name": "FareTypes",
@@ -6066,7 +6136,9 @@ class OtaAirLowFareSearchRs:
             },
         )
     )
-    available_itineraries: None | OtaAirLowFareSearchRs.AvailableItineraries = field(
+    available_itineraries: (
+        None | OtaAirLowFareSearchRs.AvailableItineraries
+    ) = field(
         default=None,
         metadata={
             "name": "AvailableItineraries",
@@ -6127,7 +6199,9 @@ class OtaAirLowFareSearchRs:
             "type": "Attribute",
         },
     )
-    transaction_status_code: None | OtaAirLowFareSearchRsTransactionStatusCode = field(
+    transaction_status_code: (
+        None | OtaAirLowFareSearchRsTransactionStatusCode
+    ) = field(
         default=None,
         metadata={
             "name": "TransactionStatusCode",
@@ -6200,7 +6274,9 @@ class OtaAirLowFareSearchRs:
                 response to a Low Fare Search request.
         """
 
-        tpa_extensions: None | OtaAirLowFareSearchRs.PricedItineraries.TpaExtensions = field(
+        tpa_extensions: (
+            None | OtaAirLowFareSearchRs.PricedItineraries.TpaExtensions
+        ) = field(
             default=None,
             metadata={
                 "name": "TPA_Extensions",
@@ -6272,7 +6348,10 @@ class OtaAirLowFareSearchRs:
                 rph: Leg ID from request.
             """
 
-            tpa_extensions: None | OtaAirLowFareSearchRs.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions = field(
+            tpa_extensions: (
+                None
+                | OtaAirLowFareSearchRs.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TPA_Extensions",
@@ -6321,7 +6400,10 @@ class OtaAirLowFareSearchRs:
                 rph: Leg ID from request.
             """
 
-            tpa_extensions: None | OtaAirLowFareSearchRs.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions = field(
+            tpa_extensions: (
+                None
+                | OtaAirLowFareSearchRs.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TPA_Extensions",
@@ -6370,14 +6452,18 @@ class OtaAirLowFareSearchRs:
                 in response to a Simplified One Way request.
         """
 
-        priced_itineraries: None | OtaAirLowFareSearchRs.DepartedItineraries.PricedItineraries = field(
+        priced_itineraries: (
+            None | OtaAirLowFareSearchRs.DepartedItineraries.PricedItineraries
+        ) = field(
             default=None,
             metadata={
                 "name": "PricedItineraries",
                 "type": "Element",
             },
         )
-        one_way_itineraries: None | OtaAirLowFareSearchRs.DepartedItineraries.OneWayItineraries = field(
+        one_way_itineraries: (
+            None | OtaAirLowFareSearchRs.DepartedItineraries.OneWayItineraries
+        ) = field(
             default=None,
             metadata={
                 "name": "OneWayItineraries",
@@ -6395,7 +6481,10 @@ class OtaAirLowFareSearchRs:
                     request.
             """
 
-            tpa_extensions: None | OtaAirLowFareSearchRs.DepartedItineraries.PricedItineraries.TpaExtensions = field(
+            tpa_extensions: (
+                None
+                | OtaAirLowFareSearchRs.DepartedItineraries.PricedItineraries.TpaExtensions
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TPA_Extensions",
@@ -6468,7 +6557,10 @@ class OtaAirLowFareSearchRs:
                     rph: Leg ID from request.
                 """
 
-                tpa_extensions: None | OtaAirLowFareSearchRs.DepartedItineraries.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions = field(
+                tpa_extensions: (
+                    None
+                    | OtaAirLowFareSearchRs.DepartedItineraries.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions
+                ) = field(
                     default=None,
                     metadata={
                         "name": "TPA_Extensions",
@@ -6500,14 +6592,14 @@ class OtaAirLowFareSearchRs:
                             message type.
                     """
 
-                    processing_message: list[
-                        OneWayProcessingMessageType
-                    ] = field(
-                        default_factory=list,
-                        metadata={
-                            "name": "ProcessingMessage",
-                            "type": "Element",
-                        },
+                    processing_message: list[OneWayProcessingMessageType] = (
+                        field(
+                            default_factory=list,
+                            metadata={
+                                "name": "ProcessingMessage",
+                                "type": "Element",
+                            },
+                        )
                     )
 
             @dataclass
@@ -6520,7 +6612,10 @@ class OtaAirLowFareSearchRs:
                     rph: Leg ID from request.
                 """
 
-                tpa_extensions: None | OtaAirLowFareSearchRs.DepartedItineraries.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions = field(
+                tpa_extensions: (
+                    None
+                    | OtaAirLowFareSearchRs.DepartedItineraries.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions
+                ) = field(
                     default=None,
                     metadata={
                         "name": "TPA_Extensions",
@@ -6552,14 +6647,14 @@ class OtaAirLowFareSearchRs:
                             message type.
                     """
 
-                    processing_message: list[
-                        OneWayProcessingMessageType
-                    ] = field(
-                        default_factory=list,
-                        metadata={
-                            "name": "ProcessingMessage",
-                            "type": "Element",
-                        },
+                    processing_message: list[OneWayProcessingMessageType] = (
+                        field(
+                            default_factory=list,
+                            metadata={
+                                "name": "ProcessingMessage",
+                                "type": "Element",
+                            },
+                        )
                     )
 
     @dataclass
@@ -6571,14 +6666,18 @@ class OtaAirLowFareSearchRs:
                 in response to a Simplified One Way request.
         """
 
-        priced_itineraries: None | OtaAirLowFareSearchRs.SoldOutItineraries.PricedItineraries = field(
+        priced_itineraries: (
+            None | OtaAirLowFareSearchRs.SoldOutItineraries.PricedItineraries
+        ) = field(
             default=None,
             metadata={
                 "name": "PricedItineraries",
                 "type": "Element",
             },
         )
-        one_way_itineraries: None | OtaAirLowFareSearchRs.SoldOutItineraries.OneWayItineraries = field(
+        one_way_itineraries: (
+            None | OtaAirLowFareSearchRs.SoldOutItineraries.OneWayItineraries
+        ) = field(
             default=None,
             metadata={
                 "name": "OneWayItineraries",
@@ -6596,7 +6695,10 @@ class OtaAirLowFareSearchRs:
                     request.
             """
 
-            tpa_extensions: None | OtaAirLowFareSearchRs.SoldOutItineraries.PricedItineraries.TpaExtensions = field(
+            tpa_extensions: (
+                None
+                | OtaAirLowFareSearchRs.SoldOutItineraries.PricedItineraries.TpaExtensions
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TPA_Extensions",
@@ -6669,7 +6771,10 @@ class OtaAirLowFareSearchRs:
                     rph: Leg ID from request.
                 """
 
-                tpa_extensions: None | OtaAirLowFareSearchRs.SoldOutItineraries.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions = field(
+                tpa_extensions: (
+                    None
+                    | OtaAirLowFareSearchRs.SoldOutItineraries.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions
+                ) = field(
                     default=None,
                     metadata={
                         "name": "TPA_Extensions",
@@ -6701,14 +6806,14 @@ class OtaAirLowFareSearchRs:
                             message type.
                     """
 
-                    processing_message: list[
-                        OneWayProcessingMessageType
-                    ] = field(
-                        default_factory=list,
-                        metadata={
-                            "name": "ProcessingMessage",
-                            "type": "Element",
-                        },
+                    processing_message: list[OneWayProcessingMessageType] = (
+                        field(
+                            default_factory=list,
+                            metadata={
+                                "name": "ProcessingMessage",
+                                "type": "Element",
+                            },
+                        )
                     )
 
             @dataclass
@@ -6721,7 +6826,10 @@ class OtaAirLowFareSearchRs:
                     rph: Leg ID from request.
                 """
 
-                tpa_extensions: None | OtaAirLowFareSearchRs.SoldOutItineraries.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions = field(
+                tpa_extensions: (
+                    None
+                    | OtaAirLowFareSearchRs.SoldOutItineraries.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions
+                ) = field(
                     default=None,
                     metadata={
                         "name": "TPA_Extensions",
@@ -6753,14 +6861,14 @@ class OtaAirLowFareSearchRs:
                             message type.
                     """
 
-                    processing_message: list[
-                        OneWayProcessingMessageType
-                    ] = field(
-                        default_factory=list,
-                        metadata={
-                            "name": "ProcessingMessage",
-                            "type": "Element",
-                        },
+                    processing_message: list[OneWayProcessingMessageType] = (
+                        field(
+                            default_factory=list,
+                            metadata={
+                                "name": "ProcessingMessage",
+                                "type": "Element",
+                            },
+                        )
                     )
 
     @dataclass
@@ -6772,14 +6880,18 @@ class OtaAirLowFareSearchRs:
                 in response to a Simplified One Way request.
         """
 
-        priced_itineraries: None | OtaAirLowFareSearchRs.AvailableItineraries.PricedItineraries = field(
+        priced_itineraries: (
+            None | OtaAirLowFareSearchRs.AvailableItineraries.PricedItineraries
+        ) = field(
             default=None,
             metadata={
                 "name": "PricedItineraries",
                 "type": "Element",
             },
         )
-        one_way_itineraries: None | OtaAirLowFareSearchRs.AvailableItineraries.OneWayItineraries = field(
+        one_way_itineraries: (
+            None | OtaAirLowFareSearchRs.AvailableItineraries.OneWayItineraries
+        ) = field(
             default=None,
             metadata={
                 "name": "OneWayItineraries",
@@ -6797,7 +6909,10 @@ class OtaAirLowFareSearchRs:
                     request.
             """
 
-            tpa_extensions: None | OtaAirLowFareSearchRs.AvailableItineraries.PricedItineraries.TpaExtensions = field(
+            tpa_extensions: (
+                None
+                | OtaAirLowFareSearchRs.AvailableItineraries.PricedItineraries.TpaExtensions
+            ) = field(
                 default=None,
                 metadata={
                     "name": "TPA_Extensions",
@@ -6870,7 +6985,10 @@ class OtaAirLowFareSearchRs:
                     rph: Leg ID from request.
                 """
 
-                tpa_extensions: None | OtaAirLowFareSearchRs.AvailableItineraries.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions = field(
+                tpa_extensions: (
+                    None
+                    | OtaAirLowFareSearchRs.AvailableItineraries.OneWayItineraries.BrandedOneWayItineraries.TpaExtensions
+                ) = field(
                     default=None,
                     metadata={
                         "name": "TPA_Extensions",
@@ -6902,14 +7020,14 @@ class OtaAirLowFareSearchRs:
                             message type.
                     """
 
-                    processing_message: list[
-                        OneWayProcessingMessageType
-                    ] = field(
-                        default_factory=list,
-                        metadata={
-                            "name": "ProcessingMessage",
-                            "type": "Element",
-                        },
+                    processing_message: list[OneWayProcessingMessageType] = (
+                        field(
+                            default_factory=list,
+                            metadata={
+                                "name": "ProcessingMessage",
+                                "type": "Element",
+                            },
+                        )
                     )
 
             @dataclass
@@ -6922,7 +7040,10 @@ class OtaAirLowFareSearchRs:
                     rph: Leg ID from request.
                 """
 
-                tpa_extensions: None | OtaAirLowFareSearchRs.AvailableItineraries.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions = field(
+                tpa_extensions: (
+                    None
+                    | OtaAirLowFareSearchRs.AvailableItineraries.OneWayItineraries.SimpleOneWayItineraries.TpaExtensions
+                ) = field(
                     default=None,
                     metadata={
                         "name": "TPA_Extensions",
@@ -6954,19 +7075,21 @@ class OtaAirLowFareSearchRs:
                             message type.
                     """
 
-                    processing_message: list[
-                        OneWayProcessingMessageType
-                    ] = field(
-                        default_factory=list,
-                        metadata={
-                            "name": "ProcessingMessage",
-                            "type": "Element",
-                        },
+                    processing_message: list[OneWayProcessingMessageType] = (
+                        field(
+                            default_factory=list,
+                            metadata={
+                                "name": "ProcessingMessage",
+                                "type": "Element",
+                            },
+                        )
                     )
 
     @dataclass
     class TpaExtensions:
-        airline_order_list: None | OtaAirLowFareSearchRs.TpaExtensions.AirlineOrderList = field(
+        airline_order_list: (
+            None | OtaAirLowFareSearchRs.TpaExtensions.AirlineOrderList
+        ) = field(
             default=None,
             metadata={
                 "name": "AirlineOrderList",

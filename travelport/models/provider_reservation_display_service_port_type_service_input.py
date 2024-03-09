@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.provider_reservation_display_details_req import (
     ProviderReservationDisplayDetailsReq,
 )
@@ -25,7 +27,9 @@ class ProviderReservationDisplayServicePortTypeServiceInput:
 
     @dataclass
     class Body:
-        provider_reservation_display_details_req: None | ProviderReservationDisplayDetailsReq = field(
+        provider_reservation_display_details_req: (
+            None | ProviderReservationDisplayDetailsReq
+        ) = field(
             default=None,
             metadata={
                 "name": "ProviderReservationDisplayDetailsReq",

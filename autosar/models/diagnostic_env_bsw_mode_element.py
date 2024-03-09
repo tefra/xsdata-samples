@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .identifier import Identifier
 from .mode_in_bsw_module_description_instance_ref import (
     ModeInBswModuleDescriptionInstanceRef,

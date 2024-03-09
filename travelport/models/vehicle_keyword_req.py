@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_search_req_1 import BaseSearchReq1
 from travelport.models.keyword_1 import Keyword1
 from travelport.models.type_pickup_date_location import TypePickupDateLocation

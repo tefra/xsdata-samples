@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .infrastructure_link_restriction_version_structure import (
     InfrastructureLinkRestrictionVersionStructure,
 )

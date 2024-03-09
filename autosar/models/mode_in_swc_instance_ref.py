@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .mode_declaration_group_prototype_subtypes_enum import (
     ModeDeclarationGroupPrototypeSubtypesEnum,
 )
@@ -42,15 +43,15 @@ class ModeInSwcInstanceRef:
     class Meta:
         name = "MODE-IN-SWC-INSTANCE-REF"
 
-    context_component_ref: List[
-        "ModeInSwcInstanceRef.ContextComponentRef"
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "CONTEXT-COMPONENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    context_component_ref: List["ModeInSwcInstanceRef.ContextComponentRef"] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "CONTEXT-COMPONENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     context_port_ref: Optional["ModeInSwcInstanceRef.ContextPortRef"] = field(
         default=None,

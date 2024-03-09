@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.base_media_type import BaseMediaType
 from npo.models.group_type_enum import GroupTypeEnum
 

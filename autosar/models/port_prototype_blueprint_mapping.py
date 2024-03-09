@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .port_prototype_blueprint_subtypes_enum import (
     PortPrototypeBlueprintSubtypesEnum,
 )

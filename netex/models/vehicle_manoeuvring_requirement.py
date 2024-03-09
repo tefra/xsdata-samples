@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_manoeuvring_requirement_version_structure import (
     VehicleManoeuvringRequirementVersionStructure,
 )

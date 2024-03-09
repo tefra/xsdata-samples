@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.solution_group import SolutionGroup
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"

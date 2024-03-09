@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .default_interchange_version_structure import (
     DefaultInterchangeVersionStructure,
 )

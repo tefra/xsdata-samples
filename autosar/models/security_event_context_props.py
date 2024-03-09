@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -199,15 +200,15 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_events: Optional[
-        "SecurityEventContextProps.SecurityEvents"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SECURITY-EVENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    security_events: Optional["SecurityEventContextProps.SecurityEvents"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SECURITY-EVENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sensor_instance_id: Optional[PositiveInteger] = field(
         default=None,

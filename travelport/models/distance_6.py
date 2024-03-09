@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.distance_units_6 import DistanceUnits6
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"

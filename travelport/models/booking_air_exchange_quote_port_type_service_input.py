@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.booking_air_exchange_quote_req import (
     BookingAirExchangeQuoteReq,
 )
@@ -42,11 +44,13 @@ class BookingAirExchangeQuotePortTypeServiceInput:
 
     @dataclass
     class Body:
-        booking_air_exchange_quote_req: None | BookingAirExchangeQuoteReq = field(
-            default=None,
-            metadata={
-                "name": "BookingAirExchangeQuoteReq",
-                "type": "Element",
-                "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            },
+        booking_air_exchange_quote_req: None | BookingAirExchangeQuoteReq = (
+            field(
+                default=None,
+                metadata={
+                    "name": "BookingAirExchangeQuoteReq",
+                    "type": "Element",
+                    "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
+                },
+            )
         )

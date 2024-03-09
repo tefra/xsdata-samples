@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.accounting_remark_3 import AccountingRemark3
 from travelport.models.agency_contact_info_3 import AgencyContactInfo3
 from travelport.models.base_req_4 import BaseReq4

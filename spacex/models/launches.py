@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
+from typing import List, Optional
+
 from dataclasses_jsonschema import JsonSchemaMixin
 from typed_dataclass import typed_dataclass
-from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
 
 

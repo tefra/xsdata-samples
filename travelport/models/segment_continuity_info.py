@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.arvl_unkn_segment import ArvlUnknSegment
 from travelport.models.continuity_override_remark import (
     ContinuityOverrideRemark,

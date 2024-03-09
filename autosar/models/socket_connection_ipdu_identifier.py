@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .pdu_collection_semantics_enum import PduCollectionSemanticsEnum
 from .pdu_collection_trigger_enum import PduCollectionTriggerEnum
 from .pdu_subtypes_enum import PduSubtypesEnum

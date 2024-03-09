@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .application_primitive_data_type_subtypes_enum import (
     ApplicationPrimitiveDataTypeSubtypesEnum,
 )

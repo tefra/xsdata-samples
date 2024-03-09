@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .phm_health_channel_interface_subtypes_enum import (
     PhmHealthChannelInterfaceSubtypesEnum,
 )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .fulfilment_method_price_ref_structure import (
     FulfilmentMethodPriceRefStructure,
 )

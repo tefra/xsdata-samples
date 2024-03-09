@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -185,15 +186,15 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: Optional[
-        "ServiceInterfaceElementSecureComConfig.EventRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_ref: Optional["ServiceInterfaceElementSecureComConfig.EventRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     field_notifier_ref: Optional[
         "ServiceInterfaceElementSecureComConfig.FieldNotifierRef"

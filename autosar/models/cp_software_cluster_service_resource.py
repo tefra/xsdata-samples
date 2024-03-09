@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -155,15 +156,15 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "CpSoftwareClusterServiceResource.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["CpSoftwareClusterServiceResource.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     dependent_resources: Optional[
         "CpSoftwareClusterServiceResource.DependentResources"
@@ -248,15 +249,15 @@ class CpSoftwareClusterServiceResource:
 
     @dataclass
     class DependentResources:
-        role_based_resource_dependency: List[
-            RoleBasedResourceDependency
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ROLE-BASED-RESOURCE-DEPENDENCY",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        role_based_resource_dependency: List[RoleBasedResourceDependency] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ROLE-BASED-RESOURCE-DEPENDENCY",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

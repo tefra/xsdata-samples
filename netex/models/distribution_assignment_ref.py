@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .distribution_assignment_ref_structure import (
     DistributionAssignmentRefStructure,
 )

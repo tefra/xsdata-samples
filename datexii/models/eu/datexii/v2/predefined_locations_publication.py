@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.header_information import HeaderInformation
 from datexii.models.eu.datexii.v2.payload_publication import PayloadPublication
@@ -35,13 +36,13 @@ class PredefinedLocationsPublication(PayloadPublication):
             "min_occurs": 1,
         },
     )
-    predefined_locations_publication_extension: Optional[
-        ExtensionType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "predefinedLocationsPublicationExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    predefined_locations_publication_extension: Optional[ExtensionType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "predefinedLocationsPublicationExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

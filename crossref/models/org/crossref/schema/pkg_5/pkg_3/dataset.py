@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from crossref.models.org.crossref.access_indicators.program import (
     Program as AccessIndicatorsProgram,
 )

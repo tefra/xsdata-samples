@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .category_string import CategoryString
 from .fm_feature_subtypes_enum import FmFeatureSubtypesEnum
 from .positive_integer import PositiveInteger
@@ -92,15 +93,15 @@ class FmFeatureDecomposition:
 
     @dataclass
     class FeatureRefs:
-        feature_ref: List[
-            "FmFeatureDecomposition.FeatureRefs.FeatureRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "FEATURE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        feature_ref: List["FmFeatureDecomposition.FeatureRefs.FeatureRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "FEATURE-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

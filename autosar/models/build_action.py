@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -217,15 +218,15 @@ class BuildAction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    predecessor_action_refs: Optional[
-        "BuildAction.PredecessorActionRefs"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PREDECESSOR-ACTION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    predecessor_action_refs: Optional["BuildAction.PredecessorActionRefs"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PREDECESSOR-ACTION-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     follow_up_action_refs: Optional["BuildAction.FollowUpActionRefs"] = field(
         default=None,
@@ -332,15 +333,15 @@ class BuildAction:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        blueprint_policy_not_modifiable: List[
-            BlueprintPolicyNotModifiable
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,

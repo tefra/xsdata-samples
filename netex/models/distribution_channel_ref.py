@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .distribution_channel_ref_structure_element import (
     DistributionChannelRefStructureElement,
 )

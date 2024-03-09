@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .couchette_facility_enumeration import CouchetteFacilityEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

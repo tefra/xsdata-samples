@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.tag_ref_2 import TagRef2
 from travelport.models.type_key_element_2 import TypeKeyElement2
 

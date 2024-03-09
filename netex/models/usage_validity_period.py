@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .usage_validity_period_version_structure import (
     UsageValidityPeriodVersionStructure,
 )

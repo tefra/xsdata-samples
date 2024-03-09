@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xml.etree.ElementTree import QName
+
 from .mandatory_enumeration import MandatoryEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

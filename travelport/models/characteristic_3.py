@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_position import TypePosition
 from travelport.models.type_row_location import TypeRowLocation
 

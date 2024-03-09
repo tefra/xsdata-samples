@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .capability_request_policy_structure import (
     CapabilityRequestPolicyStructure,
 )

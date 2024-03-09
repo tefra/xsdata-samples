@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -206,15 +207,15 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_identifier_ref: Optional[
-        "DiagnosticIoControl.DataIdentifierRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DATA-IDENTIFIER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_identifier_ref: Optional["DiagnosticIoControl.DataIdentifierRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-IDENTIFIER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     freeze_current_state: Optional[Boolean] = field(
         default=None,
@@ -224,15 +225,15 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    io_control_class_ref: Optional[
-        "DiagnosticIoControl.IoControlClassRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "IO-CONTROL-CLASS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    io_control_class_ref: Optional["DiagnosticIoControl.IoControlClassRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "IO-CONTROL-CLASS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     reset_to_default: Optional[Boolean] = field(
         default=None,

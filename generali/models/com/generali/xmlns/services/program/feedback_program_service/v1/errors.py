@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.error_item import (
     ErrorItem,
 )

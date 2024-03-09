@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     DocumentationBlock,
@@ -89,15 +90,15 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_connections: Optional[
-        "HwPinGroupConnector.HwPinConnections"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "HW-PIN-CONNECTIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    hw_pin_connections: Optional["HwPinGroupConnector.HwPinConnections"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "HW-PIN-CONNECTIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     hw_pin_group_refs: Optional["HwPinGroupConnector.HwPinGroupRefs"] = field(
         default=None,

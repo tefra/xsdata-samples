@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .identifier import Identifier
 from .rule_based_axis_cont import RuleBasedAxisCont

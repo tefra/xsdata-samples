@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .fare_element_in_sequence_versioned_child_structure import (
     FareElementInSequenceVersionedChildStructure,
 )

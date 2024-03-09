@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -232,25 +233,25 @@ class ServiceInterfaceMappingSet:
 
     @dataclass
     class ElementMappings:
-        service_interface_event_mapping: List[
-            ServiceInterfaceEventMapping
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SERVICE-INTERFACE-EVENT-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        service_interface_event_mapping: List[ServiceInterfaceEventMapping] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SERVICE-INTERFACE-EVENT-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
-        service_interface_field_mapping: List[
-            ServiceInterfaceFieldMapping
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SERVICE-INTERFACE-FIELD-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        service_interface_field_mapping: List[ServiceInterfaceFieldMapping] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SERVICE-INTERFACE-FIELD-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         service_interface_method_mapping: List[
             ServiceInterfaceMethodMapping

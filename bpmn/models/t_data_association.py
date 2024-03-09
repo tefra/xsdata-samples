@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .assignment import Assignment
 from .t_base_element import TBaseElement
 from .t_formal_expression import TFormalExpression

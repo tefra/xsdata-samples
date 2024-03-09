@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .global_time_domain_subtypes_enum import GlobalTimeDomainSubtypesEnum
 from .ref import Ref

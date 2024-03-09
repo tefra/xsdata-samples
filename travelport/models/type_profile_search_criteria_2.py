@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_search_address_2 import TypeSearchAddress2
 from travelport.models.type_search_electronic_address_2 import (
     TypeSearchElectronicAddress2,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
 from .positive_integer import PositiveInteger
 from .ref import Ref

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -195,15 +196,15 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deterministic_client_ref: Optional[
-        "Process.DeterministicClientRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DETERMINISTIC-CLIENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    deterministic_client_ref: Optional["Process.DeterministicClientRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DETERMINISTIC-CLIENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     executable_ref: Optional["Process.ExecutableRef"] = field(
         default=None,
@@ -367,13 +368,13 @@ class Process:
 
     @dataclass
     class StateDependentStartupConfigs:
-        state_dependent_startup_config: List[
-            StateDependentStartupConfig
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "STATE-DEPENDENT-STARTUP-CONFIG",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        state_dependent_startup_config: List[StateDependentStartupConfig] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "STATE-DEPENDENT-STARTUP-CONFIG",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

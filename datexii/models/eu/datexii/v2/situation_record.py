@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from datexii.models.eu.datexii.v2.cause import Cause
 from datexii.models.eu.datexii.v2.comment import Comment
 from datexii.models.eu.datexii.v2.confidentiality_value_enum import (
@@ -109,15 +111,15 @@ class SituationRecord:
             "required": True,
         },
     )
-    situation_record_first_supplier_version_time: Optional[
-        XmlDateTime
-    ] = field(
-        default=None,
-        metadata={
-            "name": "situationRecordFirstSupplierVersionTime",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    situation_record_first_supplier_version_time: Optional[XmlDateTime] = (
+        field(
+            default=None,
+            metadata={
+                "name": "situationRecordFirstSupplierVersionTime",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     confidentiality_override: Optional[ConfidentialityValueEnum] = field(
         default=None,

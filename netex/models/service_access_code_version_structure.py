@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from .travel_document_version_structure import TravelDocumentVersionStructure
 from .vehicle_access_credentials_assignment_ref import (
     VehicleAccessCredentialsAssignmentRef,

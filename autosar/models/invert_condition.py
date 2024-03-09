@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .aggregation_condition import AggregationCondition
 from .primitive_attribute_condition import PrimitiveAttributeCondition
 from .reference_condition import ReferenceCondition

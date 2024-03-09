@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -253,15 +254,15 @@ class ViewMap:
 
     @dataclass
     class FirstElementRefs:
-        first_element_ref: List[
-            "ViewMap.FirstElementRefs.FirstElementRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "FIRST-ELEMENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        first_element_ref: List["ViewMap.FirstElementRefs.FirstElementRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "FIRST-ELEMENT-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .medium_access_device_security_listing_ref import (
     MediumAccessDeviceSecurityListingRef,
 )

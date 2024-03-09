@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -149,15 +150,15 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticEnvironmentalCondition.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["DiagnosticEnvironmentalCondition.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -232,23 +233,23 @@ class DiagnosticEnvironmentalCondition:
 
     @dataclass
     class ModeElements:
-        diagnostic_env_bsw_mode_element: List[
-            DiagnosticEnvBswModeElement
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DIAGNOSTIC-ENV-BSW-MODE-ELEMENT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        diagnostic_env_bsw_mode_element: List[DiagnosticEnvBswModeElement] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DIAGNOSTIC-ENV-BSW-MODE-ELEMENT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
-        diagnostic_env_swc_mode_element: List[
-            DiagnosticEnvSwcModeElement
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DIAGNOSTIC-ENV-SWC-MODE-ELEMENT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        diagnostic_env_swc_mode_element: List[DiagnosticEnvSwcModeElement] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DIAGNOSTIC-ENV-SWC-MODE-ELEMENT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

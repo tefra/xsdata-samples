@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .fare_demand_factor import FareDemandFactor
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_quota_factor import FareQuotaFactor

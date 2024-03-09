@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .mode_declaration_group_prototype_subtypes_enum import (
     ModeDeclarationGroupPrototypeSubtypesEnum,
 )

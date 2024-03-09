@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.create_agency_fee_mco_rsp import CreateAgencyFeeMcoRsp
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -63,7 +65,10 @@ class McoCreateAgencyFeePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | McoCreateAgencyFeePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | McoCreateAgencyFeePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

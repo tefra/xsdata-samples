@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.date_range_facets_type import DateRangeFacetsType
 from npo.models.duration_range_facets_type import DurationRangeFacetsType
 from npo.models.extended_media_facet_type import ExtendedMediaFacetType

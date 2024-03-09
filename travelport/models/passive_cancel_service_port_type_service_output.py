@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.passive_cancel_rsp import PassiveCancelRsp
 
@@ -63,7 +65,10 @@ class PassiveCancelServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | PassiveCancelServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | PassiveCancelServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

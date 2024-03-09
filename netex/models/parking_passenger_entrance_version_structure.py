@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .parking_area_refs_rel_structure import ParkingAreaRefsRelStructure
 from .site_entrance_version_structure import SiteEntranceVersionStructure
 

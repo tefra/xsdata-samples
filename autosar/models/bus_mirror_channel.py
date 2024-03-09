@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .physical_channel_ref_conditional import PhysicalChannelRefConditional
 from .positive_integer import PositiveInteger
 

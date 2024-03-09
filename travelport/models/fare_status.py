@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.fare_status_failure_info import FareStatusFailureInfo
 from travelport.models.type_fare_status_code import TypeFareStatusCode
 

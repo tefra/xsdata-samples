@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .cell_ref_1 import CellRef1
 from .fare_product_price import FareProductPrice
 from .fare_product_price_ref import FareProductPriceRef

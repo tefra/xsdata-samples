@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .place_in_sequence_ref_structure import PlaceInSequenceRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

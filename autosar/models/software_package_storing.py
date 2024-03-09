@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .ref import Ref
 from .software_package_storing_enum import SoftwarePackageStoringEnum
 from .software_package_subtypes_enum import SoftwarePackageSubtypesEnum

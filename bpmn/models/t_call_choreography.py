@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xml.etree.ElementTree import QName
+
 from .participant_association import ParticipantAssociation
 from .t_choreography_activity import TChoreographyActivity
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.infrastructure_damage_type_enum import (
     InfrastructureDamageTypeEnum,
@@ -30,13 +31,13 @@ class InfrastructureDamageObstruction(Obstruction):
             "required": True,
         },
     )
-    infrastructure_damage_obstruction_extension: Optional[
-        ExtensionType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "infrastructureDamageObstructionExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    infrastructure_damage_obstruction_extension: Optional[ExtensionType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "infrastructureDamageObstructionExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

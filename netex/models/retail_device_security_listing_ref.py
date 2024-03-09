@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .retail_device_security_listing_ref_structure import (
     RetailDeviceSecurityListingRefStructure,
 )

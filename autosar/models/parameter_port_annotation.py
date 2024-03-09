@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import DocumentationBlock
 from .multilanguage_long_name import MultilanguageLongName
 from .parameter_data_prototype_subtypes_enum import (

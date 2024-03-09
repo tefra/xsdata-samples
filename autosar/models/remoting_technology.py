@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .remoting_technology_enum import RemotingTechnologyEnum
 from .string import String
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .handle_invalid_enum import HandleInvalidEnum
 from .ref import Ref
 from .variable_data_prototype_subtypes_enum import (

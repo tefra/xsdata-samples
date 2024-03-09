@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_custom_field_and_group_delete_ref_2 import (
     TypeCustomFieldAndGroupDeleteRef2,
 )

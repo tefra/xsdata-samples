@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .pricing_parameter_set_versioned_structure import (
     PricingParameterSetVersionedStructure,
 )

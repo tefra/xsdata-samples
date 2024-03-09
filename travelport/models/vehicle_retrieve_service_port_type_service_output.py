@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.vehicle_retrieve_rsp import VehicleRetrieveRsp
 
@@ -30,7 +32,9 @@ class VehicleRetrieveServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             },
         )
-        fault: None | VehicleRetrieveServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | VehicleRetrieveServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -61,7 +65,10 @@ class VehicleRetrieveServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | VehicleRetrieveServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | VehicleRetrieveServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

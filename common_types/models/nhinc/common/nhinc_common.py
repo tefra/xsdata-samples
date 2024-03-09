@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from ...www.w3.org.pkg_2005.pkg_08.addressing.ws_addr import (
     EndpointReferenceType,
 )
@@ -794,14 +795,14 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    conditions: Optional[
-        SamlAuthzDecisionStatementEvidenceConditionsType
-    ] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        },
+    conditions: Optional[SamlAuthzDecisionStatementEvidenceConditionsType] = (
+        field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
+            },
+        )
     )
     access_consent_policy: List[str] = field(
         default_factory=list,
@@ -1021,14 +1022,14 @@ class SamlAuthzDecisionStatementEvidenceAssertion(
 
 @dataclass
 class SamlAuthzDecisionStatementEvidenceType:
-    assertion: Optional[
-        SamlAuthzDecisionStatementEvidenceAssertionType
-    ] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        },
+    assertion: Optional[SamlAuthzDecisionStatementEvidenceAssertionType] = (
+        field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
+            },
+        )
     )
 
 
@@ -1377,15 +1378,15 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    saml_authz_decision_statement: Optional[
-        SamlAuthzDecisionStatementType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "samlAuthzDecisionStatement",
-            "type": "Element",
-            "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        },
+    saml_authz_decision_statement: Optional[SamlAuthzDecisionStatementType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "samlAuthzDecisionStatement",
+                "type": "Element",
+                "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
+            },
+        )
     )
     saml_signature: Optional[SamlSignatureType] = field(
         default=None,

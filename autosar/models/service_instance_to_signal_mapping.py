@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
 )
@@ -157,15 +158,15 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "ServiceInstanceToSignalMapping.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["ServiceInstanceToSignalMapping.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     event_element_mappings: Optional[
         "ServiceInstanceToSignalMapping.EventElementMappings"
@@ -187,15 +188,15 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_mapping: Optional[
-        SignalBasedMethodToISignalTriggeringMapping
-    ] = field(
-        default=None,
-        metadata={
-            "name": "METHOD-MAPPING",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    method_mapping: Optional[SignalBasedMethodToISignalTriggeringMapping] = (
+        field(
+            default=None,
+            metadata={
+                "name": "METHOD-MAPPING",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     service_instance_ref: Optional[
         "ServiceInstanceToSignalMapping.ServiceInstanceRef"

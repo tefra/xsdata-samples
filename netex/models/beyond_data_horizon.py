@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .beyond_data_horizon_error_structure import (
     BeyondDataHorizonErrorStructure,
 )

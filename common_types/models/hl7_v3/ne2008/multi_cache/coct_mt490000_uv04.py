@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes import RtoPqPq
 from ..core.datatypes_base import (
     AdExplicit,
@@ -641,16 +642,16 @@ class CoctMt490000Uv04HealthCareProvider:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    health_care_provider_person: Optional[
-        CoctMt490000Uv04ProviderPerson
-    ] = field(
-        default=None,
-        metadata={
-            "name": "healthCareProviderPerson",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    health_care_provider_person: Optional[CoctMt490000Uv04ProviderPerson] = (
+        field(
+            default=None,
+            metadata={
+                "name": "healthCareProviderPerson",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -951,16 +952,16 @@ class CoctMt490000Uv04ManufacturedMaterial:
             "nillable": True,
         },
     )
-    content_packaged_product: List[
-        CoctMt490000Uv04ContentPackagedProduct
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "contentPackagedProduct",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    content_packaged_product: List[CoctMt490000Uv04ContentPackagedProduct] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "contentPackagedProduct",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
@@ -1088,16 +1089,16 @@ class CoctMt490000Uv04ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_material: Optional[
-        CoctMt490000Uv04ManufacturedMaterial
-    ] = field(
-        default=None,
-        metadata={
-            "name": "manufacturedMaterial",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    manufactured_material: Optional[CoctMt490000Uv04ManufacturedMaterial] = (
+        field(
+            default=None,
+            metadata={
+                "name": "manufacturedMaterial",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     manufacturer_manufactured_product_organization: Optional[
         CoctMt490000Uv04ManufacturedProductOrganization
@@ -1156,16 +1157,16 @@ class CoctMt490000Uv04Product:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_product: Optional[
-        CoctMt490000Uv04ManufacturedProduct
-    ] = field(
-        default=None,
-        metadata={
-            "name": "manufacturedProduct",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    manufactured_product: Optional[CoctMt490000Uv04ManufacturedProduct] = (
+        field(
+            default=None,
+            metadata={
+                "name": "manufacturedProduct",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            },
+        )
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,

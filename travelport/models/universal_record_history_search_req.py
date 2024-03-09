@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.universal_record_history_search_modifiers import (
     UniversalRecordHistorySearchModifiers,
@@ -23,7 +25,9 @@ class UniversalRecordHistorySearchReq(BaseReq1):
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    universal_record_history_search_modifiers: None | UniversalRecordHistorySearchModifiers = field(
+    universal_record_history_search_modifiers: (
+        None | UniversalRecordHistorySearchModifiers
+    ) = field(
         default=None,
         metadata={
             "name": "UniversalRecordHistorySearchModifiers",

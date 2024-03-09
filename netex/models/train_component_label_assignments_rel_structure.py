@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .train_component_label_assignment import TrainComponentLabelAssignment
 from .train_component_label_assignment_ref import (

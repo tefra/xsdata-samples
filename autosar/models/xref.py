@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ref import Ref
 from .referrable_subtypes_enum import ReferrableSubtypesEnum
 from .resolution_policy_enum_simple import ResolutionPolicyEnumSimple
@@ -122,14 +123,14 @@ class Xref:
             "type": "Attribute",
         },
     )
-    show_resource_alias_name: Optional[
-        ShowResourceAliasNameEnumSimple
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHOW-RESOURCE-ALIAS-NAME",
-            "type": "Attribute",
-        },
+    show_resource_alias_name: Optional[ShowResourceAliasNameEnumSimple] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHOW-RESOURCE-ALIAS-NAME",
+                "type": "Attribute",
+            },
+        )
     )
     show_resource_category: Optional[ShowResourceCategoryEnumSimple] = field(
         default=None,
@@ -159,14 +160,14 @@ class Xref:
             "type": "Attribute",
         },
     )
-    show_resource_short_name: Optional[
-        ShowResourceShortNameEnumSimple
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHOW-RESOURCE-SHORT-NAME",
-            "type": "Attribute",
-        },
+    show_resource_short_name: Optional[ShowResourceShortNameEnumSimple] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHOW-RESOURCE-SHORT-NAME",
+                "type": "Attribute",
+            },
+        )
     )
     show_resource_type: Optional[ShowResourceTypeEnumSimple] = field(
         default=None,

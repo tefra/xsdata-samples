@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.cruise_stay import CruiseStay
 from travelport.models.segment_1 import Segment1
 

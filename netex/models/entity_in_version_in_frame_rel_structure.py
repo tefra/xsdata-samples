@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .access_ref import AccessRef
 from .access_right_in_product_ref import AccessRightInProductRef
 from .access_space_ref import AccessSpaceRef

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.meta_data_add import MetaDataAdd
 from travelport.models.meta_data_delete import MetaDataDelete
 from travelport.models.meta_data_update import MetaDataUpdate

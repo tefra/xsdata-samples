@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional, Union
+
 from xsdata.models.datatype import XmlDuration
+
 from .bay_geometry_enumeration import BayGeometryEnumeration
 from .compound_train_ref import CompoundTrainRef
 from .parking_area_ref import ParkingAreaRef

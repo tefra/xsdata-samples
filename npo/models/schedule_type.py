@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate, XmlDateTime
+
 from npo.models.channel_enum import ChannelEnum
 from npo.models.schedule_event_type import ScheduleEventType
 

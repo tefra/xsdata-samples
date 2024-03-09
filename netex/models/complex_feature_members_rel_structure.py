@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .complex_feature_member_versioned_child_structure import (
     ComplexFeatureMemberVersionedChildStructure,
 )

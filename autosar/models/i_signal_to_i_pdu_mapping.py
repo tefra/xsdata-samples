@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -212,15 +213,15 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_group_ref: Optional[
-        "ISignalToIPduMapping.ISignalGroupRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "I-SIGNAL-GROUP-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    i_signal_group_ref: Optional["ISignalToIPduMapping.ISignalGroupRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "I-SIGNAL-GROUP-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     i_signal_ref: Optional["ISignalToIPduMapping.ISignalRef"] = field(
         default=None,

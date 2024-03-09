@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .estimated_passing_time_versioned_child_structure import (
     EstimatedPassingTimeVersionedChildStructure,
 )

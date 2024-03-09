@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .deposit_policy_enumeration import DepositPolicyEnumeration
 from .travel_billing_policy_enumeration import TravelBillingPolicyEnumeration
 from .travel_credit_policy_enumeration import TravelCreditPolicyEnumeration

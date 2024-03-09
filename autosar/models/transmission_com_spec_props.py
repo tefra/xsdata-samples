@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .time_value import TimeValue
 from .transmission_mode_definition_enum import TransmissionModeDefinitionEnum
 

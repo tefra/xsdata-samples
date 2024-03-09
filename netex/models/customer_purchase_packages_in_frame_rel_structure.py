@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .customer_purchase_package import CustomerPurchasePackage
 from .frame_containment_structure import FrameContainmentStructure
 

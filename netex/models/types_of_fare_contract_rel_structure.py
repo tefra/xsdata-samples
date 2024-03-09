@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .type_of_fare_contract import TypeOfFareContract
 from .type_of_fare_contract_ref import TypeOfFareContractRef

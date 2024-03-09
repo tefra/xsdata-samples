@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -280,15 +281,15 @@ class UserDefinedServiceInterfaceDeployment:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_event_deployment: List[
-            UserDefinedEventDeployment
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "USER-DEFINED-EVENT-DEPLOYMENT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        user_defined_event_deployment: List[UserDefinedEventDeployment] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "USER-DEFINED-EVENT-DEPLOYMENT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass
@@ -309,15 +310,15 @@ class UserDefinedServiceInterfaceDeployment:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_field_deployment: List[
-            UserDefinedFieldDeployment
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "USER-DEFINED-FIELD-DEPLOYMENT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        user_defined_field_deployment: List[UserDefinedFieldDeployment] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "USER-DEFINED-FIELD-DEPLOYMENT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass
@@ -330,15 +331,15 @@ class UserDefinedServiceInterfaceDeployment:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_method_deployment: List[
-            UserDefinedMethodDeployment
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "USER-DEFINED-METHOD-DEPLOYMENT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        user_defined_method_deployment: List[UserDefinedMethodDeployment] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "USER-DEFINED-METHOD-DEPLOYMENT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -29,15 +30,15 @@ class FareMasterPricerTravelBoardSearch:
             },
         )
     )
-    pax_reference: list[
-        FareMasterPricerTravelBoardSearch.PaxReference
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "paxReference",
-            "type": "Element",
-            "max_occurs": 6,
-        },
+    pax_reference: list[FareMasterPricerTravelBoardSearch.PaxReference] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "paxReference",
+                "type": "Element",
+                "max_occurs": 6,
+            },
+        )
     )
     customer_ref: None | FareMasterPricerTravelBoardSearch.CustomerRef = field(
         default=None,
@@ -56,15 +57,15 @@ class FareMasterPricerTravelBoardSearch:
             "max_occurs": 60,
         },
     )
-    solution_family: list[
-        FareMasterPricerTravelBoardSearch.SolutionFamily
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "solutionFamily",
-            "type": "Element",
-            "max_occurs": 20,
-        },
+    solution_family: list[FareMasterPricerTravelBoardSearch.SolutionFamily] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "solutionFamily",
+                "type": "Element",
+                "max_occurs": 20,
+            },
+        )
     )
     passenger_info_grp: list[
         FareMasterPricerTravelBoardSearch.PassengerInfoGrp
@@ -76,15 +77,15 @@ class FareMasterPricerTravelBoardSearch:
             "max_occurs": 9,
         },
     )
-    fare_families: list[
-        FareMasterPricerTravelBoardSearch.FareFamilies
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "fareFamilies",
-            "type": "Element",
-            "max_occurs": 20,
-        },
+    fare_families: list[FareMasterPricerTravelBoardSearch.FareFamilies] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "fareFamilies",
+                "type": "Element",
+                "max_occurs": 20,
+            },
+        )
     )
     fare_options: None | FareMasterPricerTravelBoardSearch.FareOptions = field(
         default=None,
@@ -110,7 +111,9 @@ class FareMasterPricerTravelBoardSearch:
             "max_occurs": 9,
         },
     )
-    travel_flight_info: None | FareMasterPricerTravelBoardSearch.TravelFlightInfo = field(
+    travel_flight_info: (
+        None | FareMasterPricerTravelBoardSearch.TravelFlightInfo
+    ) = field(
         default=None,
         metadata={
             "name": "travelFlightInfo",
@@ -139,7 +142,9 @@ class FareMasterPricerTravelBoardSearch:
             "max_occurs": 18,
         },
     )
-    ticket_change_info: None | FareMasterPricerTravelBoardSearch.TicketChangeInfo = field(
+    ticket_change_info: (
+        None | FareMasterPricerTravelBoardSearch.TicketChangeInfo
+    ) = field(
         default=None,
         metadata={
             "name": "ticketChangeInfo",
@@ -342,7 +347,10 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class FormOfPaymentByPassenger:
-        form_of_payment_details: None | FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails = field(
+        form_of_payment_details: (
+            None
+            | FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.FormOfPaymentDetails
+        ) = field(
             default=None,
             metadata={
                 "name": "formOfPaymentDetails",
@@ -350,7 +358,10 @@ class FareMasterPricerTravelBoardSearch:
                 "required": True,
             },
         )
-        passenger_fee_reference: None | FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.PassengerFeeReference = field(
+        passenger_fee_reference: (
+            None
+            | FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.PassengerFeeReference
+        ) = field(
             default=None,
             metadata={
                 "name": "passengerFeeReference",
@@ -418,7 +429,10 @@ class FareMasterPricerTravelBoardSearch:
                     "type": "Element",
                 },
             )
-            other_characteristics: None | FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.PassengerFeeReference.OtherCharacteristics = field(
+            other_characteristics: (
+                None
+                | FareMasterPricerTravelBoardSearch.FormOfPaymentByPassenger.PassengerFeeReference.OtherCharacteristics
+            ) = field(
                 default=None,
                 metadata={
                     "name": "otherCharacteristics",
@@ -455,7 +469,9 @@ class FareMasterPricerTravelBoardSearch:
                 "type": "Element",
             },
         )
-        fare_details: None | FareMasterPricerTravelBoardSearch.SolutionFamily.FareDetails = field(
+        fare_details: (
+            None | FareMasterPricerTravelBoardSearch.SolutionFamily.FareDetails
+        ) = field(
             default=None,
             metadata={
                 "name": "fareDetails",
@@ -471,7 +487,10 @@ class FareMasterPricerTravelBoardSearch:
                 "max_length": 35,
             },
         )
-        fare_type_grouping: None | FareMasterPricerTravelBoardSearch.SolutionFamily.FareTypeGrouping = field(
+        fare_type_grouping: (
+            None
+            | FareMasterPricerTravelBoardSearch.SolutionFamily.FareTypeGrouping
+        ) = field(
             default=None,
             metadata={
                 "name": "fareTypeGrouping",
@@ -536,7 +555,10 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class PassengerInfoGrp:
-        passenger_reference: None | FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference = field(
+        passenger_reference: (
+            None
+            | FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PassengerReference
+        ) = field(
             default=None,
             metadata={
                 "name": "passengerReference",
@@ -579,7 +601,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class PsgDetailsInfo:
-            discount_ptc: None | FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.DiscountPtc = field(
+            discount_ptc: (
+                None
+                | FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.DiscountPtc
+            ) = field(
                 default=None,
                 metadata={
                     "name": "discountPtc",
@@ -587,7 +612,10 @@ class FareMasterPricerTravelBoardSearch:
                     "required": True,
                 },
             )
-            flequent_flyer_details: None | FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.FlequentFlyerDetails = field(
+            flequent_flyer_details: (
+                None
+                | FareMasterPricerTravelBoardSearch.PassengerInfoGrp.PsgDetailsInfo.FlequentFlyerDetails
+            ) = field(
                 default=None,
                 metadata={
                     "name": "flequentFlyerDetails",
@@ -717,7 +745,10 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class FareFamilies:
-        family_information: None | FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation = field(
+        family_information: (
+            None
+            | FareMasterPricerTravelBoardSearch.FareFamilies.FamilyInformation
+        ) = field(
             default=None,
             metadata={
                 "name": "familyInformation",
@@ -725,7 +756,10 @@ class FareMasterPricerTravelBoardSearch:
                 "required": True,
             },
         )
-        family_criteria: None | FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria = field(
+        family_criteria: (
+            None
+            | FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria
+        ) = field(
             default=None,
             metadata={
                 "name": "familyCriteria",
@@ -822,7 +856,10 @@ class FareMasterPricerTravelBoardSearch:
                     "max_length": 2,
                 },
             )
-            fare_family_info: None | FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.FareFamilyInfo = field(
+            fare_family_info: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareFamilies.FamilyCriteria.FareFamilyInfo
+            ) = field(
                 default=None,
                 metadata={
                     "name": "fareFamilyInfo",
@@ -1001,7 +1038,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FareFamilySegment:
-            reference_info: None | FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo = field(
+            reference_info: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.ReferenceInfo
+            ) = field(
                 default=None,
                 metadata={
                     "name": "referenceInfo",
@@ -1009,7 +1049,10 @@ class FareMasterPricerTravelBoardSearch:
                     "required": True,
                 },
             )
-            family_criteria: None | FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria = field(
+            family_criteria: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria
+            ) = field(
                 default=None,
                 metadata={
                     "name": "familyCriteria",
@@ -1071,7 +1114,10 @@ class FareMasterPricerTravelBoardSearch:
                         "max_length": 2,
                     },
                 )
-                fare_family_info: None | FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.FareFamilyInfo = field(
+                fare_family_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.FareFamilies.FareFamilySegment.FamilyCriteria.FareFamilyInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "fareFamilyInfo",
@@ -1250,7 +1296,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class OtherPossibleCriteria:
-            logical_link: None | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink = field(
+            logical_link: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink
+            ) = field(
                 default=None,
                 metadata={
                     "name": "logicalLink",
@@ -1258,7 +1307,10 @@ class FareMasterPricerTravelBoardSearch:
                     "required": True,
                 },
             )
-            family_criteria: None | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria = field(
+            family_criteria: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria
+            ) = field(
                 default=None,
                 metadata={
                     "name": "familyCriteria",
@@ -1278,7 +1330,10 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class LogicalLink:
-                boolean_expression: None | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink.BooleanExpression = field(
+                boolean_expression: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.LogicalLink.BooleanExpression
+                ) = field(
                     default=None,
                     metadata={
                         "name": "booleanExpression",
@@ -1320,7 +1375,10 @@ class FareMasterPricerTravelBoardSearch:
                         "max_length": 2,
                     },
                 )
-                fare_family_info: None | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.FareFamilyInfo = field(
+                fare_family_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FamilyCriteria.FareFamilyInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "fareFamilyInfo",
@@ -1499,7 +1557,10 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FareFamilySegment:
-                reference_info: None | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo = field(
+                reference_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.ReferenceInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "referenceInfo",
@@ -1507,7 +1568,10 @@ class FareMasterPricerTravelBoardSearch:
                         "required": True,
                     },
                 )
-                family_criteria: None | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria = field(
+                family_criteria: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria
+                ) = field(
                     default=None,
                     metadata={
                         "name": "familyCriteria",
@@ -1569,7 +1633,10 @@ class FareMasterPricerTravelBoardSearch:
                             "max_length": 2,
                         },
                     )
-                    fare_family_info: None | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.FareFamilyInfo = field(
+                    fare_family_info: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.FareFamilies.OtherPossibleCriteria.FareFamilySegment.FamilyCriteria.FareFamilyInfo
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "fareFamilyInfo",
@@ -1748,7 +1815,10 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class FareOptions:
-        pricing_tick_info: None | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo = field(
+        pricing_tick_info: (
+            None
+            | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo
+        ) = field(
             default=None,
             metadata={
                 "name": "pricingTickInfo",
@@ -1756,48 +1826,66 @@ class FareMasterPricerTravelBoardSearch:
                 "required": True,
             },
         )
-        corporate: None | FareMasterPricerTravelBoardSearch.FareOptions.Corporate = field(
+        corporate: (
+            None | FareMasterPricerTravelBoardSearch.FareOptions.Corporate
+        ) = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ticketing_price_scheme: None | FareMasterPricerTravelBoardSearch.FareOptions.TicketingPriceScheme = field(
+        ticketing_price_scheme: (
+            None
+            | FareMasterPricerTravelBoardSearch.FareOptions.TicketingPriceScheme
+        ) = field(
             default=None,
             metadata={
                 "name": "ticketingPriceScheme",
                 "type": "Element",
             },
         )
-        fee_id_description: None | FareMasterPricerTravelBoardSearch.FareOptions.FeeIdDescription = field(
+        fee_id_description: (
+            None
+            | FareMasterPricerTravelBoardSearch.FareOptions.FeeIdDescription
+        ) = field(
             default=None,
             metadata={
                 "name": "feeIdDescription",
                 "type": "Element",
             },
         )
-        conversion_rate: None | FareMasterPricerTravelBoardSearch.FareOptions.ConversionRate = field(
+        conversion_rate: (
+            None | FareMasterPricerTravelBoardSearch.FareOptions.ConversionRate
+        ) = field(
             default=None,
             metadata={
                 "name": "conversionRate",
                 "type": "Element",
             },
         )
-        form_of_payment: None | FareMasterPricerTravelBoardSearch.FareOptions.FormOfPayment = field(
+        form_of_payment: (
+            None | FareMasterPricerTravelBoardSearch.FareOptions.FormOfPayment
+        ) = field(
             default=None,
             metadata={
                 "name": "formOfPayment",
                 "type": "Element",
             },
         )
-        frequent_traveller_info: None | FareMasterPricerTravelBoardSearch.FareOptions.FrequentTravellerInfo = field(
+        frequent_traveller_info: (
+            None
+            | FareMasterPricerTravelBoardSearch.FareOptions.FrequentTravellerInfo
+        ) = field(
             default=None,
             metadata={
                 "name": "frequentTravellerInfo",
                 "type": "Element",
             },
         )
-        monetary_cabin_info: None | FareMasterPricerTravelBoardSearch.FareOptions.MonetaryCabinInfo = field(
+        monetary_cabin_info: (
+            None
+            | FareMasterPricerTravelBoardSearch.FareOptions.MonetaryCabinInfo
+        ) = field(
             default=None,
             metadata={
                 "name": "monetaryCabinInfo",
@@ -1807,14 +1895,20 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class PricingTickInfo:
-            pricing_ticketing: None | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.PricingTicketing = field(
+            pricing_ticketing: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.PricingTicketing
+            ) = field(
                 default=None,
                 metadata={
                     "name": "pricingTicketing",
                     "type": "Element",
                 },
             )
-            ticketing_date: None | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.TicketingDate = field(
+            ticketing_date: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.TicketingDate
+            ) = field(
                 default=None,
                 metadata={
                     "name": "ticketingDate",
@@ -1828,28 +1922,40 @@ class FareMasterPricerTravelBoardSearch:
                     "type": "Element",
                 },
             )
-            selling_point: None | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.SellingPoint = field(
+            selling_point: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.SellingPoint
+            ) = field(
                 default=None,
                 metadata={
                     "name": "sellingPoint",
                     "type": "Element",
                 },
             )
-            ticketing_point: None | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.TicketingPoint = field(
+            ticketing_point: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.TicketingPoint
+            ) = field(
                 default=None,
                 metadata={
                     "name": "ticketingPoint",
                     "type": "Element",
                 },
             )
-            journey_origin_point: None | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.JourneyOriginPoint = field(
+            journey_origin_point: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.JourneyOriginPoint
+            ) = field(
                 default=None,
                 metadata={
                     "name": "journeyOriginPoint",
                     "type": "Element",
                 },
             )
-            corporate_id: None | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.CorporateId = field(
+            corporate_id: (
+                None
+                | FareMasterPricerTravelBoardSearch.FareOptions.PricingTickInfo.CorporateId
+            ) = field(
                 default=None,
                 metadata={
                     "name": "corporateId",
@@ -2311,7 +2417,9 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class PriceToBeat:
-        money_info: None | FareMasterPricerTravelBoardSearch.PriceToBeat.MoneyInfo = field(
+        money_info: (
+            None | FareMasterPricerTravelBoardSearch.PriceToBeat.MoneyInfo
+        ) = field(
             default=None,
             metadata={
                 "name": "moneyInfo",
@@ -2460,7 +2568,9 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class TravelFlightInfo:
-        cabin_id: None | FareMasterPricerTravelBoardSearch.TravelFlightInfo.CabinId = field(
+        cabin_id: (
+            None | FareMasterPricerTravelBoardSearch.TravelFlightInfo.CabinId
+        ) = field(
             default=None,
             metadata={
                 "name": "cabinId",
@@ -2477,7 +2587,10 @@ class FareMasterPricerTravelBoardSearch:
                 "max_occurs": 20,
             },
         )
-        flight_detail: None | FareMasterPricerTravelBoardSearch.TravelFlightInfo.FlightDetail = field(
+        flight_detail: (
+            None
+            | FareMasterPricerTravelBoardSearch.TravelFlightInfo.FlightDetail
+        ) = field(
             default=None,
             metadata={
                 "name": "flightDetail",
@@ -2728,7 +2841,9 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class Buckets:
-        bucket_info: None | FareMasterPricerTravelBoardSearch.Buckets.BucketInfo = field(
+        bucket_info: (
+            None | FareMasterPricerTravelBoardSearch.Buckets.BucketInfo
+        ) = field(
             default=None,
             metadata={
                 "name": "bucketInfo",
@@ -2862,7 +2977,10 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class Itinerary:
-        requested_segment_ref: None | FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef = field(
+        requested_segment_ref: (
+            None
+            | FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentRef
+        ) = field(
             default=None,
             metadata={
                 "name": "requestedSegmentRef",
@@ -2870,35 +2988,48 @@ class FareMasterPricerTravelBoardSearch:
                 "required": True,
             },
         )
-        departure_localization: None | FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization = field(
+        departure_localization: (
+            None
+            | FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization
+        ) = field(
             default=None,
             metadata={
                 "name": "departureLocalization",
                 "type": "Element",
             },
         )
-        arrival_localization: None | FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization = field(
+        arrival_localization: (
+            None
+            | FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization
+        ) = field(
             default=None,
             metadata={
                 "name": "arrivalLocalization",
                 "type": "Element",
             },
         )
-        time_details: None | FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails = field(
+        time_details: (
+            None | FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails
+        ) = field(
             default=None,
             metadata={
                 "name": "timeDetails",
                 "type": "Element",
             },
         )
-        flight_info: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo = field(
+        flight_info: (
+            None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo
+        ) = field(
             default=None,
             metadata={
                 "name": "flightInfo",
                 "type": "Element",
             },
         )
-        family_information: None | FareMasterPricerTravelBoardSearch.Itinerary.FamilyInformation = field(
+        family_information: (
+            None
+            | FareMasterPricerTravelBoardSearch.Itinerary.FamilyInformation
+        ) = field(
             default=None,
             metadata={
                 "name": "familyInformation",
@@ -2935,14 +3066,19 @@ class FareMasterPricerTravelBoardSearch:
                 "max_occurs": 4,
             },
         )
-        requested_segment_action: None | FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentAction = field(
+        requested_segment_action: (
+            None
+            | FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentAction
+        ) = field(
             default=None,
             metadata={
                 "name": "requestedSegmentAction",
                 "type": "Element",
             },
         )
-        attributes: None | FareMasterPricerTravelBoardSearch.Itinerary.Attributes = field(
+        attributes: (
+            None | FareMasterPricerTravelBoardSearch.Itinerary.Attributes
+        ) = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -2993,7 +3129,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class DepartureLocalization:
-            departure_point: None | FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.DeparturePoint = field(
+            departure_point: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.DeparturePoint
+            ) = field(
                 default=None,
                 metadata={
                     "name": "departurePoint",
@@ -3010,7 +3149,10 @@ class FareMasterPricerTravelBoardSearch:
                     "max_occurs": 20,
                 },
             )
-            first_pnr_segment_ref: None | FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.FirstPnrSegmentRef = field(
+            first_pnr_segment_ref: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.DepartureLocalization.FirstPnrSegmentRef
+            ) = field(
                 default=None,
                 metadata={
                     "name": "firstPnrSegmentRef",
@@ -3144,7 +3286,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class ArrivalLocalization:
-            arrival_point_details: None | FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.ArrivalPointDetails = field(
+            arrival_point_details: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.ArrivalLocalization.ArrivalPointDetails
+            ) = field(
                 default=None,
                 metadata={
                     "name": "arrivalPointDetails",
@@ -3269,7 +3414,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class TimeDetails:
-            first_date_time_detail: None | FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.FirstDateTimeDetail = field(
+            first_date_time_detail: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.FirstDateTimeDetail
+            ) = field(
                 default=None,
                 metadata={
                     "name": "firstDateTimeDetail",
@@ -3277,14 +3425,20 @@ class FareMasterPricerTravelBoardSearch:
                     "required": True,
                 },
             )
-            range_of_date: None | FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.RangeOfDate = field(
+            range_of_date: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.RangeOfDate
+            ) = field(
                 default=None,
                 metadata={
                     "name": "rangeOfDate",
                     "type": "Element",
                 },
             )
-            trip_details: None | FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.TripDetails = field(
+            trip_details: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.TimeDetails.TripDetails
+            ) = field(
                 default=None,
                 metadata={
                     "name": "tripDetails",
@@ -3385,7 +3539,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FlightInfo:
-            cabin_id: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.CabinId = field(
+            cabin_id: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.CabinId
+            ) = field(
                 default=None,
                 metadata={
                     "name": "cabinId",
@@ -3402,7 +3559,10 @@ class FareMasterPricerTravelBoardSearch:
                     "max_occurs": 20,
                 },
             )
-            flight_detail: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.FlightDetail = field(
+            flight_detail: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfo.FlightDetail
+            ) = field(
                 default=None,
                 metadata={
                     "name": "flightDetail",
@@ -3679,7 +3839,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class GroupOfFlights:
-            prop_flight_gr_detail: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail = field(
+            prop_flight_gr_detail: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PropFlightGrDetail
+            ) = field(
                 default=None,
                 metadata={
                     "name": "propFlightGrDetail",
@@ -3687,7 +3850,10 @@ class FareMasterPricerTravelBoardSearch:
                     "required": True,
                 },
             )
-            price_to_beat: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat = field(
+            price_to_beat: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat
+            ) = field(
                 default=None,
                 metadata={
                     "name": "priceToBeat",
@@ -3760,7 +3926,10 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class PriceToBeat:
-                money_info: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.MoneyInfo = field(
+                money_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.PriceToBeat.MoneyInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "moneyInfo",
@@ -3842,7 +4011,10 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FlightDetails:
-                flight_information: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation = field(
+                flight_information: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation
+                ) = field(
                     default=None,
                     metadata={
                         "name": "flightInformation",
@@ -3870,14 +4042,20 @@ class FareMasterPricerTravelBoardSearch:
                         "max_occurs": 5,
                     },
                 )
-                commercial_agreement: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement = field(
+                commercial_agreement: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement
+                ) = field(
                     default=None,
                     metadata={
                         "name": "commercialAgreement",
                         "type": "Element",
                     },
                 )
-                add_info: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AddInfo = field(
+                add_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AddInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "addInfo",
@@ -3894,14 +4072,20 @@ class FareMasterPricerTravelBoardSearch:
                         "max_occurs": 2,
                     },
                 )
-                reservation_info: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo = field(
+                reservation_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "reservationInfo",
                         "type": "Element",
                     },
                 )
-                price_to_beat: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat = field(
+                price_to_beat: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat
+                ) = field(
                     default=None,
                     metadata={
                         "name": "priceToBeat",
@@ -3911,7 +4095,10 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class FlightInformation:
-                    product_date_time: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDateTime = field(
+                    product_date_time: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDateTime
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "productDateTime",
@@ -3929,7 +4116,10 @@ class FareMasterPricerTravelBoardSearch:
                             "max_occurs": 2,
                         },
                     )
-                    company_id: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.CompanyId = field(
+                    company_id: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.CompanyId
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "companyId",
@@ -3945,14 +4135,20 @@ class FareMasterPricerTravelBoardSearch:
                             "max_length": 8,
                         },
                     )
-                    product_detail: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDetail = field(
+                    product_detail: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.ProductDetail
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "productDetail",
                             "type": "Element",
                         },
                     )
-                    add_product_detail: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.AddProductDetail = field(
+                    add_product_detail: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.FlightInformation.AddProductDetail
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "addProductDetail",
@@ -4201,7 +4397,10 @@ class FareMasterPricerTravelBoardSearch:
                             "max_occurs": 26,
                         },
                     )
-                    context_details: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo.ContextDetails = field(
+                    context_details: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AvlInfo.ContextDetails
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "contextDetails",
@@ -4323,7 +4522,10 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class CommercialAgreement:
-                    codeshare_details: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement.CodeshareDetails = field(
+                    codeshare_details: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.CommercialAgreement.CodeshareDetails
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "codeshareDetails",
@@ -4408,7 +4610,10 @@ class FareMasterPricerTravelBoardSearch:
                             "max_length": 3,
                         },
                     )
-                    date_time_period_details: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AddInfo.DateTimePeriodDetails = field(
+                    date_time_period_details: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.AddInfo.DateTimePeriodDetails
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "dateTimePeriodDetails",
@@ -4457,28 +4662,40 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class TerminalEquipmentDetails:
-                    leg_details: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.LegDetails = field(
+                    leg_details: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.LegDetails
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "legDetails",
                             "type": "Element",
                         },
                     )
-                    departure_station_info: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.DepartureStationInfo = field(
+                    departure_station_info: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.DepartureStationInfo
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "departureStationInfo",
                             "type": "Element",
                         },
                     )
-                    arrival_station_info: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.ArrivalStationInfo = field(
+                    arrival_station_info: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.ArrivalStationInfo
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "arrivalStationInfo",
                             "type": "Element",
                         },
                     )
-                    mileage_time_details: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.MileageTimeDetails = field(
+                    mileage_time_details: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.TerminalEquipmentDetails.MileageTimeDetails
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "mileageTimeDetails",
@@ -4577,7 +4794,10 @@ class FareMasterPricerTravelBoardSearch:
                             "type": "Element",
                         },
                     )
-                    date_time_details: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo.DateTimeDetails = field(
+                    date_time_details: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo.DateTimeDetails
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "dateTimeDetails",
@@ -4601,7 +4821,10 @@ class FareMasterPricerTravelBoardSearch:
                             "max_length": 3,
                         },
                     )
-                    product_type_details: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo.ProductTypeDetails = field(
+                    product_type_details: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.ReservationInfo.ProductTypeDetails
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "productTypeDetails",
@@ -4652,7 +4875,10 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class PriceToBeat:
-                    money_info: None | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.MoneyInfo = field(
+                    money_info: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.Itinerary.GroupOfFlights.FlightDetails.PriceToBeat.MoneyInfo
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "moneyInfo",
@@ -4734,7 +4960,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FlightInfoPnr:
-            travel_response_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails = field(
+            travel_response_details: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails
+            ) = field(
                 default=None,
                 metadata={
                     "name": "travelResponseDetails",
@@ -4742,7 +4971,10 @@ class FareMasterPricerTravelBoardSearch:
                     "required": True,
                 },
             )
-            time_table_date: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate = field(
+            time_table_date: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate
+            ) = field(
                 default=None,
                 metadata={
                     "name": "timeTableDate",
@@ -4759,34 +4991,49 @@ class FareMasterPricerTravelBoardSearch:
                     "max_occurs": 2,
                 },
             )
-            codeshare_data: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData = field(
+            codeshare_data: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData
+            ) = field(
                 default=None,
                 metadata={
                     "name": "codeshareData",
                     "type": "Element",
                 },
             )
-            disclosure: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure = field(
+            disclosure: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            stop_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.StopDetails = field(
+            stop_details: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.StopDetails
+            ) = field(
                 default=None,
                 metadata={
                     "name": "stopDetails",
                     "type": "Element",
                 },
             )
-            traffic_restriction_data: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TrafficRestrictionData = field(
+            traffic_restriction_data: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TrafficRestrictionData
+            ) = field(
                 default=None,
                 metadata={
                     "name": "trafficRestrictionData",
                     "type": "Element",
                 },
             )
-            reservation_info: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo = field(
+            reservation_info: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo
+            ) = field(
                 default=None,
                 metadata={
                     "name": "reservationInfo",
@@ -4806,14 +5053,20 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TravelResponseDetails:
-                flight_date: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightDate = field(
+                flight_date: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightDate
+                ) = field(
                     default=None,
                     metadata={
                         "name": "flightDate",
                         "type": "Element",
                     },
                 )
-                board_point_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.BoardPointDetails = field(
+                board_point_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.BoardPointDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "boardPointDetails",
@@ -4821,7 +5074,10 @@ class FareMasterPricerTravelBoardSearch:
                         "required": True,
                     },
                 )
-                offpoint_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.OffpointDetails = field(
+                offpoint_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.OffpointDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "offpointDetails",
@@ -4829,7 +5085,10 @@ class FareMasterPricerTravelBoardSearch:
                         "required": True,
                     },
                 )
-                company_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.CompanyDetails = field(
+                company_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.CompanyDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "companyDetails",
@@ -4837,14 +5096,20 @@ class FareMasterPricerTravelBoardSearch:
                         "required": True,
                     },
                 )
-                flight_identification: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightIdentification = field(
+                flight_identification: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightIdentification
+                ) = field(
                     default=None,
                     metadata={
                         "name": "flightIdentification",
                         "type": "Element",
                     },
                 )
-                flight_type_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightTypeDetails = field(
+                flight_type_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.FlightTypeDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "flightTypeDetails",
@@ -4975,21 +5240,30 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TimeTableDate:
-                begin_date_time: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.BeginDateTime = field(
+                begin_date_time: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.BeginDateTime
+                ) = field(
                     default=None,
                     metadata={
                         "name": "beginDateTime",
                         "type": "Element",
                     },
                 )
-                end_date_time: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.EndDateTime = field(
+                end_date_time: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.EndDateTime
+                ) = field(
                     default=None,
                     metadata={
                         "name": "endDateTime",
                         "type": "Element",
                     },
                 )
-                frequency: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.Frequency = field(
+                frequency: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TimeTableDate.Frequency
+                ) = field(
                     default=None,
                     metadata={
                         "type": "Element",
@@ -5065,28 +5339,40 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class TerminalEquipmentDetails:
-                leg_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.LegDetails = field(
+                leg_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.LegDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "legDetails",
                         "type": "Element",
                     },
                 )
-                departure_station_info: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.DepartureStationInfo = field(
+                departure_station_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.DepartureStationInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "departureStationInfo",
                         "type": "Element",
                     },
                 )
-                arrival_station_info: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.ArrivalStationInfo = field(
+                arrival_station_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.ArrivalStationInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "arrivalStationInfo",
                         "type": "Element",
                     },
                 )
-                mileage_time_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.MileageTimeDetails = field(
+                mileage_time_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TerminalEquipmentDetails.MileageTimeDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "mileageTimeDetails",
@@ -5154,7 +5440,10 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class CodeshareData:
-                codeshare_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.CodeshareDetails = field(
+                codeshare_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.CodeshareData.CodeshareDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "codeshareDetails",
@@ -5251,7 +5540,10 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class Disclosure:
-                free_text_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure.FreeTextDetails = field(
+                free_text_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.Disclosure.FreeTextDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "freeTextDetails",
@@ -5391,7 +5683,10 @@ class FareMasterPricerTravelBoardSearch:
                         "type": "Element",
                     },
                 )
-                date_time_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo.DateTimeDetails = field(
+                date_time_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo.DateTimeDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "dateTimeDetails",
@@ -5415,7 +5710,10 @@ class FareMasterPricerTravelBoardSearch:
                         "max_length": 3,
                     },
                 )
-                product_type_details: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo.ProductTypeDetails = field(
+                product_type_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.ReservationInfo.ProductTypeDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "productTypeDetails",
@@ -5466,7 +5764,10 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class IncidentalStopInfo:
-                date_time_info: None | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo = field(
+                date_time_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.IncidentalStopInfo.DateTimeInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "dateTimeInfo",
@@ -5551,7 +5852,10 @@ class FareMasterPricerTravelBoardSearch:
                     "max_length": 3,
                 },
             )
-            product_details: None | FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentAction.ProductDetails = field(
+            product_details: (
+                None
+                | FareMasterPricerTravelBoardSearch.Itinerary.RequestedSegmentAction.ProductDetails
+            ) = field(
                 default=None,
                 metadata={
                     "name": "productDetails",
@@ -5637,7 +5941,10 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class TicketChangeInfo:
-        ticket_number_details: None | FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails = field(
+        ticket_number_details: (
+            None
+            | FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketNumberDetails
+        ) = field(
             default=None,
             metadata={
                 "name": "ticketNumberDetails",
@@ -5683,7 +5990,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class TicketRequestedSegments:
-            action_identification: None | FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification = field(
+            action_identification: (
+                None
+                | FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification
+            ) = field(
                 default=None,
                 metadata={
                     "name": "actionIdentification",
@@ -5691,7 +6001,10 @@ class FareMasterPricerTravelBoardSearch:
                     "required": True,
                 },
             )
-            connect_point_details: None | FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ConnectPointDetails = field(
+            connect_point_details: (
+                None
+                | FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ConnectPointDetails
+            ) = field(
                 default=None,
                 metadata={
                     "name": "connectPointDetails",
@@ -5711,7 +6024,10 @@ class FareMasterPricerTravelBoardSearch:
                         "max_length": 3,
                     },
                 )
-                product_details: None | FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification.ProductDetails = field(
+                product_details: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.TicketChangeInfo.TicketRequestedSegments.ActionIdentification.ProductDetails
+                ) = field(
                     default=None,
                     metadata={
                         "name": "productDetails",
@@ -5787,7 +6103,10 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class CombinationFareFamilies:
-        item_ffcnumber: None | FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber = field(
+        item_ffcnumber: (
+            None
+            | FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber
+        ) = field(
             default=None,
             metadata={
                 "name": "itemFFCNumber",
@@ -5795,7 +6114,10 @@ class FareMasterPricerTravelBoardSearch:
                 "required": True,
             },
         )
-        nb_of_units: None | FareMasterPricerTravelBoardSearch.CombinationFareFamilies.NbOfUnits = field(
+        nb_of_units: (
+            None
+            | FareMasterPricerTravelBoardSearch.CombinationFareFamilies.NbOfUnits
+        ) = field(
             default=None,
             metadata={
                 "name": "nbOfUnits",
@@ -5815,7 +6137,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class ItemFfcnumber:
-            item_number_id: None | FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber.ItemNumberId = field(
+            item_number_id: (
+                None
+                | FareMasterPricerTravelBoardSearch.CombinationFareFamilies.ItemFfcnumber.ItemNumberId
+            ) = field(
                 default=None,
                 metadata={
                     "name": "itemNumberId",
@@ -5930,7 +6255,9 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class FeeOption:
-        fee_type_info: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo = field(
+        fee_type_info: (
+            None | FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo
+        ) = field(
             default=None,
             metadata={
                 "name": "feeTypeInfo",
@@ -5938,7 +6265,9 @@ class FareMasterPricerTravelBoardSearch:
                 "required": True,
             },
         )
-        rate_tax: None | FareMasterPricerTravelBoardSearch.FeeOption.RateTax = field(
+        rate_tax: (
+            None | FareMasterPricerTravelBoardSearch.FeeOption.RateTax
+        ) = field(
             default=None,
             metadata={
                 "name": "rateTax",
@@ -5958,7 +6287,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FeeTypeInfo:
-            carrier_fee_details: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.CarrierFeeDetails = field(
+            carrier_fee_details: (
+                None
+                | FareMasterPricerTravelBoardSearch.FeeOption.FeeTypeInfo.CarrierFeeDetails
+            ) = field(
                 default=None,
                 metadata={
                     "name": "carrierFeeDetails",
@@ -6065,7 +6397,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class FeeDetails:
-            fee_info: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo = field(
+            fee_info: (
+                None
+                | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo
+            ) = field(
                 default=None,
                 metadata={
                     "name": "feeInfo",
@@ -6073,14 +6408,20 @@ class FareMasterPricerTravelBoardSearch:
                     "required": True,
                 },
             )
-            associated_amounts: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.AssociatedAmounts = field(
+            associated_amounts: (
+                None
+                | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.AssociatedAmounts
+            ) = field(
                 default=None,
                 metadata={
                     "name": "associatedAmounts",
                     "type": "Element",
                 },
             )
-            fee_description_grp: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp = field(
+            fee_description_grp: (
+                None
+                | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp
+            ) = field(
                 default=None,
                 metadata={
                     "name": "feeDescriptionGrp",
@@ -6090,7 +6431,10 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FeeInfo:
-                data_type_information: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataTypeInformation = field(
+                data_type_information: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeInfo.DataTypeInformation
+                ) = field(
                     default=None,
                     metadata={
                         "name": "dataTypeInformation",
@@ -6194,7 +6538,10 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FeeDescriptionGrp:
-                item_number_info: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo = field(
+                item_number_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "itemNumberInfo",
@@ -6202,14 +6549,20 @@ class FareMasterPricerTravelBoardSearch:
                         "required": True,
                     },
                 )
-                service_attributes_info: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceAttributesInfo = field(
+                service_attributes_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceAttributesInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "serviceAttributesInfo",
                         "type": "Element",
                     },
                 )
-                service_description_info: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo = field(
+                service_description_info: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo
+                ) = field(
                     default=None,
                     metadata={
                         "name": "serviceDescriptionInfo",
@@ -6219,7 +6572,10 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ItemNumberInfo:
-                    item_number_details: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo.ItemNumberDetails = field(
+                    item_number_details: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ItemNumberInfo.ItemNumberDetails
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "itemNumberDetails",
@@ -6312,7 +6668,10 @@ class FareMasterPricerTravelBoardSearch:
 
                 @dataclass
                 class ServiceDescriptionInfo:
-                    service_requirements_info: None | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.ServiceRequirementsInfo = field(
+                    service_requirements_info: (
+                        None
+                        | FareMasterPricerTravelBoardSearch.FeeOption.FeeDetails.FeeDescriptionGrp.ServiceDescriptionInfo.ServiceRequirementsInfo
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "serviceRequirementsInfo",
@@ -6412,7 +6771,10 @@ class FareMasterPricerTravelBoardSearch:
 
     @dataclass
     class OfficeIdDetails:
-        office_id_information: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation = field(
+        office_id_information: (
+            None
+            | FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation
+        ) = field(
             default=None,
             metadata={
                 "name": "officeIdInformation",
@@ -6420,35 +6782,48 @@ class FareMasterPricerTravelBoardSearch:
                 "required": True,
             },
         )
-        nb_of_units: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits = field(
+        nb_of_units: (
+            None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.NbOfUnits
+        ) = field(
             default=None,
             metadata={
                 "name": "nbOfUnits",
                 "type": "Element",
             },
         )
-        uid_option: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.UidOption = field(
+        uid_option: (
+            None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.UidOption
+        ) = field(
             default=None,
             metadata={
                 "name": "uidOption",
                 "type": "Element",
             },
         )
-        pricing_tick_info: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo = field(
+        pricing_tick_info: (
+            None
+            | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo
+        ) = field(
             default=None,
             metadata={
                 "name": "pricingTickInfo",
                 "type": "Element",
             },
         )
-        corporate_fare_info: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo = field(
+        corporate_fare_info: (
+            None
+            | FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo
+        ) = field(
             default=None,
             metadata={
                 "name": "corporateFareInfo",
                 "type": "Element",
             },
         )
-        travel_flight_info: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo = field(
+        travel_flight_info: (
+            None
+            | FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo
+        ) = field(
             default=None,
             metadata={
                 "name": "travelFlightInfo",
@@ -6468,7 +6843,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class OfficeIdInformation:
-            office_identification: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation.OfficeIdentification = field(
+            office_identification: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.OfficeIdInformation.OfficeIdentification
+            ) = field(
                 default=None,
                 metadata={
                     "name": "officeIdentification",
@@ -6603,14 +6981,20 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class PricingTickInfo:
-            pricing_ticketing: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.PricingTicketing = field(
+            pricing_ticketing: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.PricingTicketing
+            ) = field(
                 default=None,
                 metadata={
                     "name": "pricingTicketing",
                     "type": "Element",
                 },
             )
-            ticketing_date: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.TicketingDate = field(
+            ticketing_date: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.TicketingDate
+            ) = field(
                 default=None,
                 metadata={
                     "name": "ticketingDate",
@@ -6624,28 +7008,40 @@ class FareMasterPricerTravelBoardSearch:
                     "type": "Element",
                 },
             )
-            selling_point: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.SellingPoint = field(
+            selling_point: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.SellingPoint
+            ) = field(
                 default=None,
                 metadata={
                     "name": "sellingPoint",
                     "type": "Element",
                 },
             )
-            ticketing_point: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.TicketingPoint = field(
+            ticketing_point: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.TicketingPoint
+            ) = field(
                 default=None,
                 metadata={
                     "name": "ticketingPoint",
                     "type": "Element",
                 },
             )
-            journey_origin_point: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.JourneyOriginPoint = field(
+            journey_origin_point: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.JourneyOriginPoint
+            ) = field(
                 default=None,
                 metadata={
                     "name": "journeyOriginPoint",
                     "type": "Element",
                 },
             )
-            corporate_id: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.CorporateId = field(
+            corporate_id: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.PricingTickInfo.CorporateId
+            ) = field(
                 default=None,
                 metadata={
                     "name": "corporateId",
@@ -6783,7 +7179,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class CorporateFareInfo:
-            corporate_fare_identifiers: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo.CorporateFareIdentifiers = field(
+            corporate_fare_identifiers: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.CorporateFareInfo.CorporateFareIdentifiers
+            ) = field(
                 default=None,
                 metadata={
                     "name": "corporateFareIdentifiers",
@@ -6815,7 +7214,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class TravelFlightInfo:
-            cabin_id: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.CabinId = field(
+            cabin_id: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.CabinId
+            ) = field(
                 default=None,
                 metadata={
                     "name": "cabinId",
@@ -6832,7 +7234,10 @@ class FareMasterPricerTravelBoardSearch:
                     "max_occurs": 20,
                 },
             )
-            flight_detail: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.FlightDetail = field(
+            flight_detail: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.TravelFlightInfo.FlightDetail
+            ) = field(
                 default=None,
                 metadata={
                     "name": "flightDetail",
@@ -7016,7 +7421,10 @@ class FareMasterPricerTravelBoardSearch:
 
         @dataclass
         class AirlineDistributionDetails:
-            requested_segment_ref: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef = field(
+            requested_segment_ref: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.RequestedSegmentRef
+            ) = field(
                 default=None,
                 metadata={
                     "name": "requestedSegmentRef",
@@ -7024,7 +7432,10 @@ class FareMasterPricerTravelBoardSearch:
                     "required": True,
                 },
             )
-            flight_info: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo = field(
+            flight_info: (
+                None
+                | FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo
+            ) = field(
                 default=None,
                 metadata={
                     "name": "flightInfo",
@@ -7076,7 +7487,10 @@ class FareMasterPricerTravelBoardSearch:
 
             @dataclass
             class FlightInfo:
-                cabin_id: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.CabinId = field(
+                cabin_id: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.CabinId
+                ) = field(
                     default=None,
                     metadata={
                         "name": "cabinId",
@@ -7093,7 +7507,10 @@ class FareMasterPricerTravelBoardSearch:
                         "max_occurs": 20,
                     },
                 )
-                flight_detail: None | FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.FlightDetail = field(
+                flight_detail: (
+                    None
+                    | FareMasterPricerTravelBoardSearch.OfficeIdDetails.AirlineDistributionDetails.FlightInfo.FlightDetail
+                ) = field(
                     default=None,
                     metadata={
                         "name": "flightDetail",

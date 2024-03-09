@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -269,15 +270,15 @@ class ComManagementMapping:
 
     @dataclass
     class ComManagementPortGroupIrefs:
-        com_management_port_group_iref: List[
-            PortGroupInSystemInstanceRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "COM-MANAGEMENT-PORT-GROUP-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        com_management_port_group_iref: List[PortGroupInSystemInstanceRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "COM-MANAGEMENT-PORT-GROUP-IREF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

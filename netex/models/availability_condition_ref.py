@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .availability_condition_ref_structure import (
     AvailabilityConditionRefStructure,
 )

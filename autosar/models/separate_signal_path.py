@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     DocumentationBlock,
     VariationPoint,
@@ -92,15 +93,15 @@ class SeparateSignalPath:
 
     @dataclass
     class Operations:
-        swc_to_swc_operation_arguments: List[
-            SwcToSwcOperationArguments
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SWC-TO-SWC-OPERATION-ARGUMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        swc_to_swc_operation_arguments: List[SwcToSwcOperationArguments] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SWC-TO-SWC-OPERATION-ARGUMENTS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

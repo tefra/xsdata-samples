@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .common_vehicle_service_ref_structure import (
     CommonVehicleServiceRefStructure,
 )

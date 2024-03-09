@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .assistance_booking_service_version_structure import (
     AssistanceBookingServiceVersionStructure,
 )

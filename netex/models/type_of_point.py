@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .type_of_point_value_structure import TypeOfPointValueStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

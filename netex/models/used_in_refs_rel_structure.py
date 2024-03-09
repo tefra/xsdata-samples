@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .group_of_distance_matrix_elements_ref import (
     GroupOfDistanceMatrixElementsRef,
 )

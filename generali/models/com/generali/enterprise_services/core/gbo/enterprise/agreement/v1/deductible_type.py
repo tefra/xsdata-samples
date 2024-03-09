@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
 )
@@ -50,15 +51,15 @@ class DeductibleType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    restricted_to_geography: Optional[
-        DeductibleTypeRestrictedToGeography
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RestrictedToGeography",
-            "type": "Element",
-            "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        },
+    restricted_to_geography: Optional[DeductibleTypeRestrictedToGeography] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RestrictedToGeography",
+                "type": "Element",
+                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
+            },
+        )
     )
     deductible_type: DeductibleTypeDeductibleType = field(
         default=DeductibleTypeDeductibleType.MAIN,

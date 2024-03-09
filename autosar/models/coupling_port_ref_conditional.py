@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .coupling_port_subtypes_enum import CouplingPortSubtypesEnum
 from .ref import Ref

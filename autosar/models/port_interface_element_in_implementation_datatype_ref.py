@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
 )
@@ -154,13 +155,13 @@ class PortInterfaceElementInImplementationDatatypeRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: Optional[
-            CppImplementationDataTypeContextTargetSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[CppImplementationDataTypeContextTargetSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

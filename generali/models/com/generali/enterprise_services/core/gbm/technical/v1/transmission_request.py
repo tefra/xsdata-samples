@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.com.generali.enterprise_services.core.gbm.technical.v1.transmission_request_type import (
     TransmissionRequestType,
 )

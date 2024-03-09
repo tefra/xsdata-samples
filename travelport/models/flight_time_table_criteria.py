@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.general_time_table import GeneralTimeTable
 from travelport.models.specific_time_table import SpecificTimeTable
 

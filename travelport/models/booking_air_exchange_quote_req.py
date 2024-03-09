@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_pricing_solution import AirPricingSolution
 from travelport.models.booking_base_req import BookingBaseReq
 from travelport.models.original_itinerary_details import (

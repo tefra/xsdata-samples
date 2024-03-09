@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .customer_ref import CustomerRef
 from .entity_in_version_structure import DataManagedObjectStructure
 from .gender_enumeration import GenderEnumeration

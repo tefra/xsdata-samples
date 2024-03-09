@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .invalid_data_references_error_structure import (
     InvalidDataReferencesErrorStructure,
 )

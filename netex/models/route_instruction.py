@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .route_instruction_version_structure import (
     RouteInstructionVersionStructure,
 )

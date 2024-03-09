@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -294,15 +295,15 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_pdu_triggering_ref: Optional[
-        "DltLogChannel.RxPduTriggeringRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RX-PDU-TRIGGERING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    rx_pdu_triggering_ref: Optional["DltLogChannel.RxPduTriggeringRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RX-PDU-TRIGGERING-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     service_instance_to_port_prototype_mapping_ref: Optional[
         "DltLogChannel.ServiceInstanceToPortPrototypeMappingRef"
@@ -322,15 +323,15 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tx_pdu_triggering_ref: Optional[
-        "DltLogChannel.TxPduTriggeringRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TX-PDU-TRIGGERING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tx_pdu_triggering_ref: Optional["DltLogChannel.TxPduTriggeringRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TX-PDU-TRIGGERING-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,
@@ -390,15 +391,15 @@ class DltLogChannel:
 
     @dataclass
     class DltMessageRefs:
-        dlt_message_ref: List[
-            "DltLogChannel.DltMessageRefs.DltMessageRef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DLT-MESSAGE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        dlt_message_ref: List["DltLogChannel.DltMessageRefs.DltMessageRef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DLT-MESSAGE-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass
@@ -454,15 +455,15 @@ class DltLogChannel:
 
     @dataclass
     class ServiceInstanceToPortPrototypeMappingRef(Ref):
-        dest: Optional[
-            ServiceInstanceToPortPrototypeMappingSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[ServiceInstanceToPortPrototypeMappingSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )
 
     @dataclass

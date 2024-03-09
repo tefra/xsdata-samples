@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -4209,17 +4210,17 @@ class FrequentTravellerIdentificationCodeType:
     :ivar frequent_traveller_details: Frequent Traveller Info
     """
 
-    frequent_traveller_details: list[
-        FrequentTravellerIdentificationType
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "frequentTravellerDetails",
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "min_occurs": 1,
-            "max_occurs": 99,
-        },
+    frequent_traveller_details: list[FrequentTravellerIdentificationType] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "frequentTravellerDetails",
+                "type": "Element",
+                "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
+                "min_occurs": 1,
+                "max_occurs": 99,
+            },
+        )
     )
 
 
@@ -4636,16 +4637,16 @@ class MonetaryInformationType174241S:
             "required": True,
         },
     )
-    other_monetary_details: list[
-        MonetaryInformationDetailsType245528C
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "otherMonetaryDetails",
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "max_occurs": 19,
-        },
+    other_monetary_details: list[MonetaryInformationDetailsType245528C] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "otherMonetaryDetails",
+                "type": "Element",
+                "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
+                "max_occurs": 19,
+            },
+        )
     )
 
 
@@ -5010,16 +5011,16 @@ class SegmentRepetitionControlTypeI:
     :ivar segment_control_details: Segment control details
     """
 
-    segment_control_details: list[
-        SegmentRepetitionControlDetailsTypeI
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "segmentControlDetails",
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "max_occurs": 9,
-        },
+    segment_control_details: list[SegmentRepetitionControlDetailsTypeI] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "segmentControlDetails",
+                "type": "Element",
+                "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
+                "max_occurs": 9,
+            },
+        )
     )
 
 
@@ -5455,7 +5456,9 @@ class FareMasterPricerTravelBoardSearchReply:
             "type": "Element",
         },
     )
-    error_message: None | FareMasterPricerTravelBoardSearchReply.ErrorMessage = field(
+    error_message: (
+        None | FareMasterPricerTravelBoardSearchReply.ErrorMessage
+    ) = field(
         default=None,
         metadata={
             "name": "errorMessage",
@@ -5485,7 +5488,9 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 200,
         },
     )
-    amount_info_for_all_pax: None | FareMasterPricerTravelBoardSearchReply.AmountInfoForAllPax = field(
+    amount_info_for_all_pax: (
+        None | FareMasterPricerTravelBoardSearchReply.AmountInfoForAllPax
+    ) = field(
         default=None,
         metadata={
             "name": "amountInfoForAllPax",
@@ -5502,15 +5507,15 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 20,
         },
     )
-    fee_details: list[
-        FareMasterPricerTravelBoardSearchReply.FeeDetails
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "feeDetails",
-            "type": "Element",
-            "max_occurs": 2099,
-        },
+    fee_details: list[FareMasterPricerTravelBoardSearchReply.FeeDetails] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "feeDetails",
+                "type": "Element",
+                "max_occurs": 2099,
+            },
+        )
     )
     bucket_info: list[BucketInformationType] = field(
         default_factory=list,
@@ -5538,15 +5543,15 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 20,
         },
     )
-    flight_index: list[
-        FareMasterPricerTravelBoardSearchReply.FlightIndex
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "flightIndex",
-            "type": "Element",
-            "max_occurs": 6,
-        },
+    flight_index: list[FareMasterPricerTravelBoardSearchReply.FlightIndex] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "flightIndex",
+                "type": "Element",
+                "max_occurs": 6,
+            },
+        )
     )
     recommendation: list[
         FareMasterPricerTravelBoardSearchReply.Recommendation
@@ -5567,15 +5572,15 @@ class FareMasterPricerTravelBoardSearchReply:
             "max_occurs": 100009,
         },
     )
-    warning_info: list[
-        FareMasterPricerTravelBoardSearchReply.WarningInfo
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "warningInfo",
-            "type": "Element",
-            "max_occurs": 9,
-        },
+    warning_info: list[FareMasterPricerTravelBoardSearchReply.WarningInfo] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "warningInfo",
+                "type": "Element",
+                "max_occurs": 9,
+            },
+        )
     )
     global_information: list[
         FareMasterPricerTravelBoardSearchReply.GlobalInformation
@@ -6196,7 +6201,9 @@ class FareMasterPricerTravelBoardSearchReply:
                         "max_occurs": 4,
                     },
                 )
-                psg_seg_monetary_information: None | MonetaryInformationType = field(
+                psg_seg_monetary_information: (
+                    None | MonetaryInformationType
+                ) = field(
                     default=None,
                     metadata={
                         "name": "psgSegMonetaryInformation",
@@ -6225,7 +6232,9 @@ class FareMasterPricerTravelBoardSearchReply:
                         for each Fare Component
                     """
 
-                    product_information: None | FlightProductInformationType176659S = field(
+                    product_information: (
+                        None | FlightProductInformationType176659S
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "productInformation",
@@ -6323,7 +6332,9 @@ class FareMasterPricerTravelBoardSearchReply:
                         details
                     """
 
-                    requested_segment_info: None | OriginAndDestinationRequestType134833S = field(
+                    requested_segment_info: (
+                        None | OriginAndDestinationRequestType134833S
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "requestedSegmentInfo",
@@ -6778,7 +6789,10 @@ class FareMasterPricerTravelBoardSearchReply:
                     "required": True,
                 },
             )
-            fee_description_grp: None | FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceDetailsGrp.FeeDescriptionGrp = field(
+            fee_description_grp: (
+                None
+                | FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceDetailsGrp.FeeDescriptionGrp
+            ) = field(
                 default=None,
                 metadata={
                     "name": "feeDescriptionGrp",
@@ -6812,7 +6826,9 @@ class FareMasterPricerTravelBoardSearchReply:
                         "type": "Element",
                     },
                 )
-                service_description_info: None | SpecialRequirementsDetailsType = field(
+                service_description_info: (
+                    None | SpecialRequirementsDetailsType
+                ) = field(
                     default=None,
                     metadata={
                         "name": "serviceDescriptionInfo",

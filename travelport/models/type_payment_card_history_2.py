@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlPeriod
+
 from travelport.models.phone_number_history_2 import PhoneNumberHistory2
 from travelport.models.type_structured_address_5 import TypeStructuredAddress5
 

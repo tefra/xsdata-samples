@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.flight_time_table_port_type_service_input import (
     FlightTimeTablePortTypeServiceInput,
 )

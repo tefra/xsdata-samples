@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_service import AssistanceService

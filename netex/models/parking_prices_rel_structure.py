@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .cell_ref_1 import CellRef1
 from .parking_price_ref import ParkingPriceRef
 from .priceable_object_version_structure import (

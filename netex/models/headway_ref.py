@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .headway_ref_structure import HeadwayRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

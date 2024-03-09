@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from npo.models.schedule_form_type import ScheduleFormType
 
 __NAMESPACE__ = "urn:vpro:api:2013"

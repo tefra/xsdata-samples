@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .distance_matrix_elements_rel_structure import (
     DistanceMatrixElementsRelStructure,

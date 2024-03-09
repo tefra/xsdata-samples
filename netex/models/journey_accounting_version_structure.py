@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .journey_accounting_enumeration import JourneyAccountingEnumeration
 from .organisation_ref_structure import OrganisationRefStructure

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .tp_port import TpPort
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

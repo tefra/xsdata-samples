@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_base_req import AirBaseReq
 from travelport.models.air_reservation_locator_code import (
     AirReservationLocatorCode,
@@ -125,15 +127,15 @@ class AirTicketingReq(AirBaseReq):
             "max_occurs": 999,
         },
     )
-    air_segment_ticketing_modifiers: list[
-        AirSegmentTicketingModifiers
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "AirSegmentTicketingModifiers",
-            "type": "Element",
-            "max_occurs": 999,
-        },
+    air_segment_ticketing_modifiers: list[AirSegmentTicketingModifiers] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "AirSegmentTicketingModifiers",
+                "type": "Element",
+                "max_occurs": 999,
+            },
+        )
     )
     return_info_on_fail: bool = field(
         default=True,

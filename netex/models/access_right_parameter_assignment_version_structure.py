@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .access_right_in_product_ref import AccessRightInProductRef
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .assignment_version_structure_1 import AssignmentVersionStructure1
@@ -295,25 +296,25 @@ class AccessRightParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_grouping_type: Optional[
-        LogicalOperationEnumeration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ValidityParameterGroupingType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    validity_parameter_grouping_type: Optional[LogicalOperationEnumeration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ValidityParameterGroupingType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
-    validity_parameter_set_selection_type: Optional[
-        SetOperatorEnumeration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ValidityParameterSetSelectionType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    validity_parameter_set_selection_type: Optional[SetOperatorEnumeration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ValidityParameterSetSelectionType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     temporal_validity_parameters: Optional[
         TemporalValidityParametersRelStructure

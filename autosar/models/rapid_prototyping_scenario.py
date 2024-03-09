@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -173,15 +174,15 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    host_system_ref: Optional[
-        "RapidPrototypingScenario.HostSystemRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "HOST-SYSTEM-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    host_system_ref: Optional["RapidPrototypingScenario.HostSystemRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "HOST-SYSTEM-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     rpt_containers: Optional["RapidPrototypingScenario.RptContainers"] = field(
         default=None,

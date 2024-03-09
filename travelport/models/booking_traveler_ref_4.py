@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.discount_card_ref_4 import DiscountCardRef4
 from travelport.models.drivers_license_ref_4 import DriversLicenseRef4
 from travelport.models.loyalty_card_ref_4 import LoyaltyCardRef4

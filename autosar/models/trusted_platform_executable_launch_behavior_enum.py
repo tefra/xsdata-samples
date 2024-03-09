@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .trusted_platform_executable_launch_behavior_enum_simple import (
     TrustedPlatformExecutableLaunchBehaviorEnumSimple,
 )

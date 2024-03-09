@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_agency_info_history_ursync_data_2 import (
     TypeAgencyInfoHistoryUrsyncData2,
 )

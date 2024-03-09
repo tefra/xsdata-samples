@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.profile_create_hierarchy_level_req import (
     ProfileCreateHierarchyLevelReq,
 )
@@ -23,7 +25,9 @@ class ProfileCreateHierarchyLevelPortTypeServiceInput:
 
     @dataclass
     class Body:
-        profile_create_hierarchy_level_req: None | ProfileCreateHierarchyLevelReq = field(
+        profile_create_hierarchy_level_req: (
+            None | ProfileCreateHierarchyLevelReq
+        ) = field(
             default=None,
             metadata={
                 "name": "ProfileCreateHierarchyLevelReq",

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .software_cluster_dependency_logical_operator_enum_simple import (
     SoftwareClusterDependencyLogicalOperatorEnumSimple,
 )
@@ -29,13 +30,13 @@ class SoftwareClusterDependencyLogicalOperatorEnum:
     class Meta:
         name = "SOFTWARE-CLUSTER-DEPENDENCY-LOGICAL-OPERATOR-ENUM"
 
-    value: Optional[
-        SoftwareClusterDependencyLogicalOperatorEnumSimple
-    ] = field(
-        default=None,
-        metadata={
-            "required": True,
-        },
+    value: Optional[SoftwareClusterDependencyLogicalOperatorEnumSimple] = (
+        field(
+            default=None,
+            metadata={
+                "required": True,
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

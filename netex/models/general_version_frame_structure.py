@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from xsdata.models.datatype import XmlDateTime
+
 from .access import Access
 from .access_right_in_product import AccessRightInProduct
 from .access_right_parameter_assignment_1 import (
@@ -340,8 +342,8 @@ from .preassigned_fare_product import PreassignedFareProduct
 from .price_unit import PriceUnit
 from .priceable_object_version_structure import (
     Cell1,
-    FareTableInContext,
     FareTable1,
+    FareTableInContext,
     ParkingChargeBand,
     ParkingPrice,
     PriceGroup1,

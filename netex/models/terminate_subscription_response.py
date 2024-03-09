@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .terminate_subscription_response_structure import (
     TerminateSubscriptionResponseStructure,
 )

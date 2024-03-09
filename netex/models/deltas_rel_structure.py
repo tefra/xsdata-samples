@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .delta import Delta
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

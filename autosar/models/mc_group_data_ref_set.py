@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .mc_group_data_ref_set_conditional import McGroupDataRefSetConditional
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

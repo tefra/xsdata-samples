@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .sales_transaction_version_structure import (
     SalesTransactionVersionStructure,
 )

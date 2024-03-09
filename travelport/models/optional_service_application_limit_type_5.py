@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.optional_service_applicability_type_5 import (
     OptionalServiceApplicabilityType5,
 )

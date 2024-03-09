@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.upsell_search_rsp import UpsellSearchRsp
 
@@ -63,7 +65,9 @@ class UpsellAdminSearchPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | UpsellAdminSearchPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | UpsellAdminSearchPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

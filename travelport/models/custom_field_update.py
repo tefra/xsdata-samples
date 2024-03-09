@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_editable_custom_field_2 import (
     TypeEditableCustomField2,
 )

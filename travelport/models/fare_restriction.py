@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.fare_restriction_date import FareRestrictionDate
 from travelport.models.fare_restriction_days_of_week import (
     FareRestrictionDaysOfWeek,

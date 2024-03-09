@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dynamic_vehicle_meeting_point_assignment_ref import (
     DynamicVehicleMeetingPointAssignmentRef,

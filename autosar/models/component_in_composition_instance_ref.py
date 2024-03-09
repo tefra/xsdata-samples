@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .ref import Ref
 from .sw_component_prototype_subtypes_enum import (
     SwComponentPrototypeSubtypesEnum,

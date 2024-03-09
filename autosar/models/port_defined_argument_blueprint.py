@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import (
     DocumentationBlock,
     VariationPoint,
@@ -48,15 +49,15 @@ class PortDefinedArgumentBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_type_ref: Optional[
-        "PortDefinedArgumentBlueprint.ValueTypeRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "VALUE-TYPE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    value_type_ref: Optional["PortDefinedArgumentBlueprint.ValueTypeRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "VALUE-TYPE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,

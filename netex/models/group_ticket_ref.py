@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .group_ticket_ref_structure import GroupTicketRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

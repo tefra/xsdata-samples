@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDuration, XmlTime
+
 from .accessibility_assessment import AccessibilityAssessment
 from .check_constraint import CheckConstraint
 from .duty_part_ref import DutyPartRef

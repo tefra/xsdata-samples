@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .complex_feature_projection import ComplexFeatureProjection
 from .complex_feature_projection_ref import ComplexFeatureProjectionRef
 from .containment_aggregation_structure import ContainmentAggregationStructure

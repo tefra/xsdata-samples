@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.availability_to_promise_response import (
     AvailabilityShipToParty,
 )
@@ -163,14 +164,14 @@ class AvailabilityCheckResultHeader:
             "type": "Element",
         },
     )
-    availability_check_result_note: Optional[
-        AvailabilityCheckResultNote
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AvailabilityCheckResultNote",
-            "type": "Element",
-        },
+    availability_check_result_note: Optional[AvailabilityCheckResultNote] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AvailabilityCheckResultNote",
+                "type": "Element",
+            },
+        )
     )
     result_list_of_attachment: Optional[ResultListOfAttachment] = field(
         default=None,

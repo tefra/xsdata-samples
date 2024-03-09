@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_pnr_element import TypePnrElement
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"

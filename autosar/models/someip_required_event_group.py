@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .identifier import Identifier
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
@@ -61,15 +62,15 @@ class SomeipRequiredEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_ref: Optional[
-        "SomeipRequiredEventGroup.EventGroupRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EVENT-GROUP-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_group_ref: Optional["SomeipRequiredEventGroup.EventGroupRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-GROUP-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sd_client_event_group_timing_config_ref: Optional[
         "SomeipRequiredEventGroup.SdClientEventGroupTimingConfigRef"
@@ -121,13 +122,13 @@ class SomeipRequiredEventGroup:
 
     @dataclass
     class SdClientEventGroupTimingConfigRef(Ref):
-        dest: Optional[
-            SomeipSdClientEventGroupTimingConfigSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[SomeipSdClientEventGroupTimingConfigSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

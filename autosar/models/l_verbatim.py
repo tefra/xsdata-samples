@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .br import Br
 from .emphasis_text import EmphasisText
 from .l_enum_simple import LEnumSimple

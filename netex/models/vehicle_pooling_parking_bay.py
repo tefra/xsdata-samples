@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_pooling_parking_bay_version_structure import (
     VehiclePoolingParkingBayVersionStructure,
 )

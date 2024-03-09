@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .error_description_structure import ErrorDescriptionStructure
 from .extensions_1 import Extensions1
 from .participant_ref_structure import ParticipantRefStructure

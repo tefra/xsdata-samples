@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_implementation_data_type_subtypes_enum import (
     AbstractImplementationDataTypeSubtypesEnum,
 )
@@ -117,15 +118,15 @@ class SwDataDefProps:
 
     @dataclass
     class SwDataDefPropsVariants:
-        sw_data_def_props_conditional: List[
-            "SwDataDefPropsConditional"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SW-DATA-DEF-PROPS-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        sw_data_def_props_conditional: List["SwDataDefPropsConditional"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SW-DATA-DEF-PROPS-CONDITIONAL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
 
@@ -471,25 +472,25 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_method_ref: Optional[
-        "SwDataDefPropsConditional.CompuMethodRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "COMPU-METHOD-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    compu_method_ref: Optional["SwDataDefPropsConditional.CompuMethodRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMPU-METHOD-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    data_constr_ref: Optional[
-        "SwDataDefPropsConditional.DataConstrRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DATA-CONSTR-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_constr_ref: Optional["SwDataDefPropsConditional.DataConstrRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-CONSTR-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sw_data_dependency: Optional[SwDataDependency] = field(
         default=None,
@@ -533,15 +534,15 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    additional_native_type_qualifier: Optional[
-        NativeDeclarationString
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ADDITIONAL-NATIVE-TYPE-QUALIFIER",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    additional_native_type_qualifier: Optional[NativeDeclarationString] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ADDITIONAL-NATIVE-TYPE-QUALIFIER",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sw_intended_resolution: Optional[NumericalValue] = field(
         default=None,
@@ -653,15 +654,15 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class SwValueBlockSizeMults:
-        numerical_value_variation_point: List[
-            NumericalValueVariationPoint
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "NUMERICAL-VALUE-VARIATION-POINT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        numerical_value_variation_point: List[NumericalValueVariationPoint] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "NUMERICAL-VALUE-VARIATION-POINT",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

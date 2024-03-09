@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_seat_assignment_1 import AirSeatAssignment1
 from travelport.models.type_passenger_type_1 import TypePassengerType1
 

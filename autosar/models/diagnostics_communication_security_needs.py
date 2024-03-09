@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -158,15 +159,15 @@ class DiagnosticsCommunicationSecurityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    audiences: Optional[
-        "DiagnosticsCommunicationSecurityNeeds.Audiences"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AUDIENCES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    audiences: Optional["DiagnosticsCommunicationSecurityNeeds.Audiences"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AUDIENCES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     diag_requirement: Optional[DiagRequirementIdString] = field(
         default=None,

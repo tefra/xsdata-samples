@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.tpeg_descriptor import TpegDescriptor
 from datexii.models.eu.datexii.v2.tpeg_loc03_area_descriptor_subtype_enum import (
@@ -20,16 +21,16 @@ class TpegAreaDescriptor(TpegDescriptor):
     :ivar tpeg_area_descriptor_extension:
     """
 
-    tpeg_area_descriptor_type: Optional[
-        TpegLoc03AreaDescriptorSubtypeEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "tpegAreaDescriptorType",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    tpeg_area_descriptor_type: Optional[TpegLoc03AreaDescriptorSubtypeEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "tpegAreaDescriptorType",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     tpeg_area_descriptor_extension: Optional[ExtensionType] = field(
         default=None,

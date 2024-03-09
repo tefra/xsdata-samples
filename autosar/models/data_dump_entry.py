@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import DocumentationBlock
 from .integer import Integer
 from .lin_slave_config_ident_subtypes_enum import (

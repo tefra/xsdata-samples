@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDuration, XmlTime
+
 from .purchase_action_enumeration import PurchaseActionEnumeration
 from .purchase_moment_enumeration import PurchaseMomentEnumeration
 from .purchase_when_enumeration import PurchaseWhenEnumeration

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .vehicle_driver_notification_enum import VehicleDriverNotificationEnum
 

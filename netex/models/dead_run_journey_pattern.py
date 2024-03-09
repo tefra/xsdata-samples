@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .dead_run_journey_pattern_version_structure import (
     DeadRunJourneyPatternVersionStructure,
 )

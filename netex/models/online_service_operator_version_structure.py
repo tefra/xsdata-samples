@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
-from typing import Optional, Type, Union, Any
+from typing import Any, Optional, Type, Union
+
 from .country_ref import CountryRef
 from .online_service_refs_rel_structure import OnlineServiceRefsRelStructure
 from .organisation_version_structure import OrganisationVersionStructure

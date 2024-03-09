@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .access_facility_enumeration import AccessFacilityEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

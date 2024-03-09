@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from .delta_values_rel_structure import DeltaValuesRelStructure
 from .modification_enumeration import ModificationEnumeration
 from .simple_object_ref import SimpleObjectRef

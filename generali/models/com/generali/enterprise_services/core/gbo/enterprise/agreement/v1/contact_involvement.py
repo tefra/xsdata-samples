@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.contact_involvement_enum import (
     ContactInvolvementEnum,
 )

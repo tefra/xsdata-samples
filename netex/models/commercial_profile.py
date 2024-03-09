@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .commercial_profile_version_structure import (
     CommercialProfileVersionStructure,
 )

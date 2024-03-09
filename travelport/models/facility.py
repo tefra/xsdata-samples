@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.characteristic_3 import Characteristic3
 from travelport.models.emd import Emd
 from travelport.models.passenger_seat_price import PassengerSeatPrice

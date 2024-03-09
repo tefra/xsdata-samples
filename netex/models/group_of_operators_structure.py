@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .group_of_entities_version_structure import (
     GroupOfEntitiesVersionStructure,
 )

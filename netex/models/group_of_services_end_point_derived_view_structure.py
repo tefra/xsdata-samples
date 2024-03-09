@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .derived_view_structure import DerivedViewStructure
 from .destination_display_ref import DestinationDisplayRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef

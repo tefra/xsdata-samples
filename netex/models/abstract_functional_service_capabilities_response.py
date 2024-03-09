@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .abstract_service_capabilities_response_structure import (
     AbstractServiceCapabilitiesResponseStructure,
 )

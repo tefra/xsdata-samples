@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_flight_number_range import TypeFlightNumberRange
 from travelport.models.type_specific_flight_number import (
     TypeSpecificFlightNumber,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .ordered_master import OrderedMaster
 from .time_sync_technology_enum import TimeSyncTechnologyEnum
 

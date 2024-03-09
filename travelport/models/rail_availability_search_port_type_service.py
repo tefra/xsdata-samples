@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.rail_availability_search_port_type_service_input import (
     RailAvailabilitySearchPortTypeServiceInput,
 )

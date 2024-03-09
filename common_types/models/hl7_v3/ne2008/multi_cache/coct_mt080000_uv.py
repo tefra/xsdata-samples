@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from ..core.datatypes_base import (
     Ad,
     AnyType,
@@ -2187,16 +2188,16 @@ class CoctMt080000UvContainer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_identified_container: Optional[
-        CoctMt080000UvIdentifiedContainer
-    ] = field(
-        default=None,
-        metadata={
-            "name": "asIdentifiedContainer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    as_identified_container: Optional[CoctMt080000UvIdentifiedContainer] = (
+        field(
+            default=None,
+            metadata={
+                "name": "asIdentifiedContainer",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     as_content: Optional[CoctMt080000UvContent3] = field(
         default=None,
@@ -2571,16 +2572,16 @@ class CoctMt080000UvManufactured:
             "nillable": True,
         },
     )
-    as_manufactured_product: Optional[
-        CoctMt080000UvManufacturedProduct
-    ] = field(
-        default=None,
-        metadata={
-            "name": "asManufacturedProduct",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    as_manufactured_product: Optional[CoctMt080000UvManufacturedProduct] = (
+        field(
+            default=None,
+            metadata={
+                "name": "asManufacturedProduct",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     as_specimen_stub: List[CoctMt080000UvSpecimenStub] = field(
         default_factory=list,

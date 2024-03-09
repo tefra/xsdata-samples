@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.back_office_hand_off import BackOfficeHandOff
 from travelport.models.itinerary import Itinerary
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.time_series_response import (
     CharacteristicCombinationId,
     KeyFigureInformation,
@@ -49,23 +50,23 @@ class KeyFigureData:
             "type": "Element",
         },
     )
-    key_figure_purpose_coded_other: Optional[
-        KeyFigurePurposeCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "KeyFigurePurposeCodedOther",
-            "type": "Element",
-        },
+    key_figure_purpose_coded_other: Optional[KeyFigurePurposeCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "KeyFigurePurposeCodedOther",
+                "type": "Element",
+            },
+        )
     )
-    characteristic_combination_id: Optional[
-        CharacteristicCombinationId
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CharacteristicCombinationID",
-            "type": "Element",
-        },
+    characteristic_combination_id: Optional[CharacteristicCombinationId] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CharacteristicCombinationID",
+                "type": "Element",
+            },
+        )
     )
     key_figure_information: KeyFigureInformation = field(
         metadata={

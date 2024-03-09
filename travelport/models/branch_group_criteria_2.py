@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_profile_search_criteria_2 import (
     TypeProfileSearchCriteria2,
 )

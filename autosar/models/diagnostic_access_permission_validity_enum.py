@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .diagnostic_access_permission_validity_enum_simple import (
     DiagnosticAccessPermissionValidityEnumSimple,
 )

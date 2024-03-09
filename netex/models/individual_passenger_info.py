@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .individual_passenger_info_version_structure import (
     IndividualPassengerInfoVersionStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .property_of_day import PropertyOfDay
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

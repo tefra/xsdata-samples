@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.category_details_type import CategoryDetailsType
 from travelport.models.value_details import ValueDetails
 

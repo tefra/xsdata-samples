@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .compu_const import CompuConst
 from .compu_scale import CompuScale
 

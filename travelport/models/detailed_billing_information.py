@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_pricing_info_ref import AirPricingInfoRef
 from travelport.models.billing_detail_item import BillingDetailItem
 from travelport.models.form_of_payment_ref_1 import FormOfPaymentRef1

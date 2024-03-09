@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .stop_place_ref import StopPlaceRef
 from .taxi_rank_ref import TaxiRankRef

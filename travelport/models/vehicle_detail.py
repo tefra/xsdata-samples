@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_fuel import TypeFuel
 from travelport.models.type_vehicle_category import TypeVehicleCategory
 from travelport.models.type_vehicle_class import TypeVehicleClass

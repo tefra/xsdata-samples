@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .handle_out_of_range_enum import HandleOutOfRangeEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

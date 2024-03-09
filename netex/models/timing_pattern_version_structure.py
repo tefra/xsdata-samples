@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .direction_type import DirectionType
 from .route_ref_structure import RouteRefStructure
 from .sections_in_sequence_rel_structure import LinkSequenceVersionStructure
@@ -55,15 +56,15 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    points_in_sequence: Optional[
-        TimingPointsInJourneyPatternRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "pointsInSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    points_in_sequence: Optional[TimingPointsInJourneyPatternRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "pointsInSequence",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     points: Optional[TimingPointsRelStructure] = field(
         default=None,

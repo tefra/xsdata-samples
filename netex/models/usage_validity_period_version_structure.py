@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDate, XmlDuration, XmlTime
+
 from .activation_means_enumeration import ActivationMeansEnumeration
 from .blackout_start_enumeration import BlackoutStartEnumeration
 from .entity_in_version_structure import DayTypesRelStructure

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.image_location import ImageLocation
 from travelport.models.price_range import PriceRange
 from travelport.models.service_group import ServiceGroup

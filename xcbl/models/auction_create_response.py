@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.auction_result import ListOfMvbvariables
 from xcbl.models.auction_result_response import AuctionCreateReference
 from xcbl.models.remittance_advice import ListOfValues
@@ -574,14 +575,14 @@ class AuctionItemAttribute:
             "required": True,
         }
     )
-    auction_attribute_description: Optional[
-        AuctionAttributeDescription
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AuctionAttributeDescription",
-            "type": "Element",
-        },
+    auction_attribute_description: Optional[AuctionAttributeDescription] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AuctionAttributeDescription",
+                "type": "Element",
+            },
+        )
     )
     auction_attribute_data_type_coded: AuctionAttributeDataTypeCoded = field(
         metadata={
@@ -620,14 +621,14 @@ class AuctionItemAttribute:
             "required": True,
         }
     )
-    auction_attribute_default_value: Optional[
-        AuctionAttributeDefaultValue
-    ] = field(
-        default=None,
-        metadata={
-            "name": "AuctionAttributeDefaultValue",
-            "type": "Element",
-        },
+    auction_attribute_default_value: Optional[AuctionAttributeDefaultValue] = (
+        field(
+            default=None,
+            metadata={
+                "name": "AuctionAttributeDefaultValue",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -958,14 +959,14 @@ class AuctionItem:
             "required": True,
         }
     )
-    list_of_auction_item_attribute: Optional[
-        ListOfAuctionItemAttribute
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ListOfAuctionItemAttribute",
-            "type": "Element",
-        },
+    list_of_auction_item_attribute: Optional[ListOfAuctionItemAttribute] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfAuctionItemAttribute",
+                "type": "Element",
+            },
+        )
     )
     auction_item_hierarchy_level: AuctionItemHierarchyLevel = field(
         metadata={
@@ -1340,14 +1341,14 @@ class AuctionCreateResponseDetail:
             "type": "Element",
         },
     )
-    changed_auction_create_detail: Optional[
-        ChangedAuctionCreateDetail
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ChangedAuctionCreateDetail",
-            "type": "Element",
-        },
+    changed_auction_create_detail: Optional[ChangedAuctionCreateDetail] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ChangedAuctionCreateDetail",
+                "type": "Element",
+            },
+        )
     )
     list_of_auction_item_component_response: Optional[
         "ListOfAuctionItemComponentResponse"
@@ -1415,14 +1416,14 @@ class AuctionCreateResponseHeader:
             "type": "Element",
         },
     )
-    changed_auction_create_header: Optional[
-        ChangedAuctionCreateHeader
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ChangedAuctionCreateHeader",
-            "type": "Element",
-        },
+    changed_auction_create_header: Optional[ChangedAuctionCreateHeader] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ChangedAuctionCreateHeader",
+                "type": "Element",
+            },
+        )
     )
     language: Language = field(
         metadata={
@@ -1492,13 +1493,13 @@ class AuctionCreateResponse:
 
 @dataclass(kw_only=True)
 class ListOfAuctionItemComponentResponse:
-    auction_item_component_response: List[
-        AuctionItemComponentResponse
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "AuctionItemComponentResponse",
-            "type": "Element",
-            "min_occurs": 1,
-        },
+    auction_item_component_response: List[AuctionItemComponentResponse] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "AuctionItemComponentResponse",
+                "type": "Element",
+                "min_occurs": 1,
+            },
+        )
     )

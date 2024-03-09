@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .passenger_carrying_requirement import PassengerCarryingRequirement
 from .passenger_carrying_requirement_ref import PassengerCarryingRequirementRef

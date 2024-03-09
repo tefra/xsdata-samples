@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .dynamic_stop_assignment_ref_structure import (
     DynamicStopAssignmentRefStructure,
 )

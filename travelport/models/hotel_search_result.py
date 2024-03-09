@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.corporate_discount_id_1 import CorporateDiscountId1
 from travelport.models.hotel_property import HotelProperty
 from travelport.models.hotel_type import HotelType

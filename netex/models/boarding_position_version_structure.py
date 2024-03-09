@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boarding_position_type_enumeration import BoardingPositionTypeEnumeration
 from .entrance_refs_rel_structure import EntranceRefsRelStructure
 from .stop_place_space_version_structure import StopPlaceSpaceVersionStructure

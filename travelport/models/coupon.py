@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.ticket_designator import TicketDesignator
 from travelport.models.type_element_status_1 import TypeElementStatus1
 

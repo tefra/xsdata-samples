@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .traffic_control_point_version_structure import (
     TrafficControlPointVersionStructure,
 )

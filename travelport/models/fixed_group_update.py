@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_common_editable_group_2 import (
     TypeCommonEditableGroup2,
 )

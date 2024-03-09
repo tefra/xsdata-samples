@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .passenger_safety_equipment_ref_structure import (
     PassengerSafetyEquipmentRefStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ref import Ref
 from .trigger_subtypes_enum import TriggerSubtypesEnum
 

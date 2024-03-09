@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.segment_remark_6 import SegmentRemark6
 from travelport.models.type_element_status_7 import TypeElementStatus7
 

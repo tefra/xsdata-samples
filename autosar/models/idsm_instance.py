@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -244,15 +245,15 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_limitation_filters: Optional[
-        "IdsmInstance.RateLimitationFilters"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RATE-LIMITATION-FILTERS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    rate_limitation_filters: Optional["IdsmInstance.RateLimitationFilters"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RATE-LIMITATION-FILTERS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     signature_support_ap: Optional[IdsmSignatureSupportAp] = field(
         default=None,

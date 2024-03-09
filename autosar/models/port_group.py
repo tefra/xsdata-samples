@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -243,13 +244,13 @@ class PortGroup:
 
     @dataclass
     class OuterPorts:
-        port_prototype_ref_conditional: List[
-            PortPrototypeRefConditional
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "PORT-PROTOTYPE-REF-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        port_prototype_ref_conditional: List[PortPrototypeRefConditional] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "PORT-PROTOTYPE-REF-CONDITIONAL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from generali.models.com.generali.enterprise_services.core.gbo.common.faults.v1.fault_type import (
     FaultType,
 )

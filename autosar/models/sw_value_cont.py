@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .ref import Ref
 from .single_language_unit_names import SingleLanguageUnitNames
 from .sw_values import SwValues

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .group_of_timebands_versioned_child_structure import (
     GroupOfTimebandsVersionedChildStructure,
 )

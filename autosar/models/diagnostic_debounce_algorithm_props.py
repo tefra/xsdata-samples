@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .boolean import Boolean
 from .diag_event_debounce_counter_based import DiagEventDebounceCounterBased
 from .diag_event_debounce_monitor_internal import (

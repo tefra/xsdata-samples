@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .day_type_assignment import DayTypeAssignment
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

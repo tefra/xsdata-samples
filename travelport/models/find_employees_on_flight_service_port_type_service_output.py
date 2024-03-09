@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.find_employees_on_flight_rsp import (
     FindEmployeesOnFlightRsp,
@@ -34,7 +36,9 @@ class FindEmployeesOnFlightServicePortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
             },
         )
-        fault: None | FindEmployeesOnFlightServicePortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | FindEmployeesOnFlightServicePortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -65,7 +69,10 @@ class FindEmployeesOnFlightServicePortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | FindEmployeesOnFlightServicePortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | FindEmployeesOnFlightServicePortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

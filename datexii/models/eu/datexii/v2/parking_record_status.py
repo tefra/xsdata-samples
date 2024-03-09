@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.parking_access_status import (
@@ -82,16 +84,16 @@ class ParkingRecordStatus:
     :ivar parking_record_status_extension:
     """
 
-    parking_record_reference: Optional[
-        ParkingRecordVersionedReference
-    ] = field(
-        default=None,
-        metadata={
-            "name": "parkingRecordReference",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    parking_record_reference: Optional[ParkingRecordVersionedReference] = (
+        field(
+            default=None,
+            metadata={
+                "name": "parkingRecordReference",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     parking_status_origin_time: Optional[XmlDateTime] = field(
         default=None,

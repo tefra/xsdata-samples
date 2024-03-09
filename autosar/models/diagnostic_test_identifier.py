@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .positive_integer_value_variation_point import (
     PositiveIntegerValueVariationPoint,
 )

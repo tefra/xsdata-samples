@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .boarding_position import BoardingPosition
 from .boarding_position_ref import BoardingPositionRef
 from .quay_1 import Quay1

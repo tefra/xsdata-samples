@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .call_conversation import CallConversation
 from .conversation import Conversation
 from .conversation_node import ConversationNode

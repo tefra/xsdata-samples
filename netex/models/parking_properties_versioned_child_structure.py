@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .bay_geometry_enumeration import BayGeometryEnumeration
 from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString

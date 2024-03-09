@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .vehicle_pooling_service_version_structure import (
     VehiclePoolingServiceVersionStructure,
 )

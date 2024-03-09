@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .align_enum_simple import AlignEnumSimple
 from .colspec import Colspec
 from .tbody import Tbody

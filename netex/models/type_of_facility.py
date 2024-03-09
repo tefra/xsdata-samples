@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .type_of_facility_version_structure import TypeOfFacilityVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

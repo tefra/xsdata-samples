@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .onboard_stay_ref_structure import OnboardStayRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

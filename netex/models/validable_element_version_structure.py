@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .amount_of_price_unit_refs_rel_structure import (
     AmountOfPriceUnitRefsRelStructure,
 )
@@ -29,15 +30,15 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "ValidableElement_VersionStructure"
 
-    fare_structure_elements: Optional[
-        FareStructureElementRefsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "fareStructureElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    fare_structure_elements: Optional[FareStructureElementRefsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "fareStructureElements",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     fare_elements_in_sequence: Optional[
         FareElementInSequenceRefsRelStructure

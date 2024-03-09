@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .abstract_capabilities_structure import AbstractCapabilitiesStructure
 from .data_object_capability_request_policy_structure import (
     DataObjectCapabilityRequestPolicyStructure,
@@ -20,15 +21,15 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_policy: Optional[
-        DataObjectCapabilityRequestPolicyStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "RequestPolicy",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    request_policy: Optional[DataObjectCapabilityRequestPolicyStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "RequestPolicy",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     subscription_policy: Optional[
         "DataObjectServiceCapabilitiesStructure.SubscriptionPolicy"

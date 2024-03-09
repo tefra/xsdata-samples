@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .atp_blueprint_subtypes_enum import AtpBlueprintSubtypesEnum
 from .atp_blueprintable_subtypes_enum import AtpBlueprintableSubtypesEnum
 from .ref import Ref

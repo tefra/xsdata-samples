@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .crossing_equipment_version_structure import (
     CrossingEquipmentVersionStructure,
 )

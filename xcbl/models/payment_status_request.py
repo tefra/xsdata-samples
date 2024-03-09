@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.payment_status_response import (
     ConfirmationId,
     PaymentDates,

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .waiting_equipment_ref_structure import WaitingEquipmentRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
 )
@@ -119,15 +120,15 @@ class SenderReceiverToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_iref: Optional[
-        VariableDataPrototypeInSystemInstanceRef
-    ] = field(
-        default=None,
-        metadata={
-            "name": "DATA-ELEMENT-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_element_iref: Optional[VariableDataPrototypeInSystemInstanceRef] = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-ELEMENT-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     signal_group_ref: Optional[
         "SenderReceiverToSignalGroupMapping.SignalGroupRef"
@@ -250,15 +251,15 @@ class SenderReceiverToSignalGroupMapping:
 
     @dataclass
     class TypeMapping:
-        sender_rec_array_type_mapping: Optional[
-            SenderRecArrayTypeMapping
-        ] = field(
-            default=None,
-            metadata={
-                "name": "SENDER-REC-ARRAY-TYPE-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        sender_rec_array_type_mapping: Optional[SenderRecArrayTypeMapping] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "SENDER-REC-ARRAY-TYPE-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         sender_rec_record_type_mapping: Optional[
             SenderRecRecordTypeMapping

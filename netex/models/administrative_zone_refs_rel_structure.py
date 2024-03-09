@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .administrative_zone_ref import AdministrativeZoneRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 

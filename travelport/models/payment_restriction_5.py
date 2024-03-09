@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.address_restriction_5 import AddressRestriction5
 from travelport.models.card_restriction_5 import CardRestriction5
 

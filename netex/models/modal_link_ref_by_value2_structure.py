@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from .point_ref_structure import PointRefStructure
 from .type_of_link_ref import TypeOfLinkRef
 from .vehicle_mode import VehicleMode

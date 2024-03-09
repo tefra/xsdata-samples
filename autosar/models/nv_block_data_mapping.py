@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import VariationPoint
 from .autosar_variable_ref import AutosarVariableRef
 from .positive_integer import PositiveInteger
@@ -52,15 +53,15 @@ class NvBlockDataMapping:
     class Meta:
         name = "NV-BLOCK-DATA-MAPPING"
 
-    bitfield_text_table_mask_nv_block_descriptor: Optional[
-        PositiveInteger
-    ] = field(
-        default=None,
-        metadata={
-            "name": "BITFIELD-TEXT-TABLE-MASK-NV-BLOCK-DESCRIPTOR",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    bitfield_text_table_mask_nv_block_descriptor: Optional[PositiveInteger] = (
+        field(
+            default=None,
+            metadata={
+                "name": "BITFIELD-TEXT-TABLE-MASK-NV-BLOCK-DESCRIPTOR",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     bitfield_text_table_mask_port_prototype: Optional[PositiveInteger] = field(
         default=None,

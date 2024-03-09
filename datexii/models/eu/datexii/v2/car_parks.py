@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.car_park_configuration_enum import (
     CarParkConfigurationEnum,
 )

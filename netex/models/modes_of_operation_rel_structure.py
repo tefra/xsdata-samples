@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .alternative_mode_of_operation_1 import AlternativeModeOfOperation1
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_operation import FlexibleOperation

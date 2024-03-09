@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.individual_charge import IndividualCharge
 from datexii.models.eu.datexii.v2.overall_period import OverallPeriod
@@ -35,16 +36,16 @@ class ParkingVehicle:
     :ivar version:
     """
 
-    parking_record_reference: Optional[
-        ParkingRecordVersionedReference
-    ] = field(
-        default=None,
-        metadata={
-            "name": "parkingRecordReference",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    parking_record_reference: Optional[ParkingRecordVersionedReference] = (
+        field(
+            default=None,
+            metadata={
+                "name": "parkingRecordReference",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     parking_space_reference: Optional[str] = field(
         default=None,

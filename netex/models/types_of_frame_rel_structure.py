@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from .class_ref_structure import ClassRefStructure
 from .classes_in_repository_rel_structure import (
     ClassesInRepositoryRelStructure,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .abstract_raw_data_stream_interface_subtypes_enum import (
     AbstractRawDataStreamInterfaceSubtypesEnum,
 )

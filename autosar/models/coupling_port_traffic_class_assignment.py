@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .identifier import Identifier
 from .positive_integer import PositiveInteger
 from .short_name_fragment import ShortNameFragment
@@ -54,15 +55,15 @@ class CouplingPortTrafficClassAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prioritys: Optional[
-        "CouplingPortTrafficClassAssignment.Prioritys"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PRIORITYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    prioritys: Optional["CouplingPortTrafficClassAssignment.Prioritys"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PRIORITYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     traffic_class: Optional[PositiveInteger] = field(
         default=None,

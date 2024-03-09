@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
 )
@@ -114,15 +115,15 @@ class QueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_acknowledge: Optional[
-        TransmissionAcknowledgementRequest
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TRANSMISSION-ACKNOWLEDGE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    transmission_acknowledge: Optional[TransmissionAcknowledgementRequest] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TRANSMISSION-ACKNOWLEDGE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     transmission_props: Optional[TransmissionComSpecProps] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
 )
@@ -174,15 +175,15 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_delta_counter_init: Optional[
-        PositiveIntegerValueVariationPoint
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MAX-DELTA-COUNTER-INIT",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    max_delta_counter_init: Optional[PositiveIntegerValueVariationPoint] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MAX-DELTA-COUNTER-INIT",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     max_no_new_or_repeated_data: Optional[PositiveInteger] = field(
         default=None,

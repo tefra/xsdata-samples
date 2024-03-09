@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -264,15 +265,15 @@ class ProvidedSomeipServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_propss: Optional[
-        "ProvidedSomeipServiceInstance.EventPropss"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EVENT-PROPSS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_propss: Optional["ProvidedSomeipServiceInstance.EventPropss"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-PROPSS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     load_balancing_priority: Optional[PositiveInteger] = field(
         default=None,
@@ -375,15 +376,15 @@ class ProvidedSomeipServiceInstance:
 
     @dataclass
     class E2EEventProtectionPropss:
-        end_2_end_event_protection_props: List[
-            End2EndEventProtectionProps
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "END-2-END-EVENT-PROTECTION-PROPS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        end_2_end_event_protection_props: List[End2EndEventProtectionProps] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "END-2-END-EVENT-PROTECTION-PROPS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass
@@ -469,13 +470,13 @@ class ProvidedSomeipServiceInstance:
 
     @dataclass
     class SdServerConfigRef(Ref):
-        dest: Optional[
-            SomeipSdServerServiceInstanceConfigSubtypesEnum
-        ] = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: Optional[SomeipSdServerServiceInstanceConfigSubtypesEnum] = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

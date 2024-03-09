@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .nil_reason_enumeration_value import NilReasonEnumerationValue
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"

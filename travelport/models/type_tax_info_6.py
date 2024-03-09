@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.included_in_base_3 import IncludedInBase3
 from travelport.models.tax_detail_6 import TaxDetail6
 

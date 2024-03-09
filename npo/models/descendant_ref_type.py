@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from npo.models.media_type_enum import MediaTypeEnum
 
 __NAMESPACE__ = "urn:vpro:media:2009"

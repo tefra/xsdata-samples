@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.media_item_6 import MediaItem6
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"

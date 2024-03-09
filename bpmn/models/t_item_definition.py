@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xml.etree.ElementTree import QName
+
 from .t_item_kind import TItemKind
 from .t_root_element import TRootElement
 

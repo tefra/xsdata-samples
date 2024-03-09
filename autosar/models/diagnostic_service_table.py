@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -186,15 +187,15 @@ class DiagnosticServiceTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: Optional[
-        "DiagnosticServiceTable.EcuInstanceRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ECU-INSTANCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecu_instance_ref: Optional["DiagnosticServiceTable.EcuInstanceRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECU-INSTANCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     protocol_kind: Optional[NmtokenString] = field(
         default=None,

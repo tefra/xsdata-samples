@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .positive_integer import PositiveInteger
 from .software_cluster_diagnostic_address_semantics_enum import (
     SoftwareClusterDiagnosticAddressSemanticsEnum,

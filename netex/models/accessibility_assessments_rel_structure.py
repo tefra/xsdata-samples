@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .accessibility_assessment import AccessibilityAssessment
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

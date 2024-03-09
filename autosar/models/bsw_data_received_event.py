@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -204,15 +205,15 @@ class BswDataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    starts_on_event_ref: Optional[
-        "BswDataReceivedEvent.StartsOnEventRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "STARTS-ON-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    starts_on_event_ref: Optional["BswDataReceivedEvent.StartsOnEventRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "STARTS-ON-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -312,15 +313,15 @@ class BswDataReceivedEvent:
 
     @dataclass
     class DisabledInModeIrefs:
-        disabled_in_mode_iref: List[
-            ModeInBswModuleDescriptionInstanceRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "DISABLED-IN-MODE-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        disabled_in_mode_iref: List[ModeInBswModuleDescriptionInstanceRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "DISABLED-IN-MODE-IREF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

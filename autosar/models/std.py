@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .date import Date
 from .identifier import Identifier
 from .short_name_fragment import ShortNameFragment

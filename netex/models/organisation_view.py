@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .organisation_derived_view_structure import (
     OrganisationDerivedViewStructure,
 )

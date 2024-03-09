@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xml.etree.ElementTree import QName
+
 from .complex_behavior_definition import ComplexBehaviorDefinition
 from .t_data_input import TDataInput
 from .t_data_output import TDataOutput

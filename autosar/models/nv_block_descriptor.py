@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -161,15 +162,15 @@ class NvBlockDescriptor:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "NvBlockDescriptor.ShortNameFragments"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: Optional["NvBlockDescriptor.ShortNameFragments"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -219,15 +220,15 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_ports: Optional[
-        "NvBlockDescriptor.ClientServerPorts"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "CLIENT-SERVER-PORTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    client_server_ports: Optional["NvBlockDescriptor.ClientServerPorts"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "CLIENT-SERVER-PORTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     constant_value_mapping_refs: Optional[
         "NvBlockDescriptor.ConstantValueMappingRefs"
@@ -406,15 +407,15 @@ class NvBlockDescriptor:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: Optional[
-                ConstantSpecificationMappingSetSubtypesEnum
-            ] = field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
+            dest: Optional[ConstantSpecificationMappingSetSubtypesEnum] = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "DEST",
+                        "type": "Attribute",
+                        "required": True,
+                    },
+                )
             )
 
     @dataclass

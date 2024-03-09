@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .equipment_version_structure import EquipmentVersionStructure
 from .type_of_service_feature_refs_rel_structure import (
     TypeOfServiceFeatureRefsRelStructure,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .application_record_element_subtypes_enum import (
     ApplicationRecordElementSubtypesEnum,
 )
@@ -86,15 +87,15 @@ class TlvDataIdDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tlv_sub_element_ref: Optional[
-        "TlvDataIdDefinition.TlvSubElementRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "TLV-SUB-ELEMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tlv_sub_element_ref: Optional["TlvDataIdDefinition.TlvSubElementRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "TLV-SUB-ELEMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

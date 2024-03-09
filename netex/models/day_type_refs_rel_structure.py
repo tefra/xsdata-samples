@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure

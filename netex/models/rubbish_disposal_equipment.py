@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .rubbish_disposal_equipment_version_structure import (
     RubbishDisposalEquipmentVersionStructure,
 )

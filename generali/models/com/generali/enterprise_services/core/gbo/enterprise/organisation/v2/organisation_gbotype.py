@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.address_type import (
     AddressType,
 )

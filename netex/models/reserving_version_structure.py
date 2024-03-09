@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDuration
+
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .booking_policy_version_structure import BookingPolicyVersionStructure
 from .per_basis_enumeration import PerBasisEnumeration
@@ -51,15 +53,15 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reservation_charge_type: Optional[
-        ReservationChargeTypeEnumeration
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ReservationChargeType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    reservation_charge_type: Optional[ReservationChargeTypeEnumeration] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ReservationChargeType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     fee_basis: Optional[PerBasisEnumeration] = field(
         default=None,

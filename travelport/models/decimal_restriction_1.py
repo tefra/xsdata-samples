@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from travelport.models.type_float_restriction_1 import TypeFloatRestriction1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"

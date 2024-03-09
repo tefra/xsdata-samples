@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .ecuc_add_info_param_def import EcucAddInfoParamDef
 from .ecuc_boolean_param_def import EcucBooleanParamDef
 from .ecuc_choice_container_def import (
@@ -186,15 +187,15 @@ class EcucDestinationUriPolicy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_multiline_string_param_def: List[
-            EcucMultilineStringParamDef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ECUC-MULTILINE-STRING-PARAM-DEF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ecuc_multiline_string_param_def: List[EcucMultilineStringParamDef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ECUC-MULTILINE-STRING-PARAM-DEF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         ecuc_string_param_def: List[EcucStringParamDef] = field(
             default_factory=list,

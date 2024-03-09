@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .accesses_rel_structure import AccessesRelStructure
 from .navigation_paths_rel_structure import NavigationPathsRelStructure
 from .path_junctions_rel_structure import PathJunctionsRelStructure
@@ -39,15 +40,15 @@ class PointOfInterestVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    near_topographic_places: Optional[
-        TopographicPlaceRefsRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "nearTopographicPlaces",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    near_topographic_places: Optional[TopographicPlaceRefsRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "nearTopographicPlaces",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     path_links: Optional[SitePathLinksRelStructure] = field(
         default=None,

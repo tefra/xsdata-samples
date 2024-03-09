@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Union
+
 from .t_global_task import TGlobalTask
 from .t_implementation_value import TImplementationValue
 

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .admin_data import DocumentationBlock
 from .numerical_value import NumericalValue
 from .single_language_unit_names import SingleLanguageUnitNames

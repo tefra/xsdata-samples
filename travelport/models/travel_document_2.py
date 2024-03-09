@@ -1,7 +1,10 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.travel_document_height_unit_2 import (
     TravelDocumentHeightUnit2,
 )

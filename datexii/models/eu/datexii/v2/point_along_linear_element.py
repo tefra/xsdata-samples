@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.direction_enum import DirectionEnum
 from datexii.models.eu.datexii.v2.distance_along_linear_element import (
     DistanceAlongLinearElement,
@@ -53,15 +54,15 @@ class PointAlongLinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    direction_relative_at_point: Optional[
-        LinearReferencingDirectionEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "directionRelativeAtPoint",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    direction_relative_at_point: Optional[LinearReferencingDirectionEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "directionRelativeAtPoint",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     height_grade_of_point: Optional[HeightGradeEnum] = field(
         default=None,
@@ -80,16 +81,16 @@ class PointAlongLinearElement:
             "required": True,
         },
     )
-    distance_along_linear_element: Optional[
-        DistanceAlongLinearElement
-    ] = field(
-        default=None,
-        metadata={
-            "name": "distanceAlongLinearElement",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    distance_along_linear_element: Optional[DistanceAlongLinearElement] = (
+        field(
+            default=None,
+            metadata={
+                "name": "distanceAlongLinearElement",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     point_along_linear_element_extension: Optional[ExtensionType] = field(
         default=None,

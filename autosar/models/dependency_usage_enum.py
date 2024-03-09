@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .dependency_usage_enum_simple import DependencyUsageEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

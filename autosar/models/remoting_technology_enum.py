@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .remoting_technology_enum_simple import RemotingTechnologyEnumSimple
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"

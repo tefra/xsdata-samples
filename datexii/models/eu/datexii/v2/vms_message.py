@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from datexii.models.eu.datexii.v2.coded_reason_for_setting_message_enum import (
     CodedReasonForSettingMessageEnum,
 )
@@ -101,15 +103,15 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    coded_reason_for_setting: Optional[
-        CodedReasonForSettingMessageEnum
-    ] = field(
-        default=None,
-        metadata={
-            "name": "codedReasonForSetting",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    coded_reason_for_setting: Optional[CodedReasonForSettingMessageEnum] = (
+        field(
+            default=None,
+            metadata={
+                "name": "codedReasonForSetting",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     vms_message_information_type: List[VmsMessageInformationTypeEnum] = field(
         default_factory=list,
@@ -152,15 +154,15 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    situation_to_which_message_is_related: Optional[
-        VersionedReference
-    ] = field(
-        default=None,
-        metadata={
-            "name": "situationToWhichMessageIsRelated",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    situation_to_which_message_is_related: Optional[VersionedReference] = (
+        field(
+            default=None,
+            metadata={
+                "name": "situationToWhichMessageIsRelated",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     situation_record_to_which_message_is_related: Optional[
         VersionedReference

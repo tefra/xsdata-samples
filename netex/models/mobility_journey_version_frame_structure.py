@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .common_version_frame_structure import CommonVersionFrameStructure
 from .groups_of_single_journeys_rel_structure import (
     GroupsOfSingleJourneysRelStructure,
@@ -32,15 +33,15 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_single_journeys: Optional[
-        GroupsOfSingleJourneysRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "groupsOfSingleJourneys",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    groups_of_single_journeys: Optional[GroupsOfSingleJourneysRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "groupsOfSingleJourneys",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     single_journeys: Optional[SingleJourneysRelStructure] = field(
         default=None,
@@ -70,13 +71,13 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_log_entries: Optional[
-        ParkingLogEntriesInFrameRelStructure
-    ] = field(
-        default=None,
-        metadata={
-            "name": "parkingLogEntries",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    parking_log_entries: Optional[ParkingLogEntriesInFrameRelStructure] = (
+        field(
+            default=None,
+            metadata={
+                "name": "parkingLogEntries",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

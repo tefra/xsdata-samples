@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .mac_multicast_group_subtypes_enum import MacMulticastGroupSubtypesEnum
 from .ref import Ref
 

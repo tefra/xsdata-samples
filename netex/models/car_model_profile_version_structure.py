@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .transmission_enumeration import TransmissionEnumeration
 from .vehicle_model_profile_version_structure import (
     VehicleModelProfileVersionStructure,

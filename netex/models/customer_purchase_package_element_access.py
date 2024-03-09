@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
+
 from .customer_purchase_package_element_access_versioned_child_structure import (
     CustomerPurchasePackageElementAccessVersionedChildStructure,
 )

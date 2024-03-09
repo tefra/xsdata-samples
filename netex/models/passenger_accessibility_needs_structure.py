@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .suitability import Suitability
 from .user_need import UserNeed
 
@@ -16,15 +17,15 @@ class PassengerAccessibilityNeedsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    user_needs: Optional[
-        "PassengerAccessibilityNeedsStructure.UserNeeds"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "userNeeds",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    user_needs: Optional["PassengerAccessibilityNeedsStructure.UserNeeds"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "userNeeds",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     suitabilities: Optional[
         "PassengerAccessibilityNeedsStructure.Suitabilities"

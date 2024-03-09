@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .dead_run_calls_rel_structure import DeadRunCallsRelStructure
 from .dead_run_version_structure import DeadRunVersionStructure
 

@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+
 from .scope_of_ticket_enumeration import ScopeOfTicketEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"

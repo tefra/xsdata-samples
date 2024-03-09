@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .mode_restriction_assessment_ref_structure import (
     ModeRestrictionAssessmentRefStructure,
 )

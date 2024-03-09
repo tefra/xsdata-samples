@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .identifier import Identifier
 from .short_name_fragment import ShortNameFragment
 from .single_language_long_name import SingleLanguageLongName

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .check_constraint_delay_version_structure import (
     CheckConstraintDelayVersionStructure,
 )

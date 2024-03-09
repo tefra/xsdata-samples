@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .driver_schedule_frame import DriverScheduleFrame
 from .fare_frame import FareFrame
 from .general_version_frame_structure import (

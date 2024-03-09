@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
-from typing import List, Optional, Union, Any
+from typing import Any, List, Optional, Union
+
 from .voc import (
     AddressPartType,
     CompressionAlgorithm,

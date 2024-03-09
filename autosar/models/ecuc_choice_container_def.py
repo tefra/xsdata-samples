@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -448,15 +449,15 @@ class EcucChoiceContainerDef:
 
     @dataclass
     class Choices:
-        ecuc_param_conf_container_def: List[
-            "EcucParamConfContainerDef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ECUC-PARAM-CONF-CONTAINER-DEF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ecuc_param_conf_container_def: List["EcucParamConfContainerDef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ECUC-PARAM-CONF-CONTAINER-DEF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
 
@@ -780,15 +781,15 @@ class EcucParamConfContainerDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_containers: Optional[
-        "EcucParamConfContainerDef.SubContainers"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "SUB-CONTAINERS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sub_containers: Optional["EcucParamConfContainerDef.SubContainers"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "SUB-CONTAINERS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,
@@ -952,15 +953,15 @@ class EcucParamConfContainerDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_multiline_string_param_def: List[
-            EcucMultilineStringParamDef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ECUC-MULTILINE-STRING-PARAM-DEF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ecuc_multiline_string_param_def: List[EcucMultilineStringParamDef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ECUC-MULTILINE-STRING-PARAM-DEF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         ecuc_string_param_def: List[EcucStringParamDef] = field(
             default_factory=list,
@@ -1034,13 +1035,13 @@ class EcucParamConfContainerDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_param_conf_container_def: List[
-            "EcucParamConfContainerDef"
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "ECUC-PARAM-CONF-CONTAINER-DEF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        ecuc_param_conf_container_def: List["EcucParamConfContainerDef"] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "ECUC-PARAM-CONF-CONTAINER-DEF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

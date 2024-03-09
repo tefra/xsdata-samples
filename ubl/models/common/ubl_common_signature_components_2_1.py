@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Tuple
+
 from ubl.models.common.ubl_signature_aggregate_components_2_1 import (
     SignatureInformation,
 )

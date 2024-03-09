@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.error_info_1 import ErrorInfo1
 from travelport.models.ping_rsp import PingRsp
 
@@ -61,7 +63,9 @@ class SystemPingPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | SystemPingPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None | SystemPingPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

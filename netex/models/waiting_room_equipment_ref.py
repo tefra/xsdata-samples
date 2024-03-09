@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .waiting_room_equipment_ref_structure import (
     WaitingRoomEquipmentRefStructure,
 )

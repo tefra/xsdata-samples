@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .companion_profile_ref import CompanionProfileRef
 from .customer_eligibility_versioned_child_structure import (
     CustomerEligibilityVersionedChildStructure,

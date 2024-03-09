@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xsdata.models.datatype import XmlDateTime
+
 from datexii.models.eu.datexii.v2.area import Area
 from datexii.models.eu.datexii.v2.contact import Contact
 from datexii.models.eu.datexii.v2.dimension import Dimension

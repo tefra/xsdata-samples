@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.base_rsp_2 import BaseRsp2
 from travelport.models.field_1 import Field1
 from travelport.models.field_group_1 import FieldGroup1

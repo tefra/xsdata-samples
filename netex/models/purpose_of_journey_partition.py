@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .purpose_of_journey_partition_value_structure import (
     PurposeOfJourneyPartitionValueStructure,
 )

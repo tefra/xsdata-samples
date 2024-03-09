@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -149,15 +150,15 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "PhmContributionToMachineMapping.Annotations"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: Optional["PhmContributionToMachineMapping.Annotations"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -167,15 +168,15 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    machine_ref: Optional[
-        "PhmContributionToMachineMapping.MachineRef"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "MACHINE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    machine_ref: Optional["PhmContributionToMachineMapping.MachineRef"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "MACHINE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     phm_contribution_refs: Optional[
         "PhmContributionToMachineMapping.PhmContributionRefs"

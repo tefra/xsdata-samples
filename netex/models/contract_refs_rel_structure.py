@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .fare_contract_ref import FareContractRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 

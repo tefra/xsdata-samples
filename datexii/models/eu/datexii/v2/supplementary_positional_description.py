@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.affected_carriageway_and_lanes import (
     AffectedCarriagewayAndLanes,
 )
@@ -53,15 +54,15 @@ class SupplementaryPositionalDescription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    supplementary_positional_description_extension: Optional[
-        ExtensionType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "supplementaryPositionalDescriptionExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    supplementary_positional_description_extension: Optional[ExtensionType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "supplementaryPositionalDescriptionExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     location_precision: Optional[int] = field(
         default=None,

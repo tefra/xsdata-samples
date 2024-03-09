@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.rail_refund_quote_port_type_service_input import (
     RailRefundQuotePortTypeServiceInput,
 )

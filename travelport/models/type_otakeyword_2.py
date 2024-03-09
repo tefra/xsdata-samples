@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.type_otasub_key_2 import TypeOtasubKey2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"

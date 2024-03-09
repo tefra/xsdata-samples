@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .boolean import Boolean
 from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
 from .identifier import Identifier

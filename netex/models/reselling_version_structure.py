@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional, Union
+
 from xsdata.models.datatype import XmlDuration
+
 from .effective_from_enumeration import EffectiveFromEnumeration
 from .empty_type_2 import EmptyType2
 from .payment_method_enumeration import PaymentMethodEnumeration

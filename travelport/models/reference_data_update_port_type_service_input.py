@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.reference_data_update_req import ReferenceDataUpdateReq
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"

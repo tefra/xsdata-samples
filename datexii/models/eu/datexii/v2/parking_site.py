@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.contact import Contact
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.opening_times import OpeningTimes
@@ -136,15 +137,15 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_standards_and_security: Optional[
-        ParkingStandardsAndSecurity
-    ] = field(
-        default=None,
-        metadata={
-            "name": "parkingStandardsAndSecurity",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    parking_standards_and_security: Optional[ParkingStandardsAndSecurity] = (
+        field(
+            default=None,
+            metadata={
+                "name": "parkingStandardsAndSecurity",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     parking_site_extension: Optional[ExtensionType] = field(
         default=None,

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .ref import Ref
 from .sw_record_layout_group import SwRecordLayoutGroup
 from .sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum

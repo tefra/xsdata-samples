@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .log_entry_version_structure import LogEntryVersionStructure
 from .parking_ref import ParkingRef
 

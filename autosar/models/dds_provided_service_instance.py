@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -251,15 +252,15 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_qos_propss: Optional[
-        "DdsProvidedServiceInstance.EventQosPropss"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "EVENT-QOS-PROPSS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_qos_propss: Optional["DdsProvidedServiceInstance.EventQosPropss"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-QOS-PROPSS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     field_notifier_qos_propss: Optional[
         "DdsProvidedServiceInstance.FieldNotifierQosPropss"
@@ -326,15 +327,15 @@ class DdsProvidedServiceInstance:
 
     @dataclass
     class E2EEventProtectionPropss:
-        end_2_end_event_protection_props: List[
-            End2EndEventProtectionProps
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "END-2-END-EVENT-PROTECTION-PROPS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        end_2_end_event_protection_props: List[End2EndEventProtectionProps] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "END-2-END-EVENT-PROTECTION-PROPS",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

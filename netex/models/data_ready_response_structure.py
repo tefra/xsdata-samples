@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from .consumer_response_endpoint_structure import (
     ConsumerResponseEndpointStructure,
 )
@@ -21,15 +22,15 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: Optional[
-        "DataReadyResponseStructure.ErrorCondition"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ErrorCondition",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        },
+    error_condition: Optional["DataReadyResponseStructure.ErrorCondition"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ErrorCondition",
+                "type": "Element",
+                "namespace": "http://www.siri.org.uk/siri",
+            },
+        )
     )
 
     @dataclass

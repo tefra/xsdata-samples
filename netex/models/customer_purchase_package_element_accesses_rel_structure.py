@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List
+
 from .customer_purchase_package_element_access import (
     CustomerPurchasePackageElementAccess,
 )

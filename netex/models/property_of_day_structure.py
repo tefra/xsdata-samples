@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type, Union
+
 from xsdata.models.datatype import XmlPeriod
+
 from .country_ref_structure import CountryRefStructure
 from .crowding_enumeration import CrowdingEnumeration
 from .day_event_enumeration import DayEventEnumeration

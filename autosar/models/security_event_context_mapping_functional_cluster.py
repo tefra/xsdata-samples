@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -280,15 +281,15 @@ class SecurityEventContextMappingFunctionalCluster:
 
     @dataclass
     class IdsmInstances:
-        idsm_instance_ref_conditional: List[
-            IdsmInstanceRefConditional
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "IDSM-INSTANCE-REF-CONDITIONAL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        idsm_instance_ref_conditional: List[IdsmInstanceRefConditional] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "IDSM-INSTANCE-REF-CONDITIONAL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

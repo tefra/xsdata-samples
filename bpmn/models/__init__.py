@@ -290,10 +290,10 @@ from .t_sub_choreography import (
     SubChoreography,
     SubProcess,
     TAdHocSubProcess,
+    Transaction,
     TSubChoreography,
     TSubProcess,
     TTransaction,
-    Transaction,
 )
 from .t_sub_conversation import (
     SubConversation,

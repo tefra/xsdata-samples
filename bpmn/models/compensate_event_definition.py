@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .t_compensate_event_definition import TCompensateEventDefinition
 
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/MODEL"

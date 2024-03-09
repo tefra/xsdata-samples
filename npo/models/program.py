@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from npo.models.program_type import ProgramType
 
 __NAMESPACE__ = "urn:vpro:media:2009"

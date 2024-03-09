@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional, Union
+
 from xsdata.models.datatype import XmlDateTime, XmlDuration
+
 from .error_description_structure import ErrorDescriptionStructure
 from .other_error import OtherError
 from .service_not_available_error import ServiceNotAvailableError

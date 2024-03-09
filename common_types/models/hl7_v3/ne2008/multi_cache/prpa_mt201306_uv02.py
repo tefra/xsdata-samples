@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from ..core.datatypes_base import (
     AdExplicit,
     AnyType,
@@ -1159,16 +1160,16 @@ class PrpaMt201306Uv02ParameterList:
             "nillable": True,
         },
     )
-    living_subject_birth_time: List[
-        PrpaMt201306Uv02LivingSubjectBirthTime
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "livingSubjectBirthTime",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    living_subject_birth_time: List[PrpaMt201306Uv02LivingSubjectBirthTime] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "livingSubjectBirthTime",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     living_subject_deceased_time: List[
         PrpaMt201306Uv02LivingSubjectDeceasedTime

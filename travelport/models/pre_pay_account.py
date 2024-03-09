@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.credit_summary import CreditSummary
 from travelport.models.pre_pay_price_info import PrePayPriceInfo
 

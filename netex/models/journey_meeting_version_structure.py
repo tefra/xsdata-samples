@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
+
 from xsdata.models.datatype import XmlTime
+
 from .connecting_journey_view import ConnectingJourneyView
 from .connection_ref_structure import ConnectionRefStructure
 from .dated_special_service_ref import DatedSpecialServiceRef

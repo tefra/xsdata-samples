@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .entitlement_required_version_structure import (
     EntitlementRequiredVersionStructure,
 )

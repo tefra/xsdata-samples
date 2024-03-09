@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import VariationPoint
 from .boolean import Boolean
 from .can_cluster_bus_off_recovery import CanClusterBusOffRecovery
@@ -73,15 +74,15 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: Optional[
-        "J1939ClusterConditional.PhysicalChannels"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PHYSICAL-CHANNELS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    physical_channels: Optional["J1939ClusterConditional.PhysicalChannels"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PHYSICAL-CHANNELS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     protocol_name: Optional[String] = field(
         default=None,
@@ -213,13 +214,13 @@ class J1939ClusterConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_physical_channel: List[
-            UserDefinedPhysicalChannel
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "USER-DEFINED-PHYSICAL-CHANNEL",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        user_defined_physical_channel: List[UserDefinedPhysicalChannel] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "USER-DEFINED-PHYSICAL-CHANNEL",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -158,15 +159,15 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_controller_mappings: Optional[
-        "EcuMapping.CommControllerMappings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "COMM-CONTROLLER-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    comm_controller_mappings: Optional["EcuMapping.CommControllerMappings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMM-CONTROLLER-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ecu_instance_ref: Optional["EcuMapping.EcuInstanceRef"] = field(
         default=None,

@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.air_exchange_eligibility_rsp import (
     AirExchangeEligibilityRsp,
 )
@@ -32,7 +34,9 @@ class AirExchangeEligibilityPortTypeServiceOutput:
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
             },
         )
-        fault: None | AirExchangeEligibilityPortTypeServiceOutput.Body.Fault = field(
+        fault: (
+            None | AirExchangeEligibilityPortTypeServiceOutput.Body.Fault
+        ) = field(
             default=None,
             metadata={
                 "name": "Fault",
@@ -63,7 +67,10 @@ class AirExchangeEligibilityPortTypeServiceOutput:
                     "namespace": "",
                 },
             )
-            detail: None | AirExchangeEligibilityPortTypeServiceOutput.Body.Fault.Detail = field(
+            detail: (
+                None
+                | AirExchangeEligibilityPortTypeServiceOutput.Body.Fault.Detail
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",

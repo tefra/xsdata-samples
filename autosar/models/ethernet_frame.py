@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .admin_data import (
     AdminData,
     Annotation,
@@ -171,15 +172,15 @@ class EthernetFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_to_frame_mappings: Optional[
-        "EthernetFrame.PduToFrameMappings"
-    ] = field(
-        default=None,
-        metadata={
-            "name": "PDU-TO-FRAME-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    pdu_to_frame_mappings: Optional["EthernetFrame.PduToFrameMappings"] = (
+        field(
+            default=None,
+            metadata={
+                "name": "PDU-TO-FRAME-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: Optional[str] = field(
         default=None,

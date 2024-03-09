@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from xcbl.models.order_status_result import (
     ItemStatusEvent,
     OrderStatus,
@@ -728,14 +729,14 @@ class ChangeOrderItemDetail:
             "required": True,
         }
     )
-    item_detail_change_coded_other: Optional[
-        ItemDetailChangeCodedOther
-    ] = field(
-        default=None,
-        metadata={
-            "name": "ItemDetailChangeCodedOther",
-            "type": "Element",
-        },
+    item_detail_change_coded_other: Optional[ItemDetailChangeCodedOther] = (
+        field(
+            default=None,
+            metadata={
+                "name": "ItemDetailChangeCodedOther",
+                "type": "Element",
+            },
+        )
     )
     list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
         default=None,
@@ -894,14 +895,14 @@ class OrderHeader:
             "type": "Element",
         },
     )
-    order_invoice_medium_type_coded: Optional[
-        OrderInvoiceMediumTypeCoded
-    ] = field(
-        default=None,
-        metadata={
-            "name": "OrderInvoiceMediumTypeCoded",
-            "type": "Element",
-        },
+    order_invoice_medium_type_coded: Optional[OrderInvoiceMediumTypeCoded] = (
+        field(
+            default=None,
+            metadata={
+                "name": "OrderInvoiceMediumTypeCoded",
+                "type": "Element",
+            },
+        )
     )
     order_invoice_medium_type_coded_other: Optional[
         OrderInvoiceMediumTypeCodedOther

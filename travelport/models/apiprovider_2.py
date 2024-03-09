@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from travelport.models.transaction_type_2 import TransactionType2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
@@ -31,15 +33,15 @@ class Apiprovider2:
             "type": "Element",
         },
     )
-    available_pseudo_city_code: list[
-        Apiprovider2.AvailablePseudoCityCode
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "AvailablePseudoCityCode",
-            "type": "Element",
-            "max_occurs": 999,
-        },
+    available_pseudo_city_code: list[Apiprovider2.AvailablePseudoCityCode] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "AvailablePseudoCityCode",
+                "type": "Element",
+                "max_occurs": 999,
+            },
+        )
     )
     provider_code: None | str = field(
         default=None,

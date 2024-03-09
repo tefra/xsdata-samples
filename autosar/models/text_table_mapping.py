@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from .boolean import Boolean
 from .mapping_direction_enum import MappingDirectionEnum
 from .positive_integer_value_variation_point import (

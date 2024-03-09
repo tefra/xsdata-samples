@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .point_on_line_section import PointOnLineSection
 from .point_on_section_1 import PointOnSection1
 from .strict_containment_aggregation_structure import (

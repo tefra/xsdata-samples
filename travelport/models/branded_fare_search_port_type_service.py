@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from travelport.models.branded_fare_search_port_type_service_input import (
     BrandedFareSearchPortTypeServiceInput,
 )

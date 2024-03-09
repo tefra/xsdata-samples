@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .availability_condition_ref import AvailabilityConditionRef
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef

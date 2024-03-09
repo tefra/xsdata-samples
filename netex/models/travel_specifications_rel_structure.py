@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .offered_travel_specification import OfferedTravelSpecification
 from .offered_travel_specification_ref import OfferedTravelSpecificationRef

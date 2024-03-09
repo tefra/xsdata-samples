@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from .linear_ring import LinearRing
 
 __NAMESPACE__ = "http://www.opengis.net/gml/3.2"

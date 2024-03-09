@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
 from datexii.models.eu.datexii.v2.non_ordered_locations import (
@@ -29,13 +30,13 @@ class NonOrderedLocationGroupByList(NonOrderedLocations):
             "min_occurs": 2,
         },
     )
-    non_ordered_location_group_by_list_extension: Optional[
-        ExtensionType
-    ] = field(
-        default=None,
-        metadata={
-            "name": "nonOrderedLocationGroupByListExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    non_ordered_location_group_by_list_extension: Optional[ExtensionType] = (
+        field(
+            default=None,
+            metadata={
+                "name": "nonOrderedLocationGroupByListExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .type_of_sales_offer_package_version_structure import (
     TypeOfSalesOfferPackageVersionStructure,
 )

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Union
+
 from .availability_condition_ref import AvailabilityConditionRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .validity_condition_ref import ValidityConditionRef

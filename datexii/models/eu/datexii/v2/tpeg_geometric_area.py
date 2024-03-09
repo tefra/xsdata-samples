@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
+
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.point_coordinates import PointCoordinates
 from datexii.models.eu.datexii.v2.tpeg_area_descriptor import (

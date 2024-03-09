@@ -1,6 +1,9 @@
 from __future__ import annotations
+
 from dataclasses import dataclass, field
+
 from xsdata.models.datatype import XmlDate
+
 from travelport.models.air_avail_info import AirAvailInfo
 from travelport.models.alternate_location_distance_ref import (
     AlternateLocationDistanceRef,
@@ -186,16 +189,16 @@ class TypeBaseAirSegment(Segment1):
             "max_occurs": 999,
         },
     )
-    alternate_location_distance_ref: list[
-        AlternateLocationDistanceRef
-    ] = field(
-        default_factory=list,
-        metadata={
-            "name": "AlternateLocationDistanceRef",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "max_occurs": 999,
-        },
+    alternate_location_distance_ref: list[AlternateLocationDistanceRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "AlternateLocationDistanceRef",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v52_0",
+                "max_occurs": 999,
+            },
+        )
     )
     connection: None | Connection = field(
         default=None,
